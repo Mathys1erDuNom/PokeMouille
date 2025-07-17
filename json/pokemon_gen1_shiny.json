@@ -1,0 +1,6034 @@
+<<<<<<< HEAD
+[
+    {
+        "name": "Bulbizarre_shiny",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 49,
+            "special_attack": 65,
+            "speed": 45,
+            "defense": 49,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Herbizarre_shiny",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Charge",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 62,
+            "special_attack": 80,
+            "speed": 60,
+            "defense": 63,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Florizarre_shiny",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/3.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Charge",
+            "Canon Graine"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 82,
+            "special_attack": 100,
+            "speed": 80,
+            "defense": 83,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Salameche_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png",
+        "attacks": [
+            "Griffe",
+            "Flammeche"
+        ],
+        "stats": {
+            "hp": 39,
+            "attack": 52,
+            "special_attack": 60,
+            "speed": 65,
+            "defense": 43,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Reptincel_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/5.png",
+        "attacks": [
+            "Griffe",
+            "Flammeche",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 58,
+            "attack": 64,
+            "special_attack": 80,
+            "speed": 80,
+            "defense": 58,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Dracaufeu_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png",
+        "attacks": [
+            "Griffe",
+            "Flammeche",
+            "Lance-Flammes",
+            "Dracochoc"
+        ],
+        "stats": {
+            "hp": 78,
+            "attack": 84,
+            "special_attack": 109,
+            "speed": 100,
+            "defense": 78,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Carapuce_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/7.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 44,
+            "attack": 48,
+            "special_attack": 50,
+            "speed": 43,
+            "defense": 65,
+            "special_defense": 64
+        }
+    },
+    {
+        "name": "Carabaffe_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/8.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 59,
+            "attack": 63,
+            "special_attack": 65,
+            "speed": 58,
+            "defense": 80,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Tortank_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/9.png",
+        "attacks": [
+            "Pistolet a O",
+            "Hydrocanon",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 79,
+            "attack": 83,
+            "special_attack": 85,
+            "speed": 78,
+            "defense": 100,
+            "special_defense": 105
+        }
+    },
+    {
+        "name": "Chenipan_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10.png",
+        "attacks": [
+            "Charge",
+            "Dard-Venin"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 30,
+            "special_attack": 20,
+            "speed": 45,
+            "defense": 35,
+            "special_defense": 20
+        }
+    },
+    {
+        "name": "Chrysacier_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/11.png",
+        "attacks": [
+            "Armure"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 20,
+            "special_attack": 25,
+            "speed": 30,
+            "defense": 55,
+            "special_defense": 25
+        }
+    },
+    {
+        "name": "Papilusion_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/12.png",
+        "attacks": [
+            "Poudre Dodo",
+            "Vent Violent",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 45,
+            "special_attack": 90,
+            "speed": 70,
+            "defense": 50,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Aspicot_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/13.png",
+        "attacks": [
+            "Dard-Venin",
+            "Picpic"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 35,
+            "special_attack": 20,
+            "speed": 50,
+            "defense": 30,
+            "special_defense": 20
+        }
+    },
+    {
+        "name": "Coconfort_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/14.png",
+        "attacks": [
+            "Armure"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 25,
+            "special_attack": 25,
+            "speed": 35,
+            "defense": 50,
+            "special_defense": 25
+        }
+    },
+    {
+        "name": "Dardargnan_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/15.png",
+        "attacks": [
+            "Dard-Venin",
+            "Vol",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 90,
+            "special_attack": 45,
+            "speed": 75,
+            "defense": 40,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Roucool_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/16.png",
+        "attacks": [
+            "Charge",
+            "Pique"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 45,
+            "special_attack": 35,
+            "speed": 56,
+            "defense": 40,
+            "special_defense": 35
+        }
+    },
+    {
+        "name": "Roucoups_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/17.png",
+        "attacks": [
+            "Charge",
+            "Pique",
+            "Cru-Aile"
+        ],
+        "stats": {
+            "hp": 63,
+            "attack": 60,
+            "special_attack": 50,
+            "speed": 71,
+            "defense": 55,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Roucarnage_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/18.png",
+        "attacks": [
+            "Charge",
+            "Pique",
+            "Cru-Aile",
+            "Atterrissage"
+        ],
+        "stats": {
+            "hp": 83,
+            "attack": 80,
+            "special_attack": 65,
+            "speed": 101,
+            "defense": 75,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Rattata_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/19.png",
+        "attacks": [
+            "Morsure",
+            "Griffe",
+            "Queue de fer"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 56,
+            "special_attack": 35,
+            "speed": 72,
+            "defense": 35,
+            "special_defense": 35
+        }
+    },
+    {
+        "name": "Rattatac_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/20.png",
+        "attacks": [
+            "Morsure",
+            "Griffe",
+            "Queue de fer",
+            "Vive-Attaque"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 81,
+            "special_attack": 60,
+            "speed": 97,
+            "defense": 60,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Piafabec_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/21.png",
+        "attacks": [
+            "Charge",
+            "Pique",
+            "Cru-Aile"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 60,
+            "special_attack": 31,
+            "speed": 70,
+            "defense": 30,
+            "special_defense": 30
+        }
+    },
+    {
+        "name": "Rapasdepic_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/22.png",
+        "attacks": [
+            "Charge",
+            "Pique",
+            "Cru-Aile",
+            "Atterrissage"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 90,
+            "special_attack": 61,
+            "speed": 100,
+            "defense": 65,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Abo_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/23.png",
+        "attacks": [
+            "Constriction",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 60,
+            "special_attack": 65,
+            "speed": 55,
+            "defense": 44,
+            "special_defense": 54
+        }
+    },
+    {
+        "name": "Arbok_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/24.png",
+        "attacks": [
+            "Constriction",
+            "Lance-Flammes",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 95,
+            "special_attack": 80,
+            "speed": 80,
+            "defense": 69,
+            "special_defense": 79
+        }
+    },
+    {
+        "name": "Pikachu_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 55,
+            "special_attack": 50,
+            "speed": 90,
+            "defense": 40,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Raichu_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/26.png",
+        "attacks": [
+            "Eclair",
+            "Charge",
+            "Tonnerre"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 90,
+            "special_attack": 90,
+            "speed": 110,
+            "defense": 55,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Sabelette_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/27.png",
+        "attacks": [
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 75,
+            "special_attack": 30,
+            "speed": 40,
+            "defense": 85,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Sablaireau_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/28.png",
+        "attacks": [
+            "Charge",
+            "Fouet Lianes",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 100,
+            "special_attack": 55,
+            "speed": 65,
+            "defense": 110,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Nidoran♀_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/29.png",
+        "attacks": [
+            "Charge",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 47,
+            "special_attack": 40,
+            "speed": 41,
+            "defense": 52,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Nidorina_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/30.png",
+        "attacks": [
+            "Charge",
+            "Piqure",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 62,
+            "special_attack": 55,
+            "speed": 56,
+            "defense": 67,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Nidoqueen_shiny",
+        "type": [
+            "sol",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/31.png",
+        "attacks": [
+            "Charge",
+            "Piqure",
+            "Vampigraine",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 92,
+            "special_attack": 75,
+            "speed": 85,
+            "defense": 87,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Nidoran♂_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/32.png",
+        "attacks": [
+            "Charge",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 46,
+            "attack": 57,
+            "special_attack": 40,
+            "speed": 50,
+            "defense": 40,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Nidorino_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/33.png",
+        "attacks": [
+            "Charge",
+            "Piqure",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 61,
+            "attack": 72,
+            "special_attack": 55,
+            "speed": 65,
+            "defense": 57,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Nidoking_shiny",
+        "type": [
+            "sol",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/34.png",
+        "attacks": [
+            "Charge",
+            "Piqure",
+            "Vampigraine",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 81,
+            "attack": 102,
+            "special_attack": 85,
+            "speed": 95,
+            "defense": 77,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Melofee_shiny",
+        "type": [
+            "fée"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/35.png",
+        "attacks": [
+            "Charge",
+            "Poudre Dodo"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 45,
+            "special_attack": 60,
+            "speed": 35,
+            "defense": 48,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Melodelfe_shiny",
+        "type": [
+            "fée"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/36.png",
+        "attacks": [
+            "Charge",
+            "Poudre Dodo",
+            "Choc Psy"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 70,
+            "special_attack": 85,
+            "speed": 60,
+            "defense": 73,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Goupix_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/37.png",
+        "attacks": [
+            "Griffe",
+            "Flammeche"
+        ],
+        "stats": {
+            "hp": 38,
+            "attack": 41,
+            "special_attack": 50,
+            "speed": 65,
+            "defense": 40,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Feunard_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/38.png",
+        "attacks": [
+            "Griffe",
+            "Flammeche",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 73,
+            "attack": 76,
+            "special_attack": 81,
+            "speed": 100,
+            "defense": 75,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Rondoudou_shiny",
+        "type": [
+            "normal",
+            "fée"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/39.png",
+        "attacks": [
+            "Poudre Dodo",
+            "Chant",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 115,
+            "attack": 45,
+            "special_attack": 45,
+            "speed": 20,
+            "defense": 20,
+            "special_defense": 25
+        }
+    },
+    {
+        "name": "Grodoudou_shiny",
+        "type": [
+            "normal",
+            "fée"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/40.png",
+        "attacks": [
+            "Poudre Dodo",
+            "Chant",
+            "Charge",
+            "Ecrasement"
+        ],
+        "stats": {
+            "hp": 140,
+            "attack": 70,
+            "special_attack": 75,
+            "speed": 45,
+            "defense": 45,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Nosferapti_shiny",
+        "type": [
+            "vol",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/41.png",
+        "attacks": [
+            "Morsure",
+            "Ultrason",
+            "Vol"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 45,
+            "special_attack": 30,
+            "speed": 55,
+            "defense": 35,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Nosferalto_shiny",
+        "type": [
+            "vol/poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/42.png",
+        "attacks": [
+            "Morsure",
+            "Ultrason",
+            "Vol",
+            "Cru-Aile"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 80,
+            "special_attack": 65,
+            "speed": 90,
+            "defense": 70,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Mystherbe_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/43.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 52,
+            "special_attack": 40,
+            "speed": 35,
+            "defense": 48,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Ortide_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/44.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Vampigraine",
+            "Poudre Dodo"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 65,
+            "special_attack": 60,
+            "speed": 30,
+            "defense": 70,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Rafflesia_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/45.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Canon Graine",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 80,
+            "special_attack": 90,
+            "speed": 50,
+            "defense": 90,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Paras_shiny",
+        "type": [
+            "insecte",
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/46.png",
+        "attacks": [
+            "Griffe",
+            "Spore"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 70,
+            "special_attack": 45,
+            "speed": 25,
+            "defense": 55,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Parasect_shiny",
+        "type": [
+            "insecte",
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/47.png",
+        "attacks": [
+            "Griffe",
+            "Spore",
+            "Lance-Soleil"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 95,
+            "special_attack": 80,
+            "speed": 30,
+            "defense": 80,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Mimitoss_shiny",
+        "type": [
+            "insecte",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/48.png",
+        "attacks": [
+            "Dard-Venin",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 25,
+            "special_attack": 40,
+            "speed": 50,
+            "defense": 50,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Aeromite_shiny",
+        "type": [
+            "insecte",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/49.png",
+        "attacks": [
+            "Dard-Venin",
+            "Piqure",
+            "Ultrason"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 60,
+            "special_attack": 80,
+            "speed": 65,
+            "defense": 80,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Taupiqueur_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/50.png",
+        "attacks": [
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 55,
+            "special_attack": 25,
+            "speed": 35,
+            "defense": 40,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Triopikeur_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/51.png",
+        "attacks": [
+            "Charge",
+            "Tranche",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 100,
+            "special_attack": 50,
+            "speed": 40,
+            "defense": 90,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Miaouss_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/52.png",
+        "attacks": [
+            "Griffe",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 45,
+            "special_attack": 40,
+            "speed": 90,
+            "defense": 35,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Persian_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/53.png",
+        "attacks": [
+            "Griffe",
+            "Tranche",
+            "Cru-Aile"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 70,
+            "special_attack": 65,
+            "speed": 115,
+            "defense": 60,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Psykokwak_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/54.png",
+        "attacks": [
+            "Pistolet a O",
+            "Brouillard"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 52,
+            "special_attack": 65,
+            "speed": 55,
+            "defense": 48,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Akwakwak_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/55.png",
+        "attacks": [
+            "Pistolet a O",
+            "Brouillard",
+            "Marelle"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 62,
+            "special_attack": 80,
+            "speed": 90,
+            "defense": 63,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Ferosinge_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/56.png",
+        "attacks": [
+            "Charge",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 80,
+            "special_attack": 35,
+            "speed": 70,
+            "defense": 35,
+            "special_defense": 35
+        }
+    },
+    {
+        "name": "Colossinge_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/57.png",
+        "attacks": [
+            "Charge",
+            "Morsure",
+            "Pique"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 105,
+            "special_attack": 60,
+            "speed": 95,
+            "defense": 60,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Caninos_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/58.png",
+        "attacks": [
+            "Flammeche",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 70,
+            "special_attack": 60,
+            "speed": 90,
+            "defense": 45,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Arcanin_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/59.png",
+        "attacks": [
+            "Flammeche",
+            "Morsure",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 110,
+            "special_attack": 100,
+            "speed": 95,
+            "defense": 80,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Ptitard_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/60.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 50,
+            "special_attack": 40,
+            "speed": 40,
+            "defense": 40,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Tetarte_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/61.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 54,
+            "attack": 63,
+            "special_attack": 50,
+            "speed": 50,
+            "defense": 52,
+            "special_defense": 53
+        }
+    },
+    {
+        "name": "Tartard_shiny",
+        "type": [
+            "eau",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/62.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Morsure",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 79,
+            "attack": 85,
+            "special_attack": 65,
+            "speed": 60,
+            "defense": 78,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Abra_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/63.png",
+        "attacks": [
+            "Choc Psy",
+            "Teleport"
+        ],
+        "stats": {
+            "hp": 25,
+            "attack": 20,
+            "special_attack": 105,
+            "speed": 90,
+            "defense": 15,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Kadabra_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/64.png",
+        "attacks": [
+            "Choc Psy",
+            "Teleport",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 35,
+            "special_attack": 120,
+            "speed": 105,
+            "defense": 30,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Alakazam_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/65.png",
+        "attacks": [
+            "Choc Psy",
+            "Teleport",
+            "Psyko",
+            "Bouclier"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 50,
+            "special_attack": 135,
+            "speed": 120,
+            "defense": 45,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Machoc_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/66.png",
+        "attacks": [
+            "Charge",
+            "Poing Karate"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 80,
+            "special_attack": 35,
+            "speed": 35,
+            "defense": 50,
+            "special_defense": 35
+        }
+    },
+    {
+        "name": "Machopeur_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/67.png",
+        "attacks": [
+            "Charge",
+            "Poing Karate",
+            "Poing-Eclair"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 100,
+            "special_attack": 50,
+            "speed": 45,
+            "defense": 70,
+            "special_defense": 60
+        }
+    },
+    {
+        "name": "Mackogneur_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/68.png",
+        "attacks": [
+            "Charge",
+            "Poing Karate",
+            "Poing-Eclair",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 130,
+            "special_attack": 65,
+            "speed": 55,
+            "defense": 80,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Chetiflor_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/69.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 50,
+            "special_attack": 75,
+            "speed": 30,
+            "defense": 35,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Boustiflor_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/70.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Vampigraine",
+            "Canon Graine"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 65,
+            "special_attack": 90,
+            "speed": 40,
+            "defense": 50,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Empiflor_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/71.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Vampigraine",
+            "Canon Graine",
+            "Siphon"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 80,
+            "special_attack": 100,
+            "speed": 50,
+            "defense": 65,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Tentacool_shiny",
+        "type": [
+            "eau",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/72.png",
+        "attacks": [
+            "Pistolet a O",
+            "Dard-Venin"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 40,
+            "special_attack": 50,
+            "speed": 70,
+            "defense": 35,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Tentacruel_shiny",
+        "type": [
+            "eau",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/73.png",
+        "attacks": [
+            "Pistolet a O",
+            "Dard-Venin",
+            "Ultrason"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 70,
+            "special_attack": 80,
+            "speed": 100,
+            "defense": 65,
+            "special_defense": 120
+        }
+    },
+    {
+        "name": "Racaillou_shiny",
+        "type": [
+            "roche",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/74.png",
+        "attacks": [
+            "Charge",
+            "Lance-Pierre"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 80,
+            "special_attack": 30,
+            "speed": 20,
+            "defense": 100,
+            "special_defense": 30
+        }
+    },
+    {
+        "name": "Gravalanch_shiny",
+        "type": [
+            "roche",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/75.png",
+        "attacks": [
+            "Charge",
+            "Lance-Pierre",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 95,
+            "special_attack": 45,
+            "speed": 25,
+            "defense": 115,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Grolem_shiny",
+        "type": [
+            "roche",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/76.png",
+        "attacks": [
+            "Charge",
+            "Lance-Pierre",
+            "Seisme",
+            "Poing Karate"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 120,
+            "special_attack": 55,
+            "speed": 45,
+            "defense": 130,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Ponyta_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/77.png",
+        "attacks": [
+            "Charge",
+            "Flammeche"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 85,
+            "special_attack": 65,
+            "speed": 90,
+            "defense": 55,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Galopa_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/78.png",
+        "attacks": [
+            "Charge",
+            "Flammeche",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 100,
+            "special_attack": 80,
+            "speed": 105,
+            "defense": 70,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Ramoloss_shiny",
+        "type": [
+            "eau",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/79.png",
+        "attacks": [
+            "Pistolet a O",
+            "Choc Psy"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 65,
+            "special_attack": 75,
+            "speed": 15,
+            "defense": 65,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Flagadoss_shiny",
+        "type": [
+            "eau",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/80.png",
+        "attacks": [
+            "Pistolet a O",
+            "Choc Psy",
+            "Brouillard"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 75,
+            "special_attack": 100,
+            "speed": 30,
+            "defense": 80,
+            "special_defense": 120
+        }
+    },
+    {
+        "name": "Magneti_shiny",
+        "type": [
+            "électrique",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/81.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 25,
+            "attack": 35,
+            "special_attack": 95,
+            "speed": 45,
+            "defense": 70,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Magneton_shiny",
+        "type": [
+            "électrique",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/82.png",
+        "attacks": [
+            "Eclair",
+            "Charge",
+            "Boule Elek"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 60,
+            "special_attack": 120,
+            "speed": 70,
+            "defense": 95,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Canarticho_shiny",
+        "type": [
+            "normal",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/83.png",
+        "attacks": [
+            "Charge",
+            "Picpic"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 85,
+            "special_attack": 60,
+            "speed": 70,
+            "defense": 65,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Doduo_shiny",
+        "type": [
+            "normal",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/84.png",
+        "attacks": [
+            "Picpic",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 85,
+            "special_attack": 35,
+            "speed": 75,
+            "defense": 45,
+            "special_defense": 35
+        }
+    },
+    {
+        "name": "Dodrio_shiny",
+        "type": [
+            "normal",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/85.png",
+        "attacks": [
+            "Picpic",
+            "Charge",
+            "Cru-Aile"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 110,
+            "special_attack": 60,
+            "speed": 110,
+            "defense": 70,
+            "special_defense": 60
+        }
+    },
+    {
+        "name": "Otaria_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/86.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 70,
+            "special_attack": 70,
+            "speed": 45,
+            "defense": 80,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Lamantine_shiny",
+        "type": [
+            "eau",
+            "glace"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/87.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Laser Glace"
+        ],
+        "stats": {
+            "hp": 130,
+            "attack": 70,
+            "special_attack": 80,
+            "speed": 60,
+            "defense": 90,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Tadmorv_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/88.png",
+        "attacks": [
+            "Boue-Bombe",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 65,
+            "special_attack": 40,
+            "speed": 35,
+            "defense": 95,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Grotadmorv_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/89.png",
+        "attacks": [
+            "Boue-Bombe",
+            "Tranche",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 95,
+            "special_attack": 65,
+            "speed": 45,
+            "defense": 120,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Kokiyas_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/90.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 65,
+            "special_attack": 40,
+            "speed": 35,
+            "defense": 100,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Crustabri_shiny",
+        "type": [
+            "eau",
+            "glace"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/91.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Laser Glace"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 105,
+            "special_attack": 65,
+            "speed": 50,
+            "defense": 125,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Fantominus_shiny",
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/92.png",
+        "attacks": [
+            "Boule Ombre",
+            "Gaz Toxik"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 35,
+            "special_attack": 100,
+            "speed": 80,
+            "defense": 30,
+            "special_defense": 30
+        }
+    },
+    {
+        "name": "Spectrum_shiny",
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/93.png",
+        "attacks": [
+            "Boule Ombre",
+            "Gaz Toxik",
+            "Explosion"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 50,
+            "special_attack": 135,
+            "speed": 105,
+            "defense": 45,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Ectoplasma_shiny",
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/94.png",
+        "attacks": [
+            "Boule Ombre",
+            "Gaz Toxik",
+            "Explosion",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 65,
+            "special_attack": 150,
+            "speed": 130,
+            "defense": 60,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Onix_shiny",
+        "type": [
+            "roche",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/95.png",
+        "attacks": [
+            "Lance-Pierre",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 45,
+            "special_attack": 30,
+            "speed": 70,
+            "defense": 160,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Soporifik_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/96.png",
+        "attacks": [
+            "Choc Psy",
+            "Poudre Dodo"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 48,
+            "special_attack": 43,
+            "speed": 42,
+            "defense": 65,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Hypnomade_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/97.png",
+        "attacks": [
+            "Choc Psy",
+            "Poudre Dodo",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 73,
+            "special_attack": 73,
+            "speed": 67,
+            "defense": 90,
+            "special_defense": 115
+        }
+    },
+    {
+        "name": "Krabby_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/98.png",
+        "attacks": [
+            "Pince",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 105,
+            "special_attack": 25,
+            "speed": 50,
+            "defense": 90,
+            "special_defense": 25
+        }
+    },
+    {
+        "name": "Krabboss_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/99.png",
+        "attacks": [
+            "Pince",
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 130,
+            "special_attack": 50,
+            "speed": 75,
+            "defense": 115,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Voltorbe_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/100.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 30,
+            "special_attack": 55,
+            "speed": 100,
+            "defense": 50,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Electrode_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/101.png",
+        "attacks": [
+            "Eclair",
+            "Charge",
+            "Boule Elek"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 50,
+            "special_attack": 80,
+            "speed": 150,
+            "defense": 70,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Noeunoeuf_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/102.png",
+        "attacks": [
+            "Choc Psy",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 25,
+            "special_attack": 40,
+            "speed": 20,
+            "defense": 50,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Noadkoko_shiny",
+        "type": [
+            "psy",
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/103.png",
+        "attacks": [
+            "Choc Psy",
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 95,
+            "special_attack": 125,
+            "speed": 30,
+            "defense": 85,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Osselait_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/104.png",
+        "attacks": [
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 80,
+            "special_attack": 30,
+            "speed": 35,
+            "defense": 100,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Ossatueur_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/105.png",
+        "attacks": [
+            "Charge",
+            "Tranche",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 110,
+            "special_attack": 45,
+            "speed": 45,
+            "defense": 125,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Kicklee_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/106.png",
+        "attacks": [
+            "Poing Karate",
+            "Pique"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 120,
+            "special_attack": 35,
+            "speed": 87,
+            "defense": 53,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Tygnon_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/107.png",
+        "attacks": [
+            "Poing Karate",
+            "Pique",
+            "Poing-Eclair"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 105,
+            "special_attack": 60,
+            "speed": 98,
+            "defense": 79,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Excelangue_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/108.png",
+        "attacks": [
+            "Lechouille",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 85,
+            "special_attack": 70,
+            "speed": 60,
+            "defense": 80,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Smogo_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/109.png",
+        "attacks": [
+            "Gaz Toxik",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 65,
+            "special_attack": 40,
+            "speed": 35,
+            "defense": 95,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Smogogo_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/110.png",
+        "attacks": [
+            "Gaz Toxik",
+            "Tranche",
+            "Explosion"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 90,
+            "special_attack": 75,
+            "speed": 60,
+            "defense": 120,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Rhinocorne_shiny",
+        "type": [
+            "sol",
+            "roche"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/111.png",
+        "attacks": [
+            "Charge",
+            "Corps Perdu"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 85,
+            "special_attack": 30,
+            "speed": 25,
+            "defense": 95,
+            "special_defense": 30
+        }
+    },
+    {
+        "name": "Rhinoferos_shiny",
+        "type": [
+            "sol",
+            "roche"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/112.png",
+        "attacks": [
+            "Charge",
+            "Corps Perdu",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 105,
+            "attack": 130,
+            "special_attack": 55,
+            "speed": 40,
+            "defense": 120,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Leveinard_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/113.png",
+        "attacks": [
+            "Charge",
+            "Tranche",
+            "Pouvoir Lunaire"
+        ],
+        "stats": {
+            "hp": 250,
+            "attack": 5,
+            "special_attack": 35,
+            "speed": 50,
+            "defense": 5,
+            "special_defense": 105
+        }
+    },
+    {
+        "name": "Saquedeneu_shiny",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/114.png",
+        "attacks": [
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 70,
+            "special_attack": 40,
+            "speed": 30,
+            "defense": 40,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Kangourex_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/115.png",
+        "attacks": [
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 95,
+            "special_attack": 70,
+            "speed": 95,
+            "defense": 80,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Hypotrempe_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/116.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 41,
+            "attack": 64,
+            "special_attack": 50,
+            "speed": 50,
+            "defense": 45,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Hypocean_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/117.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Laser Glace"
+        ],
+        "stats": {
+            "hp": 61,
+            "attack": 84,
+            "special_attack": 70,
+            "speed": 70,
+            "defense": 65,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Poissirene_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/118.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charme"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 60,
+            "special_attack": 70,
+            "speed": 60,
+            "defense": 65,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Poissoroy_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/119.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charme",
+            "Laser Glace"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 95,
+            "special_attack": 100,
+            "speed": 70,
+            "defense": 95,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Stari_shiny",
+        "type": [
+            "eau",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/120.png",
+        "attacks": [
+            "Pistolet a O",
+            "Choc Psy"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 45,
+            "special_attack": 70,
+            "speed": 55,
+            "defense": 55,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Staross_shiny",
+        "type": [
+            "eau",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/121.png",
+        "attacks": [
+            "Pistolet a O",
+            "Choc Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 75,
+            "special_attack": 100,
+            "speed": 85,
+            "defense": 85,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "M. Mime_shiny",
+        "type": [
+            "psy",
+            "fée"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/122.png",
+        "attacks": [
+            "Choc Psy",
+            "Bluff"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 45,
+            "special_attack": 100,
+            "speed": 90,
+            "defense": 65,
+            "special_defense": 120
+        }
+    },
+    {
+        "name": "Insecateur_shiny",
+        "type": [
+            "insecte",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/123.png",
+        "attacks": [
+            "Pique",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 110,
+            "special_attack": 55,
+            "speed": 85,
+            "defense": 80,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Lippoutou_shiny",
+        "type": [
+            "glace",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/124.png",
+        "attacks": [
+            "Eclats Glace",
+            "Choc Psy"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 50,
+            "special_attack": 115,
+            "speed": 95,
+            "defense": 95,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Elektek_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/125.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 83,
+            "special_attack": 85,
+            "speed": 105,
+            "defense": 57,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Magmar_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/126.png",
+        "attacks": [
+            "Flammeche",
+            "Poing Karate"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 95,
+            "special_attack": 100,
+            "speed": 93,
+            "defense": 57,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Scarabrute_shiny",
+        "type": [
+            "insecte",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/127.png",
+        "attacks": [
+            "Charge",
+            "Pique",
+            "Poing Karate"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 130,
+            "special_attack": 60,
+            "speed": 75,
+            "defense": 75,
+            "special_defense": 60
+        }
+    },
+    {
+        "name": "Tauros_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/128.png",
+        "attacks": [
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 100,
+            "special_attack": 40,
+            "speed": 110,
+            "defense": 95,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Magicarpe_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/129.png",
+        "attacks": [
+            "Trempette"
+        ],
+        "stats": {
+            "hp": 20,
+            "attack": 10,
+            "special_attack": 15,
+            "speed": 80,
+            "defense": 55,
+            "special_defense": 20
+        }
+    },
+    {
+        "name": "Leviator_shiny",
+        "type": [
+            "eau",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/130.png",
+        "attacks": [
+            "Morsure",
+            "Hydrocanon",
+            "Dracochoc"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 125,
+            "special_attack": 60,
+            "speed": 81,
+            "defense": 79,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Lokhlass_shiny",
+        "type": [
+            "eau",
+            "glace"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/131.png",
+        "attacks": [
+            "Pistolet a O",
+            "Laser Glace",
+            "Brouillard"
+        ],
+        "stats": {
+            "hp": 130,
+            "attack": 85,
+            "special_attack": 95,
+            "speed": 60,
+            "defense": 80,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Metamorph_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/132.png",
+        "attacks": [
+            "Transformation"
+        ],
+        "stats": {
+            "hp": 48,
+            "attack": 48,
+            "special_attack": 48,
+            "speed": 48,
+            "defense": 48,
+            "special_defense": 48
+        }
+    },
+    {
+        "name": "Evoli_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/133.png",
+        "attacks": [
+            "Charge",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 55,
+            "special_attack": 50,
+            "speed": 55,
+            "defense": 50,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Aquali_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/134.png",
+        "attacks": [
+            "Pistolet a O",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 130,
+            "attack": 65,
+            "special_attack": 110,
+            "speed": 60,
+            "defense": 65,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Voltali_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/135.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 65,
+            "special_attack": 110,
+            "speed": 130,
+            "defense": 60,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Pyroli_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/136.png",
+        "attacks": [
+            "Flammeche",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 130,
+            "special_attack": 95,
+            "speed": 110,
+            "defense": 60,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Porygon_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/137.png",
+        "attacks": [
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 60,
+            "special_attack": 85,
+            "speed": 40,
+            "defense": 70,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Amonita_shiny",
+        "type": [
+            "roche",
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/138.png",
+        "attacks": [
+            "Lance-Pierre",
+            "Pistolet a O"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 40,
+            "special_attack": 90,
+            "speed": 35,
+            "defense": 100,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Amonistar_shiny",
+        "type": [
+            "roche",
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/139.png",
+        "attacks": [
+            "Lance-Pierre",
+            "Pistolet a O",
+            "Canon Graine"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 60,
+            "special_attack": 125,
+            "speed": 55,
+            "defense": 125,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Kabuto_shiny",
+        "type": [
+            "roche",
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/140.png",
+        "attacks": [
+            "Lance-Pierre",
+            "Pistolet a O"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 80,
+            "special_attack": 45,
+            "speed": 55,
+            "defense": 90,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Kabutops_shiny",
+        "type": [
+            "roche",
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/141.png",
+        "attacks": [
+            "Lance-Pierre",
+            "Pistolet a O",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 115,
+            "special_attack": 70,
+            "speed": 80,
+            "defense": 105,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Ptera_shiny",
+        "type": [
+            "roche",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/142.png",
+        "attacks": [
+            "Cru-Aile",
+            "Tranche",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 105,
+            "special_attack": 65,
+            "speed": 130,
+            "defense": 65,
+            "special_defense": 60
+        }
+    },
+    {
+        "name": "Ronflex_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/143.png",
+        "attacks": [
+            "Charge",
+            "Plaquage"
+        ],
+        "stats": {
+            "hp": 160,
+            "attack": 110,
+            "special_attack": 65,
+            "speed": 30,
+            "defense": 65,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Artikodin_shiny",
+        "type": [
+            "glace",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/144.png",
+        "attacks": [
+            "Eclats Glace",
+            "Cru-Aile",
+            "Vent Glace"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 85,
+            "special_attack": 125,
+            "speed": 85,
+            "defense": 100,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Electhor_shiny",
+        "type": [
+            "électrique",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/145.png",
+        "attacks": [
+            "Eclair",
+            "Cru-Aile",
+            "Boule Elek",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 90,
+            "special_attack": 125,
+            "speed": 100,
+            "defense": 85,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Sulfura_shiny",
+        "type": [
+            "feu",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/146.png",
+        "attacks": [
+            "Braise",
+            "Cru-Aile",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 100,
+            "special_attack": 125,
+            "speed": 90,
+            "defense": 90,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Minidraco_shiny",
+        "type": [
+            "dragon"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/147.png",
+        "attacks": [
+            "Dracochoc",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 41,
+            "attack": 64,
+            "special_attack": 50,
+            "speed": 50,
+            "defense": 45,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Draco_shiny",
+        "type": [
+            "dragon"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/148.png",
+        "attacks": [
+            "Dracochoc",
+            "Charge",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 61,
+            "attack": 84,
+            "special_attack": 70,
+            "speed": 70,
+            "defense": 65,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Dracolosse_shiny",
+        "type": [
+            "dragon",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/149.png",
+        "attacks": [
+            "Dracochoc",
+            "Seisme",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 91,
+            "attack": 134,
+            "special_attack": 100,
+            "speed": 80,
+            "defense": 95,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Mewtwo_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png",
+        "attacks": [
+            "Choc Psy",
+            "Psyko",
+            "Aura Sphere"
+        ],
+        "stats": {
+            "hp": 106,
+            "attack": 110,
+            "special_attack": 154,
+            "speed": 130,
+            "defense": 90,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Mew_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+        "attacks": [
+            "Choc Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 100,
+            "special_attack": 100,
+            "speed": 100,
+            "defense": 100,
+            "special_defense": 100
+        }
+    }
+=======
+[
+    {
+        "name": "Bulbizarre_shiny",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 49,
+            "special_attack": 65,
+            "speed": 45,
+            "defense": 49,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Herbizarre_shiny",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Charge",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 62,
+            "special_attack": 80,
+            "speed": 60,
+            "defense": 63,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Florizarre_shiny",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/3.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Charge",
+            "Canon Graine"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 82,
+            "special_attack": 100,
+            "speed": 80,
+            "defense": 83,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Salameche_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/4.png",
+        "attacks": [
+            "Griffe",
+            "Flammeche"
+        ],
+        "stats": {
+            "hp": 39,
+            "attack": 52,
+            "special_attack": 60,
+            "speed": 65,
+            "defense": 43,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Reptincel_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/5.png",
+        "attacks": [
+            "Griffe",
+            "Flammeche",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 58,
+            "attack": 64,
+            "special_attack": 80,
+            "speed": 80,
+            "defense": 58,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Dracaufeu_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/6.png",
+        "attacks": [
+            "Griffe",
+            "Flammeche",
+            "Lance-Flammes",
+            "Dracochoc"
+        ],
+        "stats": {
+            "hp": 78,
+            "attack": 84,
+            "special_attack": 109,
+            "speed": 100,
+            "defense": 78,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Carapuce_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/7.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 44,
+            "attack": 48,
+            "special_attack": 50,
+            "speed": 43,
+            "defense": 65,
+            "special_defense": 64
+        }
+    },
+    {
+        "name": "Carabaffe_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/8.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 59,
+            "attack": 63,
+            "special_attack": 65,
+            "speed": 58,
+            "defense": 80,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Tortank_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/9.png",
+        "attacks": [
+            "Pistolet a O",
+            "Hydrocanon",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 79,
+            "attack": 83,
+            "special_attack": 85,
+            "speed": 78,
+            "defense": 100,
+            "special_defense": 105
+        }
+    },
+    {
+        "name": "Chenipan_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10.png",
+        "attacks": [
+            "Charge",
+            "Dard-Venin"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 30,
+            "special_attack": 20,
+            "speed": 45,
+            "defense": 35,
+            "special_defense": 20
+        }
+    },
+    {
+        "name": "Chrysacier_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/11.png",
+        "attacks": [
+            "Armure"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 20,
+            "special_attack": 25,
+            "speed": 30,
+            "defense": 55,
+            "special_defense": 25
+        }
+    },
+    {
+        "name": "Papilusion_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/12.png",
+        "attacks": [
+            "Poudre Dodo",
+            "Vent Violent",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 45,
+            "special_attack": 90,
+            "speed": 70,
+            "defense": 50,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Aspicot_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/13.png",
+        "attacks": [
+            "Dard-Venin",
+            "Picpic"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 35,
+            "special_attack": 20,
+            "speed": 50,
+            "defense": 30,
+            "special_defense": 20
+        }
+    },
+    {
+        "name": "Coconfort_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/14.png",
+        "attacks": [
+            "Armure"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 25,
+            "special_attack": 25,
+            "speed": 35,
+            "defense": 50,
+            "special_defense": 25
+        }
+    },
+    {
+        "name": "Dardargnan_shiny",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/15.png",
+        "attacks": [
+            "Dard-Venin",
+            "Vol",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 90,
+            "special_attack": 45,
+            "speed": 75,
+            "defense": 40,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Roucool_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/16.png",
+        "attacks": [
+            "Charge",
+            "Pique"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 45,
+            "special_attack": 35,
+            "speed": 56,
+            "defense": 40,
+            "special_defense": 35
+        }
+    },
+    {
+        "name": "Roucoups_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/17.png",
+        "attacks": [
+            "Charge",
+            "Pique",
+            "Cru-Aile"
+        ],
+        "stats": {
+            "hp": 63,
+            "attack": 60,
+            "special_attack": 50,
+            "speed": 71,
+            "defense": 55,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Roucarnage_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/18.png",
+        "attacks": [
+            "Charge",
+            "Pique",
+            "Cru-Aile",
+            "Atterrissage"
+        ],
+        "stats": {
+            "hp": 83,
+            "attack": 80,
+            "special_attack": 65,
+            "speed": 101,
+            "defense": 75,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Rattata_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/19.png",
+        "attacks": [
+            "Morsure",
+            "Griffe",
+            "Queue de fer"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 56,
+            "special_attack": 35,
+            "speed": 72,
+            "defense": 35,
+            "special_defense": 35
+        }
+    },
+    {
+        "name": "Rattatac_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/20.png",
+        "attacks": [
+            "Morsure",
+            "Griffe",
+            "Queue de fer",
+            "Vive-Attaque"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 81,
+            "special_attack": 60,
+            "speed": 97,
+            "defense": 60,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Piafabec_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/21.png",
+        "attacks": [
+            "Charge",
+            "Pique",
+            "Cru-Aile"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 60,
+            "special_attack": 31,
+            "speed": 70,
+            "defense": 30,
+            "special_defense": 30
+        }
+    },
+    {
+        "name": "Rapasdepic_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/22.png",
+        "attacks": [
+            "Charge",
+            "Pique",
+            "Cru-Aile",
+            "Atterrissage"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 90,
+            "special_attack": 61,
+            "speed": 100,
+            "defense": 65,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Abo_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/23.png",
+        "attacks": [
+            "Constriction",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 60,
+            "special_attack": 65,
+            "speed": 55,
+            "defense": 44,
+            "special_defense": 54
+        }
+    },
+    {
+        "name": "Arbok_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/24.png",
+        "attacks": [
+            "Constriction",
+            "Lance-Flammes",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 95,
+            "special_attack": 80,
+            "speed": 80,
+            "defense": 69,
+            "special_defense": 79
+        }
+    },
+    {
+        "name": "Pikachu_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/25.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 55,
+            "special_attack": 50,
+            "speed": 90,
+            "defense": 40,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Raichu_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/26.png",
+        "attacks": [
+            "Eclair",
+            "Charge",
+            "Tonnerre"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 90,
+            "special_attack": 90,
+            "speed": 110,
+            "defense": 55,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Sabelette_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/27.png",
+        "attacks": [
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 75,
+            "special_attack": 30,
+            "speed": 40,
+            "defense": 85,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Sablaireau_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/28.png",
+        "attacks": [
+            "Charge",
+            "Fouet Lianes",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 100,
+            "special_attack": 55,
+            "speed": 65,
+            "defense": 110,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Nidoran♀_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/29.png",
+        "attacks": [
+            "Charge",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 47,
+            "special_attack": 40,
+            "speed": 41,
+            "defense": 52,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Nidorina_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/30.png",
+        "attacks": [
+            "Charge",
+            "Piqure",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 62,
+            "special_attack": 55,
+            "speed": 56,
+            "defense": 67,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Nidoqueen_shiny",
+        "type": [
+            "sol",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/31.png",
+        "attacks": [
+            "Charge",
+            "Piqure",
+            "Vampigraine",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 92,
+            "special_attack": 75,
+            "speed": 85,
+            "defense": 87,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Nidoran♂_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/32.png",
+        "attacks": [
+            "Charge",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 46,
+            "attack": 57,
+            "special_attack": 40,
+            "speed": 50,
+            "defense": 40,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Nidorino_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/33.png",
+        "attacks": [
+            "Charge",
+            "Piqure",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 61,
+            "attack": 72,
+            "special_attack": 55,
+            "speed": 65,
+            "defense": 57,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Nidoking_shiny",
+        "type": [
+            "sol",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/34.png",
+        "attacks": [
+            "Charge",
+            "Piqure",
+            "Vampigraine",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 81,
+            "attack": 102,
+            "special_attack": 85,
+            "speed": 95,
+            "defense": 77,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Melofee_shiny",
+        "type": [
+            "fée"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/35.png",
+        "attacks": [
+            "Charge",
+            "Poudre Dodo"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 45,
+            "special_attack": 60,
+            "speed": 35,
+            "defense": 48,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Melodelfe_shiny",
+        "type": [
+            "fée"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/36.png",
+        "attacks": [
+            "Charge",
+            "Poudre Dodo",
+            "Choc Psy"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 70,
+            "special_attack": 85,
+            "speed": 60,
+            "defense": 73,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Goupix_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/37.png",
+        "attacks": [
+            "Griffe",
+            "Flammeche"
+        ],
+        "stats": {
+            "hp": 38,
+            "attack": 41,
+            "special_attack": 50,
+            "speed": 65,
+            "defense": 40,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Feunard_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/38.png",
+        "attacks": [
+            "Griffe",
+            "Flammeche",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 73,
+            "attack": 76,
+            "special_attack": 81,
+            "speed": 100,
+            "defense": 75,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Rondoudou_shiny",
+        "type": [
+            "normal",
+            "fée"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/39.png",
+        "attacks": [
+            "Poudre Dodo",
+            "Chant",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 115,
+            "attack": 45,
+            "special_attack": 45,
+            "speed": 20,
+            "defense": 20,
+            "special_defense": 25
+        }
+    },
+    {
+        "name": "Grodoudou_shiny",
+        "type": [
+            "normal",
+            "fée"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/40.png",
+        "attacks": [
+            "Poudre Dodo",
+            "Chant",
+            "Charge",
+            "Ecrasement"
+        ],
+        "stats": {
+            "hp": 140,
+            "attack": 70,
+            "special_attack": 75,
+            "speed": 45,
+            "defense": 45,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Nosferapti_shiny",
+        "type": [
+            "vol",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/41.png",
+        "attacks": [
+            "Morsure",
+            "Ultrason",
+            "Vol"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 45,
+            "special_attack": 30,
+            "speed": 55,
+            "defense": 35,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Nosferalto_shiny",
+        "type": [
+            "vol/poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/42.png",
+        "attacks": [
+            "Morsure",
+            "Ultrason",
+            "Vol",
+            "Cru-Aile"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 80,
+            "special_attack": 65,
+            "speed": 90,
+            "defense": 70,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Mystherbe_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/43.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 52,
+            "special_attack": 40,
+            "speed": 35,
+            "defense": 48,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Ortide_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/44.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Vampigraine",
+            "Poudre Dodo"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 65,
+            "special_attack": 60,
+            "speed": 30,
+            "defense": 70,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Rafflesia_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/45.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Canon Graine",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 80,
+            "special_attack": 90,
+            "speed": 50,
+            "defense": 90,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Paras_shiny",
+        "type": [
+            "insecte",
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/46.png",
+        "attacks": [
+            "Griffe",
+            "Spore"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 70,
+            "special_attack": 45,
+            "speed": 25,
+            "defense": 55,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Parasect_shiny",
+        "type": [
+            "insecte",
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/47.png",
+        "attacks": [
+            "Griffe",
+            "Spore",
+            "Lance-Soleil"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 95,
+            "special_attack": 80,
+            "speed": 30,
+            "defense": 80,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Mimitoss_shiny",
+        "type": [
+            "insecte",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/48.png",
+        "attacks": [
+            "Dard-Venin",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 25,
+            "special_attack": 40,
+            "speed": 50,
+            "defense": 50,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Aeromite_shiny",
+        "type": [
+            "insecte",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/49.png",
+        "attacks": [
+            "Dard-Venin",
+            "Piqure",
+            "Ultrason"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 60,
+            "special_attack": 80,
+            "speed": 65,
+            "defense": 80,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Taupiqueur_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/50.png",
+        "attacks": [
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 55,
+            "special_attack": 25,
+            "speed": 35,
+            "defense": 40,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Triopikeur_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/51.png",
+        "attacks": [
+            "Charge",
+            "Tranche",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 100,
+            "special_attack": 50,
+            "speed": 40,
+            "defense": 90,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Miaouss_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/52.png",
+        "attacks": [
+            "Griffe",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 45,
+            "special_attack": 40,
+            "speed": 90,
+            "defense": 35,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Persian_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/53.png",
+        "attacks": [
+            "Griffe",
+            "Tranche",
+            "Cru-Aile"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 70,
+            "special_attack": 65,
+            "speed": 115,
+            "defense": 60,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Psykokwak_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/54.png",
+        "attacks": [
+            "Pistolet a O",
+            "Brouillard"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 52,
+            "special_attack": 65,
+            "speed": 55,
+            "defense": 48,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Akwakwak_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/55.png",
+        "attacks": [
+            "Pistolet a O",
+            "Brouillard",
+            "Marelle"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 62,
+            "special_attack": 80,
+            "speed": 90,
+            "defense": 63,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Ferosinge_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/56.png",
+        "attacks": [
+            "Charge",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 80,
+            "special_attack": 35,
+            "speed": 70,
+            "defense": 35,
+            "special_defense": 35
+        }
+    },
+    {
+        "name": "Colossinge_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/57.png",
+        "attacks": [
+            "Charge",
+            "Morsure",
+            "Pique"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 105,
+            "special_attack": 60,
+            "speed": 95,
+            "defense": 60,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Caninos_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/58.png",
+        "attacks": [
+            "Flammeche",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 70,
+            "special_attack": 60,
+            "speed": 90,
+            "defense": 45,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Arcanin_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/59.png",
+        "attacks": [
+            "Flammeche",
+            "Morsure",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 110,
+            "special_attack": 100,
+            "speed": 95,
+            "defense": 80,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Ptitard_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/60.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 50,
+            "special_attack": 40,
+            "speed": 40,
+            "defense": 40,
+            "special_defense": 40
+        }
+    },
+    {
+        "name": "Tetarte_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/61.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 54,
+            "attack": 63,
+            "special_attack": 50,
+            "speed": 50,
+            "defense": 52,
+            "special_defense": 53
+        }
+    },
+    {
+        "name": "Tartard_shiny",
+        "type": [
+            "eau",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/62.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Morsure",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 79,
+            "attack": 85,
+            "special_attack": 65,
+            "speed": 60,
+            "defense": 78,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Abra_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/63.png",
+        "attacks": [
+            "Choc Psy",
+            "Teleport"
+        ],
+        "stats": {
+            "hp": 25,
+            "attack": 20,
+            "special_attack": 105,
+            "speed": 90,
+            "defense": 15,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Kadabra_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/64.png",
+        "attacks": [
+            "Choc Psy",
+            "Teleport",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 35,
+            "special_attack": 120,
+            "speed": 105,
+            "defense": 30,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Alakazam_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/65.png",
+        "attacks": [
+            "Choc Psy",
+            "Teleport",
+            "Psyko",
+            "Bouclier"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 50,
+            "special_attack": 135,
+            "speed": 120,
+            "defense": 45,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Machoc_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/66.png",
+        "attacks": [
+            "Charge",
+            "Poing Karate"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 80,
+            "special_attack": 35,
+            "speed": 35,
+            "defense": 50,
+            "special_defense": 35
+        }
+    },
+    {
+        "name": "Machopeur_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/67.png",
+        "attacks": [
+            "Charge",
+            "Poing Karate",
+            "Poing-Eclair"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 100,
+            "special_attack": 50,
+            "speed": 45,
+            "defense": 70,
+            "special_defense": 60
+        }
+    },
+    {
+        "name": "Mackogneur_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/68.png",
+        "attacks": [
+            "Charge",
+            "Poing Karate",
+            "Poing-Eclair",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 130,
+            "special_attack": 65,
+            "speed": 55,
+            "defense": 80,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Chetiflor_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/69.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Vampigraine"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 50,
+            "special_attack": 75,
+            "speed": 30,
+            "defense": 35,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Boustiflor_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/70.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Vampigraine",
+            "Canon Graine"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 65,
+            "special_attack": 90,
+            "speed": 40,
+            "defense": 50,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Empiflor_shiny",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/71.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Vampigraine",
+            "Canon Graine",
+            "Siphon"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 80,
+            "special_attack": 100,
+            "speed": 50,
+            "defense": 65,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Tentacool_shiny",
+        "type": [
+            "eau",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/72.png",
+        "attacks": [
+            "Pistolet a O",
+            "Dard-Venin"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 40,
+            "special_attack": 50,
+            "speed": 70,
+            "defense": 35,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Tentacruel_shiny",
+        "type": [
+            "eau",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/73.png",
+        "attacks": [
+            "Pistolet a O",
+            "Dard-Venin",
+            "Ultrason"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 70,
+            "special_attack": 80,
+            "speed": 100,
+            "defense": 65,
+            "special_defense": 120
+        }
+    },
+    {
+        "name": "Racaillou_shiny",
+        "type": [
+            "roche",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/74.png",
+        "attacks": [
+            "Charge",
+            "Lance-Pierre"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 80,
+            "special_attack": 30,
+            "speed": 20,
+            "defense": 100,
+            "special_defense": 30
+        }
+    },
+    {
+        "name": "Gravalanch_shiny",
+        "type": [
+            "roche",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/75.png",
+        "attacks": [
+            "Charge",
+            "Lance-Pierre",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 95,
+            "special_attack": 45,
+            "speed": 25,
+            "defense": 115,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Grolem_shiny",
+        "type": [
+            "roche",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/76.png",
+        "attacks": [
+            "Charge",
+            "Lance-Pierre",
+            "Seisme",
+            "Poing Karate"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 120,
+            "special_attack": 55,
+            "speed": 45,
+            "defense": 130,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Ponyta_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/77.png",
+        "attacks": [
+            "Charge",
+            "Flammeche"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 85,
+            "special_attack": 65,
+            "speed": 90,
+            "defense": 55,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Galopa_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/78.png",
+        "attacks": [
+            "Charge",
+            "Flammeche",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 100,
+            "special_attack": 80,
+            "speed": 105,
+            "defense": 70,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Ramoloss_shiny",
+        "type": [
+            "eau",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/79.png",
+        "attacks": [
+            "Pistolet a O",
+            "Choc Psy"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 65,
+            "special_attack": 75,
+            "speed": 15,
+            "defense": 65,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Flagadoss_shiny",
+        "type": [
+            "eau",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/80.png",
+        "attacks": [
+            "Pistolet a O",
+            "Choc Psy",
+            "Brouillard"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 75,
+            "special_attack": 100,
+            "speed": 30,
+            "defense": 80,
+            "special_defense": 120
+        }
+    },
+    {
+        "name": "Magneti_shiny",
+        "type": [
+            "électrique",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/81.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 25,
+            "attack": 35,
+            "special_attack": 95,
+            "speed": 45,
+            "defense": 70,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Magneton_shiny",
+        "type": [
+            "électrique",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/82.png",
+        "attacks": [
+            "Eclair",
+            "Charge",
+            "Boule Elek"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 60,
+            "special_attack": 120,
+            "speed": 70,
+            "defense": 95,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Canarticho_shiny",
+        "type": [
+            "normal",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/83.png",
+        "attacks": [
+            "Charge",
+            "Picpic"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 85,
+            "special_attack": 60,
+            "speed": 70,
+            "defense": 65,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Doduo_shiny",
+        "type": [
+            "normal",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/84.png",
+        "attacks": [
+            "Picpic",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 85,
+            "special_attack": 35,
+            "speed": 75,
+            "defense": 45,
+            "special_defense": 35
+        }
+    },
+    {
+        "name": "Dodrio_shiny",
+        "type": [
+            "normal",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/85.png",
+        "attacks": [
+            "Picpic",
+            "Charge",
+            "Cru-Aile"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 110,
+            "special_attack": 60,
+            "speed": 110,
+            "defense": 70,
+            "special_defense": 60
+        }
+    },
+    {
+        "name": "Otaria_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/86.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 70,
+            "special_attack": 70,
+            "speed": 45,
+            "defense": 80,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Lamantine_shiny",
+        "type": [
+            "eau",
+            "glace"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/87.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Laser Glace"
+        ],
+        "stats": {
+            "hp": 130,
+            "attack": 70,
+            "special_attack": 80,
+            "speed": 60,
+            "defense": 90,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Tadmorv_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/88.png",
+        "attacks": [
+            "Boue-Bombe",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 65,
+            "special_attack": 40,
+            "speed": 35,
+            "defense": 95,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Grotadmorv_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/89.png",
+        "attacks": [
+            "Boue-Bombe",
+            "Tranche",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 95,
+            "special_attack": 65,
+            "speed": 45,
+            "defense": 120,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Kokiyas_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/90.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 65,
+            "special_attack": 40,
+            "speed": 35,
+            "defense": 100,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Crustabri_shiny",
+        "type": [
+            "eau",
+            "glace"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/91.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Laser Glace"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 105,
+            "special_attack": 65,
+            "speed": 50,
+            "defense": 125,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Fantominus_shiny",
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/92.png",
+        "attacks": [
+            "Boule Ombre",
+            "Gaz Toxik"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 35,
+            "special_attack": 100,
+            "speed": 80,
+            "defense": 30,
+            "special_defense": 30
+        }
+    },
+    {
+        "name": "Spectrum_shiny",
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/93.png",
+        "attacks": [
+            "Boule Ombre",
+            "Gaz Toxik",
+            "Explosion"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 50,
+            "special_attack": 135,
+            "speed": 105,
+            "defense": 45,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Ectoplasma_shiny",
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/94.png",
+        "attacks": [
+            "Boule Ombre",
+            "Gaz Toxik",
+            "Explosion",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 65,
+            "special_attack": 150,
+            "speed": 130,
+            "defense": 60,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Onix_shiny",
+        "type": [
+            "roche",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/95.png",
+        "attacks": [
+            "Lance-Pierre",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 45,
+            "special_attack": 30,
+            "speed": 70,
+            "defense": 160,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Soporifik_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/96.png",
+        "attacks": [
+            "Choc Psy",
+            "Poudre Dodo"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 48,
+            "special_attack": 43,
+            "speed": 42,
+            "defense": 65,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Hypnomade_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/97.png",
+        "attacks": [
+            "Choc Psy",
+            "Poudre Dodo",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 73,
+            "special_attack": 73,
+            "speed": 67,
+            "defense": 90,
+            "special_defense": 115
+        }
+    },
+    {
+        "name": "Krabby_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/98.png",
+        "attacks": [
+            "Pince",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 105,
+            "special_attack": 25,
+            "speed": 50,
+            "defense": 90,
+            "special_defense": 25
+        }
+    },
+    {
+        "name": "Krabboss_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/99.png",
+        "attacks": [
+            "Pince",
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 130,
+            "special_attack": 50,
+            "speed": 75,
+            "defense": 115,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Voltorbe_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/100.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 30,
+            "special_attack": 55,
+            "speed": 100,
+            "defense": 50,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Electrode_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/101.png",
+        "attacks": [
+            "Eclair",
+            "Charge",
+            "Boule Elek"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 50,
+            "special_attack": 80,
+            "speed": 150,
+            "defense": 70,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Noeunoeuf_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/102.png",
+        "attacks": [
+            "Choc Psy",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 25,
+            "special_attack": 40,
+            "speed": 20,
+            "defense": 50,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Noadkoko_shiny",
+        "type": [
+            "psy",
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/103.png",
+        "attacks": [
+            "Choc Psy",
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 95,
+            "special_attack": 125,
+            "speed": 30,
+            "defense": 85,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Osselait_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/104.png",
+        "attacks": [
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 80,
+            "special_attack": 30,
+            "speed": 35,
+            "defense": 100,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Ossatueur_shiny",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/105.png",
+        "attacks": [
+            "Charge",
+            "Tranche",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 110,
+            "special_attack": 45,
+            "speed": 45,
+            "defense": 125,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Kicklee_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/106.png",
+        "attacks": [
+            "Poing Karate",
+            "Pique"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 120,
+            "special_attack": 35,
+            "speed": 87,
+            "defense": 53,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Tygnon_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/107.png",
+        "attacks": [
+            "Poing Karate",
+            "Pique",
+            "Poing-Eclair"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 105,
+            "special_attack": 60,
+            "speed": 98,
+            "defense": 79,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Excelangue_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/108.png",
+        "attacks": [
+            "Lechouille",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 85,
+            "special_attack": 70,
+            "speed": 60,
+            "defense": 80,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Smogo_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/109.png",
+        "attacks": [
+            "Gaz Toxik",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 65,
+            "special_attack": 40,
+            "speed": 35,
+            "defense": 95,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Smogogo_shiny",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/110.png",
+        "attacks": [
+            "Gaz Toxik",
+            "Tranche",
+            "Explosion"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 90,
+            "special_attack": 75,
+            "speed": 60,
+            "defense": 120,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Rhinocorne_shiny",
+        "type": [
+            "sol",
+            "roche"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/111.png",
+        "attacks": [
+            "Charge",
+            "Corps Perdu"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 85,
+            "special_attack": 30,
+            "speed": 25,
+            "defense": 95,
+            "special_defense": 30
+        }
+    },
+    {
+        "name": "Rhinoferos_shiny",
+        "type": [
+            "sol",
+            "roche"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/112.png",
+        "attacks": [
+            "Charge",
+            "Corps Perdu",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 105,
+            "attack": 130,
+            "special_attack": 55,
+            "speed": 40,
+            "defense": 120,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Leveinard_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/113.png",
+        "attacks": [
+            "Charge",
+            "Tranche",
+            "Pouvoir Lunaire"
+        ],
+        "stats": {
+            "hp": 250,
+            "attack": 5,
+            "special_attack": 35,
+            "speed": 50,
+            "defense": 5,
+            "special_defense": 105
+        }
+    },
+    {
+        "name": "Saquedeneu_shiny",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/114.png",
+        "attacks": [
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 70,
+            "special_attack": 40,
+            "speed": 30,
+            "defense": 40,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Kangourex_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/115.png",
+        "attacks": [
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 95,
+            "special_attack": 70,
+            "speed": 95,
+            "defense": 80,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Hypotrempe_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/116.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 41,
+            "attack": 64,
+            "special_attack": 50,
+            "speed": 50,
+            "defense": 45,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Hypocean_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/117.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charge",
+            "Laser Glace"
+        ],
+        "stats": {
+            "hp": 61,
+            "attack": 84,
+            "special_attack": 70,
+            "speed": 70,
+            "defense": 65,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Poissirene_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/118.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charme"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 60,
+            "special_attack": 70,
+            "speed": 60,
+            "defense": 65,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Poissoroy_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/119.png",
+        "attacks": [
+            "Pistolet a O",
+            "Charme",
+            "Laser Glace"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 95,
+            "special_attack": 100,
+            "speed": 70,
+            "defense": 95,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Stari_shiny",
+        "type": [
+            "eau",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/120.png",
+        "attacks": [
+            "Pistolet a O",
+            "Choc Psy"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 45,
+            "special_attack": 70,
+            "speed": 55,
+            "defense": 55,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Staross_shiny",
+        "type": [
+            "eau",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/121.png",
+        "attacks": [
+            "Pistolet a O",
+            "Choc Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 75,
+            "special_attack": 100,
+            "speed": 85,
+            "defense": 85,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "M. Mime_shiny",
+        "type": [
+            "psy",
+            "fée"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/122.png",
+        "attacks": [
+            "Choc Psy",
+            "Bluff"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 45,
+            "special_attack": 100,
+            "speed": 90,
+            "defense": 65,
+            "special_defense": 120
+        }
+    },
+    {
+        "name": "Insecateur_shiny",
+        "type": [
+            "insecte",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/123.png",
+        "attacks": [
+            "Pique",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 110,
+            "special_attack": 55,
+            "speed": 85,
+            "defense": 80,
+            "special_defense": 80
+        }
+    },
+    {
+        "name": "Lippoutou_shiny",
+        "type": [
+            "glace",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/124.png",
+        "attacks": [
+            "Eclats Glace",
+            "Choc Psy"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 50,
+            "special_attack": 115,
+            "speed": 95,
+            "defense": 95,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Elektek_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/125.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 83,
+            "special_attack": 85,
+            "speed": 105,
+            "defense": 57,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Magmar_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/126.png",
+        "attacks": [
+            "Flammeche",
+            "Poing Karate"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 95,
+            "special_attack": 100,
+            "speed": 93,
+            "defense": 57,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Scarabrute_shiny",
+        "type": [
+            "insecte",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/127.png",
+        "attacks": [
+            "Charge",
+            "Pique",
+            "Poing Karate"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 130,
+            "special_attack": 60,
+            "speed": 75,
+            "defense": 75,
+            "special_defense": 60
+        }
+    },
+    {
+        "name": "Tauros_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/128.png",
+        "attacks": [
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 100,
+            "special_attack": 40,
+            "speed": 110,
+            "defense": 95,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Magicarpe_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/129.png",
+        "attacks": [
+            "Trempette"
+        ],
+        "stats": {
+            "hp": 20,
+            "attack": 10,
+            "special_attack": 15,
+            "speed": 80,
+            "defense": 55,
+            "special_defense": 20
+        }
+    },
+    {
+        "name": "Leviator_shiny",
+        "type": [
+            "eau",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/130.png",
+        "attacks": [
+            "Morsure",
+            "Hydrocanon",
+            "Dracochoc"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 125,
+            "special_attack": 60,
+            "speed": 81,
+            "defense": 79,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Lokhlass_shiny",
+        "type": [
+            "eau",
+            "glace"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/131.png",
+        "attacks": [
+            "Pistolet a O",
+            "Laser Glace",
+            "Brouillard"
+        ],
+        "stats": {
+            "hp": 130,
+            "attack": 85,
+            "special_attack": 95,
+            "speed": 60,
+            "defense": 80,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Metamorph_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/132.png",
+        "attacks": [
+            "Transformation"
+        ],
+        "stats": {
+            "hp": 48,
+            "attack": 48,
+            "special_attack": 48,
+            "speed": 48,
+            "defense": 48,
+            "special_defense": 48
+        }
+    },
+    {
+        "name": "Evoli_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/133.png",
+        "attacks": [
+            "Charge",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 55,
+            "special_attack": 50,
+            "speed": 55,
+            "defense": 50,
+            "special_defense": 65
+        }
+    },
+    {
+        "name": "Aquali_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/134.png",
+        "attacks": [
+            "Pistolet a O",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 130,
+            "attack": 65,
+            "special_attack": 110,
+            "speed": 60,
+            "defense": 65,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Voltali_shiny",
+        "type": [
+            "électrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/135.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 65,
+            "special_attack": 110,
+            "speed": 130,
+            "defense": 60,
+            "special_defense": 95
+        }
+    },
+    {
+        "name": "Pyroli_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/136.png",
+        "attacks": [
+            "Flammeche",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 130,
+            "special_attack": 95,
+            "speed": 110,
+            "defense": 60,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Porygon_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/137.png",
+        "attacks": [
+            "Charge",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 60,
+            "special_attack": 85,
+            "speed": 40,
+            "defense": 70,
+            "special_defense": 75
+        }
+    },
+    {
+        "name": "Amonita_shiny",
+        "type": [
+            "roche",
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/138.png",
+        "attacks": [
+            "Lance-Pierre",
+            "Pistolet a O"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 40,
+            "special_attack": 90,
+            "speed": 35,
+            "defense": 100,
+            "special_defense": 55
+        }
+    },
+    {
+        "name": "Amonistar_shiny",
+        "type": [
+            "roche",
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/139.png",
+        "attacks": [
+            "Lance-Pierre",
+            "Pistolet a O",
+            "Canon Graine"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 60,
+            "special_attack": 125,
+            "speed": 55,
+            "defense": 125,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Kabuto_shiny",
+        "type": [
+            "roche",
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/140.png",
+        "attacks": [
+            "Lance-Pierre",
+            "Pistolet a O"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 80,
+            "special_attack": 45,
+            "speed": 55,
+            "defense": 90,
+            "special_defense": 45
+        }
+    },
+    {
+        "name": "Kabutops_shiny",
+        "type": [
+            "roche",
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/141.png",
+        "attacks": [
+            "Lance-Pierre",
+            "Pistolet a O",
+            "Tranche"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 115,
+            "special_attack": 70,
+            "speed": 80,
+            "defense": 105,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Ptera_shiny",
+        "type": [
+            "roche",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/142.png",
+        "attacks": [
+            "Cru-Aile",
+            "Tranche",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 105,
+            "special_attack": 65,
+            "speed": 130,
+            "defense": 65,
+            "special_defense": 60
+        }
+    },
+    {
+        "name": "Ronflex_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/143.png",
+        "attacks": [
+            "Charge",
+            "Plaquage"
+        ],
+        "stats": {
+            "hp": 160,
+            "attack": 110,
+            "special_attack": 65,
+            "speed": 30,
+            "defense": 65,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Artikodin_shiny",
+        "type": [
+            "glace",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/144.png",
+        "attacks": [
+            "Eclats Glace",
+            "Cru-Aile",
+            "Vent Glace"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 85,
+            "special_attack": 125,
+            "speed": 85,
+            "defense": 100,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Electhor_shiny",
+        "type": [
+            "électrique",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/145.png",
+        "attacks": [
+            "Eclair",
+            "Cru-Aile",
+            "Boule Elek",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 90,
+            "special_attack": 125,
+            "speed": 100,
+            "defense": 85,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Sulfura_shiny",
+        "type": [
+            "feu",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/146.png",
+        "attacks": [
+            "Braise",
+            "Cru-Aile",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 100,
+            "special_attack": 125,
+            "speed": 90,
+            "defense": 90,
+            "special_defense": 85
+        }
+    },
+    {
+        "name": "Minidraco_shiny",
+        "type": [
+            "dragon"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/147.png",
+        "attacks": [
+            "Dracochoc",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 41,
+            "attack": 64,
+            "special_attack": 50,
+            "speed": 50,
+            "defense": 45,
+            "special_defense": 50
+        }
+    },
+    {
+        "name": "Draco_shiny",
+        "type": [
+            "dragon"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/148.png",
+        "attacks": [
+            "Dracochoc",
+            "Charge",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 61,
+            "attack": 84,
+            "special_attack": 70,
+            "speed": 70,
+            "defense": 65,
+            "special_defense": 70
+        }
+    },
+    {
+        "name": "Dracolosse_shiny",
+        "type": [
+            "dragon",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/149.png",
+        "attacks": [
+            "Dracochoc",
+            "Seisme",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 91,
+            "attack": 134,
+            "special_attack": 100,
+            "speed": 80,
+            "defense": 95,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Mewtwo_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png",
+        "attacks": [
+            "Choc Psy",
+            "Psyko",
+            "Aura Sphere"
+        ],
+        "stats": {
+            "hp": 106,
+            "attack": 110,
+            "special_attack": 154,
+            "speed": 130,
+            "defense": 90,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Mew_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+        "attacks": [
+            "Choc Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 100,
+            "special_attack": 100,
+            "speed": 100,
+            "defense": 100,
+            "special_defense": 100
+        }
+    }
+>>>>>>> a612d5981c11cdcbe915eee51604fd43ae9afb00
+]

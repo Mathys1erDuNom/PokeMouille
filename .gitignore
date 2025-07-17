@@ -1,0 +1,11 @@
+# Ignorer les variables sensibles
+.env
+
+# Ignorer les fichiers et dossiers temporaires
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignorer un éventuel environnement virtuel
+venv/
