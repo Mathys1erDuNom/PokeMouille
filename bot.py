@@ -30,7 +30,6 @@ from pokedex import setup_pokedex
 from io import BytesIO
 
 
-print("[DEBUG] Bot starting...")
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
@@ -643,3 +642,5 @@ setup_guess_pokemon_command(
 bot.is_under_ban = is_under_ban
 setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir)
 
+print("[DEBUG] Ready to run bot...")
+bot.run(TOKEN)
