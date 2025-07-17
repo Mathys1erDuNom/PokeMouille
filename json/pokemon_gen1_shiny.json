@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 [
     {
         "name": "Bulbizarre_shiny",
@@ -3013,9 +3013,9 @@
             "defense": 100,
             "special_defense": 100
         }
-    }
-=======
-[
+    },
+
+
     {
         "name": "Bulbizarre_shiny",
         "type": [
@@ -6030,5 +6030,5 @@
             "special_defense": 100
         }
     }
->>>>>>> a612d5981c11cdcbe915eee51604fd43ae9afb00
+
 ]

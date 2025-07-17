@@ -1,15 +1,6 @@
-<<<<<<< HEAD
 [
   {
     "name": "Pokéball",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
   }
 ]
-=======
-[
-  {
-    "name": "Pokéball",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
-  }
-]
->>>>>>> a612d5981c11cdcbe915eee51604fd43ae9afb00

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 [
     {
         "name": "Germignon_shiny",
@@ -2044,9 +2044,9 @@
             "special_defense": 100,
             "speed": 100
         }
-    }
-=======
-[
+    },
+
+
     {
         "name": "Germignon_shiny",
         "type": [
@@ -4092,5 +4092,5 @@
             "speed": 100
         }
     }
->>>>>>> a612d5981c11cdcbe915eee51604fd43ae9afb00
+
 ]
