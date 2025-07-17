@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import discord
 from discord.ext import commands
 from discord.ui import View, Button
@@ -108,7 +108,7 @@ def setup_quiz_commands(bot, spawn_pokemon, role_id, is_under_ban_func, question
 
         view = QuizView(q)
         view.message = await ctx.send("🧐 Choisis ta réponse :", view=view)
-=======
+
 import discord
 from discord.ext import commands
 from discord.ui import View, Button
@@ -218,4 +218,4 @@ def setup_quiz_commands(bot, spawn_pokemon, role_id, is_under_ban_func, question
 
         view = QuizView(q)
         view.message = await ctx.send("🧐 Choisis ta réponse :", view=view)
->>>>>>> a612d5981c11cdcbe915eee51604fd43ae9afb00
+

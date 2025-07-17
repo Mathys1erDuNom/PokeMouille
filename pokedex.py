@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # pokedex.py
 import discord
 from discord.ui import View, Button
@@ -277,7 +277,7 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
 
         view = PokedexView(pokemons, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, data[user_id])
         await ctx.send(embed=embed, file=file, view=view)
-=======
+
 # pokedex.py
 import discord
 from discord.ui import View, Button
@@ -556,4 +556,4 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
 
         view = PokedexView(pokemons, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, data[user_id])
         await ctx.send(embed=embed, file=file, view=view)
->>>>>>> a612d5981c11cdcbe915eee51604fd43ae9afb00
+

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import discord
 from discord.ext import commands
 from discord.ui import View, Button
@@ -155,7 +155,7 @@ def setup_guess_pokemon_command(bot, spawn_pokemon=None, role_id=None, authorize
 
         view = GuessView(correct_name, options)
         view.message = await ctx.send("🧐 Qui est-ce Pokémon ?", view=view)
-=======
+
 import discord
 from discord.ext import commands
 from discord.ui import View, Button
@@ -312,4 +312,4 @@ def setup_guess_pokemon_command(bot, spawn_pokemon=None, role_id=None, authorize
 
         view = GuessView(correct_name, options)
         view.message = await ctx.send("🧐 Qui est-ce Pokémon ?", view=view)
->>>>>>> a612d5981c11cdcbe915eee51604fd43ae9afb00
+
