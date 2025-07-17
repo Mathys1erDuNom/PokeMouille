@@ -30,7 +30,7 @@ from pokedex import setup_pokedex
 from io import BytesIO
 
 
-
+print("[DEBUG] Bot starting...")
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
