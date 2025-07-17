@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import discord
 from discord.ext import commands, tasks
 from discord.ui import View, Button, Select
@@ -644,7 +644,7 @@ bot.is_under_ban = is_under_ban
 setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir)
 
 
-=======
+
 import discord
 from discord.ext import commands, tasks
 from discord.ui import View, Button, Select
@@ -1290,5 +1290,5 @@ bot.is_under_ban = is_under_ban
 setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir)
 
 
->>>>>>> a612d5981c11cdcbe915eee51604fd43ae9afb00
+
 bot.run(TOKEN)
