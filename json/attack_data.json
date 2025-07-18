@@ -473,5 +473,41 @@
     "type": "normal",
     "damage": 75,
     "category": "physique"
-  }
+  },
+  
+  { "name": "Puissance Cachee", "type": "normal", "damage": 0, "category": "speciale" },
+  { "name": "Poing Comete", "type": "normal", "damage": 18, "category": "physique" },
+  { "name": "EcraseFace", "type": "normal", "damage": 35, "category": "physique" },
+  { "name": "Poing Karate", "type": "combat", "damage": 50, "category": "physique" },
+  { "name": "Coupe-Vent", "type": "vol", "damage": 80, "category": "physique" },
+  { "name": "Poing Feu", "type": "feu", "damage": 75, "category": "speciale" },
+  { "name": "Tornade", "type": "vol", "damage": 40, "category": "physique" },
+  { "name": "Mawashi Geri", "type": "combat", "damage": 60, "category": "physique" },
+  { "name": "Torgnoles", "type": "normal", "damage": 15, "category": "physique" },
+  { "name": "Guillotine", "type": "normal", "damage": 0, "category": "physique" },
+  { "name": "Jackpot", "type": "normal", "damage": 40, "category": "physique" },
+  { "name": "Gribouille", "type": "normal", "damage": 0, "category": "physique" },
+  { "name": "Souplesse", "type": "normal", "damage": 80, "category": "physique" },
+  { "name": "Ecrasement", "type": "normal", "damage": 65, "category": "physique" },
+  { "name": "Danse Lames", "type": "normal", "damage": 0, "category": "physique" },
+  { "name": "Coup dBoule", "type": "normal", "damage": 70, "category": "physique" },
+  { "name": "Riposte", "type": "combat", "damage": 0, "category": "physique" },
+  { "name": "Poing Eclair", "type": "electrik", "damage": 75, "category": "speciale" },
+  { "name": "Double Pied", "type": "combat", "damage": 30, "category": "physique" },
+  { "name": "Cyclone", "type": "normal", "damage": 0, "category": "physique" },
+  { "name": "Ligotage", "type": "normal", "damage": 15, "category": "physique" },
+  { "name": "Amnesie", "type": "psy", "damage": 0, "category": "speciale" },
+  { "name": "KoudeKorne", "type": "glace", "damage": 0, "category": "speciale" },
+  { "name": "Belier", "type": "normal", "damage": 90, "category": "physique" },
+  { "name": "Furie", "type": "normal", "damage": 15, "category": "physique" },
+  { "name": "Pied Saute", "type": "combat", "damage": 70, "category": "physique" },
+  { "name": "Coupe", "type": "normal", "damage": 50, "category": "physique" },
+  { "name": "Damocles", "type": "normal", "damage": 120, "category": "physique" },
+  { "name": "Etreinte", "type": "normal", "damage": 15, "category": "physique" },
+  { "name": "Ultimawashi", "type": "combat", "damage": 100, "category": "physique" },
+  { "name": "Ultimapoing", "type": "combat", "damage": 80, "category": "physique" },
+  { "name": "Poing Glace", "type": "glace", "damage": 75, "category": "speciale" },
+  { "name": "Cru-Ailes", "type": "vol", "damage": 35, "category": "physique" }
+
+
 ]
