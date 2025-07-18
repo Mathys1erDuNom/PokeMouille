@@ -431,7 +431,7 @@
     {
         "name": "Mélo_shiny",
         "type": [
-            "Fée"
+            "Fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/173.png",
         "attacks": [
@@ -452,7 +452,7 @@
         "name": "Toudoudou_shiny",
         "type": [
             "Normal",
-            "Fée"
+            "Fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/174.png",
         "attacks": [
@@ -472,7 +472,7 @@
     {
         "name": "Togepi_shiny",
         "type": [
-            "Fée"
+            "Fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/175.png",
         "attacks": [
@@ -492,7 +492,7 @@
     {
         "name": "Togetic_shiny",
         "type": [
-            "Fée",
+            "Fee",
             "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/176.png",
@@ -636,7 +636,7 @@
         "name": "Marill_shiny",
         "type": [
             "Eau",
-            "Fée"
+            "Fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/183.png",
         "attacks": [
@@ -657,7 +657,7 @@
         "name": "Azumarill_shiny",
         "type": [
             "Eau",
-            "Fée"
+            "Fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/184.png",
         "attacks": [
@@ -1167,7 +1167,7 @@
     {
         "name": "Snubbull_shiny",
         "type": [
-            "Fée"
+            "Fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/209.png",
         "attacks": [
@@ -1187,7 +1187,7 @@
     {
         "name": "Granbull_shiny",
         "type": [
-            "Fée"
+            "Fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/210.png",
         "attacks": [
