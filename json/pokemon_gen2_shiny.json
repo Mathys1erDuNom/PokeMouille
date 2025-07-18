@@ -2,7 +2,7 @@
     {
         "name": "Germignon_shiny",
         "type": [
-            "Plante"
+            "plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/152.png",
         "attacks": [
@@ -22,7 +22,7 @@
     {
         "name": "Macronium_shiny",
         "type": [
-            "Plante"
+            "plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/153.png",
         "attacks": [
@@ -42,7 +42,7 @@
     {
         "name": "Méganium_shiny",
         "type": [
-            "Plante"
+            "plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/154.png",
         "attacks": [
@@ -62,7 +62,7 @@
     {
         "name": "Héricendre_shiny",
         "type": [
-            "Feu"
+            "feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/155.png",
         "attacks": [
@@ -82,7 +82,7 @@
     {
         "name": "Feurisson_shiny",
         "type": [
-            "Feu"
+            "feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/156.png",
         "attacks": [
@@ -102,7 +102,7 @@
     {
         "name": "Typhlosion_shiny",
         "type": [
-            "Feu"
+            "feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/157.png",
         "attacks": [
@@ -122,7 +122,7 @@
     {
         "name": "Kaiminus_shiny",
         "type": [
-            "Eau"
+            "eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/158.png",
         "attacks": [
@@ -142,7 +142,7 @@
     {
         "name": "Crocrodil_shiny",
         "type": [
-            "Eau"
+            "eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/159.png",
         "attacks": [
@@ -162,7 +162,7 @@
     {
         "name": "Aligatueur_shiny",
         "type": [
-            "Eau"
+            "eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/160.png",
         "attacks": [
@@ -182,7 +182,7 @@
     {
         "name": "Fouinette_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/161.png",
         "attacks": [
@@ -202,7 +202,7 @@
     {
         "name": "Fouinar_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/162.png",
         "attacks": [
@@ -222,8 +222,8 @@
     {
         "name": "Hoothoot_shiny",
         "type": [
-            "Normal",
-            "Vol"
+            "normal",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/163.png",
         "attacks": [
@@ -243,8 +243,8 @@
     {
         "name": "Noarfang_shiny",
         "type": [
-            "Normal",
-            "Vol"
+            "normal",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/164.png",
         "attacks": [
@@ -264,8 +264,8 @@
     {
         "name": "Coxy_shiny",
         "type": [
-            "Insecte",
-            "Vol"
+            "insecte",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/165.png",
         "attacks": [
@@ -285,8 +285,8 @@
     {
         "name": "Coxyclaque_shiny",
         "type": [
-            "Insecte",
-            "Vol"
+            "insecte",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/166.png",
         "attacks": [
@@ -306,8 +306,8 @@
     {
         "name": "Mimigal_shiny",
         "type": [
-            "Insecte",
-            "Poison"
+            "insecte",
+            "poison"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/167.png",
         "attacks": [
@@ -327,8 +327,8 @@
     {
         "name": "Migalos_shiny",
         "type": [
-            "Insecte",
-            "Poison"
+            "insecte",
+            "poison"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/168.png",
         "attacks": [
@@ -348,8 +348,8 @@
     {
         "name": "Nostenfer_shiny",
         "type": [
-            "Poison",
-            "Vol"
+            "poison",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/169.png",
         "attacks": [
@@ -369,7 +369,7 @@
     {
         "name": "Loupio_shiny",
         "type": [
-            "Eau",
+            "eau",
             "électrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/170.png",
@@ -390,7 +390,7 @@
     {
         "name": "Lanturn_shiny",
         "type": [
-            "Eau",
+            "eau",
             "électrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/171.png",
@@ -431,7 +431,7 @@
     {
         "name": "Mélo_shiny",
         "type": [
-            "Fee"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/173.png",
         "attacks": [
@@ -451,8 +451,8 @@
     {
         "name": "Toudoudou_shiny",
         "type": [
-            "Normal",
-            "Fee"
+            "normal",
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/174.png",
         "attacks": [
@@ -472,7 +472,7 @@
     {
         "name": "Togepi_shiny",
         "type": [
-            "Fee"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/175.png",
         "attacks": [
@@ -492,8 +492,8 @@
     {
         "name": "Togetic_shiny",
         "type": [
-            "Fee",
-            "Vol"
+            "fee",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/176.png",
         "attacks": [
@@ -513,8 +513,8 @@
     {
         "name": "Natu_shiny",
         "type": [
-            "Psy",
-            "Vol"
+            "psy",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/177.png",
         "attacks": [
@@ -534,8 +534,8 @@
     {
         "name": "Xatu_shiny",
         "type": [
-            "Psy",
-            "Vol"
+            "psy",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/178.png",
         "attacks": [
@@ -615,7 +615,7 @@
     {
         "name": "Joliflor_shiny",
         "type": [
-            "Plante"
+            "plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/182.png",
         "attacks": [
@@ -635,8 +635,8 @@
     {
         "name": "Marill_shiny",
         "type": [
-            "Eau",
-            "Fee"
+            "eau",
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/183.png",
         "attacks": [
@@ -656,8 +656,8 @@
     {
         "name": "Azumarill_shiny",
         "type": [
-            "Eau",
-            "Fee"
+            "eau",
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/184.png",
         "attacks": [
@@ -677,7 +677,7 @@
     {
         "name": "Simularbre_shiny",
         "type": [
-            "Roche"
+            "roche"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/185.png",
         "attacks": [
@@ -697,7 +697,7 @@
     {
         "name": "Tarpaud_shiny",
         "type": [
-            "Eau"
+            "eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/186.png",
         "attacks": [
@@ -717,8 +717,8 @@
     {
         "name": "Granivol_shiny",
         "type": [
-            "Plante",
-            "Vol"
+            "plante",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/187.png",
         "attacks": [
@@ -738,8 +738,8 @@
     {
         "name": "Floravol_shiny",
         "type": [
-            "Plante",
-            "Vol"
+            "plante",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/188.png",
         "attacks": [
@@ -759,8 +759,8 @@
     {
         "name": "Cotovol_shiny",
         "type": [
-            "Plante",
-            "Vol"
+            "plante",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/189.png",
         "attacks": [
@@ -780,7 +780,7 @@
     {
         "name": "Capumain_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/190.png",
         "attacks": [
@@ -800,7 +800,7 @@
     {
         "name": "Tournegrin_shiny",
         "type": [
-            "Plante"
+            "plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/191.png",
         "attacks": [
@@ -820,7 +820,7 @@
     {
         "name": "Héliatronc_shiny",
         "type": [
-            "Plante"
+            "plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/192.png",
         "attacks": [
@@ -840,8 +840,8 @@
     {
         "name": "Yanma_shiny",
         "type": [
-            "Insecte",
-            "Vol"
+            "insecte",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/193.png",
         "attacks": [
@@ -861,8 +861,8 @@
     {
         "name": "Axoloto_shiny",
         "type": [
-            "Eau",
-            "Sol"
+            "eau",
+            "sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/194.png",
         "attacks": [
@@ -882,8 +882,8 @@
     {
         "name": "Maraiste_shiny",
         "type": [
-            "Eau",
-            "Sol"
+            "eau",
+            "sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/195.png",
         "attacks": [
@@ -903,7 +903,7 @@
     {
         "name": "Mentali_shiny",
         "type": [
-            "Psy"
+            "psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/196.png",
         "attacks": [
@@ -944,7 +944,7 @@
         "name": "Cornèbre_shiny",
         "type": [
             "tenebres",
-            "Vol"
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/198.png",
         "attacks": [
@@ -964,8 +964,8 @@
     {
         "name": "Roigada_shiny",
         "type": [
-            "Eau",
-            "Psy"
+            "eau",
+            "psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/199.png",
         "attacks": [
@@ -985,7 +985,7 @@
     {
         "name": "Feuforêve_shiny",
         "type": [
-            "Spectre"
+            "spectre"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/200.png",
         "attacks": [
@@ -1005,7 +1005,7 @@
     {
         "name": "Zarbi_shiny",
         "type": [
-            "Psy"
+            "psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/201.png",
         "attacks": [
@@ -1023,7 +1023,7 @@
     {
         "name": "Qulbutoké_shiny",
         "type": [
-            "Psy"
+            "psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/202.png",
         "attacks": [
@@ -1043,8 +1043,8 @@
     {
         "name": "Girafarig_shiny",
         "type": [
-            "Normal",
-            "Psy"
+            "normal",
+            "psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/203.png",
         "attacks": [
@@ -1064,7 +1064,7 @@
     {
         "name": "Pomdepik_shiny",
         "type": [
-            "Insecte"
+            "insecte"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/204.png",
         "attacks": [
@@ -1084,8 +1084,8 @@
     {
         "name": "Foretress_shiny",
         "type": [
-            "Insecte",
-            "Acier"
+            "insecte",
+            "acier"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/205.png",
         "attacks": [
@@ -1105,7 +1105,7 @@
     {
         "name": "Insolourdo_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/206.png",
         "attacks": [
@@ -1125,8 +1125,8 @@
     {
         "name": "Scorplane_shiny",
         "type": [
-            "Sol",
-            "Vol"
+            "sol",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/207.png",
         "attacks": [
@@ -1146,8 +1146,8 @@
     {
         "name": "Steelix_shiny",
         "type": [
-            "Acier",
-            "Sol"
+            "acier",
+            "sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/208.png",
         "attacks": [
@@ -1167,7 +1167,7 @@
     {
         "name": "Snubbull_shiny",
         "type": [
-            "Fee"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/209.png",
         "attacks": [
@@ -1187,7 +1187,7 @@
     {
         "name": "Granbull_shiny",
         "type": [
-            "Fee"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/210.png",
         "attacks": [
@@ -1207,8 +1207,8 @@
     {
         "name": "Qwilfish_shiny",
         "type": [
-            "Eau",
-            "Poison"
+            "eau",
+            "poison"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/211.png",
         "attacks": [
@@ -1228,8 +1228,8 @@
     {
         "name": "Cizayox_shiny",
         "type": [
-            "Insecte",
-            "Acier"
+            "insecte",
+            "acier"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/212.png",
         "attacks": [
@@ -1249,8 +1249,8 @@
     {
         "name": "Caratroc_shiny",
         "type": [
-            "Insecte",
-            "Roche"
+            "insecte",
+            "roche"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/213.png",
         "attacks": [
@@ -1270,8 +1270,8 @@
     {
         "name": "Scarhino_shiny",
         "type": [
-            "Insecte",
-            "Combat"
+            "insecte",
+            "combat"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/214.png",
         "attacks": [
@@ -1292,7 +1292,7 @@
         "name": "Farfuret_shiny",
         "type": [
             "tenebres",
-            "Glace"
+            "glace"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/215.png",
         "attacks": [
@@ -1312,7 +1312,7 @@
     {
         "name": "Teddiursa_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/216.png",
         "attacks": [
@@ -1332,7 +1332,7 @@
     {
         "name": "Ursaring_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/217.png",
         "attacks": [
@@ -1352,7 +1352,7 @@
     {
         "name": "Limagma_shiny",
         "type": [
-            "Feu"
+            "feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/218.png",
         "attacks": [
@@ -1372,8 +1372,8 @@
     {
         "name": "Volcaropod_shiny",
         "type": [
-            "Feu",
-            "Roche"
+            "feu",
+            "roche"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/219.png",
         "attacks": [
@@ -1393,8 +1393,8 @@
     {
         "name": "Marcacrin_shiny",
         "type": [
-            "Glace",
-            "Sol"
+            "glace",
+            "sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/220.png",
         "attacks": [
@@ -1414,8 +1414,8 @@
     {
         "name": "Cochignon_shiny",
         "type": [
-            "Glace",
-            "Sol"
+            "glace",
+            "sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/221.png",
         "attacks": [
@@ -1435,8 +1435,8 @@
     {
         "name": "Corayon_shiny",
         "type": [
-            "Eau",
-            "Roche"
+            "eau",
+            "roche"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/222.png",
         "attacks": [
@@ -1456,7 +1456,7 @@
     {
         "name": "Rémoraid_shiny",
         "type": [
-            "Eau"
+            "eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/223.png",
         "attacks": [
@@ -1476,7 +1476,7 @@
     {
         "name": "Octillery_shiny",
         "type": [
-            "Eau"
+            "eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/224.png",
         "attacks": [
@@ -1496,8 +1496,8 @@
     {
         "name": "Cadoizo_shiny",
         "type": [
-            "Glace",
-            "Vol"
+            "glace",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/225.png",
         "attacks": [
@@ -1517,8 +1517,8 @@
     {
         "name": "Démanta_shiny",
         "type": [
-            "Eau",
-            "Vol"
+            "eau",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/226.png",
         "attacks": [
@@ -1538,8 +1538,8 @@
     {
         "name": "Airmure_shiny",
         "type": [
-            "Acier",
-            "Vol"
+            "acier",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/227.png",
         "attacks": [
@@ -1560,7 +1560,7 @@
         "name": "Malosse_shiny",
         "type": [
             "tenebres",
-            "Feu"
+            "feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/228.png",
         "attacks": [
@@ -1581,7 +1581,7 @@
         "name": "Démolosse_shiny",
         "type": [
             "tenebres",
-            "Feu"
+            "feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/229.png",
         "attacks": [
@@ -1601,8 +1601,8 @@
     {
         "name": "Hyporoi_shiny",
         "type": [
-            "Eau",
-            "Dragon"
+            "eau",
+            "dragon"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/230.png",
         "attacks": [
@@ -1622,7 +1622,7 @@
     {
         "name": "Phanpy_shiny",
         "type": [
-            "Sol"
+            "sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/231.png",
         "attacks": [
@@ -1642,7 +1642,7 @@
     {
         "name": "Donphan_shiny",
         "type": [
-            "Sol"
+            "sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/232.png",
         "attacks": [
@@ -1662,7 +1662,7 @@
     {
         "name": "Porygon2_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/233.png",
         "attacks": [
@@ -1682,7 +1682,7 @@
     {
         "name": "Cerfrousse_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/234.png",
         "attacks": [
@@ -1702,7 +1702,7 @@
     {
         "name": "Queulorior_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/235.png",
         "attacks": [
@@ -1720,7 +1720,7 @@
     {
         "name": "Debugant_shiny",
         "type": [
-            "Combat"
+            "combat"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/236.png",
         "attacks": [
@@ -1740,7 +1740,7 @@
     {
         "name": "Kapoera_shiny",
         "type": [
-            "Combat"
+            "combat"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/237.png",
         "attacks": [
@@ -1760,8 +1760,8 @@
     {
         "name": "Lippouti_shiny",
         "type": [
-            "Glace",
-            "Psy"
+            "glace",
+            "psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/238.png",
         "attacks": [
@@ -1801,7 +1801,7 @@
     {
         "name": "Magby_shiny",
         "type": [
-            "Feu"
+            "feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/240.png",
         "attacks": [
@@ -1821,7 +1821,7 @@
     {
         "name": "Écrémeuh_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/241.png",
         "attacks": [
@@ -1841,7 +1841,7 @@
     {
         "name": "Leuphorie_shiny",
         "type": [
-            "Normal"
+            "normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/242.png",
         "attacks": [
@@ -1881,7 +1881,7 @@
     {
         "name": "Entei_shiny",
         "type": [
-            "Feu"
+            "feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/244.png",
         "attacks": [
@@ -1901,7 +1901,7 @@
     {
         "name": "Suicune_shiny",
         "type": [
-            "Eau"
+            "eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/245.png",
         "attacks": [
@@ -1921,8 +1921,8 @@
     {
         "name": "Embrylex_shiny",
         "type": [
-            "Roche",
-            "Sol"
+            "roche",
+            "sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/246.png",
         "attacks": [
@@ -1942,8 +1942,8 @@
     {
         "name": "Ymphect_shiny",
         "type": [
-            "Roche",
-            "Sol"
+            "roche",
+            "sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/247.png",
         "attacks": [
@@ -1963,7 +1963,7 @@
     {
         "name": "Tyranocif_shiny",
         "type": [
-            "Roche",
+            "roche",
             "tenebres"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/248.png",
@@ -1984,8 +1984,8 @@
     {
         "name": "Lugia_shiny",
         "type": [
-            "Psy",
-            "Vol"
+            "psy",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/249.png",
         "attacks": [
@@ -2005,8 +2005,8 @@
     {
         "name": "Ho-Oh_shiny",
         "type": [
-            "Feu",
-            "Vol"
+            "feu",
+            "vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/250.png",
         "attacks": [
@@ -2026,8 +2026,8 @@
     {
         "name": "Celebi_shiny",
         "type": [
-            "Psy",
-            "Plante"
+            "psy",
+            "plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/251.png",
         "attacks": [
