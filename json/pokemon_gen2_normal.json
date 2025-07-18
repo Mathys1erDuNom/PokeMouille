@@ -40,7 +40,7 @@
         }
     },
     {
-        "name": "Méganium",
+        "name": "Meganium",
         "type": [
             "plante"
         ],
@@ -60,7 +60,7 @@
         }
     },
     {
-        "name": "Héricendre",
+        "name": "Hericendre",
         "type": [
             "feu"
         ],
@@ -68,7 +68,7 @@
         "attacks": [
             "Coupe",
             "Double Pied",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 39,
@@ -88,7 +88,7 @@
         "attacks": [
             "Coupe",
             "Double Pied",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 58,
@@ -429,7 +429,7 @@
         }
     },
     {
-        "name": "Mélo",
+        "name": "Melo",
         "type": [
             "fee"
         ],
@@ -560,7 +560,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/179.png",
         "attacks": [
             "Jet de Sable",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -724,7 +724,7 @@
         "attacks": [
             "Jackpot",
             "Danse Lames",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 35,
@@ -744,7 +744,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/188.png",
         "attacks": [
             "Danse Lames",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -765,7 +765,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/189.png",
         "attacks": [
             "Danse Lames",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -818,7 +818,7 @@
         }
     },
     {
-        "name": "Héliatronc",
+        "name": "Heliatronc",
         "type": [
             "plante"
         ],
@@ -989,7 +989,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/200.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Damocles",
             "Rugissement"
         ],
@@ -1021,7 +1021,7 @@
         }
     },
     {
-        "name": "Qulbutoké",
+        "name": "Qulbutoke",
         "type": [
             "psy"
         ],
@@ -1068,7 +1068,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/204.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge",
             "Plaquage"
         ],
@@ -1089,7 +1089,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/205.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge",
             "Plaquage"
         ],
@@ -1110,7 +1110,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/206.png",
         "attacks": [
             "Etreinte",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage"
         ],
         "stats": {
@@ -1213,7 +1213,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/211.png",
         "attacks": [
             "Danse Lames",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -1255,7 +1255,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png",
         "attacks": [
             "Etreinte",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage"
         ],
         "stats": {
@@ -1277,7 +1277,7 @@
         "attacks": [
             "Danse Lames",
             "Coupe",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 80,
@@ -1398,7 +1398,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/220.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge",
             "Plaquage"
         ],
@@ -1419,7 +1419,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/221.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Koud’Korne",
             "Furie"
         ],
@@ -1440,7 +1440,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/222.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge",
             "Plaquage"
         ],
@@ -1454,7 +1454,7 @@
         }
     },
     {
-        "name": "Rémoraid",
+        "name": "Remoraid",
         "type": [
             "eau"
         ],
@@ -1515,7 +1515,7 @@
         }
     },
     {
-        "name": "Démanta",
+        "name": "Demanta",
         "type": [
             "eau",
             "vol"
@@ -1524,7 +1524,7 @@
         "attacks": [
             "Cru-Ailes",
             "Souplesse",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 85,
@@ -1564,7 +1564,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/228.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage",
             "Belier"
         ],
@@ -1578,14 +1578,14 @@
         }
     },
     {
-        "name": "Démolosse",
+        "name": "Demolosse",
         "type": [
             "tenebres",
             "feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage",
             "Belier"
         ],
@@ -1606,7 +1606,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/230.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage",
             "Belier"
         ],
@@ -1627,7 +1627,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/231.png",
         "attacks": [
             "Souplesse",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -1647,7 +1647,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/232.png",
         "attacks": [
             "Souplesse",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Koud’Korne"
         ],
         "stats": {
@@ -1726,7 +1726,7 @@
         "attacks": [
             "Ultimapoing",
             "Ultimawashi",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 35,
@@ -1779,7 +1779,7 @@
         }
     },
     {
-        "name": "Élekid",
+        "name": "Elekid",
         "type": [
             "électrique"
         ],
@@ -1819,7 +1819,7 @@
         }
     },
     {
-        "name": "Écrémeuh",
+        "name": "Ecremeuh",
         "type": [
             "normal"
         ],
@@ -1866,7 +1866,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/243.png",
         "attacks": [
             "Coupe",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage"
         ],
         "stats": {
@@ -1887,7 +1887,7 @@
         "attacks": [
             "Coupe",
             "Ecrasement",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 115,
@@ -1907,7 +1907,7 @@
         "attacks": [
             "Coupe",
             "Tornade",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 100,
@@ -1927,7 +1927,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/246.png",
         "attacks": [
             "Ecrasement",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -1947,7 +1947,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/247.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge",
             "Plaquage"
         ],

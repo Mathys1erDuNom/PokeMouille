@@ -40,7 +40,7 @@
         }
     },
     {
-        "name": "Méganium_shiny",
+        "name": "Meganium_shiny",
         "type": [
             "plante"
         ],
@@ -60,7 +60,7 @@
         }
     },
     {
-        "name": "Héricendre_shiny",
+        "name": "Hericendre_shiny",
         "type": [
             "feu"
         ],
@@ -68,7 +68,7 @@
         "attacks": [
             "Coupe",
             "Double Pied",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 39,
@@ -88,7 +88,7 @@
         "attacks": [
             "Coupe",
             "Double Pied",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 58,
@@ -429,7 +429,7 @@
         }
     },
     {
-        "name": "Mélo_shiny",
+        "name": "Melo_shiny",
         "type": [
             "fee"
         ],
@@ -560,7 +560,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/179.png",
         "attacks": [
             "Jet de Sable",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -724,7 +724,7 @@
         "attacks": [
             "Jackpot",
             "Danse Lames",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 35,
@@ -744,7 +744,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/188.png",
         "attacks": [
             "Danse Lames",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -765,7 +765,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/189.png",
         "attacks": [
             "Danse Lames",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -818,7 +818,7 @@
         }
     },
     {
-        "name": "Héliatronc_shiny",
+        "name": "Heliatronc_shiny",
         "type": [
             "plante"
         ],
@@ -989,7 +989,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/200.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Damocles",
             "Rugissement"
         ],
@@ -1021,7 +1021,7 @@
         }
     },
     {
-        "name": "Qulbutoké_shiny",
+        "name": "Qulbutoke_shiny",
         "type": [
             "psy"
         ],
@@ -1068,7 +1068,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/204.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge",
             "Plaquage"
         ],
@@ -1089,7 +1089,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/205.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge",
             "Plaquage"
         ],
@@ -1110,7 +1110,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/206.png",
         "attacks": [
             "Etreinte",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage"
         ],
         "stats": {
@@ -1213,7 +1213,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/211.png",
         "attacks": [
             "Danse Lames",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -1255,7 +1255,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/213.png",
         "attacks": [
             "Etreinte",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage"
         ],
         "stats": {
@@ -1277,7 +1277,7 @@
         "attacks": [
             "Danse Lames",
             "Coupe",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 80,
@@ -1398,7 +1398,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/220.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge",
             "Plaquage"
         ],
@@ -1419,7 +1419,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/221.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Koud’Korne",
             "Furie"
         ],
@@ -1440,7 +1440,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/222.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge",
             "Plaquage"
         ],
@@ -1454,7 +1454,7 @@
         }
     },
     {
-        "name": "Rémoraid_shiny",
+        "name": "Remoraid_shiny",
         "type": [
             "eau"
         ],
@@ -1515,7 +1515,7 @@
         }
     },
     {
-        "name": "Démanta_shiny",
+        "name": "Demanta_shiny",
         "type": [
             "eau",
             "vol"
@@ -1524,7 +1524,7 @@
         "attacks": [
             "Cru-Ailes",
             "Souplesse",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 85,
@@ -1564,7 +1564,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/228.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage",
             "Belier"
         ],
@@ -1578,14 +1578,14 @@
         }
     },
     {
-        "name": "Démolosse_shiny",
+        "name": "Demolosse_shiny",
         "type": [
             "tenebres",
             "feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/229.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage",
             "Belier"
         ],
@@ -1606,7 +1606,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/230.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage",
             "Belier"
         ],
@@ -1627,7 +1627,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/231.png",
         "attacks": [
             "Souplesse",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -1647,7 +1647,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/232.png",
         "attacks": [
             "Souplesse",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Koud’Korne"
         ],
         "stats": {
@@ -1726,7 +1726,7 @@
         "attacks": [
             "Ultimapoing",
             "Ultimawashi",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 35,
@@ -1779,7 +1779,7 @@
         }
     },
     {
-        "name": "Élekid_shiny",
+        "name": "Elekid_shiny",
         "type": [
             "électrique"
         ],
@@ -1819,7 +1819,7 @@
         }
     },
     {
-        "name": "Écrémeuh_shiny",
+        "name": "Ecremeuh_shiny",
         "type": [
             "normal"
         ],
@@ -1866,7 +1866,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/243.png",
         "attacks": [
             "Coupe",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Plaquage"
         ],
         "stats": {
@@ -1887,7 +1887,7 @@
         "attacks": [
             "Coupe",
             "Ecrasement",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 115,
@@ -1907,7 +1907,7 @@
         "attacks": [
             "Coupe",
             "Tornade",
-            "Coup d’Boule"
+            "Coup dBoule"
         ],
         "stats": {
             "hp": 100,
@@ -1927,7 +1927,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/246.png",
         "attacks": [
             "Ecrasement",
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge"
         ],
         "stats": {
@@ -1947,7 +1947,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/247.png",
         "attacks": [
-            "Coup d’Boule",
+            "Coup dBoule",
             "Charge",
             "Plaquage"
         ],
