@@ -108,7 +108,7 @@
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
-            "Poing Éclair"
+            "Poing Eclair"
         ],
         "stats": {
             "hp": 78,
@@ -188,7 +188,7 @@
         "attacks": [
             "Poing Feu",
             "Poing Glace",
-            "Poing Éclair"
+            "Poing Eclair"
         ],
         "stats": {
             "hp": 35,
@@ -208,7 +208,7 @@
         "attacks": [
             "Poing Feu",
             "Poing Glace",
-            "Poing Éclair"
+            "Poing Eclair"
         ],
         "stats": {
             "hp": 85,
@@ -269,7 +269,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/165.png",
         "attacks": [
-            "Poing Comète",
+            "Poing Comete",
             "Ultimapoing",
             "Poing Glace"
         ],
@@ -290,7 +290,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/166.png",
         "attacks": [
-            "Poing Comète",
+            "Poing Comete",
             "Ultimapoing",
             "Poing Glace"
         ],
@@ -312,7 +312,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/167.png",
         "attacks": [
             "Plaquage",
-            "Damoclès",
+            "Damocles",
             "Dard-Venin"
         ],
         "stats": {
@@ -334,7 +334,7 @@
         "attacks": [
             "Danse Lames",
             "Plaquage",
-            "Damoclès"
+            "Damocles"
         ],
         "stats": {
             "hp": 70,
@@ -374,8 +374,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/170.png",
         "attacks": [
-            "Bélier",
-            "Damoclès",
+            "Belier",
+            "Damocles",
             "Ultrason"
         ],
         "stats": {
@@ -395,8 +395,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/171.png",
         "attacks": [
-            "Bélier",
-            "Damoclès",
+            "Belier",
+            "Damocles",
             "Ultrason"
         ],
         "stats": {
@@ -417,7 +417,7 @@
         "attacks": [
             "Torgnoles",
             "Ultimapoing",
-            "Poing Éclair"
+            "Poing Eclair"
         ],
         "stats": {
             "hp": 20,
@@ -518,7 +518,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/177.png",
         "attacks": [
-            "Damoclès",
+            "Damocles",
             "Groz’Yeux",
             "Picpic"
         ],
@@ -540,7 +540,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/178.png",
         "attacks": [
             "Vol",
-            "Damoclès",
+            "Damocles",
             "Groz’Yeux"
         ],
         "stats": {
@@ -621,7 +621,7 @@
         "attacks": [
             "Danse Lames",
             "Coupe",
-            "Damoclès"
+            "Damocles"
         ],
         "stats": {
             "hp": 75,
@@ -990,7 +990,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/200.png",
         "attacks": [
             "Coup d’Boule",
-            "Damoclès",
+            "Damocles",
             "Rugissement"
         ],
         "stats": {
@@ -1009,7 +1009,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
         "attacks": [
-            "Puissance Cachée"
+            "Puissance Cachee"
         ],
         "stats": {
             "hp": 48,
@@ -1028,7 +1028,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/202.png",
         "attacks": [
             "Riposte",
-            "Amnésie",
+            "Amnesie",
             "Trempette"
         ],
         "stats": {
@@ -1049,7 +1049,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/203.png",
         "attacks": [
             "Coupe-Vent",
-            "Écrasement",
+            "Ecrasement",
             "Double Pied"
         ],
         "stats": {
@@ -1109,7 +1109,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/206.png",
         "attacks": [
-            "Étreinte",
+            "Etreinte",
             "Coup d’Boule",
             "Plaquage"
         ],
@@ -1152,7 +1152,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png",
         "attacks": [
             "Coupe",
-            "Étreinte",
+            "Etreinte",
             "Souplesse"
         ],
         "stats": {
@@ -1254,7 +1254,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png",
         "attacks": [
-            "Étreinte",
+            "Etreinte",
             "Coup d’Boule",
             "Plaquage"
         ],
@@ -1357,8 +1357,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/218.png",
         "attacks": [
             "Plaquage",
-            "Bélier",
-            "Damoclès"
+            "Belier",
+            "Damocles"
         ],
         "stats": {
             "hp": 40,
@@ -1378,8 +1378,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/219.png",
         "attacks": [
             "Plaquage",
-            "Bélier",
-            "Damoclès"
+            "Belier",
+            "Damocles"
         ],
         "stats": {
             "hp": 60,
@@ -1460,7 +1460,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/223.png",
         "attacks": [
-            "Damoclès",
+            "Damocles",
             "Ultrason",
             "Lance-Flammes"
         ],
@@ -1480,9 +1480,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/224.png",
         "attacks": [
-            "Étreinte",
+            "Etreinte",
             "Ligotage",
-            "Damoclès"
+            "Damocles"
         ],
         "stats": {
             "hp": 75,
@@ -1566,7 +1566,7 @@
         "attacks": [
             "Coup d’Boule",
             "Plaquage",
-            "Bélier"
+            "Belier"
         ],
         "stats": {
             "hp": 45,
@@ -1587,7 +1587,7 @@
         "attacks": [
             "Coup d’Boule",
             "Plaquage",
-            "Bélier"
+            "Belier"
         ],
         "stats": {
             "hp": 75,
@@ -1608,7 +1608,7 @@
         "attacks": [
             "Coup d’Boule",
             "Plaquage",
-            "Bélier"
+            "Belier"
         ],
         "stats": {
             "hp": 75,
@@ -1667,8 +1667,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png",
         "attacks": [
             "Charge",
-            "Bélier",
-            "Damoclès"
+            "Belier",
+            "Damocles"
         ],
         "stats": {
             "hp": 85,
@@ -1686,9 +1686,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/234.png",
         "attacks": [
-            "Écrasement",
+            "Ecrasement",
             "Double Pied",
-            "Pied Sauté"
+            "Pied Saute"
         ],
         "stats": {
             "hp": 73,
@@ -1785,7 +1785,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/239.png",
         "attacks": [
-            "Poing Karaté",
+            "Poing Karate",
             "Ultimapoing",
             "Poing Feu"
         ],
@@ -1805,7 +1805,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/240.png",
         "attacks": [
-            "Poing Karaté",
+            "Poing Karate",
             "Ultimapoing",
             "Poing Feu"
         ],
@@ -1886,7 +1886,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/244.png",
         "attacks": [
             "Coupe",
-            "Écrasement",
+            "Ecrasement",
             "Coup d’Boule"
         ],
         "stats": {
@@ -1926,7 +1926,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/246.png",
         "attacks": [
-            "Écrasement",
+            "Ecrasement",
             "Coup d’Boule",
             "Charge"
         ],
@@ -2033,7 +2033,7 @@
         "attacks": [
             "Danse Lames",
             "Coupe",
-            "Damoclès"
+            "Damocles"
         ],
         "stats": {
             "hp": 100,
