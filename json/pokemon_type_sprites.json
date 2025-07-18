@@ -15,6 +15,6 @@
   { "type": "roche", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/diamond-pearl/6.png" },
   { "type": "sol", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/diamond-pearl/5.png" },
   { "type": "spectre", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/diamond-pearl/8.png" },
-  { "type": "ténèbres", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/diamond-pearl/17.png" },
+  { "type": "tenebres", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/diamond-pearl/17.png" },
   { "type": "vol", "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/types/generation-iv/diamond-pearl/3.png" }
 ]
