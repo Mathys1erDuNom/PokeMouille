@@ -676,7 +676,7 @@
     {
         "name": "Melofee_shiny",
         "type": [
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/35.png",
         "attacks": [
@@ -695,7 +695,7 @@
     {
         "name": "Melodelfe_shiny",
         "type": [
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/36.png",
         "attacks": [
@@ -755,7 +755,7 @@
         "name": "Rondoudou_shiny",
         "type": [
             "normal",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/39.png",
         "attacks": [
@@ -776,7 +776,7 @@
         "name": "Grodoudou_shiny",
         "type": [
             "normal",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/40.png",
         "attacks": [
@@ -2422,7 +2422,7 @@
         "name": "M. Mime_shiny",
         "type": [
             "psy",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/122.png",
         "attacks": [
@@ -3692,7 +3692,7 @@
     {
         "name": "Melofee_shiny",
         "type": [
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/35.png",
         "attacks": [
@@ -3711,7 +3711,7 @@
     {
         "name": "Melodelfe_shiny",
         "type": [
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/36.png",
         "attacks": [
@@ -3771,7 +3771,7 @@
         "name": "Rondoudou_shiny",
         "type": [
             "normal",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/39.png",
         "attacks": [
@@ -3792,7 +3792,7 @@
         "name": "Grodoudou_shiny",
         "type": [
             "normal",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/40.png",
         "attacks": [
@@ -5438,7 +5438,7 @@
         "name": "M. Mime_shiny",
         "type": [
             "psy",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/122.png",
         "attacks": [

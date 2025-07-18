@@ -676,7 +676,7 @@
     {
         "name": "Melofee",
         "type": [
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
         "attacks": [
@@ -695,7 +695,7 @@
     {
         "name": "Melodelfe",
         "type": [
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
         "attacks": [
@@ -755,7 +755,7 @@
         "name": "Rondoudou",
         "type": [
             "normal",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
         "attacks": [
@@ -776,7 +776,7 @@
         "name": "Grodoudou",
         "type": [
             "normal",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
         "attacks": [
@@ -2422,7 +2422,7 @@
         "name": "M. Mime",
         "type": [
             "psy",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
         "attacks": [
@@ -3691,7 +3691,7 @@
     {
         "name": "Melofee",
         "type": [
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
         "attacks": [
@@ -3710,7 +3710,7 @@
     {
         "name": "Melodelfe",
         "type": [
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
         "attacks": [
@@ -3770,7 +3770,7 @@
         "name": "Rondoudou",
         "type": [
             "normal",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
         "attacks": [
@@ -3791,7 +3791,7 @@
         "name": "Grodoudou",
         "type": [
             "normal",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
         "attacks": [
@@ -5437,7 +5437,7 @@
         "name": "M. Mime",
         "type": [
             "psy",
-            "fée"
+            "fee"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
         "attacks": [
