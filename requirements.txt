@@ -3,3 +3,4 @@ python-dotenv
 Pillow
 requests
 aiohttp
+psycopg2-binary
