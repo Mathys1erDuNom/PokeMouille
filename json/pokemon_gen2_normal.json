@@ -370,7 +370,7 @@
         "name": "Loupio",
         "type": [
             "eau",
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/170.png",
         "attacks": [
@@ -391,7 +391,7 @@
         "name": "Lanturn",
         "type": [
             "eau",
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/171.png",
         "attacks": [
@@ -411,7 +411,7 @@
     {
         "name": "Pichu",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png",
         "attacks": [
@@ -555,7 +555,7 @@
     {
         "name": "Wattouat",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/179.png",
         "attacks": [
@@ -575,7 +575,7 @@
     {
         "name": "Lainergie",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/180.png",
         "attacks": [
@@ -595,7 +595,7 @@
     {
         "name": "Pharamp",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png",
         "attacks": [
@@ -1781,7 +1781,7 @@
     {
         "name": "Elekid",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/239.png",
         "attacks": [
@@ -1861,7 +1861,7 @@
     {
         "name": "Raikou",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/243.png",
         "attacks": [

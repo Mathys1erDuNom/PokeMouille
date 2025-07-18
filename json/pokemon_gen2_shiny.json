@@ -370,7 +370,7 @@
         "name": "Loupio_shiny",
         "type": [
             "eau",
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/170.png",
         "attacks": [
@@ -391,7 +391,7 @@
         "name": "Lanturn_shiny",
         "type": [
             "eau",
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/171.png",
         "attacks": [
@@ -411,7 +411,7 @@
     {
         "name": "Pichu_shiny",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/172.png",
         "attacks": [
@@ -555,7 +555,7 @@
     {
         "name": "Wattouat_shiny",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/179.png",
         "attacks": [
@@ -575,7 +575,7 @@
     {
         "name": "Lainergie_shiny",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/180.png",
         "attacks": [
@@ -595,7 +595,7 @@
     {
         "name": "Pharamp_shiny",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/181.png",
         "attacks": [
@@ -1781,7 +1781,7 @@
     {
         "name": "Elekid_shiny",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/239.png",
         "attacks": [
@@ -1861,7 +1861,7 @@
     {
         "name": "Raikou_shiny",
         "type": [
-            "électrique"
+            "electrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/243.png",
         "attacks": [
