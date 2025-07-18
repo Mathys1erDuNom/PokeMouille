@@ -146,8 +146,8 @@ class PokemonButton(Button):
         draw = ImageDraw.Draw(image)
         try:
             font_path_bold = os.path.join(script_dir, "fonts", "DejaVuSans-Bold.ttf")
-            font = ImageFont.truetype(font_path_bold, 28)       # texte normal ou gras selon ton besoin
-            font_bold = ImageFont.truetype(font_path_bold, 34) 
+            font = ImageFont.truetype(font_path_bold, 15)       # texte normal ou gras selon ton besoin
+            font_bold = ImageFont.truetype(font_path_bold, 20) 
         except:
             font = ImageFont.load_default()
             font_bold = font
