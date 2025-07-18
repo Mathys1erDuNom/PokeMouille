@@ -145,8 +145,8 @@ class PokemonButton(Button):
 
         draw = ImageDraw.Draw(image)
         try:
-            font = ImageFont.truetype("arial.ttf", 18)
-            font_bold = ImageFont.truetype("arialbd.ttf", 22)
+            font = ImageFont.truetype("arial.ttf", 28)
+            font_bold = ImageFont.truetype("arialbd.ttf", 34)
         except:
             font = ImageFont.load_default()
             font_bold = font
@@ -167,7 +167,7 @@ class PokemonButton(Button):
                 try:
                     response = requests.get(url)
                     icon = Image.open(io.BytesIO(response.content)).convert("RGBA")
-                    icon = self.resize_keep_aspect(icon, 60)
+                    icon = self.resize_keep_aspect(icon, 90)
                     image.paste(icon, (x, y), icon)
                     draw.text((x + icon.width + 5, y), t.capitalize(), font=font_bold, fill="black")
                     y += icon.height + 5
@@ -225,7 +225,7 @@ class PokemonButton(Button):
                 try:
                     response = requests.get(atk_sprite_url)
                     icon = Image.open(io.BytesIO(response.content)).convert("RGBA")
-                    icon = self.resize_keep_aspect(icon, 50)
+                    icon = self.resize_keep_aspect(icon, 80)
                     image.paste(icon, (x, y), icon)
                     draw.text((x + icon.width + 8, y), atk_name, font=font, fill="black")
                 except:
