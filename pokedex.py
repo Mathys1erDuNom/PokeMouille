@@ -168,7 +168,7 @@ class PokemonButton(Button):
                 try:
                     response = requests.get(url)
                     icon = Image.open(io.BytesIO(response.content)).convert("RGBA")
-                    icon = self.resize_keep_aspect(icon, 90)
+                    icon = self.resize_keep_aspect(icon, 70)
                     image.paste(icon, (x, y), icon)
                     draw.text((x + icon.width + 5, y), t.capitalize(), font=font_bold, fill="black")
                     y += icon.height + 5
