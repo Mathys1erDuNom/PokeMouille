@@ -1,15 +1,14 @@
-
 [
     {
         "name": "Germignon",
         "type": [
-            "grass"
+            "Plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png",
         "attacks": [
-            "swords-dance",
-            "cut",
-            "vine-whip"
+            "Danse Lames",
+            "Coupe",
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 45,
@@ -23,13 +22,13 @@
     {
         "name": "Macronium",
         "type": [
-            "grass"
+            "Plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/153.png",
         "attacks": [
-            "swords-dance",
-            "cut",
-            "vine-whip"
+            "Danse Lames",
+            "Coupe",
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 60,
@@ -43,13 +42,13 @@
     {
         "name": "Méganium",
         "type": [
-            "grass"
+            "Plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png",
         "attacks": [
-            "swords-dance",
-            "cut",
-            "vine-whip"
+            "Danse Lames",
+            "Coupe",
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 80,
@@ -63,13 +62,13 @@
     {
         "name": "Héricendre",
         "type": [
-            "fire"
+            "Feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png",
         "attacks": [
-            "cut",
-            "double-kick",
-            "headbutt"
+            "Coupe",
+            "Double Pied",
+            "Coup d’Boule"
         ],
         "stats": {
             "hp": 39,
@@ -83,13 +82,13 @@
     {
         "name": "Feurisson",
         "type": [
-            "fire"
+            "Feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/156.png",
         "attacks": [
-            "cut",
-            "double-kick",
-            "headbutt"
+            "Coupe",
+            "Double Pied",
+            "Coup d’Boule"
         ],
         "stats": {
             "hp": 58,
@@ -103,13 +102,13 @@
     {
         "name": "Typhlosion",
         "type": [
-            "fire"
+            "Feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png",
         "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "thunder-punch"
+            "Ultimapoing",
+            "Poing Feu",
+            "Poing Éclair"
         ],
         "stats": {
             "hp": 78,
@@ -123,13 +122,13 @@
     {
         "name": "Kaiminus",
         "type": [
-            "water"
+            "Eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png",
         "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "scratch"
+            "Ultimapoing",
+            "Poing Glace",
+            "Griffe"
         ],
         "stats": {
             "hp": 50,
@@ -143,13 +142,13 @@
     {
         "name": "Crocrodil",
         "type": [
-            "water"
+            "Eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/159.png",
         "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "scratch"
+            "Ultimapoing",
+            "Poing Glace",
+            "Griffe"
         ],
         "stats": {
             "hp": 65,
@@ -163,13 +162,13 @@
     {
         "name": "Aligatueur",
         "type": [
-            "water"
+            "Eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png",
         "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "scratch"
+            "Ultimapoing",
+            "Poing Glace",
+            "Griffe"
         ],
         "stats": {
             "hp": 85,
@@ -183,13 +182,13 @@
     {
         "name": "Fouinette",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/161.png",
         "attacks": [
-            "fire-punch",
-            "ice-punch",
-            "thunder-punch"
+            "Poing Feu",
+            "Poing Glace",
+            "Poing Éclair"
         ],
         "stats": {
             "hp": 35,
@@ -203,13 +202,13 @@
     {
         "name": "Fouinar",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/162.png",
         "attacks": [
-            "fire-punch",
-            "ice-punch",
-            "thunder-punch"
+            "Poing Feu",
+            "Poing Glace",
+            "Poing Éclair"
         ],
         "stats": {
             "hp": 85,
@@ -223,14 +222,14 @@
     {
         "name": "Hoothoot",
         "type": [
-            "normal",
-            "flying"
+            "Normal",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/163.png",
         "attacks": [
-            "wing-attack",
-            "whirlwind",
-            "fly"
+            "Cru-Ailes",
+            "Cyclone",
+            "Vol"
         ],
         "stats": {
             "hp": 60,
@@ -244,14 +243,14 @@
     {
         "name": "Noarfang",
         "type": [
-            "normal",
-            "flying"
+            "Normal",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/164.png",
         "attacks": [
-            "wing-attack",
-            "whirlwind",
-            "fly"
+            "Cru-Ailes",
+            "Cyclone",
+            "Vol"
         ],
         "stats": {
             "hp": 100,
@@ -265,14 +264,14 @@
     {
         "name": "Coxy",
         "type": [
-            "bug",
-            "flying"
+            "Insecte",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/165.png",
         "attacks": [
-            "comet-punch",
-            "mega-punch",
-            "ice-punch"
+            "Poing Comète",
+            "Ultimapoing",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 40,
@@ -286,14 +285,14 @@
     {
         "name": "Coxyclaque",
         "type": [
-            "bug",
-            "flying"
+            "Insecte",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/166.png",
         "attacks": [
-            "comet-punch",
-            "mega-punch",
-            "ice-punch"
+            "Poing Comète",
+            "Ultimapoing",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 55,
@@ -307,14 +306,14 @@
     {
         "name": "Mimigal",
         "type": [
-            "bug",
-            "poison"
+            "Insecte",
+            "Poison"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/167.png",
         "attacks": [
-            "body-slam",
-            "double-edge",
-            "poison-sting"
+            "Plaquage",
+            "Damoclès",
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 40,
@@ -328,14 +327,14 @@
     {
         "name": "Migalos",
         "type": [
-            "bug",
-            "poison"
+            "Insecte",
+            "Poison"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/168.png",
         "attacks": [
-            "swords-dance",
-            "body-slam",
-            "double-edge"
+            "Danse Lames",
+            "Plaquage",
+            "Damoclès"
         ],
         "stats": {
             "hp": 70,
@@ -349,14 +348,14 @@
     {
         "name": "Nostenfer",
         "type": [
-            "poison",
-            "flying"
+            "Poison",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/169.png",
         "attacks": [
-            "gust",
-            "wing-attack",
-            "fly"
+            "Tornade",
+            "Cru-Ailes",
+            "Vol"
         ],
         "stats": {
             "hp": 85,
@@ -370,14 +369,14 @@
     {
         "name": "Loupio",
         "type": [
-            "water",
-            "electric"
+            "Eau",
+            "électrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/170.png",
         "attacks": [
-            "take-down",
-            "double-edge",
-            "supersonic"
+            "Bélier",
+            "Damoclès",
+            "Ultrason"
         ],
         "stats": {
             "hp": 75,
@@ -391,14 +390,14 @@
     {
         "name": "Lanturn",
         "type": [
-            "water",
-            "electric"
+            "Eau",
+            "électrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/171.png",
         "attacks": [
-            "take-down",
-            "double-edge",
-            "supersonic"
+            "Bélier",
+            "Damoclès",
+            "Ultrason"
         ],
         "stats": {
             "hp": 125,
@@ -412,13 +411,13 @@
     {
         "name": "Pichu",
         "type": [
-            "electric"
+            "électrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png",
         "attacks": [
-            "double-slap",
-            "mega-punch",
-            "thunder-punch"
+            "Torgnoles",
+            "Ultimapoing",
+            "Poing Éclair"
         ],
         "stats": {
             "hp": 20,
@@ -432,13 +431,13 @@
     {
         "name": "Mélo",
         "type": [
-            "fairy"
+            "Fée"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/173.png",
         "attacks": [
-            "pound",
-            "mega-punch",
-            "mega-kick"
+            "Écras’Face",
+            "Ultimapoing",
+            "Ultimawashi"
         ],
         "stats": {
             "hp": 50,
@@ -452,14 +451,14 @@
     {
         "name": "Toudoudou",
         "type": [
-            "normal",
-            "fairy"
+            "Normal",
+            "Fée"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/174.png",
         "attacks": [
-            "pound",
-            "mega-punch",
-            "mega-kick"
+            "Écras’Face",
+            "Ultimapoing",
+            "Ultimawashi"
         ],
         "stats": {
             "hp": 90,
@@ -473,13 +472,13 @@
     {
         "name": "Togepi",
         "type": [
-            "fairy"
+            "Fée"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/175.png",
         "attacks": [
-            "pound",
-            "mega-punch",
-            "mega-kick"
+            "Écras’Face",
+            "Ultimapoing",
+            "Ultimawashi"
         ],
         "stats": {
             "hp": 35,
@@ -493,14 +492,14 @@
     {
         "name": "Togetic",
         "type": [
-            "fairy",
-            "flying"
+            "Fée",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/176.png",
         "attacks": [
-            "pound",
-            "mega-punch",
-            "fly"
+            "Écras’Face",
+            "Ultimapoing",
+            "Vol"
         ],
         "stats": {
             "hp": 55,
@@ -514,14 +513,14 @@
     {
         "name": "Natu",
         "type": [
-            "psychic",
-            "flying"
+            "Psy",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/177.png",
         "attacks": [
-            "double-edge",
-            "leer",
-            "peck"
+            "Damoclès",
+            "Groz’Yeux",
+            "Picpic"
         ],
         "stats": {
             "hp": 40,
@@ -535,14 +534,14 @@
     {
         "name": "Xatu",
         "type": [
-            "psychic",
-            "flying"
+            "Psy",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/178.png",
         "attacks": [
-            "fly",
-            "double-edge",
-            "leer"
+            "Vol",
+            "Damoclès",
+            "Groz’Yeux"
         ],
         "stats": {
             "hp": 65,
@@ -556,13 +555,13 @@
     {
         "name": "Wattouat",
         "type": [
-            "electric"
+            "électrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/179.png",
         "attacks": [
-            "sand-attack",
-            "headbutt",
-            "tackle"
+            "Jet de Sable",
+            "Coup d’Boule",
+            "Charge"
         ],
         "stats": {
             "hp": 55,
@@ -576,13 +575,13 @@
     {
         "name": "Lainergie",
         "type": [
-            "electric"
+            "électrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/180.png",
         "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
+            "Ultimapoing",
+            "Poing Feu",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 70,
@@ -596,13 +595,13 @@
     {
         "name": "Pharamp",
         "type": [
-            "electric"
+            "électrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png",
         "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
+            "Ultimapoing",
+            "Poing Feu",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 90,
@@ -616,13 +615,13 @@
     {
         "name": "Joliflor",
         "type": [
-            "grass"
+            "Plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png",
         "attacks": [
-            "swords-dance",
-            "cut",
-            "double-edge"
+            "Danse Lames",
+            "Coupe",
+            "Damoclès"
         ],
         "stats": {
             "hp": 75,
@@ -636,14 +635,14 @@
     {
         "name": "Marill",
         "type": [
-            "water",
-            "fairy"
+            "Eau",
+            "Fée"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/183.png",
         "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "slam"
+            "Ultimapoing",
+            "Poing Glace",
+            "Souplesse"
         ],
         "stats": {
             "hp": 70,
@@ -657,14 +656,14 @@
     {
         "name": "Azumarill",
         "type": [
-            "water",
-            "fairy"
+            "Eau",
+            "Fée"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/184.png",
         "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "slam"
+            "Ultimapoing",
+            "Poing Glace",
+            "Souplesse"
         ],
         "stats": {
             "hp": 100,
@@ -678,13 +677,13 @@
     {
         "name": "Simularbre",
         "type": [
-            "rock"
+            "Roche"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/185.png",
         "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
+            "Ultimapoing",
+            "Poing Feu",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 70,
@@ -698,13 +697,13 @@
     {
         "name": "Tarpaud",
         "type": [
-            "water"
+            "Eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/186.png",
         "attacks": [
-            "pound",
-            "double-slap",
-            "mega-punch"
+            "Écras’Face",
+            "Torgnoles",
+            "Ultimapoing"
         ],
         "stats": {
             "hp": 90,
@@ -718,14 +717,14 @@
     {
         "name": "Granivol",
         "type": [
-            "grass",
-            "flying"
+            "Plante",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/187.png",
         "attacks": [
-            "pay-day",
-            "swords-dance",
-            "headbutt"
+            "Jackpot",
+            "Danse Lames",
+            "Coup d’Boule"
         ],
         "stats": {
             "hp": 35,
@@ -739,14 +738,14 @@
     {
         "name": "Floravol",
         "type": [
-            "grass",
-            "flying"
+            "Plante",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/188.png",
         "attacks": [
-            "swords-dance",
-            "headbutt",
-            "tackle"
+            "Danse Lames",
+            "Coup d’Boule",
+            "Charge"
         ],
         "stats": {
             "hp": 55,
@@ -760,14 +759,14 @@
     {
         "name": "Cotovol",
         "type": [
-            "grass",
-            "flying"
+            "Plante",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/189.png",
         "attacks": [
-            "swords-dance",
-            "headbutt",
-            "tackle"
+            "Danse Lames",
+            "Coup d’Boule",
+            "Charge"
         ],
         "stats": {
             "hp": 75,
@@ -781,13 +780,13 @@
     {
         "name": "Capumain",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/190.png",
         "attacks": [
-            "double-slap",
-            "mega-punch",
-            "fire-punch"
+            "Torgnoles",
+            "Ultimapoing",
+            "Poing Feu"
         ],
         "stats": {
             "hp": 55,
@@ -801,13 +800,13 @@
     {
         "name": "Tournegrin",
         "type": [
-            "grass"
+            "Plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/191.png",
         "attacks": [
-            "swords-dance",
-            "cut",
-            "tackle"
+            "Danse Lames",
+            "Coupe",
+            "Charge"
         ],
         "stats": {
             "hp": 30,
@@ -821,13 +820,13 @@
     {
         "name": "Héliatronc",
         "type": [
-            "grass"
+            "Plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/192.png",
         "attacks": [
-            "pound",
-            "swords-dance",
-            "cut"
+            "Écras’Face",
+            "Danse Lames",
+            "Coupe"
         ],
         "stats": {
             "hp": 75,
@@ -841,14 +840,14 @@
     {
         "name": "Yanma",
         "type": [
-            "bug",
-            "flying"
+            "Insecte",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/193.png",
         "attacks": [
-            "swords-dance",
-            "gust",
-            "wing-attack"
+            "Danse Lames",
+            "Tornade",
+            "Cru-Ailes"
         ],
         "stats": {
             "hp": 65,
@@ -862,14 +861,14 @@
     {
         "name": "Axoloto",
         "type": [
-            "water",
-            "ground"
+            "Eau",
+            "Sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/194.png",
         "attacks": [
-            "ice-punch",
-            "slam",
-            "double-kick"
+            "Poing Glace",
+            "Souplesse",
+            "Double Pied"
         ],
         "stats": {
             "hp": 55,
@@ -883,14 +882,14 @@
     {
         "name": "Maraiste",
         "type": [
-            "water",
-            "ground"
+            "Eau",
+            "Sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/195.png",
         "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "slam"
+            "Ultimapoing",
+            "Poing Glace",
+            "Souplesse"
         ],
         "stats": {
             "hp": 95,
@@ -904,13 +903,13 @@
     {
         "name": "Mentali",
         "type": [
-            "psychic"
+            "Psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png",
         "attacks": [
-            "pay-day",
-            "cut",
-            "sand-attack"
+            "Jackpot",
+            "Coupe",
+            "Jet de Sable"
         ],
         "stats": {
             "hp": 65,
@@ -924,13 +923,13 @@
     {
         "name": "Noctali",
         "type": [
-            "dark"
+            "tenebres"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png",
         "attacks": [
-            "pay-day",
-            "cut",
-            "sand-attack"
+            "Jackpot",
+            "Coupe",
+            "Jet de Sable"
         ],
         "stats": {
             "hp": 95,
@@ -944,14 +943,14 @@
     {
         "name": "Cornèbre",
         "type": [
-            "dark",
-            "flying"
+            "tenebres",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/198.png",
         "attacks": [
-            "gust",
-            "wing-attack",
-            "whirlwind"
+            "Tornade",
+            "Cru-Ailes",
+            "Cyclone"
         ],
         "stats": {
             "hp": 60,
@@ -965,14 +964,14 @@
     {
         "name": "Roigada",
         "type": [
-            "water",
-            "psychic"
+            "Eau",
+            "Psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png",
         "attacks": [
-            "mega-punch",
-            "pay-day",
-            "fire-punch"
+            "Ultimapoing",
+            "Jackpot",
+            "Poing Feu"
         ],
         "stats": {
             "hp": 95,
@@ -986,13 +985,13 @@
     {
         "name": "Feuforêve",
         "type": [
-            "ghost"
+            "Spectre"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/200.png",
         "attacks": [
-            "headbutt",
-            "double-edge",
-            "growl"
+            "Coup d’Boule",
+            "Damoclès",
+            "Rugissement"
         ],
         "stats": {
             "hp": 60,
@@ -1006,11 +1005,11 @@
     {
         "name": "Zarbi",
         "type": [
-            "psychic"
+            "Psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
         "attacks": [
-            "hidden-power"
+            "Puissance Cachée"
         ],
         "stats": {
             "hp": 48,
@@ -1024,13 +1023,13 @@
     {
         "name": "Qulbutoké",
         "type": [
-            "psychic"
+            "Psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/202.png",
         "attacks": [
-            "counter",
-            "amnesia",
-            "splash"
+            "Riposte",
+            "Amnésie",
+            "Trempette"
         ],
         "stats": {
             "hp": 190,
@@ -1044,14 +1043,14 @@
     {
         "name": "Girafarig",
         "type": [
-            "normal",
-            "psychic"
+            "Normal",
+            "Psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/203.png",
         "attacks": [
-            "razor-wind",
-            "stomp",
-            "double-kick"
+            "Coupe-Vent",
+            "Écrasement",
+            "Double Pied"
         ],
         "stats": {
             "hp": 70,
@@ -1065,13 +1064,13 @@
     {
         "name": "Pomdepik",
         "type": [
-            "bug"
+            "Insecte"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/204.png",
         "attacks": [
-            "headbutt",
-            "tackle",
-            "body-slam"
+            "Coup d’Boule",
+            "Charge",
+            "Plaquage"
         ],
         "stats": {
             "hp": 50,
@@ -1085,14 +1084,14 @@
     {
         "name": "Foretress",
         "type": [
-            "bug",
-            "steel"
+            "Insecte",
+            "Acier"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/205.png",
         "attacks": [
-            "headbutt",
-            "tackle",
-            "body-slam"
+            "Coup d’Boule",
+            "Charge",
+            "Plaquage"
         ],
         "stats": {
             "hp": 75,
@@ -1106,13 +1105,13 @@
     {
         "name": "Insolourdo",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/206.png",
         "attacks": [
-            "bind",
-            "headbutt",
-            "body-slam"
+            "Étreinte",
+            "Coup d’Boule",
+            "Plaquage"
         ],
         "stats": {
             "hp": 100,
@@ -1126,14 +1125,14 @@
     {
         "name": "Scorplane",
         "type": [
-            "ground",
-            "flying"
+            "Sol",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/207.png",
         "attacks": [
-            "guillotine",
-            "razor-wind",
-            "swords-dance"
+            "Guillotine",
+            "Coupe-Vent",
+            "Danse Lames"
         ],
         "stats": {
             "hp": 65,
@@ -1147,14 +1146,14 @@
     {
         "name": "Steelix",
         "type": [
-            "steel",
-            "ground"
+            "Acier",
+            "Sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png",
         "attacks": [
-            "cut",
-            "bind",
-            "slam"
+            "Coupe",
+            "Étreinte",
+            "Souplesse"
         ],
         "stats": {
             "hp": 75,
@@ -1168,13 +1167,13 @@
     {
         "name": "Snubbull",
         "type": [
-            "fairy"
+            "Fée"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/209.png",
         "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
+            "Ultimapoing",
+            "Poing Feu",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 60,
@@ -1188,13 +1187,13 @@
     {
         "name": "Granbull",
         "type": [
-            "fairy"
+            "Fée"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png",
         "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
+            "Ultimapoing",
+            "Poing Feu",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 90,
@@ -1208,14 +1207,14 @@
     {
         "name": "Qwilfish",
         "type": [
-            "water",
-            "poison"
+            "Eau",
+            "Poison"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/211.png",
         "attacks": [
-            "swords-dance",
-            "headbutt",
-            "tackle"
+            "Danse Lames",
+            "Coup d’Boule",
+            "Charge"
         ],
         "stats": {
             "hp": 65,
@@ -1229,14 +1228,14 @@
     {
         "name": "Cizayox",
         "type": [
-            "bug",
-            "steel"
+            "Insecte",
+            "Acier"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png",
         "attacks": [
-            "razor-wind",
-            "swords-dance",
-            "cut"
+            "Coupe-Vent",
+            "Danse Lames",
+            "Coupe"
         ],
         "stats": {
             "hp": 70,
@@ -1250,14 +1249,14 @@
     {
         "name": "Caratroc",
         "type": [
-            "bug",
-            "rock"
+            "Insecte",
+            "Roche"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png",
         "attacks": [
-            "bind",
-            "headbutt",
-            "body-slam"
+            "Étreinte",
+            "Coup d’Boule",
+            "Plaquage"
         ],
         "stats": {
             "hp": 20,
@@ -1271,14 +1270,14 @@
     {
         "name": "Scarhino",
         "type": [
-            "bug",
-            "fighting"
+            "Insecte",
+            "Combat"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/214.png",
         "attacks": [
-            "swords-dance",
-            "cut",
-            "headbutt"
+            "Danse Lames",
+            "Coupe",
+            "Coup d’Boule"
         ],
         "stats": {
             "hp": 80,
@@ -1292,14 +1291,14 @@
     {
         "name": "Farfuret",
         "type": [
-            "dark",
-            "ice"
+            "tenebres",
+            "Glace"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/215.png",
         "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "scratch"
+            "Ultimapoing",
+            "Poing Glace",
+            "Griffe"
         ],
         "stats": {
             "hp": 55,
@@ -1313,13 +1312,13 @@
     {
         "name": "Teddiursa",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/216.png",
         "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
+            "Ultimapoing",
+            "Poing Feu",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 60,
@@ -1333,13 +1332,13 @@
     {
         "name": "Ursaring",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/217.png",
         "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
+            "Ultimapoing",
+            "Poing Feu",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 90,
@@ -1353,13 +1352,13 @@
     {
         "name": "Limagma",
         "type": [
-            "fire"
+            "Feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/218.png",
         "attacks": [
-            "body-slam",
-            "take-down",
-            "double-edge"
+            "Plaquage",
+            "Bélier",
+            "Damoclès"
         ],
         "stats": {
             "hp": 40,
@@ -1373,14 +1372,14 @@
     {
         "name": "Volcaropod",
         "type": [
-            "fire",
-            "rock"
+            "Feu",
+            "Roche"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/219.png",
         "attacks": [
-            "body-slam",
-            "take-down",
-            "double-edge"
+            "Plaquage",
+            "Bélier",
+            "Damoclès"
         ],
         "stats": {
             "hp": 60,
@@ -1394,14 +1393,14 @@
     {
         "name": "Marcacrin",
         "type": [
-            "ice",
-            "ground"
+            "Glace",
+            "Sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/220.png",
         "attacks": [
-            "headbutt",
-            "tackle",
-            "body-slam"
+            "Coup d’Boule",
+            "Charge",
+            "Plaquage"
         ],
         "stats": {
             "hp": 50,
@@ -1415,14 +1414,14 @@
     {
         "name": "Cochignon",
         "type": [
-            "ice",
-            "ground"
+            "Glace",
+            "Sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/221.png",
         "attacks": [
-            "headbutt",
-            "horn-attack",
-            "fury-attack"
+            "Coup d’Boule",
+            "Koud’Korne",
+            "Furie"
         ],
         "stats": {
             "hp": 100,
@@ -1436,14 +1435,14 @@
     {
         "name": "Corayon",
         "type": [
-            "water",
-            "rock"
+            "Eau",
+            "Roche"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/222.png",
         "attacks": [
-            "headbutt",
-            "tackle",
-            "body-slam"
+            "Coup d’Boule",
+            "Charge",
+            "Plaquage"
         ],
         "stats": {
             "hp": 65,
@@ -1457,13 +1456,13 @@
     {
         "name": "Rémoraid",
         "type": [
-            "water"
+            "Eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/223.png",
         "attacks": [
-            "double-edge",
-            "supersonic",
-            "flamethrower"
+            "Damoclès",
+            "Ultrason",
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 35,
@@ -1477,13 +1476,13 @@
     {
         "name": "Octillery",
         "type": [
-            "water"
+            "Eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/224.png",
         "attacks": [
-            "bind",
-            "wrap",
-            "double-edge"
+            "Étreinte",
+            "Ligotage",
+            "Damoclès"
         ],
         "stats": {
             "hp": 75,
@@ -1497,14 +1496,14 @@
     {
         "name": "Cadoizo",
         "type": [
-            "ice",
-            "flying"
+            "Glace",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/225.png",
         "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "fly"
+            "Ultimapoing",
+            "Poing Glace",
+            "Vol"
         ],
         "stats": {
             "hp": 45,
@@ -1518,14 +1517,14 @@
     {
         "name": "Démanta",
         "type": [
-            "water",
-            "flying"
+            "Eau",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/226.png",
         "attacks": [
-            "wing-attack",
-            "slam",
-            "headbutt"
+            "Cru-Ailes",
+            "Souplesse",
+            "Coup d’Boule"
         ],
         "stats": {
             "hp": 85,
@@ -1539,14 +1538,14 @@
     {
         "name": "Airmure",
         "type": [
-            "steel",
-            "flying"
+            "Acier",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png",
         "attacks": [
-            "swords-dance",
-            "cut",
-            "wing-attack"
+            "Danse Lames",
+            "Coupe",
+            "Cru-Ailes"
         ],
         "stats": {
             "hp": 65,
@@ -1560,14 +1559,14 @@
     {
         "name": "Malosse",
         "type": [
-            "dark",
-            "fire"
+            "tenebres",
+            "Feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/228.png",
         "attacks": [
-            "headbutt",
-            "body-slam",
-            "take-down"
+            "Coup d’Boule",
+            "Plaquage",
+            "Bélier"
         ],
         "stats": {
             "hp": 45,
@@ -1581,14 +1580,14 @@
     {
         "name": "Démolosse",
         "type": [
-            "dark",
-            "fire"
+            "tenebres",
+            "Feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png",
         "attacks": [
-            "headbutt",
-            "body-slam",
-            "take-down"
+            "Coup d’Boule",
+            "Plaquage",
+            "Bélier"
         ],
         "stats": {
             "hp": 75,
@@ -1602,14 +1601,14 @@
     {
         "name": "Hyporoi",
         "type": [
-            "water",
-            "dragon"
+            "Eau",
+            "Dragon"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/230.png",
         "attacks": [
-            "headbutt",
-            "body-slam",
-            "take-down"
+            "Coup d’Boule",
+            "Plaquage",
+            "Bélier"
         ],
         "stats": {
             "hp": 75,
@@ -1623,13 +1622,13 @@
     {
         "name": "Phanpy",
         "type": [
-            "ground"
+            "Sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/231.png",
         "attacks": [
-            "slam",
-            "headbutt",
-            "tackle"
+            "Souplesse",
+            "Coup d’Boule",
+            "Charge"
         ],
         "stats": {
             "hp": 90,
@@ -1643,13 +1642,13 @@
     {
         "name": "Donphan",
         "type": [
-            "ground"
+            "Sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/232.png",
         "attacks": [
-            "slam",
-            "headbutt",
-            "horn-attack"
+            "Souplesse",
+            "Coup d’Boule",
+            "Koud’Korne"
         ],
         "stats": {
             "hp": 90,
@@ -1663,13 +1662,13 @@
     {
         "name": "Porygon2",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png",
         "attacks": [
-            "tackle",
-            "take-down",
-            "double-edge"
+            "Charge",
+            "Bélier",
+            "Damoclès"
         ],
         "stats": {
             "hp": 85,
@@ -1683,13 +1682,13 @@
     {
         "name": "Cerfrousse",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/234.png",
         "attacks": [
-            "stomp",
-            "double-kick",
-            "jump-kick"
+            "Écrasement",
+            "Double Pied",
+            "Pied Sauté"
         ],
         "stats": {
             "hp": 73,
@@ -1703,11 +1702,11 @@
     {
         "name": "Queulorior",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/235.png",
         "attacks": [
-            "sketch"
+            "Gribouille"
         ],
         "stats": {
             "hp": 55,
@@ -1721,13 +1720,13 @@
     {
         "name": "Debugant",
         "type": [
-            "fighting"
+            "Combat"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/236.png",
         "attacks": [
-            "mega-punch",
-            "mega-kick",
-            "headbutt"
+            "Ultimapoing",
+            "Ultimawashi",
+            "Coup d’Boule"
         ],
         "stats": {
             "hp": 35,
@@ -1741,13 +1740,13 @@
     {
         "name": "Kapoera",
         "type": [
-            "fighting"
+            "Combat"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/237.png",
         "attacks": [
-            "mega-punch",
-            "mega-kick",
-            "rolling-kick"
+            "Ultimapoing",
+            "Ultimawashi",
+            "Mawashi Geri"
         ],
         "stats": {
             "hp": 50,
@@ -1761,14 +1760,14 @@
     {
         "name": "Lippouti",
         "type": [
-            "ice",
-            "psychic"
+            "Glace",
+            "Psy"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/238.png",
         "attacks": [
-            "pound",
-            "mega-punch",
-            "ice-punch"
+            "Écras’Face",
+            "Ultimapoing",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 45,
@@ -1782,13 +1781,13 @@
     {
         "name": "Élekid",
         "type": [
-            "electric"
+            "électrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/239.png",
         "attacks": [
-            "karate-chop",
-            "mega-punch",
-            "fire-punch"
+            "Poing Karaté",
+            "Ultimapoing",
+            "Poing Feu"
         ],
         "stats": {
             "hp": 45,
@@ -1802,13 +1801,13 @@
     {
         "name": "Magby",
         "type": [
-            "fire"
+            "Feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/240.png",
         "attacks": [
-            "karate-chop",
-            "mega-punch",
-            "fire-punch"
+            "Poing Karaté",
+            "Ultimapoing",
+            "Poing Feu"
         ],
         "stats": {
             "hp": 45,
@@ -1822,13 +1821,13 @@
     {
         "name": "Écrémeuh",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/241.png",
         "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
+            "Ultimapoing",
+            "Poing Feu",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 95,
@@ -1842,13 +1841,13 @@
     {
         "name": "Leuphorie",
         "type": [
-            "normal"
+            "Normal"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png",
         "attacks": [
-            "pound",
-            "double-slap",
-            "mega-punch"
+            "Écras’Face",
+            "Torgnoles",
+            "Ultimapoing"
         ],
         "stats": {
             "hp": 255,
@@ -1862,13 +1861,13 @@
     {
         "name": "Raikou",
         "type": [
-            "electric"
+            "électrique"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/243.png",
         "attacks": [
-            "cut",
-            "headbutt",
-            "body-slam"
+            "Coupe",
+            "Coup d’Boule",
+            "Plaquage"
         ],
         "stats": {
             "hp": 90,
@@ -1882,13 +1881,13 @@
     {
         "name": "Entei",
         "type": [
-            "fire"
+            "Feu"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/244.png",
         "attacks": [
-            "cut",
-            "stomp",
-            "headbutt"
+            "Coupe",
+            "Écrasement",
+            "Coup d’Boule"
         ],
         "stats": {
             "hp": 115,
@@ -1902,13 +1901,13 @@
     {
         "name": "Suicune",
         "type": [
-            "water"
+            "Eau"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/245.png",
         "attacks": [
-            "cut",
-            "gust",
-            "headbutt"
+            "Coupe",
+            "Tornade",
+            "Coup d’Boule"
         ],
         "stats": {
             "hp": 100,
@@ -1922,14 +1921,14 @@
     {
         "name": "Embrylex",
         "type": [
-            "rock",
-            "ground"
+            "Roche",
+            "Sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/246.png",
         "attacks": [
-            "stomp",
-            "headbutt",
-            "tackle"
+            "Écrasement",
+            "Coup d’Boule",
+            "Charge"
         ],
         "stats": {
             "hp": 50,
@@ -1943,14 +1942,14 @@
     {
         "name": "Ymphect",
         "type": [
-            "rock",
-            "ground"
+            "Roche",
+            "Sol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/247.png",
         "attacks": [
-            "headbutt",
-            "tackle",
-            "body-slam"
+            "Coup d’Boule",
+            "Charge",
+            "Plaquage"
         ],
         "stats": {
             "hp": 70,
@@ -1964,14 +1963,14 @@
     {
         "name": "Tyranocif",
         "type": [
-            "rock",
-            "dark"
+            "Roche",
+            "tenebres"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png",
         "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
+            "Ultimapoing",
+            "Poing Feu",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 100,
@@ -1985,14 +1984,14 @@
     {
         "name": "Lugia",
         "type": [
-            "psychic",
-            "flying"
+            "Psy",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png",
         "attacks": [
-            "gust",
-            "whirlwind",
-            "fly"
+            "Tornade",
+            "Cyclone",
+            "Vol"
         ],
         "stats": {
             "hp": 106,
@@ -2006,14 +2005,14 @@
     {
         "name": "Ho-Oh",
         "type": [
-            "fire",
-            "flying"
+            "Feu",
+            "Vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png",
         "attacks": [
-            "gust",
-            "whirlwind",
-            "fly"
+            "Tornade",
+            "Cyclone",
+            "Vol"
         ],
         "stats": {
             "hp": 106,
@@ -2027,2061 +2026,14 @@
     {
         "name": "Celebi",
         "type": [
-            "psychic",
-            "grass"
+            "Psy",
+            "Plante"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/251.png",
         "attacks": [
-            "swords-dance",
-            "cut",
-            "double-edge"
-        ],
-        "stats": {
-            "hp": 100,
-            "attack": 100,
-            "defense": 100,
-            "special_attack": 100,
-            "special_defense": 100,
-            "speed": 100
-        }
-    },
-
-
-    {
-        "name": "Germignon",
-        "type": [
-            "grass"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png",
-        "attacks": [
-            "swords-dance",
-            "cut",
-            "vine-whip"
-        ],
-        "stats": {
-            "hp": 45,
-            "attack": 49,
-            "defense": 65,
-            "special_attack": 49,
-            "special_defense": 65,
-            "speed": 45
-        }
-    },
-    {
-        "name": "Macronium",
-        "type": [
-            "grass"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/153.png",
-        "attacks": [
-            "swords-dance",
-            "cut",
-            "vine-whip"
-        ],
-        "stats": {
-            "hp": 60,
-            "attack": 62,
-            "defense": 80,
-            "special_attack": 63,
-            "special_defense": 80,
-            "speed": 60
-        }
-    },
-    {
-        "name": "Méganium",
-        "type": [
-            "grass"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png",
-        "attacks": [
-            "swords-dance",
-            "cut",
-            "vine-whip"
-        ],
-        "stats": {
-            "hp": 80,
-            "attack": 82,
-            "defense": 100,
-            "special_attack": 83,
-            "special_defense": 100,
-            "speed": 80
-        }
-    },
-    {
-        "name": "Héricendre",
-        "type": [
-            "fire"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png",
-        "attacks": [
-            "cut",
-            "double-kick",
-            "headbutt"
-        ],
-        "stats": {
-            "hp": 39,
-            "attack": 52,
-            "defense": 43,
-            "special_attack": 60,
-            "special_defense": 50,
-            "speed": 65
-        }
-    },
-    {
-        "name": "Feurisson",
-        "type": [
-            "fire"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/156.png",
-        "attacks": [
-            "cut",
-            "double-kick",
-            "headbutt"
-        ],
-        "stats": {
-            "hp": 58,
-            "attack": 64,
-            "defense": 58,
-            "special_attack": 80,
-            "special_defense": 65,
-            "speed": 80
-        }
-    },
-    {
-        "name": "Typhlosion",
-        "type": [
-            "fire"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png",
-        "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "thunder-punch"
-        ],
-        "stats": {
-            "hp": 78,
-            "attack": 84,
-            "defense": 78,
-            "special_attack": 109,
-            "special_defense": 85,
-            "speed": 100
-        }
-    },
-    {
-        "name": "Kaiminus",
-        "type": [
-            "water"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png",
-        "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "scratch"
-        ],
-        "stats": {
-            "hp": 50,
-            "attack": 65,
-            "defense": 64,
-            "special_attack": 44,
-            "special_defense": 48,
-            "speed": 43
-        }
-    },
-    {
-        "name": "Crocrodil",
-        "type": [
-            "water"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/159.png",
-        "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "scratch"
-        ],
-        "stats": {
-            "hp": 65,
-            "attack": 80,
-            "defense": 80,
-            "special_attack": 59,
-            "special_defense": 63,
-            "speed": 58
-        }
-    },
-    {
-        "name": "Aligatueur",
-        "type": [
-            "water"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png",
-        "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "scratch"
-        ],
-        "stats": {
-            "hp": 85,
-            "attack": 105,
-            "defense": 100,
-            "special_attack": 79,
-            "special_defense": 83,
-            "speed": 78
-        }
-    },
-    {
-        "name": "Fouinette",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/161.png",
-        "attacks": [
-            "fire-punch",
-            "ice-punch",
-            "thunder-punch"
-        ],
-        "stats": {
-            "hp": 35,
-            "attack": 46,
-            "defense": 34,
-            "special_attack": 35,
-            "special_defense": 45,
-            "speed": 20
-        }
-    },
-    {
-        "name": "Fouinar",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/162.png",
-        "attacks": [
-            "fire-punch",
-            "ice-punch",
-            "thunder-punch"
-        ],
-        "stats": {
-            "hp": 85,
-            "attack": 76,
-            "defense": 64,
-            "special_attack": 45,
-            "special_defense": 55,
-            "speed": 90
-        }
-    },
-    {
-        "name": "Hoothoot",
-        "type": [
-            "normal",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/163.png",
-        "attacks": [
-            "wing-attack",
-            "whirlwind",
-            "fly"
-        ],
-        "stats": {
-            "hp": 60,
-            "attack": 30,
-            "defense": 30,
-            "special_attack": 36,
-            "special_defense": 56,
-            "speed": 50
-        }
-    },
-    {
-        "name": "Noarfang",
-        "type": [
-            "normal",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/164.png",
-        "attacks": [
-            "wing-attack",
-            "whirlwind",
-            "fly"
-        ],
-        "stats": {
-            "hp": 100,
-            "attack": 50,
-            "defense": 50,
-            "special_attack": 86,
-            "special_defense": 96,
-            "speed": 70
-        }
-    },
-    {
-        "name": "Coxy",
-        "type": [
-            "bug",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/165.png",
-        "attacks": [
-            "comet-punch",
-            "mega-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 40,
-            "attack": 20,
-            "defense": 30,
-            "special_attack": 40,
-            "special_defense": 80,
-            "speed": 55
-        }
-    },
-    {
-        "name": "Coxyclaque",
-        "type": [
-            "bug",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/166.png",
-        "attacks": [
-            "comet-punch",
-            "mega-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 55,
-            "attack": 35,
-            "defense": 50,
-            "special_attack": 55,
-            "special_defense": 110,
-            "speed": 85
-        }
-    },
-    {
-        "name": "Mimigal",
-        "type": [
-            "bug",
-            "poison"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/167.png",
-        "attacks": [
-            "body-slam",
-            "double-edge",
-            "poison-sting"
-        ],
-        "stats": {
-            "hp": 40,
-            "attack": 60,
-            "defense": 40,
-            "special_attack": 40,
-            "special_defense": 40,
-            "speed": 30
-        }
-    },
-    {
-        "name": "Migalos",
-        "type": [
-            "bug",
-            "poison"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/168.png",
-        "attacks": [
-            "swords-dance",
-            "body-slam",
-            "double-edge"
-        ],
-        "stats": {
-            "hp": 70,
-            "attack": 90,
-            "defense": 70,
-            "special_attack": 60,
-            "special_defense": 70,
-            "speed": 40
-        }
-    },
-    {
-        "name": "Nostenfer",
-        "type": [
-            "poison",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/169.png",
-        "attacks": [
-            "gust",
-            "wing-attack",
-            "fly"
-        ],
-        "stats": {
-            "hp": 85,
-            "attack": 90,
-            "defense": 80,
-            "special_attack": 70,
-            "special_defense": 80,
-            "speed": 130
-        }
-    },
-    {
-        "name": "Loupio",
-        "type": [
-            "water",
-            "electric"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/170.png",
-        "attacks": [
-            "take-down",
-            "double-edge",
-            "supersonic"
-        ],
-        "stats": {
-            "hp": 75,
-            "attack": 38,
-            "defense": 38,
-            "special_attack": 56,
-            "special_defense": 56,
-            "speed": 67
-        }
-    },
-    {
-        "name": "Lanturn",
-        "type": [
-            "water",
-            "electric"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/171.png",
-        "attacks": [
-            "take-down",
-            "double-edge",
-            "supersonic"
-        ],
-        "stats": {
-            "hp": 125,
-            "attack": 58,
-            "defense": 58,
-            "special_attack": 76,
-            "special_defense": 76,
-            "speed": 67
-        }
-    },
-    {
-        "name": "Pichu",
-        "type": [
-            "electric"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png",
-        "attacks": [
-            "double-slap",
-            "mega-punch",
-            "thunder-punch"
-        ],
-        "stats": {
-            "hp": 20,
-            "attack": 40,
-            "defense": 15,
-            "special_attack": 35,
-            "special_defense": 35,
-            "speed": 60
-        }
-    },
-    {
-        "name": "Mélo",
-        "type": [
-            "fairy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/173.png",
-        "attacks": [
-            "pound",
-            "mega-punch",
-            "mega-kick"
-        ],
-        "stats": {
-            "hp": 50,
-            "attack": 25,
-            "defense": 28,
-            "special_attack": 45,
-            "special_defense": 55,
-            "speed": 15
-        }
-    },
-    {
-        "name": "Toudoudou",
-        "type": [
-            "normal",
-            "fairy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/174.png",
-        "attacks": [
-            "pound",
-            "mega-punch",
-            "mega-kick"
-        ],
-        "stats": {
-            "hp": 90,
-            "attack": 30,
-            "defense": 15,
-            "special_attack": 40,
-            "special_defense": 20,
-            "speed": 15
-        }
-    },
-    {
-        "name": "Togepi",
-        "type": [
-            "fairy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/175.png",
-        "attacks": [
-            "pound",
-            "mega-punch",
-            "mega-kick"
-        ],
-        "stats": {
-            "hp": 35,
-            "attack": 20,
-            "defense": 65,
-            "special_attack": 40,
-            "special_defense": 65,
-            "speed": 20
-        }
-    },
-    {
-        "name": "Togetic",
-        "type": [
-            "fairy",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/176.png",
-        "attacks": [
-            "pound",
-            "mega-punch",
-            "fly"
-        ],
-        "stats": {
-            "hp": 55,
-            "attack": 40,
-            "defense": 85,
-            "special_attack": 80,
-            "special_defense": 105,
-            "speed": 40
-        }
-    },
-    {
-        "name": "Natu",
-        "type": [
-            "psychic",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/177.png",
-        "attacks": [
-            "double-edge",
-            "leer",
-            "peck"
-        ],
-        "stats": {
-            "hp": 40,
-            "attack": 50,
-            "defense": 45,
-            "special_attack": 70,
-            "special_defense": 45,
-            "speed": 70
-        }
-    },
-    {
-        "name": "Xatu",
-        "type": [
-            "psychic",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/178.png",
-        "attacks": [
-            "fly",
-            "double-edge",
-            "leer"
-        ],
-        "stats": {
-            "hp": 65,
-            "attack": 75,
-            "defense": 70,
-            "special_attack": 95,
-            "special_defense": 70,
-            "speed": 95
-        }
-    },
-    {
-        "name": "Wattouat",
-        "type": [
-            "electric"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/179.png",
-        "attacks": [
-            "sand-attack",
-            "headbutt",
-            "tackle"
-        ],
-        "stats": {
-            "hp": 55,
-            "attack": 40,
-            "defense": 40,
-            "special_attack": 65,
-            "special_defense": 45,
-            "speed": 35
-        }
-    },
-    {
-        "name": "Lainergie",
-        "type": [
-            "electric"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/180.png",
-        "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 70,
-            "attack": 55,
-            "defense": 55,
-            "special_attack": 80,
-            "special_defense": 60,
-            "speed": 45
-        }
-    },
-    {
-        "name": "Pharamp",
-        "type": [
-            "electric"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png",
-        "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 90,
-            "attack": 75,
-            "defense": 85,
-            "special_attack": 115,
-            "special_defense": 90,
-            "speed": 55
-        }
-    },
-    {
-        "name": "Joliflor",
-        "type": [
-            "grass"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png",
-        "attacks": [
-            "swords-dance",
-            "cut",
-            "double-edge"
-        ],
-        "stats": {
-            "hp": 75,
-            "attack": 80,
-            "defense": 95,
-            "special_attack": 90,
-            "special_defense": 100,
-            "speed": 50
-        }
-    },
-    {
-        "name": "Marill",
-        "type": [
-            "water",
-            "fairy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/183.png",
-        "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "slam"
-        ],
-        "stats": {
-            "hp": 70,
-            "attack": 20,
-            "defense": 50,
-            "special_attack": 20,
-            "special_defense": 50,
-            "speed": 40
-        }
-    },
-    {
-        "name": "Azumarill",
-        "type": [
-            "water",
-            "fairy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/184.png",
-        "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "slam"
-        ],
-        "stats": {
-            "hp": 100,
-            "attack": 50,
-            "defense": 80,
-            "special_attack": 60,
-            "special_defense": 80,
-            "speed": 50
-        }
-    },
-    {
-        "name": "Simularbre",
-        "type": [
-            "rock"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/185.png",
-        "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 70,
-            "attack": 100,
-            "defense": 115,
-            "special_attack": 30,
-            "special_defense": 65,
-            "speed": 30
-        }
-    },
-    {
-        "name": "Tarpaud",
-        "type": [
-            "water"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/186.png",
-        "attacks": [
-            "pound",
-            "double-slap",
-            "mega-punch"
-        ],
-        "stats": {
-            "hp": 90,
-            "attack": 75,
-            "defense": 75,
-            "special_attack": 90,
-            "special_defense": 100,
-            "speed": 70
-        }
-    },
-    {
-        "name": "Granivol",
-        "type": [
-            "grass",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/187.png",
-        "attacks": [
-            "pay-day",
-            "swords-dance",
-            "headbutt"
-        ],
-        "stats": {
-            "hp": 35,
-            "attack": 35,
-            "defense": 40,
-            "special_attack": 35,
-            "special_defense": 55,
-            "speed": 50
-        }
-    },
-    {
-        "name": "Floravol",
-        "type": [
-            "grass",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/188.png",
-        "attacks": [
-            "swords-dance",
-            "headbutt",
-            "tackle"
-        ],
-        "stats": {
-            "hp": 55,
-            "attack": 45,
-            "defense": 50,
-            "special_attack": 45,
-            "special_defense": 65,
-            "speed": 80
-        }
-    },
-    {
-        "name": "Cotovol",
-        "type": [
-            "grass",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/189.png",
-        "attacks": [
-            "swords-dance",
-            "headbutt",
-            "tackle"
-        ],
-        "stats": {
-            "hp": 75,
-            "attack": 55,
-            "defense": 70,
-            "special_attack": 55,
-            "special_defense": 95,
-            "speed": 110
-        }
-    },
-    {
-        "name": "Capumain",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/190.png",
-        "attacks": [
-            "double-slap",
-            "mega-punch",
-            "fire-punch"
-        ],
-        "stats": {
-            "hp": 55,
-            "attack": 70,
-            "defense": 55,
-            "special_attack": 40,
-            "special_defense": 55,
-            "speed": 85
-        }
-    },
-    {
-        "name": "Tournegrin",
-        "type": [
-            "grass"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/191.png",
-        "attacks": [
-            "swords-dance",
-            "cut",
-            "tackle"
-        ],
-        "stats": {
-            "hp": 30,
-            "attack": 30,
-            "defense": 30,
-            "special_attack": 30,
-            "special_defense": 30,
-            "speed": 30
-        }
-    },
-    {
-        "name": "Héliatronc",
-        "type": [
-            "grass"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/192.png",
-        "attacks": [
-            "pound",
-            "swords-dance",
-            "cut"
-        ],
-        "stats": {
-            "hp": 75,
-            "attack": 75,
-            "defense": 55,
-            "special_attack": 105,
-            "special_defense": 85,
-            "speed": 30
-        }
-    },
-    {
-        "name": "Yanma",
-        "type": [
-            "bug",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/193.png",
-        "attacks": [
-            "swords-dance",
-            "gust",
-            "wing-attack"
-        ],
-        "stats": {
-            "hp": 65,
-            "attack": 65,
-            "defense": 45,
-            "special_attack": 75,
-            "special_defense": 45,
-            "speed": 95
-        }
-    },
-    {
-        "name": "Axoloto",
-        "type": [
-            "water",
-            "ground"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/194.png",
-        "attacks": [
-            "ice-punch",
-            "slam",
-            "double-kick"
-        ],
-        "stats": {
-            "hp": 55,
-            "attack": 45,
-            "defense": 45,
-            "special_attack": 25,
-            "special_defense": 25,
-            "speed": 15
-        }
-    },
-    {
-        "name": "Maraiste",
-        "type": [
-            "water",
-            "ground"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/195.png",
-        "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "slam"
-        ],
-        "stats": {
-            "hp": 95,
-            "attack": 85,
-            "defense": 85,
-            "special_attack": 65,
-            "special_defense": 65,
-            "speed": 35
-        }
-    },
-    {
-        "name": "Mentali",
-        "type": [
-            "psychic"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png",
-        "attacks": [
-            "pay-day",
-            "cut",
-            "sand-attack"
-        ],
-        "stats": {
-            "hp": 65,
-            "attack": 65,
-            "defense": 60,
-            "special_attack": 130,
-            "special_defense": 95,
-            "speed": 110
-        }
-    },
-    {
-        "name": "Noctali",
-        "type": [
-            "dark"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png",
-        "attacks": [
-            "pay-day",
-            "cut",
-            "sand-attack"
-        ],
-        "stats": {
-            "hp": 95,
-            "attack": 65,
-            "defense": 110,
-            "special_attack": 60,
-            "special_defense": 130,
-            "speed": 65
-        }
-    },
-    {
-        "name": "Cornèbre",
-        "type": [
-            "dark",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/198.png",
-        "attacks": [
-            "gust",
-            "wing-attack",
-            "whirlwind"
-        ],
-        "stats": {
-            "hp": 60,
-            "attack": 85,
-            "defense": 42,
-            "special_attack": 85,
-            "special_defense": 42,
-            "speed": 91
-        }
-    },
-    {
-        "name": "Roigada",
-        "type": [
-            "water",
-            "psychic"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png",
-        "attacks": [
-            "mega-punch",
-            "pay-day",
-            "fire-punch"
-        ],
-        "stats": {
-            "hp": 95,
-            "attack": 75,
-            "defense": 80,
-            "special_attack": 100,
-            "special_defense": 110,
-            "speed": 30
-        }
-    },
-    {
-        "name": "Feuforêve",
-        "type": [
-            "ghost"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/200.png",
-        "attacks": [
-            "headbutt",
-            "double-edge",
-            "growl"
-        ],
-        "stats": {
-            "hp": 60,
-            "attack": 60,
-            "defense": 60,
-            "special_attack": 85,
-            "special_defense": 85,
-            "speed": 85
-        }
-    },
-    {
-        "name": "Zarbi",
-        "type": [
-            "psychic"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/201.png",
-        "attacks": [
-            "hidden-power"
-        ],
-        "stats": {
-            "hp": 48,
-            "attack": 72,
-            "defense": 48,
-            "special_attack": 72,
-            "special_defense": 48,
-            "speed": 48
-        }
-    },
-    {
-        "name": "Qulbutoké",
-        "type": [
-            "psychic"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/202.png",
-        "attacks": [
-            "counter",
-            "amnesia",
-            "splash"
-        ],
-        "stats": {
-            "hp": 190,
-            "attack": 33,
-            "defense": 58,
-            "special_attack": 33,
-            "special_defense": 58,
-            "speed": 33
-        }
-    },
-    {
-        "name": "Girafarig",
-        "type": [
-            "normal",
-            "psychic"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/203.png",
-        "attacks": [
-            "razor-wind",
-            "stomp",
-            "double-kick"
-        ],
-        "stats": {
-            "hp": 70,
-            "attack": 80,
-            "defense": 65,
-            "special_attack": 90,
-            "special_defense": 65,
-            "speed": 85
-        }
-    },
-    {
-        "name": "Pomdepik",
-        "type": [
-            "bug"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/204.png",
-        "attacks": [
-            "headbutt",
-            "tackle",
-            "body-slam"
-        ],
-        "stats": {
-            "hp": 50,
-            "attack": 65,
-            "defense": 90,
-            "special_attack": 35,
-            "special_defense": 35,
-            "speed": 15
-        }
-    },
-    {
-        "name": "Foretress",
-        "type": [
-            "bug",
-            "steel"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/205.png",
-        "attacks": [
-            "headbutt",
-            "tackle",
-            "body-slam"
-        ],
-        "stats": {
-            "hp": 75,
-            "attack": 90,
-            "defense": 140,
-            "special_attack": 60,
-            "special_defense": 60,
-            "speed": 40
-        }
-    },
-    {
-        "name": "Insolourdo",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/206.png",
-        "attacks": [
-            "bind",
-            "headbutt",
-            "body-slam"
-        ],
-        "stats": {
-            "hp": 100,
-            "attack": 70,
-            "defense": 70,
-            "special_attack": 65,
-            "special_defense": 65,
-            "speed": 45
-        }
-    },
-    {
-        "name": "Scorplane",
-        "type": [
-            "ground",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/207.png",
-        "attacks": [
-            "guillotine",
-            "razor-wind",
-            "swords-dance"
-        ],
-        "stats": {
-            "hp": 65,
-            "attack": 75,
-            "defense": 105,
-            "special_attack": 35,
-            "special_defense": 65,
-            "speed": 85
-        }
-    },
-    {
-        "name": "Steelix",
-        "type": [
-            "steel",
-            "ground"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png",
-        "attacks": [
-            "cut",
-            "bind",
-            "slam"
-        ],
-        "stats": {
-            "hp": 75,
-            "attack": 85,
-            "defense": 200,
-            "special_attack": 55,
-            "special_defense": 65,
-            "speed": 30
-        }
-    },
-    {
-        "name": "Snubbull",
-        "type": [
-            "fairy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/209.png",
-        "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 60,
-            "attack": 80,
-            "defense": 50,
-            "special_attack": 40,
-            "special_defense": 40,
-            "speed": 30
-        }
-    },
-    {
-        "name": "Granbull",
-        "type": [
-            "fairy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png",
-        "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 90,
-            "attack": 120,
-            "defense": 75,
-            "special_attack": 60,
-            "special_defense": 60,
-            "speed": 45
-        }
-    },
-    {
-        "name": "Qwilfish",
-        "type": [
-            "water",
-            "poison"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/211.png",
-        "attacks": [
-            "swords-dance",
-            "headbutt",
-            "tackle"
-        ],
-        "stats": {
-            "hp": 65,
-            "attack": 95,
-            "defense": 85,
-            "special_attack": 55,
-            "special_defense": 55,
-            "speed": 85
-        }
-    },
-    {
-        "name": "Cizayox",
-        "type": [
-            "bug",
-            "steel"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png",
-        "attacks": [
-            "razor-wind",
-            "swords-dance",
-            "cut"
-        ],
-        "stats": {
-            "hp": 70,
-            "attack": 130,
-            "defense": 100,
-            "special_attack": 55,
-            "special_defense": 80,
-            "speed": 65
-        }
-    },
-    {
-        "name": "Caratroc",
-        "type": [
-            "bug",
-            "rock"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png",
-        "attacks": [
-            "bind",
-            "headbutt",
-            "body-slam"
-        ],
-        "stats": {
-            "hp": 20,
-            "attack": 10,
-            "defense": 230,
-            "special_attack": 10,
-            "special_defense": 230,
-            "speed": 5
-        }
-    },
-    {
-        "name": "Scarhino",
-        "type": [
-            "bug",
-            "fighting"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/214.png",
-        "attacks": [
-            "swords-dance",
-            "cut",
-            "headbutt"
-        ],
-        "stats": {
-            "hp": 80,
-            "attack": 125,
-            "defense": 75,
-            "special_attack": 40,
-            "special_defense": 95,
-            "speed": 85
-        }
-    },
-    {
-        "name": "Farfuret",
-        "type": [
-            "dark",
-            "ice"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/215.png",
-        "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "scratch"
-        ],
-        "stats": {
-            "hp": 55,
-            "attack": 95,
-            "defense": 55,
-            "special_attack": 35,
-            "special_defense": 75,
-            "speed": 115
-        }
-    },
-    {
-        "name": "Teddiursa",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/216.png",
-        "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 60,
-            "attack": 80,
-            "defense": 50,
-            "special_attack": 50,
-            "special_defense": 50,
-            "speed": 40
-        }
-    },
-    {
-        "name": "Ursaring",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/217.png",
-        "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 90,
-            "attack": 130,
-            "defense": 75,
-            "special_attack": 75,
-            "special_defense": 75,
-            "speed": 55
-        }
-    },
-    {
-        "name": "Limagma",
-        "type": [
-            "fire"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/218.png",
-        "attacks": [
-            "body-slam",
-            "take-down",
-            "double-edge"
-        ],
-        "stats": {
-            "hp": 40,
-            "attack": 40,
-            "defense": 40,
-            "special_attack": 70,
-            "special_defense": 40,
-            "speed": 20
-        }
-    },
-    {
-        "name": "Volcaropod",
-        "type": [
-            "fire",
-            "rock"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/219.png",
-        "attacks": [
-            "body-slam",
-            "take-down",
-            "double-edge"
-        ],
-        "stats": {
-            "hp": 60,
-            "attack": 50,
-            "defense": 120,
-            "special_attack": 90,
-            "special_defense": 80,
-            "speed": 30
-        }
-    },
-    {
-        "name": "Marcacrin",
-        "type": [
-            "ice",
-            "ground"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/220.png",
-        "attacks": [
-            "headbutt",
-            "tackle",
-            "body-slam"
-        ],
-        "stats": {
-            "hp": 50,
-            "attack": 50,
-            "defense": 40,
-            "special_attack": 30,
-            "special_defense": 30,
-            "speed": 50
-        }
-    },
-    {
-        "name": "Cochignon",
-        "type": [
-            "ice",
-            "ground"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/221.png",
-        "attacks": [
-            "headbutt",
-            "horn-attack",
-            "fury-attack"
-        ],
-        "stats": {
-            "hp": 100,
-            "attack": 100,
-            "defense": 80,
-            "special_attack": 60,
-            "special_defense": 60,
-            "speed": 50
-        }
-    },
-    {
-        "name": "Corayon",
-        "type": [
-            "water",
-            "rock"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/222.png",
-        "attacks": [
-            "headbutt",
-            "tackle",
-            "body-slam"
-        ],
-        "stats": {
-            "hp": 65,
-            "attack": 55,
-            "defense": 95,
-            "special_attack": 65,
-            "special_defense": 95,
-            "speed": 35
-        }
-    },
-    {
-        "name": "Rémoraid",
-        "type": [
-            "water"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/223.png",
-        "attacks": [
-            "double-edge",
-            "supersonic",
-            "flamethrower"
-        ],
-        "stats": {
-            "hp": 35,
-            "attack": 65,
-            "defense": 35,
-            "special_attack": 65,
-            "special_defense": 35,
-            "speed": 65
-        }
-    },
-    {
-        "name": "Octillery",
-        "type": [
-            "water"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/224.png",
-        "attacks": [
-            "bind",
-            "wrap",
-            "double-edge"
-        ],
-        "stats": {
-            "hp": 75,
-            "attack": 105,
-            "defense": 75,
-            "special_attack": 105,
-            "special_defense": 75,
-            "speed": 45
-        }
-    },
-    {
-        "name": "Cadoizo",
-        "type": [
-            "ice",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/225.png",
-        "attacks": [
-            "mega-punch",
-            "ice-punch",
-            "fly"
-        ],
-        "stats": {
-            "hp": 45,
-            "attack": 55,
-            "defense": 45,
-            "special_attack": 65,
-            "special_defense": 45,
-            "speed": 75
-        }
-    },
-    {
-        "name": "Démanta",
-        "type": [
-            "water",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/226.png",
-        "attacks": [
-            "wing-attack",
-            "slam",
-            "headbutt"
-        ],
-        "stats": {
-            "hp": 85,
-            "attack": 40,
-            "defense": 70,
-            "special_attack": 80,
-            "special_defense": 140,
-            "speed": 70
-        }
-    },
-    {
-        "name": "Airmure",
-        "type": [
-            "steel",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png",
-        "attacks": [
-            "swords-dance",
-            "cut",
-            "wing-attack"
-        ],
-        "stats": {
-            "hp": 65,
-            "attack": 80,
-            "defense": 140,
-            "special_attack": 40,
-            "special_defense": 70,
-            "speed": 70
-        }
-    },
-    {
-        "name": "Malosse",
-        "type": [
-            "dark",
-            "fire"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/228.png",
-        "attacks": [
-            "headbutt",
-            "body-slam",
-            "take-down"
-        ],
-        "stats": {
-            "hp": 45,
-            "attack": 60,
-            "defense": 30,
-            "special_attack": 80,
-            "special_defense": 50,
-            "speed": 65
-        }
-    },
-    {
-        "name": "Démolosse",
-        "type": [
-            "dark",
-            "fire"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png",
-        "attacks": [
-            "headbutt",
-            "body-slam",
-            "take-down"
-        ],
-        "stats": {
-            "hp": 75,
-            "attack": 90,
-            "defense": 50,
-            "special_attack": 110,
-            "special_defense": 80,
-            "speed": 95
-        }
-    },
-    {
-        "name": "Hyporoi",
-        "type": [
-            "water",
-            "dragon"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/230.png",
-        "attacks": [
-            "headbutt",
-            "body-slam",
-            "take-down"
-        ],
-        "stats": {
-            "hp": 75,
-            "attack": 95,
-            "defense": 95,
-            "special_attack": 95,
-            "special_defense": 95,
-            "speed": 85
-        }
-    },
-    {
-        "name": "Phanpy",
-        "type": [
-            "ground"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/231.png",
-        "attacks": [
-            "slam",
-            "headbutt",
-            "tackle"
-        ],
-        "stats": {
-            "hp": 90,
-            "attack": 60,
-            "defense": 60,
-            "special_attack": 40,
-            "special_defense": 40,
-            "speed": 40
-        }
-    },
-    {
-        "name": "Donphan",
-        "type": [
-            "ground"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/232.png",
-        "attacks": [
-            "slam",
-            "headbutt",
-            "horn-attack"
-        ],
-        "stats": {
-            "hp": 90,
-            "attack": 120,
-            "defense": 120,
-            "special_attack": 60,
-            "special_defense": 60,
-            "speed": 50
-        }
-    },
-    {
-        "name": "Porygon2",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/233.png",
-        "attacks": [
-            "tackle",
-            "take-down",
-            "double-edge"
-        ],
-        "stats": {
-            "hp": 85,
-            "attack": 80,
-            "defense": 90,
-            "special_attack": 105,
-            "special_defense": 95,
-            "speed": 60
-        }
-    },
-    {
-        "name": "Cerfrousse",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/234.png",
-        "attacks": [
-            "stomp",
-            "double-kick",
-            "jump-kick"
-        ],
-        "stats": {
-            "hp": 73,
-            "attack": 95,
-            "defense": 62,
-            "special_attack": 85,
-            "special_defense": 65,
-            "speed": 85
-        }
-    },
-    {
-        "name": "Queulorior",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/235.png",
-        "attacks": [
-            "sketch"
-        ],
-        "stats": {
-            "hp": 55,
-            "attack": 20,
-            "defense": 35,
-            "special_attack": 20,
-            "special_defense": 45,
-            "speed": 75
-        }
-    },
-    {
-        "name": "Debugant",
-        "type": [
-            "fighting"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/236.png",
-        "attacks": [
-            "mega-punch",
-            "mega-kick",
-            "headbutt"
-        ],
-        "stats": {
-            "hp": 35,
-            "attack": 35,
-            "defense": 35,
-            "special_attack": 35,
-            "special_defense": 35,
-            "speed": 35
-        }
-    },
-    {
-        "name": "Kapoera",
-        "type": [
-            "fighting"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/237.png",
-        "attacks": [
-            "mega-punch",
-            "mega-kick",
-            "rolling-kick"
-        ],
-        "stats": {
-            "hp": 50,
-            "attack": 95,
-            "defense": 95,
-            "special_attack": 35,
-            "special_defense": 110,
-            "speed": 70
-        }
-    },
-    {
-        "name": "Lippouti",
-        "type": [
-            "ice",
-            "psychic"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/238.png",
-        "attacks": [
-            "pound",
-            "mega-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 45,
-            "attack": 30,
-            "defense": 15,
-            "special_attack": 85,
-            "special_defense": 65,
-            "speed": 65
-        }
-    },
-    {
-        "name": "Élekid",
-        "type": [
-            "electric"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/239.png",
-        "attacks": [
-            "karate-chop",
-            "mega-punch",
-            "fire-punch"
-        ],
-        "stats": {
-            "hp": 45,
-            "attack": 63,
-            "defense": 37,
-            "special_attack": 65,
-            "special_defense": 55,
-            "speed": 95
-        }
-    },
-    {
-        "name": "Magby",
-        "type": [
-            "fire"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/240.png",
-        "attacks": [
-            "karate-chop",
-            "mega-punch",
-            "fire-punch"
-        ],
-        "stats": {
-            "hp": 45,
-            "attack": 75,
-            "defense": 37,
-            "special_attack": 70,
-            "special_defense": 55,
-            "speed": 83
-        }
-    },
-    {
-        "name": "Écrémeuh",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/241.png",
-        "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 95,
-            "attack": 80,
-            "defense": 105,
-            "special_attack": 40,
-            "special_defense": 70,
-            "speed": 100
-        }
-    },
-    {
-        "name": "Leuphorie",
-        "type": [
-            "normal"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/242.png",
-        "attacks": [
-            "pound",
-            "double-slap",
-            "mega-punch"
-        ],
-        "stats": {
-            "hp": 255,
-            "attack": 10,
-            "defense": 10,
-            "special_attack": 75,
-            "special_defense": 135,
-            "speed": 55
-        }
-    },
-    {
-        "name": "Raikou",
-        "type": [
-            "electric"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/243.png",
-        "attacks": [
-            "cut",
-            "headbutt",
-            "body-slam"
-        ],
-        "stats": {
-            "hp": 90,
-            "attack": 85,
-            "defense": 75,
-            "special_attack": 115,
-            "special_defense": 100,
-            "speed": 115
-        }
-    },
-    {
-        "name": "Entei",
-        "type": [
-            "fire"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/244.png",
-        "attacks": [
-            "cut",
-            "stomp",
-            "headbutt"
-        ],
-        "stats": {
-            "hp": 115,
-            "attack": 115,
-            "defense": 85,
-            "special_attack": 90,
-            "special_defense": 75,
-            "speed": 100
-        }
-    },
-    {
-        "name": "Suicune",
-        "type": [
-            "water"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/245.png",
-        "attacks": [
-            "cut",
-            "gust",
-            "headbutt"
-        ],
-        "stats": {
-            "hp": 100,
-            "attack": 75,
-            "defense": 115,
-            "special_attack": 90,
-            "special_defense": 115,
-            "speed": 85
-        }
-    },
-    {
-        "name": "Embrylex",
-        "type": [
-            "rock",
-            "ground"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/246.png",
-        "attacks": [
-            "stomp",
-            "headbutt",
-            "tackle"
-        ],
-        "stats": {
-            "hp": 50,
-            "attack": 64,
-            "defense": 50,
-            "special_attack": 45,
-            "special_defense": 50,
-            "speed": 41
-        }
-    },
-    {
-        "name": "Ymphect",
-        "type": [
-            "rock",
-            "ground"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/247.png",
-        "attacks": [
-            "headbutt",
-            "tackle",
-            "body-slam"
-        ],
-        "stats": {
-            "hp": 70,
-            "attack": 84,
-            "defense": 70,
-            "special_attack": 65,
-            "special_defense": 70,
-            "speed": 51
-        }
-    },
-    {
-        "name": "Tyranocif",
-        "type": [
-            "rock",
-            "dark"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png",
-        "attacks": [
-            "mega-punch",
-            "fire-punch",
-            "ice-punch"
-        ],
-        "stats": {
-            "hp": 100,
-            "attack": 134,
-            "defense": 110,
-            "special_attack": 95,
-            "special_defense": 100,
-            "speed": 61
-        }
-    },
-    {
-        "name": "Lugia",
-        "type": [
-            "psychic",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png",
-        "attacks": [
-            "gust",
-            "whirlwind",
-            "fly"
-        ],
-        "stats": {
-            "hp": 106,
-            "attack": 90,
-            "defense": 130,
-            "special_attack": 90,
-            "special_defense": 154,
-            "speed": 110
-        }
-    },
-    {
-        "name": "Ho-Oh",
-        "type": [
-            "fire",
-            "flying"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png",
-        "attacks": [
-            "gust",
-            "whirlwind",
-            "fly"
-        ],
-        "stats": {
-            "hp": 106,
-            "attack": 130,
-            "defense": 90,
-            "special_attack": 110,
-            "special_defense": 154,
-            "speed": 90
-        }
-    },
-    {
-        "name": "Celebi",
-        "type": [
-            "psychic",
-            "grass"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/251.png",
-        "attacks": [
-            "swords-dance",
-            "cut",
-            "double-edge"
+            "Danse Lames",
+            "Coupe",
+            "Damoclès"
         ],
         "stats": {
             "hp": 100,
@@ -4092,5 +2044,4 @@
             "speed": 100
         }
     }
-
 ]
