@@ -5,6 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 import requests, io, os
 from io import BytesIO
 import json
+from db import get_captures
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
@@ -244,28 +245,28 @@ class PokemonButton(Button):
         await interaction.followup.send(file=file, embed=embed, ephemeral=True)
 
 
-
-# 👉 Commande pokedex
 def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir):
     @bot.command()
     async def pokedex(ctx):
-        filename = os.path.join(json_dir, "captures.json")
-        if not os.path.exists(filename):
-            await ctx.send("Tu n'as encore rien capturé.")
-            return
-        with open(filename, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        # 🔥 Récupération des captures depuis la base PostgreSQL
         user_id = str(ctx.author.id)
-        if user_id not in data or not data[user_id]:
+        captures = get_captures(user_id)
+
+        # Si aucune capture
+        if not captures:
             await ctx.send("Tu n'as encore rien capturé.")
             return
 
-        pokemons = [entry["name"] for entry in data[user_id]]
+        # On extrait la liste des noms pour la mosaïque
+        pokemons = [entry["name"] for entry in captures]
+
+        # Création de la mosaïque
         mosaic_image = await create_mosaic(pokemons, full_pokemon_data, full_pokemon_shiny_data)
         if mosaic_image is None:
             await ctx.send("Erreur lors de la création de la mosaïque.")
             return
 
+        # Création de l'embed
         file = discord.File(mosaic_image, filename="pokedex_mosaic.png")
         embed = discord.Embed(
             title=f"📘 Pokédex de {ctx.author.display_name}",
@@ -274,6 +275,14 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
         )
         embed.set_image(url="attachment://pokedex_mosaic.png")
 
-        view = PokedexView(pokemons, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, data[user_id])
-        await ctx.send(embed=embed, file=file, view=view)
+        # Création de la view avec les captures de la BDD
+        view = PokedexView(
+            pokemons,
+            full_pokemon_shiny_data,
+            full_pokemon_data,
+            type_sprites,
+            attack_type_map,
+            captures  # 👈 on passe directement les données issues de la BDD
+        )
 
+        await ctx.send(embed=embed, file=file, view=view)
