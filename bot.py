@@ -29,7 +29,7 @@ from pokedex import setup_pokedex
 
 from io import BytesIO
 
-
+from db import save_capture, get_captures
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
@@ -150,48 +150,6 @@ def is_croco():
     def predicate(ctx):
         return ctx.author.id == TARGET_USER_ID_CROCO
     return commands.check(predicate)
-
-def save_capture(user_id, pokemon_name, ivs, final_stats):
-    filename = os.path.join(json_dir, "captures.json")
-
-
-    data = {}
-    if os.path.exists(filename):
-        with open(filename, "r", encoding="utf-8") as f:
-            data = json.load(f)
-
-    user_id = str(user_id)
-    if user_id not in data:
-        data[user_id] = []
-
-    # Cherche les données du Pokémon dans les listes complètes
-    pokemon = next((p for p in full_pokemon_data + full_pokemon_shiny_data if normalize_text(p["name"]) == normalize_text(pokemon_name)), None)
-
-
-    if not pokemon:
-        print(f"[ERREUR] Pokémon {pokemon_name} introuvable dans les données globales.")
-        return
-
-    # Trouve tous les noms déjà capturés qui commencent par le nom du Pokémon
-    existing_captures = [entry for entry in data[user_id] if entry["name"].startswith(pokemon_name)]
-
-    if not existing_captures:
-        final_name = pokemon_name
-    else:
-        suffix = len(existing_captures) + 1
-        final_name = f"{pokemon_name}{suffix}"
-
-    data[user_id].append({
-        "name": final_name,
-        "ivs": ivs,
-        "stats": final_stats,
-        "image": pokemon.get("image", ""),
-        "type": pokemon.get("type", []),
-        "attacks": pokemon.get("attacks", [])
-    })
-
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4, ensure_ascii=False)
 
 
 def reset_spawn(guild_id):
@@ -494,7 +452,7 @@ async def catch(ctx):
         # Sauvegarde
         ivs = pokemon_data.get("ivs", {})
         stats_with_iv = pokemon_data.get("stats_iv", pokemon_data["stats"])
-        save_capture(ctx.author.id, pokemon_name, ivs, stats_with_iv)
+        save_capture(ctx.author.id, pokemon_name, ivs, stats_with_iv, pokemon_data)
         
 
         # Envoi du message de capture
