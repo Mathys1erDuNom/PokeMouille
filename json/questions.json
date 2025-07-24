@@ -1,106 +1,72 @@
-
 [
     {
-        "question": "Quel type est immunisé contre les attaques de type Sol ?",
-        "options": ["Vol", "Acier", "Psy", "Spectre"],
-        "answer": "Vol"
+        "question": "Quel type inflige des dégâts super efficaces contre le type Acier ?",
+        "options": ["Spectre", "Plante", "Électrique", "Feu", "Glace", "Roche"],
+        "answer": "Feu"
     },
     {
-        "question": "Quel type est faible contre les attaques de type Feu ?",
-        "options": ["Eau", "Plante", "Roche", "Psy"],
-        "answer": "Plante"
+        "question": "Quel type est faible contre les attaques de type Eau ?",
+        "options": ["Feu", "Acier", "Insecte", "Dragon", "Électrique"],
+        "answer": "Feu"
     },
     {
-        "question": "Quel type est résistant aux attaques de type Électrique ?",
-        "options": ["Sol", "Acier", "Dragon", "Spectre"],
-        "answer": "Sol"
-    },
-    {
-        "question": "Quel type inflige des dégâts super efficaces contre le type Eau ?",
-        "options": ["Plante", "Feu", "Roche", "Combat"],
-        "answer": "Plante"
-    },
-    {
-        "question": "Quel type de Pokémon est immunisé aux attaques de type Normal ?",
-        "options": ["Spectre", "Psy", "Acier", "Fée"],
-        "answer": "Spectre"
-    },
-    {
-        "question": "Quel type est vulnérable aux attaques de type Glace ?",
-        "options": ["Dragon", "Feu", "Roche", "Acier"],
-        "answer": "Dragon"
-    },
-    {
-        "question": "Quel type est le plus efficace contre le type Psy ?",
-        "options": ["Ténèbres", "Combat", "Spectre", "Acier"],
-        "answer": "Ténèbres"
-    },
-    {
-        "question": "Quel type est immunisé aux attaques de type Poison ?",
-        "options": ["Acier", "Sol", "Roche", "Fée"],
+        "question": "Quel type résiste aux attaques de type Insecte ?",
+        "options": ["Glace", "Dragon", "Acier", "Ténèbres", "Psy", "Fée"],
         "answer": "Acier"
     },
     {
-        "question": "Quel type de Pokémon est le plus souvent de type Plante ?",
-        "options": ["Bulbizarre", "Salamèche", "Carapuce", "Pikachu"],
-        "answer": "Bulbizarre"
+        "question": "Quel type est super efficace contre le type Ténèbres ?",
+        "options": ["Fée", "Eau", "Combat", "Poison", "Vol"],
+        "answer": "Combat"
     },
     {
-        "question": "Quel type est faible face aux attaques de type Combat ?",
-        "options": ["Normal", "Spectre", "Vol", "Psy"],
-        "answer": "Normal"
-    },
-
-
-    {
-        "question": "Quel type est immunisé contre les attaques de type Sol ?",
-        "options": ["Vol", "Acier", "Psy", "Spectre"],
-        "answer": "Vol"
-    },
-    {
-        "question": "Quel type est faible contre les attaques de type Feu ?",
-        "options": ["Eau", "Plante", "Roche", "Psy"],
-        "answer": "Plante"
-    },
-    {
-        "question": "Quel type est résistant aux attaques de type Électrique ?",
-        "options": ["Sol", "Acier", "Dragon", "Spectre"],
-        "answer": "Sol"
-    },
-    {
-        "question": "Quel type inflige des dégâts super efficaces contre le type Eau ?",
-        "options": ["Plante", "Feu", "Roche", "Combat"],
-        "answer": "Plante"
-    },
-    {
-        "question": "Quel type de Pokémon est immunisé aux attaques de type Normal ?",
-        "options": ["Spectre", "Psy", "Acier", "Fée"],
+        "question": "Quel type est immunisé aux attaques de type Combat ?",
+        "options": ["Plante", "Sol", "Spectre", "Acier", "Roche", "Dragon"],
         "answer": "Spectre"
     },
     {
-        "question": "Quel type est vulnérable aux attaques de type Glace ?",
-        "options": ["Dragon", "Feu", "Roche", "Acier"],
+        "question": "Quel type est faible face aux attaques de type Vol ?",
+        "options": ["Glace", "Combat", "Eau", "Plante", "Ténèbres"],
+        "answer": "Plante"
+    },
+    {
+        "question": "Quel type résiste aux attaques de type Feu ?",
+        "options": ["Plante", "Spectre", "Dragon", "Roche", "Eau"],
         "answer": "Dragon"
     },
     {
-        "question": "Quel type est le plus efficace contre le type Psy ?",
-        "options": ["Ténèbres", "Combat", "Spectre", "Acier"],
+        "question": "Quel type inflige des dégâts super efficaces contre le type Glace ?",
+        "options": ["Psy", "Électrique", "Acier", "Poison", "Roche", "Feu"],
+        "answer": "Feu"
+    },
+    {
+        "question": "Quel type est résistant aux attaques de type Plante ?",
+        "options": ["Insecte", "Feu", "Fée", "Combat", "Acier"],
+        "answer": "Feu"
+    },
+    {
+        "question": "Quel type inflige des dégâts super efficaces contre le type Dragon ?",
+        "options": ["Plante", "Combat", "Fée", "Sol", "Électrique", "Dragon"],
+        "answer": "Fée"
+    },
+    {
+        "question": "Quel type est faible contre les attaques de type Roche ?",
+        "options": ["Vol", "Fée", "Spectre", "Glace", "Feu", "Eau"],
+        "answer": "Feu"
+    },
+    {
+        "question": "Quel type résiste aux attaques de type Psy ?",
+        "options": ["Ténèbres", "Feu", "Acier", "Dragon", "Eau"],
         "answer": "Ténèbres"
     },
     {
-        "question": "Quel type est immunisé aux attaques de type Poison ?",
-        "options": ["Acier", "Sol", "Roche", "Fée"],
-        "answer": "Acier"
+        "question": "Quel type est vulnérable aux attaques de type Ténèbres ?",
+        "options": ["Combat", "Psy", "Plante", "Eau", "Fée"],
+        "answer": "Psy"
     },
     {
-        "question": "Quel type de Pokémon est le plus souvent de type Plante ?",
-        "options": ["Bulbizarre", "Salamèche", "Carapuce", "Pikachu"],
-        "answer": "Bulbizarre"
-    },
-    {
-        "question": "Quel type est faible face aux attaques de type Combat ?",
-        "options": ["Normal", "Spectre", "Vol", "Psy"],
-        "answer": "Normal"
+        "question": "Quel type est immunisé contre les attaques de type Dragon ?",
+        "options": ["Ténèbres", "Spectre", "Roche", "Feu", "Fée", "Plante"],
+        "answer": "Fée"
     }
 ]
-
