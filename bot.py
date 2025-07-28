@@ -606,14 +606,14 @@ print("[DEBUG] Ready to run bot...")
 @bot.command()
 async def battle(ctx):
     user_id = str(ctx.author.id)
-    captures = get_captures(str(ctx.author.id))
+    captures = get_captures(user_id)
 
     if not captures:
         await ctx.send("Tu n'as aucun Pokémon à utiliser en combat.")
         return
 
     pokemons = [entry["name"] for entry in captures]
-    view = SelectionView(pokemons)
+    view = SelectionView(pokemons, full_pokemon_data)
     await ctx.send("Choisis jusqu’à 6 Pokémon pour ton équipe de combat :", view=view)
 
 
