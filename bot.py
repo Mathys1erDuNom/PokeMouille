@@ -6,6 +6,9 @@ import random, asyncio, os, json
 from dotenv import load_dotenv
 import time
 from PIL import Image, ImageDraw, ImageFont
+from combats.combat_logic import setup_battle_commands
+setup_battle_commands(bot)
+
 
 
 
