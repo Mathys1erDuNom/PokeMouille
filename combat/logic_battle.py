@@ -18,13 +18,16 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
         # Déterminer l'ordre d'attaque
         if state.active_player['stats']['speed'] >= state.active_bot['stats']['speed']:
             order = ['player', 'bot']
-            sprite_url = state.active_player["image"]
+            first_sprite = state.active_player["image"]
+            second_sprite = state.active_bot["image"]
         else:
             order = ['bot', 'player']
-            sprite_url = state.active_bot["image"]
+            first_sprite = state.active_bot["image"]
+            second_sprite = state.active_player["image"]
 
         embed = discord.Embed(title=f"🔁 Tour {tour}", color=0x00BFFF)
-        embed.set_thumbnail(url=sprite_url)  # Affiche le sprite de l'attaquant principal
+        embed.set_thumbnail(url=first_sprite)  # Premier qui tape
+        embed.set_image(url=second_sprite)     # Deuxième qui tape
 
         for actor in order:
             if actor == "player":
