@@ -25,16 +25,21 @@ class BattleState:
         return self.get_hp("bot") <= 0
 
     def switch_player(self):
-        if self.active_player_index + 1 < len(self.player_team):
+        while self.active_player_index + 1 < len(self.player_team):
             self.active_player_index += 1
-            return True
+            if self.player_hp_pool[self.active_player_index] > 0:
+                return True
         return False
 
+
     def switch_bot(self):
-        if self.active_bot_index + 1 < len(self.bot_team):
+        while self.active_bot_index + 1 < len(self.bot_team):
             self.active_bot_index += 1
-            return True
+            if self.bot_hp_pool[self.active_bot_index] > 0:
+                return True
         return False
+
+
 
     def take_damage(self, target: str, damage: int):
         if target == "player":
