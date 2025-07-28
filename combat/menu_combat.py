@@ -68,7 +68,7 @@ class ValidateButton(Button):
         all_captures = get_captures(user_id)
         selected_pokemons = [p for p in all_captures if p["name"] in all_selected]
 
-        bot_team = [poke for poke in full_pokemon_data if poke["name"] in ["Salameche", "Roucool", "Rattata"]]
+        bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke["name"] in ["Salameche", "Roucool", "Rattata"]]
 
 
 
