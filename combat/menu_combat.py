@@ -1,32 +1,37 @@
-# combat/menu_combat.py
 import discord
-from discord.ui import View, Button
-from db import get_captures
+from discord.ui import View, Select
+from math import ceil
 
-class SelectionView(View):
-    def __init__(self, pokemons, max_select=6):
-        super().__init__(timeout=60)
-        self.selected = []
-        self.max_select = max_select
-
-        for name in pokemons:
-            self.add_item(PokemonSelectButton(name, self))
-
-class PokemonSelectButton(Button):
-    def __init__(self, name, view_ref):
-        super().__init__(label=name, style=discord.ButtonStyle.primary)
-        self.pokemon_name = name
-        self.view_ref = view_ref
+class PokemonSelectMenu(Select):
+    def __init__(self, options, menu_index):
+        super().__init__(
+            placeholder=f"Sélection {menu_index + 1}",
+            min_values=0,
+            max_values=min(6, len(options)),  # Tu peux en choisir jusqu’à 6 en tout
+            options=options,
+            custom_id=f"select_{menu_index}"
+        )
 
     async def callback(self, interaction: discord.Interaction):
-        if self.pokemon_name in self.view_ref.selected:
-            await interaction.response.send_message("Déjà sélectionné !", ephemeral=True)
-            return
+        # Réponse silencieuse temporaire (à adapter selon ta logique de combat)
+        await interaction.response.send_message(
+            f"Tu as choisi : {', '.join(self.values)}", ephemeral=True
+        )
 
-        if len(self.view_ref.selected) >= self.view_ref.max_select:
-            await interaction.response.send_message("Tu as déjà choisi 6 Pokémon !", ephemeral=True)
-            return
+class SelectionView(View):
+    def __init__(self, pokemons):
+        super().__init__(timeout=120)
 
-        self.view_ref.selected.append(self.pokemon_name)
-        await interaction.response.send_message(f"{self.pokemon_name} ajouté à l'équipe ! ({len(self.view_ref.selected)}/6)", ephemeral=True)
+        # Diviser la liste de Pokémon en groupes de 25
+        chunk_size = 25
+        pokemon_chunks = [
+            pokemons[i:i + chunk_size] for i in range(0, len(pokemons), chunk_size)
+        ]
 
+        for index, chunk in enumerate(pokemon_chunks):
+            options = [
+                discord.SelectOption(label=name, value=name)
+                for name in chunk
+            ]
+            select = PokemonSelectMenu(options, index)
+            self.add_item(select)
