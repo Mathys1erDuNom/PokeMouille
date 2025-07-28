@@ -77,7 +77,9 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
                         await interaction.channel.send("🤖 **Le bot a gagné le combat !**")
                         return
 
-        embed.set_footer(text=f"PV {state.active_player['name']} : {state.player_current_hp} | PV {state.active_bot['name']} : {state.bot_current_hp}")
+        embed.set_footer(
+            text=f"PV {state.active_player['name']} : {state.get_hp('player')} | PV {state.active_bot['name']} : {state.get_hp('bot')}"
+        )
         await interaction.channel.send(embed=embed)
         tour += 1
         await asyncio.sleep(2)
