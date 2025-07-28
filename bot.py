@@ -6,9 +6,6 @@ import random, asyncio, os, json
 from dotenv import load_dotenv
 import time
 from PIL import Image, ImageDraw, ImageFont
-from combats.combat_logic import setup_battle_commands
-
-
 
 
 
@@ -60,7 +57,6 @@ DEFAULT_SHINY_RATE = 64
 
 
 bot = commands.Bot(command_prefix="!", intents=intents)
-setup_battle_commands(bot)
 
 
 
