@@ -3012,6 +3012,50 @@
             "defense": 100,
             "special_defense": 100
         }
+    },
+    {
+        "name": "Luxray_shiny",
+        "type": ["electrik"],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/405.png",
+        "attacks": ["Éclair", "Crocs Éclair"],
+        "stats": {
+            "hp": 80,
+            "attack": 120,
+            "special_attack": 95,
+            "speed": 70,
+            "defense": 79,
+            "special_defense": 79
+        }
+    },{
+        "name": "Dialga_shiny",
+        "type": ["acier", "dragon"],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/483.png",
+        "attacks": ["Hurle-Temps", "Tête de Fer"],
+        "stats": {
+            "hp": 100,
+            "attack": 120,
+            "special_attack": 150,
+            "speed": 90,
+            "defense": 120,
+            "special_defense": 100
+        }
+    },{
+        "name": "Giratina_shiny",
+        "type": ["spectre", "dragon"],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/487.png",
+        "attacks": ["Ombre Portée", "Vent Mauvais"],
+        "stats": {
+            "hp": 150,
+            "attack": 100,
+            "special_attack": 100,
+            "speed": 90,
+            "defense": 120,
+            "special_defense": 120
+        }
     }
+    
+
+    
+    
     
 ]
