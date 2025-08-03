@@ -29,8 +29,8 @@ async def create_mosaic(pokemon_names, full_pokemon_data, full_pokemon_shiny_dat
                 response = requests.get(p_data["image"])
                 img = Image.open(BytesIO(response.content)).convert("RGBA").resize((64, 64))
                 images.append(img)
-            except:
-                pass
+            except Exception as e:
+                print(f"[ERREUR] Impossible de charger l'image pour {p_data['name']} : {e}")
 
     if not images:
         return None
