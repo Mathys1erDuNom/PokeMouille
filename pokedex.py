@@ -18,22 +18,43 @@ def normalize_text(text):
 
 async def create_mosaic(pokemon_names, full_pokemon_data, full_pokemon_shiny_data):
     images = []
+    nb_total = len(pokemon_names)
+    nb_ignores = 0
+
     for name in pokemon_names:
         clean_name = normalize_text(name)
         clean_base = ''.join(filter(str.isalpha, clean_name))
         p_data = next((p for p in full_pokemon_data + full_pokemon_shiny_data if normalize_text(p["name"]) == clean_name), None)
         if not p_data:
             p_data = next((p for p in full_pokemon_data + full_pokemon_shiny_data if normalize_text(p["name"]) == clean_base), None)
-        if p_data:
+
+        if not p_data:
+            print(f"[IGNORÉ] {name} non trouvé dans le JSON. Utilisation de l'image par défaut.")
             try:
-                response = requests.get(p_data["image"])
-                img = Image.open(BytesIO(response.content)).convert("RGBA").resize((64, 64))
-                images.append(img)
+                fallback = Image.open(os.path.join(images_dir, "default.png")).convert("RGBA").resize((64, 64))
+                images.append(fallback)
+                continue
             except Exception as e:
-                print(f"[ERREUR] Impossible de charger l'image pour {p_data['name']} : {e}")
+                print(f"[ERREUR] Image par défaut manquante ou corrompue : {e}")
+                nb_ignores += 1
+                continue
+
+        try:
+            response = requests.get(p_data["image"])
+            img = Image.open(BytesIO(response.content)).convert("RGBA").resize((64, 64))
+            images.append(img)
+        except Exception as e:
+            print(f"[ERREUR] Image introuvable pour {p_data['name']}, fallback utilisé. → {e}")
+            try:
+                fallback = Image.open(os.path.join(images_dir, "default.png")).convert("RGBA").resize((64, 64))
+                images.append(fallback)
+            except Exception as e:
+                print(f"[ERREUR] Image par défaut manquante ou corrompue : {e}")
+                nb_ignores += 1
 
     if not images:
-        return None
+        return None, 0
+
     cols = 5
     rows = (len(images) + cols - 1) // cols
     mosaic = Image.new("RGBA", (cols * 64, rows * 64))
@@ -45,7 +66,8 @@ async def create_mosaic(pokemon_names, full_pokemon_data, full_pokemon_shiny_dat
     output = BytesIO()
     mosaic.save(output, format="PNG")
     output.seek(0)
-    return output
+    return output, nb_total - nb_ignores
+
 
 # 👉 Les Views et Buttons du Pokédex
 class PokedexView(View):
@@ -262,7 +284,8 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
         pokemons = [entry["name"] for entry in captures]
 
         # Création de la mosaïque
-        mosaic_image = await create_mosaic(pokemons, full_pokemon_data, full_pokemon_shiny_data)
+        mosaic_image, displayed_count = await create_mosaic(pokemons, full_pokemon_data, full_pokemon_shiny_data)
+
         if mosaic_image is None:
             await ctx.send("Erreur lors de la création de la mosaïque.")
             return
@@ -271,7 +294,7 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
         file = discord.File(mosaic_image, filename="pokedex_mosaic.png")
         embed = discord.Embed(
             title=f"📘 Pokédex de {ctx.author.display_name}",
-            description=f"Voici la mosaïque de tes {len(pokemons)} Pokémon capturés !",
+            description=f"Voici la mosaïque de tes {displayed_count} Pokémon visibles (sur {len(pokemons)} capturés) !",
             color=0x3498db
         )
         embed.set_image(url="attachment://pokedex_mosaic.png")
