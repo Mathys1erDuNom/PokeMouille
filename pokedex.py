@@ -66,7 +66,7 @@ async def create_mosaic(pokemon_names, full_pokemon_data, full_pokemon_shiny_dat
     output = BytesIO()
     mosaic.save(output, format="PNG")
     output.seek(0)
-    return output, nb_total - nb_ignores
+    return output, len(images) 
 
 
 # 👉 Les Views et Buttons du Pokédex
