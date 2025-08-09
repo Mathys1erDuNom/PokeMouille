@@ -80,6 +80,9 @@ TYPE_BACKGROUNDS = {
     "sol": "bg_sol.png",
     "glace": "bg_glace.png",
     "psy": "bg_psy.png",
+
+# --- crée les images
+
     "spectre": "bg_spectre.png",
     "dragon": "bg_dragon.png",
     "acier": "bg_acier.png",
@@ -103,42 +106,28 @@ from PIL import Image  # déjà importé plus haut, OK
 
 def get_background_image_for_pokemon(pokemon) -> Image.Image:
     """
-    Retourne une Image PIL en fonction du/des types.
-    - 1 type -> fond unique
-    - 2 types -> moitié gauche = type 1, moitié droite = type 2
-    Repli sur DEFAULT_BACKGROUND si fichier manquant.
+    Retourne une Image PIL en fonction du premier type uniquement.
+    Repli sur DEFAULT_BACKGROUND si fichier manquant ou aucun type.
     """
     types = pokemon.get("type") or []
     if not isinstance(types, list):
         types = [types]
 
-    # normalisation
-    types_norm = [_norm(t) for t in types][:2]
+    # On ne garde que le premier type s'il existe
+    first_type = _norm(types[0]) if types else None
 
-    # résolution des chemins
-    paths = []
-    for t in types_norm:
-        filename = TYPE_BACKGROUNDS.get(t, DEFAULT_BACKGROUND)
-        p = os.path.join(images_dir, filename)
-        if not os.path.exists(p):
-            p = os.path.join(images_dir, DEFAULT_BACKGROUND)
-        paths.append(p)
+    # Résolution du fichier de fond
+    if first_type:
+        filename = TYPE_BACKGROUNDS.get(first_type, DEFAULT_BACKGROUND)
+    else:
+        filename = DEFAULT_BACKGROUND
 
-    # 0/1 type → image simple
-    if len(paths) <= 1:
-        return Image.open(paths[0]).convert("RGBA")
+    path = os.path.join(images_dir, filename)
+    if not os.path.exists(path):
+        path = os.path.join(images_dir, DEFAULT_BACKGROUND)
 
-    # 2 types → split 50/50
-    img1 = Image.open(paths[0]).convert("RGBA")
-    img2 = Image.open(paths[1]).convert("RGBA")
-    if img1.size != img2.size:
-        img2 = img2.resize(img1.size)
+    return Image.open(path).convert("RGBA")
 
-    w, h = img1.size
-    composed = Image.new("RGBA", (w, h))
-    composed.paste(img1.crop((0, 0, w//2, h)), (0, 0))
-    composed.paste(img2.crop((w//2, 0, w, h)), (w//2, 0))
-    return composed
 
 
 
