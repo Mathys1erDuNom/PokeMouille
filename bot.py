@@ -346,7 +346,6 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     embed = discord.Embed(title=title, description=description, color=color)
 
     # 📷 Création de l'image spawn
-    # 📷 Création de l'image spawn
     try:
         background = get_background_image_for_pokemon(pokemon)  # <= fond selon type(s)
 
@@ -708,7 +707,10 @@ setup_croco_event(
     bot,
     VOICE_CHANNEL_ID,
     TEXT_CHANNEL_ID,
-    TARGET_USER_ID_CROCO
+    TARGET_USER_ID_CROCO,
+    spawn_func=spawn_pokemon,
+    role_id=ROLE_ID,
+    interval_seconds=10  # -> toutes les 2 minutes
 )
 
 
