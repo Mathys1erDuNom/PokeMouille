@@ -709,7 +709,7 @@ setup_croco_event(
     TARGET_USER_ID_CROCO,
     spawn_func=spawn_pokemon,
     role_id=ROLE_ID,
-    interval_seconds=60   # ← change ici (ex: 60, 120, 300…)
+    interval_seconds=60  # ajuste librement
 )
 
 
