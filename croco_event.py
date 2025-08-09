@@ -10,10 +10,12 @@ def setup_croco_event(
     voice_channel_id: int,
     text_channel_id: int,
     target_user_id: int,
-    spawn_func: Optional[Callable] = None,   # async def spawn_pokemon(channel, force=False, author=None, target_user=None, pokemon_name=None, shiny_rate=64)
+    spawn_func: Optional[Callable] = None,
     role_id: Optional[int] = None,
-    interval_seconds: int = DEFAULT_INTERVAL
+    **kwargs   # ← accepte interval_seconds sans planter
 ):
+    interval_seconds = int(max(1, kwargs.get("interval_seconds", 60)))
+
     if not hasattr(bot, "_croco_event_state"):
         bot._croco_event_state = {"task_started": False}
     state = bot._croco_event_state
