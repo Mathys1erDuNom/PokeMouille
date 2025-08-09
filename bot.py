@@ -702,7 +702,6 @@ async def battle(ctx):
     await ctx.send("Choisis jusqu’à 6 Pokémon pour ton équipe de combat :", view=view)
 
 
-
 setup_croco_event(
     bot,
     VOICE_CHANNEL_ID,
@@ -710,8 +709,7 @@ setup_croco_event(
     TARGET_USER_ID_CROCO,
     spawn_func=spawn_pokemon,
     role_id=ROLE_ID,
-    interval_seconds=10  # -> toutes les 2 minutes
+    interval_seconds=60   # ou 120, 300, etc.
 )
-
 
 bot.run(TOKEN)
