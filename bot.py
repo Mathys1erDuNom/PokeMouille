@@ -14,6 +14,7 @@ import stat
 import requests
 import io
 import uuid
+from croco_event import setup_croco_event
 
 
 import unicodedata
@@ -701,6 +702,14 @@ async def battle(ctx):
     view = SelectionView(pokemons, full_pokemon_data)
     await ctx.send("Choisis jusqu’à 6 Pokémon pour ton équipe de combat :", view=view)
 
+
+
+setup_croco_event(
+    bot,
+    VOICE_CHANNEL_ID,
+    TEXT_CHANNEL_ID,
+    TARGET_USER_ID_CROCO
+)
 
 
 bot.run(TOKEN)
