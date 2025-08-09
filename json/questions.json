@@ -1,7 +1,52 @@
 [
     {
-        "question": "Quel est la réponse à la vie ?",
-        "options": ["12","quarante 2", "4 deux", "42", "quarante deux", "quarante-deux", "3"],
-        "answer": "quarante deux"
+        "question": "Quel est le Pokémon numéro 25 dans le Pokédex national ?",
+        "options": ["Raichu", "Pichu", "Pikachu", "Evoli"],
+        "answer": "Pikachu"
+    },
+    {
+        "question": "Quel type est efficace contre le type Eau ?",
+        "options": ["Feu", "Plante", "Acier", "Roche"],
+        "answer": "Plante"
+    },
+    {
+        "question": "Quel est l’évolution finale de Salamèche ?",
+        "options": ["Reptincel", "Dracaufeu", "Dracolosse", "Salamèche"],
+        "answer": "Dracaufeu"
+    },
+    {
+        "question": "Combien de générations de Pokémon existent actuellement ?",
+        "options": ["10", "9", "12", "8"],
+        "answer": "9"
+    },
+    {
+        "question": "Quel est le seul type auquel Électrik est faible ?",
+        "options": ["Acier", "Sol", "Plante", "Glace"],
+        "answer": "Sol"
+    },
+    {
+        "question": "Quel Pokémon est connu comme le 'Pokémon légendaire du temps' ?",
+        "options": ["Dialga", "Palkia", "Giratina", "Arceus"],
+        "answer": "Dialga"
+    },
+    {
+        "question": "Quel Pokémon peut évoluer avec une Pierre Lune ?",
+        "options": ["Mélofée", "Voltali", "Aquali", "Mentali"],
+        "answer": "Mélofée"
+    },
+    {
+        "question": "Quel est le type principal de Dracolosse ?",
+        "options": ["Dragon", "Vol", "Eau", "Normal"],
+        "answer": "Dragon"
+    },
+    {
+        "question": "Dans quelle région se déroule la génération 3 ?",
+        "options": ["Johto", "Sinnoh", "Hoenn", "Unys"],
+        "answer": "Hoenn"
+    },
+    {
+        "question": "Quel Pokémon est considéré comme le 'Pokémon cloné' ?",
+        "options": ["Mew", "Mewtwo", "Genesect", "Deoxys"],
+        "answer": "Mewtwo"
     }
 ]
