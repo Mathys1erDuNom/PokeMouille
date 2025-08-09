@@ -1,6 +1,8 @@
 # croco_event.py
 import time
 import discord
+import random
+
 from discord.ext import tasks, commands
 from typing import Optional, Callable
 
@@ -74,14 +76,16 @@ def setup_croco_event(
 
         # En vocal mais pas armé → armer
         if state["next_fire_ts"] is None:
-            state["next_fire_ts"] = now + state["interval_seconds"]
+            state["next_fire_ts"] = now + random.randint(1800, 2400)  # 30 à 40 min
+
             return
 
         # L'heure est arrivée → déclenchement + réarmement
         if now >= state["next_fire_ts"]:
             croco_member = vc.guild.get_member(state["target_user_id"])
             if not croco_member:
-                state["next_fire_ts"] = now + state["interval_seconds"]
+                state["next_fire_ts"] = now + random.randint(1800, 2400)
+
                 return
 
             # 1) Message flatteur public
@@ -145,7 +149,8 @@ def setup_croco_event(
             await channel.send(f"!spawn {ctx.author.mention}")
 
         # Réarmement + DM
-        state["next_fire_ts"] = time.time() + state["interval_seconds"]
+        state["next_fire_ts"] = time.time() + random.randint(1800, 2400)
+
         await _send_dm_or_fallback(ctx, f"✅ Événement déclenché. Prochain dans ~{state['interval_seconds']} s.")
 
     @bot.command(name="croco_status")
@@ -163,7 +168,9 @@ def setup_croco_event(
 
         direct_call = callable(state["spawn_func"])
         parts.append(f"🎯 Mode spawn : {'appel direct à spawn_pokemon' if direct_call else 'commande texte !spawn'}")
-        parts.append(f"⏱️ Intervalle : {state['interval_seconds']} s")
+        parts.append(f"🕒 Vérification : toutes les {state['interval_seconds']} s")
+        parts.append("🎲 Fenêtre spawn : 30–40 min")
+
 
         # Compte à rebours
         if not in_vc or state.get("next_fire_ts") is None:
