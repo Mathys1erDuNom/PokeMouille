@@ -74,17 +74,18 @@ def setup_croco_event(
             pass
 
     if not state["task_started"]:
-        async def _start_when_ready():
-            await bot.wait_until_ready()
-            try:
-                croco_minutely_event.change_interval(seconds=state["interval_seconds"])
-            except Exception:
-                # au cas où, on garde l’interval défaut
-                pass
-            croco_minutely_event.start()
-            state["task_started"] = True
+        async def _on_ready():
+            if not state["task_started"]:
+                try:
+                    croco_minutely_event.change_interval(seconds=state["interval_seconds"])
+                except Exception:
+                    pass
+                croco_minutely_event.start()
+                state["task_started"] = True
 
-        bot.loop.create_task(_start_when_ready())
+        # on accroche un listener sans écraser ton on_ready existant
+        bot.add_listener(_on_ready, "on_ready")
+
 
     @bot.command(name="croco_now")
     @is_croco_only()
