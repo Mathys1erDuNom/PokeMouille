@@ -70,6 +70,80 @@ images_dir = os.path.join(script_dir, "images")
 
 
 
+# --- Fonds par type (fichiers à mettre dans /images)
+TYPE_BACKGROUNDS = {
+    "feu": "bg_feu.png",
+    "eau": "bg_eau.png",
+    "plante": "bg_plante.png",
+    "electrik": "bg_electrik.png",  # (clé sans accent pour simplifier)
+    "roche": "bg_roche.png",
+    "sol": "bg_sol.png",
+    "glace": "bg_glace.png",
+    "psy": "bg_psy.png",
+    "spectre": "bg_spectre.png",
+    "dragon": "bg_dragon.png",
+    "acier": "bg_acier.png",
+    "fee": "bg_fee.png",
+    "poison": "bg_poison.png",
+    "combat": "bg_combat.png",
+    "insecte": "bg_insecte.png",
+    "vol": "bg_vol.png",
+    "tenebres": "bg_tenebres.png",
+    "normal": "bg_normal.png",
+}
+DEFAULT_BACKGROUND = "arriere_plan_herbe.png"
+
+def _norm(s: str) -> str:
+    # normalise pour matcher les clés ci-dessus (sans accents)
+    return (s or "").lower()\
+        .replace("é","e").replace("è","e").replace("ê","e")\
+        .replace("à","a").replace("ù","u").replace("ï","i").replace("ô","o")
+
+from PIL import Image  # déjà importé plus haut, OK
+
+def get_background_image_for_pokemon(pokemon) -> Image.Image:
+    """
+    Retourne une Image PIL en fonction du/des types.
+    - 1 type -> fond unique
+    - 2 types -> moitié gauche = type 1, moitié droite = type 2
+    Repli sur DEFAULT_BACKGROUND si fichier manquant.
+    """
+    types = pokemon.get("type") or []
+    if not isinstance(types, list):
+        types = [types]
+
+    # normalisation
+    types_norm = [_norm(t) for t in types][:2]
+
+    # résolution des chemins
+    paths = []
+    for t in types_norm:
+        filename = TYPE_BACKGROUNDS.get(t, DEFAULT_BACKGROUND)
+        p = os.path.join(images_dir, filename)
+        if not os.path.exists(p):
+            p = os.path.join(images_dir, DEFAULT_BACKGROUND)
+        paths.append(p)
+
+    # 0/1 type → image simple
+    if len(paths) <= 1:
+        return Image.open(paths[0]).convert("RGBA")
+
+    # 2 types → split 50/50
+    img1 = Image.open(paths[0]).convert("RGBA")
+    img2 = Image.open(paths[1]).convert("RGBA")
+    if img1.size != img2.size:
+        img2 = img2.resize(img1.size)
+
+    w, h = img1.size
+    composed = Image.new("RGBA", (w, h))
+    composed.paste(img1.crop((0, 0, w//2, h)), (0, 0))
+    composed.paste(img2.crop((w//2, 0, w, h)), (w//2, 0))
+    return composed
+
+
+
+
+
 with open(os.path.join(json_dir, "attack_data.json"), "r", encoding="utf-8") as f:
     full_attack_data = json.load(f)
 
@@ -282,13 +356,13 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     embed = discord.Embed(title=title, description=description, color=color)
 
     # 📷 Création de l'image spawn
+    # 📷 Création de l'image spawn
     try:
-        background_path = os.path.join(images_dir, "arriere_plan_herbe.png")
+        background = get_background_image_for_pokemon(pokemon)  # <= fond selon type(s)
 
-        background = Image.open(background_path).convert("RGBA")
         poke_url = pokemon.get("image", "")
         if poke_url.startswith("http"):
-            response = requests.get(poke_url)
+            response = requests.get(poke_url, timeout=15)
             pokemon_img = Image.open(BytesIO(response.content)).convert("RGBA").resize((392, 392))
 
             composed = background.copy()
@@ -310,6 +384,10 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     except Exception as e:
         await channel.send("❌ Erreur lors de la création de l'image.")
         print(f"[ERREUR IMAGE SPAWN] {e}")
+
+
+
+
 
     if force:
         global DEFAULT_SHINY_RATE
