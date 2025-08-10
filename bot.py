@@ -81,11 +81,9 @@ TYPE_BACKGROUNDS = {
     "sol": "bg_sol.png",
     "glace": "bg_glace.png",
     "psy": "bg_psy.png",
-
-# --- crée les images
-
     "spectre": "bg_spectre.png",
     "dragon": "bg_dragon.png",
+    
     "acier": "bg_acier.png",
     "fee": "bg_fee.png",
     "poison": "bg_poison.png",
