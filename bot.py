@@ -76,7 +76,7 @@ TYPE_BACKGROUNDS = {
     "feu": "bg_feu.png",
     "eau": "bg_eau.png",
     "plante": "bg_plante.png",
-    "electrik": "bg_electrik.png",  # (clé sans accent pour simplifier)
+    "electrique": "bg_electrique.png",  # (clé sans accent pour simplifier)
     "roche": "bg_roche.png",
     "sol": "bg_sol.png",
     "glace": "bg_glace.png",
