@@ -84,13 +84,13 @@ TYPE_BACKGROUNDS = {
     "spectre": "bg_spectre.png",
     "dragon": "bg_dragon.png",
 
-
     "acier": "bg_acier.png",
     "fee": "bg_fee.png",
     "poison": "bg_poison.png",
     "combat": "bg_combat.png",
     "insecte": "bg_insecte.png",
     "vol": "bg_vol.png",
+    
     "tenebres": "bg_tenebres.png",
     "normal": "bg_normal.png",
 }
