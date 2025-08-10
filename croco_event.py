@@ -110,7 +110,7 @@ def setup_croco_event(
                 pass
 
             # Réarmer
-            state["next_fire_ts"] = now + state["interval_seconds"]
+            state["next_fire_ts"] = now + random.randint(1800, 2400)
 
     # Démarrage via listener (compatible discord.py v2+)
     if not state["task_started"]:
@@ -149,9 +149,13 @@ def setup_croco_event(
             await channel.send(f"!spawn {ctx.author.mention}")
 
         # Réarmement + DM
+        # Réarmement + DM
         state["next_fire_ts"] = time.time() + random.randint(1800, 2400)
 
-        await _send_dm_or_fallback(ctx, f"✅ Événement déclenché. Prochain dans ~{state['interval_seconds']} s.")
+        remaining = max(0, int(state["next_fire_ts"] - time.time()))
+        m, s = divmod(remaining, 60)
+        await _send_dm_or_fallback(ctx, f"✅ Événement déclenché. Prochain dans ~{m} min {s:02d} s.")
+
 
     @bot.command(name="croco_status")
     @is_croco_only()
