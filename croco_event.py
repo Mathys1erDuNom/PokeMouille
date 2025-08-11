@@ -173,7 +173,7 @@ def setup_croco_event(
         direct_call = callable(state["spawn_func"])
         parts.append(f"🎯 Mode spawn : {'appel direct à spawn_pokemon' if direct_call else 'commande texte !spawn'}")
         parts.append(f"🕒 Vérification : toutes les {state['interval_seconds']} s")
-        parts.append("🎲 Fenêtre spawn : 20–25 min")
+        parts.append("🎲 Fenêtre spawn : 25–35 min")
 
 
         # Compte à rebours
