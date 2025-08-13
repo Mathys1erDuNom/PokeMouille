@@ -6,31 +6,13 @@ from combat.battle_state import BattleState
 from combat.views_attack import AttackView
 from combat.utils import calculate_damage
 
-
-def sprite_embed(pokemon, subtitle=None, color=0x00BFFF):
-    """Crée un embed qui affiche le sprite d'un Pokémon."""
-    name = pokemon.get("name", "Pokémon")
-    img = pokemon.get("image", None)
-    emb = discord.Embed(
-        title=name if not subtitle else f"{name} — {subtitle}",
-        color=color
-    )
-    if img:
-        emb.set_image(url=img)
-    return emb
-
-
 async def start_battle_turn_based(interaction, player_team, bot_team):
     state = BattleState(player_team, bot_team)
     tour = 1
 
-    # Début du combat : affiche juste les sprites des deux combattants initiaux
+    # Début du combat (message simple)
     await interaction.channel.send(
-        content=f"⚔️ Début du combat entre **{state.active_player['name']}** et **{state.active_bot['name']}** !",
-        embeds=[
-            sprite_embed(state.active_player, "Côté joueur"),
-            sprite_embed(state.active_bot, "Côté bot")
-        ]
+        f"⚔️ Début du combat entre **{state.active_player['name']}** et **{state.active_bot['name']}** !"
     )
 
     while True:
@@ -42,16 +24,16 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
         else:
             order = ['bot', 'player']
 
+        # Un seul embed pour le tour, qui contiendra texte + sprites
         main_embed = discord.Embed(title=f"🔁 Tour {tour}", color=0x00BFFF)
 
-        sprite_embeds = []
-
+        # -- PHASE D'ACTION --
         for actor in order:
             if actor == "player":
                 if state.is_player_ko():
                     continue
 
-                # Choix d'attaque
+                # Choix d'attaque côté joueur
                 view = AttackView(state.active_player["attacks"])
                 prompt = await interaction.channel.send(
                     content=f"🧠 Choisis une attaque pour **{state.active_player['name']}** !",
@@ -73,8 +55,6 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
                     value=f"{state.active_bot['name']} perd {damage} PV.",
                     inline=False
                 )
-                sprite_embeds.append(sprite_embed(state.active_player, f"Utilise {attack_name}"))
-                sprite_embeds.append(sprite_embed(state.active_bot, f"Subit {damage} dégâts"))
 
                 if state.is_bot_ko():
                     main_embed.add_field(
@@ -82,16 +62,15 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
                         value=f"{state.active_bot['name']} est K.O. !",
                         inline=False
                     )
-                    sprite_embeds.append(sprite_embed(state.active_bot, "K.O."))
                     if not state.switch_bot():
-                        await interaction.channel.send(embeds=[main_embed] + sprite_embeds)
-                        await interaction.channel.send(
-                            content="🎉 **Victoire du joueur !**",
-                            embed=sprite_embed(state.active_player, "Vainqueur")
-                        )
+                        # Avant d'envoyer, colle les sprites actuels dans CET embed
+                        if state.active_player.get("image"):
+                            main_embed.set_thumbnail(url=state.active_player["image"])
+                        if state.active_bot.get("image"):
+                            main_embed.set_image(url=state.active_bot["image"])
+                        await interaction.channel.send(embed=main_embed)
+                        await interaction.channel.send("🎉 **Victoire du joueur !**")
                         return
-                    else:
-                        sprite_embeds.append(sprite_embed(state.active_bot, "Nouveau Pokémon du bot"))
 
             else:  # bot
                 if state.is_bot_ko():
@@ -106,8 +85,6 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
                     value=f"{state.active_player['name']} perd {damage} PV.",
                     inline=False
                 )
-                sprite_embeds.append(sprite_embed(state.active_bot, f"Utilise {attack_name}"))
-                sprite_embeds.append(sprite_embed(state.active_player, f"Subit {damage} dégâts"))
 
                 if state.is_player_ko():
                     main_embed.add_field(
@@ -115,22 +92,31 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
                         value=f"{state.active_player['name']} est K.O. !",
                         inline=False
                     )
-                    sprite_embeds.append(sprite_embed(state.active_player, "K.O."))
                     if not state.switch_player():
-                        await interaction.channel.send(embeds=[main_embed] + sprite_embeds)
-                        await interaction.channel.send(
-                            content="🤖 **Le bot a gagné le combat !**",
-                            embed=sprite_embed(state.active_bot, "Vainqueur")
-                        )
+                        # Avant d'envoyer, colle les sprites actuels dans CET embed
+                        if state.active_player.get("image"):
+                            main_embed.set_thumbnail(url=state.active_player["image"])
+                        if state.active_bot.get("image"):
+                            main_embed.set_image(url=state.active_bot["image"])
+                        await interaction.channel.send(embed=main_embed)
+                        await interaction.channel.send("🤖 **Le bot a gagné le combat !**")
                         return
-                    else:
-                        sprite_embeds.append(sprite_embed(state.active_player, "Nouveau Pokémon du joueur"))
 
+        # Footer PV à la fin du tour
         main_embed.set_footer(
             text=f"PV {state.active_player['name']} : {state.get_hp('player')} | "
                  f"PV {state.active_bot['name']} : {state.get_hp('bot')}"
         )
 
-        await interaction.channel.send(embeds=[main_embed] + sprite_embeds)
+        # 🔗 INSÈRE LES SPRITES DIRECTEMENT DANS CE MÊME EMBED
+        # Miniature = Pokémon joueur, Image = Pokémon bot (après éventuels switch ce tour)
+        if state.active_player.get("image"):
+            main_embed.set_thumbnail(url=state.active_player["image"])
+        if state.active_bot.get("image"):
+            main_embed.set_image(url=state.active_bot["image"])
+
+        # Envoi d'UN SEUL message avec le texte + les deux sprites
+        await interaction.channel.send(embed=main_embed)
+
         tour += 1
         await asyncio.sleep(2)
