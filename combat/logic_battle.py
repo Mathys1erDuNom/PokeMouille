@@ -8,6 +8,8 @@ from combat.battle_state import BattleState
 from combat.views_attack import AttackOrSwitchView, SwitchSelectView  # <= vérifie le nom du fichier
 from combat.utils import calculate_damage  # <= on retire _type_effectiveness ici
 
+
+
 def build_turn_embed(state, tour, fields):
     emb = discord.Embed(title=f"🔁 Tour {tour}", color=0x00BFFF)
     for name, value in fields:
