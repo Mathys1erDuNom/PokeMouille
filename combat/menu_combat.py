@@ -43,7 +43,6 @@ class PageButton(Button):
         else:
             await interaction.response.defer()
 
-from pathlib import Path
 
 class ValidateButton(Button):
     def __init__(self, view: "SelectionView"):
@@ -51,7 +50,7 @@ class ValidateButton(Button):
         self.parent_view = view
 
     async def callback(self, interaction: discord.Interaction):
-        # Concatène & dédoublonne
+        # Concatène toutes les sélections et dédoublonne (garde l'ordre)
         all_selected = []
         for selected in self.parent_view.selections.values():
             all_selected.extend(selected)
@@ -75,23 +74,69 @@ class ValidateButton(Button):
 
         user_id = str(interaction.user.id)
         all_captures = get_captures(user_id)
-
-        # 🔒 Match exact par nom (pense à harmoniser la casse côté données)
         selected_pokemons = [p for p in all_captures if p.get("name") in unique_selected]
-        if not selected_pokemons:
-            await interaction.followup.send("❌ Aucun des Pokémon sélectionnés n'a été trouvé dans tes captures.", ephemeral=True)
-            return
 
-        # Équipe bot d'exemple (à adapter)
+        # Exemple équipe bot (à adapter)
         bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in ["Mew", "Roucool", "Rattata"]]
 
-        # ✅ Résolution d'un chemin ABSOLU pour l'image locale
-        #   -> part de ce fichier, remonte au dossier racine de ton projet si besoin
-        base_dir = Path(__file__).resolve().parent  # ex: .../combat/
-        # ajuste le nombre de .parent selon ta structure
-        bg_path = (base_dir.parent / "images" / "arena.png").as_posix()
+        await start_battle_turn_based(interaction, selected_pokemons, bot_team, bg_image="images/arena.png")
 
-        # Option: si tu héberges l'image en HTTP, mets directement l’URL ici
-        # bg_path = "https://ton-cdn.exemple.com/images/arena.png"
 
-        await start_battle_turn_based(interaction, selected_pokemons, bot_team, bg_image=bg_path)
+# ---- Vue principale avec pagination ----
+class SelectionView(View):
+    def __init__(self, pokemons, full_pokemon_data):
+        super().__init__(timeout=300)
+        self.selections = {}  # custom_id -> [values]
+        self.full_pokemon_data = full_pokemon_data
+
+        # Découpe en options (25 max par menu)
+        self.chunk_size = 25
+        self.option_chunks = [
+            [discord.SelectOption(label=name, value=name) for name in pokemons[i:i + self.chunk_size]]
+            for i in range(0, len(pokemons), self.chunk_size)
+        ]
+
+        # Pagination : 4 menus/page (lignes 0..3), ligne 4 pour les boutons
+        self.menus_per_page = 4
+        self.page = 0
+        self.total_menus = len(self.option_chunks)
+        self.total_pages = max(1, ceil(self.total_menus / self.menus_per_page))
+
+        self.rebuild()
+
+    def _current_count(self) -> int:
+        # Compte cumulé (dédoublonné) sur toutes les pages/menus
+        all_selected = []
+        for vals in self.selections.values():
+            all_selected.extend(vals)
+        return len(dict.fromkeys(all_selected))  # dédoublonnage en gardant l'ordre
+
+    def rebuild(self):
+        # Reconstruit complètement la page courante
+        self.clear_items()
+
+        start = self.page * self.menus_per_page
+        end = min(start + self.menus_per_page, self.total_menus)
+
+        # Ajoute les Selects de la page
+        for idx in range(start, end):
+            select = PokemonSelectMenu(self.option_chunks[idx], idx, self)
+
+            # Restaure les sélections précédentes : marquer opt.default = True
+            prev_values = set(self.selections.get(select.custom_id, []))
+            if prev_values:
+                for opt in select.options:
+                    if opt.value in prev_values:
+                        opt.default = True
+
+            self.add_item(select)
+
+        # Boutons (ligne 4)
+        prev_disabled = (self.page == 0)
+        next_disabled = (self.page >= self.total_pages - 1)
+
+        count = self._current_count()
+        self.add_item(PageButton(f"⬅️ Précédent", direction=-1, parent_view=self, disabled=prev_disabled))
+        self.add_item(PageButton(f"Suivant ➡️", direction=1, parent_view=self, disabled=next_disabled))
+        # On peut indiquer l'état dans le label du bouton valider (facultatif)
+        self.add_item(ValidateButton(self))
