@@ -77,7 +77,7 @@ class ValidateButton(Button):
         selected_pokemons = [p for p in all_captures if p.get("name") in unique_selected]
 
         # Exemple équipe bot (à adapter)
-        bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in ["Mew", "Roucool", "Rattata"]]
+        bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in ["Mew", "Groudon_shiny", "Elektek"]]
 
         await start_battle_turn_based(interaction, selected_pokemons, bot_team)
 
