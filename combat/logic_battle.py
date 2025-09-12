@@ -6,7 +6,30 @@ import random
 
 from combat.battle_state import BattleState
 from combat.views_attack import AttackOrSwitchView, SwitchSelectView
-from combat.utils import calculate_damage
+from combat.utils import calculate_damage  # <-- on garde
+
+# ✨ NEW: petite fonction utilitaire pour afficher les effets
+def _format_damage_line(target_label: str, dmg: int, details: dict) -> str:
+    """
+    target_label: ex. "Pikachu (👤 Joueur)" ou "Roucool (🤖 Bot)"
+    """
+    tags = []
+    eff = details["eff_multiplier"]
+    if eff == 0:
+        tags.append("⛔ Aucun effet")
+    elif eff > 1:
+        tags.append("⚡ Super efficace")
+    elif eff < 1:
+        tags.append("🛡️ Peu efficace")
+
+    if details["crit"]:
+        tags.append("💥 Coup critique !")
+
+    if details.get("stab"):
+        tags.append("STAB")
+
+    suffix = (" — " + " · ".join(tags)) if tags else ""
+    return f"{target_label} perd {dmg} PV.{suffix}"
 
 
 def build_turn_embed(state, tour, fields):
@@ -87,11 +110,13 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
                 choice = await prompt_player_action(interaction, state)
                 if choice["action"] == "attack":
                     attack_name = choice["attack"]
-                    dmg = calculate_damage(state.active_player, state.active_bot, attack_name)
+                    # 🔁 CHANGED: on récupère les détails
+                    det = calculate_damage(state.active_player, state.active_bot, attack_name, return_details=True)
+                    dmg = det["damage"]
                     state.take_damage("bot", dmg)
                     fields.append((
                         f"{state.active_player['name']} (👤 Joueur) utilise {attack_name} !",
-                        f"{state.active_bot['name']} (🤖 Bot) perd {dmg} PV."
+                        _format_damage_line(f"{state.active_bot['name']} (🤖 Bot)", dmg, det)
                     ))
 
                     if state.is_bot_ko():
@@ -118,11 +143,13 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
         else:
             if not state.is_bot_ko():
                 attack_name = random.choice(state.active_bot["attacks"])
-                dmg = calculate_damage(state.active_bot, state.active_player, attack_name)
+                # 🔁 CHANGED: on récupère les détails
+                det = calculate_damage(state.active_bot, state.active_player, attack_name, return_details=True)
+                dmg = det["damage"]
                 state.take_damage("player", dmg)
                 fields.append((
                     f"{state.active_bot['name']} (🤖 Bot) utilise {attack_name} !",
-                    f"{state.active_player['name']} (👤 Joueur) perd {dmg} PV."
+                    _format_damage_line(f"{state.active_player['name']} (👤 Joueur)", dmg, det)
                 ))
 
                 if state.is_player_ko():
@@ -151,11 +178,12 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
         if order[1] == "bot":
             if not state.is_bot_ko():
                 attack_name = random.choice(state.active_bot["attacks"])
-                dmg = calculate_damage(state.active_bot, state.active_player, attack_name)
+                det = calculate_damage(state.active_bot, state.active_player, attack_name, return_details=True)
+                dmg = det["damage"]
                 state.take_damage("player", dmg)
                 fields.append((
                     f"{state.active_bot['name']} (🤖 Bot) utilise {attack_name} !",
-                    f"{state.active_player['name']} (👤 Joueur) perd {dmg} PV."
+                    _format_damage_line(f"{state.active_player['name']} (👤 Joueur)", dmg, det)
                 ))
 
                 if state.is_player_ko():
@@ -175,11 +203,12 @@ async def start_battle_turn_based(interaction, player_team, bot_team):
                 choice = await prompt_player_action(interaction, state)
                 if choice["action"] == "attack":
                     attack_name = choice["attack"]
-                    dmg = calculate_damage(state.active_player, state.active_bot, attack_name)
+                    det = calculate_damage(state.active_player, state.active_bot, attack_name, return_details=True)
+                    dmg = det["damage"]
                     state.take_damage("bot", dmg)
                     fields.append((
                         f"{state.active_player['name']} (👤 Joueur) utilise {attack_name} !",
-                        f"{state.active_bot['name']} (🤖 Bot) perd {dmg} PV."
+                        _format_damage_line(f"{state.active_bot['name']} (🤖 Bot)", dmg, det)
                     ))
 
                     if state.is_bot_ko():
