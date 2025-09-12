@@ -79,7 +79,7 @@ class ValidateButton(Button):
         # Exemple équipe bot (à adapter)
         bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in ["Mew", "Roucool", "Rattata"]]
 
-        await start_battle_turn_based(interaction, selected_pokemons, bot_team, bg_image="images/arena.png")
+        await start_battle_turn_based(interaction, selected_pokemons, bot_team)
 
 
 # ---- Vue principale avec pagination ----
