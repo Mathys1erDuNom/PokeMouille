@@ -1,28 +1,26 @@
 import json
-import unicodedata
-import os
 
-def clean_text(text):
-    # Supprime les accents
-    return ''.join(
-        c for c in unicodedata.normalize('NFD', text)
-        if unicodedata.category(c) != 'Mn'
-    )
+def normalize_type(type_name: str) -> str:
+    """Met en minuscule et remplace 'électrik'/'electrik' par 'electrique'."""
+    t = type_name.lower()
+    if t in ["électrik", "electrik"]:
+        return "electrique"
+    return t
 
-# Chemin du fichier
-fichier = "pokemon_shiny_data.json"
+# Nom du fichier à modifier
+file_path = "pokemon_gen3_shiny.json"
 
-# Chargement du fichier
-with open(fichier, "r", encoding="utf-8") as f:
+# Charger le JSON
+with open(file_path, "r", encoding="utf-8") as f:
     data = json.load(f)
 
-# Nettoyage des noms et attaques
+# Modifier les types
 for pokemon in data:
-    pokemon["name"] = clean_text(pokemon["name"])
-    pokemon["attacks"] = [clean_text(attaque) for attaque in pokemon["attacks"]]
+    if "type" in pokemon and isinstance(pokemon["type"], list):
+        pokemon["type"] = [normalize_type(t) for t in pokemon["type"]]
 
-# Sauvegarde
-with open(fichier, "w", encoding="utf-8") as f:
+# Réécrire directement le même fichier
+with open(file_path, "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=4)
 
-print("pokemon_data.json nettoyé avec succès.")
+print(f"Types corrigés directement dans '{file_path}'")
