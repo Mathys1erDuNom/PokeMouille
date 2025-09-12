@@ -64,21 +64,34 @@ def _type_effectiveness(attack_type: str, defender_types):
     return mult
 
 # ------------ Calcul des dégâts ------------
-def calculate_damage(attacker, defender, attack_name):
+
+
+def calculate_damage(attacker, defender, attack_name, return_details: bool = False):
     """
-    Renvoie un int (dégâts) en tenant compte :
-    - catégorie (physique/spéciale)
-    - STAB
-    - efficacité de type (x0, 0.5, 1, 2, 4)
-    - coup critique (1/16)
-    - variance (0.85–1.00)
+    Si return_details=False (par défaut) -> int
+    Si return_details=True  -> dict:
+        {
+          "damage": int,
+          "crit": bool,
+          "eff_multiplier": float,
+          "eff_label": str,     # 'super efficace', 'peu efficace', 'aucun effet', 'efficacité normale'
+          "stab": bool,
+          "variance": float,    # ~0.85..1.0
+          "category": 'physique'|'speciale',
+          "power": int,
+          "attack_type": str
+        }
     """
     attack_info = get_attack_info(attack_name)
     if not attack_info:
-        # Attaque inconnue → dégâts modestes
-        return random.randint(5, 10)
+        dmg = random.randint(5, 10)
+        if not return_details:
+            return dmg
+        return {
+            "damage": dmg, "crit": False, "eff_multiplier": 1.0, "eff_label": "efficacité normale",
+            "stab": False, "variance": 1.0, "category": "", "power": 0, "attack_type": "normal"
+        }
 
-    # Récup champs robustes (category/categorie, damage)
     raw_cat = (attack_info.get("category") or attack_info.get("categorie") or "").lower()
     category = "physique" if raw_cat == "physique" else ("speciale" if raw_cat in ("speciale", "special") else "")
     try:
@@ -86,10 +99,8 @@ def calculate_damage(attacker, defender, attack_name):
     except (TypeError, ValueError):
         power = 50
 
-    # Type de l'attaque (default 'normal' si absent)
     attack_type = _norm(attack_info.get("type", "normal"))
 
-    # Stats selon la catégorie
     if category == "physique":
         atk_stat = attacker["stats"].get("attack", 50)
         def_stat = defender["stats"].get("defense", 50)
@@ -97,7 +108,6 @@ def calculate_damage(attacker, defender, attack_name):
         atk_stat = attacker["stats"].get("special_attack", 50)
         def_stat = defender["stats"].get("special_defense", 50)
     else:
-        # Fallback : si pas de catégorie, heuristique simple
         if power >= 60:
             atk_stat = attacker["stats"].get("attack", 50)
             def_stat = defender["stats"].get("defense", 50)
@@ -105,29 +115,40 @@ def calculate_damage(attacker, defender, attack_name):
             atk_stat = attacker["stats"].get("special_attack", 50)
             def_stat = defender["stats"].get("special_defense", 50)
 
-    # STAB
-    attacker_types = [ _norm(t) for t in (attacker.get("type") or []) ]
-    stab = 1.5 if attack_type in attacker_types else 1.0
+    attacker_types = [_norm(t) for t in (attacker.get("type") or [])]
+    stab_flag = attack_type in attacker_types
+    stab = 1.5 if stab_flag else 1.0
 
-    # Efficacité
     eff = _type_effectiveness(attack_type, defender.get("type") or [])
 
-    # Critique (1/16) + variance 0.85–1.00
-    crit = 1.5 if random.randint(1, 16) == 1 else 1.0
+    crit_flag = (random.randint(1, 16) == 1)
+    crit = 1.5 if crit_flag else 1.0
     variance = random.uniform(0.85, 1.00)
 
-    # Formule simplifiée (niveau 50)
     level = 50
     core = (((2 * level / 5 + 2) * power * (atk_stat / max(1, def_stat))) / 50) + 2
     modifier = stab * eff * crit * variance
 
-    damage = int(max(1, core * modifier))
-
-    # Si immunité, on force à 0
+    # Immunité: dégâts 0, mais on renvoie tout de même le breakdown cohérent
     if eff == 0.0:
-        return 0
+        dmg = 0
+    else:
+        dmg = int(max(1, core * modifier))
 
-    return damage
+    if not return_details:
+        return dmg
+
+    return {
+        "damage": dmg,
+        "crit": bool(crit_flag),
+        "eff_multiplier": float(eff),
+        "eff_label": describe_effectiveness(eff),
+        "stab": stab_flag,
+        "variance": float(variance),
+        "category": category or ("physique" if power >= 60 else "speciale"),
+        "power": power,
+        "attack_type": attack_type
+    }
 
 # (Optionnel) Utilitaire si tu veux afficher l’info d’efficacité/crit ailleurs
 def describe_effectiveness(mult: float) -> str:
