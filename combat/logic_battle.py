@@ -92,20 +92,18 @@ async def start_battle_turn_based(interaction, player_team, bot_team, bg_image: 
     state = BattleState(player_team, bot_team)
     tour = 1
 
-    # Détection mode attachement si on reçoit un chemin local existant
-    use_attachment = False
-    file_to_send = None
-    if bg_image and os.path.isfile(bg_image):
-        use_attachment = True
-        file_to_send = discord.File(bg_image, filename="bg.png")
+    # Détection: si bg_image est un fichier local, on utilisera un attachment
+    use_attachment = bool(bg_image and os.path.isfile(bg_image))
 
     # Message d’ouverture (on profite déjà du fond)
-    open_embed = build_turn_embed(state, tour=0, fields=[
-        ("⚔️ Début du combat", f"**{state.active_player['name']} (👤 Joueur)** vs **{state.active_bot['name']} (🤖 Bot)**")
-    ], bg_image=bg_image, use_attachment=use_attachment)
-
-    if file_to_send:
-        await interaction.channel.send(embed=open_embed, file=file_to_send)
+    open_embed = build_turn_embed(
+        state, tour=0,
+        fields=[("⚔️ Début du combat", f"**{state.active_player['name']} (👤 Joueur)** vs **{state.active_bot['name']} (🤖 Bot)**")],
+        bg_image=bg_image,
+        use_attachment=use_attachment
+    )
+    if use_attachment:
+        await interaction.channel.send(embed=open_embed, file=discord.File(bg_image, filename="bg.png"))
     else:
         await interaction.channel.send(embed=open_embed)
 
@@ -137,8 +135,8 @@ async def start_battle_turn_based(interaction, player_team, bot_team, bg_image: 
                         fields.append(("💥 K.O.", f"{state.active_bot['name']} (🤖 Bot) est K.O. !"))
                         if not state.switch_bot():
                             embed = build_turn_embed(state, tour, fields, bg_image, use_attachment)
-                            if file_to_send:
-                                await interaction.channel.send(embed=embed, file=file_to_send)
+                            if use_attachment:
+                                await interaction.channel.send(embed=embed, file=discord.File(bg_image, filename="bg.png"))
                             else:
                                 await interaction.channel.send(embed=embed)
                             await interaction.channel.send("🎉 **Victoire du joueur !**")
@@ -165,8 +163,8 @@ async def start_battle_turn_based(interaction, player_team, bot_team, bg_image: 
                     fields.append(("💥 K.O.", f"{state.active_player['name']} (👤 Joueur) est K.O. !"))
                     if not state.switch_player():
                         embed = build_turn_embed(state, tour, fields, bg_image, use_attachment)
-                        if file_to_send:
-                            await interaction.channel.send(embed=embed, file=file_to_send)
+                        if use_attachment:
+                            await interaction.channel.send(embed=embed, file=discord.File(bg_image, filename="bg.png"))
                         else:
                             await interaction.channel.send(embed=embed)
                         await interaction.channel.send("🤖 **Le bot a gagné le combat !**")
@@ -178,8 +176,8 @@ async def start_battle_turn_based(interaction, player_team, bot_team, bg_image: 
         # Fin anticipée du tour après K.O.
         if end_turn:
             embed = build_turn_embed(state, tour, fields, bg_image, use_attachment)
-            if file_to_send:
-                await interaction.channel.send(embed=embed, file=file_to_send)
+            if use_attachment:
+                await interaction.channel.send(embed=embed, file=discord.File(bg_image, filename="bg.png"))
             else:
                 await interaction.channel.send(embed=embed)
             await interaction.channel.send("🛎 Fin du tour (K.O. détecté).")
@@ -202,8 +200,8 @@ async def start_battle_turn_based(interaction, player_team, bot_team, bg_image: 
                     fields.append(("💥 K.O.", f"{state.active_player['name']} (👤 Joueur) est K.O. !"))
                     if not state.switch_player():
                         embed = build_turn_embed(state, tour, fields, bg_image, use_attachment)
-                        if file_to_send:
-                            await interaction.channel.send(embed=embed, file=file_to_send)
+                        if use_attachment:
+                            await interaction.channel.send(embed=embed, file=discord.File(bg_image, filename="bg.png"))
                         else:
                             await interaction.channel.send(embed=embed)
                         await interaction.channel.send("🤖 **Le bot a gagné le combat !**")
@@ -226,8 +224,8 @@ async def start_battle_turn_based(interaction, player_team, bot_team, bg_image: 
                         fields.append(("💥 K.O.", f"{state.active_bot['name']} (🤖 Bot) est K.O. !"))
                         if not state.switch_bot():
                             embed = build_turn_embed(state, tour, fields, bg_image, use_attachment)
-                            if file_to_send:
-                                await interaction.channel.send(embed=embed, file=file_to_send)
+                            if use_attachment:
+                                await interaction.channel.send(embed=embed, file=discord.File(bg_image, filename="bg.png"))
                             else:
                                 await interaction.channel.send(embed=embed)
                             await interaction.channel.send("🎉 **Victoire du joueur !**")
@@ -241,8 +239,8 @@ async def start_battle_turn_based(interaction, player_team, bot_team, bg_image: 
                         fields.append(("❌ Échec du changement", "Choix invalide."))
 
         embed = build_turn_embed(state, tour, fields, bg_image, use_attachment)
-        if file_to_send:
-            await interaction.channel.send(embed=embed, file=file_to_send)
+        if use_attachment:
+            await interaction.channel.send(embed=embed, file=discord.File(bg_image, filename="bg.png"))
         else:
             await interaction.channel.send(embed=embed)
         tour += 1
