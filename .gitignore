@@ -9,3 +9,4 @@ __pycache__/
 
 # Ignorer un éventuel environnement virtuel
 venv/
+.DS_Store
