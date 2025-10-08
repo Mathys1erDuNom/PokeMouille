@@ -628,27 +628,28 @@ async def spawn(ctx, *args):
 
 
 
-
-@bot.command()
+@bot.command(name="timecheck")
 @is_croco()
 async def timecheck(ctx):
-    """
-    Indique dans combien de temps la prochaine exécution de la tâche check_voice_channel aura lieu.
-    Usage réservé à l'utilisateur Croco.
-    """
-    if not hasattr(bot, 'last_check_voice_time'):
-        await ctx.send("Aucune donnée de dernière vérification disponible.")
-        return
+    # Si la loop expose next_iteration (discord.py 2.x), on s’en sert
+    try:
+        ni = getattr(check_voice_channel, "next_iteration", None)
+        if ni:
+            now = datetime.now(timezone.utc)
+            remaining = max(0, int((ni - now).total_seconds()))
+        else:
+            # fallback: basé sur last_check_voice_time + intervalle
+            if not hasattr(bot, 'last_check_voice_time'):
+                await ctx.send("Aucune donnée de dernière vérification disponible.")
+                return
+            elapsed = time.time() - bot.last_check_voice_time
+            remaining = max(0, int(CHECK_VOICE_CHANNEL_INTERVAL - elapsed))
+    except Exception:
+        # ultime repli
+        remaining = CHECK_VOICE_CHANNEL_INTERVAL
 
-    now = time.time()
-    elapsed = now - bot.last_check_voice_time
-
-    remaining = max(0, int(CHECK_VOICE_CHANNEL_INTERVAL - elapsed))
-    minutes, seconds = divmod(remaining, 60)
-
-    await ctx.send(f"⏰ Prochaine vérification du canal vocal dans {minutes} min {seconds} sec.")
-
-
+    m, s = divmod(remaining, 60)
+    await ctx.send(f"⏰ Prochaine vérif du canal vocal dans {m} min {s:02d} sec.")
 
 
 @bot.command()
