@@ -33,7 +33,7 @@ from io import BytesIO
 from db import save_capture, get_captures
 
 # Ici, déclare la constante globale :
-CHECK_VOICE_CHANNEL_INTERVAL = 5  # secondes
+CHECK_VOICE_CHANNEL_INTERVAL = 120 # secondes
 
 allowed_user = {}  # dictionnaire global : guild_id -> user_id autorisé à capturer
 
@@ -394,7 +394,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
 
 
 
-@tasks.loop(seconds=120)
+@tasks.loop(seconds=CHECK_VOICE_CHANNEL_INTERVAL)
 async def check_voice_channel():
     bot.last_check_voice_time = time.time()
     # Exemple simple pour un serveur avec ID et channels fixes
@@ -409,7 +409,7 @@ async def check_voice_channel():
     if len(vc.members) > 0:
         if guild_id not in spawn_task or spawn_task[guild_id] is None:
             
-            wait_time = random.randint(15,20)  # 10 à 20 minutes
+            wait_time = random.randint(600,1200)  # 10 à 20 minutes
             minutes, seconds = divmod(wait_time, 60)  # ✅ calcule minutes et secondes
             print(f"[INFO] Spawn automatique prévu dans {minutes} min {seconds} sec.")
             spawn_task[guild_id] = asyncio.create_task(wait_and_spawn(wait_time, channel))
