@@ -33,7 +33,7 @@ from io import BytesIO
 from db import save_capture, get_captures
 
 # Ici, déclare la constante globale :
-CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
+CHECK_VOICE_CHANNEL_INTERVAL = 5  # secondes
 
 allowed_user = {}  # dictionnaire global : guild_id -> user_id autorisé à capturer
 
@@ -50,6 +50,7 @@ intents = discord.Intents.default()
 intents.members = True
 intents.voice_states = True
 intents.message_content = True
+REPLACE_UNCAUGHT_AUTO = True
 
 
 
@@ -276,8 +277,18 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     else:
         spawn_origin_manual[guild_id] = False
         if current_auto_pokemon.get(guild_id):
-            print(f"[INFO] Un Pokémon auto est déjà présent sur le serveur {guild_id}, on ne remplace pas.")
-            return
+            if REPLACE_UNCAUGHT_AUTO:
+                # On remplace le Pokémon auto précédent, non capturé
+                try:
+                    await channel.send("⏳ Le Pokémon sauvage précédent s’est échappé… un nouveau apparaît !")
+                except Exception:
+                    pass
+                reset_spawn(guild_id)  # libère l'état pour autoriser
+            else:
+                print(f"[INFO] Un Pokémon auto est déjà présent sur le serveur {guild_id}, on ne remplace pas.")
+                return
+
+            
 
     # Choix du Pokémon
     if pokemon_name:
@@ -397,11 +408,11 @@ async def check_voice_channel():
 
     if len(vc.members) > 0:
         if guild_id not in spawn_task or spawn_task[guild_id] is None:
-            if current_auto_pokemon.get(guild_id) is None:
-                wait_time = random.randint(600,1200)  # 10 à 20 minutes
-                minutes, seconds = divmod(wait_time, 60)  # ✅ calcule minutes et secondes
-                print(f"[INFO] Spawn automatique prévu dans {minutes} min {seconds} sec.")
-                spawn_task[guild_id] = asyncio.create_task(wait_and_spawn(wait_time, channel))
+            
+            wait_time = random.randint(15,20)  # 10 à 20 minutes
+            minutes, seconds = divmod(wait_time, 60)  # ✅ calcule minutes et secondes
+            print(f"[INFO] Spawn automatique prévu dans {minutes} min {seconds} sec.")
+            spawn_task[guild_id] = asyncio.create_task(wait_and_spawn(wait_time, channel))
     else:
         if guild_id in spawn_task and spawn_task[guild_id] is not None and not spawn_task[guild_id].done():
             spawn_task[guild_id].cancel()
