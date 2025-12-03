@@ -5,7 +5,8 @@ from PIL import Image, ImageDraw, ImageFont
 import requests, io, os
 from io import BytesIO
 import json
-from db import get_captures
+
+from db import get_captures_old, get_captures_new
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
@@ -267,7 +268,7 @@ class PokemonButton(Button):
         embed.set_image(url=f"attachment://{self.pokemon_name}.png")
         await interaction.followup.send(file=file, embed=embed, ephemeral=True)
 
-from db import get_captures_old, get_captures_new
+
 
 def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir):
 
