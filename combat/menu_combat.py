@@ -1,7 +1,7 @@
 import discord
 from discord.ui import View, Select, Button
 from math import ceil
-from db import get_captures
+from db import get_captures_new
 from combat.logic_battle import start_battle_turn_based
 
 
@@ -73,7 +73,7 @@ class ValidateButton(Button):
         )
 
         user_id = str(interaction.user.id)
-        all_captures = get_captures(user_id)
+        all_captures = get_captures_new(user_id)
         selected_pokemons = [p for p in all_captures if p.get("name") in unique_selected]
 
         # Exemple équipe bot (à adapter)
