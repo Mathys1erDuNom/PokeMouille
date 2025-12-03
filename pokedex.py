@@ -6,6 +6,7 @@ import requests, io, os
 from io import BytesIO
 import json
 
+
 from db import get_captures_old, get_captures_new
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
