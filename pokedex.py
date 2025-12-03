@@ -267,46 +267,54 @@ class PokemonButton(Button):
         embed.set_image(url=f"attachment://{self.pokemon_name}.png")
         await interaction.followup.send(file=file, embed=embed, ephemeral=True)
 
+from db import get_captures_old, get_captures_new
 
 def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir):
+
+    # --- Commande pour la nouvelle base ---
     @bot.command()
     async def pokedex(ctx):
-        # 🔥 Récupération des captures depuis la base PostgreSQL
         user_id = str(ctx.author.id)
-        captures = get_captures(user_id)
-
-        # Si aucune capture
+        captures = get_captures_new(user_id)  # <-- new database
         if not captures:
             await ctx.send("Tu n'as encore rien capturé.")
             return
+        await send_pokedex_view(ctx, captures)
 
-        # On extrait la liste des noms pour la mosaïque
-        pokemons = [entry["name"] for entry in captures]
-
-        # Création de la mosaïque
-        mosaic_image, displayed_count = await create_mosaic(pokemons, full_pokemon_data, full_pokemon_shiny_data)
-
-        if mosaic_image is None:
-            await ctx.send("Erreur lors de la création de la mosaïque.")
+    # --- Commande pour l'ancienne base ---
+    @bot.command()
+    async def ex_pokedex(ctx):
+        user_id = str(ctx.author.id)
+        captures = get_captures_old(user_id)  # <-- old database
+        if not captures:
+            await ctx.send("Tu n'as encore rien capturé dans l'ancien Pokédex.")
             return
+        await send_pokedex_view(ctx, captures)
 
-        # Création de l'embed
-        file = discord.File(mosaic_image, filename="pokedex_mosaic.png")
-        embed = discord.Embed(
-            title=f"📘 Pokédex de {ctx.author.display_name}",
-            description=f"Voici la mosaïque de tes {displayed_count} Pokémon visibles (sur {len(pokemons)} capturés) !",
-            color=0x3498db
-        )
-        embed.set_image(url="attachment://pokedex_mosaic.png")
+# --- Fonction réutilisable pour envoyer l'embed + view ---
+async def send_pokedex_view(ctx, captures):
+    pokemons = [entry["name"] for entry in captures]
+    mosaic_image, displayed_count = await create_mosaic(pokemons, full_pokemon_data, full_pokemon_shiny_data)
 
-        # Création de la view avec les captures de la BDD
-        view = PokedexView(
-            pokemons,
-            full_pokemon_shiny_data,
-            full_pokemon_data,
-            type_sprites,
-            attack_type_map,
-            captures  # 👈 on passe directement les données issues de la BDD
-        )
+    if mosaic_image is None:
+        await ctx.send("Erreur lors de la création de la mosaïque.")
+        return
 
-        await ctx.send(embed=embed, file=file, view=view)
+    file = discord.File(mosaic_image, filename="pokedex_mosaic.png")
+    embed = discord.Embed(
+        title=f"📘 Pokédex de {ctx.author.display_name}",
+        description=f"Voici la mosaïque de tes {displayed_count} Pokémon visibles (sur {len(pokemons)} capturés) !",
+        color=0x3498db
+    )
+    embed.set_image(url="attachment://pokedex_mosaic.png")
+
+    view = PokedexView(
+        pokemons,
+        full_pokemon_shiny_data,
+        full_pokemon_data,
+        type_sprites,
+        attack_type_map,
+        captures
+    )
+
+    await ctx.send(embed=embed, file=file, view=view)
