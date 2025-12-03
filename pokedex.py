@@ -281,7 +281,8 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
         if not captures:
             await ctx.send("Tu n'as encore rien capturé.")
             return
-        await send_pokedex_view(ctx, captures)
+        await send_pokedex_view(ctx, captures, full_pokemon_data, full_pokemon_shiny_data)
+
 
     # --- Commande pour l'ancienne base ---
     @bot.command()
@@ -291,12 +292,15 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
         if not captures:
             await ctx.send("Tu n'as encore rien capturé dans l'ancien Pokédex.")
             return
-        await send_pokedex_view(ctx, captures)
+        await send_pokedex_view(ctx, captures, full_pokemon_data, full_pokemon_shiny_data)
+
 
 # --- Fonction réutilisable pour envoyer l'embed + view ---
-async def send_pokedex_view(ctx, captures):
+async def send_pokedex_view(ctx, captures, full_pokemon_data, full_pokemon_shiny_data):
     pokemons = [entry["name"] for entry in captures]
-    mosaic_image, displayed_count = await create_mosaic(pokemons, full_pokemon_data, full_pokemon_shiny_data)
+    mosaic_image, displayed_count = await create_mosaic(
+        pokemons, full_pokemon_data, full_pokemon_shiny_data
+    )
 
     if mosaic_image is None:
         await ctx.send("Erreur lors de la création de la mosaïque.")
@@ -309,14 +313,4 @@ async def send_pokedex_view(ctx, captures):
         color=0x3498db
     )
     embed.set_image(url="attachment://pokedex_mosaic.png")
-
-    view = PokedexView(
-        pokemons,
-        full_pokemon_shiny_data,
-        full_pokemon_data,
-        type_sprites,
-        attack_type_map,
-        captures
-    )
-
-    await ctx.send(embed=embed, file=file, view=view)
+    await ctx.send(embed=embed, file=file)
