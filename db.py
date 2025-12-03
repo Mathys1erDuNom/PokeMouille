@@ -15,7 +15,7 @@ NEW_DB_URL = os.getenv("NEW_DATABASE_URL")
 new_conn = psycopg2.connect(NEW_DB_URL, sslmode="require")
 new_cur = new_conn.cursor()
 
-# Exemple de fonction générique pour récupérer les captures
+# --- Fonctions pour récupérer les captures ---
 def get_captures_old(user_id):
     old_cur.execute("""
         SELECT name, ivs, stats, image, type, attacks FROM captures WHERE user_id = %s
@@ -47,3 +47,11 @@ def get_captures_new(user_id):
             "attacks": row[5]
         } for row in rows
     ]
+
+# --- Fonction pour sauvegarder une capture dans la nouvelle base ---
+def save_capture(user_id, name, ivs, stats, image, type_, attacks):
+    new_cur.execute("""
+        INSERT INTO captures (user_id, name, ivs, stats, image, type, attacks)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
+    """, (str(user_id), name, Json(ivs), Json(stats), image, Json(type_), Json(attacks)))
+    new_conn.commit()
