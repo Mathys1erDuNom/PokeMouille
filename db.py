@@ -55,3 +55,6 @@ def save_capture(user_id, name, ivs, stats, image, type_, attacks):
         VALUES (%s, %s, %s, %s, %s, %s, %s)
     """, (str(user_id), name, Json(ivs), Json(stats), image, Json(type_), Json(attacks)))
     new_conn.commit()
+
+# --- alias pour que le bot continue de fonctionner avec les noms existants ---
+get_captures = get_captures_new
