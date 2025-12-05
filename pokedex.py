@@ -5,9 +5,9 @@ from PIL import Image, ImageDraw, ImageFont
 import requests, io, os
 from io import BytesIO
 import json
+from db import get_captures
+from bot import full_pokemon_data
 
-
-from db import get_captures_old, get_captures_new
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
@@ -270,82 +270,45 @@ class PokemonButton(Button):
         await interaction.followup.send(file=file, embed=embed, ephemeral=True)
 
 
-
 def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir):
-
-    # --- Commande pour la nouvelle base ---
     @bot.command()
     async def pokedex(ctx):
+        # 🔥 Récupération des captures depuis la base PostgreSQL
         user_id = str(ctx.author.id)
-        captures = get_captures_new(user_id)  # <-- new database
+        captures = get_captures(user_id)
+
+        # Si aucune capture
         if not captures:
             await ctx.send("Tu n'as encore rien capturé.")
             return
-        await send_pokedex_view(ctx, captures, full_pokemon_data, full_pokemon_shiny_data)
 
-
-    # --- Commande pour l'ancienne base ---
-    @bot.command(name="ex_pokedex")
-    async def ex_pokedex(ctx):
-        user_id = str(ctx.author.id)
-        captures = get_captures_old(user_id)  # <-- old database
-
-        if not captures:
-            await ctx.send("Tu n'as capturé aucun Pokémon !")
-            return
-        
-        # --- on réutilise EXACTEMENT le même système que le pokedex normal ---
+        # On extrait la liste des noms pour la mosaïque
         pokemons = [entry["name"] for entry in captures]
-    
+
+        # Création de la mosaïque
+        mosaic_image, displayed_count = await create_mosaic(pokemons, full_pokemon_data, full_pokemon_shiny_data)
+
+        if mosaic_image is None:
+            await ctx.send("Erreur lors de la création de la mosaïque.")
+            return
+
+        # Création de l'embed
+        file = discord.File(mosaic_image, filename="pokedex_mosaic.png")
+        embed = discord.Embed(
+            title=f"📘 Pokédex de {ctx.author.display_name}",
+            description=f"Voici la mosaïque de tes {displayed_count} Pokémon visibles (sur {len(pokemons)} capturés) !",
+            color=0x3498db
+        )
+        embed.set_image(url="attachment://pokedex_mosaic.png")
+
+        # Création de la view avec les captures de la BDD
         view = PokedexView(
             pokemons,
             full_pokemon_shiny_data,
             full_pokemon_data,
-            bot.type_sprites,
-            bot.attack_type_map,
-            captures
+            type_sprites,
+            attack_type_map,
+            captures  # 👈 on passe directement les données issues de la BDD
         )
-        await ctx.send("Voici ton ancien Pokédex :", view=view)
 
-
-
-
-# --- Fonction réutilisable pour envoyer l'embed + view ---
-async def send_pokedex_view(ctx, captures, full_pokemon_data, full_pokemon_shiny_data):
-    pokemons = [entry["name"] for entry in captures]
-    mosaic_image, displayed_count = await create_mosaic(
-        pokemons, full_pokemon_data, full_pokemon_shiny_data
-    )
-
-    if mosaic_image is None:
-        await ctx.send("Erreur lors de la création de la mosaïque.")
-        return
-
-    file = discord.File(mosaic_image, filename="pokedex_mosaic.png")
-    embed = discord.Embed(
-        title=f"📘 Pokédex de {ctx.author.display_name}",
-        description=f"Voici la mosaïque de tes {displayed_count} Pokémon visibles (sur {len(pokemons)} capturés) !",
-        color=0x3498db
-    )
-    embed.set_image(url="attachment://pokedex_mosaic.png")
-    await ctx.send(embed=embed, file=file)
-
-
-
-
-
-class ExPokedexSelect(View):
-    def __init__(self, user_captures):
-        super().__init__(timeout=180)
-
-        options = []
-        for data in user_captures:
-            options.append(discord.SelectOption(
-                label=data["name"],
-                description=f"Afficher {data['name']}"
-            ))
-
-        self.add_item(Select(
-            placeholder="Choisis un Pokémon",
-            options=options
-        ))
+        await ctx.send(embed=embed, file=file, view=view)
