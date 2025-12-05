@@ -285,14 +285,22 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
 
 
     # --- Commande pour l'ancienne base ---
-    @bot.command()
+    @bot.command(name="ex_pokedex")
     async def ex_pokedex(ctx):
         user_id = str(ctx.author.id)
         captures = get_captures_old(user_id)  # <-- old database
+
         if not captures:
-            await ctx.send("Tu n'as encore rien capturé dans l'ancien Pokédex.")
-            return
-        await send_pokedex_view(ctx, captures, full_pokemon_data, full_pokemon_shiny_data)
+            await ctx.send("Tu n'as capturé aucun Pokémon !")
+        return
+    
+        view = ExPokedexSelect(captures)
+        await ctx.send(
+            "Choisis un Pokémon à afficher dans le Pokédex :", 
+            view=view
+        )
+
+
 
 
 # --- Fonction réutilisable pour envoyer l'embed + view ---
@@ -314,3 +322,38 @@ async def send_pokedex_view(ctx, captures, full_pokemon_data, full_pokemon_shiny
     )
     embed.set_image(url="attachment://pokedex_mosaic.png")
     await ctx.send(embed=embed, file=file)
+
+
+
+from discord.ui import View, Select
+
+class ExPokedexSelect(View):
+    def __init__(self, user_captures):
+        super().__init__(timeout=60)
+        
+        options = []
+        for poke_id, data in user_captures.items():
+            name = data.get("name", "???")
+            shiny = "✨" if data.get("shiny", False) else ""
+            label = f"{name}{shiny}"
+            options.append(discord.SelectOption(label=label, value=str(poke_id)))
+
+        select = Select(
+            placeholder="Choisis un Pokémon",
+            min_values=1,
+            max_values=1,
+            options=options
+        )
+        select.callback = self.select_callback
+        self.add_item(select)
+
+    async def select_callback(self, interaction: discord.Interaction):
+        poke_id = interaction.data["values"][0]
+
+        # 👉 importer ta fonction qui affiche un pokédex individuel
+        from pokedex import create_pokedex_for_one
+
+        embed, file = await create_pokedex_for_one(interaction.user.id, poke_id)
+
+        await interaction.response.edit_message(embed=embed, attachments=[file], view=self)
+
