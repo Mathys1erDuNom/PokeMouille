@@ -6,7 +6,7 @@ import requests, io, os
 from io import BytesIO
 import json
 from db import get_captures
-from bot import full_pokemon_data
+
 
 
 from combat.utils import normalize_text
