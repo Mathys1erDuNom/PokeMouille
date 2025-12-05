@@ -273,7 +273,7 @@ class PokemonButton(Button):
 
 def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir):
     @bot.command()
-    async def pokedex(ctx):
+    async def ex_pokedex(ctx):
         # 🔥 Récupération des captures depuis la base PostgreSQL
         user_id = str(ctx.author.id)
         captures = get_captures(user_id)
