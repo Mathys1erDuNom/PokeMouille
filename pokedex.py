@@ -292,7 +292,7 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
 
         if not captures:
             await ctx.send("Tu n'as capturé aucun Pokémon !")
-        return
+            return
     
         view = ExPokedexSelect(captures)
         await ctx.send(
