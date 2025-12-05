@@ -327,33 +327,52 @@ async def send_pokedex_view(ctx, captures, full_pokemon_data, full_pokemon_shiny
 
 from discord.ui import View, Select
 
-class ExPokedexSelect(View):
-    def __init__(self, user_captures):
-        super().__init__(timeout=60)
-        
-        options = []
-        for poke_id, data in user_captures.items():
-            name = data.get("name", "???")
-            shiny = "✨" if data.get("shiny", False) else ""
-            label = f"{name}{shiny}"
-            options.append(discord.SelectOption(label=label, value=str(poke_id)))
 
-        select = Select(
+class ExPokedexSelect(discord.ui.Select):
+    def __init__(self, user_captures):
+        options = []
+
+        # user_captures EST UNE LISTE
+        for entry in user_captures:
+            poke_name = entry.get("name")
+            if poke_name:
+                options.append(discord.SelectOption(label=poke_name, value=str(poke_name)))
+
+        super().__init__(
             placeholder="Choisis un Pokémon",
             min_values=1,
             max_values=1,
             options=options
         )
-        select.callback = self.select_callback
-        self.add_item(select)
 
-    async def select_callback(self, interaction: discord.Interaction):
-        poke_id = interaction.data["values"][0]
+    async def callback(self, interaction: discord.Interaction):
+        chosen_name = self.values[0]
 
-        # 👉 importer ta fonction qui affiche un pokédex individuel
-        from pokedex import create_pokedex_for_one
+        # Récupérer les données complètes du Pokémon capturé
+        for entry in self.view.user_captures:
+            if entry["name"] == chosen_name:
+                selected = entry
+                break
 
-        embed, file = await create_pokedex_for_one(interaction.user.id, poke_id)
+        # Afficher le Pokémon
+        await interaction.response.send_message(
+            f"Tu as choisi **{selected['name']}** !",
+            ephemeral=True
+        )
 
-        await interaction.response.edit_message(embed=embed, attachments=[file], view=self)
 
+class ExPokedexSelect(View):
+    def __init__(self, user_captures):
+        super().__init__(timeout=180)
+
+        options = []
+        for data in user_captures:
+            options.append(discord.SelectOption(
+                label=data["name"],
+                description=f"Afficher {data['name']}"
+            ))
+
+        self.add_item(Select(
+            placeholder="Choisis un Pokémon",
+            options=options
+        ))
