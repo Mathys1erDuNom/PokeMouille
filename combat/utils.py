@@ -159,3 +159,7 @@ def describe_effectiveness(mult: float) -> str:
     if mult > 1:
         return "super efficace"
     return "efficacité normale"
+
+
+def normalize_text(text):
+    return unicodedata.normalize("NFKD", text).encode("ascii", "ignore").decode("ascii")

@@ -22,7 +22,8 @@ import unicodedata
 from quiz_spawn import setup_quiz_commands
 from devine_poke import setup_guess_pokemon_command
 
-from pokedex import normalize_text
+from combat.utils import normalize_text
+
 from pokedex import setup_pokedex
 
 

@@ -9,14 +9,15 @@ from db import get_captures
 from bot import full_pokemon_data
 
 
+from combat.utils import normalize_text
+
+
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 
 
-# 👉 Les fonctions utilitaires
-def normalize_text(text):
-    import unicodedata
-    return ''.join(c for c in unicodedata.normalize('NFD', text.lower()) if unicodedata.category(c) != 'Mn')
+
 
 async def create_mosaic(pokemon_names, full_pokemon_data, full_pokemon_shiny_data):
     images = []
