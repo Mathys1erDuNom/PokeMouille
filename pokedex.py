@@ -293,12 +293,19 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
         if not captures:
             await ctx.send("Tu n'as capturé aucun Pokémon !")
             return
+        
+        # --- on réutilise EXACTEMENT le même système que le pokedex normal ---
+        pokemons = [entry["name"] for entry in captures]
     
-        view = ExPokedexSelect(captures)
-        await ctx.send(
-            "Choisis un Pokémon à afficher dans le Pokédex :", 
-            view=view
+        view = PokedexView(
+            pokemons,
+            full_pokemon_shiny_data,
+            full_pokemon_data,
+            bot.type_sprites,
+            bot.attack_type_map,
+            captures
         )
+        await ctx.send("Voici ton ancien Pokédex :", view=view)
 
 
 
@@ -325,40 +332,6 @@ async def send_pokedex_view(ctx, captures, full_pokemon_data, full_pokemon_shiny
 
 
 
-from discord.ui import View, Select
-
-
-class ExPokedexSelect(discord.ui.Select):
-    def __init__(self, user_captures):
-        options = []
-
-        # user_captures EST UNE LISTE
-        for entry in user_captures:
-            poke_name = entry.get("name")
-            if poke_name:
-                options.append(discord.SelectOption(label=poke_name, value=str(poke_name)))
-
-        super().__init__(
-            placeholder="Choisis un Pokémon",
-            min_values=1,
-            max_values=1,
-            options=options
-        )
-
-    async def callback(self, interaction: discord.Interaction):
-        chosen_name = self.values[0]
-
-        # Récupérer les données complètes du Pokémon capturé
-        for entry in self.view.user_captures:
-            if entry["name"] == chosen_name:
-                selected = entry
-                break
-
-        # Afficher le Pokémon
-        await interaction.response.send_message(
-            f"Tu as choisi **{selected['name']}** !",
-            ephemeral=True
-        )
 
 
 class ExPokedexSelect(View):
