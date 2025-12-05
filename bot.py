@@ -33,7 +33,7 @@ from io import BytesIO
 from db import save_capture, get_captures
 
 # Ici, déclare la constante globale :
-CHECK_VOICE_CHANNEL_INTERVAL = 120 # secondes
+CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
 
 allowed_user = {}  # dictionnaire global : guild_id -> user_id autorisé à capturer
 
@@ -50,7 +50,6 @@ intents = discord.Intents.default()
 intents.members = True
 intents.voice_states = True
 intents.message_content = True
-REPLACE_UNCAUGHT_AUTO = True
 
 
 
@@ -277,18 +276,8 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     else:
         spawn_origin_manual[guild_id] = False
         if current_auto_pokemon.get(guild_id):
-            if REPLACE_UNCAUGHT_AUTO:
-                # On remplace le Pokémon auto précédent, non capturé
-                try:
-                    await channel.send("⏳ Le Pokémon sauvage précédent s’est échappé… un nouveau apparaît !")
-                except Exception:
-                    pass
-                reset_spawn(guild_id)  # libère l'état pour autoriser
-            else:
-                print(f"[INFO] Un Pokémon auto est déjà présent sur le serveur {guild_id}, on ne remplace pas.")
-                return
-
-            
+            print(f"[INFO] Un Pokémon auto est déjà présent sur le serveur {guild_id}, on ne remplace pas.")
+            return
 
     # Choix du Pokémon
     if pokemon_name:
@@ -394,7 +383,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
 
 
 
-@tasks.loop(seconds=CHECK_VOICE_CHANNEL_INTERVAL)
+@tasks.loop(seconds=120)
 async def check_voice_channel():
     bot.last_check_voice_time = time.time()
     # Exemple simple pour un serveur avec ID et channels fixes
@@ -408,11 +397,11 @@ async def check_voice_channel():
 
     if len(vc.members) > 0:
         if guild_id not in spawn_task or spawn_task[guild_id] is None:
-            
-            wait_time = random.randint(600,1200)  # 10 à 20 minutes
-            minutes, seconds = divmod(wait_time, 60)  # ✅ calcule minutes et secondes
-            print(f"[INFO] Spawn automatique prévu dans {minutes} min {seconds} sec.")
-            spawn_task[guild_id] = asyncio.create_task(wait_and_spawn(wait_time, channel))
+            if current_auto_pokemon.get(guild_id) is None:
+                wait_time = random.randint(600,1200)  # 10 à 20 minutes
+                minutes, seconds = divmod(wait_time, 60)  # ✅ calcule minutes et secondes
+                print(f"[INFO] Spawn automatique prévu dans {minutes} min {seconds} sec.")
+                spawn_task[guild_id] = asyncio.create_task(wait_and_spawn(wait_time, channel))
     else:
         if guild_id in spawn_task and spawn_task[guild_id] is not None and not spawn_task[guild_id].done():
             spawn_task[guild_id].cancel()
@@ -628,28 +617,27 @@ async def spawn(ctx, *args):
 
 
 
-@bot.command(name="timecheck")
+
+@bot.command()
 @is_croco()
 async def timecheck(ctx):
-    # Si la loop expose next_iteration (discord.py 2.x), on s’en sert
-    try:
-        ni = getattr(check_voice_channel, "next_iteration", None)
-        if ni:
-            now = datetime.now(timezone.utc)
-            remaining = max(0, int((ni - now).total_seconds()))
-        else:
-            # fallback: basé sur last_check_voice_time + intervalle
-            if not hasattr(bot, 'last_check_voice_time'):
-                await ctx.send("Aucune donnée de dernière vérification disponible.")
-                return
-            elapsed = time.time() - bot.last_check_voice_time
-            remaining = max(0, int(CHECK_VOICE_CHANNEL_INTERVAL - elapsed))
-    except Exception:
-        # ultime repli
-        remaining = CHECK_VOICE_CHANNEL_INTERVAL
+    """
+    Indique dans combien de temps la prochaine exécution de la tâche check_voice_channel aura lieu.
+    Usage réservé à l'utilisateur Croco.
+    """
+    if not hasattr(bot, 'last_check_voice_time'):
+        await ctx.send("Aucune donnée de dernière vérification disponible.")
+        return
 
-    m, s = divmod(remaining, 60)
-    await ctx.send(f"⏰ Prochaine vérif du canal vocal dans {m} min {s:02d} sec.")
+    now = time.time()
+    elapsed = now - bot.last_check_voice_time
+
+    remaining = max(0, int(CHECK_VOICE_CHANNEL_INTERVAL - elapsed))
+    minutes, seconds = divmod(remaining, 60)
+
+    await ctx.send(f"⏰ Prochaine vérification du canal vocal dans {minutes} min {seconds} sec.")
+
+
 
 
 @bot.command()
@@ -713,7 +701,15 @@ async def battle(ctx):
     await ctx.send("Choisis jusqu’à 6 Pokémon pour ton équipe de combat :", view=view)
 
 
-
+setup_croco_event(
+    bot,
+    VOICE_CHANNEL_ID,
+    TEXT_CHANNEL_ID,
+    TARGET_USER_ID_CROCO,
+    spawn_func=spawn_pokemon,
+    role_id=ROLE_ID,
+    interval_seconds=60  # ajuste librement
+)
 
 
 bot.run(TOKEN)
