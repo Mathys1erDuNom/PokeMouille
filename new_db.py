@@ -23,6 +23,41 @@ CREATE TABLE IF NOT EXISTS new_captures (
 """)
 conn.commit()
 
+
+
+def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
+    user_id = str(user_id)
+
+    # Vérifie combien de fois ce Pokémon a déjà été capturé pour cet utilisateur
+    cur.execute("""
+        SELECT COUNT(*) FROM new_captures
+        WHERE user_id = %s AND name LIKE %s || '%%'
+    """, (user_id, pokemon_name))
+    existing_count = cur.fetchone()[0]
+
+    if existing_count == 0:
+        final_name = pokemon_name
+    else:
+        final_name = f"{pokemon_name}{existing_count + 1}"
+
+    # Insère la capture
+    cur.execute("""
+        INSERT INTO new_captures (user_id, name, ivs, stats, image, type, attacks)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
+    """, (
+        user_id,
+        final_name,
+        Json(ivs),
+        Json(final_stats),
+        pokemon.get("image", ""),
+        Json(pokemon.get("type", [])),
+        Json(pokemon.get("attacks", []))
+    ))
+    conn.commit()
+    print(f"[INFO] Pokémon {final_name} enregistré pour l’utilisateur {user_id}")
+
+
+
 def get_new_captures(user_id):
     """Récupère toutes les captures d’un utilisateur depuis new_captures"""
     cur.execute("""

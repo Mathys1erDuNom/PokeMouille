@@ -32,6 +32,8 @@ from new_pokedex import setup_new_pokedex
 from io import BytesIO
 
 from db import save_capture, get_captures
+from new_db import save_new_capture, get_new_captures
+
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
@@ -537,7 +539,7 @@ async def catch(ctx):
         # Sauvegarde
         ivs = pokemon_data.get("ivs", {})
         stats_with_iv = pokemon_data.get("stats_iv", pokemon_data["stats"])
-        save_capture(ctx.author.id, pokemon_name, ivs, stats_with_iv, pokemon_data)
+        save_new_capture(ctx.author.id, pokemon_name, ivs, stats_with_iv, pokemon_data)
         
 
         # Envoi du message de capture
@@ -692,7 +694,7 @@ print("[DEBUG] Ready to run bot...")
 @bot.command()
 async def battle(ctx):
     user_id = str(ctx.author.id)
-    captures = get_captures(user_id)
+    captures = get_new_captures(user_id)
 
     if not captures:
         await ctx.send("Tu n'as aucun Pokémon à utiliser en combat.")
