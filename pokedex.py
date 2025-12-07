@@ -16,6 +16,9 @@ from combat.utils import normalize_text
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 
+# --- CACHE POKEDEX ---
+POKEDEX_CACHE = {}   # { user_id: { "pokemons": [...], "mosaic": bytes, "timestamp": time } }
+
 
 
 
@@ -270,46 +273,78 @@ class PokemonButton(Button):
         embed.set_image(url=f"attachment://{self.pokemon_name}.png")
         await interaction.followup.send(file=file, embed=embed, ephemeral=True)
 
-
 def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir):
+
     @bot.command()
     async def ex_pokedex(ctx):
-        # 🔥 Récupération des captures depuis la base PostgreSQL
         user_id = str(ctx.author.id)
+
         captures = get_captures(user_id)
-
-        # Si aucune capture
-        if not captures:
-            await ctx.send("Tu n'as encore rien capturé.")
-            return
-
-        # On extrait la liste des noms pour la mosaïque
         pokemons = [entry["name"] for entry in captures]
 
-        # Création de la mosaïque
-        mosaic_image, displayed_count = await create_mosaic(pokemons, full_pokemon_data, full_pokemon_shiny_data)
+        # ----- 🔥 Vérification du cache -----
+        cache = POKEDEX_CACHE.get(user_id)
+
+        if cache and cache["pokemons"] == pokemons:
+            print("[CACHE] Pokédex envoyé sans recalcul !")
+
+            mosaic_image = io.BytesIO(cache["mosaic"])
+            mosaic_image.seek(0)
+
+            file = discord.File(mosaic_image, filename="pokedex_mosaic.png")
+
+            embed = discord.Embed(
+                title=f"📘 Pokédex de {ctx.author.display_name}",
+                description=f"(Cache) Voici ton Pokédex avec {len(pokemons)} Pokémon !",
+                color=0x3498db
+            )
+            embed.set_image(url="attachment://pokedex_mosaic.png")
+
+            view = PokedexView(
+                pokemons,
+                full_pokemon_shiny_data,
+                full_pokemon_data,
+                type_sprites,
+                attack_type_map,
+                captures
+            )
+
+            await ctx.send(embed=embed, file=file, view=view)
+            return
+
+        # ----- 🛠 PAS DE CACHE → Génération normale -----
+
+        mosaic_image, displayed_count = await create_mosaic(
+            pokemons,
+            full_pokemon_data,
+            full_pokemon_shiny_data
+        )
 
         if mosaic_image is None:
             await ctx.send("Erreur lors de la création de la mosaïque.")
             return
 
-        # Création de l'embed
+        POKEDEX_CACHE[user_id] = {
+            "pokemons": pokemons,
+            "mosaic": mosaic_image.getvalue()
+        }
+
         file = discord.File(mosaic_image, filename="pokedex_mosaic.png")
+
         embed = discord.Embed(
             title=f"📘 Pokédex de {ctx.author.display_name}",
-            description=f"Voici la mosaïque de tes {displayed_count} Pokémon visibles (sur {len(pokemons)} capturés) !",
+            description=f"Voici la mosaïque de tes {displayed_count} Pokémon !",
             color=0x3498db
         )
         embed.set_image(url="attachment://pokedex_mosaic.png")
 
-        # Création de la view avec les captures de la BDD
         view = PokedexView(
             pokemons,
             full_pokemon_shiny_data,
             full_pokemon_data,
             type_sprites,
             attack_type_map,
-            captures  # 👈 on passe directement les données issues de la BDD
+            captures
         )
 
         await ctx.send(embed=embed, file=file, view=view)
