@@ -17,6 +17,7 @@ _pokedex_cache = {}  # clé : user_id, valeur : liste de captures
 # Crée la table si elle n'existe pas
 cur.execute("""
 CREATE TABLE IF NOT EXISTS new_captures (
+    id SERIAL PRIMARY KEY,        
     user_id TEXT,
     name TEXT,
     ivs JSONB,
@@ -63,6 +64,8 @@ def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
     # 🔥 On vide le cache pour cet utilisateur
     if str(user_id) in _pokedex_cache:
         del _pokedex_cache[str(user_id)]
+    # 🔥 On met directement à jour le cache
+    _pokedex_cache[user_id] = get_new_captures(user_id)    
 
 
 
