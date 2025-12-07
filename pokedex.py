@@ -5,7 +5,8 @@ from PIL import Image, ImageDraw, ImageFont
 import requests, io, os
 from io import BytesIO
 import json
-from db import get_captures
+
+from db import get_captures_cached as get_captures
 
 
 
@@ -43,8 +44,8 @@ async def create_mosaic(pokemon_names, full_pokemon_data, full_pokemon_shiny_dat
                 continue
 
         try:
-            response = requests.get(p_data["image"])
-            img = Image.open(BytesIO(response.content)).convert("RGBA").resize((64, 64))
+            poke_img = get_cached_sprite(p_data["image"])
+
             images.append(img)
         except Exception as e:
             print(f"[ERREUR] Image introuvable pour {p_data['name']}, fallback utilisé. → {e}")
@@ -313,3 +314,20 @@ def setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
         )
 
         await ctx.send(embed=embed, file=file, view=view)
+
+sprite_cache_dir = os.path.join(images_dir, "sprites_cache")
+os.makedirs(sprite_cache_dir, exist_ok=True)
+
+def get_cached_sprite(url):
+    filename = normalize_text(os.path.basename(url))
+    filepath = os.path.join(sprite_cache_dir, filename)
+
+    if os.path.exists(filepath):
+        return Image.open(filepath).convert("RGBA")
+
+    # sinon téléchargement
+    r = requests.get(url)
+    with open(filepath, "wb") as f:
+        f.write(r.content)
+
+    return Image.open(filepath).convert("RGBA")
