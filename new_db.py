@@ -6,12 +6,14 @@ from dotenv import load_dotenv
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 
+# Connexion à la base de données
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
 # Crée la table si elle n'existe pas
 cur.execute("""
 CREATE TABLE IF NOT EXISTS new_captures (
+    capture_id SERIAL PRIMARY KEY,
     user_id TEXT,
     name TEXT,
     ivs JSONB,
@@ -24,8 +26,11 @@ CREATE TABLE IF NOT EXISTS new_captures (
 conn.commit()
 
 
-
 def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
+    """
+    Sauvegarde une nouvelle capture pour un utilisateur.
+    Chaque capture a un nom unique basé sur le nombre de captures existantes du même Pokémon.
+    """
     user_id = str(user_id)
 
     # Vérifie combien de fois ce Pokémon a déjà été capturé pour cet utilisateur
@@ -57,9 +62,10 @@ def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
     print(f"[INFO] Pokémon {final_name} enregistré pour l’utilisateur {user_id}")
 
 
-
 def get_new_captures(user_id):
-    """Récupère toutes les captures d’un utilisateur depuis new_captures"""
+    """
+    Récupère toutes les captures d’un utilisateur depuis new_captures.
+    """
     cur.execute("""
         SELECT name, ivs, stats, image, type, attacks
         FROM new_captures
