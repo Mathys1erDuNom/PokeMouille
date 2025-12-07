@@ -3,9 +3,12 @@ import psycopg2
 from psycopg2.extras import Json
 from dotenv import load_dotenv
 
+# Charge les variables d’environnement
 load_dotenv()
+
 DATABASE_URL = os.getenv("DATABASE_URL")
 
+# Connexion globale à la base
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
@@ -22,8 +25,6 @@ CREATE TABLE IF NOT EXISTS new_captures (
 );
 """)
 conn.commit()
-
-
 
 def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
     user_id = str(user_id)
@@ -56,14 +57,10 @@ def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
     conn.commit()
     print(f"[INFO] Pokémon {final_name} enregistré pour l’utilisateur {user_id}")
 
-
-
 def get_new_captures(user_id):
-    """Récupère toutes les captures d’un utilisateur depuis new_captures"""
+    """Récupère toutes les captures d’un utilisateur."""
     cur.execute("""
-        SELECT name, ivs, stats, image, type, attacks
-        FROM new_captures
-        WHERE user_id = %s
+        SELECT name, ivs, stats, image, type, attacks FROM new_captures WHERE user_id = %s
     """, (str(user_id),))
     rows = cur.fetchall()
     captures = []
