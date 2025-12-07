@@ -12,10 +12,6 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
-
-
-
-
 # Crée la table si elle n'existe pas
 cur.execute("""
 CREATE TABLE IF NOT EXISTS captures (
@@ -30,19 +26,8 @@ CREATE TABLE IF NOT EXISTS captures (
 """)
 conn.commit()
 
-
-
-from functools import lru_cache
-
-@lru_cache(maxsize=5000)
-def get_captures_cached(user_id):
-    return tuple(get_captures(user_id))  # tuple pour être hashable
-
-
 def save_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
     user_id = str(user_id)
-    get_captures_cached.cache_clear()
-
 
     # Vérifie combien de fois ce Pokémon a déjà été capturé pour cet utilisateur
     cur.execute("""

@@ -34,8 +34,6 @@ from io import BytesIO
 from db import save_capture, get_captures
 from new_db import save_new_capture, get_new_captures
 
-image_cache = {}
-
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
@@ -355,13 +353,8 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
 
         poke_url = pokemon.get("image", "")
         if poke_url.startswith("http"):
-
-            if poke_url in image_cache:
-                pokemon_img = image_cache[poke_url]
-            else:
-                response = requests.get(poke_url, timeout=15)
-                pokemon_img = Image.open(BytesIO(response.content)).convert("RGBA")
-                image_cache[poke_url] = pokemon_img    
+            response = requests.get(poke_url, timeout=15)
+            pokemon_img = Image.open(BytesIO(response.content)).convert("RGBA").resize((392, 392))
 
             composed = background.copy()
             x = (background.width - pokemon_img.width) // 2
