@@ -34,6 +34,9 @@ from io import BytesIO
 from db import save_capture, get_captures
 from new_db import save_new_capture, get_new_captures
 
+from inventory_view import setup_inventory
+
+
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
@@ -714,6 +717,10 @@ setup_croco_event(
     role_id=ROLE_ID,
     interval_seconds=60  # ajuste librement
 )
+
+setup_inventory(bot)
+
+
 
 
 bot.run(TOKEN)
