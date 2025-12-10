@@ -150,13 +150,14 @@ def setup_inventory(bot):
         # Ajout de l’item dans la DB
         add_item(
             user_id=user.id,
-            name=found_item["item_name"],
+            item_name=found_item["item_name"],
             quantity=1,
             rarity=found_item.get("rarity", "common"),
             description=found_item.get("description", ""),
             image=found_item.get("image", ""),
             extra=found_item.get("extra", {})
         )
+        
 
         await ctx.send(
             f"🎁 Grand Maître suprême des Crocodiles, l’item **{found_item['item_name']}** "
