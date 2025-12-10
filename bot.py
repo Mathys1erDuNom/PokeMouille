@@ -155,12 +155,7 @@ with open(type_sprite_path, "r", encoding="utf-8") as f:
 type_sprites = {entry["type"].lower(): entry["image"] for entry in type_sprite_data}
 
 
-item_file_path = os.path.join(json_dir, "item.json")
 
-with open(item_file_path, "r", encoding="utf-8") as f:
-    items_data = json.load(f)
-
-pokeball_url = next((item["image"] for item in items_data if item["name"].lower() == "pokéball"), None)
 
 ##############################################################
 ##############################################################
