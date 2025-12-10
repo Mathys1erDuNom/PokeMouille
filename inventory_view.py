@@ -73,13 +73,13 @@ class InventoryItemButton(Button):
   
 
         # Remplacer 'name' par 'item_name'
-        super().__init__(label=f"{item.get('item_name','Inconnu')} ×{item.get('quantity', 1)}", style=discord.ButtonStyle.primary)
+        super().__init__(label=f"{item.get('name','Inconnu')} ×{item.get('quantity', 1)}", style=discord.ButtonStyle.primary)
         self.item = item
 
     async def callback(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
 
-        name = self.item["item_name"]
+        name = self.item["name"]
         quantity = self.item["quantity"]
         rarity = self.item["rarity"]
         description = self.item["description"]
