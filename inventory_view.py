@@ -150,7 +150,7 @@ def setup_inventory(bot):
         # Ajout de l’item dans la DB
         add_item(
             user_id=user.id,
-            item_name=found_item["item_name"],
+            name=found_item["item_name"],
             quantity=1,
             rarity=found_item.get("rarity", "common"),
             description=found_item.get("description", ""),
