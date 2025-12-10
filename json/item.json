@@ -1,6 +1,10 @@
 [
+  
   {
-    "name": "Pokéball",
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+    "item_name": "Poké Ball",
+    "rarity": "common",
+    "description": "Une balle basique pour capturer les Pokémon.",
+    "image": "https://example.com/items/pokeball.png",
+    "extra": "spawn pokemon"
   }
 ]

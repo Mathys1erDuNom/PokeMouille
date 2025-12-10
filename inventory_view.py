@@ -5,12 +5,19 @@ from PIL import Image, ImageDraw, ImageFont
 import requests, io, os
 from io import BytesIO
 
+from inventory_db import add_item
 from inventory_db import get_inventory
-
+import json
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 
+
+# Chargement du fichier item.json
+
+item_json_path = os.path.join(script_dir, "item.json")
+with open(item_json_path, "r", encoding="utf-8") as f:
+    ITEM_LIST = json.load(f)
 
 class InventoryView(View):
     def __init__(self, items):
@@ -109,8 +116,8 @@ class InventoryItemButton(Button):
         await interaction.followup.send(file=file, embed=embed, ephemeral=True)
 
 
-# Commande à ajouter dans ton bot
 def setup_inventory(bot):
+
     @bot.command(name="inventaire")
     async def inventaire(ctx):
         items = get_inventory(ctx.author.id)
@@ -120,3 +127,34 @@ def setup_inventory(bot):
 
         view = InventoryView(items)
         await ctx.send("🎒 **Votre inventaire :**", view=view)
+
+    # 👉 Nouvelle commande GIVE
+    @bot.command(name="give")
+    async def give(ctx, user: discord.User, *, item_name: str):
+        """Donne un item à un utilisateur."""
+
+        # Recherche de l'item dans item.json
+        found_item = next(
+            (i for i in ITEM_LIST if i["item_name"].lower() == item_name.lower()),
+            None
+        )
+
+        if not found_item:
+            await ctx.send(f"❌ Grand Maître suprême des Crocodiles, l’item `{item_name}` n’existe pas.")
+            return
+
+        # Ajout de l’item dans la DB
+        add_item(
+            user_id=user.id,
+            name=found_item["item_name"],
+            quantity=1,
+            rarity=found_item.get("rarity", "common"),
+            description=found_item.get("description", ""),
+            image=found_item.get("image", ""),
+            extra=found_item.get("extra", {})
+        )
+
+        await ctx.send(
+            f"🎁 Grand Maître suprême des Crocodiles, l’item **{found_item['item_name']}** "
+            f"a été ajouté à l’inventaire de **{user.mention}**."
+        )
