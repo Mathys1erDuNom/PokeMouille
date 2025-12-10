@@ -15,7 +15,8 @@ images_dir = os.path.join(script_dir, "images")
 
 # Chargement du fichier item.json
 
-item_json_path = os.path.join(script_dir, "item.json")
+item_json_path = os.path.join(script_dir, "json", "item.json")
+
 with open(item_json_path, "r", encoding="utf-8") as f:
     ITEM_LIST = json.load(f)
 
