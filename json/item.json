@@ -1,10 +1,11 @@
 [
-  
   {
     "item_name": "Poké Ball",
     "rarity": "common",
     "description": "Une balle basique pour capturer les Pokémon.",
     "image": "https://example.com/items/pokeball.png",
-    "extra": "spawn pokemon"
+    "extra": {
+      "effect": "spawn_pokemon"
+    }
   }
 ]
