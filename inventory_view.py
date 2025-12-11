@@ -104,11 +104,16 @@ class InventoryItemButton(Button):
         if image_url and image_url.startswith("http"):
             try:
                 resp = requests.get(image_url)
+                resp.raise_for_status()  # s'assure que l'image est bien récupérée
                 item_img = Image.open(BytesIO(resp.content)).convert("RGBA")
-                item_img = item_img.resize((200, 200))
-                card.paste(item_img, (350, 100), item_img)
-            except:
-                pass
+                item_img = item_img.resize((200, 200), Image.ANTIALIAS)
+                # Collage avec ou sans masque selon la présence de transparence
+                if item_img.mode == "RGBA":
+                    card.paste(item_img, (350, 100), item_img)
+                else:
+                    card.paste(item_img, (350, 100))
+            except Exception as e:
+                print(f"Erreur lors du chargement de l'image : {e}")
 
         with BytesIO() as buffer:
             card.save(buffer, "PNG")
