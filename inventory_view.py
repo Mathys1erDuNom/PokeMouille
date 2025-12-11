@@ -107,7 +107,7 @@ class InventoryItemButton(Button):
                 resp = requests.get(image_url)
                 resp.raise_for_status()  # s'assure que l'image est bien récupérée
                 item_img = Image.open(BytesIO(resp.content)).convert("RGBA")
-                item_img = item_img.resize((200, 200), Image.ANTIALIAS)
+                item_img = item_img.resize((200, 200), Image.Resampling.LANCZOS)
                 # Collage avec ou sans masque selon la présence de transparence
                 if item_img.mode == "RGBA":
                     card.paste(item_img, (350, 100), item_img)
