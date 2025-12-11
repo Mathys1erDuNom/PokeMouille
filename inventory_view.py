@@ -7,6 +7,7 @@ from io import BytesIO
 
 from inventory_db import add_item
 from inventory_db import get_inventory
+from inventory_db import delete_inventory
 import json
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -168,3 +169,11 @@ def setup_inventory(bot):
             f"🎁 Grand Maître suprême des Crocodiles, l’item **{found_item['item_name']}** "
             f"a été ajouté à l’inventaire de **{user.mention}**."
         )
+
+    @bot.command(name="inventaire_vide")
+    async def inventaire_vide(ctx, user: discord.User):
+        """Supprime tous les items de l'inventaire d'un utilisateur."""
+    
+        delete_inventory(user.id)
+        await ctx.send(f"🗑️ Grand Maître suprême des Crocodiles, l'inventaire de {user.mention} a été vidé !")
+    

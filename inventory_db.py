@@ -79,3 +79,11 @@ def get_inventory(user_id):
         })
 
     return items
+
+def delete_inventory(user_id):
+    """Supprime tous les items d'un utilisateur."""
+    cur.execute("""
+        DELETE FROM inventory
+        WHERE user_id = %s
+    """, (str(user_id),))
+    conn.commit()
