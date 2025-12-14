@@ -87,3 +87,32 @@ def delete_inventory(user_id):
         WHERE user_id = %s
     """, (str(user_id),))
     conn.commit()
+
+
+def use_item(user_id, item_name, quantity=1):
+    """
+    Décrémente la quantité d'un item et le supprime si nécessaire.
+    Retourne la nouvelle quantité et l'extra ou (None, None) si l'item n'existe pas.
+    """
+    user_id = str(user_id)
+    cur.execute("""
+        UPDATE inventory
+        SET quantity = quantity - %s
+        WHERE user_id = %s AND item_name = %s
+        RETURNING quantity, extra
+    """, (quantity, user_id, item_name))
+
+    row = cur.fetchone()
+    if row is None:
+        return None, None
+
+    new_qty, extra = row
+
+    if new_qty <= 0:
+        cur.execute("""
+            DELETE FROM inventory
+            WHERE user_id = %s AND item_name = %s
+        """, (user_id, item_name))
+
+    conn.commit()
+    return max(new_qty, 0), extra

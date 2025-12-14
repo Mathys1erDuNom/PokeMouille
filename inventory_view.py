@@ -10,6 +10,7 @@ from inventory_db import add_item
 from inventory_db import get_inventory
 from inventory_db import delete_inventory
 import json
+from inventory_db import use_item
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
@@ -70,17 +71,53 @@ class InventoryNextButton(Button):
         await interaction.response.edit_message(view=self.view_ref)
 
 
+
+class UseItemButton(Button):
+    def __init__(self, item, user_id):
+        super().__init__(label="🛠 Utiliser", style=discord.ButtonStyle.success)
+        self.item = item
+        self.user_id = user_id
+
+    async def callback(self, interaction: discord.Interaction):
+        new_qty, extra = use_item(self.user_id, self.item["name"])
+
+        if new_qty is None:
+            await interaction.response.send_message(
+                "❌ Cet item n'existe plus dans votre inventaire.", ephemeral=True
+            )
+            return
+
+        # Message générique sur l'utilisation
+        msg = f"✅ Vous avez utilisé **{self.item['name']}**."
+        if new_qty == 0:
+            msg += " C'était le dernier, il a été supprimé."
+        else:
+            msg += f" Il vous en reste {new_qty}."
+
+        await interaction.response.send_message(msg, ephemeral=True)
+
+        # 🔹 Message spécifique selon extra
+        if extra and "effect" in extra:
+            effect = extra["effect"]
+            if effect == "spawn_pokemon":
+                await interaction.followup.send("✨ Un Pokémon est apparu !", ephemeral=True)
+            elif effect == "soin":
+                await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
+            elif effect == "boost":
+                await interaction.followup.send("⚡ Vous avez reçu un boost !", ephemeral=True)
+            # Ajoute d'autres effets ici si besoin
+
+
+
 class InventoryItemButton(Button):
     def __init__(self, item):
-  
-
-        # Remplacer 'name' par 'item_name'
         super().__init__(label=f"{item.get('name','Inconnu')} ×{item.get('quantity', 1)}", style=discord.ButtonStyle.primary)
         self.item = item
 
     async def callback(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
 
+        # Création de la carte visuelle de l'item
         name = self.item["name"]
         quantity = self.item["quantity"]
         rarity = self.item["rarity"]
@@ -89,7 +126,6 @@ class InventoryItemButton(Button):
 
         card = Image.new("RGBA", (600, 400), (245, 245, 245, 255))
         draw = ImageDraw.Draw(card)
-
         font_path = os.path.join(script_dir, "fonts", "DejaVuSans-Bold.ttf")
         try:
             font = ImageFont.truetype(font_path, 22)
@@ -106,14 +142,10 @@ class InventoryItemButton(Button):
         if image_url and image_url.startswith("http"):
             try:
                 resp = requests.get(image_url)
-                resp.raise_for_status()  # s'assure que l'image est bien récupérée
+                resp.raise_for_status()
                 item_img = Image.open(BytesIO(resp.content)).convert("RGBA")
                 item_img = item_img.resize((200, 200), Image.Resampling.LANCZOS)
-                # Collage avec ou sans masque selon la présence de transparence
-                if item_img.mode == "RGBA":
-                    card.paste(item_img, (350, 100), item_img)
-                else:
-                    card.paste(item_img, (350, 100))
+                card.paste(item_img, (350, 100), item_img if item_img.mode == "RGBA" else None)
             except Exception as e:
                 print(f"Erreur lors du chargement de l'image : {e}")
 
@@ -124,7 +156,12 @@ class InventoryItemButton(Button):
 
         embed = discord.Embed(title=name)
         embed.set_image(url="attachment://item.png")
-        await interaction.followup.send(file=file, embed=embed, ephemeral=True)
+
+        # Crée la vue avec le bouton "Utiliser"
+        view = View()
+        view.add_item(UseItemButton(self.item, interaction.user.id))
+
+        await interaction.followup.send(file=file, embed=embed, view=view, ephemeral=True)
 
 
 def setup_inventory(bot):
