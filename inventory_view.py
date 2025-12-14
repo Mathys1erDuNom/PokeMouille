@@ -24,12 +24,12 @@ with open(item_json_path, "r", encoding="utf-8") as f:
     ITEM_LIST = json.load(f)
 
 class InventoryView(View):
-    def __init__(self, items, spawn_func=None):
+    def __init__(self, items):
         super().__init__(timeout=180)
         self.items = items
         self.page = 0
         self.max_per_page = 10
-        self.spawn_func = spawn_func
+    
         self.update_buttons()
 
     def update_buttons(self):
@@ -74,10 +74,11 @@ class InventoryNextButton(Button):
 
 
 class UseItemButton(Button):
-    def __init__(self, item, user_id):
+    def __init__(self, item, user_id, spawn_func=None):
         super().__init__(label="🛠 Utiliser", style=discord.ButtonStyle.success)
         self.item = item
         self.user_id = user_id
+        self.spawn_func = spawn_func
 
     async def callback(self, interaction: discord.Interaction):
         new_qty, extra = use_item(self.user_id, self.item["name"])
