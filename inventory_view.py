@@ -12,7 +12,7 @@ import json
 
 from utils import is_croco
 
-from inventory_db import use_item 
+
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
