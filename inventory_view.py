@@ -134,7 +134,6 @@ class InventoryItemButton(Button):
         view.add_item(self.use_button)
         await interaction.followup.send("Que voulez-vous faire avec cet objet ?", view=view, ephemeral=True)
 
-
 class InventoryUseButton(Button):
     def __init__(self, item):
         super().__init__(label="🛠 Utiliser", style=discord.ButtonStyle.success)
@@ -144,19 +143,21 @@ class InventoryUseButton(Button):
         user_id = interaction.user.id
         name = self.item["name"]
 
-        # Décrémente la quantité et récupère si c'est un spawn_pokemon
-        success, should_spawn = use_item(user_id, name)  # use_item modifié pour renvoyer (success, should_spawn)
-        
+        # Décrémente la quantité
+        success = use_item(user_id, name)
         if success:
             await interaction.response.send_message(f"✅ {name} a été utilisé.", ephemeral=True)
-            
-            if should_spawn:
-                from bot import spawn  # import local pour éviter circular import
-                import asyncio
-                # Crée une tâche asynchrone sans bloquer la boucle Discord
-                asyncio.create_task(spawn(user_id))
+
+            # Si l'item est une Poké Ball, spawn un Pokémon
+            if self.item.get("extra", {}).get("effect") == "spawn_pokemon":
+                from bot import spawn_pokemon
+                # On récupère le channel d'interaction
+                channel = interaction.channel
+                # On lance spawn_pokemon dans la boucle existante
+                asyncio.create_task(spawn_pokemon(channel, force=True, author=interaction.user))
         else:
             await interaction.response.send_message(f"❌ Impossible d'utiliser {name}.", ephemeral=True)
+
 
 def setup_inventory(bot):
 
