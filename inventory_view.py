@@ -98,14 +98,15 @@ class UseItemButton(Button):
         else:
             msg += f" Il vous en reste {new_qty}."
 
-        await interaction.response.send_message(msg, ephemeral=True)
+        
 
         # 🔹 Message spécifique selon extra
         # 🔹 Message spécifique selon extra
         if extra == "spawn_pokemon" and self.spawn_func:
-            msg = "Spawn actif"
-            await interaction.response.send_message(msg, ephemeral=True)
+            msg += " Spawn actif"
+            
             await self.spawn_func(channel=interaction.channel)
+            await interaction.response.send_message(msg, ephemeral=True)
 
         elif extra == "soin":
             await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
@@ -113,6 +114,7 @@ class UseItemButton(Button):
         elif extra == "boost":
             await interaction.followup.send("⚡ Vous avez reçu un boost !", ephemeral=True)
             # Ajoute d'autres effets ici si besoin
+        await interaction.response.send_message(msg, ephemeral=True)    
 
 class InventoryItemButton(Button):
     def __init__(self, item, parent_view):
