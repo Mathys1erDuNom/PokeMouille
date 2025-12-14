@@ -101,9 +101,13 @@ class UseItemButton(Button):
         await interaction.response.send_message(msg, ephemeral=True)
 
         # 🔹 Message spécifique selon extra
+        # 🔹 Message spécifique selon extra
         if extra == "spawn_pokemon" and self.spawn_func:
-            await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
-            await self.spawn_func(interaction.channel, author=interaction.user)
+            await interaction.followup.send(
+                "🐣 Une Poké Ball est utilisée... Un Pokémon apparaît !",
+                ephemeral=True
+            )
+            await self.spawn_func(channel=interaction.channel)
 
         elif extra == "soin":
             await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
