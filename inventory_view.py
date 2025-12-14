@@ -24,11 +24,12 @@ with open(item_json_path, "r", encoding="utf-8") as f:
     ITEM_LIST = json.load(f)
 
 class InventoryView(View):
-    def __init__(self, items):
+    def __init__(self, items, spawn_func=None):
         super().__init__(timeout=180)
         self.items = items
         self.page = 0
         self.max_per_page = 10
+        self.spawn_func = spawn_func
         self.update_buttons()
 
     def update_buttons(self):
@@ -99,8 +100,9 @@ class UseItemButton(Button):
         # 🔹 Message spécifique selon extra
         if extra and "effect" in extra:
             effect = extra["effect"]
-            if effect == "spawn_pokemon":
-                await interaction.followup.send("✨ Un Pokémon est apparu !", ephemeral=True)
+            if effect == "spawn_pokemon" and self.view.spawn_func:
+                # spawn dans le même channel que l'interaction
+                await self.view.spawn_func(interaction.channel, author=interaction.user)
             elif effect == "soin":
                 await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
             elif effect == "boost":
@@ -164,7 +166,7 @@ class InventoryItemButton(Button):
         await interaction.followup.send(file=file, embed=embed, view=view, ephemeral=True)
 
 
-def setup_inventory(bot):
+def setup_inventory(bot, spawn_func=None):
 
     @bot.command(name="inventaire")
     async def inventaire(ctx):
@@ -173,8 +175,9 @@ def setup_inventory(bot):
             await ctx.send("🎒 Votre inventaire est vide.")
             return
 
-        view = InventoryView(items)
+        view = InventoryView(items, spawn_func=spawn_func)
         await ctx.send("🎒 **Votre inventaire :**", view=view)
+
 
     # 👉 Nouvelle commande GIVE
     @is_croco()
