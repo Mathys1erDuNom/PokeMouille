@@ -1,7 +1,7 @@
 # inventory_db.py
 import os
 import psycopg2
-from psycopg2.extras import Json
+
 from dotenv import load_dotenv
 
 # Charge les variables d’environnement
@@ -52,10 +52,16 @@ def add_item(user_id, name, quantity=1, rarity="commun", description="", image="
         """, (new_qty, user_id, name))
     else:  # Insertion
         cur.execute("""
-            INSERT INTO inventory (user_id, item_name, quantity, rarity, description, image, extra)
-            VALUES (%s, %s, %s, %s, %s, %s, %s)
-        """, (
-            user_id, name, quantity, rarity, description, image, Json(extra or {})
+        INSERT INTO inventory (user_id, item_name, quantity, rarity, description, image, extra)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
+            """, (
+            user_id,
+            name,
+            quantity,
+            rarity,
+            description,
+            image,
+            str(extra) if extra is not None else None
         ))
 
     conn.commit()

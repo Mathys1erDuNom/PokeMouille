@@ -102,7 +102,7 @@ class UseItemButton(Button):
 
         # 🔹 Message spécifique selon extra
         if extra and "effect" in extra:
-            effect = extra["effect"]
+            effect = extra
             if effect == "spawn_pokemon" and self.spawn_func:
                 await self.spawn_func(interaction.channel, author=interaction.user)
                 
@@ -220,7 +220,7 @@ def setup_inventory(bot, spawn_func=None):
             rarity=found_item.get("rarity", "common"),
             description=found_item.get("description", ""),
             image=found_item.get("image", ""),
-            extra=found_item.get("extra", {})
+            extra=found_item.get("extra")
         )
         
 
