@@ -84,6 +84,7 @@ class UseItemButton(Button):
 
     async def callback(self, interaction: discord.Interaction):
         new_qty, extra = use_item(self.user_id, self.item["name"])
+        
 
         if new_qty is None:
             await interaction.response.send_message(
@@ -91,45 +92,41 @@ class UseItemButton(Button):
             )
             return
 
-        # Message générique sur l'utilisation
+        # Défère l'interaction immédiatement
+        await interaction.response.defer(ephemeral=True)
+
         msg = f"✅ Vous avez utilisé **{self.item['name']}**."
         if new_qty == 0:
             msg += " C'était le dernier, il a été supprimé ahhhhaaaaaaaaaaa."
         else:
             msg += f" Il vous en reste {new_qty}."
 
-        
-
-        # 🔹 Message spécifique selon extra
-        # 🔹 Message spécifique selon extra
+        # Effets spécifiques
         if extra == "spawn_pokemon":
             if self.spawn_func is not None:
                 pokemon_name, is_shiny = await self.spawn_func(interaction.user)
                 if pokemon_name:
                     shiny_text = "✨ " if is_shiny else ""
                     await interaction.followup.send(
-                    f"🎉 Vous avez gagné un Pokémon {shiny_text}**{pokemon_name}** !",
-                    ephemeral=True
-                )
+                        f"🎉 Vous avez gagné un Pokémon {shiny_text}**{pokemon_name}** !",
+                        ephemeral=True
+                        )
                 else:
                     await interaction.followup.send(
-                    "❌ Impossible de spawn le Pokémon.", ephemeral=True
+                        "❌ Impossible de spawn le Pokémon.", ephemeral=True
                     )
             else:
                 await interaction.followup.send(
                     "❌ La fonction de spawn n'est pas définie.", ephemeral=True
                 )
-            
-
         elif extra == "soin":
             await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
-
         elif extra == "boost":
             await interaction.followup.send("⚡ Vous avez reçu un boost !", ephemeral=True)
-            # Ajoute d'autres effets ici si besoin
 
-
-        await interaction.response.send_message(msg, ephemeral=True)    
+        # Envoie maintenant le message générique
+        await interaction.followup.send(msg, ephemeral=True)
+    
 
 class InventoryItemButton(Button):
     def __init__(self, item, parent_view):
