@@ -39,7 +39,8 @@ class InventoryView(View):
         end = start + self.max_per_page
 
         for item in self.items[start:end]:
-            self.add_item(InventoryItemButton(item))
+           self.add_item(InventoryItemButton(item, self))
+
 
         if self.page > 0:
             self.add_item(InventoryPrevButton(self))
@@ -102,22 +103,23 @@ class UseItemButton(Button):
         # 🔹 Message spécifique selon extra
         if extra and "effect" in extra:
             effect = extra["effect"]
-            if effect == "spawn_pokemon" and self.view.spawn_func:
-                # spawn dans le même channel que l'interaction
-                await interaction.followup.send("ICI", ephemeral=True)
-                await self.view.spawn_func(interaction.channel, author=interaction.user)
+            if effect == "spawn_pokemon" and self.spawn_func:
+                await self.spawn_func(interaction.channel, author=interaction.user)
+                
             elif effect == "soin":
                 await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
             elif effect == "boost":
                 await interaction.followup.send("⚡ Vous avez reçu un boost !", ephemeral=True)
             # Ajoute d'autres effets ici si besoin
 
-
-
 class InventoryItemButton(Button):
-    def __init__(self, item):
-        super().__init__(label=f"{item.get('name','Inconnu')} ×{item.get('quantity', 1)}", style=discord.ButtonStyle.primary)
+    def __init__(self, item, parent_view):
+        super().__init__(
+            label=f"{item.get('name','Inconnu')} ×{item.get('quantity', 1)}",
+            style=discord.ButtonStyle.primary
+        )
         self.item = item
+        self.parent_view = parent_view
 
     async def callback(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
@@ -162,11 +164,16 @@ class InventoryItemButton(Button):
         embed = discord.Embed(title=name)
         embed.set_image(url="attachment://item.png")
 
-        # Crée la vue avec le bouton "Utiliser"
+        # InventoryItemButton.callback
         view = View()
-        view.add_item(UseItemButton(self.item, interaction.user.id))
-
-        await interaction.followup.send(file=file, embed=embed, view=view, ephemeral=True)
+        view.add_item(
+            UseItemButton(
+                self.item,
+                interaction.user.id,
+                spawn_func=self.parent_view.spawn_func
+            )
+        )
+    
 
 
 def setup_inventory(bot, spawn_func=None):
