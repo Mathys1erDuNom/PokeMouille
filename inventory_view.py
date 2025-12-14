@@ -102,6 +102,7 @@ class UseItemButton(Button):
             effect = extra["effect"]
             if effect == "spawn_pokemon" and self.view.spawn_func:
                 # spawn dans le même channel que l'interaction
+                await interaction.followup.send("ICI", ephemeral=True)
                 await self.view.spawn_func(interaction.channel, author=interaction.user)
             elif effect == "soin":
                 await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
