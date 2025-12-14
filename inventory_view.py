@@ -173,6 +173,13 @@ class InventoryItemButton(Button):
                 spawn_func=self.parent_view.spawn_func
             )
         )
+
+        await interaction.followup.send(
+            file=file,
+            embed=embed,
+            view=view,
+            ephemeral=True
+        )
     
 
 
