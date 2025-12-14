@@ -3,6 +3,8 @@ import os
 import psycopg2
 from psycopg2.extras import Json
 from dotenv import load_dotenv
+import json
+from bot import spawn
 
 # Charge les variables d’environnement
 load_dotenv()
@@ -90,11 +92,13 @@ def delete_inventory(user_id):
 
 
 
+
+
 def use_item(user_id, name, amount=1):
-    """Diminue la quantité d'un item. Supprime l'item si quantité ≤ 0."""
+    """Diminue la quantité d'un item. Supprime l'item si quantité ≤ 0 et gère spawn_pokemon."""
     user_id = str(user_id)
     cur.execute("""
-        SELECT quantity FROM inventory
+        SELECT quantity, extra FROM inventory
         WHERE user_id = %s AND item_name = %s
     """, (user_id, name))
     row = cur.fetchone()
@@ -102,7 +106,12 @@ def use_item(user_id, name, amount=1):
     if not row:
         return False  # L'item n'existe pas
 
-    new_qty = row[0] - amount
+    quantity, extra = row
+    # Convertit extra JSONB en dict Python si ce n'est pas déjà le cas
+    if isinstance(extra, str):
+        extra = json.loads(extra)
+
+    new_qty = quantity - amount
     if new_qty > 0:
         cur.execute("""
             UPDATE inventory SET quantity = %s
@@ -115,4 +124,14 @@ def use_item(user_id, name, amount=1):
         """, (user_id, name))
 
     conn.commit()
+
+    # Vérifie si l'item a un extra "spawn_pokemon"
+    if extra and isinstance(extra, dict):
+        if extra.get("effect") == "spawn_pokemon":
+            print(f"🎉 L'item {name} a été utilisé : un Pokémon va apparaître !")
+            spawn(user_id)
+
     return True
+
+
+
