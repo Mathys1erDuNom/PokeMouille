@@ -4,7 +4,7 @@ import psycopg2
 from psycopg2.extras import Json
 from dotenv import load_dotenv
 import json
-from bot import spawn
+
 
 # Charge les variables d’environnement
 load_dotenv()
@@ -124,7 +124,7 @@ def use_item(user_id, name, amount=1):
         """, (user_id, name))
 
     conn.commit()
-
+    from bot import spawn
     # Vérifie si l'item a un extra "spawn_pokemon"
     if extra and isinstance(extra, dict):
         if extra.get("effect") == "spawn_pokemon":
