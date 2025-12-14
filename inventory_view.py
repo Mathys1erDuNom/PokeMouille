@@ -11,7 +11,7 @@ from inventory_db import get_inventory
 from inventory_db import delete_inventory
 import json
 from inventory_db import use_item
-
+from utils import spawn_pokemon_for_user
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 
@@ -103,15 +103,23 @@ class UseItemButton(Button):
         # 🔹 Message spécifique selon extra
         # 🔹 Message spécifique selon extra
         if extra == "spawn_pokemon":
-            if not callable(self.spawn_func):
-                await interaction.followup.send(
-                "❌ Erreur interne : spawn indisponible.",
-                ephemeral=True
+            if self.spawn_func is not None:
+                pokemon_name, is_shiny = await self.spawn_func(interaction.user)
+                if pokemon_name:
+                    shiny_text = "✨ " if is_shiny else ""
+                    await interaction.followup.send(
+                    f"🎉 Vous avez gagné un Pokémon {shiny_text}**{pokemon_name}** !",
+                    ephemeral=True
                 )
-                return
-
-            await interaction.followup.send("🟢 Spawn actif", ephemeral=True)
-            await self.spawn_func(channel=interaction.channel)
+                else:
+                    await interaction.followup.send(
+                    "❌ Impossible de spawn le Pokémon.", ephemeral=True
+                    )
+            else:
+                await interaction.followup.send(
+                    "❌ La fonction de spawn n'est pas définie.", ephemeral=True
+                )
+            
 
         elif extra == "soin":
             await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
@@ -203,7 +211,7 @@ def setup_inventory(bot, spawn_func=None):
             await ctx.send("🎒 Votre inventaire est vide.")
             return
 
-        view = InventoryView(items, spawn_func=spawn_func)
+        view = InventoryView(items, spawn_func=spawn_pokemon_for_user)
         await ctx.send("🎒 **Votre inventaire :**", view=view)
 
 

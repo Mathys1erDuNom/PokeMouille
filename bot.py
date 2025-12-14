@@ -16,7 +16,7 @@ import io
 import uuid
 from croco_event import setup_croco_event
 
-from utils import setup_addpokemon_command
+
 
 
 import unicodedata
@@ -678,7 +678,7 @@ async def on_message(message):
 setup_quiz_commands(bot, spawn_pokemon, ROLE_ID, is_under_ban_func=is_under_ban, authorized_user_id=TARGET_USER_ID_CROCO)
 
 
-setup_addpokemon_command(bot)
+
 
 setup_guess_pokemon_command(
     bot,

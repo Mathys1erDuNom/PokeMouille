@@ -27,6 +27,38 @@ import stat  # pour les stats
 script_dir = os.path.dirname(os.path.abspath(__file__))
 json_dir = os.path.join(script_dir, "json")
 
+
+
+async def spawn_pokemon_for_user(user, json_file="pokemon_gen1_normal.json", shiny_rate=64):
+    """
+    Génère un Pokémon pour un utilisateur, utilisable depuis le bouton de l'inventaire.
+    """
+    data = load_json_file(json_file)
+    if data is None:
+        print(f"❌ Fichier {json_file} introuvable.")
+        return None, False
+
+    # Choix aléatoire du Pokémon
+    pokemon = random.choice(data)
+    is_shiny = (random.randint(1, shiny_rate) == 1)
+
+    if is_shiny and any(p["name"] == pokemon["name"] + "_shiny" for p in data):
+        shiny_match = next((p for p in data if p["name"] == pokemon["name"] + "_shiny"), None)
+        if shiny_match:
+            pokemon = shiny_match
+
+    # Génération IV et stats
+    ivs = generate_ivs()
+    stats_with_iv = apply_ivs(pokemon["stats"], ivs)
+
+    # Sauvegarde
+    save_new_capture(user.id, pokemon["name"], ivs, stats_with_iv, pokemon)
+
+    return pokemon["name"], is_shiny
+
+
+
+
 def generate_ivs():
     return {
         "hp": random.randint(0, 31),
