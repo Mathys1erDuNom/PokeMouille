@@ -24,9 +24,10 @@ with open(item_json_path, "r", encoding="utf-8") as f:
     ITEM_LIST = json.load(f)
 
 class InventoryView(View):
-    def __init__(self, items):
+    def __init__(self, items, spawn_func=None):
         super().__init__(timeout=180)
         self.items = items
+        self.spawn_func = spawn_func
         self.page = 0
         self.max_per_page = 10
     
