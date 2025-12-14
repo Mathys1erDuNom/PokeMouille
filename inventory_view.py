@@ -10,6 +10,8 @@ from inventory_db import get_inventory
 from inventory_db import delete_inventory
 import json
 
+from utils import is_croco
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 
@@ -139,6 +141,7 @@ def setup_inventory(bot):
         await ctx.send("🎒 **Votre inventaire :**", view=view)
 
     # 👉 Nouvelle commande GIVE
+    @is_croco()
     @bot.command(name="give")
     async def give(ctx, user: discord.User, *, item_name: str):
         """Donne un item à un utilisateur."""

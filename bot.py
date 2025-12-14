@@ -35,6 +35,7 @@ from db import save_capture, get_captures
 from new_db import save_new_capture, get_new_captures
 
 from inventory_view import setup_inventory
+from utils import is_croco
 
 
 
@@ -233,10 +234,6 @@ catch_in_progress = set()  # guild_id en cours de capture
 
 catch_lock = asyncio.Lock()  # Verrou global catch (tu peux faire un dict par guild si besoin)
 
-def is_croco():
-    def predicate(ctx):
-        return ctx.author.id == TARGET_USER_ID_CROCO
-    return commands.check(predicate)
 
 
 def reset_spawn(guild_id):
