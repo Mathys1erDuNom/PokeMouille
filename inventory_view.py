@@ -102,7 +102,7 @@ class UseItemButton(Button):
 
         # 🔹 Message spécifique selon extra
         # 🔹 Message spécifique selon extra
-        if extra == "spawn_pokemon" and self.spawn_func:
+        if extra == "spawn_pokemon":
             msg += " Spawn actif"
             
             await self.spawn_func(channel=interaction.channel)
@@ -114,6 +114,8 @@ class UseItemButton(Button):
         elif extra == "boost":
             await interaction.followup.send("⚡ Vous avez reçu un boost !", ephemeral=True)
             # Ajoute d'autres effets ici si besoin
+
+
         await interaction.response.send_message(msg, ephemeral=True)    
 
 class InventoryItemButton(Button):
