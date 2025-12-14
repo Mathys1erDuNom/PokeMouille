@@ -11,7 +11,6 @@ from inventory_db import get_inventory
 from inventory_db import delete_inventory
 import json
 from inventory_db import use_item
-from utils import spawn_custom_pokemon
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
@@ -74,20 +73,12 @@ class InventoryNextButton(Button):
 
 
 class UseItemButton(Button):
-    def __init__(self, item, user_id, spawn_func=None):
+    def __init__(self, item, user_id):
         super().__init__(label="🛠 Utiliser", style=discord.ButtonStyle.success)
         self.item = item
         self.user_id = user_id
-        self.spawn_func = spawn_func  # fonction de spawn à appeler
 
     async def callback(self, interaction: discord.Interaction):
-        # Vérifie que c'est bien le bon utilisateur
-        if interaction.user.id != self.user_id:
-            await interaction.response.send_message(
-                "❌ Vous ne pouvez pas utiliser ce bouton.", ephemeral=True
-            )
-            return
-
         new_qty, extra = use_item(self.user_id, self.item["name"])
 
         if new_qty is None:
@@ -96,30 +87,25 @@ class UseItemButton(Button):
             )
             return
 
+        # Message générique sur l'utilisation
         msg = f"✅ Vous avez utilisé **{self.item['name']}**."
         if new_qty == 0:
             msg += " C'était le dernier, il a été supprimé."
         else:
             msg += f" Il vous en reste {new_qty}."
+
         await interaction.response.send_message(msg, ephemeral=True)
 
         # 🔹 Message spécifique selon extra
         if extra and "effect" in extra:
             effect = extra["effect"]
-            if effect == "spawn_pokemon" and self.spawn_func:
-                # Appelle spawn_pokemon seulement pour l'utilisateur qui a utilisé l'item
-                await self.spawn_func(
-                    channel=interaction.channel,
-                    author=interaction.user,
-                    target_user=interaction.user  # 🐊 Pokémon réservé à l'utilisateur
-                )
-                await interaction.followup.send(
-                    "✨ Un Pokémon est apparu juste pour vous !", ephemeral=True
-                )
+            if effect == "spawn_pokemon":
+                await interaction.followup.send("✨ Un Pokémon est apparu !", ephemeral=True)
             elif effect == "soin":
                 await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
             elif effect == "boost":
                 await interaction.followup.send("⚡ Vous avez reçu un boost !", ephemeral=True)
+            # Ajoute d'autres effets ici si besoin
 
 
 
