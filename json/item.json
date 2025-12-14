@@ -4,8 +4,6 @@
     "rarity": "common",
     "description": "Une balle basique pour capturer les Pokémon.",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png",
-    "extra": {
-      "effect": "spawn_pokemon"
-    }
+    "extra": "spawn_pokemon"
   }
 ]
