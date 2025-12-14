@@ -103,10 +103,15 @@ class UseItemButton(Button):
         # 🔹 Message spécifique selon extra
         # 🔹 Message spécifique selon extra
         if extra == "spawn_pokemon":
-            msg += " Spawn actif"
-            
+            if not callable(self.spawn_func):
+                await interaction.followup.send(
+                "❌ Erreur interne : spawn indisponible.",
+                ephemeral=True
+                )
+                return
+
+            await interaction.followup.send("🟢 Spawn actif", ephemeral=True)
             await self.spawn_func(channel=interaction.channel)
-            await interaction.response.send_message(msg, ephemeral=True)
 
         elif extra == "soin":
             await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
