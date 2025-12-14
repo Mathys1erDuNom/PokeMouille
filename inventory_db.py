@@ -3,8 +3,6 @@ import os
 import psycopg2
 from psycopg2.extras import Json
 from dotenv import load_dotenv
-import json
-
 
 # Charge les variables d’environnement
 load_dotenv()
@@ -89,33 +87,3 @@ def delete_inventory(user_id):
         WHERE user_id = %s
     """, (str(user_id),))
     conn.commit()
-
-
-
-def use_item(user_id, name, amount=1):
-    """Diminue la quantité d'un item et retourne (success, should_spawn)."""
-    user_id = str(user_id)
-    cur.execute("""
-        SELECT quantity, extra FROM inventory
-        WHERE user_id = %s AND item_name = %s
-    """, (user_id, name))
-    row = cur.fetchone()
-
-    if not row:
-        return False, False
-
-    quantity, extra = row
-    if isinstance(extra, str):
-        import json
-        extra = json.loads(extra)
-
-    new_qty = quantity - amount
-    if new_qty > 0:
-        cur.execute("UPDATE inventory SET quantity = %s WHERE user_id = %s AND item_name = %s",
-                    (new_qty, user_id, name))
-    else:
-        cur.execute("DELETE FROM inventory WHERE user_id = %s AND item_name = %s", (user_id, name))
-    conn.commit()
-
-    spawn_effect = extra.get("effect") == "spawn_pokemon" if extra else False
-    return True, spawn_effect

@@ -4,16 +4,12 @@ from discord.ui import View, Button
 from PIL import Image, ImageDraw, ImageFont
 import requests, io, os
 from io import BytesIO
+from utils import is_croco
 
 from inventory_db import add_item
 from inventory_db import get_inventory
 from inventory_db import delete_inventory
 import json
-from inventory_db import use_item  # ajoute ça en haut
-
-from utils import is_croco
-
-
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
@@ -81,7 +77,6 @@ class InventoryItemButton(Button):
         # Remplacer 'name' par 'item_name'
         super().__init__(label=f"{item.get('name','Inconnu')} ×{item.get('quantity', 1)}", style=discord.ButtonStyle.primary)
         self.item = item
-        self.use_button = InventoryUseButton(item)
 
     async def callback(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
@@ -130,33 +125,6 @@ class InventoryItemButton(Button):
         embed = discord.Embed(title=name)
         embed.set_image(url="attachment://item.png")
         await interaction.followup.send(file=file, embed=embed, ephemeral=True)
-        view = View()
-        view.add_item(self.use_button)
-        await interaction.followup.send("Que voulez-vous faire avec cet objet ?", view=view, ephemeral=True)
-
-class InventoryUseButton(Button):
-    def __init__(self, item):
-        super().__init__(label="🛠 Utiliser", style=discord.ButtonStyle.success)
-        self.item = item
-
-    async def callback(self, interaction: discord.Interaction):
-        user_id = interaction.user.id
-        name = self.item["name"]
-
-        # Décrémente la quantité
-        success = use_item(user_id, name)
-        if success:
-            await interaction.response.send_message(f"✅ {name} a été utilisé.", ephemeral=True)
-
-            # Si l'item est une Poké Ball, spawn un Pokémon
-            if self.item.get("extra", {}).get("effect") == "spawn_pokemon":
-                from bot import spawn_pokemon
-                # On récupère le channel d'interaction
-                channel = interaction.channel
-                # On lance spawn_pokemon dans la boucle existante
-                asyncio.create_task(spawn_pokemon(channel, force=True, author=interaction.user))
-        else:
-            await interaction.response.send_message(f"❌ Impossible d'utiliser {name}.", ephemeral=True)
 
 
 def setup_inventory(bot):
