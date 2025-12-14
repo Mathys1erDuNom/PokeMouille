@@ -2,12 +2,10 @@
 import discord
 from discord.ui import View, Button
 from PIL import Image, ImageDraw, ImageFont
-import requests, io, os
+import requests, os
 from io import BytesIO
 
-from inventory_db import add_item
-from inventory_db import get_inventory
-from inventory_db import delete_inventory
+from inventory_db import add_item, get_inventory, delete_inventory, use_item
 import json
 
 from utils import is_croco
@@ -15,13 +13,11 @@ from utils import is_croco
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 
-
 # Chargement du fichier item.json
-
 item_json_path = os.path.join(script_dir, "json", "item.json")
-
 with open(item_json_path, "r", encoding="utf-8") as f:
     ITEM_LIST = json.load(f)
+
 
 class InventoryView(View):
     def __init__(self, items):
@@ -73,10 +69,8 @@ class InventoryNextButton(Button):
 
 class InventoryItemButton(Button):
     def __init__(self, item):
-  
-
-        # Remplacer 'name' par 'item_name'
-        super().__init__(label=f"{item.get('name','Inconnu')} ×{item.get('quantity', 1)}", style=discord.ButtonStyle.primary)
+        super().__init__(label=f"{item.get('name','Inconnu')} ×{item.get('quantity', 1)}",
+                         style=discord.ButtonStyle.primary)
         self.item = item
 
     async def callback(self, interaction: discord.Interaction):
@@ -88,6 +82,7 @@ class InventoryItemButton(Button):
         description = self.item["description"]
         image_url = self.item["image"]
 
+        # Création de la carte
         card = Image.new("RGBA", (600, 400), (245, 245, 245, 255))
         draw = ImageDraw.Draw(card)
 
@@ -107,14 +102,10 @@ class InventoryItemButton(Button):
         if image_url and image_url.startswith("http"):
             try:
                 resp = requests.get(image_url)
-                resp.raise_for_status()  # s'assure que l'image est bien récupérée
+                resp.raise_for_status()
                 item_img = Image.open(BytesIO(resp.content)).convert("RGBA")
                 item_img = item_img.resize((200, 200), Image.Resampling.LANCZOS)
-                # Collage avec ou sans masque selon la présence de transparence
-                if item_img.mode == "RGBA":
-                    card.paste(item_img, (350, 100), item_img)
-                else:
-                    card.paste(item_img, (350, 100))
+                card.paste(item_img, (350, 100), item_img if item_img.mode == "RGBA" else None)
             except Exception as e:
                 print(f"Erreur lors du chargement de l'image : {e}")
 
@@ -125,7 +116,27 @@ class InventoryItemButton(Button):
 
         embed = discord.Embed(title=name)
         embed.set_image(url="attachment://item.png")
-        await interaction.followup.send(file=file, embed=embed, ephemeral=True)
+
+        # Crée la view avec le bouton utiliser
+        view = View()
+        view.add_item(InventoryUseButton(self.item))
+        await interaction.followup.send(file=file, embed=embed, view=view, ephemeral=True)
+
+
+class InventoryUseButton(Button):
+    def __init__(self, item):
+        super().__init__(label="🛠 Utiliser", style=discord.ButtonStyle.success)
+        self.item = item
+
+    async def callback(self, interaction: discord.Interaction):
+        user_id = interaction.user.id
+        name = self.item["name"]
+
+        success = use_item(user_id, name)
+        if success:
+            await interaction.response.send_message(f"✅ {name} a été utilisé.", ephemeral=True)
+        else:
+            await interaction.response.send_message(f"❌ Impossible d'utiliser {name}.", ephemeral=True)
 
 
 def setup_inventory(bot):
@@ -140,13 +151,10 @@ def setup_inventory(bot):
         view = InventoryView(items)
         await ctx.send("🎒 **Votre inventaire :**", view=view)
 
-    # 👉 Nouvelle commande GIVE
     @is_croco()
     @bot.command(name="give")
     async def give(ctx, user: discord.User, *, item_name: str):
         """Donne un item à un utilisateur."""
-
-        # Recherche de l'item dans item.json
         found_item = next(
             (i for i in ITEM_LIST if i["item_name"].lower() == item_name.lower()),
             None
@@ -156,7 +164,6 @@ def setup_inventory(bot):
             await ctx.send(f"❌ Grand Maître suprême des Crocodiles, l’item `{item_name}` n’existe pas.")
             return
 
-        # Ajout de l’item dans la DB
         add_item(
             user_id=user.id,
             name=found_item["item_name"],
@@ -166,7 +173,6 @@ def setup_inventory(bot):
             image=found_item.get("image", ""),
             extra=found_item.get("extra", {})
         )
-        
 
         await ctx.send(
             f"🎁 Grand Maître suprême des Crocodiles, l’item **{found_item['item_name']}** "
@@ -176,7 +182,5 @@ def setup_inventory(bot):
     @bot.command(name="inventaire_vide")
     async def inventaire_vide(ctx, user: discord.User):
         """Supprime tous les items de l'inventaire d'un utilisateur."""
-    
         delete_inventory(user.id)
         await ctx.send(f"🗑️ Grand Maître suprême des Crocodiles, l'inventaire de {user.mention} a été vidé !")
-    
