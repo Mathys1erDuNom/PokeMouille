@@ -9,6 +9,7 @@ from inventory_db import add_item
 from inventory_db import get_inventory
 from inventory_db import delete_inventory
 import json
+from inventory_db import use_item  # ajoute ça en haut
 
 from utils import is_croco
 
@@ -80,6 +81,7 @@ class InventoryItemButton(Button):
         # Remplacer 'name' par 'item_name'
         super().__init__(label=f"{item.get('name','Inconnu')} ×{item.get('quantity', 1)}", style=discord.ButtonStyle.primary)
         self.item = item
+        self.use_button = InventoryUseButton(item)
 
     async def callback(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
@@ -128,7 +130,26 @@ class InventoryItemButton(Button):
         embed = discord.Embed(title=name)
         embed.set_image(url="attachment://item.png")
         await interaction.followup.send(file=file, embed=embed, ephemeral=True)
+        view = View()
+        view.add_item(self.use_button)
+        await interaction.followup.send("Que voulez-vous faire avec cet objet ?", view=view, ephemeral=True)
+        
 
+class InventoryUseButton(Button):
+    def __init__(self, item):
+        super().__init__(label="🛠 Utiliser", style=discord.ButtonStyle.success)
+        self.item = item
+
+    async def callback(self, interaction: discord.Interaction):
+        user_id = interaction.user.id
+        name = self.item["name"]
+
+        # Décrémente la quantité
+        success = use_item(user_id, name)
+        if success:
+            await interaction.response.send_message(f"✅ {name} a été utilisé.", ephemeral=True)
+        else:
+            await interaction.response.send_message(f"❌ Impossible d'utiliser {name}.", ephemeral=True)
 
 def setup_inventory(bot):
 

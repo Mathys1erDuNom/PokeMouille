@@ -90,3 +90,29 @@ def delete_inventory(user_id):
 
 
 
+def use_item(user_id, name, amount=1):
+    """Diminue la quantité d'un item. Supprime l'item si quantité ≤ 0."""
+    user_id = str(user_id)
+    cur.execute("""
+        SELECT quantity FROM inventory
+        WHERE user_id = %s AND item_name = %s
+    """, (user_id, name))
+    row = cur.fetchone()
+
+    if not row:
+        return False  # L'item n'existe pas
+
+    new_qty = row[0] - amount
+    if new_qty > 0:
+        cur.execute("""
+            UPDATE inventory SET quantity = %s
+            WHERE user_id = %s AND item_name = %s
+        """, (new_qty, user_id, name))
+    else:
+        cur.execute("""
+            DELETE FROM inventory
+            WHERE user_id = %s AND item_name = %s
+        """, (user_id, name))
+
+    conn.commit()
+    return True
