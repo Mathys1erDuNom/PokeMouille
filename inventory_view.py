@@ -94,7 +94,7 @@ class UseItemButton(Button):
         # Message générique sur l'utilisation
         msg = f"✅ Vous avez utilisé **{self.item['name']}**."
         if new_qty == 0:
-            msg += " C'était le dernier, il a été supprimé."
+            msg += " C'était le dernier, il a été supprimé ahhhhaaaaaaaaaaa."
         else:
             msg += f" Il vous en reste {new_qty}."
 
