@@ -13,6 +13,11 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
+
+cur.execute("DROP TABLE IF EXISTS inventory;")
+conn.commit()
+
+
 # Création de la table inventaire
 cur.execute("""
 CREATE TABLE IF NOT EXISTS inventory (
@@ -22,7 +27,7 @@ CREATE TABLE IF NOT EXISTS inventory (
     rarity TEXT,
     description TEXT,
     image TEXT,
-    extra JSONB
+    extra TEXT
 );
 """)
 conn.commit()
