@@ -107,8 +107,8 @@ class UseItemButton(Button):
 
                 pokemon_name, is_shiny = await self.spawn_func(
                     interaction.user,
-                    json_file="pokemon_gen1_normal.json",  # 📦 JSON choisi ici
-                    shiny_rate=3                       # ✨ shiny boosté
+                    json_file="pokemon_all_pokeball_normal.json",  # 📦 JSON choisi ici
+                    shiny_rate=64        # ✨ shiny boosté
                 )
 
                 if pokemon_name:
@@ -128,8 +128,33 @@ class UseItemButton(Button):
                 ephemeral=True
                 )
 
-        elif extra == "soin":
-            await interaction.followup.send("💖 Votre Pokémon a été soigné !", ephemeral=True)
+        elif extra == "spawn_pokemon_rare":
+            if self.spawn_func is not None:
+
+                pokemon_name, is_shiny = await self.spawn_func(
+                    interaction.user,
+                    json_file="pokemon_gen1_normal.json",  # 📦 JSON choisi ici
+                    shiny_rate=64                       # ✨ shiny boosté
+                )
+
+                if pokemon_name:
+                    shiny_text = "✨ " if is_shiny else ""
+                    await interaction.followup.send(
+                    f"🎉 Vous avez gagné un Pokémon {shiny_text}**{pokemon_name}** !",
+                    ephemeral=True
+                )
+                else:
+                    await interaction.followup.send(
+                    "❌ Impossible de spawn le Pokémon.",
+                    ephemeral=True
+                )
+            else:
+                await interaction.followup.send(
+                "❌ La fonction de spawn n'est pas définie.",
+                ephemeral=True
+                )
+
+
         elif extra == "boost":
             await interaction.followup.send("⚡ Vous avez reçu un boost !", ephemeral=True)
 
