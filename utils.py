@@ -29,25 +29,40 @@ json_dir = os.path.join(script_dir, "json")
 
 
 
-async def spawn_pokemon_for_user(user, json_file="pokemon_gen1_shiny.json", shiny_rate=64):
-    """
-    Génère un Pokémon pour un utilisateur, utilisable depuis le bouton de l'inventaire.
-    """
-    data = load_json_file(json_file)
-    if data is None:
+async def spawn_pokemon_for_user(user, json_file="pokemon_gen1_normal.json", shiny_rate=64):
+    # Chargement NORMAL
+    data_normal = load_json_file(json_file)
+    if data_normal is None:
         print(f"❌ Fichier {json_file} introuvable.")
         return None, False
 
-    # Choix aléatoire du Pokémon
-    pokemon = random.choice(data)
+    # Tirage du Pokémon normal
+    pokemon_normal = random.choice(data_normal)
+
+    # Roll shiny
     is_shiny = (random.randint(1, shiny_rate) == 1)
 
-    if is_shiny and any(p["name"] == pokemon["name"] + "_shiny" for p in data):
-        shiny_match = next((p for p in data if p["name"] == pokemon["name"] + "_shiny"), None)
-        if shiny_match:
-            pokemon = shiny_match
+    pokemon = pokemon_normal
 
-    # Génération IV et stats
+    if is_shiny:
+        shiny_file = json_file.replace("_normal.json", "_shiny.json")
+        data_shiny = load_json_file(shiny_file)
+
+        if data_shiny:
+            shiny_match = next(
+                (p for p in data_shiny if p["name"] == pokemon_normal["name"]),
+                None
+            )
+
+            if shiny_match:
+                pokemon = shiny_match
+            else:
+                # sécurité : pas de shiny trouvé
+                is_shiny = False
+        else:
+            is_shiny = False
+
+    # IV & stats
     ivs = generate_ivs()
     stats_with_iv = apply_ivs(pokemon["stats"], ivs)
 
