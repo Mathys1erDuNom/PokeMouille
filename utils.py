@@ -29,7 +29,7 @@ json_dir = os.path.join(script_dir, "json")
 
 
 
-async def spawn_pokemon_for_user(user, json_file="pokemon_gen1_normal.json", shiny_rate=64):
+async def spawn_pokemon_for_user(user, json_file="pokemon_gen1_shiny.json", shiny_rate=64):
     """
     Génère un Pokémon pour un utilisateur, utilisable depuis le bouton de l'inventaire.
     """
