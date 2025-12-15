@@ -40,6 +40,70 @@
         }
     },
     {
+        "name": "Artikodin_shiny",
+        "type": [
+            "glace",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/144.png",
+        "attacks": [
+            "Eclats Glace",
+            "Cru-Aile",
+            "Vent Glace"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 85,
+            "special_attack": 125,
+            "speed": 85,
+            "defense": 100,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Electhor_shiny",
+        "type": [
+            "electrique",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/145.png",
+        "attacks": [
+            "Eclair",
+            "Cru-Aile",
+            "Boule Elek",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 90,
+            "special_attack": 125,
+            "speed": 100,
+            "defense": 85,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Sulfura_shiny",
+        "type": [
+            "feu",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/146.png",
+        "attacks": [
+            "Braise",
+            "Cru-Aile",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 100,
+            "special_attack": 125,
+            "speed": 90,
+            "defense": 90,
+            "special_defense": 85
+        }
+    },
+    {
         "name": "Lugia_shiny",
         "type": [
             "psy",
