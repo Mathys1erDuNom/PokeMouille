@@ -30,37 +30,26 @@ json_dir = os.path.join(script_dir, "json")
 
 
 async def spawn_pokemon_for_user(user, json_file="pokemon_gen1_normal.json", shiny_rate=64):
-    # Chargement NORMAL
-    data_normal = load_json_file(json_file)
-    if data_normal is None:
-        print(f"❌ Fichier {json_file} introuvable.")
-        return None, False
-
-    # Tirage du Pokémon normal
-    pokemon_normal = random.choice(data_normal)
-
-    # Roll shiny
+    """
+    Génère un Pokémon pour un utilisateur, d'abord en décidant s'il est shiny ou non,
+    puis en le tirant dans le JSON correspondant.
+    """
+    # Roll shiny d'abord
     is_shiny = (random.randint(1, shiny_rate) == 1)
 
-    pokemon = pokemon_normal
-
+    # Choisir le fichier JSON selon shiny ou normal
+    chosen_file = json_file
     if is_shiny:
-        shiny_file = json_file.replace("_normal.json", "_shiny.json")
-        data_shiny = load_json_file(shiny_file)
+        chosen_file = json_file.replace("_normal.json", "_shiny.json")
 
-        if data_shiny:
-            shiny_match = next(
-                (p for p in data_shiny if p["name"] == pokemon_normal["name"]),
-                None
-            )
+    # Charger le JSON choisi
+    data = load_json_file(chosen_file)
+    if data is None:
+        print(f"❌ Fichier {chosen_file} introuvable.")
+        return None, False
 
-            if shiny_match:
-                pokemon = shiny_match
-            else:
-                # sécurité : pas de shiny trouvé
-                is_shiny = False
-        else:
-            is_shiny = False
+    # Tirage du Pokémon dans le JSON choisi
+    pokemon = random.choice(data)
 
     # IV & stats
     ivs = generate_ivs()
@@ -70,7 +59,6 @@ async def spawn_pokemon_for_user(user, json_file="pokemon_gen1_normal.json", shi
     save_new_capture(user.id, pokemon["name"], ivs, stats_with_iv, pokemon)
 
     return pokemon["name"], is_shiny
-
 
 
 
