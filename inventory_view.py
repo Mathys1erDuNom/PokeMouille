@@ -128,12 +128,12 @@ class UseItemButton(Button):
                 ephemeral=True
                 )
 
-        elif extra == "spawn_pokemon_rare":
+        elif extra == "spawn_pokemon_legendary":
             if self.spawn_func is not None:
 
                 pokemon_name, is_shiny = await self.spawn_func(
                     interaction.user,
-                    json_file="pokemon_gen1_normal.json",  # 📦 JSON choisi ici
+                    json_file="pokemon_legendaire_normal.json",  # 📦 JSON choisi ici
                     shiny_rate=64                       # ✨ shiny boosté
                 )
 
