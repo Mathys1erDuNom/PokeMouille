@@ -2,7 +2,7 @@
   {
     "item_name": "Poké Ball",
     "rarity": "common",
-    "description": "Une balle basique pour capturer les Pokémon.",
+    "description": "Une Poké ball basique qui contient un Pokémon.",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png",
     "extra": "spawn_pokemon"
   }
