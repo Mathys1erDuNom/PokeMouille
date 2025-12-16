@@ -26,8 +26,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/2.png",
         "attacks": [
             "Fouet Lianes",
-            "Charge",
-            "Vampigraine"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -221,7 +220,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/12.png",
         "attacks": [
-            "Poudre Dodo",
+ 
             "Vent Violent",
             "Piqure"
         ],
@@ -279,7 +278,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/15.png",
         "attacks": [
             "Dard-Venin",
-            "Vol",
+       
             "Piqure"
         ],
         "stats": {
@@ -339,8 +338,7 @@
         "attacks": [
             "Charge",
             "Pique",
-            "Cru-Aile",
-            "Atterrissage"
+            "Cru-Aile"
         ],
         "stats": {
             "hp": 83,
@@ -380,8 +378,7 @@
         "attacks": [
             "Morsure",
             "Griffe",
-            "Queue de fer",
-            "Vive-Attaque"
+            "Queue de fer"
         ],
         "stats": {
             "hp": 55,
@@ -421,8 +418,7 @@
         "attacks": [
             "Charge",
             "Pique",
-            "Cru-Aile",
-            "Atterrissage"
+            "Cru-Aile"
         ],
         "stats": {
             "hp": 65,
@@ -440,8 +436,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/23.png",
         "attacks": [
-            "Constriction",
-            "Lance-Flammes"
+        
+            "Bomb-Beurk",
+            "Charge"
         ],
         "stats": {
             "hp": 35,
@@ -459,8 +456,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/24.png",
         "attacks": [
-            "Constriction",
-            "Lance-Flammes",
+
+            "Bomb-Beurk",
+            "Charge",
             "Morsure"
         ],
         "stats": {
@@ -519,7 +517,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/27.png",
         "attacks": [
             "Charge",
-            "Fouet Lianes"
+            "Boue-Bombe"
         ],
         "stats": {
             "hp": 50,
@@ -538,7 +536,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/28.png",
         "attacks": [
             "Charge",
-            "Fouet Lianes",
+            "Seisme",
             "Tranche"
         ],
         "stats": {
@@ -578,7 +576,7 @@
         "attacks": [
             "Charge",
             "Piqure",
-            "Vampigraine"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 70,
@@ -599,7 +597,8 @@
         "attacks": [
             "Charge",
             "Piqure",
-            "Vampigraine",
+            "Bomb-Beurk",
+      
             "Seisme"
         ],
         "stats": {
@@ -639,7 +638,7 @@
         "attacks": [
             "Charge",
             "Piqure",
-            "Vampigraine"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 61,
@@ -660,8 +659,8 @@
         "attacks": [
             "Charge",
             "Piqure",
-            "Vampigraine",
-            "Seisme"
+            "Seisme",
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 81,
@@ -680,7 +679,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/35.png",
         "attacks": [
             "Charge",
-            "Poudre Dodo"
+            "Marelle",
+            "Pouvoir Lunaire"
         ],
         "stats": {
             "hp": 70,
@@ -699,8 +699,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/36.png",
         "attacks": [
             "Charge",
-            "Poudre Dodo",
-            "Choc Psy"
+    
+            "Choc Psy",
+            "Pouvoir Lunaire"
         ],
         "stats": {
             "hp": 95,
@@ -758,8 +759,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/39.png",
         "attacks": [
-            "Poudre Dodo",
-            "Chant",
+  
+            "Pouvoir Lunaire",
             "Charge"
         ],
         "stats": {
@@ -779,8 +780,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/40.png",
         "attacks": [
-            "Poudre Dodo",
-            "Chant",
+   
+            "Pouvoir Lunaire",
             "Charge",
             "Ecrasement"
         ],
@@ -802,8 +803,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/41.png",
         "attacks": [
             "Morsure",
-            "Ultrason",
-            "Vol"
+            "Dard-Venin"
+        
         ],
         "stats": {
             "hp": 40,
@@ -822,8 +823,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/42.png",
         "attacks": [
             "Morsure",
-            "Ultrason",
-            "Vol",
+            "Dard-Venin",
+               
             "Cru-Aile"
         ],
         "stats": {
@@ -844,7 +845,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/43.png",
         "attacks": [
             "Fouet Lianes",
-            "Vampigraine"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 50,
@@ -864,8 +865,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/44.png",
         "attacks": [
             "Fouet Lianes",
-            "Vampigraine",
-            "Poudre Dodo"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 75,
@@ -886,7 +886,7 @@
         "attacks": [
             "Fouet Lianes",
             "Canon Graine",
-            "Vampigraine"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 85,
@@ -906,7 +906,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/46.png",
         "attacks": [
             "Griffe",
-            "Spore"
+            "Piqure"
         ],
         "stats": {
             "hp": 35,
@@ -926,8 +926,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/47.png",
         "attacks": [
             "Griffe",
-            "Spore",
-            "Lance-Soleil"
+            "Piqure"
         ],
         "stats": {
             "hp": 60,
@@ -967,8 +966,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/49.png",
         "attacks": [
             "Dard-Venin",
-            "Piqure",
-            "Ultrason"
+            "Piqure"
         ],
         "stats": {
             "hp": 70,
@@ -986,8 +984,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/50.png",
         "attacks": [
-            "Charge",
-            "Tranche"
+            "Charge"
         ],
         "stats": {
             "hp": 40,
@@ -1006,7 +1003,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/51.png",
         "attacks": [
             "Charge",
-            "Tranche",
+           
             "Seisme"
         ],
         "stats": {
@@ -1045,8 +1042,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/53.png",
         "attacks": [
             "Griffe",
-            "Tranche",
-            "Cru-Aile"
+            "Tranche"
         ],
         "stats": {
             "hp": 65,
@@ -1065,7 +1061,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/54.png",
         "attacks": [
             "Pistolet a O",
-            "Brouillard"
+            "Charge"
         ],
         "stats": {
             "hp": 50,
@@ -1084,8 +1080,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/55.png",
         "attacks": [
             "Pistolet a O",
-            "Brouillard",
-            "Marelle"
+            "Charge"
         ],
         "stats": {
             "hp": 65,
@@ -1104,7 +1099,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/56.png",
         "attacks": [
             "Charge",
-            "Morsure"
+            "Morsure",
+            "Poing Karate"
         ],
         "stats": {
             "hp": 40,
@@ -1124,7 +1120,7 @@
         "attacks": [
             "Charge",
             "Morsure",
-            "Pique"
+            "Poing Karate"
         ],
         "stats": {
             "hp": 65,
@@ -1201,8 +1197,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/61.png",
         "attacks": [
             "Pistolet a O",
-            "Charge",
-            "Morsure"
+            "Charge"
+            
         ],
         "stats": {
             "hp": 54,
@@ -1223,7 +1219,7 @@
         "attacks": [
             "Pistolet a O",
             "Charge",
-            "Morsure",
+            
             "Seisme"
         ],
         "stats": {
@@ -1242,8 +1238,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/63.png",
         "attacks": [
-            "Choc Psy",
-            "Teleport"
+            "Choc Psy"
         ],
         "stats": {
             "hp": 25,
@@ -1262,7 +1257,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/64.png",
         "attacks": [
             "Choc Psy",
-            "Teleport",
+  
             "Psyko"
         ],
         "stats": {
@@ -1282,9 +1277,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/65.png",
         "attacks": [
             "Choc Psy",
-            "Teleport",
-            "Psyko",
-            "Bouclier"
+         
+            "Psyko"
         ],
         "stats": {
             "hp": 55,
@@ -1363,8 +1357,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/69.png",
         "attacks": [
-            "Fouet Lianes",
-            "Vampigraine"
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 45,
@@ -1384,7 +1377,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/70.png",
         "attacks": [
             "Fouet Lianes",
-            "Vampigraine",
+            "Bomb-Beurk",
             "Canon Graine"
         ],
         "stats": {
@@ -1405,9 +1398,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/71.png",
         "attacks": [
             "Fouet Lianes",
-            "Vampigraine",
+      
             "Canon Graine",
-            "Siphon"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 75,
@@ -1447,8 +1440,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/73.png",
         "attacks": [
             "Pistolet a O",
-            "Dard-Venin",
-            "Ultrason"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 80,
@@ -1590,8 +1582,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/80.png",
         "attacks": [
             "Pistolet a O",
-            "Choc Psy",
-            "Brouillard"
+            "Choc Psy"
         ],
         "stats": {
             "hp": 95,
@@ -1631,8 +1622,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/82.png",
         "attacks": [
             "Eclair",
-            "Charge",
-            "Boule Elek"
+            "Charge"
         ],
         "stats": {
             "hp": 50,
@@ -1752,7 +1742,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/88.png",
         "attacks": [
             "Boue-Bombe",
-            "Tranche"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 40,
@@ -1771,7 +1761,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/89.png",
         "attacks": [
             "Boue-Bombe",
-            "Tranche",
+            "Bomb-Beurk",
             "Lance-Flammes"
         ],
         "stats": {
@@ -1831,8 +1821,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/92.png",
         "attacks": [
-            "Boule Ombre",
-            "Gaz Toxik"
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 30,
@@ -1851,9 +1840,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/93.png",
         "attacks": [
-            "Boule Ombre",
-            "Gaz Toxik",
-            "Explosion"
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 45,
@@ -1872,9 +1859,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/94.png",
         "attacks": [
-            "Boule Ombre",
-            "Gaz Toxik",
-            "Explosion",
+            "Balle Ombre",
+            "Bomb-Beurk",
+       
             "Lance-Flammes"
         ],
         "stats": {
@@ -1913,8 +1900,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/96.png",
         "attacks": [
-            "Choc Psy",
-            "Poudre Dodo"
+            "Choc Psy"
         ],
         "stats": {
             "hp": 60,
@@ -1933,7 +1919,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/97.png",
         "attacks": [
             "Choc Psy",
-            "Poudre Dodo",
+     
             "Psyko"
         ],
         "stats": {
@@ -2011,8 +1997,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/101.png",
         "attacks": [
             "Eclair",
-            "Charge",
-            "Boule Elek"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -2167,8 +2152,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/109.png",
         "attacks": [
-            "Gaz Toxik",
-            "Tranche"
+       
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 40,
@@ -2186,9 +2171,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/110.png",
         "attacks": [
-            "Gaz Toxik",
-            "Tranche",
-            "Explosion"
+            
+            "Bomb-Beurk"
+         
         ],
         "stats": {
             "hp": 65,
@@ -2248,7 +2233,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/113.png",
         "attacks": [
             "Charge",
-            "Tranche",
+          
             "Pouvoir Lunaire"
         ],
         "stats": {
@@ -2344,8 +2329,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/118.png",
         "attacks": [
-            "Pistolet a O",
-            "Charme"
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 70,
@@ -2364,7 +2348,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/119.png",
         "attacks": [
             "Pistolet a O",
-            "Charme",
+       
             "Laser Glace"
         ],
         "stats": {
@@ -2425,8 +2409,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/122.png",
         "attacks": [
-            "Choc Psy",
-            "Bluff"
+            "Choc Psy"
         ],
         "stats": {
             "hp": 40,
@@ -2603,8 +2586,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/131.png",
         "attacks": [
             "Pistolet a O",
-            "Laser Glace",
-            "Brouillard"
+            "Laser Glace"
         ],
         "stats": {
             "hp": 130,
@@ -2717,7 +2699,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/137.png",
         "attacks": [
             "Charge",
-            "Tranche"
+            "Choc Psy"
         ],
         "stats": {
             "hp": 65,
@@ -2881,8 +2863,8 @@
         "attacks": [
             "Eclair",
             "Cru-Aile",
-            "Boule Elek",
-            "Lance-Flammes"
+    
+            "Tonnerre"
         ],
         "stats": {
             "hp": 90,
@@ -2941,8 +2923,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/148.png",
         "attacks": [
             "Dracochoc",
-            "Charge",
-            "Seisme"
+            "Charge"
         ],
         "stats": {
             "hp": 61,
@@ -2962,8 +2943,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/149.png",
         "attacks": [
             "Dracochoc",
-            "Seisme",
-            "Lance-Flammes"
+            "Seisme"
         ],
         "stats": {
             "hp": 91,

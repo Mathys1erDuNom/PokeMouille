@@ -6,9 +6,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/252.png",
         "attacks": [
-            "Ecras’Face",
-            "Ultimapoing",
-            "Poing Eclair"
+            "Charge"
         ],
         "stats": {
             "hp": 40,
@@ -26,9 +24,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/253.png",
         "attacks": [
-            "Ecras’Face",
-            "Ultimapoing",
-            "Poing Eclair"
+            "Charge",
+            "Canon Graine"
         ],
         "stats": {
             "hp": 50,
@@ -48,7 +45,7 @@
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
-            "Poing Eclair"
+            "Canon Graine"
         ],
         "stats": {
             "hp": 70,
@@ -66,9 +63,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/255.png",
         "attacks": [
-            "Ultimapoing",
-            "Griffe",
-            "Danse Lames"
+            
+            "Griffe"
         ],
         "stats": {
             "hp": 45,
@@ -88,8 +84,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/256.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Feu",
-            "Poing Eclair"
+            "Poing Feu"
+          
         ],
         "stats": {
             "hp": 60,
@@ -149,8 +145,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/259.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
+            "Pistolet a O",
+     
             "Ecrasement"
         ],
         "stats": {
@@ -170,8 +166,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/260.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
+            "Seisme",
+            "PPistolet a O",
             "Ecrasement"
         ],
         "stats": {
@@ -190,8 +186,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/261.png",
         "attacks": [
-            "Jet de Sable",
-            "Coup d’Boule",
+       
+            "Morsure",
             "Charge"
         ],
         "stats": {
@@ -210,8 +206,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/262.png",
         "attacks": [
-            "Jet de Sable",
-            "Coup d’Boule",
+            "Morsure",
             "Charge"
         ],
         "stats": {
@@ -231,7 +226,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/263.png",
         "attacks": [
             "Coupe",
-            "Jet de Sable",
+            
             "Coup d’Boule"
         ],
         "stats": {
@@ -251,7 +246,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/264.png",
         "attacks": [
             "Coupe",
-            "Jet de Sable",
+            
             "Coup d’Boule"
         ],
         "stats": {
@@ -271,8 +266,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/265.png",
         "attacks": [
             "Charge",
-            "Dard-Venin",
-            "Secretion"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 45,
@@ -291,8 +285,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/266.png",
         "attacks": [
             "Charge",
-            "Dard-Venin",
-            "Secretion"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 50,
@@ -332,8 +325,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/268.png",
         "attacks": [
             "Charge",
-            "Dard-Venin",
-            "Secretion"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 50,
@@ -373,9 +365,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/270.png",
         "attacks": [
-            "Danse Lames",
+        
             "Coup d’Boule",
-            "Plaquage"
+            "Plaquage",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 40,
@@ -394,9 +387,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/271.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 60,
@@ -415,8 +407,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/272.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
+            "Canon Graine",
+            "Pistolet a O",
             "Poing Glace"
         ],
         "stats": {
@@ -436,7 +428,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/273.png",
         "attacks": [
             "Coupe-Vent",
-            "Danse Lames",
+      
             "Coup d’Boule"
         ],
         "stats": {
@@ -457,8 +449,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/274.png",
         "attacks": [
             "Ecras’Face",
-            "Coupe-Vent",
-            "Danse Lames"
+            "Coupe-Vent"
         ],
         "stats": {
             "hp": 70,
@@ -478,7 +469,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/275.png",
         "attacks": [
             "Ecras’Face",
-            "Danse Lames",
+          
             "Coupe"
         ],
         "stats": {
@@ -498,9 +489,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/276.png",
         "attacks": [
-            "Cru-Ailes",
-            "Cyclone",
-            "Vol"
+            "Cru-Aile",
+            "Cyclone"
         ],
         "stats": {
             "hp": 40,
@@ -519,9 +509,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/277.png",
         "attacks": [
-            "Cru-Ailes",
-            "Vol",
-            "Damocles"
+            "Cru-Aile",
+          
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -541,8 +531,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/278.png",
         "attacks": [
             "Tornade",
-            "Cru-Ailes",
-            "Vol"
+            "Cru-Aile",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 40,
@@ -561,8 +551,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/279.png",
         "attacks": [
-            "Cru-Ailes",
-            "Vol",
+            "Cru-Aile",
+            "Pistolet a O",
             "Plaquage"
         ],
         "stats": {
@@ -582,9 +572,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/280.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Psyko",
+            "Pouvoir Lunaire"
         ],
         "stats": {
             "hp": 28,
@@ -603,9 +592,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/281.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Pouvoir Lunaire",
+            "Psyko"
         ],
         "stats": {
             "hp": 38,
@@ -624,9 +612,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/282.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Pouvoir Lunaire",
+            "Psyko"
         ],
         "stats": {
             "hp": 68,
@@ -645,9 +632,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/283.png",
         "attacks": [
-            "Belier",
-            "Damocles",
-            "Brume"
+            "Pistolet a O",
+            "Charge"
         ],
         "stats": {
             "hp": 40,
@@ -668,7 +654,7 @@
         "attacks": [
             "Tornade",
             "Cyclone",
-            "Belier"
+            "Charge"
         ],
         "stats": {
             "hp": 70,
@@ -686,7 +672,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/285.png",
         "attacks": [
-            "Danse Lames",
+       
             "Coup d’Boule",
             "Charge"
         ],
@@ -709,7 +695,7 @@
         "attacks": [
             "Ultimapoing",
             "Poing Eclair",
-            "Danse Lames"
+            "Canon Graine"
         ],
         "stats": {
             "hp": 60,
@@ -727,9 +713,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/287.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -748,8 +732,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/288.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 80,
@@ -768,8 +751,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/289.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 150,
@@ -810,7 +792,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/291.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
+       
             "Coupe"
         ],
         "stats": {
@@ -831,8 +813,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/292.png",
         "attacks": [
             "Griffe",
-            "Coupe",
-            "Jet de Sable"
+            "Coupe"
+            
         ],
         "stats": {
             "hp": 1,
@@ -851,8 +833,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/293.png",
         "attacks": [
             "Ecras’Face",
-            "Ultimapoing",
-            "Poing Feu"
+            "Charge"
         ],
         "stats": {
             "hp": 64,
@@ -872,7 +853,7 @@
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
-            "Poing Feu"
+            "Charge"
         ],
         "stats": {
             "hp": 84,
@@ -892,7 +873,7 @@
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
-            "Poing Feu"
+            "Charge"
         ],
         "stats": {
             "hp": 104,
@@ -953,7 +934,8 @@
         "attacks": [
             "Souplesse",
             "Coup d’Boule",
-            "Plaquage"
+            "Plaquage",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 50,
@@ -971,9 +953,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/299.png",
         "attacks": [
-            "Poing Feu",
-            "Poing Glace",
-            "Poing Eclair"
+            "Charge",
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 30,
@@ -1032,9 +1013,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/302.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 50,
@@ -1053,9 +1032,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/303.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
-            "Poing Eclair"
+            "Charge",
+            "Marelle"
         ],
         "stats": {
             "hp": 50,
@@ -1116,9 +1094,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/306.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Jet de Pierre",
+            "Charge",
+            "Queue de fer"
         ],
         "stats": {
             "hp": 70,
@@ -1200,7 +1178,8 @@
         "attacks": [
             "Coup d’Boule",
             "Charge",
-            "Plaquage"
+            "Plaquage",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 70,
@@ -1218,9 +1197,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/311.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Eclair",
-            "Ultimawashi"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -1238,9 +1215,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/312.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Eclair",
-            "Ultimawashi"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -1258,9 +1233,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/313.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
-            "Poing Eclair"
+            "Charge"
         ],
         "stats": {
             "hp": 65,
@@ -1278,9 +1251,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/314.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
-            "Poing Eclair"
+            "Charge"
         ],
         "stats": {
             "hp": 65,
@@ -1299,9 +1270,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/315.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Plaquage"
+            
+            "Dard-Venin",
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 50,
@@ -1319,9 +1290,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/316.png",
         "attacks": [
-            "Ecras’Face",
-            "Poing Feu",
-            "Poing Glace"
+            "Ecras’Face"
         ],
         "stats": {
             "hp": 70,
@@ -1339,9 +1308,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/317.png",
         "attacks": [
-            "Ecras’Face",
-            "Poing Feu",
-            "Poing Glace"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 100,
@@ -1360,9 +1327,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/318.png",
         "attacks": [
-            "Belier",
-            "Mania",
-            "Damocles"
+            "Charge",
+            "Pistolet a O",
+            "Morsure"
         ],
         "stats": {
             "hp": 45,
@@ -1381,9 +1348,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/319.png",
         "attacks": [
-            "Belier",
-            "Damocles",
-            "Groz’Yeux"
+            "Charge",
+            "Pistolet a O",
+            "Morsure"
         ],
         "stats": {
             "hp": 70,
@@ -1401,9 +1368,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/320.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Mania"
+            "Charge",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 130,
@@ -1421,9 +1387,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/321.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Damocles"
+            "Charge",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 170,
@@ -1465,7 +1430,8 @@
         "attacks": [
             "Coup d’Boule",
             "Charge",
-            "Plaquage"
+            "Plaquage",
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 70,
@@ -1484,8 +1450,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/324.png",
         "attacks": [
             "Coup d’Boule",
+            "Charge",
             "Plaquage",
-            "Belier"
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 70,
@@ -1503,9 +1470,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/325.png",
         "attacks": [
-            "Cyclone",
-            "Coup d’Boule",
-            "Plaquage"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -1523,9 +1488,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/326.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 80,
@@ -1543,9 +1506,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/327.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -1563,9 +1524,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/328.png",
         "attacks": [
-            "Tornade",
-            "Jet de Sable",
-            "Coup d’Boule"
+            "Charge",
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 45,
@@ -1584,9 +1544,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/329.png",
         "attacks": [
-            "Tornade",
-            "Vol",
-            "Jet de Sable"
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 50,
@@ -1625,9 +1583,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/331.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Eclair",
-            "Danse Lames"
+            "Fouet Lianes"
+          
         ],
         "stats": {
             "hp": 50,
@@ -1646,9 +1603,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/332.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Eclair",
-            "Danse Lames"
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 70,
@@ -1667,9 +1622,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/333.png",
         "attacks": [
-            "Vol",
-            "Furie",
-            "Plaquage"
+            
+            "Chage",
+            "Cru-Aile"
         ],
         "stats": {
             "hp": 45,
@@ -1688,9 +1643,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/334.png",
         "attacks": [
-            "Vol",
-            "Furie",
-            "Plaquage"
+        
+            "Chage",
+            "Cru-Aile"
         ],
         "stats": {
             "hp": 75,
@@ -1708,9 +1663,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/335.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Tranche",
+            
+            "Charge"
         ],
         "stats": {
             "hp": 73,
@@ -1728,9 +1683,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/336.png",
         "attacks": [
-            "Danse Lames",
-            "Etreinte",
-            "Coup d’Boule"
+  
+            "Chage",
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 73,
@@ -1750,8 +1705,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/337.png",
         "attacks": [
             "Charge",
-            "Plaquage",
-            "Damocles"
+            "Jet de Pierre"
+            
         ],
         "stats": {
             "hp": 90,
@@ -1770,9 +1725,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/338.png",
         "attacks": [
-            "Danse Lames",
+    
             "Charge",
-            "Plaquage"
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 90,
@@ -1833,8 +1788,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/341.png",
         "attacks": [
             "Force Poigne",
-            "Guillotine",
-            "Danse Lames"
+            "Guillotine"
         ],
         "stats": {
             "hp": 43,
@@ -1854,8 +1808,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/342.png",
         "attacks": [
             "Force Poigne",
-            "Guillotine",
-            "Danse Lames"
+            "Guillotine"
         ],
         "stats": {
             "hp": 63,
@@ -1916,7 +1869,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/345.png",
         "attacks": [
-            "Danse Lames",
+    
             "Etreinte",
             "Plaquage"
         ],
@@ -1937,7 +1890,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/346.png",
         "attacks": [
-            "Danse Lames",
+           
             "Etreinte",
             "Coup d’Boule"
         ],
@@ -1959,7 +1912,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/347.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
+
             "Coupe"
         ],
         "stats": {
@@ -1980,7 +1933,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/348.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
+          
             "Coupe"
         ],
         "stats": {
@@ -2000,8 +1953,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/349.png",
         "attacks": [
             "Charge",
-            "Damocles",
-            "Brume"
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 20,
@@ -2019,9 +1971,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/350.png",
         "attacks": [
-            "Etreinte",
             "Charge",
-            "Plaquage"
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 95,
@@ -2099,7 +2050,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/354.png",
         "attacks": [
-            "Danse Lames",
+       
             "Coup d’Boule",
             "Plaquage"
         ],
@@ -2119,9 +2070,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/355.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Damocles"
+            "Balle Ombre",
+            "Frappe Psy"
         ],
         "stats": {
             "hp": 20,
@@ -2139,9 +2089,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/356.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Balle Ombre",
+            "Frappe Psy"
         ],
         "stats": {
             "hp": 40,
@@ -2161,7 +2110,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/357.png",
         "attacks": [
             "Coupe-Vent",
-            "Danse Lames",
+           
             "Coupe"
         ],
         "stats": {
@@ -2180,9 +2129,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/358.png",
         "attacks": [
-            "Etreinte",
-            "Charge",
-            "Ligotage"
+      
+            "Charge"
+       
         ],
         "stats": {
             "hp": 75,
@@ -2202,7 +2151,8 @@
         "attacks": [
             "Griffe",
             "Coupe-Vent",
-            "Danse Lames"
+            "Morsure"
+      
         ],
         "stats": {
             "hp": 65,
@@ -2220,9 +2170,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/360.png",
         "attacks": [
-            "Riposte",
-            "Amnesie",
-            "Trempette"
+            "Frappe Psy"
         ],
         "stats": {
             "hp": 95,
@@ -2260,9 +2208,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/362.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Belier"
+            "Laser Glace"
         ],
         "stats": {
             "hp": 80,
@@ -2281,9 +2227,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/363.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Damocles"
+            "Laser Glace",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 70,
@@ -2302,9 +2247,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/364.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Damocles"
+            "Laser Glace",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 90,
@@ -2323,9 +2267,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/365.png",
         "attacks": [
-            "Danse Lames",
-            "Coup d’Boule",
-            "Plaquage"
+      
+            "Laser Glace",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 110,
@@ -2344,8 +2288,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/366.png",
         "attacks": [
             "Plaquage",
-            "Damocles",
-            "Ultrason"
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 35,
@@ -2363,9 +2306,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/367.png",
         "attacks": [
-            "Etreinte",
-            "Plaquage",
-            "Damocles"
+            "Pistolet a O",
+            "Plaquage"
         ],
         "stats": {
             "hp": 55,
@@ -2383,9 +2325,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/368.png",
         "attacks": [
-            "Etreinte",
-            "Plaquage",
-            "Damocles"
+            "Pistolet a O",
+            "Plaquage"
         ],
         "stats": {
             "hp": 55,
@@ -2404,9 +2345,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/369.png",
         "attacks": [
-            "Coup d’Boule",
-            "Charge",
-            "Plaquage"
+            "Pistolet a O",
+            "Plaquage",
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 100,
@@ -2425,8 +2366,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/370.png",
         "attacks": [
             "Charge",
-            "Belier",
-            "Damocles"
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 43,
@@ -2445,8 +2385,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/371.png",
         "attacks": [
             "Coupe",
-            "Coup d’Boule",
-            "Plaquage"
+            "Dracochoc",
+            "Morsure"
         ],
         "stats": {
             "hp": 45,
@@ -2465,8 +2405,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/372.png",
         "attacks": [
             "Coupe",
-            "Coup d’Boule",
-            "Plaquage"
+            "Dracochoc",
+            "Morsure"
         ],
         "stats": {
             "hp": 65,
@@ -2486,8 +2426,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/373.png",
         "attacks": [
             "Coupe",
-            "Vol",
-            "Coup d’Boule"
+            "Dracochoc",
+            "Morsure",
+            "Cru-Aile"
         ],
         "stats": {
             "hp": 95,
@@ -2550,7 +2491,7 @@
         "attacks": [
             "Poing Glace",
             "Poing Eclair",
-            "Coupe"
+            "Frappe Psy"
         ],
         "stats": {
             "hp": 80,
@@ -2570,7 +2511,7 @@
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
-            "Poing Glace"
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 80,
@@ -2590,7 +2531,7 @@
         "attacks": [
             "Ultimapoing",
             "Poing Glace",
-            "Poing Eclair"
+            "Laser Glace"
         ],
         "stats": {
             "hp": 80,
@@ -2609,7 +2550,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/379.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Glace",
+            "Queue de fer",
             "Poing Eclair"
         ],
         "stats": {
@@ -2629,9 +2570,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/380.png",
         "attacks": [
-            "Coupe",
-            "Vol",
-            "Plaquage"
+            "Frappe Psy",
+            
+            "Dracochoc"
         ],
         "stats": {
             "hp": 80,
@@ -2650,9 +2591,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/381.png",
         "attacks": [
-            "Coupe",
-            "Vol",
-            "Plaquage"
+            "Frappe Psy",
+            
+            "Dracochoc"
         ],
         "stats": {
             "hp": 80,
@@ -2670,9 +2611,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/382.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Belier"
+            "Pistolet a O",
+            "Laser Glace",
+            "Chage"
         ],
         "stats": {
             "hp": 100,
@@ -2690,9 +2631,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/383.png",
         "attacks": [
-            "Ultimapoing",
+            "Lance-Flammes",
             "Poing Feu",
-            "Poing Eclair"
+            "Seisme",
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 100,
@@ -2711,9 +2653,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/384.png",
         "attacks": [
-            "Danse Lames",
-            "Vol",
-            "Etreinte"
+            "Cru-Aile",
+           
+            "Dracochoc"
         ],
         "stats": {
             "hp": 105,
@@ -2732,8 +2674,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/385.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
+            "Fouet Lianes",
+            "Frappe Psy",
             "Poing Glace"
         ],
         "stats": {
@@ -2754,7 +2696,7 @@
         "attacks": [
             "Poing Feu",
             "Poing Glace",
-            "Poing Eclair"
+            "Frappe Psy"
         ],
         "stats": {
             "hp": 50,

@@ -163,6 +163,13 @@
     "category": "physique"
   },
   {
+    "name": "Bomb-Beurk",
+    "type": "poison",
+    "damage": 90,
+    "category": "spéciale"
+  },
+  
+  {
     "name": "Coup d'Boule",
     "type": "normal",
     "damage": 70,
@@ -323,7 +330,7 @@
     "category": "speciale"
   },
   {
-    "name": "Boule Ombre",
+    "name": "Balle Ombre",
     "type": "spectre",
     "damage": 80,
     "category": "speciale"
@@ -484,7 +491,7 @@
   { "name": "Tornade", "type": "vol", "damage": 40, "category": "physique" },
   { "name": "Mawashi Geri", "type": "combat", "damage": 60, "category": "physique" },
   { "name": "Torgnoles", "type": "normal", "damage": 15, "category": "physique" },
-  { "name": "Guillotine", "type": "normal", "damage": 0, "category": "physique" },
+  { "name": "Guillotine", "type": "normal", "damage": 50, "category": "physique" },
   { "name": "Jackpot", "type": "normal", "damage": 40, "category": "physique" },
   { "name": "Gribouille", "type": "normal", "damage": 0, "category": "physique" },
   { "name": "Souplesse", "type": "normal", "damage": 80, "category": "physique" },
@@ -497,7 +504,7 @@
   { "name": "Cyclone", "type": "normal", "damage": 0, "category": "physique" },
   { "name": "Ligotage", "type": "normal", "damage": 15, "category": "physique" },
   { "name": "Amnesie", "type": "psy", "damage": 0, "category": "speciale" },
-  { "name": "KoudeKorne", "type": "glace", "damage": 0, "category": "speciale" },
+  { "name": "KoudeKorne", "type": "glace", "damage": 40, "category": "speciale" },
   { "name": "Belier", "type": "normal", "damage": 90, "category": "physique" },
   { "name": "Furie", "type": "normal", "damage": 15, "category": "physique" },
   { "name": "Pied Saute", "type": "combat", "damage": 70, "category": "physique" },
@@ -543,6 +550,18 @@
     "type": "insecte",
     "damage": 0,
     "category": "statut"
+  },
+  {
+    "name": "Jet de Pierre",
+    "type": "roche",
+    "damage": 50,
+    "category": "physique"
+  },
+  {
+    "name": "Frappe Psy",
+    "type": "psy",
+    "damage": 100,
+    "category": "speciale"
   }
 
 

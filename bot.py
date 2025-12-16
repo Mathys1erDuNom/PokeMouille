@@ -15,6 +15,7 @@ import requests
 import io
 import uuid
 from croco_event import setup_croco_event
+from money_view import setup_money
 
 
 
@@ -677,7 +678,7 @@ async def on_message(message):
 # ✅ AJOUTE ICI
 setup_quiz_commands(bot, spawn_pokemon, ROLE_ID, is_under_ban_func=is_under_ban, authorized_user_id=TARGET_USER_ID_CROCO)
 
-
+setup_money(bot)
 
 
 setup_guess_pokemon_command(
