@@ -14,21 +14,9 @@ def setup_money(bot):
         balance = get_balance(target.id)
         
         if target == ctx.author:
-            await ctx.send(f"💰 Vous avez **{balance:,}** pièces d'or.")
+            await ctx.send(f"💰🐊 Vous avez **{balance:,}** Croco dollars.")
         else:
-            await ctx.send(f"💰 {target.mention} a **{balance:,}** pièces d'or.")
-    
-    
-    @bot.command(name="balance")
-    async def balance(ctx, user: discord.User = None):
-        """Alias de !money."""
-        target = user or ctx.author
-        balance = get_balance(target.id)
-        
-        if target == ctx.author:
-            await ctx.send(f"💰 Vous avez **{balance:,}** pièces d'or.")
-        else:
-            await ctx.send(f"💰 {target.mention} a **{balance:,}** pièces d'or.")
+            await ctx.send(f"💰🐊 {target.mention} a **{balance:,}** Croco dollars.")
     
     
     @is_croco()
@@ -41,14 +29,14 @@ def setup_money(bot):
         
         new_balance = add_money(user.id, amount)
         await ctx.send(
-            f"✅ Grand Maître suprême des Crocodiles, **{amount:,}** pièces d'or ont été ajoutées à {user.mention}.\n"
-            f"💰 Nouveau solde : **{new_balance:,}** pièces."
+            f"✅ **{amount:,}** Croco dollars ont été ajoutées à {user.mention}.\n"
+            f"💰🐊 Nouveau solde : **{new_balance:,}** Croco dollars."
         )
     
     
     @is_croco()
     @bot.command(name="removemoney")
-    async def removemoney(ctx, user: discord.User, amount: int):
+    async def takemoney(ctx, user: discord.User, amount: int):
         """Retire de l'argent à un utilisateur (admin uniquement)."""
         if amount <= 0:
             await ctx.send("❌ Le montant doit être positif.")
@@ -59,14 +47,14 @@ def setup_money(bot):
         if not success:
             balance = get_balance(user.id)
             await ctx.send(
-                f"❌ Grand Maître suprême des Crocodiles, {user.mention} n'a pas assez d'argent.\n"
-                f"💰 Solde actuel : **{balance:,}** pièces."
+                f"❌ {user.mention} tu es pauvre, tu n'as pas assez de Croco dollars.\n"
+                f"💰🐊 Solde actuel : **{balance:,}** Croco dollars."
             )
         else:
             new_balance = get_balance(user.id)
             await ctx.send(
-                f"✅ Grand Maître suprême des Crocodiles, **{amount:,}** pièces d'or ont été retirées à {user.mention}.\n"
-                f"💰 Nouveau solde : **{new_balance:,}** pièces."
+                f"✅ **{amount:,}** Croco dollars ont été retirées à {user.mention}.\n"
+                f"💰🐊 Nouveau solde : **{new_balance:,}** Croco dollars."
             )
     
     
@@ -80,7 +68,7 @@ def setup_money(bot):
         
         set_money(user.id, amount)
         await ctx.send(
-            f"✅ Grand Maître suprême des Crocodiles, le solde de {user.mention} a été défini à **{amount:,}** pièces d'or."
+            f"✅ Le solde de {user.mention} a été défini à **{amount:,}** Croco dollars."
         )
     
     
@@ -100,16 +88,16 @@ def setup_money(bot):
         if not success:
             balance = get_balance(ctx.author.id)
             await ctx.send(
-                f"❌ Vous n'avez pas assez d'argent pour effectuer ce transfert.\n"
-                f"💰 Votre solde : **{balance:,}** pièces."
+                f"❌ Sale pauvre, tu n'as pas assez de Croco dollars.\n"
+                f"💰🐊 Votre solde : **{balance:,}** Croco dollars."
             )
         else:
             sender_balance = get_balance(ctx.author.id)
             receiver_balance = get_balance(user.id)
             await ctx.send(
-                f"✅ Vous avez envoyé **{amount:,}** pièces d'or à {user.mention}.\n"
-                f"💰 Votre nouveau solde : **{sender_balance:,}** pièces.\n"
-                f"💰 Solde de {user.mention} : **{receiver_balance:,}** pièces."
+                f"✅ Vous avez envoyé **{amount:,}** Croco dollars à {user.mention}.\n"
+                f"💰🐊 Votre nouveau solde : **{sender_balance:,}** Croco dollars.\n"
+                f"💰🐊 Solde de {user.mention} : **{receiver_balance:,}** Croco dollars."
             )
     
     
@@ -148,7 +136,7 @@ def setup_money(bot):
                 username = f"Utilisateur {user_id}"
             
             medal = "🥇" if i == 1 else "🥈" if i == 2 else "🥉" if i == 3 else f"{i}."
-            description += f"{medal} **{username}** — {balance:,} pièces\n"
+            description += f"{medal} **{username}** — {balance:,} Croco dollars\n"
         
         embed.description = description
         await ctx.send(embed=embed)
