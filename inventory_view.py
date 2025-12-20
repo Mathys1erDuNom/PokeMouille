@@ -189,15 +189,27 @@ class UseItemButton(Button):
                 pokemon_name, is_shiny = await self.spawn_func(
                     interaction.user,
                     json_file="pokemon_legendaire_normal.json",  # 📦 JSON choisi ici
-                    shiny_rate=64                   # ✨ shiny boosté
+                    shiny_rate=1                  # ✨ shiny boosté
                 )
 
                 if pokemon_name:
-                    shiny_text = "✨ " if is_shiny else ""
-                    await interaction.followup.send(
-                    f"🎉 Vous avez gagné un Pokémon {shiny_text}**{pokemon_name}** !",
-                    ephemeral=True
-                )
+                    embed, file = await get_pokemon_image_embed(
+                        pokemon_name, 
+                        json_file="pokemon_legendaire_normal.json",
+                        is_shiny=is_shiny
+                    )
+                    if embed and file:
+                        await interaction.followup.send(
+                            content="🎉 Vous avez gagné un Pokémon !",
+                            embed=embed,
+                            file=file,
+                            ephemeral=True
+                        )
+                    else:
+                        await interaction.followup.send(
+                            "❌ Impossible de trouver l'image du Pokémon.",
+                            ephemeral=True
+                        ) 
                 else:
                     await interaction.followup.send(
                     "❌ Impossible de spawn le Pokémon.",
