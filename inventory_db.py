@@ -28,8 +28,7 @@ CREATE TABLE IF NOT EXISTS inventory (
     rarity TEXT,
     description TEXT,
     image TEXT,
-    extra TEXT,
-    prix  INTEGER
+    extra TEXT
 );
 """)
 conn.commit()
@@ -55,7 +54,7 @@ def add_item(user_id, name, quantity=1, rarity="commun", description="", image="
     else:  # Insertion
         cur.execute("""
         INSERT INTO inventory (user_id, item_name, quantity, rarity, description, image, extra)
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+        VALUES (%s, %s, %s, %s, %s, %s, %s)
             """, (
             user_id,
             name,
