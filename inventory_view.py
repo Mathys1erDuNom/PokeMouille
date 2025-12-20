@@ -239,7 +239,9 @@ def draw_multiline_text(draw, text, position, font, max_width, fill=(0,0,0)):
     current_line = ""
     for word in words:
         test_line = current_line + " " + word if current_line else word
-        w, h = draw.textsize(test_line, font=font)
+        # w, h = draw.textsize(test_line, font=font)  <-- PLUS VALIDE
+        bbox = font.getbbox(test_line)
+        w = bbox[2] - bbox[0]
         if w <= max_width:
             current_line = test_line
         else:
@@ -249,10 +251,11 @@ def draw_multiline_text(draw, text, position, font, max_width, fill=(0,0,0)):
         lines.append(current_line)
 
     x, y = position
-    line_height = font.getsize("A")[1] + 4
+    line_height = font.getbbox("A")[3] - font.getbbox("A")[1] + 4
     for line in lines:
         draw.text((x, y), line, font=font, fill=fill)
         y += line_height
+
 
 
 class InventoryItemButton(Button):
