@@ -1,22 +1,27 @@
-# pokedex.py
+# new_pokedex.py
 import discord
 from discord.ui import View, Button
 from PIL import Image, ImageDraw, ImageFont
 import requests, io, os
 from io import BytesIO
 import json
-from new_db import get_new_captures 
-
-
+from new_db import get_new_captures
 
 from combat.utils import normalize_text
-
-
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 
+# --- CACHE POKEDEX DYNAMIQUE ---
+NEW_POKEDEX_CACHE = {}   # { user_id: { "pokemons": [...], "mosaic": bytes } }
 
+
+def invalidate_new_pokedex_cache(user_id):
+    """Invalide le cache du pokédex pour un utilisateur donné"""
+    user_id = str(user_id)
+    if user_id in NEW_POKEDEX_CACHE:
+        del NEW_POKEDEX_CACHE[user_id]
+        print(f"[CACHE] Cache invalidé pour l'utilisateur {user_id}")
 
 
 async def create_mosaic(pokemon_names, full_pokemon_data, full_pokemon_shiny_data):
@@ -140,7 +145,7 @@ class PokemonButton(Button):
     async def callback(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
 
-        # Vérifie si c’est un shiny
+        # Vérifie si c'est un shiny
         is_shiny = any(normalize_text(p.get("name", "")) == normalize_text(self.pokemon_name) for p in self.shiny_data)
         display_name = self.pokemon_name + " ✨" if is_shiny else self.pokemon_name
 
@@ -171,7 +176,7 @@ class PokemonButton(Button):
         draw = ImageDraw.Draw(image)
         try:
             font_path_bold = os.path.join(script_dir, "fonts", "DejaVuSans-Bold.ttf")
-            font = ImageFont.truetype(font_path_bold, 15)       # texte normal ou gras selon ton besoin
+            font = ImageFont.truetype(font_path_bold, 15)
             font_bold = ImageFont.truetype(font_path_bold, 20) 
         except:
             font = ImageFont.load_default()
@@ -270,11 +275,12 @@ class PokemonButton(Button):
         embed.set_image(url=f"attachment://{self.pokemon_name}.png")
         await interaction.followup.send(file=file, embed=embed, ephemeral=True)
 
+
 def setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir):
     @bot.command()
-    async def pokedex(ctx):  # 🔹 Nouveau nom de commande
+    async def pokedex(ctx):
         user_id = str(ctx.author.id)
-        captures = get_new_captures(user_id)  # 🔹 On lit depuis new_captures
+        captures = get_new_captures(user_id)
 
         if not captures:
             await ctx.send("Tu n'as encore rien capturé dans la nouvelle table.")
@@ -282,15 +288,54 @@ def setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_spri
 
         pokemons = [entry["name"] for entry in captures]
 
+        # ----- 🔥 Vérification du cache -----
+        cache = NEW_POKEDEX_CACHE.get(user_id)
+
+        if cache and cache["pokemons"] == pokemons:
+            print("[CACHE] Nouveau Pokédex envoyé depuis le cache !")
+
+            mosaic_image = io.BytesIO(cache["mosaic"])
+            mosaic_image.seek(0)
+
+            file = discord.File(mosaic_image, filename="pokedex_mosaic.png")
+
+            embed = discord.Embed(
+                title=f"📘 Nouveau Pokédex de {ctx.author.display_name}",
+                description=f"(Cache) Voici ton Pokédex avec {len(pokemons)} Pokémon !",
+                color=0x3498db
+            )
+            embed.set_image(url="attachment://pokedex_mosaic.png")
+
+            view = PokedexView(
+                pokemons,
+                full_pokemon_shiny_data,
+                full_pokemon_data,
+                type_sprites,
+                attack_type_map,
+                captures
+            )
+
+            await ctx.send(embed=embed, file=file, view=view)
+            return
+
+        # ----- 🛠 PAS DE CACHE → Génération normale -----
         mosaic_image, displayed_count = await create_mosaic(pokemons, full_pokemon_data, full_pokemon_shiny_data)
+        
         if mosaic_image is None:
             await ctx.send("Erreur lors de la création de la mosaïque.")
             return
 
+        # ----- 💾 Mise en cache -----
+        NEW_POKEDEX_CACHE[user_id] = {
+            "pokemons": pokemons,
+            "mosaic": mosaic_image.getvalue()
+        }
+
         file = discord.File(mosaic_image, filename="pokedex_mosaic.png")
+
         embed = discord.Embed(
             title=f"📘 Nouveau Pokédex de {ctx.author.display_name}",
-            description=f"Voici la mosaïque de tes {displayed_count} Pokémon visibles (sur {len(pokemons)} capturés) !",
+            description=f"Voici la mosaïque de tes {displayed_count} Pokémon !",
             color=0x3498db
         )
         embed.set_image(url="attachment://pokedex_mosaic.png")
