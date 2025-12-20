@@ -18,8 +18,6 @@ cur.execute("DROP TABLE IF EXISTS inventory;")
 conn.commit()
 
 
-cur.execute("DROP TABLE IF EXISTS inventory;")
-conn.commit()
 
 # Création de la table inventaire
 cur.execute("""
@@ -37,7 +35,7 @@ CREATE TABLE IF NOT EXISTS inventory (
 conn.commit()
 
 
-def add_item(user_id, name, quantity=1, rarity="commun", description="", image="", extra=None, prix=""):
+def add_item(user_id, name, quantity=1, rarity="commun", description="", image="", extra=None):
     """Ajoute un item à l’inventaire ou augmente sa quantité."""
     user_id = str(user_id)
 
@@ -56,7 +54,7 @@ def add_item(user_id, name, quantity=1, rarity="commun", description="", image="
         """, (new_qty, user_id, name))
     else:  # Insertion
         cur.execute("""
-        INSERT INTO inventory (user_id, item_name, quantity, rarity, description, image, extra, prix)
+        INSERT INTO inventory (user_id, item_name, quantity, rarity, description, image, extra)
         VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
             """, (
             user_id,
@@ -66,7 +64,7 @@ def add_item(user_id, name, quantity=1, rarity="commun", description="", image="
             description,
             image,
             str(extra) if extra is not None else None,
-            prix 
+            
         ))
 
     conn.commit()
