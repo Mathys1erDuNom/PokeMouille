@@ -12,6 +12,10 @@ from inventory_db import delete_inventory
 import json
 from inventory_db import use_item
 from utils import spawn_pokemon_for_user
+from pokemon_display import send_pokemon_card
+from new_db import get_new_captures
+
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 
@@ -113,10 +117,25 @@ class UseItemButton(Button):
 
                 if pokemon_name:
                     shiny_text = "✨ " if is_shiny else ""
-                    await interaction.followup.send(
-                    f"🎉 Vous avez gagné un Pokémon {shiny_text}**{pokemon_name}** !",
-                    ephemeral=True
-                )
+                    
+                    # Récupère le dernier Pokémon capturé par l'utilisateur
+                    captures = get_new_captures(interaction.user.id, limit=1)
+                    if captures:
+                        p = captures[0]  # dernier Pokémon capturé
+                        await send_pokemon_card(
+                            interaction=interaction,
+                            pokemon_name=p["name"],
+                            is_shiny=p["is_shiny"],
+                            p_data=p,
+                            type_sprites=self.spawn_func.type_sprites,
+                            attack_type_map=self.spawn_func.attack_type_map,
+                            ephemeral=True
+                        )
+                    else:
+                        await interaction.followup.send(
+                        f"🎉 Vous avez gagné un Pokémon {shiny_text}**{pokemon_name}** !",
+                        ephemeral=True
+                    )    
                 else:
                     await interaction.followup.send(
                     "❌ Impossible de spawn le Pokémon.",
@@ -143,6 +162,7 @@ class UseItemButton(Button):
                     f"🎉 Vous avez gagné un Pokémon {shiny_text}**{pokemon_name}** !",
                     ephemeral=True
                 )
+                
                 else:
                     await interaction.followup.send(
                     "❌ Impossible de spawn le Pokémon.",
