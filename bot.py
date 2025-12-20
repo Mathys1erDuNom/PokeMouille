@@ -41,6 +41,7 @@ from inventory_view import setup_inventory
 from utils import is_croco
 
 from money_db import add_money
+from shop_view import setup_shop
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
@@ -681,6 +682,7 @@ setup_quiz_commands(bot, spawn_pokemon, ROLE_ID, is_under_ban_func=is_under_ban,
 
 setup_money(bot)
 
+setup_shop(bot)
 
 setup_guess_pokemon_command(
     bot,
