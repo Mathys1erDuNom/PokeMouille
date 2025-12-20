@@ -110,7 +110,7 @@ class UseItemButton(Button):
 
                 pokemon_name, is_shiny = await self.spawn_func(
                     interaction.user,
-                    json_file="pokemon_all_pokeball_normal.json",  # 📦 JSON choisi ici
+                    json_file="json/pokemon_all_pokeball_normal.json",  # 📦 JSON choisi ici
                     shiny_rate=64   # ✨ shiny boosté
                 )
 
@@ -121,7 +121,7 @@ class UseItemButton(Button):
                         is_shiny=is_shiny
                     )
                     await interaction.followup.send(embed=embed, ephemeral=True)
-                    
+
                 else:
                     await interaction.followup.send(
                     "❌ Impossible de spawn le Pokémon.",
