@@ -40,6 +40,7 @@ from new_db import save_new_capture, get_new_captures
 from inventory_view import setup_inventory
 from utils import is_croco
 
+from money_db import add_money
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
@@ -474,39 +475,37 @@ def is_under_ban(guild_id, user_id):
 
 
 
-
 @bot.command()
 async def catch(ctx):
     guild_id = ctx.guild.id
     trace_id = str(uuid.uuid4())[:8]  # identifiant court unique pour ce catch
+    
     # 🔒 Empêche les captures simultanées sur ce serveur
     if guild_id in catch_in_progress:
         return
     catch_in_progress.add(guild_id)
-
+    
     try:
         # Vérifie le ban
         if is_under_ban(guild_id, ctx.author.id):
             print(f"[TRACE {trace_id}] [LOG] Joueur sous ban, refus.")
             await ctx.send("⏳ Tu es sous ban. Attends encore un peu avant de répondre.")
             return
-
+        
         # Vérifie la présence dans le salon vocal
         vc = bot.get_channel(VOICE_CHANNEL_ID)
         if vc is None:
             print(f"[TRACE {trace_id}] [LOG] Salon vocal introuvable")
             await ctx.send("❌ Salon vocal introuvable.")
             return
-
+        
         if ctx.author.id != TARGET_USER_ID_CROCO and ctx.author not in vc.members:
             print(f"[TRACE {trace_id}] [LOG] Auteur pas dans le salon vocal.")
             await ctx.send("❌ Tu dois être dans le salon vocal pour capturer un Pokémon.")
             return
-
+        
         # Vérifie qu'un Pokémon est présent
         current = current_pokemon.get(guild_id)
-
-
         if current is None:
             if pokemon_caught.get(guild_id, False):
                 print(f"[TRACE {trace_id}] [LOG] Aucun Pokémon mais déjà capturé, on ne dit rien.")
@@ -514,7 +513,7 @@ async def catch(ctx):
             print(f"[TRACE {trace_id}] [LOG] Aucun Pokémon à capturer -> Envoi du message d'erreur.")
             await ctx.send(f"❌ Aucun Pokémon à capturer. [TRACE {trace_id}]")
             return
-
+        
         # Vérifie la restriction d'utilisateur
         if guild_id in allowed_user:
             if ctx.author.id != allowed_user[guild_id]:
@@ -522,12 +521,11 @@ async def catch(ctx):
                 print(f"[TRACE {trace_id}] [LOG] Pokémon réservé à un autre joueur ({allowed_user[guild_id]} / {allowed_name})")
                 await ctx.send(f"❌ Seul {allowed_name} peut capturer ce Pokémon.")
                 return
-
+        
         # On a bien un Pokémon
         pokemon_name = current
         pokemon_data = current_pokemon_data[guild_id]
         
-
         # Envoi du message Pokéball
         embed_pokeball = discord.Embed(
             description=f"**{ctx.author.display_name} lance une Pokéball !**",
@@ -537,31 +535,34 @@ async def catch(ctx):
             embed_pokeball.set_thumbnail(url=pokeball_url)
         await ctx.send(embed=embed_pokeball)
         
-
         # Sauvegarde
         ivs = pokemon_data.get("ivs", {})
         stats_with_iv = pokemon_data.get("stats_iv", pokemon_data["stats"])
         save_new_capture(ctx.author.id, pokemon_name, ivs, stats_with_iv, pokemon_data)
         
-
-        # Envoi du message de capture
+        # 💰 Récompense en argent pour la capture
+        reward_amount = 20  # Vous pouvez ajuster le montant
+        new_balance = add_money(ctx.author.id, reward_amount)
+        
+        # Envoi du message de capture avec la récompense
         embed_captured = discord.Embed(
-            description=f"🎉 **{ctx.author.display_name} a capturé {pokemon_name} !\nVise bien l'aveugle**",
+            description=(
+                f"🎉 **{ctx.author.display_name} a capturé {pokemon_name} !\n"
+                f"Vise bien l'aveugle**\n\n"
+                f"💰 Récompense : **+{reward_amount:,}** Croco dollars\n"
+                f"💰🐊 Nouveau solde : **{new_balance:,}** Croco dollars"
+            ),
             color=0x00CC66
         )
         if pokemon_data.get("image", ""):
             embed_captured.set_image(url=pokemon_data["image"])
         await ctx.send(embed=embed_captured)
         
-
         # Reset du spawn
         reset_spawn(guild_id)
         
-
     finally:
         catch_in_progress.discard(guild_id)
-       
-
 
 
 
