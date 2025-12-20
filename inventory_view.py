@@ -270,7 +270,8 @@ def setup_inventory(bot, spawn_func=None):
             rarity=found_item.get("rarity", "common"),
             description=found_item.get("description", ""),
             image=found_item.get("image", ""),
-            extra=found_item.get("extra")
+            extra=found_item.get("extra"),
+            price = found_item.get("price")
         )
         
 
