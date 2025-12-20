@@ -155,9 +155,11 @@ class UseItemButton(Button):
                 )
 
                 if pokemon_name:
+                    json_file_to_use = "json/pokemon_all_pokeball_shiny.json" if is_shiny else "json/pokemon_all_pokeball_normal.json"
+
                     embed, file = await get_pokemon_image_embed(
                         pokemon_name, 
-                        json_file="json/pokemon_all_pokeball_normal.json",
+                        json_file= json_file_to_use ,
                         is_shiny=is_shiny
                     )
                     if embed and file:
@@ -195,9 +197,10 @@ class UseItemButton(Button):
                 )
 
                 if pokemon_name:
+                    json_file_to_use = "json/pokemon_legendaire_normal.json" if is_shiny else "json/pokemon_legendaire_shiny.json"
                     embed, file = await get_pokemon_image_embed(
                         pokemon_name, 
-                        json_file="json/pokemon_legendaire_normal.json",
+                        json_file=json_file_to_use,
                         is_shiny=is_shiny
                     )
                     if embed and file:
