@@ -28,13 +28,14 @@ CREATE TABLE IF NOT EXISTS inventory (
     rarity TEXT,
     description TEXT,
     image TEXT,
-    extra TEXT
+    extra TEXT,
+    price INTEGER
 );
 """)
 conn.commit()
 
 
-def add_item(user_id, name, quantity=1, rarity="commun", description="", image="", extra=None):
+def add_item(user_id, name, quantity=1, rarity="commun", description="", image="", extra=None, price=0):
     """Ajoute un item à l’inventaire ou augmente sa quantité."""
     user_id = str(user_id)
 
@@ -53,8 +54,8 @@ def add_item(user_id, name, quantity=1, rarity="commun", description="", image="
         """, (new_qty, user_id, name))
     else:  # Insertion
         cur.execute("""
-        INSERT INTO inventory (user_id, item_name, quantity, rarity, description, image, extra)
-        VALUES (%s, %s, %s, %s, %s, %s, %s)
+        INSERT INTO inventory (user_id, item_name, quantity, rarity, description, image, extra, price)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
             """, (
             user_id,
             name,
@@ -63,6 +64,7 @@ def add_item(user_id, name, quantity=1, rarity="commun", description="", image="
             description,
             image,
             str(extra) if extra is not None else None,
+            price,
             
         ))
 
@@ -72,7 +74,7 @@ def add_item(user_id, name, quantity=1, rarity="commun", description="", image="
 def get_inventory(user_id):
     """Retourne tout l’inventaire du joueur."""
     cur.execute("""
-        SELECT item_name, quantity, rarity, description, image, extra
+        SELECT item_name, quantity, rarity, description, image, extra, price
         FROM inventory
         WHERE user_id = %s
         ORDER BY item_name ASC
@@ -89,6 +91,7 @@ def get_inventory(user_id):
             "description": row[3],
             "image": row[4],
             "extra": row[5],
+            "price": row[6],
         })
 
     return items
