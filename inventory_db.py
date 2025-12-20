@@ -18,6 +18,9 @@ cur.execute("DROP TABLE IF EXISTS inventory;")
 conn.commit()
 
 
+cur.execute("DROP TABLE IF EXISTS inventory;")
+conn.commit()
+
 # Création de la table inventaire
 cur.execute("""
 CREATE TABLE IF NOT EXISTS inventory (
@@ -27,7 +30,8 @@ CREATE TABLE IF NOT EXISTS inventory (
     rarity TEXT,
     description TEXT,
     image TEXT,
-    extra TEXT
+    extra TEXT,
+    prix  INTEGER
 );
 """)
 conn.commit()
