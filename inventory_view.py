@@ -119,7 +119,7 @@ class UseItemButton(Button):
                     shiny_text = "✨ " if is_shiny else ""
                     
                     # Récupère le dernier Pokémon capturé par l'utilisateur
-                    captures = get_new_captures(interaction.user.id, limit=1)
+                    captures = get_new_captures(interaction.user.id)
                     if captures:
                         p = captures[0]  # dernier Pokémon capturé
                         await send_pokemon_card(
