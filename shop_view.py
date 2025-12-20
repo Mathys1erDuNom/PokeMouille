@@ -196,6 +196,9 @@ class BuyItemButton(Button):
         self.user_id = user_id
 
     async def callback(self, interaction: discord.Interaction):
+        # ⚠️ IMPORTANT : Défère l'interaction immédiatement
+        await interaction.response.defer(ephemeral=True)
+        
         price = self.item.get("price", 0)
         name = self.item["item_name"]
         
@@ -203,7 +206,7 @@ class BuyItemButton(Button):
         balance = get_balance(self.user_id)
         
         if balance < price:
-            await interaction.response.send_message(
+            await interaction.followup.send(
                 f"❌ Tu es trop pauvre ! Tu as besoin de **{price:,}** Croco dollars "
                 f"mais tu n'as que **{balance:,}** Croco dollars.\n"
                 f"💸 Il te manque **{price - balance:,}** Croco dollars.",
@@ -215,7 +218,7 @@ class BuyItemButton(Button):
         success = remove_money(self.user_id, price)
         
         if not success:
-            await interaction.response.send_message(
+            await interaction.followup.send(
                 "❌ Erreur lors de la transaction.",
                 ephemeral=True
             )
@@ -235,7 +238,7 @@ class BuyItemButton(Button):
 
         new_balance = get_balance(self.user_id)
         
-        await interaction.response.send_message(
+        await interaction.followup.send(
             f"✅ Achat réussi !\n"
             f"🎁 Vous avez acheté **{name}** pour **{price:,}** Croco dollars.\n"
             f"💰 Nouveau solde : **{new_balance:,}** Croco dollars.",
