@@ -183,19 +183,21 @@ class UseItemButton(Button):
                 ephemeral=True
                 )
 
-        elif extra == "spawn_pokemon_legendary":
+        
+
+        if extra == "spawn_pokemon_legendary":
             if self.spawn_func is not None:
 
                 pokemon_name, is_shiny = await self.spawn_func(
                     interaction.user,
                     json_file="pokemon_legendaire_normal.json",  # 📦 JSON choisi ici
-                    shiny_rate=1                  # ✨ shiny boosté
+                    shiny_rate=64   # ✨ shiny boosté
                 )
 
                 if pokemon_name:
                     embed, file = await get_pokemon_image_embed(
                         pokemon_name, 
-                        json_file="pokemon_legendaire_normal.json",
+                        json_file="json/pokemon_legendaire_normal.json",
                         is_shiny=is_shiny
                     )
                     if embed and file:
@@ -209,7 +211,7 @@ class UseItemButton(Button):
                         await interaction.followup.send(
                             "❌ Impossible de trouver l'image du Pokémon.",
                             ephemeral=True
-                        ) 
+                        )    
                 else:
                     await interaction.followup.send(
                     "❌ Impossible de spawn le Pokémon.",
