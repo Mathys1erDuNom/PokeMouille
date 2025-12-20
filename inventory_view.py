@@ -12,6 +12,9 @@ from inventory_db import delete_inventory
 import json
 from inventory_db import use_item
 from utils import spawn_pokemon_for_user
+
+from pokemon_display import create_pokemon_embed
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 
@@ -112,11 +115,13 @@ class UseItemButton(Button):
                 )
 
                 if pokemon_name:
-                    shiny_text = "✨ " if is_shiny else ""
-                    await interaction.followup.send(
-                    f"🎉 Vous avez gagné un Pokémon {shiny_text}**{pokemon_name}** !",
-                    ephemeral=True
-                )
+                    embed = create_pokemon_embed(
+                        pokemon_name=pokemon_name,
+                        json_file="pokemon_all_pokeball_normal.json",
+                        is_shiny=is_shiny
+                    )
+                    await interaction.followup.send(embed=embed, ephemeral=True)
+                    
                 else:
                     await interaction.followup.send(
                     "❌ Impossible de spawn le Pokémon.",
@@ -127,6 +132,8 @@ class UseItemButton(Button):
                 "❌ La fonction de spawn n'est pas définie.",
                 ephemeral=True
                 )
+
+
 
         elif extra == "spawn_pokemon_legendary":
             if self.spawn_func is not None:
