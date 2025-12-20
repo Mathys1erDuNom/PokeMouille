@@ -232,7 +232,28 @@ class UseItemButton(Button):
 
         # Envoie maintenant le message générique
         await interaction.followup.send(msg, ephemeral=True)
-    
+
+def draw_multiline_text(draw, text, position, font, max_width, fill=(0,0,0)):
+    words = text.split()
+    lines = []
+    current_line = ""
+    for word in words:
+        test_line = current_line + " " + word if current_line else word
+        w, h = draw.textsize(test_line, font=font)
+        if w <= max_width:
+            current_line = test_line
+        else:
+            lines.append(current_line)
+            current_line = word
+    if current_line:
+        lines.append(current_line)
+
+    x, y = position
+    line_height = font.getsize("A")[1] + 4
+    for line in lines:
+        draw.text((x, y), line, font=font, fill=fill)
+        y += line_height
+
 
 class InventoryItemButton(Button):
     def __init__(self, item, parent_view):
@@ -265,7 +286,8 @@ class InventoryItemButton(Button):
 
         draw.text((30, 30), f"{name} ({rarity})", fill="black", font=font)
         draw.text((30, 80), f"Quantité : {quantity}", fill="black", font=font_small)
-        draw.text((30, 130), description or "Aucune description.", fill="black", font=font_small)
+        draw_multiline_text(draw, description or "Aucune description.", (30, 130), font_small, max_width=300)
+
 
         # Image de l'objet
         if image_url and image_url.startswith("http"):
