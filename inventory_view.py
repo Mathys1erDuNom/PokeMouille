@@ -23,6 +23,49 @@ item_json_path = os.path.join(script_dir, "json", "item.json")
 with open(item_json_path, "r", encoding="utf-8") as f:
     ITEM_LIST = json.load(f)
 
+
+
+import json
+import discord
+from io import BytesIO
+import requests
+
+async def get_pokemon_image_embed(pokemon_name: str, json_file: str, is_shiny: bool = False) -> (discord.Embed, discord.File):
+    """
+    Renvoie un embed Discord et un fichier avec l'image du Pokémon.
+
+    :param pokemon_name: Nom du Pokémon à afficher
+    :param json_file: Chemin du fichier JSON contenant les données des Pokémon
+    :param is_shiny: Indique si le Pokémon est shiny (pour le préfixe ✨)
+    """
+    # Chargement du JSON
+    with open(json_file, "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    # Recherche du Pokémon
+    pokemon_data = next((p for p in data if p["name"].lower() == pokemon_name.lower()), None)
+    if not pokemon_data:
+        return None, None
+
+    # Préparation de l'image
+    image_url = pokemon_data.get("image")
+    if image_url.startswith("http"):
+        resp = requests.get(image_url)
+        resp.raise_for_status()
+        buffer = BytesIO(resp.content)
+        file = discord.File(buffer, filename=f"{pokemon_name}.png")
+    else:
+        file = None
+
+    # Préparation de l'embed
+    shiny_text = "✨ " if is_shiny else ""
+    embed = discord.Embed(title=f"{shiny_text}{pokemon_data['name']}")
+    if file:
+        embed.set_image(url=f"attachment://{pokemon_name}.png")
+
+    return embed, file
+
+
 class InventoryView(View):
     def __init__(self, items, spawn_func=None):
         super().__init__(timeout=180)
@@ -112,11 +155,23 @@ class UseItemButton(Button):
                 )
 
                 if pokemon_name:
-                    shiny_text = "✨ " if is_shiny else ""
-                    await interaction.followup.send(
-                    f"🎉 Vous avez gagné un Pokémon {shiny_text}**{pokemon_name}** !",
-                    ephemeral=True
-                )
+                    embed, file = await get_pokemon_image_embed(
+                        pokemon_name, 
+                        json_file="json/pokemon_all_pokeball_normal.json",
+                        is_shiny=is_shiny
+                    )
+                    if embed and file:
+                        await interaction.followup.send(
+                            content="🎉 Vous avez gagné un Pokémon !",
+                            embed=embed,
+                            file=file,
+                            ephemeral=True
+                        )
+                    else:
+                        await interaction.followup.send(
+                            "❌ Impossible de trouver l'image du Pokémon.",
+                            ephemeral=True
+                        )    
                 else:
                     await interaction.followup.send(
                     "❌ Impossible de spawn le Pokémon.",
