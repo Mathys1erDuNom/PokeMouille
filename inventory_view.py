@@ -121,11 +121,12 @@ class UseItemButton(Button):
                     # Récupère le dernier Pokémon capturé par l'utilisateur
                     captures = get_new_captures(interaction.user.id)
                     if captures:
-                        p = captures[0]  # dernier Pokémon capturé
+                        p = captures[-1]  # dernier Pokémon capturé
                         await send_pokemon_card(
                             interaction=interaction,
                             pokemon_name=p["name"],
-                            is_shiny=p["is_shiny"],
+                            is_shiny=p.get("is_shiny", is_shiny),
+
                             p_data=p,
                             type_sprites=self.spawn_func.type_sprites,
                             attack_type_map=self.spawn_func.attack_type_map,
