@@ -14,13 +14,7 @@ def create_pokemon_embed(pokemon_name: str, json_file: str, is_shiny: bool = Fal
     """
     shiny_text = "✨ " if is_shiny else ""
 
-    # Modifier le fichier JSON si shiny
-    if is_shiny:
-        if json_file.endswith("normal.json"):
-            json_file = json_file.replace("normal.json", "shiny.json")
-        else:
-            # Si le nom du fichier ne suit pas le format normal.json, on ajoute _shiny avant .json
-            json_file = os.path.splitext(json_file)[0] + "_shiny.json"
+ 
 
     # Charger le JSON
     try:
