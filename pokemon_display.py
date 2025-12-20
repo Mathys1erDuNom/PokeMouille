@@ -1,39 +1,46 @@
 import json
 from discord import Embed
+import os
 
 def create_pokemon_embed(pokemon_name: str, json_file: str, is_shiny: bool = False) -> Embed:
     """
     Crée un embed Discord pour un Pokémon donné depuis un fichier JSON spécifique.
+    Si le Pokémon est shiny, le fichier JSON utilisé est automatiquement remplacé par shiny.json.
 
     :param pokemon_name: Nom du Pokémon à afficher
-    :param json_file: Chemin vers le fichier JSON contenant les Pokémon
+    :param json_file: Chemin vers le fichier JSON contenant les Pokémon (doit finir par normal.json)
     :param is_shiny: Indique si le Pokémon est shiny
     :return: Un objet discord.Embed prêt à envoyer
     """
     shiny_text = "✨ " if is_shiny else ""
+
+    # Modifier le fichier JSON si shiny
+    if is_shiny:
+        if json_file.endswith("normal.json"):
+            json_file = json_file.replace("normal.json", "shiny.json")
+        else:
+            # Si le nom du fichier ne suit pas le format normal.json, on ajoute _shiny avant .json
+            json_file = os.path.splitext(json_file)[0] + "_shiny.json"
 
     # Charger le JSON
     try:
         with open(json_file, "r", encoding="utf-8") as f:
             pokemons = json.load(f)
     except Exception as e:
-        embed = Embed(
+        return Embed(
             title="❌ Erreur JSON",
             description=f"Impossible de charger le fichier JSON : {e}",
             color=0xff0000
         )
-        return embed
 
     # Chercher le Pokémon
-    pokemon_data = next((p for p in pokemons if p["name"] == pokemon_name), None)
-
+    pokemon_data = next((p for p in pokemons if p["name"].lower() == pokemon_name.lower()), None)
     if not pokemon_data:
-        embed = Embed(
+        return Embed(
             title="❌ Pokémon introuvable",
             description=f"Impossible de trouver le Pokémon {pokemon_name}.",
             color=0xff0000
         )
-        return embed
 
     # Créer l'embed
     embed = Embed(
