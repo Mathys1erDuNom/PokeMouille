@@ -4,15 +4,13 @@
     "rarity": "common",
     "description": "Une Poké ball basique qui contient un Pokémon.",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png",
-    "extra": "spawn_pokemon",
-    "prix" : 100
+    "extra": "spawn_pokemon"
   },
   {
     "item_name": "Master Ball",
     "rarity": "legendary",
     "description": "Une Master ball qui contient surement un Pokémon légendaire",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png",
-    "extra": "spawn_pokemon_legendary",
-    "prix": 1000
+    "extra": "spawn_pokemon_legendary"
   }
 ]
