@@ -20,6 +20,8 @@ def load_pokemon_data():
     normal_files = [
         "pokemon_gen1_normal.json",
         "pokemon_gen2_normal.json",
+        "pokemon_gen3_normal.json",
+        "pokemon_gen4_normal.json",
     ]
 
     all_pokemon = []
