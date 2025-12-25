@@ -146,12 +146,12 @@ class ShopItemButton(Button):
         # Fallback : fichiers locaux
         if background is None:
             try:
-                background = Image.open(os.path.join(images_dir, "fond_pokedex_3.png")).convert("RGBA")
+                background = Image.open(os.path.join(images_dir, "shop_item.png")).convert("RGBA")
                 background = background.resize((width, height), Image.Resampling.LANCZOS)
             except Exception as e:
-                print(f"[SHOP] Fond local 'fond_pokedex_3.png' introuvable : {e}")
+                print(f"[SHOP] Fond local 'shop_item.png' introuvable : {e}")
                 try:
-                    background = Image.open(os.path.join(images_dir, "fond_pokedex_3.png")).convert("RGBA")
+                    background = Image.open(os.path.join(images_dir, "shop_item.png")).convert("RGBA")
                     background = background.resize((width, height), Image.Resampling.LANCZOS)
                 except Exception as e2:
                     print(f"[SHOP] Aucun fond disponible, création d'un fond uni : {e2}")
