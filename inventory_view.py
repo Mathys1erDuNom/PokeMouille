@@ -383,7 +383,7 @@ def setup_inventory(bot, spawn_func=None):
             f"🎁 Grand Maître suprême des Crocodiles, l'item **{found_item['item_name']}** "
             f"a été ajouté à l'inventaire de **{user.mention}**."
         )
-
+    @is_croco()
     @bot.command(name="inventaire_vide")
     async def inventaire_vide(ctx, user: discord.User):
         """Supprime tous les items de l'inventaire d'un utilisateur."""
