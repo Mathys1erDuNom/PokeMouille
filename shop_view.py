@@ -171,11 +171,11 @@ class ShopItemButton(Button):
             font_small = font_title
 
         # ----- 🖼️ Positions des éléments -----
-        pos_title = (75, 120)
-        pos_rarity = (75, 170)
-        pos_price = (75, 210)
-        pos_balance = (75, 250)
-        pos_description = (75, 310)
+        pos_title = (550, 115)
+        pos_rarity = (550, 170)
+        pos_price = (550, 210)
+        pos_balance = (550, 250)
+        pos_description = (550, 310)
         pos_item_image = (550, 140)
 
         # ----- ✍️ Nom de l'item -----
