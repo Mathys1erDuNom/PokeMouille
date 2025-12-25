@@ -194,7 +194,7 @@ class PokemonButton(Button):
         pos_nom_type = (90, 70)
         pos_ivs = (90, 270)
         pos_stats = (90, 420)
-        pos_sprite = (520, 40)
+        pos_sprite = (400, 80)
         pos_attaques = (535, 340)
 
         # --- Nom + Types ---
@@ -249,7 +249,7 @@ class PokemonButton(Button):
             try:
                 response = requests.get(poke_img_url)
                 poke_img = Image.open(io.BytesIO(response.content)).convert("RGBA")
-                poke_img = self.resize_keep_aspect(poke_img, 250)
+                poke_img = self.resize_keep_aspect(poke_img, 200)
                 image.paste(poke_img, pos_sprite, poke_img)
             except:
                 pass
