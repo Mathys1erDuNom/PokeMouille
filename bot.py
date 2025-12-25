@@ -214,7 +214,23 @@ if os.path.exists(gen3_shiny_path):
     with open(gen3_shiny_path, "r", encoding="utf-8") as f:
         data = json.load(f)
         full_pokemon_shiny_data.extend(data)
+
+
+#####################################
+# --- 🔥 AJOUT DES FICHIERS GEN 4 ---
+#####################################
+
+gen4_normal_path = os.path.join(json_dir, "pokemon_gen4_normal.json")
+if os.path.exists(gen4_normal_path):
+    with open(gen4_normal_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        full_pokemon_data.extend(data)
         
+gen4_shiny_path = os.path.join(json_dir, "pokemon_gen4_shiny.json")
+if os.path.exists(gen4_shiny_path):
+    with open(gen4_shiny_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+        full_pokemon_shiny_data.extend(data)
 
 ##############################################################
 ##############################################################
