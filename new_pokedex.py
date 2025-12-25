@@ -9,6 +9,8 @@ from new_db import get_new_captures
 
 from combat.utils import normalize_text
 
+
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 
@@ -31,13 +33,21 @@ async def create_mosaic(pokemon_names, full_pokemon_data, full_pokemon_shiny_dat
 
     for name in pokemon_names:
         clean_name = normalize_text(name)
-        clean_base = ''.join(filter(str.isalpha, clean_name))
-        p_data = next((p for p in full_pokemon_data + full_pokemon_shiny_data if normalize_text(p["name"]) == clean_name), None)
+        # 🔥 CORRECTION : Extraire le nom de base sans le numéro final
+        # Enlève les chiffres à la fin (pikachu_shiny2 → pikachu_shiny)
+        clean_base = clean_name.rstrip('0123456789')
+        
+        # Cherche d'abord avec le nom exact
+        p_data = next((p for p in full_pokemon_data + full_pokemon_shiny_data 
+                      if normalize_text(p["name"]) == clean_name), None)
+        
+        # 🔥 CORRECTION : Si pas trouvé, chercher avec le nom sans le numéro final
         if not p_data:
-            p_data = next((p for p in full_pokemon_data + full_pokemon_shiny_data if normalize_text(p["name"]) == clean_base), None)
+            p_data = next((p for p in full_pokemon_data + full_pokemon_shiny_data 
+                          if normalize_text(p["name"]) == clean_base), None)
 
         if not p_data:
-            print(f"[IGNORÉ] {name} non trouvé dans le JSON. Utilisation de l'image par défaut.")
+            print(f"[IGNORÉ] {name} (base: {clean_base}) non trouvé dans le JSON. Utilisation de l'image par défaut.")
             try:
                 fallback = Image.open(os.path.join(images_dir, "default.png")).convert("RGBA").resize((64, 64))
                 images.append(fallback)
@@ -74,8 +84,7 @@ async def create_mosaic(pokemon_names, full_pokemon_data, full_pokemon_shiny_dat
     output = BytesIO()
     mosaic.save(output, format="PNG")
     output.seek(0)
-    return output, len(images) 
-
+    return output, len(images)
 
 # 👉 Les Views et Buttons du Pokédex
 class PokedexView(View):
