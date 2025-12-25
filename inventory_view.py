@@ -250,7 +250,7 @@ def draw_multiline_text(draw, text, position, font, max_width, fill=(0,0,0)):
         lines.append(current_line)
 
     x, y = position
-    line_height = font.getbbox("A")[3] - font.getbbox("A")[1] + 4
+    line_height = font.getbbox("A")[3] - font.getbbox("A")[1] + 10
     for line in lines:
         draw.text((x, y), line, font=font, fill=fill)
         y += line_height
