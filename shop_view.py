@@ -1,4 +1,3 @@
-# shop_view.py
 import discord
 from discord.ui import View, Button
 from PIL import Image, ImageDraw, ImageFont
@@ -11,10 +10,20 @@ from money_db import get_balance, remove_money
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 item_json_path = os.path.join(script_dir, "json", "item.json")
+images_dir = os.path.join(script_dir, "images")
+images_json_path = os.path.join(script_dir, "json", "images.json")
 
 # Chargement du fichier item.json
 with open(item_json_path, "r", encoding="utf-8") as f:
     ITEM_LIST = json.load(f)
+
+# Chargement du fichier images.json pour les URLs des images de fond
+try:
+    with open(images_json_path, "r", encoding="utf-8") as f:
+        IMAGES_DATA = json.load(f)
+except Exception as e:
+    print(f"[SHOP] Erreur lors du chargement de images.json : {e}")
+    IMAGES_DATA = {}
 
 
 class ShopView(View):
@@ -88,96 +97,167 @@ class ShopItemButton(Button):
         self.item = item
         self.user_id = user_id
 
+    def resize_keep_aspect(self, img, max_size):
+        """Redimensionne une image en gardant les proportions"""
+        w, h = img.size
+        ratio = min(max_size / w, max_size / h)
+        return img.resize((int(w * ratio), int(h * ratio)), Image.Resampling.LANCZOS)
+
     async def callback(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
 
-        # Création de la carte visuelle de l'item
+        # Récupération des données de l'item
         name = self.item["item_name"]
         price = self.item["price"]
         rarity = self.item.get("rarity", "common")
         description = self.item.get("description", "Aucune description.")
         image_url = self.item.get("image", "")
+        balance = get_balance(self.user_id)
 
         # Couleurs par rareté
         rarity_colors = {
-            "common": (200, 200, 200, 255),
-            "uncommon": (50, 205, 50, 255),
-            "rare": (30, 144, 255, 255),
-            "epic": (138, 43, 226, 255),
-            "legendary": (255, 215, 0, 255)
+            "common": (200, 200, 200),
+            "uncommon": (50, 205, 50),
+            "rare": (30, 144, 255),
+            "epic": (138, 43, 226),
+            "legendary": (255, 215, 0)
         }
-        bg_color = rarity_colors.get(rarity.lower(), (245, 245, 245, 255))
+        rarity_color = rarity_colors.get(rarity.lower(), (200, 200, 200))
 
-        card = Image.new("RGBA", (600, 400), bg_color)
-        draw = ImageDraw.Draw(card)
+        # Dimensions de la carte
+        width, height = 850, 600
+
+        # ----- 🎨 Chargement de l'image de fond depuis le JSON -----
+        background = None
         
-        font_path = os.path.join(script_dir, "fonts", "DejaVuSans-Bold.ttf")
+        # Essaie de charger l'image depuis le JSON
+        fond_url = IMAGES_DATA.get("fond_shop") or IMAGES_DATA.get("fond_pokedex") or IMAGES_DATA.get("background")
+        
+        if fond_url and fond_url.startswith("http"):
+            try:
+                print(f"[SHOP] Chargement du fond depuis l'URL : {fond_url}")
+                resp = requests.get(fond_url, timeout=5)
+                resp.raise_for_status()
+                background = Image.open(BytesIO(resp.content)).convert("RGBA")
+                background = background.resize((width, height), Image.Resampling.LANCZOS)
+            except Exception as e:
+                print(f"[SHOP] Erreur lors du chargement du fond depuis l'URL : {e}")
+        
+        # Fallback : fichiers locaux
+        if background is None:
+            try:
+                background = Image.open(os.path.join(images_dir, "fond_pokedex_3.png")).convert("RGBA")
+                background = background.resize((width, height), Image.Resampling.LANCZOS)
+            except Exception as e:
+                print(f"[SHOP] Fond local 'fond_pokedex_3.png' introuvable : {e}")
+                try:
+                    background = Image.open(os.path.join(images_dir, "fond_pokedex_3.png")).convert("RGBA")
+                    background = background.resize((width, height), Image.Resampling.LANCZOS)
+                except Exception as e2:
+                    print(f"[SHOP] Aucun fond disponible, création d'un fond uni : {e2}")
+                    background = Image.new("RGBA", (width, height), (245, 245, 245, 255))
+
+        draw = ImageDraw.Draw(background)
+
+        # ----- 📝 Chargement des polices -----
+        font_path_bold = os.path.join(script_dir, "fonts", "DejaVuSans-Bold.ttf")
         try:
-            font_title = ImageFont.truetype(font_path, 26)
-            font_text = ImageFont.truetype(font_path, 18)
+            font_title = ImageFont.truetype(font_path_bold, 28)
+            font_normal = ImageFont.truetype(font_path_bold, 18)
+            font_small = ImageFont.truetype(font_path_bold, 16)
         except:
             font_title = ImageFont.load_default()
-            font_text = font_title
+            font_normal = font_title
+            font_small = font_title
 
-        # Texte sur la carte
-        draw.text((30, 30), name, fill="white", font=font_title)
-        draw.text((30, 80), f"Rareté : {rarity}", fill="white", font=font_text)
-        draw.text((30, 120), f"Prix : {price:,} 💰", fill="white", font=font_text)
-        
-        # Description sur plusieurs lignes
+        # ----- 🖼️ Positions des éléments -----
+        pos_title = (75, 120)
+        pos_rarity = (75, 170)
+        pos_price = (75, 210)
+        pos_balance = (75, 250)
+        pos_description = (75, 310)
+        pos_item_image = (550, 140)
+
+        # ----- ✍️ Nom de l'item -----
+        draw.text(pos_title, name, font=font_title, fill="black")
+
+        # ----- ✨ Rareté avec couleur -----
+        draw.text(pos_rarity, f"Rareté : {rarity.capitalize()}", font=font_normal, fill=rarity_color)
+
+        # ----- 💰 Prix -----
+        draw.text(pos_price, f"Prix : {price:,} 💰", font=font_normal, fill="black")
+
+        # ----- 💼 Solde de l'utilisateur -----
+        balance_color = (50, 205, 50) if balance >= price else (255, 69, 0)
+        draw.text(pos_balance, f"Votre solde : {balance:,} 💰", font=font_normal, fill=balance_color)
+
+        # ----- 📜 Description (multi-lignes) -----
+        x, y = pos_description
+        draw.text((x, y), "Description :", font=font_normal, fill="black")
+        y += 30
+
         words = description.split()
         lines = []
         current_line = ""
+        max_width = 450  # Largeur max pour le texte
+        
         for word in words:
             test_line = current_line + word + " "
-            if len(test_line) * 10 < 300:  # Approximation de la largeur
+            # Estimation de la largeur (approximative)
+            if len(test_line) * 10 < max_width:
                 current_line = test_line
             else:
-                lines.append(current_line)
+                if current_line:
+                    lines.append(current_line.strip())
                 current_line = word + " "
-        lines.append(current_line)
         
-        y_offset = 170
-        for line in lines[:3]:  # Max 3 lignes
-            draw.text((30, y_offset), line, fill="white", font=font_text)
-            y_offset += 30
+        if current_line:
+            lines.append(current_line.strip())
+        
+        # Affichage des lignes (max 4 lignes)
+        for line in lines[:4]:
+            draw.text((x, y), line, font=font_small, fill="black")
+            y += 25
 
-        # Image de l'objet
+        # ----- 🖼️ Image de l'objet -----
         if image_url and image_url.startswith("http"):
             try:
                 resp = requests.get(image_url, timeout=5)
                 resp.raise_for_status()
                 item_img = Image.open(BytesIO(resp.content)).convert("RGBA")
-                item_img = item_img.resize((150, 150), Image.Resampling.LANCZOS)
-                card.paste(item_img, (400, 30), item_img)
+                
+                # Redimensionnement en gardant les proportions
+                item_img = self.resize_keep_aspect(item_img, 200)
+                
+                # Centrage de l'image
+                img_x = pos_item_image[0] + (200 - item_img.width) // 2
+                img_y = pos_item_image[1]
+                
+                background.paste(item_img, (img_x, img_y), item_img)
             except Exception as e:
-                print(f"Erreur lors du chargement de l'image : {e}")
+                print(f"[SHOP] Erreur lors du chargement de l'image de l'item : {e}")
+                # Image par défaut si erreur
+                try:
+                    default_img = Image.open(os.path.join(images_dir, "default.png")).convert("RGBA")
+                    default_img = self.resize_keep_aspect(default_img, 150)
+                    background.paste(default_img, pos_item_image, default_img)
+                except:
+                    pass
 
-        # Conversion en fichier Discord
+        # ----- 📤 Conversion en fichier Discord -----
         with BytesIO() as buffer:
-            card.save(buffer, "PNG")
+            background.save(buffer, "PNG")
             buffer.seek(0)
-            file = discord.File(buffer, filename="shop_item.png")
+            file = discord.File(buffer, filename="shop_item_card.png")
 
-        # Création de l'embed
+        # ----- 📋 Création de l'embed -----
         embed = discord.Embed(
             title=f"🛒 {name}",
-            description=description,
-            color=discord.Color.from_rgb(*bg_color[:3])
+            color=discord.Color.from_rgb(*rarity_color)
         )
-        embed.add_field(name="💰 Prix", value=f"{price:,} Croco dollars", inline=True)
-        embed.add_field(name="✨ Rareté", value=rarity.capitalize(), inline=True)
-        embed.set_image(url="attachment://shop_item.png")
+        embed.set_image(url="attachment://shop_item_card.png")
 
-        # Vérifier le solde de l'utilisateur
-        balance = get_balance(self.user_id)
-        embed.add_field(
-            name="💼 Votre solde", 
-            value=f"{balance:,} Croco dollars", 
-            inline=False
-        )
-
-        # Bouton d'achat
+        # ----- 🔘 Bouton d'achat -----
         view = View()
         view.add_item(BuyItemButton(self.item, self.user_id))
 
