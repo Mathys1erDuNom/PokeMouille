@@ -8,6 +8,8 @@ import time
 from PIL import Image, ImageDraw, ImageFont
 
 from combat.menu_combat import SelectionView
+from combat.opponent_selection import OpponentManager, OpponentSelectionView
+
 
 import stat
 
@@ -42,8 +44,6 @@ from utils import is_croco
 
 from money_db import add_money
 from shop_view import setup_shop
-from combat.opponents import get_random_opponent, get_opponent_by_difficulty
-
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
@@ -81,6 +81,13 @@ json_dir = os.path.join(script_dir, "json")
 
 #image
 images_dir = os.path.join(script_dir, "images")
+
+
+combat_dir = os.path.join(script_dir, "combat")
+
+opponent_manager = OpponentManager(
+    os.path.join(combat_dir, "opponents.json")
+)
 
 
 
@@ -719,7 +726,6 @@ print("[DEBUG] Ready to run bot...")
 
 @bot.command()
 async def battle(ctx):
-    """Lance un combat Pokémon en choisissant ton adversaire et ton équipe"""
     user_id = str(ctx.author.id)
     captures = get_new_captures(user_id)
     
@@ -727,26 +733,76 @@ async def battle(ctx):
         await ctx.send("Tu n'as aucun Pokémon à utiliser en combat.")
         return
     
-    pokemons = [entry["name"] for entry in captures]
-    view = SelectionView(pokemons, full_pokemon_data)
+    # Étape 1 : Sélection de l'adversaire
+    opponents = opponent_manager.get_all_opponents()
     
+    if not opponents:
+        await ctx.send("❌ Aucun adversaire disponible pour le moment.")
+        return
+    
+    # Créer un embed de présentation
     embed = discord.Embed(
-        title="⚔️ Sélection de combat",
-        description=(
-            "**Étape 1 :** Choisis ton adversaire dans le menu déroulant\n"
-            "**Étape 2 :** Sélectionne jusqu'à 6 Pokémon pour ton équipe\n"
-            "**Étape 3 :** Clique sur 'Valider et Combattre'"
-        ),
-        color=discord.Color.red()
+        title="⚔️ Sélection de l'adversaire",
+        description="Choisis ton adversaire pour le combat !",
+        color=discord.Color.blue()
     )
-    embed.set_footer(text="Tu as 5 minutes pour faire ton choix")
+    embed.set_footer(text=f"Demandé par {ctx.author.display_name}")
     
+    async def on_opponent_confirmed(interaction, opponent):
+        """Callback appelé quand l'adversaire est confirmé"""
+        # Étape 2 : Sélection de l'équipe du joueur
+        pokemons = [entry["name"] for entry in captures]
+        view = SelectionView(pokemons, full_pokemon_data, opponent)
+        
+        # Créer un embed pour la sélection d'équipe
+        team_embed = discord.Embed(
+            title=f"⚔️ Combat contre {opponent['name']}",
+            description=f"Choisis jusqu'à 6 Pokémon pour affronter :\n**{', '.join(opponent['team'])}**",
+            color=discord.Color.green()
+        )
+        team_embed.add_field(
+            name="Difficulté",
+            value=opponent['difficulty'],
+            inline=True
+        )
+        
+        await interaction.response.edit_message(
+            content=None,
+            embed=team_embed,
+            view=view
+        )
+    
+    # Afficher la sélection d'adversaire
+    view = OpponentSelectionView(opponents, on_opponent_confirmed)
     await ctx.send(embed=embed, view=view)
 
 
-
-
-
+# Commande optionnelle pour voir tous les adversaires
+@bot.command()
+async def opponents(ctx):
+    """Affiche la liste de tous les adversaires disponibles"""
+    opponents = opponent_manager.get_all_opponents()
+    
+    if not opponents:
+        await ctx.send("❌ Aucun adversaire disponible.")
+        return
+    
+    embed = discord.Embed(
+        title="📋 Liste des adversaires",
+        description="Voici tous les adversaires que tu peux affronter :",
+        color=discord.Color.purple()
+    )
+    
+    for opp in opponents:
+        team_str = ", ".join(opp['team'])
+        embed.add_field(
+            name=f"{opp['name']} {opp['difficulty']}",
+            value=f"*{opp['description']}*\n**Équipe:** {team_str}",
+            inline=False
+        )
+    
+    embed.set_footer(text="Utilise !battle pour commencer un combat")
+    await ctx.send(embed=embed)
 setup_croco_event(
     bot,
     VOICE_CHANNEL_ID,

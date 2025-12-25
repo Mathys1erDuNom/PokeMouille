@@ -1,0 +1,60 @@
+{
+    "opponents": [
+      {
+        "id": "champion_red",
+        "name": "Red le Champion",
+        "description": "Le légendaire dresseur de Kanto",
+        "team": ["Pikachu", "Charizard", "Blastoise", "Venusaur", "Snorlax", "Lapras"],
+        "difficulty": "⭐⭐⭐⭐⭐"
+      },
+      {
+        "id": "rival_blue",
+        "name": "Blue le Rival",
+        "description": "Ton rival de toujours",
+        "team": ["Pidgeot", "Alakazam", "Rhydon", "Arcanine", "Exeggutor", "Gyarados"],
+        "difficulty": "⭐⭐⭐⭐"
+      },
+      {
+        "id": "team_rocket",
+        "name": "Team Rocket",
+        "description": "Jessie et James avec leur équipe",
+        "team": ["Meowth", "Arbok", "Weezing", "Victreebel", "Lickitung", "Wobbuffet"],
+        "difficulty": "⭐⭐"
+      },
+      {
+        "id": "elite_four_lance",
+        "name": "Lance du Conseil 4",
+        "description": "Le maître des dragons",
+        "team": ["Dragonite", "Dragonite", "Dragonite", "Aerodactyl", "Gyarados", "Charizard"],
+        "difficulty": "⭐⭐⭐⭐⭐"
+      },
+      {
+        "id": "gym_leader_brock",
+        "name": "Pierre du Rocher",
+        "description": "Champion d'arène type Roche",
+        "team": ["Onix", "Geodude", "Graveler", "Rhyhorn"],
+        "difficulty": "⭐⭐"
+      },
+      {
+        "id": "gym_leader_misty",
+        "name": "Ondine l'Aquatique",
+        "description": "Championne d'arène type Eau",
+        "team": ["Starmie", "Golduck", "Vaporeon", "Lapras"],
+        "difficulty": "⭐⭐⭐"
+      },
+      {
+        "id": "legendary_master",
+        "name": "Maître des Légendaires",
+        "description": "Un dresseur mystérieux avec des Pokémon légendaires",
+        "team": ["Mew", "Mewtwo", "Groudon_shiny", "Kyogre_shiny", "Rayquaza_shiny", "Arceus"],
+        "difficulty": "⭐⭐⭐⭐⭐⭐"
+      },
+      {
+        "id": "starter_trainer",
+        "name": "Dresseur Débutant",
+        "description": "Un dresseur qui débute son aventure",
+        "team": ["Bulbasaur", "Charmander", "Squirtle"],
+        "difficulty": "⭐"
+      }
+    ]
+  }
