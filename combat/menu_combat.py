@@ -68,10 +68,6 @@ class ValidateButton(Button):
             await interaction.response.send_message("❌ Tu ne peux sélectionner que 6 Pokémon maximum (tous menus/pages confondus).", ephemeral=True)
             return
 
-        await interaction.response.send_message(
-            f"Tu as choisi : {', '.join(unique_selected)}.\nPréparation du combat...", ephemeral=True
-        )
-
         user_id = str(interaction.user.id)
         all_captures = get_captures(user_id)
         selected_pokemons = [p for p in all_captures if p.get("name") in unique_selected]
@@ -79,6 +75,19 @@ class ValidateButton(Button):
         # Récupère l'équipe de l'adversaire
         opponent = self.parent_view.opponent
         bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in opponent['team']]
+
+        # Vérification de sécurité
+        if len(selected_pokemons) == 0:
+            await interaction.response.send_message("❌ Erreur : Aucun Pokémon trouvé dans ta collection.", ephemeral=True)
+            return
+        
+        if len(bot_team) == 0:
+            await interaction.response.send_message("❌ Erreur : L'équipe adverse n'a pas pu être chargée.", ephemeral=True)
+            return
+
+        await interaction.response.send_message(
+            f"Tu as choisi : {', '.join(unique_selected)}.\nPréparation du combat...", ephemeral=True
+        )
 
         await start_battle_turn_based(interaction, selected_pokemons, bot_team)
 
