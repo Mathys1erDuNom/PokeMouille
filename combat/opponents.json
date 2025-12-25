@@ -4,7 +4,7 @@
         "id": "champion_red",
         "name": "Red le Champion",
         "description": "Le légendaire dresseur de Kanto",
-        "team": ["Pikachu", "Charizard", "Blastoise", "Venusaur", "Snorlax", "Lapras"],
+        "team": ["Pikachu"],
         "difficulty": "⭐⭐⭐⭐⭐"
       },
       {
