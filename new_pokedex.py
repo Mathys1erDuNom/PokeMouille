@@ -191,9 +191,9 @@ class PokemonButton(Button):
             font = ImageFont.load_default()
             font_bold = font
 
-        pos_nom_type = (90, 150)
+        pos_nom_type = (80, 150)
         pos_ivs = (75, 275)
-        pos_stats = (75, 380)
+        pos_stats = (80, 380)
         pos_sprite = (550, 165)
         pos_attaques = (535, 360)
 
