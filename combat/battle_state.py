@@ -2,19 +2,20 @@
 
 class BattleState:
     def __init__(self, player_team, bot_team):
+        # Assure que les équipes sont toujours des listes
         self.player_team = player_team or []
         self.bot_team = bot_team or []
 
         self.active_player_index = 0
         self.active_bot_index = 0
 
+        # Pool de PV initialisée ou vide si aucune équipe
         self.player_hp_pool = [p["stats"]["hp"] for p in self.player_team]
         self.bot_hp_pool = [p["stats"]["hp"] for p in self.bot_team]
 
     # ======================
     # Actifs sécurisés
     # ======================
-
     @property
     def active_player(self):
         if not self.player_team:
@@ -34,7 +35,6 @@ class BattleState:
     # ======================
     # États KO
     # ======================
-
     def is_player_ko(self):
         return self.get_hp("player") <= 0
 
@@ -44,7 +44,6 @@ class BattleState:
     # ======================
     # Switch joueur
     # ======================
-
     def can_switch_player_to(self, new_index: int) -> bool:
         if new_index < 0 or new_index >= len(self.player_team):
             return False
@@ -72,8 +71,11 @@ class BattleState:
     # ======================
     # Switch bot
     # ======================
-
     def switch_bot(self):
+        """
+        Switch automatique du bot vers le premier Pokémon vivant.
+        Ne modifie PAS l'index si aucun Pokémon valide.
+        """
         for i in range(len(self.bot_team)):
             if self.bot_hp_pool[i] > 0:
                 self.active_bot_index = i
@@ -83,9 +85,8 @@ class BattleState:
     # ======================
     # Dégâts / PV
     # ======================
-
     def take_damage(self, target: str, damage: int):
-        damage = max(0, int(damage))
+        damage = max(0, int(damage))  # S'assure que les dégâts sont positifs
 
         if target == "player":
             if self.active_player_index < len(self.player_hp_pool):
