@@ -171,12 +171,12 @@ class ShopItemButton(Button):
             font_small = font_title
 
         # ----- 🖼️ Positions des éléments -----
-        pos_title = (550, 115)
-        pos_item_image = (550, 140)
-        pos_rarity = (550, 370)
-        pos_price = (550, 390)
-        pos_balance = (550, 420)
-        pos_description = (550, 450)
+        pos_title = (500, 115)
+        pos_item_image = (500, 140)
+        pos_rarity = (500, 370)
+        pos_price = (500, 390)
+        pos_balance = (500, 420)
+        pos_description = (500, 450)
         
 
         # ----- ✍️ Nom de l'item -----
@@ -200,7 +200,7 @@ class ShopItemButton(Button):
         words = description.split()
         lines = []
         current_line = ""
-        max_width = 400  # Largeur max pour le texte
+        max_width = 600  # Largeur max pour le texte
         
         for word in words:
             test_line = current_line + word + " "
