@@ -10,7 +10,7 @@
   {
     "item_name": "Master Ball",
     "rarity": "legendary",
-    "description": "Une Master ball qui contient surement un Pokémon légendaire",
+    "description": "Une Master ball qui contient sûrement un Pokémon légendaire",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png",
     "extra": "spawn_pokemon_legendary",
     "price" : 1000
