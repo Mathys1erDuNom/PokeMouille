@@ -156,7 +156,7 @@ class PokemonButton(Button):
 
         # Vérifie si c'est un shiny
         is_shiny = any(normalize_text(p.get("name", "")) == normalize_text(self.pokemon_name) for p in self.shiny_data)
-        display_name = self.pokemon_name + " ✨" if is_shiny else self.pokemon_name
+        display_name = self.pokemon_name + "(Shiny)" if is_shiny else self.pokemon_name
 
         # Cherche les données de ce Pokémon
         p_data = next((p for p in self.capture_data if normalize_text(p["name"]) == normalize_text(self.pokemon_name)), None)
@@ -192,8 +192,8 @@ class PokemonButton(Button):
             font_bold = font
 
         pos_nom_type = (90, 150)
-        pos_ivs = (90, 260)
-        pos_stats = (90, 365)
+        pos_ivs = (90, 285)
+        pos_stats = (90, 380)
         pos_sprite = (550, 165)
         pos_attaques = (535, 340)
 
@@ -223,8 +223,7 @@ class PokemonButton(Button):
         draw.text((x, y), "IVs :", font=font_bold, fill="black")
         y += 25
         for line in [
-            f"PV : {ivs.get('hp', '?')}",
-            f"Atk : {ivs.get('attack', '?')}   AtkSpé : {ivs.get('special_attack', '?')}",
+            f"PV : {ivs.get('hp', '?')} Atk : {ivs.get('attack', '?')}   AtkSpé : {ivs.get('special_attack', '?')}",
             f"Def : {ivs.get('defense', '?')}   DefSpé : {ivs.get('special_defense', '?')}   Vit : {ivs.get('speed', '?')}",
         ]:
             draw.text((x, y), line, font=font, fill="black")
@@ -235,8 +234,7 @@ class PokemonButton(Button):
         draw.text((x, y), "Stats :", font=font_bold, fill="black")
         y += 30
         for line in [
-            f"PV : {stats.get('hp', '?')}",
-            f"Atk : {stats.get('attack', '?')}   AtkSpé : {stats.get('special_attack', '?')}",
+            f"PV : {stats.get('hp', '?')}  Atk : {stats.get('attack', '?')}   AtkSpé : {stats.get('special_attack', '?')}",
             f"Def : {stats.get('defense', '?')}   DefSpé : {stats.get('special_defense', '?')}   Vit : {stats.get('speed', '?')}",
         ]:
             draw.text((x, y), line, font=font, fill="black")
