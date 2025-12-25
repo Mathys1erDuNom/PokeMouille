@@ -200,7 +200,7 @@ class PokemonButton(Button):
         # --- Nom + Types ---
         x, y = pos_nom_type
         draw.text((x, y), display_name, font=font_bold, fill="black")
-        y += 20
+        y += 10
         for t in type_:
             url = self.type_sprites.get(t.lower())
             if url:
