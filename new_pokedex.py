@@ -194,7 +194,7 @@ class PokemonButton(Button):
         pos_nom_type = (90, 70)
         pos_ivs = (90, 270)
         pos_stats = (90, 420)
-        pos_sprite = (500, 180)
+        pos_sprite = (550, 165)
         pos_attaques = (535, 340)
 
         # --- Nom + Types ---
