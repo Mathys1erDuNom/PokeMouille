@@ -14,6 +14,8 @@ conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
 
+cur.execute("DROP TABLE IF EXISTS inventory;")
+conn.commit()
 
 
 
