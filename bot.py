@@ -42,7 +42,7 @@ from utils import is_croco
 
 from money_db import add_money
 from shop_view import setup_shop
-from combat.opponents import OPPONENTS, get_random_opponent, get_opponent_by_difficulty
+from combat.opponents import get_random_opponent, get_opponent_by_difficulty
 
 
 # Ici, déclare la constante globale :
