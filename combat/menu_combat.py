@@ -68,37 +68,26 @@ class ValidateButton(Button):
             await interaction.response.send_message("❌ Tu ne peux sélectionner que 6 Pokémon maximum (tous menus/pages confondus).", ephemeral=True)
             return
 
+        await interaction.response.send_message(
+            f"Tu as choisi : {', '.join(unique_selected)}.\nPréparation du combat...", ephemeral=True
+        )
+
         user_id = str(interaction.user.id)
         all_captures = get_captures(user_id)
         selected_pokemons = [p for p in all_captures if p.get("name") in unique_selected]
 
-        # Récupère l'équipe de l'adversaire
-        opponent = self.parent_view.opponent
-        bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in opponent['team']]
-
-        # Vérification de sécurité
-        if len(selected_pokemons) == 0:
-            await interaction.response.send_message("❌ Erreur : Aucun Pokémon trouvé dans ta collection.", ephemeral=True)
-            return
-        
-        if len(bot_team) == 0:
-            await interaction.response.send_message("❌ Erreur : L'équipe adverse n'a pas pu être chargée.", ephemeral=True)
-            return
-
-        await interaction.response.send_message(
-            f"Tu as choisi : {', '.join(unique_selected)}.\nPréparation du combat...", ephemeral=True
-        )
+        # Exemple équipe bot (à adapter)
+        bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in ["Mew", "Groudon_shiny", "Elektek"]]
 
         await start_battle_turn_based(interaction, selected_pokemons, bot_team)
 
 
 # ---- Vue principale avec pagination ----
 class SelectionView(View):
-    def __init__(self, pokemons, full_pokemon_data, opponent):
+    def __init__(self, pokemons, full_pokemon_data):
         super().__init__(timeout=300)
         self.selections = {}  # custom_id -> [values]
         self.full_pokemon_data = full_pokemon_data
-        self.opponent = opponent  # Stocke l'adversaire choisi
 
         # Découpe en options (25 max par menu)
         self.chunk_size = 25
