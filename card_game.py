@@ -5,11 +5,14 @@ import random
 from money_db import get_balance, add_money, remove_money
 
 class CardColorGame(View):
-    def __init__(self, user_id, bet_amount=10, win_amount=20):
-        super().__init__(timeout=60)
+    def __init__(self, user_id, bet_amount=10, win_amount=50):
+        super().__init__(timeout=120)
         self.user_id = user_id
         self.bet_amount = bet_amount
         self.win_amount = win_amount
+        self.correct_guesses = 0  # Nombre de bonnes réponses consécutives
+        self.target_guesses = 4   # Nombre requis pour gagner
+        self.game_started = False
         
         # Cartes avec leurs couleurs
         self.cards = {
@@ -41,68 +44,124 @@ class CardColorGame(View):
         self.add_item(RedButton(self))
         self.add_item(BlackButton(self))
     
+    def get_progress_bar(self):
+        """Retourne une barre de progression visuelle."""
+        filled = "🟢" * self.correct_guesses
+        empty = "⚪" * (self.target_guesses - self.correct_guesses)
+        return filled + empty
+    
     async def play_game(self, interaction: discord.Interaction, player_choice: str):
         """Joue une partie du jeu de devinette de couleur."""
         
-        # Vérifie que le joueur a assez d'argent
-        current_balance = get_balance(self.user_id)
-        
-        if current_balance < self.bet_amount:
-            embed = discord.Embed(
-                title="❌ Solde insuffisant",
-                description=f"Vous avez besoin de **{self.bet_amount} 💰** pour jouer.\n"
-                           f"Votre solde actuel : **{current_balance} 💰**",
-                color=discord.Color.red()
-            )
+        # Première partie : vérifier le solde et retirer la mise
+        if not self.game_started:
+            current_balance = get_balance(self.user_id)
             
-            for item in self.children:
-                item.disabled = True
+            if current_balance < self.bet_amount:
+                embed = discord.Embed(
+                    title="❌ Solde insuffisant",
+                    description=f"Vous avez besoin de **{self.bet_amount} 💰** pour jouer.\n"
+                               f"Votre solde actuel : **{current_balance} 💰**",
+                    color=discord.Color.red()
+                )
+                
+                for item in self.children:
+                    item.disabled = True
+                
+                await interaction.response.edit_message(embed=embed, view=self)
+                return
             
-            await interaction.response.edit_message(embed=embed, view=self)
-            return
-        
-        # Retire la mise
-        remove_money(self.user_id, self.bet_amount)
+            # Retire la mise
+            remove_money(self.user_id, self.bet_amount)
+            self.game_started = True
         
         # Tire une carte au hasard
         card_name = random.choice(list(self.cards.keys()))
         card_color = self.cards[card_name]
         
-        # Détermine si le joueur a gagné
-        won = (player_choice == card_color)
+        # Détermine si le joueur a gagné ce tour
+        won_round = (player_choice == card_color)
         
-        # Crée l'embed de résultat
-        if won:
-            add_money(self.user_id, self.win_amount)
-            new_balance = get_balance(self.user_id)
+        if won_round:
+            self.correct_guesses += 1
             
-            embed = discord.Embed(
-                title="🎉 Victoire !",
-                description=f"**Carte tirée :** {card_name}\n\n"
-                           f"Vous aviez choisi : **{'🔴 Rouge' if player_choice == 'red' else '⚫ Noir'}**\n"
-                           f"✅ Bonne réponse !\n\n"
-                           f"**Gain :** +{self.win_amount} 💰\n"
-                           f"**Nouveau solde :** {new_balance} 💰",
-                color=discord.Color.green()
-            )
+            # Vérifie s'il a gagné la partie complète
+            if self.correct_guesses >= self.target_guesses:
+                # VICTOIRE TOTALE
+                add_money(self.user_id, self.win_amount)
+                new_balance = get_balance(self.user_id)
+                
+                embed = discord.Embed(
+                    title="🎉🎉 JACKPOT ! 🎉🎉",
+                    description=f"**Carte tirée :** {card_name}\n\n"
+                               f"✅ **Vous avez deviné 4 fois d'affilée !**\n\n"
+                               f"{self.get_progress_bar()}\n\n"
+                               f"**Gain total :** +{self.win_amount} 💰\n"
+                               f"**Nouveau solde :** {new_balance} 💰",
+                    color=discord.Color.gold()
+                )
+                
+                # Désactive les boutons
+                for item in self.children:
+                    item.disabled = True
+                
+                await interaction.response.edit_message(embed=embed, view=self)
+            else:
+                # Continue le jeu
+                embed = discord.Embed(
+                    title="✅ Bonne réponse !",
+                    description=f"**Carte tirée :** {card_name}\n\n"
+                               f"Vous aviez choisi : **{'🔴 Rouge' if player_choice == 'red' else '⚫ Noir'}**\n"
+                               f"✅ Correct !\n\n"
+                               f"**Progression :** {self.correct_guesses}/{self.target_guesses}\n"
+                               f"{self.get_progress_bar()}\n\n"
+                               f"Continuez ! Encore {self.target_guesses - self.correct_guesses} à trouver !",
+                    color=discord.Color.green()
+                )
+                embed.set_footer(text="Choisissez la couleur de la prochaine carte...")
+                
+                await interaction.response.edit_message(embed=embed, view=self)
         else:
-            new_balance = get_balance(self.user_id)
+            # DÉFAITE - mais on rembourse si 3 bonnes réponses
+            if self.correct_guesses >= 3:
+                # Remboursement de la mise
+                add_money(self.user_id, self.bet_amount)
+                new_balance = get_balance(self.user_id)
+                
+                embed = discord.Embed(
+                    title="😅 Presque gagné !",
+                    description=f"**Carte tirée :** {card_name}\n\n"
+                               f"Vous aviez choisi : **{'🔴 Rouge' if player_choice == 'red' else '⚫ Noir'}**\n"
+                               f"❌ Mauvaise réponse !\n\n"
+                               f"**Progression atteinte :** {self.correct_guesses}/{self.target_guesses}\n"
+                               f"{self.get_progress_bar()}\n\n"
+                               f"💚 **Vous avez atteint 3 bonnes réponses !**\n"
+                               f"Votre mise de {self.bet_amount} 💰 vous est remboursée.\n\n"
+                               f"**Gain/Perte :** ±0 💰\n"
+                               f"**Nouveau solde :** {new_balance} 💰",
+                    color=discord.Color.orange()
+                )
+            else:
+                # Perte totale
+                new_balance = get_balance(self.user_id)
+                
+                embed = discord.Embed(
+                    title="💔 Perdu !",
+                    description=f"**Carte tirée :** {card_name}\n\n"
+                               f"Vous aviez choisi : **{'🔴 Rouge' if player_choice == 'red' else '⚫ Noir'}**\n"
+                               f"❌ Mauvaise réponse !\n\n"
+                               f"**Progression atteinte :** {self.correct_guesses}/{self.target_guesses}\n"
+                               f"{self.get_progress_bar()}\n\n"
+                               f"**Perte :** -{self.bet_amount} 💰\n"
+                               f"**Nouveau solde :** {new_balance} 💰",
+                    color=discord.Color.red()
+                )
             
-            embed = discord.Embed(
-                title="😢 Perdu !",
-                description=f"**Carte tirée :** {card_name}\n\n"
-                           f"Vous aviez choisi : **{'🔴 Rouge' if player_choice == 'red' else '⚫ Noir'}**\n"
-                           f"❌ Mauvaise réponse !\n\n"
-                           f"**Perte :** -{self.bet_amount} 💰\n"
-                           f"**Nouveau solde :** {new_balance} 💰",
-                color=discord.Color.red()
-            )
-        
-        # Désactive les boutons
-        for item in self.children:
-            item.disabled = True
-        
-        await interaction.response.edit_message(embed=embed, view=self)
+            # Désactive les boutons
+            for item in self.children:
+                item.disabled = True
+            
+            await interaction.response.edit_message(embed=embed, view=self)
     
     async def on_timeout(self):
         for item in self.children:
