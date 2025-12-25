@@ -239,7 +239,6 @@ def draw_multiline_text(draw, text, position, font, max_width, fill=(0,0,0)):
     current_line = ""
     for word in words:
         test_line = current_line + " " + word if current_line else word
-        # w, h = draw.textsize(test_line, font=font)  <-- PLUS VALIDE
         bbox = font.getbbox(test_line)
         w = bbox[2] - bbox[0]
         if w <= max_width:
@@ -277,7 +276,16 @@ class InventoryItemButton(Button):
         description = self.item["description"]
         image_url = self.item["image"]
 
-        card = Image.new("RGBA", (600, 400), (245, 245, 245, 255))
+        # 🔥 Chargement de l'image de fond
+        width, height = 600, 400
+        try:
+            card = Image.open(os.path.join(images_dir, "image_item.png")).convert("RGBA")
+            card = card.resize((width, height), Image.Resampling.LANCZOS)
+        except Exception as e:
+            print(f"[ERREUR] Impossible de charger le fond image_item.png : {e}")
+            # Fallback : fond uni si l'image n'existe pas
+            card = Image.new("RGBA", (width, height), (245, 245, 245, 255))
+
         draw = ImageDraw.Draw(card)
         font_path = os.path.join(script_dir, "fonts", "DejaVuSans-Bold.ttf")
         try:
@@ -287,10 +295,10 @@ class InventoryItemButton(Button):
             font = ImageFont.load_default()
             font_small = font
 
+        # Texte sur le fond
         draw.text((30, 30), f"{name} ({rarity})", fill="black", font=font)
         draw.text((30, 80), f"Quantité : {quantity}", fill="black", font=font_small)
         draw_multiline_text(draw, description or "Aucune description.", (30, 130), font_small, max_width=300)
-
 
         # Image de l'objet
         if image_url and image_url.startswith("http"):
@@ -311,7 +319,6 @@ class InventoryItemButton(Button):
         embed = discord.Embed(title=name)
         embed.set_image(url="attachment://item.png")
 
-        # InventoryItemButton.callback
         view = View()
         view.add_item(
             UseItemButton(
@@ -356,10 +363,10 @@ def setup_inventory(bot, spawn_func=None):
         )
 
         if not found_item:
-            await ctx.send(f"❌ Grand Maître suprême des Crocodiles, l’item `{item_name}` n’existe pas.")
+            await ctx.send(f"❌ Grand Maître suprême des Crocodiles, l'item `{item_name}` n'existe pas.")
             return
 
-        # Ajout de l’item dans la DB
+        # Ajout de l'item dans la DB
         add_item(
             user_id=user.id,
             name=found_item["item_name"],
@@ -373,8 +380,8 @@ def setup_inventory(bot, spawn_func=None):
         
 
         await ctx.send(
-            f"🎁 Grand Maître suprême des Crocodiles, l’item **{found_item['item_name']}** "
-            f"a été ajouté à l’inventaire de **{user.mention}**."
+            f"🎁 Grand Maître suprême des Crocodiles, l'item **{found_item['item_name']}** "
+            f"a été ajouté à l'inventaire de **{user.mention}**."
         )
 
     @bot.command(name="inventaire_vide")
@@ -383,4 +390,3 @@ def setup_inventory(bot, spawn_func=None):
     
         delete_inventory(user.id)
         await ctx.send(f"🗑️ Grand Maître suprême des Crocodiles, l'inventaire de {user.mention} a été vidé !")
-    
