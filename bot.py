@@ -18,7 +18,7 @@ from croco_event import setup_croco_event
 from money_view import setup_money
 
 
-
+from casino_view import setup_casino
 
 import unicodedata
 
@@ -699,6 +699,8 @@ setup_quiz_commands(bot, spawn_pokemon, ROLE_ID, is_under_ban_func=is_under_ban,
 setup_money(bot)
 
 setup_shop(bot)
+
+setup_casino(bot)
 
 setup_guess_pokemon_command(
     bot,
