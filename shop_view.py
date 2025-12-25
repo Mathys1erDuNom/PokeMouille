@@ -171,26 +171,26 @@ class ShopItemButton(Button):
             font_small = font_title
 
         # ----- 🖼️ Positions des éléments -----
-        pos_title = (500, 115)
-        pos_item_image = (500, 140)
-        pos_rarity = (500, 370)
-        pos_price = (500, 390)
-        pos_balance = (500, 420)
-        pos_description = (500, 450)
+        pos_title = (530, 115)
+        pos_item_image = (530, 140)
+        pos_rarity = (530, 370)
+        pos_price = (530, 390)
+        pos_balance = (530, 420)
+        pos_description = (530, 450)
         
 
         # ----- ✍️ Nom de l'item -----
         draw.text(pos_title, name, font=font_title, fill="black")
 
         # ----- ✨ Rareté avec couleur -----
-        draw.text(pos_rarity, f"Rareté : {rarity.capitalize()}", font=font_normal, fill=rarity_color)
+        draw.text(pos_rarity, f"Rareté : {rarity.capitalize()}", font=font_normal, fill="black")
 
         # ----- 💰 Prix -----
-        draw.text(pos_price, f"Prix : {price:,} 💰", font=font_normal, fill="black")
+        draw.text(pos_price, f"Prix : {price:,} Croco dollars", font=font_normal, fill="black")
 
         # ----- 💼 Solde de l'utilisateur -----
         balance_color = (50, 205, 50) if balance >= price else (255, 69, 0)
-        draw.text(pos_balance, f"Votre solde : {balance:,} 💰", font=font_normal, fill=balance_color)
+        draw.text(pos_balance, f"Votre solde : {balance:,} Croco dollars", font=font_normal, fill=balance_color)
 
         # ----- 📜 Description (multi-lignes) -----
         x, y = pos_description
