@@ -8,8 +8,6 @@ import time
 from PIL import Image, ImageDraw, ImageFont
 
 from combat.menu_combat import SelectionView
-from combat.opponent_selection import OpponentManager, OpponentSelectionView
-
 
 import stat
 
