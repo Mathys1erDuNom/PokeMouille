@@ -174,9 +174,9 @@ class ShopItemButton(Button):
         pos_title = (540, 115)
         pos_item_image = (530, 140)
         pos_rarity = (450, 340)
-        pos_price = (450, 370)
-        pos_balance = (450, 400)
-        pos_description = (450, 430)
+        pos_price = (450, 380)
+        pos_balance = (450, 420)
+        pos_description = (450, 460)
         
 
         # ----- ✍️ Nom de l'item -----
@@ -200,7 +200,7 @@ class ShopItemButton(Button):
         words = description.split()
         lines = []
         current_line = ""
-        max_width = 500  # Largeur max pour le texte
+        max_width = 450  # Largeur max pour le texte
         
         for word in words:
             test_line = current_line + word + " "
