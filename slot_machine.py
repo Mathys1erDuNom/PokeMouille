@@ -21,11 +21,11 @@ class SlotMachine(View):
         
         # Gains selon le nombre de symboles identiques
         self.payouts = {
-            "🍒": {"3": 20},
-            "🍋": {"3": 30},
-            "🍊": {"3": 50},
-            "⭐": {"2": 30, "3": 75},
-            "💎": {"2": 50, "3": 150}
+            "🍒": {"3": 100},
+            "🍋": {"3": 200},
+            "🍊": {"3": 500},
+            "⭐": {"2": 1000, "3": 7000},
+            "💎": {"2": 5000, "3": 10000}
         }
         
         self.add_item(SpinButton(self))
@@ -74,8 +74,8 @@ class SlotMachine(View):
         if current_balance < self.bet_amount:
             embed = discord.Embed(
                 title="❌ Solde insuffisant",
-                description=f"Vous avez besoin de **{self.bet_amount} 💰** pour jouer.\n"
-                           f"Votre solde actuel : **{current_balance} 💰**",
+                description=f"Vous avez besoin de **{self.bet_amount} 💰🐊** pour jouer.\n"
+                           f"Votre solde actuel : **{current_balance} 💰🐊**",
                 color=discord.Color.red()
             )
             
@@ -118,9 +118,9 @@ class SlotMachine(View):
                          f"**{reel_display}**\n" \
                          f"**╚═══════════╝**\n\n" \
                          f"{'🎊 ' if matching_count == 3 else ''}**{matching_count} {winning_symbol} {self.symbols[winning_symbol]['name']}** !\n\n" \
-                         f"**Gain :** +{win_amount} 💰\n" \
-                         f"**Profit net :** {'+' if net_gain >= 0 else ''}{net_gain} 💰\n" \
-                         f"**Nouveau solde :** {new_balance} 💰"
+                         f"**Gain :** +{win_amount} 💰🐊\n" \
+                         f"**Profit net :** {'+' if net_gain >= 0 else ''}{net_gain} 💰🐊\n" \
+                         f"**Nouveau solde :** {new_balance} 💰🐊"
             
             embed = discord.Embed(title=title, description=description, color=color)
         else:
@@ -132,8 +132,8 @@ class SlotMachine(View):
                            f"**{reel_display}**\n"
                            f"**╚═══════════╝**\n\n"
                            f"Aucune combinaison gagnante...\n\n"
-                           f"**Perte :** -{self.bet_amount} 💰\n"
-                           f"**Nouveau solde :** {new_balance} 💰",
+                           f"**Perte :** -{self.bet_amount} 💰🐊\n"
+                           f"**Nouveau solde :** {new_balance} 💰🐊",
                 color=discord.Color.red()
             )
         
@@ -183,13 +183,13 @@ class PlayAgainButton(Button):
             title="🎰 Machine à Sous",
             description="**Alignez les symboles pour gagner !**\n\n"
                        "**Gains :**\n"
-                       "💎💎💎 → 150 💰 | 💎💎 → 50 💰\n"
-                       "⭐⭐⭐ → 75 💰 | ⭐⭐ → 30 💰\n"
-                       "🍊🍊🍊 → 50 💰\n"
-                       "🍋🍋🍋 → 30 💰\n"
-                       "🍒🍒🍒 → 20 💰\n\n"
-                       f"**Mise :** 5 💰\n"
-                       f"**Votre solde :** {balance} 💰",
+                       "💎💎💎 → 10 000 💰🐊 | 💎💎 → 5000 💰🐊\n"
+                       "⭐⭐⭐ → 7000 💰🐊 | ⭐⭐ → 1000 💰🐊\n"
+                       "🍊🍊🍊 → 500 💰🐊\n"
+                       "🍋🍋🍋 → 200 💰🐊\n"
+                       "🍒🍒🍒 → 100 💰🐊\n\n"
+                       f"**Mise :** 5 💰🐊\n"
+                       f"**Votre solde :** {balance} 💰🐊",
             color=discord.Color.gold()
         )
         embed.set_footer(text="Cliquez sur SPIN pour lancer ! 🎰")
