@@ -306,8 +306,8 @@ class InventoryItemButton(Button):
                 resp = requests.get(image_url)
                 resp.raise_for_status()
                 item_img = Image.open(BytesIO(resp.content)).convert("RGBA")
-                item_img = item_img.resize((200, 200), Image.Resampling.LANCZOS)
-                card.paste(item_img, (350, 100), item_img if item_img.mode == "RGBA" else None)
+                item_img = item_img.resize((150, 150), Image.Resampling.LANCZOS)
+                card.paste(item_img, (350, 80), item_img if item_img.mode == "RGBA" else None)
             except Exception as e:
                 print(f"Erreur lors du chargement de l'image : {e}")
 
