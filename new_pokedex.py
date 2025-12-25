@@ -176,7 +176,7 @@ class PokemonButton(Button):
 
         width, height = 850, 600
         try:
-            image = Image.open(os.path.join(images_dir, "fond_pokedex.png")).convert("RGBA")
+            image = Image.open(os.path.join(images_dir, "fond_pokedex_3.png")).convert("RGBA")
             image = image.resize((width, height), Image.Resampling.LANCZOS)
         except Exception as e:
             print(f"[ERREUR] Impossible de charger le fond : {e}")
