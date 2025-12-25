@@ -189,7 +189,7 @@ class ShopItemButton(Button):
         draw.text(pos_price, f"Prix : {price:,} Croco dollars", font=font_normal, fill="black")
 
         # ----- 💼 Solde de l'utilisateur -----
-        balance_color = (50, 205, 50) if balance >= price else (255, 69, 0)
+        balance_color = (34, 139, 34)  if balance >= price else (255, 69, 0)
         draw.text(pos_balance, f"Votre solde : {balance:,} Croco dollars", font=font_normal, fill=balance_color)
 
         # ----- 📜 Description (multi-lignes) -----
