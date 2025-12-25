@@ -743,29 +743,7 @@ async def battle(ctx):
     
     await ctx.send(embed=embed, view=view)
 
-@bot.command()
-async def opponents(ctx):
-    """Affiche la liste de tous les adversaires disponibles"""
-    embed = discord.Embed(
-        title="📋 Adversaires disponibles",
-        description="Voici tous les adversaires que tu peux affronter :",
-        color=discord.Color.blue()
-    )
-    
-    for key, opp in OPPONENTS.items():
-        team_info = f"{len(opp.team)} Pokémon"
-        if opp.team != ["random"]:
-            team_info += f": {', '.join(opp.team[:3])}"
-            if len(opp.team) > 3:
-                team_info += "..."
-        
-        embed.add_field(
-            name=f"{opp.name}",
-            value=f"**Difficulté:** {opp.difficulty}\n**Équipe:** {team_info}",
-            inline=False
-        )
-    
-    await ctx.send(embed=embed)
+
 
 
 
