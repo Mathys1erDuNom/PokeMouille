@@ -60,8 +60,8 @@ class CardColorGame(View):
             if current_balance < self.bet_amount:
                 embed = discord.Embed(
                     title="❌ Solde insuffisant",
-                    description=f"Vous avez besoin de **{self.bet_amount} 💰** pour jouer.\n"
-                               f"Votre solde actuel : **{current_balance} 💰**",
+                    description=f"Vous avez besoin de **{self.bet_amount} 💰🐊** pour jouer.\n"
+                               f"Votre solde actuel : **{current_balance} 💰🐊**",
                     color=discord.Color.red()
                 )
                 
@@ -96,8 +96,8 @@ class CardColorGame(View):
                     description=f"**Carte tirée :** {card_name}\n\n"
                                f"✅ **Vous avez deviné 4 fois d'affilée !**\n\n"
                                f"{self.get_progress_bar()}\n\n"
-                               f"**Gain total :** +{self.win_amount} 💰\n"
-                               f"**Nouveau solde :** {new_balance} 💰",
+                               f"**Gain total :** +{self.win_amount} 💰🐊\n"
+                               f"**Nouveau solde :** {new_balance} 💰🐊",
                     color=discord.Color.gold()
                 )
                 
@@ -136,9 +136,9 @@ class CardColorGame(View):
                                f"**Progression atteinte :** {self.correct_guesses}/{self.target_guesses}\n"
                                f"{self.get_progress_bar()}\n\n"
                                f"💚 **Vous avez atteint 3 bonnes réponses !**\n"
-                               f"Votre mise de {self.bet_amount} 💰 vous est remboursée.\n\n"
-                               f"**Gain/Perte :** ±0 💰\n"
-                               f"**Nouveau solde :** {new_balance} 💰",
+                               f"Votre mise de {self.bet_amount} 💰🐊 vous est remboursée.\n\n"
+                               f"**Gain/Perte :** ±0 💰🐊\n"
+                               f"**Nouveau solde :** {new_balance} 💰🐊",
                     color=discord.Color.orange()
                 )
             else:
@@ -152,8 +152,8 @@ class CardColorGame(View):
                                f"❌ Mauvaise réponse !\n\n"
                                f"**Progression atteinte :** {self.correct_guesses}/{self.target_guesses}\n"
                                f"{self.get_progress_bar()}\n\n"
-                               f"**Perte :** -{self.bet_amount} 💰\n"
-                               f"**Nouveau solde :** {new_balance} 💰",
+                               f"**Perte :** -{self.bet_amount} 💰🐊\n"
+                               f"**Nouveau solde :** {new_balance} 💰🐊",
                     color=discord.Color.red()
                 )
             
