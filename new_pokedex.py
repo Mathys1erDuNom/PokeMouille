@@ -192,7 +192,7 @@ class PokemonButton(Button):
             font_bold = font
 
         pos_nom_type = (90, 150)
-        pos_ivs = (80, 280)
+        pos_ivs = (80, 275)
         pos_stats = (80, 380)
         pos_sprite = (550, 165)
         pos_attaques = (535, 340)
