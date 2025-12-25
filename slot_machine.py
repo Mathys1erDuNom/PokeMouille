@@ -21,9 +21,9 @@ class SlotMachine(View):
         
         # Gains selon le nombre de symboles identiques
         self.payouts = {
-            "🍒": {"2": 10, "3": 20},
-            "🍋": {"2": 15, "3": 30},
-            "🍊": {"2": 20, "3": 50},
+            "🍒": {"3": 20},
+            "🍋": {"3": 30},
+            "🍊": {"3": 50},
             "⭐": {"2": 30, "3": 75},
             "💎": {"2": 50, "3": 150}
         }
@@ -119,7 +119,7 @@ class SlotMachine(View):
                          f"**╚═══════════╝**\n\n" \
                          f"{'🎊 ' if matching_count == 3 else ''}**{matching_count} {winning_symbol} {self.symbols[winning_symbol]['name']}** !\n\n" \
                          f"**Gain :** +{win_amount} 💰\n" \
-                         f"**Profit net :** {'+' if net_gain > 0 else ''}{net_gain} 💰\n" \
+                         f"**Profit net :** {'+' if net_gain >= 0 else ''}{net_gain} 💰\n" \
                          f"**Nouveau solde :** {new_balance} 💰"
             
             embed = discord.Embed(title=title, description=description, color=color)
@@ -185,9 +185,9 @@ class PlayAgainButton(Button):
                        "**Gains :**\n"
                        "💎💎💎 → 150 💰 | 💎💎 → 50 💰\n"
                        "⭐⭐⭐ → 75 💰 | ⭐⭐ → 30 💰\n"
-                       "🍊🍊🍊 → 50 💰 | 🍊🍊 → 20 💰\n"
-                       "🍋🍋🍋 → 30 💰 | 🍋🍋 → 15 💰\n"
-                       "🍒🍒🍒 → 20 💰 | 🍒🍒 → 10 💰\n\n"
+                       "🍊🍊🍊 → 50 💰\n"
+                       "🍋🍋🍋 → 30 💰\n"
+                       "🍒🍒🍒 → 20 💰\n\n"
                        f"**Mise :** 5 💰\n"
                        f"**Votre solde :** {balance} 💰",
             color=discord.Color.gold()
