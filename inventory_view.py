@@ -296,9 +296,9 @@ class InventoryItemButton(Button):
             font_small = font
 
         # Texte sur le fond
-        draw.text((30, 30), f"{name} ({rarity})", fill="black", font=font)
-        draw.text((30, 80), f"Quantité : {quantity}", fill="black", font=font_small)
-        draw_multiline_text(draw, description or "Aucune description.", (30, 130), font_small, max_width=300)
+        draw.text((130, 30), f"{name} ({rarity})", fill="black", font=font)
+        draw.text((230, 80), f"Quantité : {quantity}", fill="black", font=font_small)
+        draw_multiline_text(draw, description or "Aucune description.", (330, 130), font_small, max_width=200)
 
         # Image de l'objet
         if image_url and image_url.startswith("http"):
