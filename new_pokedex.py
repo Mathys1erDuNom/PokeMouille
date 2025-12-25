@@ -254,7 +254,7 @@ class PokemonButton(Button):
         # Attaques
         x, y = pos_attaques
         draw.text((x, y), "Attaques :", font=font_bold, fill="black")
-        y += 10
+        y += 40
         for atk_name in attacks:
             atk_type = self.attack_type_map.get(normalize_text(atk_name))
             atk_sprite_url = self.type_sprites.get(atk_type.lower()) if atk_type else None
@@ -269,7 +269,7 @@ class PokemonButton(Button):
                     draw.text((x, y), atk_name, font=font, fill="black")
             else:
                 draw.text((x, y), atk_name, font=font, fill="black")
-            y += 40
+            y += 20
 
         # --- Envoi du résultat ---
         with io.BytesIO() as img_binary:
