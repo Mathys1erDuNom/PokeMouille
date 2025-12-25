@@ -3,33 +3,65 @@ from discord.ui import View, Select, Button
 from math import ceil
 from db import get_captures
 from combat.logic_battle import start_battle_turn_based
+from opponents import OPPONENTS, get_opponent_team
 
 
-# ---- Menus ----
-class PokemonSelectMenu(Select):
-    def __init__(self, options, menu_index, parent_view):
-        # Un Select = max 25 options
+# ---- Sélection d'adversaire ----
+class OpponentSelectMenu(Select):
+    def __init__(self, parent_view):
+        options = [
+            discord.SelectOption(
+                label=opp.name,
+                value=key,
+                description=f"Difficulté: {opp.difficulty} | {len(opp.team)} Pokémon",
+                emoji="⚔️"
+            )
+            for key, opp in OPPONENTS.items()
+        ]
+        
         super().__init__(
-            placeholder=f"Sélection {menu_index + 1}",
-            min_values=0,                               # aucun choix obligatoire par menu
-            max_values=min(6, len(options)),            # limite locale; la vraie limite (6 au total) est revalidée à la fin
+            placeholder="Choisis ton adversaire",
+            min_values=1,
+            max_values=1,
             options=options,
-            custom_id=f"select_{menu_index}",
-            row=menu_index % 4                          # 4 lignes pour les selects (0..3)
+            custom_id="opponent_select",
+            row=0
         )
         self.parent_view = parent_view
 
     async def callback(self, interaction: discord.Interaction):
-        # Mémorise les sélections de ce menu
+        self.parent_view.selected_opponent = self.values[0]
+        opponent = OPPONENTS[self.values[0]]
+        
+        await interaction.response.send_message(
+            f"🎯 Adversaire sélectionné : **{opponent.name}**\n"
+            f"Difficulté : {opponent.difficulty}\n"
+            f"{opponent.get_intro()}",
+            ephemeral=True
+        )
+
+
+# ---- Menus de sélection Pokémon ----
+class PokemonSelectMenu(Select):
+    def __init__(self, options, menu_index, parent_view):
+        super().__init__(
+            placeholder=f"Sélection {menu_index + 1}",
+            min_values=0,
+            max_values=min(6, len(options)),
+            options=options,
+            custom_id=f"select_{menu_index}",
+            row=(menu_index % 3) + 1  # Lignes 1-3 (ligne 0 pour l'adversaire)
+        )
+        self.parent_view = parent_view
+
+    async def callback(self, interaction: discord.Interaction):
         self.parent_view.selections[self.custom_id] = self.values
-        # Pas de validation ici : l'utilisateur peut continuer à changer de page et choisir ailleurs
         await interaction.response.defer()
 
 
 # ---- Boutons de navigation ----
 class PageButton(Button):
     def __init__(self, label, direction, parent_view, disabled=False):
-        # Boutons sur la ligne 5 (row=4)
         super().__init__(label=label, style=discord.ButtonStyle.secondary, row=4, disabled=disabled)
         self.direction = direction
         self.parent_view = parent_view
@@ -46,11 +78,19 @@ class PageButton(Button):
 
 class ValidateButton(Button):
     def __init__(self, view: "SelectionView"):
-        super().__init__(label="✅ Valider", style=discord.ButtonStyle.success, row=4)
+        super().__init__(label="✅ Valider et Combattre", style=discord.ButtonStyle.success, row=4)
         self.parent_view = view
 
     async def callback(self, interaction: discord.Interaction):
-        # Concatène toutes les sélections et dédoublonne (garde l'ordre)
+        # Vérifie qu'un adversaire est sélectionné
+        if not self.parent_view.selected_opponent:
+            await interaction.response.send_message(
+                "❌ Tu dois d'abord choisir un adversaire !",
+                ephemeral=True
+            )
+            return
+        
+        # Concatène toutes les sélections et dédoublonne
         all_selected = []
         for selected in self.parent_view.selections.values():
             all_selected.extend(selected)
@@ -62,31 +102,49 @@ class ValidateButton(Button):
                 unique_selected.append(name)
 
         if len(unique_selected) == 0:
-            await interaction.response.send_message("❌ Tu dois sélectionner au moins un Pokémon.", ephemeral=True)
+            await interaction.response.send_message(
+                "❌ Tu dois sélectionner au moins un Pokémon.",
+                ephemeral=True
+            )
             return
         if len(unique_selected) > 6:
-            await interaction.response.send_message("❌ Tu ne peux sélectionner que 6 Pokémon maximum (tous menus/pages confondus).", ephemeral=True)
+            await interaction.response.send_message(
+                "❌ Tu ne peux sélectionner que 6 Pokémon maximum.",
+                ephemeral=True
+            )
             return
 
+        # Récupère l'adversaire et son équipe
+        opponent = OPPONENTS[self.parent_view.selected_opponent]
+        bot_team = get_opponent_team(opponent, self.parent_view.full_pokemon_data)
+
         await interaction.response.send_message(
-            f"Tu as choisi : {', '.join(unique_selected)}.\nPréparation du combat...", ephemeral=True
+            f"⚔️ **Combat contre {opponent.name}** ⚔️\n"
+            f"Ton équipe : {', '.join(unique_selected)}\n"
+            f"Équipe adverse : {', '.join([p['name'] for p in bot_team])}\n\n"
+            f"Que le combat commence !",
+            ephemeral=True
         )
 
         user_id = str(interaction.user.id)
         all_captures = get_captures(user_id)
         selected_pokemons = [p for p in all_captures if p.get("name") in unique_selected]
 
-        # Exemple équipe bot (à adapter)
-        bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in ["Mew", "Groudon_shiny", "Elektek"]]
-
-        await start_battle_turn_based(interaction, selected_pokemons, bot_team)
+        # Lance le combat avec le nom de l'adversaire
+        await start_battle_turn_based(
+            interaction,
+            selected_pokemons,
+            bot_team,
+            opponent_name=opponent.name
+        )
 
 
 # ---- Vue principale avec pagination ----
 class SelectionView(View):
     def __init__(self, pokemons, full_pokemon_data):
         super().__init__(timeout=300)
-        self.selections = {}  # custom_id -> [values]
+        self.selections = {}
+        self.selected_opponent = None
         self.full_pokemon_data = full_pokemon_data
 
         # Découpe en options (25 max par menu)
@@ -96,8 +154,8 @@ class SelectionView(View):
             for i in range(0, len(pokemons), self.chunk_size)
         ]
 
-        # Pagination : 4 menus/page (lignes 0..3), ligne 4 pour les boutons
-        self.menus_per_page = 4
+        # Pagination : 3 menus/page (lignes 1-3), ligne 0 pour adversaire, ligne 4 pour boutons
+        self.menus_per_page = 3
         self.page = 0
         self.total_menus = len(self.option_chunks)
         self.total_pages = max(1, ceil(self.total_menus / self.menus_per_page))
@@ -105,30 +163,28 @@ class SelectionView(View):
         self.rebuild()
 
     def _current_count(self) -> int:
-        # Compte cumulé (dédoublonné) sur toutes les pages/menus
         all_selected = []
         for vals in self.selections.values():
             all_selected.extend(vals)
-        return len(dict.fromkeys(all_selected))  # dédoublonnage en gardant l'ordre
+        return len(dict.fromkeys(all_selected))
 
     def rebuild(self):
-        # Reconstruit complètement la page courante
         self.clear_items()
 
+        # Ajoute le menu de sélection d'adversaire (ligne 0)
+        self.add_item(OpponentSelectMenu(self))
+
+        # Ajoute les Selects de Pokémon pour la page courante
         start = self.page * self.menus_per_page
         end = min(start + self.menus_per_page, self.total_menus)
 
-        # Ajoute les Selects de la page
         for idx in range(start, end):
             select = PokemonSelectMenu(self.option_chunks[idx], idx, self)
-
-            # Restaure les sélections précédentes : marquer opt.default = True
             prev_values = set(self.selections.get(select.custom_id, []))
             if prev_values:
                 for opt in select.options:
                     if opt.value in prev_values:
                         opt.default = True
-
             self.add_item(select)
 
         # Boutons (ligne 4)
@@ -136,7 +192,16 @@ class SelectionView(View):
         next_disabled = (self.page >= self.total_pages - 1)
 
         count = self._current_count()
-        self.add_item(PageButton(f"⬅️ Précédent", direction=-1, parent_view=self, disabled=prev_disabled))
-        self.add_item(PageButton(f"Suivant ➡️", direction=1, parent_view=self, disabled=next_disabled))
-        # On peut indiquer l'état dans le label du bouton valider (facultatif)
+        self.add_item(PageButton(
+            f"⬅️ Précédent",
+            direction=-1,
+            parent_view=self,
+            disabled=prev_disabled
+        ))
+        self.add_item(PageButton(
+            f"Suivant ➡️ ({count}/6)",
+            direction=1,
+            parent_view=self,
+            disabled=next_disabled
+        ))
         self.add_item(ValidateButton(self))

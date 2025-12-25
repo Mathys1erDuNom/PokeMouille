@@ -42,6 +42,8 @@ from utils import is_croco
 
 from money_db import add_money
 from shop_view import setup_shop
+from combat.opponents import OPPONENTS, get_random_opponent, get_opponent_by_difficulty
+
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
@@ -717,16 +719,54 @@ print("[DEBUG] Ready to run bot...")
 
 @bot.command()
 async def battle(ctx):
+    """Lance un combat Pokémon en choisissant ton adversaire et ton équipe"""
     user_id = str(ctx.author.id)
     captures = get_new_captures(user_id)
-
+    
     if not captures:
         await ctx.send("Tu n'as aucun Pokémon à utiliser en combat.")
         return
-
+    
     pokemons = [entry["name"] for entry in captures]
     view = SelectionView(pokemons, full_pokemon_data)
-    await ctx.send("Choisis jusqu’à 6 Pokémon pour ton équipe de combat :", view=view)
+    
+    embed = discord.Embed(
+        title="⚔️ Sélection de combat",
+        description=(
+            "**Étape 1 :** Choisis ton adversaire dans le menu déroulant\n"
+            "**Étape 2 :** Sélectionne jusqu'à 6 Pokémon pour ton équipe\n"
+            "**Étape 3 :** Clique sur 'Valider et Combattre'"
+        ),
+        color=discord.Color.red()
+    )
+    embed.set_footer(text="Tu as 5 minutes pour faire ton choix")
+    
+    await ctx.send(embed=embed, view=view)
+
+@bot.command()
+async def opponents(ctx):
+    """Affiche la liste de tous les adversaires disponibles"""
+    embed = discord.Embed(
+        title="📋 Adversaires disponibles",
+        description="Voici tous les adversaires que tu peux affronter :",
+        color=discord.Color.blue()
+    )
+    
+    for key, opp in OPPONENTS.items():
+        team_info = f"{len(opp.team)} Pokémon"
+        if opp.team != ["random"]:
+            team_info += f": {', '.join(opp.team[:3])}"
+            if len(opp.team) > 3:
+                team_info += "..."
+        
+        embed.add_field(
+            name=f"{opp.name}",
+            value=f"**Difficulté:** {opp.difficulty}\n**Équipe:** {team_info}",
+            inline=False
+        )
+    
+    await ctx.send(embed=embed)
+
 
 
 setup_croco_event(
