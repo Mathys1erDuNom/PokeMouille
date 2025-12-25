@@ -200,7 +200,7 @@ class ShopItemButton(Button):
         words = description.split()
         lines = []
         current_line = ""
-        max_width = 500  # Largeur max pour le texte
+        max_width = 200  # Largeur max pour le texte
         
         for word in words:
             test_line = current_line + word + " "
