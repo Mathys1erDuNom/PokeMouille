@@ -173,10 +173,10 @@ class ShopItemButton(Button):
         # ----- 🖼️ Positions des éléments -----
         pos_title = (540, 115)
         pos_item_image = (530, 140)
-        pos_rarity = (500, 350)
-        pos_price = (500, 400)
-        pos_balance = (500, 450)
-        pos_description = (500, 500)
+        pos_rarity = (450, 300)
+        pos_price = (450, 350)
+        pos_balance = (450, 400)
+        pos_description = (450, 450)
         
 
         # ----- ✍️ Nom de l'item -----
