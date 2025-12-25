@@ -223,7 +223,7 @@ class PokemonButton(Button):
         draw.text((x, y), "IVs :", font=font_bold, fill="black")
         y += 25
         for line in [
-            f"PV : {ivs.get('hp', '?')} Atk : {ivs.get('attack', '?')}   AtkSpé : {ivs.get('special_attack', '?')}",
+            f"PV : {ivs.get('hp', '?')}  Atk : {ivs.get('attack', '?')}   AtkSpé : {ivs.get('special_attack', '?')}",
             f"Def : {ivs.get('defense', '?')}   DefSpé : {ivs.get('special_defense', '?')}   Vit : {ivs.get('speed', '?')}",
         ]:
             draw.text((x, y), line, font=font, fill="black")
@@ -262,7 +262,7 @@ class PokemonButton(Button):
                 try:
                     response = requests.get(atk_sprite_url)
                     icon = Image.open(io.BytesIO(response.content)).convert("RGBA")
-                    icon = self.resize_keep_aspect(icon, 80)
+                    icon = self.resize_keep_aspect(icon, 50)
                     image.paste(icon, (x, y), icon)
                     draw.text((x + icon.width + 8, y), atk_name, font=font, fill="black")
                 except:
