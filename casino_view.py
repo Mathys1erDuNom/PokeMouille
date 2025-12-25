@@ -2,12 +2,14 @@
 import discord
 from discord.ui import View, Button
 from card_game import CardColorGame
+from slot_machine import SlotMachine
 from money_db import get_balance
 
 class CasinoView(View):
     def __init__(self):
         super().__init__(timeout=180)
         self.add_item(CardGameButton())
+        self.add_item(SlotMachineButton())
         
     async def on_timeout(self):
         for item in self.children:
@@ -37,9 +39,9 @@ class CardGameButton(Button):
                        "• Devinez correctement 4 fois de suite pour gagner\n"
                        "• Atteignez 3 bonnes réponses → Mise remboursée\n"
                        "• Moins de 3 → Vous perdez votre mise\n\n"
-                       "**Mise :** 10 💰🐊\n"
-                       "**Gain :** 50 💰🐊 (si 4/4) | Remboursement (si 3/4)\n\n"
-                       f"**Votre solde :** {balance} 💰🐊",
+                       "**Mise :** 10 💰\n"
+                       "**Gain :** 50 💰 (si 4/4) | Remboursement (si 3/4)\n\n"
+                       f"**Votre solde :** {balance} 💰",
             color=discord.Color.gold()
         )
         embed.set_footer(text="Choisissez une couleur pour commencer ! 🍀")
@@ -47,6 +49,42 @@ class CardGameButton(Button):
         await interaction.response.send_message(
             embed=embed,
             view=game_view,
+            ephemeral=True
+        )
+
+
+class SlotMachineButton(Button):
+    def __init__(self):
+        super().__init__(
+            label="🎰 Machine à sous",
+            style=discord.ButtonStyle.success,
+            emoji="🎲"
+        )
+    
+    async def callback(self, interaction: discord.Interaction):
+        # Vérifie le solde du joueur
+        balance = get_balance(interaction.user.id)
+        
+        # Lance la machine à sous
+        slot_view = SlotMachine(user_id=interaction.user.id)
+        embed = discord.Embed(
+            title="🎰 Machine à Sous",
+            description="**Alignez les symboles pour gagner !**\n\n"
+                       "**Gains :**\n"
+                       "💎💎💎 → 150 💰 | 💎💎 → 50 💰\n"
+                       "⭐⭐⭐ → 75 💰 | ⭐⭐ → 30 💰\n"
+                       "🍊🍊🍊 → 50 💰 | 🍊🍊 → 20 💰\n"
+                       "🍋🍋🍋 → 30 💰 | 🍋🍋 → 15 💰\n"
+                       "🍒🍒🍒 → 20 💰 | 🍒🍒 → 10 💰\n\n"
+                       f"**Mise :** 5 💰\n"
+                       f"**Votre solde :** {balance} 💰",
+            color=discord.Color.gold()
+        )
+        embed.set_footer(text="Cliquez sur SPIN pour lancer ! 🎰")
+        
+        await interaction.response.send_message(
+            embed=embed,
+            view=slot_view,
             ephemeral=True
         )
 
@@ -61,9 +99,11 @@ def setup_casino(bot):
             title="🎰 Bienvenue au Casino ! 🎰",
             description="Choisissez un jeu pour tenter votre chance !\n\n"
                        "🎴 **Deviner la couleur** - Devinez 4 couleurs d'affilée\n"
-                       "   Mise : 10 💰🐊 | Gain : 50 💰🐊 | Remboursement si 3/4\n"
+                       "   Mise : 10 💰 | Gain : 50 💰 | Remboursement si 3/4\n\n"
+                       "🎰 **Machine à sous** - Alignez 3 symboles identiques\n"
+                       "   Mise : 5 💰 | Gains : 10-150 💰\n"
                        f"━━━━━━━━━━━━━━━━━━━━━━━\n"
-                       f"💰🐊 **Votre solde :** {balance:,} Croco dollars",
+                       f"💰 **Votre solde :** {balance:,} Croco dollars",
             color=discord.Color.gold()
         )
         embed.set_footer(text="Bonne chance ! 🍀")
