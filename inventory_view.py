@@ -280,16 +280,15 @@ class UseItemButton(Button):
 
                 pokemon_name, is_shiny = await self.spawn_func(
                     interaction.user,
-                    json_file="pokemon_legendaire_pokeball_normal.json",  # 📦 JSON choisi ici
-                    shiny_rate=2  # ✨ shiny boosté
+                    json_file="pokemon_legendaire_normal.json",  # 📦 JSON choisi ici
+                    shiny_rate=1   # ✨ shiny boosté
                 )
 
                 if pokemon_name:
-                    json_file_to_use = "json/pokemon_legendaire_pokeball_shiny.json" if is_shiny else "json/pokemon_legendaire_pokeball_normal.json"
-
+                    json_file_to_use = "json/pokemon_legendaire_shiny.json" if is_shiny else "json/pokemon_legendaire_normal.json"
                     embed, file = await get_pokemon_image_embed(
                         pokemon_name, 
-                        json_file= json_file_to_use ,
+                        json_file=json_file_to_use,
                         is_shiny=is_shiny
                     )
                     if embed and file:
@@ -325,7 +324,7 @@ class UseItemButton(Button):
                 pokemon_name, is_shiny = await self.spawn_func(
                     interaction.user,
                     json_file="pokemon_legendaire_normal.json",  # 📦 JSON choisi ici
-                    shiny_rate=1   # ✨ shiny boosté
+                    shiny_rate=64   # ✨ shiny boosté
                 )
 
                 if pokemon_name:
