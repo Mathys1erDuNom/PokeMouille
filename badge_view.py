@@ -29,7 +29,6 @@ class BadgeInfoButton(Button):
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-# --- Création mosaïque ---
 async def create_badge_mosaic(badges):
     images = []
     for badge in badges:
@@ -50,7 +49,9 @@ async def create_badge_mosaic(badges):
     for i, img in enumerate(images):
         x = (i % cols) * 64
         y = (i // cols) * 64
-        mosaic.paste(img, (x, y))
+        mosaic.paste(img, (x, y), img if img.mode=="RGBA" else None)  # ⚠️ gérer transparence
+
+    mosaic = mosaic.convert("RGB")  # <-- important pour Discord
 
     output = io.BytesIO()
     mosaic.save(output, "PNG")
