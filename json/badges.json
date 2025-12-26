@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "name": "Badge Roche",
+        "image": "https://www.pngkit.com/png/detail/241-2413254_boulder-badge-pokemon-boulder-badge.png",
+        "description": "Obtenu après avoir vaincu le leader de la Route Rocheuse.",
+        "generation": 1
+    },
+    {
+        "id": 2,
+        "name": "Badge Cascade",
+        "image": "https://www.pngkit.com/png/detail/241-2413254_boulder-badge-pokemon-boulder-badge.png",
+        "description": "Obtenu après avoir vaincu le leader de la Cascade.",
+        "generation": 1
+    }
+]

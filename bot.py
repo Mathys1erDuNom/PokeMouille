@@ -43,6 +43,9 @@ from utils import is_croco
 from money_db import add_money
 from shop_view import setup_shop
 
+from badge_view import setup_badges
+
+
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
 
@@ -698,7 +701,20 @@ setup_quiz_commands(bot, spawn_pokemon, ROLE_ID, is_under_ban_func=is_under_ban,
 
 setup_money(bot)
 
+
 setup_shop(bot)
+
+
+badges_file = os.path.join(script_dir, "json", "badges.json")
+
+# Charger les données des badges depuis le JSON
+with open(badges_file, "r", encoding="utf-8") as f:
+    full_badge_data = json.load(f)
+
+# Setup du module badge
+setup_badges(bot, full_badge_data)
+
+
 
 setup_casino(bot)
 
