@@ -4,6 +4,8 @@ from math import ceil
 from new_db import get_new_captures
 
 from combat.logic_battle import start_battle_turn_based
+from combat.adversaires import get_random_adversaire
+
 
 
 # ---- Menus ----
@@ -88,9 +90,22 @@ class ValidateButton(Button):
 
 
         # Exemple équipe bot (à adapter)
-        bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in ["Mew", "Groudon_shiny", "Elektek"]]
+     
+        adversaire = get_random_adversaire()
 
-        await start_battle_turn_based(interaction, selected_pokemons, bot_team)
+        bot_team = adversaire["pokemons"]
+        bot_name = adversaire["name"]
+        bot_repliques = adversaire.get("repliques", {})
+
+
+        await start_battle_turn_based(
+            interaction,
+            selected_pokemons,
+            bot_team,
+            adversaire_name=bot_name,
+            repliques=bot_repliques
+        )
+
 
 
 # ---- Vue principale avec pagination ----
