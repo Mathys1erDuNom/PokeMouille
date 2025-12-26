@@ -13,7 +13,7 @@ from badge_db import give_badge, get_user_badges
 
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-badges_path = os.path.join(script_dir, "json", "badges.json")  # <-- chemin corrigé
+badges_path = os.path.join(script_dir, "..", "json", "badges.json")
 with open(badges_path, "r", encoding="utf-8") as f:
     BADGE_DATA = json.load(f)
 
