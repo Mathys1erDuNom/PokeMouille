@@ -91,11 +91,18 @@ class ValidateButton(Button):
 
         # Exemple équipe bot (à adapter)
      
-        adversaire = get_random_adversaire()
+        # récupère l’adversaire choisi (attribué depuis AdversaireSelect)
+        adversaire = getattr(self.parent_view, "chosen_adversaire", None)
 
-        bot_team = adversaire["pokemons"]
-        bot_name = adversaire["name"]
-        bot_repliques = adversaire.get("repliques", {})
+        if adversaire:
+            bot_team = adversaire["pokemons"]
+            bot_name = adversaire["name"]
+            bot_repliques = adversaire.get("repliques", {})
+        else:
+            # fallback si aucun adversaire choisi
+            bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in ["Mew", "Groudon_shiny", "Elektek"]]
+            bot_name = "Bot"
+            bot_repliques = {}
 
 
         await start_battle_turn_based(
@@ -114,6 +121,7 @@ class SelectionView(View):
         super().__init__(timeout=300)
         self.selections = {}  # custom_id -> [values]
         self.full_pokemon_data = full_pokemon_data
+        self.chosen_adversaire = None 
 
         # Découpe en options (25 max par menu)
         self.chunk_size = 25
