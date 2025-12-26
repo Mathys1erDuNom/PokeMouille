@@ -179,7 +179,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                                     if badge_id not in user_badges:
                                     # Nouveau badge → grande récompense
                                         give_badge(user_id, badge_id)
-                                        reward = 500  # montant normal pour un nouveau badge
+                                        reward = 300  # montant normal pour un nouveau badge
                                         add_money(user_id, reward)
 
                                         emb = discord.Embed(
@@ -191,7 +191,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                                         await interaction.channel.send(file=file, embed=emb)
                                     else:
                                         # Badge déjà possédé → petite récompense
-                                        reward = 100
+                                        reward = 20
                                         add_money(user_id, reward)
                                         await interaction.channel.send(
                                             f"🎉 Tu as déjà le badge **{badge_info['name']}**.\n"
