@@ -1,0 +1,70 @@
+[
+    {
+      "id": "champion_plante",
+      "name": "Erika",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+          "name": "Bulbizarre",
+          "type": ["plante"],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+          "attacks": ["Fouet Lianes", "Charge"],
+          "stats": {
+            "hp": 45,
+            "attack": 49,
+            "special_attack": 65,
+            "speed": 45,
+            "defense": 49,
+            "special_defense": 65
+          }
+        },
+        {
+          "name": "Herbizarre",
+          "type": ["plante", "poison"],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+          "attacks": ["Fouet Lianes", "Tranch'Herbe"],
+          "stats": {
+            "hp": 60,
+            "attack": 62,
+            "special_attack": 80,
+            "speed": 60,
+            "defense": 63,
+            "special_defense": 80
+          }
+        }
+      ]
+    },
+  
+    {
+      "id": "dresseur_random",
+      "name": "Lucas",
+      "repliques": {
+        "start": "J’espère que t’es prêt 😏",
+        "win": "Haha ! Trop facile.",
+        "lose": "Ok… tu m’as eu."
+      },
+      "pokemons": [
+        {
+          "name": "Roucool",
+          "type": ["normal", "vol"],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+          "attacks": ["Charge", "Tornade"],
+          "stats": {
+            "hp": 40,
+            "attack": 45,
+            "special_attack": 35,
+            "speed": 56,
+            "defense": 40,
+            "special_defense": 35
+          }
+        }
+      ]
+    }
+  ]
+  
