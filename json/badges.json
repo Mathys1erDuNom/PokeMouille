@@ -3,14 +3,56 @@
         "id": 1,
         "name": "Badge Roche",
         "image": "images/badges/1.png",
-        "description": "Obtenu après avoir vaincu le leader de la Route Rocheuse.",
+        "description": "Obtenu après avoir vaincu Pierre le champion de l'arène Roche.",
         "generation": 1
     },
     {
         "id": 2,
         "name": "Badge Cascade",
-        "image": "images/badges/1.png",
-        "description": "Obtenu après avoir vaincu le leader de la Cascade.",
+        "image": "images/badges/2.png",
+        "description": "Obtenu après avoir vaincu Ondine, la championne de l'arène Cascade",
+        "generation": 1
+    },
+    {
+        "id": 3,
+        "name": "Badge Foudre",
+        "image": "images/badges/3.png",
+        "description": "Obtenu après avoir vaincu Major Bob, la champion de l'arène Foudre",
+        "generation": 1
+    },
+    {
+        "id": 4,
+        "name": "Badge Prisme",
+        "image": "images/badges/4.png",
+        "description": "Obtenu après avoir vaincu Erika, la championne de l'arène Plante",
+        "generation": 1
+    },
+    {
+        "id": 5,
+        "name": "Badge Âme",
+        "image": "images/badges/5.png",
+        "description": "Obtenu après avoir vaincu Koga, la champion de l'arène Poison",
+        "generation": 1
+    },
+    {
+        "id": 6,
+        "name": "Badge Marais",
+        "image": "images/badges/6.png",
+        "description": "Obtenu après avoir vaincu Morgane, la champion de l'arène Pqy",
+        "generation": 1
+    },
+    {
+        "id": 7,
+        "name": "Badge Volcan",
+        "image": "images/badges/7.png",
+        "description": "Obtenu après avoir vaincu Auguste, la champion de l'arène Feu",
+        "generation": 1
+    },
+    {
+        "id": 8,
+        "name": "Badge Terre",
+        "image": "images/badges/8.png",
+        "description": "Obtenu après avoir vaincu Giovanni, la champion de l'arène Sol",
         "generation": 1
     }
 ]
