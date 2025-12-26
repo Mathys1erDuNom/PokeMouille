@@ -2,9 +2,25 @@ import discord
 from discord.ui import View, Select, Button
 from math import ceil
 from new_db import get_new_captures
+import json
+import os
 
 from combat.logic_battle import start_battle_turn_based
 
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+ADVERSAIRES_FILE = os.path.join(script_dir, "../json/adversaires.json")
+
+def get_all_adversaires():
+    with open(ADVERSAIRES_FILE, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+def get_adversaire_by_name(name: str):
+    adversaires = get_all_adversaires()
+    for adv in adversaires:
+        if adv["name"].lower() == name.lower():
+            return adv
+    return None
 
 
 # ---- Menus ----
@@ -114,6 +130,27 @@ class ValidateButton(Button):
 
 
 
+
+class AdversaireSelect(Select):
+    def __init__(self, adversaires, parent_view):
+        options = [discord.SelectOption(label=adv["name"], value=adv["name"]) for adv in adversaires]
+        super().__init__(placeholder="Choisis ton adversaire", min_values=1, max_values=1, options=options)
+        self.parent_view = parent_view
+
+    async def callback(self, interaction: discord.Interaction):
+        name = self.values[0]
+        adversaire = get_adversaire_by_name(name)
+        if adversaire:
+            self.parent_view.chosen_adversaire = adversaire
+            await interaction.response.send_message(
+                f"✅ Adversaire choisi : {name}\nMaintenant, choisis tes Pokémon !",
+                ephemeral=True
+            )
+            self.parent_view.show_pokemon_select()
+
+
+
+
 # ---- Vue principale avec pagination ----
 class SelectionView(View):
     def __init__(self, pokemons, full_pokemon_data):
@@ -121,6 +158,8 @@ class SelectionView(View):
         self.selections = {}  # custom_id -> [values]
         self.full_pokemon_data = full_pokemon_data
         self.chosen_adversaire = None 
+        self.adversaires = get_all_adversaires()  # récupère tous les adversaires depuis le JSON
+
 
         # Découpe en options (25 max par menu)
         self.chunk_size = 25
@@ -135,7 +174,17 @@ class SelectionView(View):
         self.total_menus = len(self.option_chunks)
         self.total_pages = max(1, ceil(self.total_menus / self.menus_per_page))
 
+        # D’abord, on montre le menu adversaire
+        self.clear_items()
+        self.add_item(AdversaireSelect(self.adversaires, self))
+
+    def show_pokemon_select(self):
+        # Reconstruit la vue pour afficher le menu Pokémon
+        self.clear_items()
+        self.page = 0
         self.rebuild()
+    
+
 
     def _current_count(self) -> int:
         # Compte cumulé (dédoublonné) sur toutes les pages/menus
