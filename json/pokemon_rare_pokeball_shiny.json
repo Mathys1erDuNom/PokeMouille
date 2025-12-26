@@ -1,238 +1,235 @@
 [   
-
-
-{
-    "name": "Ptera_shiny",
-    "type": [
-        "roche",
-        "vol"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/142.png",
-    "attacks": [
-        "Cru-Aile",
-        "Tranche",
-        "Seisme"
-    ],
-    "stats": {
-        "hp": 80,
-        "attack": 105,
-        "special_attack": 65,
-        "speed": 130,
-        "defense": 65,
-        "special_defense": 60
+    {
+        "name": "Ptera_shiny",
+        "type": [
+            "roche",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/142.png",
+        "attacks": [
+            "Cru-Aile",
+            "Tranche",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 105,
+            "special_attack": 65,
+            "speed": 130,
+            "defense": 65,
+            "special_defense": 60
+        }
+    },
+    {
+        "name": "Ronflex_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/143.png",
+        "attacks": [
+            "Charge",
+            "Plaquage",
+            "Giga Impact"
+        ],
+        "stats": {
+            "hp": 160,
+            "attack": 110,
+            "special_attack": 65,
+            "speed": 30,
+            "defense": 65,
+            "special_defense": 110
+        }
+    },
+    {
+        "name": "Dracolosse_shiny",
+        "type": [
+            "dragon",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/149.png",
+        "attacks": [
+            "Dracochoc",
+            "Seisme",
+            "Vent Violent"
+        ],
+        "stats": {
+            "hp": 91,
+            "attack": 134,
+            "special_attack": 100,
+            "speed": 80,
+            "defense": 95,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Leuphorie_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/242.png",
+        "attacks": [
+            "EcraseFace",
+            "Torgnoles",
+            "Ultimapoing"
+        ],
+        "stats": {
+            "hp": 255,
+            "attack": 10,
+            "defense": 10,
+            "special_attack": 75,
+            "special_defense": 135,
+            "speed": 55
+        }
+    },
+    {
+        "name": "Tyranocif_shiny",
+        "type": [
+            "roche",
+            "tenebres"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/248.png",
+        "attacks": [
+            "Morsure",
+            "Seisme",
+            "Lance-Pierre",
+            "Lame de Roc"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 134,
+            "defense": 110,
+            "special_attack": 95,
+            "special_defense": 100,
+            "speed": 61
+        }
+    },
+    {
+        "name": "Metalosse_shiny",
+        "type": [
+            "acier",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/376.png",
+        "attacks": [
+            "Poing Glace",
+            "Poing Eclair",
+            "Frappe Psy"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 135,
+            "defense": 130,
+            "special_attack": 95,
+            "special_defense": 90,
+            "speed": 70
+        }
+    },
+    {
+        "name": "Drattak_shiny",
+        "type": [
+            "dragon",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/373.png",
+        "attacks": [
+            "Dracochoc",
+            "Lance Flamme",
+            "Vent Violent",
+            "Lame de Roc"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 135,
+            "defense": 80,
+            "special_attack": 110,
+            "special_defense": 80,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Gallame_shiny",
+        "type": [
+            "psy",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/475.png",
+        "attacks": [
+            "Ultimapoing",
+            "Rafale Psy",
+            "Poing Glace"
+        ],
+        "stats": {
+            "hp": 68,
+            "attack": 125,
+            "defense": 65,
+            "special_attack": 65,
+            "special_defense": 115,
+            "speed": 80
+        }
+    },
+    {
+        "name": "Tarinorme_shiny",
+        "type": [
+            "roche",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/476.png",
+        "attacks": [
+            "Eboulement",
+            "Charge",
+            "Luminocanon"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 55,
+            "defense": 145,
+            "special_attack": 75,
+            "special_defense": 150,
+            "speed": 40
+        }
+    },
+    {
+        "name": "Noctunoir_shiny",
+        "type": [
+            "spectre"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/477.png",
+        "attacks": [
+            "Poing Eclair",
+            "Poing Feu",
+            "Poing Glace",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 100,
+            "defense": 135,
+            "special_attack": 65,
+            "special_defense": 135,
+            "speed": 45
+        }
+    },
+    {
+        "name": "Momartik_shiny",
+        "type": [
+            "glace",
+            "spectre"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/478.png",
+        "attacks": [
+            "Poing Glace",
+            "Laser Glace",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 80,
+            "defense": 70,
+            "special_attack": 80,
+            "special_defense": 70,
+            "speed": 110
+        }
     }
-},
-{
-    "name": "Ronflex_shiny",
-    "type": [
-        "normal"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/143.png",
-    "attacks": [
-        "Charge",
-        "Plaquage",
-        "Giga Impact"
-    ],
-    "stats": {
-        "hp": 160,
-        "attack": 110,
-        "special_attack": 65,
-        "speed": 30,
-        "defense": 65,
-        "special_defense": 110
-    }
-},
-{
-    "name": "Dracolosse_shiny",
-    "type": [
-        "dragon",
-        "vol"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/149.png",
-    "attacks": [
-        "Dracochoc",
-        "Seisme"
-    ],
-    "stats": {
-        "hp": 91,
-        "attack": 134,
-        "special_attack": 100,
-        "speed": 80,
-        "defense": 95,
-        "special_defense": 100
-    }
-},
-{
-    "name": "Tyranocif_shiny",
-    "type": [
-        "roche",
-        "tenebres"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/248.png",
-    "attacks": [
-        "Morsure",
-        "Seisme",
-        "Lance-Pierre",
-        "Lame de Roc"
-    ],
-    "stats": {
-        "hp": 100,
-        "attack": 134,
-        "defense": 110,
-        "special_attack": 95,
-        "special_defense": 100,
-        "speed": 61
-    }
-},
-{
-    "name": "Leuphorie_shiny",
-    "type": [
-        "normal"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/242.png",
-    "attacks": [
-        "EcraseFace",
-        "Torgnoles",
-        "Ultimapoing"
-    ],
-    "stats": {
-        "hp": 255,
-        "attack": 10,
-        "defense": 10,
-        "special_attack": 75,
-        "special_defense": 135,
-        "speed": 55
-    }
-},
-{
-    "name": "Metalosse_shiny",
-    "type": [
-        "acier",
-        "psy"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/376.png",
-    "attacks": [
-        "Poing Glace",
-        "Poing Eclair",
-        "Frappe Psy"
-    ],
-    "stats": {
-        "hp": 80,
-        "attack": 135,
-        "defense": 130,
-        "special_attack": 95,
-        "special_defense": 90,
-        "speed": 70
-    }
-},
-{
-    "name": "Drattak_shiny",
-    "type": [
-        "dragon",
-        "vol"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/373.png",
-    "attacks": [
-        "Dracochoc",
-        "Lance Flamme",
-        "Vent Violent",
-        "Lame de Roc"
-  
-        
-    ],
-    "stats": {
-        "hp": 95,
-        "attack": 135,
-        "defense": 80,
-        "special_attack": 110,
-        "special_defense": 80,
-        "speed": 100
-    }
-},
-{
-    "name": "Tarinorme_shiny",
-    "type": [
-        "roche",
-        "acier"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/476.png",
-    "attacks": [
-        "Eboulement",
-        "Charge",
-        "Luminocanon"
-    ],
-    "stats": {
-        "hp": 60,
-        "attack": 55,
-        "defense": 145,
-        "special_attack": 75,
-        "special_defense": 150,
-        "speed": 40
-    }
-},
-{
-    "name": "Noctunoir_shiny",
-    "type": [
-        "spectre"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/477.png",
-    "attacks": [
-        "Poing Eclair",
-        "Poing Feu",
-        "Poing Glace",
-        "Balle Ombre"
-    ],
-    "stats": {
-        "hp": 45,
-        "attack": 100,
-        "defense": 135,
-        "special_attack": 65,
-        "special_defense": 135,
-        "speed": 45
-    }
-},
-{
-    "name": "Momartik_shiny",
-    "type": [
-        "glace",
-        "spectre"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/478.png",
-    "attacks": [
-        "Poing Glace",
-        "Laser Glace",
-        "Balle Ombre"
-    ],
-    "stats": {
-        "hp": 70,
-        "attack": 80,
-        "defense": 70,
-        "special_attack": 80,
-        "special_defense": 70,
-        "speed": 110
-    }
-},
-{
-    "name": "Gallame_shiny",
-    "type": [
-        "psy",
-        "combat"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/475.png",
-    "attacks": [
-        "Ultimapoing",
-        "Rafale Psy",
-        "Poing Glace"
-    ],
-    "stats": {
-        "hp": 68,
-        "attack": 125,
-        "defense": 65,
-        "special_attack": 65,
-        "special_defense": 115,
-        "speed": 80
-    }
-}
 
 
 
