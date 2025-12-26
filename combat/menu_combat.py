@@ -1,7 +1,8 @@
 import discord
 from discord.ui import View, Select, Button
 from math import ceil
-from db import get_captures
+from new_db import get_new_captures
+
 from combat.logic_battle import start_battle_turn_based
 
 
@@ -73,8 +74,18 @@ class ValidateButton(Button):
         )
 
         user_id = str(interaction.user.id)
-        all_captures = get_captures(user_id)
+        all_captures = get_new_captures(user_id)
         selected_pokemons = [p for p in all_captures if p.get("name") in unique_selected]
+
+        # 🔒 Sécurité : aucun Pokémon valide trouvé
+        if not selected_pokemons:
+            await interaction.followup.send(
+                "❌ Aucun Pokémon valide trouvé pour le combat.\n"
+                "Tes sélections ne correspondent pas aux captures en base.",
+                ephemeral=True
+            )
+            return
+
 
         # Exemple équipe bot (à adapter)
         bot_team = [poke for poke in self.parent_view.full_pokemon_data if poke.get("name") in ["Mew", "Groudon_shiny", "Elektek"]]
