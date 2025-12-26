@@ -22,5 +22,21 @@
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
     "extra": "spawn_pokemon_rare",
     "price" : 500
+  },
+  {
+    "item_name": "Master Ball Shiny",
+    "rarity": "legendary",
+    "description": "Une Master ball qui contient sûrement un Pokémon légendaire et avec de grande chance qu'il soit shiny",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png",
+    "extra": "spawn_pokemon_legendaire_maybe_shiny",
+    "price" : 3000
+  },
+  {
+    "item_name": "Hyper Ball Shiny",
+    "rarity": "rare",
+    "description": "Une Hyper ball qui contient un Pokémon très rare et avec de grande chance qu'il soit shiny",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
+    "extra": "spawn_pokemon_rare_maybe_shiny",
+    "price" : 1500
   }
 ]
