@@ -20,8 +20,8 @@ with open(badges_path, "r", encoding="utf-8") as f:
 
 # Dictionnaire qui lie le nom de l'adversaire à l'ID du badge
 BADGES_ADVERSAIRES = {
-    "Erika": 1,   # ID du badge Roche
-    "Le Leader Cascade": 2, # ID du badge Cascade
+    "Pierre": 1,   # ID du badge Roche
+    "Erika": 4, # ID du badge Cascade
     # ajouter d'autres si nécessaire
 }
 
