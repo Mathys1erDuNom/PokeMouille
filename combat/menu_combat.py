@@ -4,7 +4,6 @@ from math import ceil
 from new_db import get_new_captures
 
 from combat.logic_battle import start_battle_turn_based
-from combat.adversaires import get_random_adversaire
 
 
 
