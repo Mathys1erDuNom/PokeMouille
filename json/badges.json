@@ -2,14 +2,14 @@
     {
         "id": 1,
         "name": "Badge Roche",
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+        "image": "images/badges/1.png",
         "description": "Obtenu après avoir vaincu le leader de la Route Rocheuse.",
         "generation": 1
     },
     {
         "id": 2,
         "name": "Badge Cascade",
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+        "image": "images/badges/1.png",
         "description": "Obtenu après avoir vaincu le leader de la Cascade.",
         "generation": 1
     }

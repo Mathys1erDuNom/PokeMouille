@@ -29,16 +29,15 @@ class BadgeInfoButton(Button):
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
 
-
 async def create_badge_mosaic(badges):
     images = []
     nb_ignores = 0
 
     for badge in badges:
         try:
-            resp = requests.get(badge["image"], timeout=5)
-            resp.raise_for_status()
-            img = Image.open(io.BytesIO(resp.content)).convert("RGBA").resize((64,64))
+            # Nouveau chemin vers l'image locale
+            img_path = os.path.join(script_dir, badge["image"])
+            img = Image.open(img_path).convert("RGBA").resize((64,64))
             images.append(img)
         except Exception as e:
             print(f"[IGNORÉ] Badge {badge['name']} : {e}")
