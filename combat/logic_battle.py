@@ -32,7 +32,7 @@ def _format_damage_line(target_label: str, dmg: int, details: dict) -> str:
     return f"{target_label} perd {dmg} PV.{suffix}"
 
 
-def build_turn_embed(state, tour, fields):
+def build_turn_embed(state, tour, fields, adversaire_name):
     emb = discord.Embed(title=f"🔁 Tour {tour}", color=0x00BFFF)
     for name, value in fields:
         emb.add_field(name=name, value=value, inline=False)
@@ -46,9 +46,10 @@ def build_turn_embed(state, tour, fields):
     hp_b = state.get_hp("bot")
     emb.set_footer(
         text=f"PV {state.active_player['name']} (👤 Joueur): {hp_p} | "
-             f"PV {state.active_bot['name']} (🤖 Bot): {hp_b}"
+             f"PV {state.active_bot['name']} ({adversaire_name}): {hp_b}"
     )
     return emb
+
 
 
 async def prompt_player_action(interaction, state):
@@ -126,7 +127,8 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                     state.take_damage("bot", dmg)
                     fields.append((
                         f"{state.active_player['name']} (👤 Joueur) utilise {attack_name} !",
-                        _format_damage_line(f"{state.active_bot['name']} (🤖 Bot)", dmg, det)
+                        _format_damage_line(f"{state.active_bot['name']} ({adversaire_name})", dmg, det)
+
                     ))
 
                     if state.is_bot_ko():
@@ -135,9 +137,11 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                             f"🧑‍🎤 **{adversaire_name}** : {repliques['ko']}"
                         )
 
-                        fields.append(("💥 K.O.", f"{state.active_bot['name']} (🤖 Bot) est K.O. !"))
+                        
+                        fields.append(("💥 K.O.", f"{state.active_bot['name']} ({adversaire_name}) est K.O. !"))
+
                         if not state.switch_bot():
-                            embed = build_turn_embed(state, tour, fields)
+                            embed = build_turn_embed(state, tour, fields, adversaire_name)
                             await interaction.channel.send(embed=embed)
                             if repliques.get("lose"):
                                 await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
@@ -145,8 +149,10 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                                 return
                         else:
                             fields.append((
-                                f"{state.active_bot['name']} (🤖 Bot) entre en scène !",
-                                f"{state.active_bot['name']} (🤖 Bot) se tient prêt."
+                                
+                                f"{state.active_bot['name']} ({adversaire_name}) entre en scène !"
+
+                                f"{state.active_bot['name']} ({adversaire_name}) se tient prêt."
                             ))
                         end_turn = True
                 else:
@@ -172,7 +178,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                 if state.is_player_ko():
                     fields.append(("💥 K.O.", f"{state.active_player['name']} (👤 Joueur) est K.O. !"))
                     if not state.switch_player():
-                        embed = build_turn_embed(state, tour, fields)
+                        embed = build_turn_embed(state, tour, fields,  adversaire_name)
                         await interaction.channel.send(embed=embed)
                         await interaction.channel.send("🤖 **Le bot a gagné le combat !**")
                         return
@@ -184,7 +190,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                     end_turn = True
 
         if end_turn:
-            embed = build_turn_embed(state, tour, fields)
+            embed = build_turn_embed(state, tour, fields,  adversaire_name)
             await interaction.channel.send(embed=embed)
             await interaction.channel.send("🛎 Fin du tour (K.O. détecté).")
             tour += 1
@@ -206,7 +212,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                 if state.is_player_ko():
                     fields.append(("💥 K.O.", f"{state.active_player['name']} (👤 Joueur) est K.O. !"))
                     if not state.switch_player():
-                        embed = build_turn_embed(state, tour, fields)
+                        embed = build_turn_embed(state, tour, fields,  adversaire_name)
                         await interaction.channel.send(embed=embed)
                         await interaction.channel.send("🤖 **Le bot a gagné le combat !**")
                         return
@@ -225,7 +231,8 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                     state.take_damage("bot", dmg)
                     fields.append((
                         f"{state.active_player['name']} (👤 Joueur) utilise {attack_name} !",
-                        _format_damage_line(f"{state.active_bot['name']} (🤖 Bot)", dmg, det)
+                        _format_damage_line(f"{state.active_bot['name']} ({adversaire_name})", dmg, det)
+
                     ))
 
                     if state.is_bot_ko():
@@ -234,17 +241,20 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                             f"🧑‍🎤 **{adversaire_name}** : {repliques['ko']}"
                         )
 
-                        fields.append(("💥 K.O.", f"{state.active_bot['name']} (🤖 Bot) est K.O. !"))
+                        
+                        fields.append(("💥 K.O.", f"{state.active_bot['name']} ({adversaire_name}) est K.O. !"))
+
                         if not state.switch_bot():
-                            embed = build_turn_embed(state, tour, fields)
+                            embed = build_turn_embed(state, tour, fields,  adversaire_name)
                             await interaction.channel.send(embed=embed)
                             await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
                             await interaction.channel.send("🎉 **Victoire du joueur !**")
                             return
                         else:
                             fields.append((
-                                f"{state.active_bot['name']} (🤖 Bot) entre en scène !",
-                                f"{state.active_bot['name']} (🤖 Bot) se tient prêt."
+                                f"{state.active_bot['name']} ({adversaire_name}) entre en scène !"
+
+                                f"{state.active_bot['name']} ({adversaire_name}) se tient prêt."
                             ))
                 else:
                     if state.switch_player_to(choice["index"]):
@@ -255,7 +265,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                     else:
                         fields.append(("❌ Échec du changement", "Choix invalide."))
 
-        embed = build_turn_embed(state, tour, fields)
+        embed = build_turn_embed(state, tour, fields,  adversaire_name)
         await interaction.channel.send(embed=embed)
         tour += 1
         await asyncio.sleep(2)
