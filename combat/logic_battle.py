@@ -10,6 +10,7 @@ from combat.views_attack import AttackOrSwitchView, SwitchSelectView
 from combat.utils import calculate_damage  # <-- on garde
 
 from badge_db import give_badge, get_user_badges
+from money_db import add_money
 
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -169,24 +170,37 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                             if badge_id:
                                 user_id = str(interaction.user.id)
                                 user_badges = get_user_badges(user_id)
-                                if badge_id not in user_badges:
-                                    give_badge(user_id, badge_id)
-                                    # 🔹 Récupération des infos du badge
-                                    badge_info = next((b for b in BADGE_DATA if b["id"] == badge_id), None)
-                                    if badge_info:
+                                badge_info = next((b for b in BADGE_DATA if b["id"] == badge_id), None)
 
-                                        # chemin complet vers l'image locale
-                                        badge_image_path = os.path.join(script_dir, "..", badge_info["image"])
-                                        file = discord.File(badge_image_path, filename="badge.png")
+                                if badge_info:
+                                    badge_image_path = os.path.join(script_dir, "..", badge_info["image"])
+                                    file = discord.File(badge_image_path, filename="badge.png")
+
+                                    if badge_id not in user_badges:
+                                    # Nouveau badge → grande récompense
+                                        give_badge(user_id, badge_id)
+                                        reward = 500  # montant normal pour un nouveau badge
+                                        add_money(user_id, reward)
 
                                         emb = discord.Embed(
                                             title=f"🏅 Nouveau Badge : {badge_info['name']}",
-                                            description=badge_info.get("description", ""),
+                                            description=f"{badge_info.get('description','')}\n💰 Vous gagnez **{reward}** Croco dollars !",
                                             color=0xFFD700
                                         )
-                                        emb.set_image(url="attachment://badge.png")  # Discord va utiliser le fichier attaché
-
+                                        emb.set_image(url="attachment://badge.png")
                                         await interaction.channel.send(file=file, embed=emb)
+                                    else:
+                                        # Badge déjà possédé → petite récompense
+                                        reward = 100
+                                        add_money(user_id, reward)
+                                        await interaction.channel.send(
+                                            f"🎉 Tu as déjà le badge **{badge_info['name']}**.\n"
+                                            f"💰 Tu reçois quand même **{reward}** Croco dollars pour ta victoire !"
+                                        )
+
+
+
+
 
 
                                 else:
