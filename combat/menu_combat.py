@@ -146,7 +146,8 @@ class AdversaireSelect(Select):
                 f"✅ Adversaire choisi : {name}\nMaintenant, choisis tes Pokémon !",
                 ephemeral=True
             )
-            self.parent_view.show_pokemon_select()
+            await self.parent_view.show_pokemon_select(interaction)
+
 
 
 
@@ -183,6 +184,7 @@ class SelectionView(View):
         self.clear_items()
         self.page = 0
         self.rebuild()
+        
     
 
 
