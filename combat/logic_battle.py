@@ -32,9 +32,9 @@ def _format_damage_line(target_label: str, dmg: int, details: dict) -> str:
     return f"{target_label} perd {dmg} PV.{suffix}"
 
 
-def build_turn_embed(state, tour, fields, adversaire_name):
+def build_turn_embed(state, tour, fields, adversaire_name="🤖 Bot"):
     emb = discord.Embed(title=f"🔁 Tour {tour}", color=0x00BFFF)
-    for name, value in fields:
+    for name, value in fields:  # ici, fields doit être liste de tuples
         emb.add_field(name=name, value=value, inline=False)
 
     if state.active_player.get("image"):
