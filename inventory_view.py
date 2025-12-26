@@ -193,7 +193,7 @@ class UseItemButton(Button):
 
                 pokemon_name, is_shiny = await self.spawn_func(
                     interaction.user,
-                    json_file="pokemon_all_pokeball_normal.json",  # 📦 JSON choisi ici
+                    json_file="pokemon_rare_pokeball_normal.json",  # 📦 JSON choisi ici
                     shiny_rate=1  # ✨ shiny boosté
                 )
 
