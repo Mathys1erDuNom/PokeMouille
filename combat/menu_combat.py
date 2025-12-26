@@ -142,10 +142,7 @@ class AdversaireSelect(Select):
         adversaire = get_adversaire_by_name(name)
         if adversaire:
             self.parent_view.chosen_adversaire = adversaire
-            await interaction.response.send_message(
-                f"✅ Adversaire choisi : {name}\nMaintenant, choisis tes Pokémon !",
-                ephemeral=True
-            )
+            
             await self.parent_view.show_pokemon_select(interaction)
 
 
@@ -184,7 +181,11 @@ class SelectionView(View):
         self.clear_items()
         self.page = 0
         self.rebuild()
-        await interaction.response.edit_message(content="Choisis tes Pokémon :", view=self)
+        await interaction.response.edit_message(
+            content=f"✅ Adversaire choisi : {self.chosen_adversaire['name']}\nChoisis tes Pokémon :",
+            view=self
+        )
+
         
     
 
