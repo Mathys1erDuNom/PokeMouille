@@ -2944,7 +2944,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/149.png",
         "attacks": [
             "Dracochoc",
-            "Seisme"
+            "Seisme",
+            "Vent Violent"
         ],
         "stats": {
             "hp": 91,

@@ -2425,10 +2425,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/373.png",
         "attacks": [
-            "Coupe",
             "Dracochoc",
-            "Morsure",
-            "Cru-Aile"
+            "Lance Flamme",
+            "Vent Violent",
+            "Lame de Roc"
         ],
         "stats": {
             "hp": 95,

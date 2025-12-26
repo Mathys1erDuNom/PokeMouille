@@ -185,7 +185,54 @@ class UseItemButton(Button):
                 ephemeral=True
                 )
 
-        
+ ##########################
+
+        # Effets spécifiques
+        if extra == "spawn_pokemon_rare":
+            if self.spawn_func is not None:
+
+                pokemon_name, is_shiny = await self.spawn_func(
+                    interaction.user,
+                    json_file="pokemon_all_pokeball_normal.json",  # 📦 JSON choisi ici
+                    shiny_rate=1  # ✨ shiny boosté
+                )
+
+                if pokemon_name:
+                    json_file_to_use = "json/pokemon_rare_pokeball_shiny.json" if is_shiny else "json/pokemon_rare_pokeball_normal.json"
+
+                    embed, file = await get_pokemon_image_embed(
+                        pokemon_name, 
+                        json_file= json_file_to_use ,
+                        is_shiny=is_shiny
+                    )
+                    if embed and file:
+                        await interaction.followup.send(
+                            content="🎉 Vous avez gagné un Pokémon !",
+                            embed=embed,
+                            file=file,
+                            ephemeral=True
+                        )
+                    else:
+                        await interaction.followup.send(
+                            "❌ Impossible de trouver l'image du Pokémon.",
+                            ephemeral=True
+                        )    
+                else:
+                    await interaction.followup.send(
+                    "❌ Impossible de spawn le Pokémon.",
+                    ephemeral=True
+                )
+            else:
+                await interaction.followup.send(
+                "❌ La fonction de spawn n'est pas définie.",
+                ephemeral=True
+                )
+
+
+
+
+
+#####################
 
         if extra == "spawn_pokemon_legendary":
             if self.spawn_func is not None:

@@ -2963,7 +2963,8 @@
         "attacks": [
             "Dracochoc",
             "Seisme",
-            "Lance-Flammes"
+            "Lance-Flammes",
+            "Vent Violent"
         ],
         "stats": {
             "hp": 91,
@@ -7544,9 +7545,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/373.png",
         "attacks": [
-            "Coupe",
-            "Vol",
-            "Coup d’Boule"
+            "Dracochoc",
+            "Lance Flamme",
+            "Vent Violent",
+            "Lame de Roc"
         ],
         "stats": {
             "hp": 95,

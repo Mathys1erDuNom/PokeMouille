@@ -14,5 +14,13 @@
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png",
     "extra": "spawn_pokemon_legendary",
     "price" : 1000
+  },
+  {
+    "item_name": "Hyper Ball",
+    "rarity": "rare",
+    "description": "Une Hyper ball qui contient un Pokémon très rare",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
+    "extra": "spawn_pokemon_rare",
+    "price" : 500
   }
 ]

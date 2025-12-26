@@ -2434,9 +2434,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/373.png",
         "attacks": [
-            "Coupe",
-      
-            "Coup d’Boule"
+            "Dracochoc",
+            "Lance Flamme",
+            "Vent Violent",
+            "Lame de Roc"
         ],
         "stats": {
             "hp": 95,
