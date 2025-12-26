@@ -174,13 +174,21 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                                     # 🔹 Récupération des infos du badge
                                     badge_info = next((b for b in BADGE_DATA if b["id"] == badge_id), None)
                                     if badge_info:
+
+                                        # chemin complet vers l'image locale
+                                        badge_image_path = os.path.join(script_dir, "..", badge_info["image"])
+                                        file = discord.File(badge_image_path, filename="badge.png")
+
                                         emb = discord.Embed(
                                             title=f"🏅 Nouveau Badge : {badge_info['name']}",
                                             description=badge_info.get("description", ""),
                                             color=0xFFD700
                                         )
-                                        emb.set_image(url=badge_info["image"])  # image locale ou hébergée
-                                        await interaction.channel.send(embed=emb)
+                                        emb.set_image(url="attachment://badge.png")  # Discord va utiliser le fichier attaché
+
+                                        await interaction.channel.send(file=file, embed=emb)
+
+
                                 else:
                                     await interaction.channel.send(f"Tu as déjà ce badge pour {adversaire_name} !")
 
