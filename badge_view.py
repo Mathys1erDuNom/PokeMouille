@@ -20,13 +20,19 @@ class BadgeInfoButton(Button):
         self.badge = badge
 
     async def callback(self, interaction: discord.Interaction):
+        # Ouvre l'image locale
+        img_path = os.path.join(script_dir, self.badge["image"])
+        file = discord.File(img_path, filename="badge.png")
+
         embed = discord.Embed(
             title=self.badge["name"],
             description=self.badge["description"],
             color=0xFFD700
         )
-        embed.set_image(url=self.badge["image"])
-        await interaction.response.send_message(embed=embed, ephemeral=True)
+        # On référence l'image jointe
+        embed.set_image(url="attachment://badge.png")
+
+        await interaction.response.send_message(embed=embed, file=file, ephemeral=True)
 
 
 async def create_badge_mosaic(badges):
