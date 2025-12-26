@@ -28,14 +28,19 @@ class BadgeInfoButton(Button):
         embed.set_image(url=self.badge["image"])
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
+
+
+
 async def create_badge_mosaic(badges):
     images = []
     for badge in badges:
         try:
-            response = requests.get(badge["image"])
-            img = Image.open(io.BytesIO(response.content)).convert("RGBA").resize((64,64))
+            resp = requests.get(badge["image"], stream=True)
+            resp.raise_for_status()
+            img = Image.open(io.BytesIO(resp.content)).convert("RGBA").resize((64,64))
             images.append(img)
-        except:
+        except Exception as e:
+            print(f"Erreur image {badge['name']}: {e}")
             fallback = Image.new("RGBA", (64,64), (200,200,200,255))
             images.append(fallback)
 
@@ -49,7 +54,7 @@ async def create_badge_mosaic(badges):
     for i, img in enumerate(images):
         x = (i % cols) * 64
         y = (i // cols) * 64
-        mosaic.paste(img, (x, y), img)  # ⚡️ utiliser le masque
+        mosaic.paste(img, (x, y), img)  # utiliser le masque pour la transparence
 
     mosaic = mosaic.convert("RGB")  # Discord préfère RGB
 
@@ -57,6 +62,7 @@ async def create_badge_mosaic(badges):
     mosaic.save(output, "PNG")
     output.seek(0)
     return output
+
 
 
 # --- Setup du module ---
