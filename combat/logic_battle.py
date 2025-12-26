@@ -150,7 +150,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                         else:
                             fields.append((
                                 
-                                f"{state.active_bot['name']} ({adversaire_name}) entre en scène !"
+                                f"{state.active_bot['name']} ({adversaire_name}) entre en scène !",
 
                                 f"{state.active_bot['name']} ({adversaire_name}) se tient prêt."
                             ))
@@ -252,7 +252,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                             return
                         else:
                             fields.append((
-                                f"{state.active_bot['name']} ({adversaire_name}) entre en scène !"
+                                f"{state.active_bot['name']} ({adversaire_name}) entre en scène !",
 
                                 f"{state.active_bot['name']} ({adversaire_name}) se tient prêt."
                             ))
