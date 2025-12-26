@@ -5,6 +5,7 @@ from discord.ui import View, Button
 from PIL import Image
 import io, os, requests, json
 from badge_db import give_badge, get_user_badges
+from utils import is_croco
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "json")  # dossier pour fallback si image introuvable
@@ -15,7 +16,7 @@ BADGE_CACHE = {}  # { user_id: { "mosaic": bytes, "badge_ids": [] } }
 # --- Buttons ---
 class BadgeInfoButton(Button):
     def __init__(self, badge):
-        super().__init__(label="ℹ️ Info", style=discord.ButtonStyle.primary)
+        super().__init__(label=badge["name"], style=discord.ButtonStyle.primary)
         self.badge = badge
 
     async def callback(self, interaction: discord.Interaction):
@@ -26,6 +27,7 @@ class BadgeInfoButton(Button):
         )
         embed.set_image(url=self.badge["image"])
         await interaction.response.send_message(embed=embed, ephemeral=True)
+
 
 # --- Création mosaïque ---
 async def create_badge_mosaic(badges):
@@ -57,6 +59,7 @@ async def create_badge_mosaic(badges):
 
 # --- Setup du module ---
 def setup_badges(bot, full_badge_data):
+    @is_croco()
     @bot.command()
     async def givebadge(ctx, badge_id: int, user: discord.Member = None):
         """Attribue un badge à un utilisateur"""
