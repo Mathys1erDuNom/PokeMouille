@@ -179,11 +179,12 @@ class SelectionView(View):
         self.clear_items()
         self.add_item(AdversaireSelect(self.adversaires, self))
 
-    def show_pokemon_select(self):
+    async def show_pokemon_select(self, interaction: discord.Interaction):
         # Reconstruit la vue pour afficher le menu Pokémon
         self.clear_items()
         self.page = 0
         self.rebuild()
+        await interaction.response.edit_message(content="Choisis tes Pokémon :", view=self)
         
     
 
