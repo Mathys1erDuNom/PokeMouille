@@ -26,8 +26,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
         "attacks": [
             "Fouet Lianes",
-            "Charge",
-            "Vampigraine"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -221,7 +220,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
         "attacks": [
-            "Poudre Dodo",
+         
             "Vent Violent",
             "Piqure"
         ],
@@ -279,7 +278,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
         "attacks": [
             "Dard-Venin",
-            "Vol",
+          
             "Piqure"
         ],
         "stats": {
@@ -339,8 +338,7 @@
         "attacks": [
             "Charge",
             "Pique",
-            "Cru-Aile",
-            "Atterrissage"
+            "Cru-Aile"
         ],
         "stats": {
             "hp": 83,
@@ -380,8 +378,7 @@
         "attacks": [
             "Morsure",
             "Griffe",
-            "Queue de fer",
-            "Vive-Attaque"
+            "Queue de fer"
         ],
         "stats": {
             "hp": 55,
@@ -421,8 +418,7 @@
         "attacks": [
             "Charge",
             "Pique",
-            "Cru-Aile",
-            "Atterrissage"
+            "Cru-Aile"
         ],
         "stats": {
             "hp": 65,
@@ -440,8 +436,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
         "attacks": [
-            "Constriction",
-            "Lance-Flammes"
+            
+            "Bomb-Beurk",
+            "Charge"
         ],
         "stats": {
             "hp": 35,
@@ -459,8 +456,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
         "attacks": [
-            "Constriction",
-            "Lance-Flammes",
+            
+            "Bomb-Beurk",
+            "Charge",
             "Morsure"
         ],
         "stats": {
@@ -519,7 +517,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/27.png",
         "attacks": [
             "Charge",
-            "Fouet Lianes"
+            "Boue-Bombe"
         ],
         "stats": {
             "hp": 50,
@@ -538,7 +536,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/28.png",
         "attacks": [
             "Charge",
-            "Fouet Lianes",
+            "Seisme",
             "Tranche"
         ],
         "stats": {
@@ -577,8 +575,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/30.png",
         "attacks": [
             "Charge",
-            "Piqure",
-            "Vampigraine"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 70,
@@ -599,7 +596,8 @@
         "attacks": [
             "Charge",
             "Piqure",
-            "Vampigraine",
+            "Bomb-Beurk",
+           
             "Seisme"
         ],
         "stats": {
@@ -639,7 +637,8 @@
         "attacks": [
             "Charge",
             "Piqure",
-            "Vampigraine"
+            "Bomb-Beurk"
+            
         ],
         "stats": {
             "hp": 61,
@@ -660,7 +659,8 @@
         "attacks": [
             "Charge",
             "Piqure",
-            "Vampigraine",
+            "Bomb-Beurk",
+            
             "Seisme"
         ],
         "stats": {
@@ -680,7 +680,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
         "attacks": [
             "Charge",
-            "Poudre Dodo"
+            "Marelle",
+            "Pouvoir Lunaire"
         ],
         "stats": {
             "hp": 70,
@@ -699,8 +700,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/36.png",
         "attacks": [
             "Charge",
-            "Poudre Dodo",
-            "Choc Psy"
+            "Choc Psy",
+            "Pouvoir Lunaire"
         ],
         "stats": {
             "hp": 95,
@@ -758,8 +759,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
         "attacks": [
-            "Poudre Dodo",
-            "Chant",
+        
+            "Pouvoir Lunaire",
             "Charge"
         ],
         "stats": {
@@ -779,8 +780,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
         "attacks": [
-            "Poudre Dodo",
-            "Chant",
+     
+            "Pouvoir Lunaire",
             "Charge",
             "Ecrasement"
         ],
@@ -802,8 +803,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/41.png",
         "attacks": [
             "Morsure",
-            "Ultrason",
-            "Vol"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 40,
@@ -822,8 +822,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/42.png",
         "attacks": [
             "Morsure",
-            "Ultrason",
-            "Vol",
+            "Dard-Venin",
+        
+            
             "Cru-Aile"
         ],
         "stats": {
@@ -844,7 +845,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/43.png",
         "attacks": [
             "Fouet Lianes",
-            "Vampigraine"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 50,
@@ -864,8 +865,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/44.png",
         "attacks": [
             "Fouet Lianes",
-            "Vampigraine",
-            "Poudre Dodo"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 75,
@@ -886,7 +886,7 @@
         "attacks": [
             "Fouet Lianes",
             "Canon Graine",
-            "Vampigraine"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 85,
@@ -906,7 +906,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/46.png",
         "attacks": [
             "Griffe",
-            "Spore"
+            "Piqure"
+            
         ],
         "stats": {
             "hp": 35,
@@ -926,8 +927,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/47.png",
         "attacks": [
             "Griffe",
-            "Spore",
-            "Lance-Soleil"
+            "Piqure"
         ],
         "stats": {
             "hp": 60,
@@ -967,8 +967,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
         "attacks": [
             "Dard-Venin",
-            "Piqure",
-            "Ultrason"
+            "Piqure"
         ],
         "stats": {
             "hp": 70,
@@ -986,8 +985,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/50.png",
         "attacks": [
-            "Charge",
-            "Tranche"
+            "Charge"
         ],
         "stats": {
             "hp": 40,
@@ -1006,7 +1004,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
         "attacks": [
             "Charge",
-            "Tranche",
+            
             "Seisme"
         ],
         "stats": {
@@ -1045,8 +1043,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
         "attacks": [
             "Griffe",
-            "Tranche",
-            "Cru-Aile"
+            "Tranche"
         ],
         "stats": {
             "hp": 65,
@@ -1065,7 +1062,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/54.png",
         "attacks": [
             "Pistolet a O",
-            "Brouillard"
+            "Charge"
         ],
         "stats": {
             "hp": 50,
@@ -1084,8 +1081,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/55.png",
         "attacks": [
             "Pistolet a O",
-            "Brouillard",
-            "Marelle"
+            "Charge"
         ],
         "stats": {
             "hp": 65,
@@ -1104,7 +1100,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/56.png",
         "attacks": [
             "Charge",
-            "Morsure"
+            "Morsure",
+            "Poing Karate"
         ],
         "stats": {
             "hp": 40,
@@ -1124,7 +1121,7 @@
         "attacks": [
             "Charge",
             "Morsure",
-            "Pique"
+            "Poing Karate"
         ],
         "stats": {
             "hp": 65,
@@ -1201,8 +1198,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/61.png",
         "attacks": [
             "Pistolet a O",
-            "Charge",
-            "Morsure"
+            "Charge"
         ],
         "stats": {
             "hp": 54,
@@ -1223,7 +1219,7 @@
         "attacks": [
             "Pistolet a O",
             "Charge",
-            "Morsure",
+            "Poing Karate",
             "Seisme"
         ],
         "stats": {
@@ -1242,8 +1238,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/63.png",
         "attacks": [
-            "Choc Psy",
-            "Teleport"
+            "Choc Psy"
         ],
         "stats": {
             "hp": 25,
@@ -1262,7 +1257,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
         "attacks": [
             "Choc Psy",
-            "Teleport",
             "Psyko"
         ],
         "stats": {
@@ -1282,9 +1276,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
         "attacks": [
             "Choc Psy",
-            "Teleport",
-            "Psyko",
-            "Bouclier"
+            "Psyko"
         ],
         "stats": {
             "hp": 55,
@@ -1363,8 +1355,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/69.png",
         "attacks": [
-            "Fouet Lianes",
-            "Vampigraine"
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 45,
@@ -1384,7 +1375,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/70.png",
         "attacks": [
             "Fouet Lianes",
-            "Vampigraine",
+            "Bomb-Beurk",
+           
             "Canon Graine"
         ],
         "stats": {
@@ -1405,9 +1397,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
         "attacks": [
             "Fouet Lianes",
-            "Vampigraine",
+        
             "Canon Graine",
-            "Siphon"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 75,
@@ -1447,8 +1439,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
         "attacks": [
             "Pistolet a O",
-            "Dard-Venin",
-            "Ultrason"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 80,
@@ -1590,8 +1581,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/80.png",
         "attacks": [
             "Pistolet a O",
-            "Choc Psy",
-            "Brouillard"
+            "Choc Psy"
         ],
         "stats": {
             "hp": 95,
@@ -1631,8 +1621,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png",
         "attacks": [
             "Eclair",
-            "Charge",
-            "Boule Elek"
+            "Charge"
         ],
         "stats": {
             "hp": 50,
@@ -1752,7 +1741,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/88.png",
         "attacks": [
             "Boue-Bombe",
-            "Tranche"
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 40,
@@ -1771,7 +1760,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
         "attacks": [
             "Boue-Bombe",
-            "Tranche",
+            "Bomb-Beurk",
             "Lance-Flammes"
         ],
         "stats": {
@@ -1831,8 +1820,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
         "attacks": [
-            "Boule Ombre",
-            "Gaz Toxik"
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 30,
@@ -1851,9 +1839,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
         "attacks": [
-            "Boule Ombre",
-            "Gaz Toxik",
-            "Explosion"
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 45,
@@ -1872,9 +1858,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
         "attacks": [
-            "Boule Ombre",
-            "Gaz Toxik",
-            "Explosion",
+            "Balle Ombre",
+            "Bomb-Beurk",
+            
             "Lance-Flammes"
         ],
         "stats": {
@@ -1913,8 +1899,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/96.png",
         "attacks": [
-            "Choc Psy",
-            "Poudre Dodo"
+            "Choc Psy"
         ],
         "stats": {
             "hp": 60,
@@ -1933,7 +1918,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/97.png",
         "attacks": [
             "Choc Psy",
-            "Poudre Dodo",
             "Psyko"
         ],
         "stats": {
@@ -2011,8 +1995,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/101.png",
         "attacks": [
             "Eclair",
-            "Charge",
-            "Boule Elek"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -2167,8 +2150,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
         "attacks": [
-            "Gaz Toxik",
-            "Tranche"
+        
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 40,
@@ -2186,9 +2169,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
         "attacks": [
-            "Gaz Toxik",
-            "Tranche",
-            "Explosion"
+            
+            "Bomb-Beurk"
+           
         ],
         "stats": {
             "hp": 65,
@@ -2248,7 +2231,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
         "attacks": [
             "Charge",
-            "Tranche",
+            
             "Pouvoir Lunaire"
         ],
         "stats": {
@@ -2344,8 +2327,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/118.png",
         "attacks": [
-            "Pistolet a O",
-            "Charme"
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 70,
@@ -2364,7 +2346,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png",
         "attacks": [
             "Pistolet a O",
-            "Charme",
+        
             "Laser Glace"
         ],
         "stats": {
@@ -2425,8 +2407,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
         "attacks": [
-            "Choc Psy",
-            "Bluff"
+            "Choc Psy"
         ],
         "stats": {
             "hp": 40,
@@ -2603,8 +2584,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
         "attacks": [
             "Pistolet a O",
-            "Laser Glace",
-            "Brouillard"
+            "Laser Glace"
         ],
         "stats": {
             "hp": 130,
@@ -2717,7 +2697,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png",
         "attacks": [
             "Charge",
-            "Tranche"
+            "Choc Psy"
         ],
         "stats": {
             "hp": 65,
@@ -2839,7 +2819,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
         "attacks": [
             "Charge",
-            "Plaquage"
+            "Plaquage",
+            "Giga Impact"
         ],
         "stats": {
             "hp": 160,
@@ -2881,8 +2862,7 @@
         "attacks": [
             "Eclair",
             "Cru-Aile",
-            "Boule Elek",
-            "Lance-Flammes"
+            "Tonnerre"
         ],
         "stats": {
             "hp": 90,
@@ -2941,8 +2921,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
         "attacks": [
             "Dracochoc",
-            "Charge",
-            "Seisme"
+            "Charge"
         ],
         "stats": {
             "hp": 61,
@@ -2963,7 +2942,6 @@
         "attacks": [
             "Dracochoc",
             "Seisme",
-            "Lance-Flammes",
             "Vent Violent"
         ],
         "stats": {
@@ -3003,7 +2981,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
         "attacks": [
             "Choc Psy",
-            "Psyko"
+            "Psyko",
+            "Aura Sphere"
         ],
         "stats": {
             "hp": 100,
@@ -3021,7 +3000,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/152.png",
         "attacks": [
-            "Danse Lames",
+            
             "Coupe",
             "Fouet Lianes"
         ],
@@ -3041,7 +3020,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/153.png",
         "attacks": [
-            "Danse Lames",
+          
             "Coupe",
             "Fouet Lianes"
         ],
@@ -3061,7 +3040,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png",
         "attacks": [
-            "Danse Lames",
+         
             "Coupe",
             "Fouet Lianes"
         ],
@@ -3082,7 +3061,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png",
         "attacks": [
             "Coupe",
-            "Double Pied",
+            
             "Coup dBoule"
         ],
         "stats": {
@@ -3102,7 +3081,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/156.png",
         "attacks": [
             "Coupe",
-            "Double Pied",
+           
             "Coup dBoule"
         ],
         "stats": {
@@ -3121,9 +3100,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/157.png",
         "attacks": [
-            "Ultimapoing",
+            "Lance-Flammes",
             "Poing Feu",
-            "Poing Eclair"
+            "Charge"
         ],
         "stats": {
             "hp": 78,
@@ -3141,8 +3120,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/158.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
+            "Pistolet a O",
             "Griffe"
         ],
         "stats": {
@@ -3161,8 +3139,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/159.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
+            "Pistolet a O",
             "Griffe"
         ],
         "stats": {
@@ -3181,7 +3158,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png",
         "attacks": [
-            "Ultimapoing",
+            "Pistolet a O",
             "Poing Glace",
             "Griffe"
         ],
@@ -3201,9 +3178,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/161.png",
         "attacks": [
-            "Poing Feu",
-            "Poing Glace",
-            "Poing Eclair"
+            "Charge"
         ],
         "stats": {
             "hp": 35,
@@ -3221,9 +3196,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/162.png",
         "attacks": [
-            "Poing Feu",
-            "Poing Glace",
-            "Poing Eclair"
+            "Charge"
         ],
         "stats": {
             "hp": 85,
@@ -3243,8 +3216,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/163.png",
         "attacks": [
             "Cru-Ailes",
-            "Cyclone",
-            "Vol"
+            "Tranche-Nuit"
         ],
         "stats": {
             "hp": 60,
@@ -3264,8 +3236,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/164.png",
         "attacks": [
             "Cru-Ailes",
-            "Cyclone",
-            "Vol"
+            "Tranche-Nuit"
         ],
         "stats": {
             "hp": 100,
@@ -3285,8 +3256,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/165.png",
         "attacks": [
             "Poing Comete",
-            "Ultimapoing",
-            "Poing Glace"
+            "Ultimapoing"
         ],
         "stats": {
             "hp": 40,
@@ -3326,8 +3296,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/167.png",
         "attacks": [
-            "Plaquage",
-            "Damocles",
+            "charge",
             "Dard-Venin"
         ],
         "stats": {
@@ -3347,9 +3316,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/168.png",
         "attacks": [
-            "Danse Lames",
-            "Plaquage",
-            "Damocles"
+         
+            "charge",
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 70,
@@ -3370,7 +3339,7 @@
         "attacks": [
             "Tornade",
             "Cru-Ailes",
-            "Vol"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 85,
@@ -3389,9 +3358,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/170.png",
         "attacks": [
-            "Belier",
-            "Damocles",
-            "Ultrason"
+            "Pistolet a O",
+            "charge"
         ],
         "stats": {
             "hp": 75,
@@ -3410,9 +3378,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/171.png",
         "attacks": [
-            "Belier",
-            "Damocles",
-            "Ultrason"
+            "Pistolet a O",
+            "charge",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 125,
@@ -3431,7 +3399,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/172.png",
         "attacks": [
             "Torgnoles",
-            "Ultimapoing",
             "Poing Eclair"
         ],
         "stats": {
@@ -3472,7 +3439,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/174.png",
         "attacks": [
             "EcraseFace",
-            "Ultimapoing",
+    
             "Ultimawashi"
         ],
         "stats": {
@@ -3491,9 +3458,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/175.png",
         "attacks": [
-            "EcraseFace",
-            "Ultimapoing",
-            "Ultimawashi"
+            "EcraseFace"
+            
+      
         ],
         "stats": {
             "hp": 35,
@@ -3513,8 +3480,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/176.png",
         "attacks": [
             "EcraseFace",
-            "Ultimapoing",
-            "Vol"
+            "Ultimapoing"
         ],
         "stats": {
             "hp": 55,
@@ -3533,8 +3499,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/177.png",
         "attacks": [
-            "Damocles",
-            "Groz’Yeux",
+        
+      
             "Picpic"
         ],
         "stats": {
@@ -3554,9 +3520,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/178.png",
         "attacks": [
-            "Vol",
-            "Damocles",
-            "Groz’Yeux"
+      
+            "Picpic",
+            "Charge"
         ],
         "stats": {
             "hp": 65,
@@ -3574,7 +3540,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/179.png",
         "attacks": [
-            "Jet de Sable",
+            
             "Coup dBoule",
             "Charge"
         ],
@@ -3594,9 +3560,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/180.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Tonnerre",
+            "Charge"
         ],
         "stats": {
             "hp": 70,
@@ -3614,9 +3579,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/181.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 90,
@@ -3634,9 +3598,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/182.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Damocles"
+    
+            "Coupe"
         ],
         "stats": {
             "hp": 75,
@@ -3655,7 +3618,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/183.png",
         "attacks": [
-            "Ultimapoing",
+            "Pistolet a O",
             "Poing Glace",
             "Souplesse"
         ],
@@ -3678,7 +3641,8 @@
         "attacks": [
             "Ultimapoing",
             "Poing Glace",
-            "Souplesse"
+            "Souplesse",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 100,
@@ -3697,8 +3661,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/185.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Seisme"
         ],
         "stats": {
             "hp": 70,
@@ -3737,8 +3700,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/187.png",
         "attacks": [
-            "Jackpot",
-            "Danse Lames",
+           
+         
             "Coup dBoule"
         ],
         "stats": {
@@ -3758,7 +3721,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/188.png",
         "attacks": [
-            "Danse Lames",
+           
             "Coup dBoule",
             "Charge"
         ],
@@ -3779,7 +3742,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/189.png",
         "attacks": [
-            "Danse Lames",
+            
             "Coup dBoule",
             "Charge"
         ],
@@ -3800,8 +3763,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/190.png",
         "attacks": [
             "Torgnoles",
-            "Ultimapoing",
-            "Poing Feu"
+            "Ultimapoing"
         ],
         "stats": {
             "hp": 55,
@@ -3819,7 +3781,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/191.png",
         "attacks": [
-            "Danse Lames",
+          
             "Coupe",
             "Charge"
         ],
@@ -3839,9 +3801,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/192.png",
         "attacks": [
-            "EcraseFace",
-            "Danse Lames",
-            "Coupe"
+            "EcraseFace"
         ],
         "stats": {
             "hp": 75,
@@ -3860,7 +3820,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/193.png",
         "attacks": [
-            "Danse Lames",
+            
             "Tornade",
             "Cru-Ailes"
         ],
@@ -3881,9 +3841,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/194.png",
         "attacks": [
-            "Poing Glace",
-            "Souplesse",
-            "Double Pied"
+            "Pistolet a O",
+            "Souplesse"
         ],
         "stats": {
             "hp": 55,
@@ -3922,9 +3881,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png",
         "attacks": [
-            "Jackpot",
+           
             "Coupe",
-            "Jet de Sable"
+            "Psyko"
         ],
         "stats": {
             "hp": 65,
@@ -3942,9 +3901,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png",
         "attacks": [
-            "Jackpot",
+            
             "Coupe",
-            "Jet de Sable"
+            "Morsure"
+            
         ],
         "stats": {
             "hp": 95,
@@ -3965,7 +3925,7 @@
         "attacks": [
             "Tornade",
             "Cru-Ailes",
-            "Cyclone"
+            "Tranche-Nuit"
         ],
         "stats": {
             "hp": 60,
@@ -3985,8 +3945,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/199.png",
         "attacks": [
             "Ultimapoing",
-            "Jackpot",
-            "Poing Feu"
+            "Pistolet a O",
+            "Psyko"
         ],
         "stats": {
             "hp": 95,
@@ -4004,9 +3964,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/200.png",
         "attacks": [
-            "Coup dBoule",
-            "Damocles",
-            "Rugissement"
+            "Balle Ombre"
+     
         ],
         "stats": {
             "hp": 60,
@@ -4042,9 +4001,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/202.png",
         "attacks": [
-            "Riposte",
-            "Amnesie",
-            "Trempette"
+            "Psykp",
+            "Charge"
         ],
         "stats": {
             "hp": 190,
@@ -4124,7 +4082,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/206.png",
         "attacks": [
-            "Etreinte",
             "Coup dBoule",
             "Plaquage"
         ],
@@ -4147,7 +4104,8 @@
         "attacks": [
             "Guillotine",
             "Coupe-Vent",
-            "Danse Lames"
+            "Seisme"
+            
         ],
         "stats": {
             "hp": 65,
@@ -4167,7 +4125,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png",
         "attacks": [
             "Coupe",
-            "Etreinte",
+            "Queue de fer",
             "Souplesse"
         ],
         "stats": {
@@ -4186,9 +4144,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/209.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            
+            "charge",
+            "Pouvoir Lunaire"
         ],
         "stats": {
             "hp": 60,
@@ -4206,9 +4164,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "charge",
+            "Pouvoir Lunaire"
         ],
         "stats": {
             "hp": 90,
@@ -4227,7 +4184,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/211.png",
         "attacks": [
-            "Danse Lames",
+          
             "Coup dBoule",
             "Charge"
         ],
@@ -4249,7 +4206,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png",
         "attacks": [
             "Coupe-Vent",
-            "Danse Lames",
+           
             "Coupe"
         ],
         "stats": {
@@ -4269,7 +4226,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png",
         "attacks": [
-            "Etreinte",
+      
             "Coup dBoule",
             "Plaquage"
         ],
@@ -4290,7 +4247,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/214.png",
         "attacks": [
-            "Danse Lames",
+            "Seisme",
+            "Poing Karate",
             "Coupe",
             "Coup dBoule"
         ],
@@ -4313,7 +4271,8 @@
         "attacks": [
             "Ultimapoing",
             "Poing Glace",
-            "Griffe"
+            "Griffe",
+            "Guillotine"
         ],
         "stats": {
             "hp": 55,
@@ -4332,8 +4291,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/216.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "charge"
         ],
         "stats": {
             "hp": 60,
@@ -4352,8 +4310,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/217.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "charge",
+            "Poing Feu"
+    
         ],
         "stats": {
             "hp": 90,
@@ -4372,8 +4331,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/218.png",
         "attacks": [
             "Plaquage",
-            "Belier",
-            "Damocles"
+      
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 40,
@@ -4393,8 +4352,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/219.png",
         "attacks": [
             "Plaquage",
-            "Belier",
-            "Damocles"
+          
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 60,
@@ -4436,7 +4395,8 @@
         "attacks": [
             "Coup dBoule",
             "Koud’Korne",
-            "Furie"
+            "Furie",
+            "Laser Glace"
         ],
         "stats": {
             "hp": 100,
@@ -4457,7 +4417,8 @@
         "attacks": [
             "Coup dBoule",
             "Charge",
-            "Plaquage"
+            "Plaquage",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 65,
@@ -4475,9 +4436,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/223.png",
         "attacks": [
-            "Damocles",
-            "Ultrason",
-            "Lance-Flammes"
+            "Pistolet a O",
+            "charge"
         ],
         "stats": {
             "hp": 35,
@@ -4495,9 +4455,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/224.png",
         "attacks": [
-            "Etreinte",
-            "Ligotage",
-            "Damocles"
+            "Pistolet a O",
+            "charge"
         ],
         "stats": {
             "hp": 75,
@@ -4516,9 +4475,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/225.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
-            "Vol"
+            "Cru-Ailes",
+            "Poing Glace"
         ],
         "stats": {
             "hp": 45,
@@ -4538,7 +4496,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/226.png",
         "attacks": [
             "Cru-Ailes",
-            "Souplesse",
+            "Pistolet a O",
             "Coup dBoule"
         ],
         "stats": {
@@ -4558,7 +4516,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png",
         "attacks": [
-            "Danse Lames",
+            
             "Coupe",
             "Cru-Ailes"
         ],
@@ -4579,9 +4537,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/228.png",
         "attacks": [
-            "Coup dBoule",
+            "Morsure",
             "Plaquage",
-            "Belier"
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 45,
@@ -4600,9 +4558,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/229.png",
         "attacks": [
-            "Coup dBoule",
+            "Morsure",
             "Plaquage",
-            "Belier"
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 75,
@@ -4621,9 +4579,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/230.png",
         "attacks": [
-            "Coup dBoule",
-            "Plaquage",
-            "Belier"
+            "Pistolet a O",
+            "Charge"
         ],
         "stats": {
             "hp": 75,
@@ -4800,9 +4757,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/239.png",
         "attacks": [
-            "Poing Karate",
-            "Ultimapoing",
-            "Poing Feu"
+            "Tonnerre",
+            "Charge"
         ],
         "stats": {
             "hp": 45,
@@ -4820,8 +4776,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/240.png",
         "attacks": [
-            "Poing Karate",
-            "Ultimapoing",
+            "Charge",
+            
             "Poing Feu"
         ],
         "stats": {
@@ -4841,8 +4797,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/241.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
+        
         ],
         "stats": {
             "hp": 95,
@@ -4880,9 +4836,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/243.png",
         "attacks": [
-            "Coupe",
+            "Tonnerre",
             "Coup dBoule",
-            "Plaquage"
+            "Plaquage",
+            "Morsure"
         ],
         "stats": {
             "hp": 90,
@@ -4900,9 +4857,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/244.png",
         "attacks": [
-            "Coupe",
+            "Morsure",
             "Ecrasement",
-            "Coup dBoule"
+            "Coup dBoule",
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 115,
@@ -4920,9 +4878,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/245.png",
         "attacks": [
-            "Coupe",
+            "Morsure",
             "Tornade",
-            "Coup dBoule"
+            "Coup dBoule",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 100,
@@ -4983,9 +4942,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Morsure",
+            "Seisme",
+            "Lance-Pierre",
+            "Lame de Roc"
         ],
         "stats": {
             "hp": 100,
@@ -5004,9 +4964,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png",
         "attacks": [
-            "Tornade",
-            "Cyclone",
-            "Vol"
+            "Hydrocanon",
+            "Tranche-Nuit",
+            "Psyko",
+            "Seisme"
         ],
         "stats": {
             "hp": 106,
@@ -5025,9 +4986,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png",
         "attacks": [
-            "Tornade",
-            "Cyclone",
-            "Vol"
+            "Telluriforce",
+            "Tranche-Nuit",
+            "Cannicule",
+            "Meteore"
         ],
         "stats": {
             "hp": 106,
@@ -5046,9 +5008,11 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/251.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Damocles"
+          
+            "Psyko",
+            "Canon Graine",
+            "Tempete Verte",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 100,
@@ -5059,6 +5023,7 @@
             "speed": 100
         }
     },
+
     {
         "name": "Arcko",
         "type": [
@@ -5066,9 +5031,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png",
         "attacks": [
-            "Ecras’Face",
-            "Ultimapoing",
-            "Poing Eclair"
+            "Charge"
         ],
         "stats": {
             "hp": 40,
@@ -5086,9 +5049,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/253.png",
         "attacks": [
-            "Ecras’Face",
-            "Ultimapoing",
-            "Poing Eclair"
+            "Charge",
+            "Canon Graine"
         ],
         "stats": {
             "hp": 50,
@@ -5108,7 +5070,7 @@
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
-            "Poing Eclair"
+            "Canon Graine"
         ],
         "stats": {
             "hp": 70,
@@ -5126,9 +5088,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/255.png",
         "attacks": [
-            "Ultimapoing",
-            "Griffe",
-            "Danse Lames"
+           
+            "Griffe"
+       
         ],
         "stats": {
             "hp": 45,
@@ -5148,8 +5110,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/256.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Feu",
-            "Poing Eclair"
+            "Poing Feu"
+            
         ],
         "stats": {
             "hp": 60,
@@ -5209,8 +5171,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/259.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
+            "Pistolet a O",
+            
             "Ecrasement"
         ],
         "stats": {
@@ -5230,8 +5192,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/260.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
+            "Seisme",
+            "Pistolet a O",
             "Ecrasement"
         ],
         "stats": {
@@ -5250,8 +5212,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/261.png",
         "attacks": [
-            "Jet de Sable",
-            "Coup d’Boule",
+
+            "Morsure",
             "Charge"
         ],
         "stats": {
@@ -5270,8 +5232,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/262.png",
         "attacks": [
-            "Jet de Sable",
-            "Coup d’Boule",
+            "Morsure",
             "Charge"
         ],
         "stats": {
@@ -5291,7 +5252,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/263.png",
         "attacks": [
             "Coupe",
-            "Jet de Sable",
+          
             "Coup d’Boule"
         ],
         "stats": {
@@ -5311,7 +5272,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/264.png",
         "attacks": [
             "Coupe",
-            "Jet de Sable",
+           
             "Coup d’Boule"
         ],
         "stats": {
@@ -5331,8 +5292,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/265.png",
         "attacks": [
             "Charge",
-            "Dard-Venin",
-            "Secretion"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 45,
@@ -5351,8 +5311,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/266.png",
         "attacks": [
             "Charge",
-            "Dard-Venin",
-            "Secretion"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 50,
@@ -5372,7 +5331,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/267.png",
         "attacks": [
             "Tornade",
-            "Cyclone",
+            
             "Charge"
         ],
         "stats": {
@@ -5392,8 +5351,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/268.png",
         "attacks": [
             "Charge",
-            "Dard-Venin",
-            "Secretion"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 50,
@@ -5413,7 +5371,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/269.png",
         "attacks": [
             "Tornade",
-            "Cyclone",
+            
             "Charge"
         ],
         "stats": {
@@ -5433,9 +5391,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/270.png",
         "attacks": [
-            "Danse Lames",
+           
             "Coup d’Boule",
-            "Plaquage"
+            "Plaquage",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 40,
@@ -5454,9 +5413,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/271.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 60,
@@ -5475,8 +5433,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/272.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
+            "Canon Graine",
+            "Pistolet a O",
             "Poing Glace"
         ],
         "stats": {
@@ -5496,7 +5454,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/273.png",
         "attacks": [
             "Coupe-Vent",
-            "Danse Lames",
+           
             "Coup d’Boule"
         ],
         "stats": {
@@ -5517,8 +5475,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/274.png",
         "attacks": [
             "Ecras’Face",
-            "Coupe-Vent",
-            "Danse Lames"
+            "Coupe-Vent"
+        
         ],
         "stats": {
             "hp": 70,
@@ -5538,7 +5496,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/275.png",
         "attacks": [
             "Ecras’Face",
-            "Danse Lames",
+            
             "Coupe"
         ],
         "stats": {
@@ -5558,9 +5516,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/276.png",
         "attacks": [
-            "Cru-Ailes",
-            "Cyclone",
-            "Vol"
+            "Cru-Aile",
+            "Charge"
         ],
         "stats": {
             "hp": 40,
@@ -5579,9 +5536,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/277.png",
         "attacks": [
-            "Cru-Ailes",
-            "Vol",
-            "Damocles"
+            "Cru-Aile",
+           
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -5601,8 +5558,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/278.png",
         "attacks": [
             "Tornade",
-            "Cru-Ailes",
-            "Vol"
+            "Cru-Aile",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 40,
@@ -5621,8 +5578,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/279.png",
         "attacks": [
-            "Cru-Ailes",
-            "Vol",
+            "Cru-Aile",
+            "Pistolet a O",
+         
             "Plaquage"
         ],
         "stats": {
@@ -5642,9 +5600,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/280.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Pouvoir Lunaire",
+            "Psyko"
         ],
         "stats": {
             "hp": 28,
@@ -5663,9 +5620,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/281.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Pouvoir Lunaire",
+            "Psyko"
         ],
         "stats": {
             "hp": 38,
@@ -5684,9 +5640,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/282.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Pouvoir Lunaire",
+            "Psyko"
         ],
         "stats": {
             "hp": 68,
@@ -5705,9 +5660,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/283.png",
         "attacks": [
-            "Belier",
-            "Damocles",
-            "Brume"
+          
+            "Pistolet a O",
+            "Charge"
         ],
         "stats": {
             "hp": 40,
@@ -5727,8 +5682,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/284.png",
         "attacks": [
             "Tornade",
-            "Cyclone",
-            "Belier"
+            
+            "Charge"
         ],
         "stats": {
             "hp": 70,
@@ -5746,7 +5701,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/285.png",
         "attacks": [
-            "Danse Lames",
+           
             "Coup d’Boule",
             "Charge"
         ],
@@ -5769,7 +5724,8 @@
         "attacks": [
             "Ultimapoing",
             "Poing Eclair",
-            "Danse Lames"
+            "Canon Graine"
+          
         ],
         "stats": {
             "hp": 60,
@@ -5787,9 +5743,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/287.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -5808,8 +5762,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/288.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 80,
@@ -5828,8 +5781,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/289.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 150,
@@ -5870,7 +5822,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/291.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
+            
             "Coupe"
         ],
         "stats": {
@@ -5891,8 +5843,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/292.png",
         "attacks": [
             "Griffe",
-            "Coupe",
-            "Jet de Sable"
+            "Coupe"
         ],
         "stats": {
             "hp": 1,
@@ -5911,8 +5862,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/293.png",
         "attacks": [
             "Ecras’Face",
-            "Ultimapoing",
-            "Poing Feu"
+            "Charge"
         ],
         "stats": {
             "hp": 64,
@@ -5932,7 +5882,7 @@
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
-            "Poing Feu"
+            "Charge"
         ],
         "stats": {
             "hp": 84,
@@ -5952,7 +5902,7 @@
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
-            "Poing Feu"
+            "Charge"
         ],
         "stats": {
             "hp": 104,
@@ -6013,7 +5963,8 @@
         "attacks": [
             "Souplesse",
             "Coup d’Boule",
-            "Plaquage"
+            "Plaquage",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 50,
@@ -6031,9 +5982,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/299.png",
         "attacks": [
-            "Poing Feu",
-            "Poing Glace",
-            "Poing Eclair"
+            "Charge",
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 30,
@@ -6092,9 +6042,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/302.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 50,
@@ -6113,9 +6061,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/303.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
-            "Poing Eclair"
+            "Charge",
+            "Marelle"
         ],
         "stats": {
             "hp": 50,
@@ -6176,9 +6123,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/306.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Jet de Pierre",
+            "Charge",
+            "Queue de fer"
         ],
         "stats": {
             "hp": 70,
@@ -6260,7 +6207,8 @@
         "attacks": [
             "Coup d’Boule",
             "Charge",
-            "Plaquage"
+            "Plaquage",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 70,
@@ -6278,9 +6226,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/311.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Eclair",
-            "Ultimawashi"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -6298,9 +6244,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/312.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Eclair",
-            "Ultimawashi"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -6318,9 +6262,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/313.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
-            "Poing Eclair"
+            "Charge"
         ],
         "stats": {
             "hp": 65,
@@ -6338,9 +6280,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/314.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Glace",
-            "Poing Eclair"
+            "Charge"
         ],
         "stats": {
             "hp": 65,
@@ -6359,9 +6299,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/315.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Plaquage"
+            
+            "Dard-Venin",
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 50,
@@ -6379,9 +6319,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/316.png",
         "attacks": [
-            "Ecras’Face",
-            "Poing Feu",
-            "Poing Glace"
+            "Ecras’Face"
         ],
         "stats": {
             "hp": 70,
@@ -6399,9 +6337,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/317.png",
         "attacks": [
-            "Ecras’Face",
-            "Poing Feu",
-            "Poing Glace"
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 100,
@@ -6420,9 +6356,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/318.png",
         "attacks": [
-            "Belier",
-            "Mania",
-            "Damocles"
+            "Charge",
+            "Pistolet a O",
+            "Morsure"
         ],
         "stats": {
             "hp": 45,
@@ -6441,9 +6377,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/319.png",
         "attacks": [
-            "Belier",
-            "Damocles",
-            "Groz’Yeux"
+            "Charge",
+            "Pistolet a O",
+            "Morsure"
         ],
         "stats": {
             "hp": 70,
@@ -6461,9 +6397,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/320.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Mania"
+            "Charge",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 130,
@@ -6481,9 +6416,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/321.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Damocles"
+            "Charge",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 170,
@@ -6525,7 +6459,8 @@
         "attacks": [
             "Coup d’Boule",
             "Charge",
-            "Plaquage"
+            "Plaquage",
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 70,
@@ -6544,8 +6479,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/324.png",
         "attacks": [
             "Coup d’Boule",
+            "Charge",
             "Plaquage",
-            "Belier"
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 70,
@@ -6563,9 +6499,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/325.png",
         "attacks": [
-            "Cyclone",
-            "Coup d’Boule",
-            "Plaquage"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -6583,9 +6517,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/326.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 80,
@@ -6603,9 +6535,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/327.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Charge"
         ],
         "stats": {
             "hp": 60,
@@ -6623,9 +6553,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/328.png",
         "attacks": [
-            "Tornade",
-            "Jet de Sable",
-            "Coup d’Boule"
+
+            "Charge",
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 45,
@@ -6644,9 +6574,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/329.png",
         "attacks": [
-            "Tornade",
-            "Vol",
-            "Jet de Sable"
+          
+            
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 50,
@@ -6665,9 +6595,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/330.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Eclair"
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 80,
@@ -6685,9 +6613,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/331.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Eclair",
-            "Danse Lames"
+      
+            "Fouet Lianes"
+        
         ],
         "stats": {
             "hp": 50,
@@ -6706,9 +6634,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/332.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Eclair",
-            "Danse Lames"
+            "Fouet Lianes"
+            
         ],
         "stats": {
             "hp": 70,
@@ -6727,9 +6654,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/333.png",
         "attacks": [
-            "Vol",
-            "Furie",
-            "Plaquage"
+            
+            "Chage",
+            "Cru-Aile"
         ],
         "stats": {
             "hp": 45,
@@ -6748,9 +6675,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png",
         "attacks": [
-            "Vol",
-            "Furie",
-            "Plaquage"
+        
+            "Chage",
+            "Cru-Aile"
         ],
         "stats": {
             "hp": 75,
@@ -6768,9 +6695,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/335.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Tranche",
+            
+            "Charge"
         ],
         "stats": {
             "hp": 73,
@@ -6788,9 +6715,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/336.png",
         "attacks": [
-            "Danse Lames",
-            "Etreinte",
-            "Coup d’Boule"
+         
+         
+            "Chage",
+            "Dard-Venin"
         ],
         "stats": {
             "hp": 73,
@@ -6810,8 +6738,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/337.png",
         "attacks": [
             "Charge",
-            "Plaquage",
-            "Damocles"
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 90,
@@ -6830,9 +6757,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/338.png",
         "attacks": [
-            "Danse Lames",
+         
             "Charge",
-            "Plaquage"
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 90,
@@ -6893,8 +6820,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/341.png",
         "attacks": [
             "Force Poigne",
-            "Guillotine",
-            "Danse Lames"
+            "Guillotine"
+     
         ],
         "stats": {
             "hp": 43,
@@ -6914,8 +6841,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/342.png",
         "attacks": [
             "Force Poigne",
-            "Guillotine",
-            "Danse Lames"
+            "Guillotine"
         ],
         "stats": {
             "hp": 63,
@@ -6976,8 +6902,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/345.png",
         "attacks": [
-            "Danse Lames",
-            "Etreinte",
+       
+            
             "Plaquage"
         ],
         "stats": {
@@ -6997,8 +6923,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/346.png",
         "attacks": [
-            "Danse Lames",
-            "Etreinte",
+            
+     
             "Coup d’Boule"
         ],
         "stats": {
@@ -7019,7 +6945,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/347.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
+          
             "Coupe"
         ],
         "stats": {
@@ -7040,7 +6966,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/348.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
+           
             "Coupe"
         ],
         "stats": {
@@ -7060,8 +6986,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/349.png",
         "attacks": [
             "Charge",
-            "Damocles",
-            "Brume"
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 20,
@@ -7079,9 +7004,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/350.png",
         "attacks": [
-            "Etreinte",
             "Charge",
-            "Plaquage"
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 95,
@@ -7159,7 +7083,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/354.png",
         "attacks": [
-            "Danse Lames",
+          
             "Coup d’Boule",
             "Plaquage"
         ],
@@ -7179,9 +7103,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/355.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Damocles"
+            "Balle Ombre",
+            "Frappe Psy"
         ],
         "stats": {
             "hp": 20,
@@ -7199,9 +7122,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/356.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Balle Ombre",
+            "Frappe Psy"
         ],
         "stats": {
             "hp": 40,
@@ -7221,7 +7143,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/357.png",
         "attacks": [
             "Coupe-Vent",
-            "Danse Lames",
+            
             "Coupe"
         ],
         "stats": {
@@ -7240,9 +7162,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/358.png",
         "attacks": [
-            "Etreinte",
-            "Charge",
-            "Ligotage"
+
+            "Charge"
+         
         ],
         "stats": {
             "hp": 75,
@@ -7262,7 +7184,8 @@
         "attacks": [
             "Griffe",
             "Coupe-Vent",
-            "Danse Lames"
+            "Morsure"
+           
         ],
         "stats": {
             "hp": 65,
@@ -7280,9 +7203,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/360.png",
         "attacks": [
-            "Riposte",
-            "Amnesie",
-            "Trempette"
+            "Frappe Psy"
+         
         ],
         "stats": {
             "hp": 95,
@@ -7320,9 +7242,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/362.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Belier"
+            "Laser Glace"
         ],
         "stats": {
             "hp": 80,
@@ -7341,9 +7261,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/363.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Damocles"
+            "Laser Glace",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 70,
@@ -7362,9 +7281,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/364.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Damocles"
+            "Laser Glace",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 90,
@@ -7383,9 +7301,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/365.png",
         "attacks": [
-            "Danse Lames",
-            "Coup d’Boule",
-            "Plaquage"
+            "Laser Glace",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 110,
@@ -7404,8 +7321,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/366.png",
         "attacks": [
             "Plaquage",
-            "Damocles",
-            "Ultrason"
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 35,
@@ -7423,9 +7339,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/367.png",
         "attacks": [
-            "Etreinte",
-            "Plaquage",
-            "Damocles"
+            "Pistolet a O",
+            "Plaquage"
         ],
         "stats": {
             "hp": 55,
@@ -7443,9 +7358,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/368.png",
         "attacks": [
-            "Etreinte",
-            "Plaquage",
-            "Damocles"
+            "Pistolet a O",
+            "Plaquage"
         ],
         "stats": {
             "hp": 55,
@@ -7464,9 +7378,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/369.png",
         "attacks": [
-            "Coup d’Boule",
-            "Charge",
-            "Plaquage"
+            "Pistolet a O",
+            "Plaquage",
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 100,
@@ -7485,8 +7399,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/370.png",
         "attacks": [
             "Charge",
-            "Belier",
-            "Damocles"
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 43,
@@ -7505,8 +7418,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/371.png",
         "attacks": [
             "Coupe",
-            "Coup d’Boule",
-            "Plaquage"
+            "Dracochoc",
+            "Morsure"
         ],
         "stats": {
             "hp": 45,
@@ -7525,8 +7438,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/372.png",
         "attacks": [
             "Coupe",
-            "Coup d’Boule",
-            "Plaquage"
+            "Dracochoc",
+            "Morsure",
+            "Cru-Aile"
         ],
         "stats": {
             "hp": 65,
@@ -7611,7 +7525,7 @@
         "attacks": [
             "Poing Glace",
             "Poing Eclair",
-            "Coupe"
+            "Frappe Psy"
         ],
         "stats": {
             "hp": 80,
@@ -7631,7 +7545,7 @@
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
-            "Poing Glace"
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 80,
@@ -7651,7 +7565,7 @@
         "attacks": [
             "Ultimapoing",
             "Poing Glace",
-            "Poing Eclair"
+            "Laser Glace"
         ],
         "stats": {
             "hp": 80,
@@ -7670,7 +7584,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/379.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Glace",
+            "Queue de fer",
             "Poing Eclair"
         ],
         "stats": {
@@ -7690,9 +7604,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/380.png",
         "attacks": [
-            "Coupe",
-            "Vol",
-            "Plaquage"
+            "Frappe Psy",
+            
+            "Dracochoc"
         ],
         "stats": {
             "hp": 80,
@@ -7711,9 +7625,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/381.png",
         "attacks": [
-            "Coupe",
-            "Vol",
-            "Plaquage"
+            "Frappe Psy",
+            
+            "Dracochoc"
         ],
         "stats": {
             "hp": 80,
@@ -7731,9 +7645,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Belier"
+            "Giga Impact",
+            "Laser Glace",
+            "Surf",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 100,
@@ -7751,9 +7666,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/383.png",
         "attacks": [
-            "Ultimapoing",
+            "Cannicule",
             "Poing Feu",
-            "Poing Eclair"
+            "Seisme",
+            "Lame de Roc"
         ],
         "stats": {
             "hp": 100,
@@ -7772,9 +7688,11 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/384.png",
         "attacks": [
-            "Danse Lames",
-            "Vol",
-            "Etreinte"
+            "Vent Glace",
+            "Vent Violent",
+            "Seisme",
+            
+            "Dracochoc"
         ],
         "stats": {
             "hp": 105,
@@ -7793,8 +7711,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/385.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
+            "Fouet Lianes",
+            "Frappe Psy",
             "Poing Glace"
         ],
         "stats": {
@@ -7815,7 +7733,8 @@
         "attacks": [
             "Poing Feu",
             "Poing Glace",
-            "Poing Eclair"
+            "Frappe Psy",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 50,
@@ -7825,8 +7744,2177 @@
             "special_defense": 50,
             "speed": 150
         }
-    } 
+    },
 
+    {
+        "name": "Tortipouss",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/387.png",
+        "attacks": [
+            
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 68,
+            "defense": 64,
+            "special_attack": 45,
+            "special_defense": 55,
+            "speed": 31
+        }
+    },
+    {
+        "name": "Boskara",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/388.png",
+        "attacks": [
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 89,
+            "defense": 85,
+            "special_attack": 55,
+            "special_defense": 65,
+            "speed": 36
+        }
+    },
+    {
+        "name": "Torterra",
+        "type": [
+            "plante",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/389.png",
+        "attacks": [
+            "Tempete Verte",
+            "Morsure",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 95,
+            "attack": 109,
+            "defense": 105,
+            "special_attack": 75,
+            "special_defense": 85,
+            "speed": 56
+        }
+    },
+    {
+        "name": "Ouisticram",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/390.png",
+        "attacks": [
+            "Flammeche",
+            "Griffe"
+        ],
+        "stats": {
+            "hp": 44,
+            "attack": 58,
+            "defense": 44,
+            "special_attack": 58,
+            "special_defense": 44,
+            "speed": 61
+        }
+    },
+    {
+        "name": "Chimpenfeu",
+        "type": [
+            "feu",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/391.png",
+        "attacks": [
+            "Flammeche",
+            "Griffe"
+        ],
+        "stats": {
+            "hp": 64,
+            "attack": 78,
+            "defense": 52,
+            "special_attack": 78,
+            "special_defense": 52,
+            "speed": 81
+        }
+    },
+    {
+        "name": "Simiabraz",
+        "type": [
+            "feu",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/392.png",
+        "attacks": [
+            "Flammeche",
+            "Griffe",
+            "Poing Feu",
+            "Close Combat"
+        ],
+        "stats": {
+            "hp": 76,
+            "attack": 104,
+            "defense": 71,
+            "special_attack": 104,
+            "special_defense": 71,
+            "speed": 108
+        }
+    },
+    {
+        "name": "Tiplouf",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/393.png",
+        "attacks": [
+            "Pistolet à O",
+            "Coupe"
+        ],
+        "stats": {
+            "hp": 53,
+            "attack": 51,
+            "defense": 53,
+            "special_attack": 61,
+            "special_defense": 56,
+            "speed": 40
+        }
+    },
+    {
+        "name": "Prinplouf",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/394.png",
+        "attacks": [
+            "Pistolet à O",
+            "Coupe"
+        ],
+        "stats": {
+            "hp": 64,
+            "attack": 66,
+            "defense": 68,
+            "special_attack": 81,
+            "special_defense": 76,
+            "speed": 50
+        }
+    },
+    {
+        "name": "Pingoléon",
+        "type": [
+            "eau",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/395.png",
+        "attacks": [
+            "Pistolet à O",
+            "Griffe Acier",
+            "Surf",
+            "Coupe"
+        ],
+        "stats": {
+            "hp": 84,
+            "attack": 86,
+            "defense": 88,
+            "special_attack": 111,
+            "special_defense": 101,
+            "speed": 60
+        }
+    },
+    {
+        "name": "Étourmi",
+        "type": [
+            "normal",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/396.png",
+        "attacks": [
+            "Coupe",
+            "Cru-Ailes"
+            
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 55,
+            "defense": 30,
+            "special_attack": 30,
+            "special_defense": 30,
+            "speed": 60
+        }
+    },
+    {
+        "name": "Étourvol",
+        "type": [
+            "normal",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/397.png",
+        "attacks": [
+            "Coupe",
+            "Cru-Ailes"
+            
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 75,
+            "defense": 50,
+            "special_attack": 40,
+            "special_defense": 40,
+            "speed": 80
+        }
+    },
+    {
+        "name": "Étouraptor",
+        "type": [
+            "normal",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/398.png",
+        "attacks": [
+            "Coupe",
+            "Cru-Ailes",
+            
+            "Close Combat"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 120,
+            "defense": 70,
+            "special_attack": 50,
+            "special_defense": 60,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Keunotor",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/399.png",
+        "attacks": [
+            "Charge"
+        ],
+        "stats": {
+            "hp": 59,
+            "attack": 45,
+            "defense": 40,
+            "special_attack": 35,
+            "special_defense": 40,
+            "speed": 31
+        }
+    },
+    {
+        "name": "Castorno",
+        "type": [
+            "normal",
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/400.png",
+        "attacks": [
+            "Charge",
+            "Surf"
+        ],
+        "stats": {
+            "hp": 79,
+            "attack": 85,
+            "defense": 60,
+            "special_attack": 55,
+            "special_defense": 60,
+            "speed": 71
+        }
+    },
+    {
+        "name": "Crikzik",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/401.png",
+        "attacks": [
+            "Écras’Face",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 37,
+            "attack": 25,
+            "defense": 41,
+            "special_attack": 25,
+            "special_defense": 41,
+            "speed": 25
+        }
+    },
+    {
+        "name": "Mélokrik",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/402.png",
+        "attacks": [
+            
+            "Piqure",
+            "Coupe"
+        ],
+        "stats": {
+            "hp": 77,
+            "attack": 85,
+            "defense": 51,
+            "special_attack": 55,
+            "special_defense": 51,
+            "speed": 65
+        }
+    },
+    {
+        "name": "Lixy",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/403.png",
+        "attacks": [
+            "Charge",
+            "Eclair"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 65,
+            "defense": 34,
+            "special_attack": 40,
+            "special_defense": 34,
+            "speed": 45
+        }
+    },
+    {
+        "name": "Luxio",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/404.png",
+        "attacks": [
+            "Charge",
+            "Eclair"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 85,
+            "defense": 49,
+            "special_attack": 60,
+            "special_defense": 49,
+            "speed": 60
+        }
+    },
+    {
+        "name": "Luxray",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/405.png",
+        "attacks": [
+            "Croc Eclair",
+            "Griffe Acier",
+            "Morsure",
+            "Tonnerre"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 120,
+            "defense": 79,
+            "special_attack": 95,
+            "special_defense": 79,
+            "speed": 70
+        }
+    },
+    {
+        "name": "Rozbouton",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/406.png",
+        "attacks": [
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 30,
+            "defense": 35,
+            "special_attack": 50,
+            "special_defense": 70,
+            "speed": 55
+        }
+    },
+    {
+        "name": "Roserade",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/407.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Bombe-Beurk",
+            "Eclat Magique"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 70,
+            "defense": 65,
+            "special_attack": 125,
+            "special_defense": 105,
+            "speed": 90
+        }
+    },
+    {
+        "name": "Kranidos",
+        "type": [
+            "roche"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/408.png",
+        "attacks": [
+            "Eboulement",
+            "Charge",
+            "Coup d'Boule"
+        ],
+        "stats": {
+            "hp": 67,
+            "attack": 125,
+            "defense": 40,
+            "special_attack": 30,
+            "special_defense": 30,
+            "speed": 58
+        }
+    },
+    {
+        "name": "Charkos",
+        "type": [
+            "roche"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/409.png",
+        "attacks": [
+            "Eboulement",
+            "Charge",
+            "Coup d'Boule"
+        ],
+        "stats": {
+            "hp": 97,
+            "attack": 165,
+            "defense": 60,
+            "special_attack": 65,
+            "special_defense": 50,
+            "speed": 58
+        }
+    },
+    {
+        "name": "Dinoclier",
+        "type": [
+            "roche",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/410.png",
+        "attacks": [
+            "Eboulement",
+            "Charge",
+            "Coup d'Boule"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 42,
+            "defense": 118,
+            "special_attack": 42,
+            "special_defense": 88,
+            "speed": 30
+        }
+    },
+    {
+        "name": "Bastiodon",
+        "type": [
+            "roche",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/411.png",
+        "attacks": [
+            "Eboulement",
+            "Charge",
+            "Coup d'Boule"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 52,
+            "defense": 168,
+            "special_attack": 47,
+            "special_defense": 138,
+            "speed": 30
+        }
+    },
+    {
+        "name": "Cheniti",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/412.png",
+        "attacks": [
+            "Charge",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 29,
+            "defense": 45,
+            "special_attack": 29,
+            "special_defense": 45,
+            "speed": 36
+        }
+    },
+    {
+        "name": "Cheniselle",
+        "type": [
+            "insecte",
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/413.png",
+        "attacks": [
+            "Charge",
+            "Piqure"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 59,
+            "defense": 85,
+            "special_attack": 79,
+            "special_defense": 105,
+            "speed": 36
+        }
+    },
+    {
+        "name": "Papilord",
+        "type": [
+            "insecte",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/414.png",
+        "attacks": [
+            "Vent Violent",
+            "Bourdon",
+            "Rafale Psy"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 94,
+            "defense": 50,
+            "special_attack": 94,
+            "special_defense": 50,
+            "speed": 66
+        }
+    },
+    {
+        "name": "Apitrini",
+        "type": [
+            "insecte",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/415.png",
+        "attacks": [
+            "Tornade",
+            "Bourdon",
+            "Meteores"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 30,
+            "defense": 42,
+            "special_attack": 30,
+            "special_defense": 42,
+            "speed": 70
+        }
+    },
+    {
+        "name": "Apireine",
+        "type": [
+            "insecte",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/416.png",
+        "attacks": [
+            "Tornade",
+            "Bourdon",
+            "Meteores"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 80,
+            "defense": 102,
+            "special_attack": 80,
+            "special_defense": 102,
+            "speed": 40
+        }
+    },
+    {
+        "name": "Pachirisu",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/417.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+            
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 45,
+            "defense": 70,
+            "special_attack": 45,
+            "special_defense": 90,
+            "speed": 95
+        }
+    },
+    {
+        "name": "Mustébouée",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/418.png",
+        "attacks": [
+            "Charge",
+            "Surf"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 65,
+            "defense": 35,
+            "special_attack": 60,
+            "special_defense": 30,
+            "speed": 85
+        }
+    },
+    {
+        "name": "Mustéflott",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/419.png",
+        "attacks": [
+            "Charge",
+            "Surf"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 105,
+            "defense": 55,
+            "special_attack": 85,
+            "special_defense": 50,
+            "speed": 115
+        }
+    },
+    {
+        "name": "Ceribou",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/420.png",
+        "attacks": [
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 35,
+            "defense": 45,
+            "special_attack": 62,
+            "special_defense": 53,
+            "speed": 35
+        }
+    },
+    {
+        "name": "Ceriflor",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/421.png",
+        "attacks": [
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 60,
+            "defense": 70,
+            "special_attack": 87,
+            "special_defense": 78,
+            "speed": 85
+        }
+    },
+    {
+        "name": "Sancoki",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/422.png",
+        "attacks": [
+            "Surf",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 76,
+            "attack": 48,
+            "defense": 48,
+            "special_attack": 57,
+            "special_defense": 62,
+            "speed": 34
+        }
+    },
+    {
+        "name": "Tritosor",
+        "type": [
+            "eau",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/423.png",
+        "attacks": [
+            "Surf",
+            "Charge",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 111,
+            "attack": 83,
+            "defense": 68,
+            "special_attack": 92,
+            "special_defense": 82,
+            "speed": 39
+        }
+    },
+    {
+        "name": "Capidextre",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/424.png",
+        "attacks": [
+            "Poing Feu",
+            "Poing Glace",
+            "Poing Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 100,
+            "defense": 66,
+            "special_attack": 60,
+            "special_defense": 66,
+            "speed": 115
+        }
+    },
+    {
+        "name": "Baudrive",
+        "type": [
+            "spectre",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/425.png",
+        "attacks": [
+
+            "Tornade",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 50,
+            "defense": 34,
+            "special_attack": 60,
+            "special_defense": 44,
+            "speed": 70
+        }
+    },
+    {
+        "name": "Grodrive",
+        "type": [
+            "spectre",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/426.png",
+        "attacks": [
+            "Coupe",
+            "Tornade",
+            "Vol"
+        ],
+        "stats": {
+            "hp": 150,
+            "attack": 80,
+            "defense": 44,
+            "special_attack": 90,
+            "special_defense": 54,
+            "speed": 80
+        }
+    },
+    {
+        "name": "Laporeille",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/427.png",
+        "attacks": [
+            "Écras’Face",
+            "Ultimapoing",
+            "Poing Feu"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 66,
+            "defense": 44,
+            "special_attack": 44,
+            "special_defense": 56,
+            "speed": 85
+        }
+    },
+    {
+        "name": "Lockpin",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/428.png",
+        "attacks": [
+            "Écras’Face",
+            "Ultimapoing",
+            "Poing Feu"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 76,
+            "defense": 84,
+            "special_attack": 54,
+            "special_defense": 96,
+            "speed": 105
+        }
+    },
+    {
+        "name": "Magirêve",
+        "type": [
+            "spectre"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/429.png",
+        "attacks": [
+            "Balle Ombre",
+         
+            "Rafale Psy"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 60,
+            "defense": 60,
+            "special_attack": 105,
+            "special_defense": 105,
+            "speed": 105
+        }
+    },
+    {
+        "name": "Corboss",
+        "type": [
+            "tenebres",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/430.png",
+        "attacks": [
+            "Tornade",
+            "Cru-Ailes",
+            "Tranche-Nuit"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 125,
+            "defense": 52,
+            "special_attack": 105,
+            "special_defense": 52,
+            "speed": 71
+        }
+    },
+    {
+        "name": "Chaglam",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/431.png",
+        "attacks": [
+            "Griffe",
+            "Coupe"
+        ],
+        "stats": {
+            "hp": 49,
+            "attack": 55,
+            "defense": 42,
+            "special_attack": 42,
+            "special_defense": 37,
+            "speed": 85
+        }
+    },
+    {
+        "name": "Chaffreux",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/432.png",
+        "attacks": [
+            "Griffe",
+            "Coupe"
+        ],
+        "stats": {
+            "hp": 71,
+            "attack": 82,
+            "defense": 64,
+            "special_attack": 64,
+            "special_defense": 59,
+            "speed": 112
+        }
+    },
+    {
+        "name": "Korillon",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/433.png",
+        "attacks": [
+        
+            "Charge",
+            "Rafale Psy"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 30,
+            "defense": 50,
+            "special_attack": 65,
+            "special_defense": 50,
+            "speed": 45
+        }
+    },
+    {
+        "name": "Moufouette",
+        "type": [
+            "poison",
+            "tenebres"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/434.png",
+        "attacks": [
+            "Griffe",
+            "Bombe-Beurk",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 63,
+            "attack": 63,
+            "defense": 47,
+            "special_attack": 41,
+            "special_defense": 41,
+            "speed": 74
+        }
+    },
+    {
+        "name": "Moufflair",
+        "type": [
+            "poison",
+            "tenebres"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/435.png",
+        "attacks": [
+            "Griffe",
+            "Bombe-Beurk",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 103,
+            "attack": 93,
+            "defense": 67,
+            "special_attack": 71,
+            "special_defense": 61,
+            "speed": 84
+        }
+    },
+    {
+        "name": "Archéomire",
+        "type": [
+            "acier",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/436.png",
+        "attacks": [
+            "Charge",
+            "Rafale Psy"
+        ],
+        "stats": {
+            "hp": 57,
+            "attack": 24,
+            "defense": 86,
+            "special_attack": 24,
+            "special_defense": 86,
+            "speed": 23
+        }
+    },
+    {
+        "name": "Archéodong",
+        "type": [
+            "acier",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/437.png",
+        "attacks": [
+            "Charge",
+            "Rafale Psy"
+        ],
+        "stats": {
+            "hp": 67,
+            "attack": 89,
+            "defense": 116,
+            "special_attack": 79,
+            "special_defense": 116,
+            "speed": 33
+        }
+    },
+    {
+        "name": "Manzaï",
+        "type": [
+            "roche"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/438.png",
+        "attacks": [
+        
+            "Coup d’Boule",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 80,
+            "defense": 95,
+            "special_attack": 10,
+            "special_defense": 45,
+            "speed": 10
+        }
+    },
+    {
+        "name": "Mime Jr.",
+        "type": [
+            "psy",
+            "fee"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/439.png",
+        "attacks": [
+            "Écras’Face",
+            "Rafale Psy",
+            "Eclat Magique"
+        ],
+        "stats": {
+            "hp": 20,
+            "attack": 25,
+            "defense": 45,
+            "special_attack": 70,
+            "special_defense": 90,
+            "speed": 60
+        }
+    },
+    {
+        "name": "Ptiravi",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/440.png",
+        "attacks": [
+            "Écras’Face",
+       
+            "Charge"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 5,
+            "defense": 5,
+            "special_attack": 15,
+            "special_defense": 65,
+            "speed": 30
+        }
+    },
+    {
+        "name": "Pijako",
+        "type": [
+            "normal",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/441.png",
+        "attacks": [
+            "Charge",
+            "Cru-Ailes"
+        ],
+        "stats": {
+            "hp": 76,
+            "attack": 65,
+            "defense": 45,
+            "special_attack": 92,
+            "special_defense": 42,
+            "speed": 91
+        }
+    },
+    {
+        "name": "Spiritomb",
+        "type": [
+            "spectre",
+            "tenebres"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/442.png",
+        "attacks": [
+            "Vibrobscur",
+            "Balle Ombre",
+            "Rafale Psy"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 92,
+            "defense": 108,
+            "special_attack": 92,
+            "special_defense": 108,
+            "speed": 35
+        }
+    },
+    {
+        "name": "Griknot",
+        "type": [
+            "dragon",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/443.png",
+        "attacks": [
+            
+            "Coupe",
+            "Dracochoc"
+        ],
+        "stats": {
+            "hp": 58,
+            "attack": 70,
+            "defense": 45,
+            "special_attack": 40,
+            "special_defense": 45,
+            "speed": 42
+        }
+    },
+    {
+        "name": "Carmache",
+        "type": [
+            "dragon",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/444.png",
+        "attacks": [
+            "Coupe",
+            "Dracochoc"
+        ],
+        "stats": {
+            "hp": 68,
+            "attack": 90,
+            "defense": 65,
+            "special_attack": 50,
+            "special_defense": 55,
+            "speed": 82
+        }
+    },
+    {
+        "name": "Carchacrok",
+        "type": [
+            "dragon",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/445.png",
+        "attacks": [
+            "Coupe",
+            "Dracochoc",
+            "Dracogriffe",
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 108,
+            "attack": 130,
+            "defense": 95,
+            "special_attack": 80,
+            "special_defense": 85,
+            "speed": 102
+        }
+    },
+    {
+        "name": "Goinfrex",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/446.png",
+        "attacks": [
+            "Charge"
+        ],
+        "stats": {
+            "hp": 135,
+            "attack": 85,
+            "defense": 40,
+            "special_attack": 40,
+            "special_defense": 85,
+            "speed": 5
+        }
+    },
+    {
+        "name": "Riolu",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/447.png",
+        "attacks": [
+            "Ultimapoing",
+            "Close Combat",
+            "Griffe Acier"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 70,
+            "defense": 40,
+            "special_attack": 35,
+            "special_defense": 40,
+            "speed": 60
+        }
+    },
+    {
+        "name": "Lucario",
+        "type": [
+            "combat",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png",
+        "attacks": [
+            "Ultimapoing",
+            "Close Combat",
+            "Griffe Acier"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 110,
+            "defense": 70,
+            "special_attack": 115,
+            "special_defense": 70,
+            "speed": 90
+        }
+    },
+    {
+        "name": "Hippopotas",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/449.png",
+        "attacks": [
+            "Seisme",
+            "Coup d’Boule"
+        ],
+        "stats": {
+            "hp": 68,
+            "attack": 72,
+            "defense": 78,
+            "special_attack": 38,
+            "special_defense": 42,
+            "speed": 32
+        }
+    },
+    {
+        "name": "Hippodocus",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/450.png",
+        "attacks": [
+            "Seisme",
+            "Coup d’Boule"
+        ],
+        "stats": {
+            "hp": 108,
+            "attack": 112,
+            "defense": 118,
+            "special_attack": 68,
+            "special_defense": 72,
+            "speed": 47
+        }
+    },
+    {
+        "name": "Rapion",
+        "type": [
+            "poison",
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/451.png",
+        "attacks": [
+            "Dard-Venin",
+            "Pique",
+            "Bombe-Beurk"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 50,
+            "defense": 90,
+            "special_attack": 30,
+            "special_defense": 55,
+            "speed": 65
+        }
+    },
+    {
+        "name": "Drascore",
+        "type": [
+            "poison",
+            "tenebres"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/452.png",
+        "attacks": [
+            "Dard-Venin",
+            "Pique",
+            "Bombe-Beurk"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 90,
+            "defense": 110,
+            "special_attack": 60,
+            "special_defense": 75,
+            "speed": 95
+        }
+    },
+    {
+        "name": "Cradopaud",
+        "type": [
+            "poison",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/453.png",
+        "attacks": [
+            "Direct Toxik",
+            "Close Combat",
+            "Bombe-Beurk"
+        ],
+        "stats": {
+            "hp": 48,
+            "attack": 61,
+            "defense": 40,
+            "special_attack": 61,
+            "special_defense": 40,
+            "speed": 50
+        }
+    },
+    {
+        "name": "Coatox",
+        "type": [
+            "poison",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/454.png",
+        "attacks": [
+            "Direct Toxik",
+            "Close Combat",
+            "Bombe-Beurk"
+        ],
+        "stats": {
+            "hp": 83,
+            "attack": 106,
+            "defense": 65,
+            "special_attack": 86,
+            "special_defense": 65,
+            "speed": 85
+        }
+    },
+    {
+        "name": "Vortente",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/455.png",
+        "attacks": [
+            "Charge",
+            "Morsure",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 74,
+            "attack": 100,
+            "defense": 72,
+            "special_attack": 90,
+            "special_defense": 72,
+            "speed": 46
+        }
+    },
+    {
+        "name": "Écayon",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/456.png",
+        "attacks": [
+            "Pistolet à O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 49,
+            "attack": 49,
+            "defense": 56,
+            "special_attack": 49,
+            "special_defense": 61,
+            "speed": 66
+        }
+    },
+    {
+        "name": "Luminéon",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/457.png",
+        "attacks": [
+            "Pistolet à O",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 69,
+            "attack": 69,
+            "defense": 76,
+            "special_attack": 69,
+            "special_defense": 86,
+            "speed": 91
+        }
+    },
+    {
+        "name": "Babimanta",
+        "type": [
+            "eau",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/458.png",
+        "attacks": [
+            "Cru-Ailes",
+            "Pistolet à O",
+            "Coup d’Boule"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 20,
+            "defense": 50,
+            "special_attack": 60,
+            "special_defense": 120,
+            "speed": 50
+        }
+    },
+    {
+        "name": "Blizzi",
+        "type": [
+            "plante",
+            "glace"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/459.png",
+        "attacks": [
+            "Tempete Verte",
+            "Vent Glace"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 62,
+            "defense": 50,
+            "special_attack": 62,
+            "special_defense": 60,
+            "speed": 40
+        }
+    },
+    {
+        "name": "Blizzaroi",
+        "type": [
+            "plante",
+            "glace"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/460.png",
+        "attacks": [
+            "Tempete Verte",
+            "Vent Glace"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 92,
+            "defense": 75,
+            "special_attack": 92,
+            "special_defense": 85,
+            "speed": 60
+        }
+    },
+    {
+        "name": "Dimoret",
+        "type": [
+            "tenebres",
+            "glace"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/461.png",
+        "attacks": [
+            "Tranche-Nuit",
+            "Vent Glace",
+            "Griffe",
+            "Griffe Acier"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 120,
+            "defense": 65,
+            "special_attack": 45,
+            "special_defense": 85,
+            "speed": 125
+        }
+    },
+    {
+        "name": "Magnézone",
+        "type": [
+            "electrique",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/462.png",
+        "attacks": [
+            "Tonnerre",
+            "Luminocanon"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 70,
+            "defense": 115,
+            "special_attack": 130,
+            "special_defense": 90,
+            "speed": 60
+        }
+    },
+    {
+        "name": "Coudlangue",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/463.png",
+        "attacks": [
+            "Charge"
+            
+            
+        ],
+        "stats": {
+            "hp": 110,
+            "attack": 85,
+            "defense": 95,
+            "special_attack": 80,
+            "special_defense": 95,
+            "speed": 50
+        }
+    },
+    {
+        "name": "Rhinastoc",
+        "type": [
+            "sol",
+            "roche"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/464.png",
+        "attacks": [
+            "Seisme",
+            "Jet de Pierre"
+        ],
+        "stats": {
+            "hp": 115,
+            "attack": 140,
+            "defense": 130,
+            "special_attack": 55,
+            "special_defense": 55,
+            "speed": 40
+        }
+    },
+    {
+        "name": "Bouldeneu",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/465.png",
+        "attacks": [
+            "Fouet Lianes",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 100,
+            "defense": 125,
+            "special_attack": 110,
+            "special_defense": 50,
+            "speed": 50
+        }
+    },
+    {
+        "name": "Élekable",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/466.png",
+        "attacks": [
+            "Poing Eclair",
+            "Tonnerre",
+            "Giga Impact"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 123,
+            "defense": 67,
+            "special_attack": 95,
+            "special_defense": 85,
+            "speed": 95
+        }
+    },
+    {
+        "name": "Maganon",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/467.png",
+        "attacks": [
+            "Lance-Flammes",
+            "Poing Feu",
+            "Close Combat"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 95,
+            "defense": 67,
+            "special_attack": 125,
+            "special_defense": 95,
+            "speed": 83
+        }
+    },
+    {
+        "name": "Togekiss",
+        "type": [
+            "fee",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/468.png",
+        "attacks": [
+            "Écras’Face",
+    
+            "Cru-Ailes",
+            "Pouvoir Lunaire"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 50,
+            "defense": 95,
+            "special_attack": 120,
+            "special_defense": 115,
+            "speed": 80
+        }
+    },
+    {
+        "name": "Yanmega",
+        "type": [
+            "insecte",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/469.png",
+        "attacks": [
+           
+            "Bourdon",
+            "Cru-Ailes"
+        ],
+        "stats": {
+            "hp": 86,
+            "attack": 76,
+            "defense": 86,
+            "special_attack": 116,
+            "special_defense": 56,
+            "speed": 95
+        }
+    },
+    {
+        "name": "Phyllali",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png",
+        "attacks": [
+            "Tempete Verte",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 110,
+            "defense": 130,
+            "special_attack": 60,
+            "special_defense": 65,
+            "speed": 95
+        }
+    },
+    {
+        "name": "Givrali",
+        "type": [
+            "glace"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png",
+        "attacks": [
+            "Vent Glace",
+            "Charge",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 60,
+            "defense": 110,
+            "special_attack": 130,
+            "special_defense": 95,
+            "speed": 65
+        }
+    },
+    {
+        "name": "Scorvol",
+        "type": [
+            "sol",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/472.png",
+        "attacks": [
+            "Guillotine",
+            "Seisme",
+            "Coupe",
+            "Cru-Ailes"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 95,
+            "defense": 125,
+            "special_attack": 45,
+            "special_defense": 75,
+            "speed": 95
+        }
+    },
+    {
+        "name": "Mammochon",
+        "type": [
+            "glace",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/473.png",
+        "attacks": [
+            "Laser Glace",
+            "Seisme",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 110,
+            "attack": 130,
+            "defense": 80,
+            "special_attack": 70,
+            "special_defense": 60,
+            "speed": 80
+        }
+    },
+    {
+        "name": "Porygon-Z",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/474.png",
+        "attacks": [
+            "Charge"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 80,
+            "defense": 70,
+            "special_attack": 135,
+            "special_defense": 75,
+            "speed": 90
+        }
+    },
+    {
+        "name": "Gallame",
+        "type": [
+            "psy",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/475.png",
+        "attacks": [
+            "Ultimapoing",
+            "Rafale Psy",
+            "Poing Glace"
+        ],
+        "stats": {
+            "hp": 68,
+            "attack": 125,
+            "defense": 65,
+            "special_attack": 65,
+            "special_defense": 115,
+            "speed": 80
+        }
+    },
+    {
+        "name": "Tarinorme",
+        "type": [
+            "roche",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/476.png",
+        "attacks": [
+            "Eboulement",
+            "Charge",
+            "Luminocanon"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 55,
+            "defense": 145,
+            "special_attack": 75,
+            "special_defense": 150,
+            "speed": 40
+        }
+    },
+    {
+        "name": "Noctunoir",
+        "type": [
+            "spectre"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/477.png",
+        "attacks": [
+            "Poing Eclair",
+            "Poing Feu",
+            "Poing Glace",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 100,
+            "defense": 135,
+            "special_attack": 65,
+            "special_defense": 135,
+            "speed": 45
+        }
+    },
+    {
+        "name": "Momartik",
+        "type": [
+            "glace",
+            "spectre"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/478.png",
+        "attacks": [
+            "Poing Glace",
+            "Laser Glace",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 80,
+            "defense": 70,
+            "special_attack": 80,
+            "special_defense": 70,
+            "speed": 110
+        }
+    },
+    {
+        "name": "Motisma",
+        "type": [
+            "electrique",
+            "spectre"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
+        "attacks": [
+            "Eclair",
+            "Tonnerre",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 50,
+            "defense": 77,
+            "special_attack": 95,
+            "special_defense": 77,
+            "speed": 91
+        }
+    },
+    {
+        "name": "Créhelf",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/480.png",
+        "attacks": [
+            "Rafale Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 75,
+            "defense": 130,
+            "special_attack": 75,
+            "special_defense": 130,
+            "speed": 95
+        }
+    },
+    {
+        "name": "Créfollet",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/481.png",
+        "attacks": [
+            "Rafale Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 105,
+            "defense": 105,
+            "special_attack": 105,
+            "special_defense": 105,
+            "speed": 80
+        }
+    },
+    {
+        "name": "Créfadet",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/482.png",
+        "attacks": [
+            "Rafale Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 125,
+            "defense": 70,
+            "special_attack": 125,
+            "special_defense": 70,
+            "speed": 115
+        }
+    },
+    {
+        "name": "Dialga",
+        "type": [
+            "acier",
+            "dragon"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/483.png",
+        "attacks": [
+            "Hurle-Temps",
+            "Dracogriffe",
+            "Griffe Acier",
+            "Luminocanon"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 120,
+            "defense": 120,
+            "special_attack": 150,
+            "special_defense": 100,
+            "speed": 90
+        }
+    },
+    {
+        "name": "Palkia",
+        "type": [
+            "eau",
+            "dragon"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/484.png",
+        "attacks": [
+            "Hydrocanon",
+            "Spatio-Rift",
+            "Telluriforce",
+            "Aurasphere"
+
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 120,
+            "defense": 100,
+            "special_attack": 150,
+            "special_defense": 120,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Heatran",
+        "type": [
+            "feu",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/485.png",
+        "attacks": [
+            "Cannicule",
+            "Telluriforce",
+            "Lame de Roc",
+            "Griffe Acier"
+        ],
+        "stats": {
+            "hp": 91,
+            "attack": 90,
+            "defense": 106,
+            "special_attack": 130,
+            "special_defense": 106,
+            "speed": 77
+        }
+    },
+    {
+        "name": "Regigigas",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/486.png",
+        "attacks": [
+            "Giga Impact",
+            "Ultimapoing",
+            "Poing Feu",
+            "Vent Glace"
+        ],
+        "stats": {
+            "hp": 110,
+            "attack": 160,
+            "defense": 110,
+            "special_attack": 80,
+            "special_defense": 110,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Giratina",
+        "type": [
+            "spectre",
+            "dragon"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png",
+        "attacks": [
+            "Telluriforce",
+            "Dracogriffe",
+            "Balle Ombre",
+            "Aurasphere"
+        ],
+        "stats": {
+            "hp": 150,
+            "attack": 100,
+            "defense": 120,
+            "special_attack": 100,
+            "special_defense": 120,
+            "speed": 90
+        }
+    },
+    {
+        "name": "Cresselia",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/488.png",
+        "attacks": [
+            "Rafale Psy",
+            "Balle Ombre",
+            "Eclat Magique",
+            "Tonnerre"
+        ],
+        "stats": {
+            "hp": 120,
+            "attack": 70,
+            "defense": 110,
+            "special_attack": 75,
+            "special_defense": 120,
+            "speed": 85
+        }
+    },
+    {
+        "name": "Phione",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/489.png",
+        "attacks": [
+            "Surf",
+            "Vent Glace",
+            "Eclat Magique"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 80,
+            "defense": 80,
+            "special_attack": 80,
+            "special_defense": 80,
+            "speed": 80
+        }
+    },
+    {
+        "name": "Manaphy",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/490.png",
+        "attacks": [
+            "Surf",
+            "Vent Glace",
+            "Eclat Magique"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 100,
+            "defense": 100,
+            "special_attack": 100,
+            "special_defense": 100,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Darkrai",
+        "type": [
+            "tenebres"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/491.png",
+        "attacks": [
+            "Vibrobscur",
+            "Balle Ombre",
+            "Bombe-Beurk",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 90,
+            "defense": 90,
+            "special_attack": 135,
+            "special_defense": 90,
+            "speed": 125
+        }
+    },
+    {
+        "name": "Shaymin",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/492.png",
+        "attacks": [
+            "Tempete Verte",
+            "Psyko",
+            "Eclat Magique"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 100,
+            "defense": 100,
+            "special_attack": 100,
+            "special_defense": 100,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Arceus",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png",
+        "attacks": [
+            "Jugement",
+            "Balle Ombre",
+            "Bourdon",
+            "Cannicule"
+        ],
+        "stats": {
+            "hp": 120,
+            "attack": 120,
+            "defense": 120,
+            "special_attack": 120,
+            "special_defense": 120,
+            "speed": 120
+        }
+    }
 ]
 
     

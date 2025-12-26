@@ -306,7 +306,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/267.png",
         "attacks": [
             "Tornade",
-            "Cyclone",
+            
             "Charge"
         ],
         "stats": {
@@ -346,7 +346,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/269.png",
         "attacks": [
             "Tornade",
-            "Cyclone",
+            
             "Charge"
         ],
         "stats": {
@@ -492,7 +492,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/276.png",
         "attacks": [
             "Cru-Aile",
-            "Cyclone"
+            "Charge"
         ],
         "stats": {
             "hp": 40,
@@ -657,7 +657,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/284.png",
         "attacks": [
             "Tornade",
-            "Cyclone",
+            
             "Charge"
         ],
         "stats": {

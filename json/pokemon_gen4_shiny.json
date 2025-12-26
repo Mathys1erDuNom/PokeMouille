@@ -166,8 +166,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/396.png",
         "attacks": [
             "Coupe",
-            "Cru-Ailes",
-            "Cyclone"
+            "Cru-Ailes"
+            
         ],
         "stats": {
             "hp": 40,
@@ -187,8 +187,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/397.png",
         "attacks": [
             "Coupe",
-            "Cru-Ailes",
-            "Cyclone"
+            "Cru-Ailes"
+            
         ],
         "stats": {
             "hp": 55,
@@ -209,7 +209,7 @@
         "attacks": [
             "Coupe",
             "Cru-Ailes",
-            "Cyclone",
+            
             "Close Combat"
         ],
         "stats": {

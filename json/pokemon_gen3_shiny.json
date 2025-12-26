@@ -305,7 +305,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/267.png",
         "attacks": [
             "Tornade",
-            "Cyclone",
+            
             "Charge"
         ],
         "stats": {
@@ -345,7 +345,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/269.png",
         "attacks": [
             "Tornade",
-            "Cyclone",
+            
             "Charge"
         ],
         "stats": {
@@ -490,7 +490,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/276.png",
         "attacks": [
             "Cru-Aile",
-            "Cyclone"
+            "Charge"
         ],
         "stats": {
             "hp": 40,
@@ -653,7 +653,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/284.png",
         "attacks": [
             "Tornade",
-            "Cyclone",
+            
             "Charge"
         ],
         "stats": {
