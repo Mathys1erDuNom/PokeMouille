@@ -1946,7 +1946,8 @@
         "attacks": [
             "Morsure",
             "Seisme",
-            "Lance-Pierre"
+            "Lance-Pierre",
+            "Lame de Roc"
         ],
         "stats": {
             "hp": 100,
@@ -1965,9 +1966,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/249.png",
         "attacks": [
-            "Tornade",
+            "Hydrocanon",
             "Cyclone",
-            "Psyko"
+            "Psyko",
+            "Seisme"
         ],
         "stats": {
             "hp": 106,
@@ -1986,9 +1988,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/250.png",
         "attacks": [
-            "Tornade",
+            "Telluriforce",
             "Cyclone",
-            "Lance-Flammes"
+            "Cannicule",
+            "Meteore"
         ],
         "stats": {
             "hp": 106,
@@ -2009,7 +2012,9 @@
         "attacks": [
            
             "Psyko",
-            "Canon Graine"
+            "Canon Graine",
+            "Tempete Verte",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 100,

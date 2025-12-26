@@ -2819,7 +2819,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/143.png",
         "attacks": [
             "Charge",
-            "Plaquage"
+            "Plaquage",
+            "Giga Impact"
         ],
         "stats": {
             "hp": 160,
@@ -2979,7 +2980,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
         "attacks": [
             "Choc Psy",
-            "Psyko"
+            "Psyko",
+            "Aura Sphere"
         ],
         "stats": {
             "hp": 100,

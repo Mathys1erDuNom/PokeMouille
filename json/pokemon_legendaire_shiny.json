@@ -1,44 +1,4 @@
 [
-
-    {
-        "name": "Mewtwo_shiny",
-        "type": [
-            "psy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png",
-        "attacks": [
-            "Choc Psy",
-            "Psyko",
-            "Aura Sphere"
-        ],
-        "stats": {
-            "hp": 106,
-            "attack": 110,
-            "special_attack": 154,
-            "speed": 130,
-            "defense": 90,
-            "special_defense": 90
-        }
-    },
-    {
-        "name": "Mew_shiny",
-        "type": [
-            "psy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
-        "attacks": [
-            "Choc Psy",
-            "Psyko"
-        ],
-        "stats": {
-            "hp": 100,
-            "attack": 100,
-            "special_attack": 100,
-            "speed": 100,
-            "defense": 100,
-            "special_defense": 100
-        }
-    },
     {
         "name": "Artikodin_shiny",
         "type": [
@@ -70,8 +30,8 @@
         "attacks": [
             "Eclair",
             "Cru-Aile",
-            "Boule Elek",
-            "Lance-Flammes"
+    
+            "Tonnerre"
         ],
         "stats": {
             "hp": 90,
@@ -104,6 +64,109 @@
         }
     },
     {
+        "name": "Mewtwo_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png",
+        "attacks": [
+            "Choc Psy",
+            "Psyko",
+            "Aura Sphere"
+        ],
+        "stats": {
+            "hp": 106,
+            "attack": 110,
+            "special_attack": 154,
+            "speed": 130,
+            "defense": 90,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Mew_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
+        "attacks": [
+            "Choc Psy",
+            "Psyko",
+            "Aura Sphere"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 100,
+            "special_attack": 100,
+            "speed": 100,
+            "defense": 100,
+            "special_defense": 100
+        }
+    },
+    {
+        "name": "Raikou_shiny",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/243.png",
+        "attacks": [
+            "Tonnerre",
+            "Coup dBoule",
+            "Plaquage",
+            "Morsure"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 85,
+            "defense": 75,
+            "special_attack": 115,
+            "special_defense": 100,
+            "speed": 115
+        }
+    },
+    {
+        "name": "Entei_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/244.png",
+        "attacks": [
+            "Morsure",
+            "Ecrasement",
+            "Coup dBoule",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 115,
+            "attack": 115,
+            "defense": 85,
+            "special_attack": 90,
+            "special_defense": 75,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Suicune_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/245.png",
+        "attacks": [
+            "Morsure",
+            "Tornade",
+            "Coup dBoule",
+            "Pistolet a O"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 75,
+            "defense": 115,
+            "special_attack": 90,
+            "special_defense": 115,
+            "speed": 85
+        }
+    },
+    {
         "name": "Lugia_shiny",
         "type": [
             "psy",
@@ -111,9 +174,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/249.png",
         "attacks": [
-            "Tornade",
+            "Hydrocanon",
             "Cyclone",
-            "Vol"
+            "Psyko",
+            "Seisme"
         ],
         "stats": {
             "hp": 106,
@@ -132,9 +196,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/250.png",
         "attacks": [
-            "Tornade",
+            "Telluriforce",
             "Cyclone",
-            "Vol"
+            "Cannicule",
+            "Meteore"
         ],
         "stats": {
             "hp": 106,
@@ -153,9 +218,11 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/251.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Damocles"
+           
+            "Psyko",
+            "Canon Graine",
+            "Tempete Verte",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 100,
@@ -175,7 +242,7 @@
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
-            "Poing Glace"
+            "Jet de Pierre"
         ],
         "stats": {
             "hp": 80,
@@ -195,7 +262,7 @@
         "attacks": [
             "Ultimapoing",
             "Poing Glace",
-            "Poing Eclair"
+            "Laser Glace"
         ],
         "stats": {
             "hp": 80,
@@ -214,7 +281,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/379.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Glace",
+            "Queue de fer",
             "Poing Eclair"
         ],
         "stats": {
@@ -234,9 +301,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/380.png",
         "attacks": [
-            "Coupe",
-            "Vol",
-            "Plaquage"
+            "Frappe Psy",
+            
+            "Dracochoc"
         ],
         "stats": {
             "hp": 80,
@@ -255,9 +322,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/381.png",
         "attacks": [
-            "Coupe",
-            "Vol",
-            "Plaquage"
+            "Frappe Psy",
+            
+            "Dracochoc"
         ],
         "stats": {
             "hp": 80,
@@ -275,9 +342,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/382.png",
         "attacks": [
-            "Coup d’Boule",
-            "Plaquage",
-            "Belier"
+            "Giga Impact",
+            "Laser Glace",
+            "Surf",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 100,
@@ -295,9 +363,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/383.png",
         "attacks": [
-            "Ultimapoing",
+            "Cannicule",
             "Poing Feu",
-            "Poing Eclair"
+            "Seisme",
+            "Lame de Roc"
         ],
         "stats": {
             "hp": 100,
@@ -316,9 +385,11 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/384.png",
         "attacks": [
-            "Danse Lames",
-            "Vol",
-            "Etreinte"
+            "Vent Glace",
+            "Vent Violent",
+            "Seisme",
+            
+            "Dracochoc"
         ],
         "stats": {
             "hp": 105,
@@ -337,8 +408,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/385.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
+            "Fouet Lianes",
+            "Frappe Psy",
             "Poing Glace"
         ],
         "stats": {
@@ -359,7 +430,8 @@
         "attacks": [
             "Poing Feu",
             "Poing Glace",
-            "Poing Eclair"
+            "Frappe Psy",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 50,
@@ -369,7 +441,318 @@
             "special_defense": 50,
             "speed": 150
         }
+    },
+    {
+        "name": "Motisma_shiny",
+        "type": [
+            "electrique",
+            "spectre"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/479.png",
+        "attacks": [
+            "Eclair",
+            "Tonnerre",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 50,
+            "defense": 77,
+            "special_attack": 95,
+            "special_defense": 77,
+            "speed": 91
+        }
+    },
+    {
+        "name": "Créhelf_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/480.png",
+        "attacks": [
+            "Rafale Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 75,
+            "defense": 130,
+            "special_attack": 75,
+            "special_defense": 130,
+            "speed": 95
+        }
+    },
+    {
+        "name": "Créfollet_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/481.png",
+        "attacks": [
+            "Rafale Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 105,
+            "defense": 105,
+            "special_attack": 105,
+            "special_defense": 105,
+            "speed": 80
+        }
+    },
+    {
+        "name": "Créfadet_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/482.png",
+        "attacks": [
+            "Rafale Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 125,
+            "defense": 70,
+            "special_attack": 125,
+            "special_defense": 70,
+            "speed": 115
+        }
+    },
+    {
+        "name": "Dialga_shiny",
+        "type": [
+            "acier",
+            "dragon"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/483.png",
+        "attacks": [
+            "Hurle-Temps",
+            "Dracogriffe",
+            "Griffe Acier",
+            "Luminocanon"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 120,
+            "defense": 120,
+            "special_attack": 150,
+            "special_defense": 100,
+            "speed": 90
+        }
+    },
+    {
+        "name": "Palkia_shiny",
+        "type": [
+            "eau",
+            "dragon"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/484.png",
+        "attacks": [
+            "Hydrocanon",
+            "Spatio-Rift",
+            "Telluriforce",
+            "Aurasphere"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 120,
+            "defense": 100,
+            "special_attack": 150,
+            "special_defense": 120,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Heatran_shiny",
+        "type": [
+            "feu",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/485.png",
+        "attacks": [
+            "Cannicule",
+            "Telluriforce",
+            "Lame de Roc",
+            "Griffe Acier"
+        ],
+        "stats": {
+            "hp": 91,
+            "attack": 90,
+            "defense": 106,
+            "special_attack": 130,
+            "special_defense": 106,
+            "speed": 77
+        }
+    },
+    {
+        "name": "Regigigas_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/486.png",
+        "attacks": [
+            "Giga Impact",
+            "Ultimapoing",
+            "Poing Feu",
+            "Vent Glace"
+        ],
+        "stats": {
+            "hp": 110,
+            "attack": 160,
+            "defense": 110,
+            "special_attack": 80,
+            "special_defense": 110,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Giratina_shiny",
+        "type": [
+            "spectre",
+            "dragon"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/487.png",
+        "attacks": [
+            "Telluriforce",
+            "Dracogriffe",
+            "Balle Ombre",
+            "Aurasphere"
+        ],
+        "stats": {
+            "hp": 150,
+            "attack": 100,
+            "defense": 120,
+            "special_attack": 100,
+            "special_defense": 120,
+            "speed": 90
+        }
+    },
+    {
+        "name": "Cresselia_shiny",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/488.png",
+        "attacks": [
+            "Rafale Psy",
+            "Balle Ombre",
+            "Eclat Magique",
+            "Tonnerre"
+        ],
+        "stats": {
+            "hp": 120,
+            "attack": 70,
+            "defense": 110,
+            "special_attack": 75,
+            "special_defense": 120,
+            "speed": 85
+        }
+    },
+    {
+        "name": "Phione_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/489.png",
+        "attacks": [
+            "Surf",
+            "Vent Glace",
+            "Eclat Magique"
+        ],
+        "stats": {
+            "hp": 80,
+            "attack": 80,
+            "defense": 80,
+            "special_attack": 80,
+            "special_defense": 80,
+            "speed": 80
+        }
+    },
+    {
+        "name": "Manaphy_shiny",
+        "type": [
+            "eau"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/490.png",
+        "attacks": [
+            "Surf",
+            "Vent Glace",
+            "Eclat Magique"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 100,
+            "defense": 100,
+            "special_attack": 100,
+            "special_defense": 100,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Darkrai_shiny",
+        "type": [
+            "tenebres"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/491.png",
+        "attacks": [
+            "Vibrobscur",
+            "Balle Ombre",
+            "Bombe-Beurk",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 90,
+            "defense": 90,
+            "special_attack": 135,
+            "special_defense": 90,
+            "speed": 125
+        }
+    },
+    {
+        "name": "Shaymin_shiny",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/492.png",
+        "attacks": [
+            "Tempete Verte",
+            "Psyko",
+            "Eclat Magique"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 100,
+            "defense": 100,
+            "special_attack": 100,
+            "special_defense": 100,
+            "speed": 100
+        }
+    },
+    {
+        "name": "Arceus_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/493.png",
+        "attacks": [
+            "Jugement",
+            "Balle Ombre",
+            "Bourdon",
+            "Cannicule"
+        ],
+        "stats": {
+            "hp": 120,
+            "attack": 120,
+            "defense": 120,
+            "special_attack": 120,
+            "special_defense": 120,
+            "speed": 120
+        }
     }
+    
     
     
     

@@ -562,7 +562,171 @@
     "type": "psy",
     "damage": 100,
     "category": "speciale"
+  },
+  {
+    "name": "Tempete Verte",
+    "type": "plante",
+    "damage": 90,
+    "category": "speciale"
+  },
+  {
+    "name": "Poing Feu",
+    "type": "feu",
+    "damage": 75,
+    "category": "physique"
+  },
+  {
+    "name": "Close Combat",
+    "type": "combat",
+    "damage": 90,
+    "category": "physique"
+  },
+  {
+    "name": "Surf",
+    "type": "eau",
+    "damage": 80,
+    "category": "speciale"
+  },
+  {
+    "name": "Griffe Acier",
+    "type": "acier",
+    "damage": 50,
+    "category": "physique"
+  },
+  {
+    "name": "Croc Eclair",
+    "type": "electrik",
+    "damage": 55,
+    "category": "physique"
+  },
+  {
+    "name": "Eclat Magique",
+    "type": "fee",
+    "damage": 70,
+    "category": "speciale"
+  },
+  {
+    "name": "Eboulement",
+    "type": "roche",
+    "damage": 65,
+    "category": "physique"
+  },
+  {
+    "name": "Vent Violent",
+    "type": "vol",
+    "damage": 70,
+    "category": "speciale"
+  },
+  {
+    "name": "Bourdon",
+    "type": "insecte",
+    "damage": 80,
+    "category": "speciale"
+  },
+  {
+    "name": "Meteore",
+    "type": "normal",
+    "damage": 60,
+    "category": "speciale"
+  },
+  {
+    "name": "Tranche-Nuit",
+    "type": "tenebres",
+    "damage": 70,
+    "category": "physique"
+  },
+  {
+    "name": "Vibrobscur",
+    "type": "tenebres",
+    "damage": 80,
+    "category": "speciale"
+  },
+  {
+    "name": "Colère",
+    "type": "dragon",
+    "damage": 90,
+    "category": "physique"
+  },
+  {
+    "name": "Dracochoc",
+    "type": "dragon",
+    "damage": 85,
+    "category": "speciale"
+  },
+  {
+    "name": "Dracogriffe",
+    "type": "dragon",
+    "damage": 80,
+    "category": "physique"
+  },
+  {
+    "name": "Direct Toxik",
+    "type": "poison",
+    "damage": 80,
+    "category": "physique"
+  },
+  {
+    "name": "Luminocanon",
+    "type": "acier",
+    "damage": 80,
+    "category": "special"
+  },
+  {
+    "name": "Giga Impact",
+    "type": "normal",
+    "damage": 150,
+    "category": "physique"
+  },
+  {
+    "name": "Laser Glace",
+    "type": "glace",
+    "damage": 90,
+    "category": "special"
+  },
+  {
+    "name": "Hurle-Temps",
+    "type": "dragon",
+    "damage": 150,
+    "category": "special"
+  },
+  {
+    "name": "Spatio-Rift",
+    "type": "dragon",
+    "damage": 150,
+    "category": "special"
+  },
+  {
+    "name": "Telluriforce",
+    "type": "sol",
+    "damage": 90,
+    "category": "special"
+  },
+  {
+    "name": "Aurasphere",
+    "type": "combat",
+    "damage": 80,
+    "category": "special"
+  },
+  {
+    "name": "Cannicule",
+    "type": "feu",
+    "damage": 95,
+    "category": "special"
+  },
+  {
+    "name": "Lame de Roc",
+    "type": "roche",
+    "damage": 100,
+    "category": "special"
+  },
+  {
+    "name": "Jugement",
+    "type": "normal",
+    "damage": 100,
+    "category": "special"
   }
+  
+
 
 
 ]

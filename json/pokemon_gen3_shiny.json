@@ -2611,9 +2611,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/382.png",
         "attacks": [
-            "Pistolet a O",
+            "Giga Impact",
             "Laser Glace",
-            "Chage"
+            "Surf",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 100,
@@ -2631,10 +2632,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/383.png",
         "attacks": [
-            "Lance-Flammes",
+            "Cannicule",
             "Poing Feu",
             "Seisme",
-            "Jet de Pierre"
+            "Lame de Roc"
         ],
         "stats": {
             "hp": 100,
@@ -2653,8 +2654,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/384.png",
         "attacks": [
-            "Cru-Aile",
-           
+            "Vent Glace",
+            "Vent Violent",
+            "Seisme",
+            
             "Dracochoc"
         ],
         "stats": {
@@ -2696,7 +2699,8 @@
         "attacks": [
             "Poing Feu",
             "Poing Glace",
-            "Frappe Psy"
+            "Frappe Psy",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 50,
