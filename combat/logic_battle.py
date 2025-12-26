@@ -8,6 +8,17 @@ from combat.battle_state import BattleState
 from combat.views_attack import AttackOrSwitchView, SwitchSelectView
 from combat.utils import calculate_damage  # <-- on garde
 
+from badge_db import give_badge, get_user_badges
+
+# Dictionnaire qui lie le nom de l'adversaire à l'ID du badge
+BADGES_ADVERSAIRES = {
+    "Erika": 1,   # ID du badge Roche
+    "Le Leader Cascade": 2, # ID du badge Cascade
+    # ajouter d'autres si nécessaire
+}
+
+
+
 # ✨ NEW: petite fonction utilitaire pour afficher les effets
 def _format_damage_line(target_label: str, dmg: int, details: dict) -> str:
     """
@@ -143,12 +154,25 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                         if not state.switch_bot():
                             embed = build_turn_embed(state, tour, fields, adversaire_name)
                             await interaction.channel.send(embed=embed)
+                             # ---- LOGIQUE BADGE ----
+                            badge_id = BADGES_ADVERSAIRES.get(adversaire_name)
+                            if badge_id:
+                                user_id = str(interaction.user.id)
+                                user_badges = get_user_badges(user_id)
+                                if badge_id not in user_badges:
+                                    give_badge(user_id, badge_id)
+                                    await interaction.channel.send(f"🏅 Félicitations ! Tu as obtenu le badge **{badge_id}** pour avoir battu {adversaire_name} !")
+                                else:
+                                    await interaction.channel.send(f"Tu as déjà ce badge pour {adversaire_name} !")
+                            # -----------------------
+
+                            # Message final de victoire
                             if repliques.get("lose"):
                                 await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
-                                await interaction.channel.send("🎉 **Victoire du joueur !**")
-                                return
+                            await interaction.channel.send("🎉 **Victoire du joueur !**")
+                            return
                         else:
-                            fields.append((
+                                fields.append((
                                 
                                 f"{state.active_bot['name']} ({adversaire_name}) entre en scène !",
 
