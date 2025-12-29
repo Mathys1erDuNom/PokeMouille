@@ -12,19 +12,46 @@
     },
     "pokemons": [
       {
-        "name": "Bulbizarre",
-        "type": ["plante"],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-        "attacks": ["Fouet Lianes", "Charge"],
+        "name": "Racaillou",
+        "type": [
+            "roche",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
+        "attacks": [
+            "Charge",
+            "Lance-Pierre"
+        ],
         "stats": {
-          "hp": 45,
-          "attack": 49,
-          "special_attack": 65,
-          "speed": 45,
-          "defense": 49,
-          "special_defense": 65
+            "hp": 71,
+            "attack": 111,
+            "special_attack": 61,
+            "speed": 51,
+            "defense": 131,
+            "special_defense": 61
         }
+    },
+    {
+      "name": "Onix",
+      "type": [
+          "roche",
+          "sol"
+      ],
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
+      "attacks": [
+          "Lance-Pierre",
+          "Seisme"
+      ],
+      "stats": {
+          "hp": 66,
+          "attack": 76,
+          "special_attack": 61,
+          "speed": 101,
+          "defense": 191,
+          "special_defense": 76
       }
+  }
+
     ]
   },
 
@@ -41,19 +68,46 @@
     },
     "pokemons": [
       {
-        "name": "Bulbizarre",
-        "type": ["plante"],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-        "attacks": ["Fouet Lianes", "Charge"],
+        "name": "Stari",
+        "type": [
+            "eau",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
+        "attacks": [
+            "Pistolet a O",
+            "Choc Psy"
+        ],
         "stats": {
-          "hp": 45,
-          "attack": 49,
-          "special_attack": 65,
-          "speed": 45,
-          "defense": 49,
-          "special_defense": 65
+            "hp": 61,
+            "attack": 76,
+            "special_attack": 101,
+            "speed": 86,
+            "defense": 86,
+            "special_defense": 86
         }
-      }
+    },
+    {
+        "name": "Staross",
+        "type": [
+            "eau",
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
+        "attacks": [
+            "Pistolet a O",
+            "Choc Psy",
+            "Psyko"
+        ],
+        "stats": {
+            "hp": 91,
+            "attack": 106,
+            "special_attack": 132,
+            "speed": 116,
+            "defense": 116,
+            "special_defense": 116
+        }
+    }
     ]
   },
 
@@ -69,19 +123,64 @@
     },
     "pokemons": [
       {
-        "name": "Bulbizarre",
-        "type": ["plante"],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-        "attacks": ["Fouet Lianes", "Charge"],
+        "name": "Voltorbe",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/100.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
         "stats": {
-          "hp": 45,
-          "attack": 49,
-          "special_attack": 65,
-          "speed": 45,
-          "defense": 49,
-          "special_defense": 65
+            "hp": 71,
+            "attack": 61,
+            "special_attack": 86,
+            "speed": 131,
+            "defense": 81,
+            "special_defense": 86
         }
+    },
+    {
+      "name": "Pikachu",
+      "type": [
+          "electrique"
+      ],
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
+      "attacks": [
+          "Eclair",
+          "Charge"
+      ],
+      "stats": {
+          "hp": 66,
+          "attack": 86,
+          "special_attack": 81,
+          "speed": 120,
+          "defense": 70,
+          "special_defense": 80
       }
+  },
+  {
+      "name": "Raichu",
+      "type": [
+          "electrique"
+      ],
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
+      "attacks": [
+          "Eclair",
+          "Charge",
+          "Tonnerre"
+      ],
+      "stats": {
+          "hp": 91,
+          "attack": 121,
+          "special_attack": 121,
+          "speed": 141,
+          "defense": 86,
+          "special_defense": 11
+      }
+  }
+
     ]
   },
 
@@ -101,19 +200,68 @@
       },
       "pokemons": [
         {
-          "name": "Bulbizarre",
-          "type": ["plante"],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-          "attacks": ["Fouet Lianes", "Charge"],
+          "name": "Empiflor",
+          "type": [
+              "plante",
+              "poison"
+          ],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
+          "attacks": [
+              "Fouet Lianes",
+          
+              "Canon Graine",
+              "Bomb-Beurk"
+          ],
           "stats": {
-            "hp": 45,
-            "attack": 49,
-            "special_attack": 65,
-            "speed": 45,
-            "defense": 49,
-            "special_defense": 65
+              "hp": 106,
+              "attack": 111,
+              "special_attack": 131,
+              "speed": 81,
+              "defense": 96,
+              "special_defense": 131
           }
+      },
+      {
+        "name": "Saquedeneu",
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
+        "attacks": [
+            "Charge",
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 86,
+            "attack": 101,
+            "special_attack": 71,
+            "speed": 61,
+            "defense": 71,
+            "special_defense": 86
         }
+    },
+    {
+      "name": "Rafflesia",
+      "type": [
+          "plante",
+          "poison"
+      ],
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
+      "attacks": [
+          "Fouet Lianes",
+          "Canon Graine",
+          "Bomb-Beurk"
+      ],
+      "stats": {
+          "hp": 116,
+          "attack": 111,
+          "special_attack": 121,
+          "speed": 81,
+          "defense": 121,
+          "special_defense": 126
+      }
+  }
+
       ]
     },
 
@@ -131,19 +279,84 @@
       },
       "pokemons": [
         {
-          "name": "Bulbizarre",
-          "type": ["plante"],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-          "attacks": ["Fouet Lianes", "Charge"],
+          "name": "Smogo",
+          "type": [
+              "poison"
+          ],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
+          "attacks": [
+          
+              "Bomb-Beurk"
+          ],
           "stats": {
-            "hp": 45,
-            "attack": 49,
-            "special_attack": 65,
-            "speed": 45,
-            "defense": 49,
-            "special_defense": 65
+              "hp": 71,
+              "attack": 96,
+              "special_attack": 71,
+              "speed": 66,
+              "defense": 126,
+              "special_defense": 76
           }
+      },
+      {
+          "name": "Smogogo",
+          "type": [
+              "poison"
+          ],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
+          "attacks": [
+              
+              "Bomb-Beurk"
+             
+          ],
+          "stats": {
+              "hp": 96,
+              "attack": 121,
+              "special_attack": 106,
+              "speed": 91,
+              "defense": 151,
+              "special_defense": 101
+          }
+      },
+      {
+        "name": "Smogo",
+        "type": [
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
+        "attacks": [
+        
+            "Bomb-Beurk"
+        ],
+        "stats": {
+            "hp": 71,
+            "attack": 96,
+            "special_attack": 71,
+            "speed": 66,
+            "defense": 126,
+            "special_defense": 76
         }
+    },
+    {
+      "name": "Grotadmorv",
+      "type": [
+          "poison"
+      ],
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
+      "attacks": [
+          "Boue-Bombe",
+          "Bomb-Beurk",
+          "Lance-Flammes"
+      ],
+      "stats": {
+          "hp": 121,
+          "attack": 126,
+          "special_attack": 96,
+          "speed": 76,
+          "defense": 151,
+          "special_defense": 101
+      }
+    }
+        
       ]
     },
 
@@ -161,19 +374,84 @@
       },
       "pokemons": [
         {
-          "name": "Bulbizarre",
-          "type": ["plante"],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-          "attacks": ["Fouet Lianes", "Charge"],
+          "name": "Kadabra",
+          "type": [
+              "psy"
+          ],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
+          "attacks": [
+              "Choc Psy",
+              "Psyko"
+          ],
           "stats": {
-            "hp": 45,
-            "attack": 49,
-            "special_attack": 65,
-            "speed": 45,
-            "defense": 49,
-            "special_defense": 65
+              "hp": 71,
+              "attack": 66,
+              "special_attack": 151,
+              "speed": 136,
+              "defense": 61,
+              "special_defense": 101
           }
+      },
+      {
+          "name": "Alakazam",
+          "type": [
+              "psy"
+          ],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
+          "attacks": [
+              "Choc Psy",
+              "Psyko"
+          ],
+          "stats": {
+              "hp": 86,
+              "attack": 81,
+              "special_attack": 166,
+              "speed": 151,
+              "defense": 76,
+              "special_defense": 126
+          }
+      },
+      {
+        "name": "M. Mime",
+        "type": [
+            "psy",
+            "fee"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
+        "attacks": [
+            "Choc Psy"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 76,
+            "special_attack": 131,
+            "speed": 121,
+            "defense": 96,
+            "special_defense": 151
         }
+    },
+    {
+      "name": "Aeromite",
+      "type": [
+          "insecte",
+          "poison"
+      ],
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
+      "attacks": [
+          "Dard-Venin",
+          "Piqure"
+      ],
+      "stats": {
+          "hp": 101,
+          "attack": 91,
+          "special_attack": 121,
+          "speed": 96,
+          "defense": 111,
+          "special_defense": 121
+      }
+  }
+
+        
       ]
     },
 
@@ -191,19 +469,84 @@
       },
       "pokemons": [
         {
-          "name": "Bulbizarre",
-          "type": ["plante"],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-          "attacks": ["Fouet Lianes", "Charge"],
+          "name": "Caninos",
+          "type": [
+              "feu"
+          ],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png",
+          "attacks": [
+              "Flammeche",
+              "Morsure"
+          ],
           "stats": {
-            "hp": 45,
-            "attack": 49,
-            "special_attack": 65,
-            "speed": 45,
-            "defense": 49,
-            "special_defense": 65
+              "hp": 86,
+              "attack": 101,
+              "special_attack": 91,
+              "speed": 121,
+              "defense": 76,
+              "special_defense": 81
           }
+      },
+      {
+          "name": "Arcanin",
+          "type": [
+              "feu"
+          ],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
+          "attacks": [
+              "Flammeche",
+              "Morsure",
+              "Lance-Flammes"
+          ],
+          "stats": {
+              "hp": 121,
+              "attack": 141,
+              "special_attack": 131,
+              "speed": 126,
+              "defense": 111,
+              "special_defense": 111
+          }
+      },
+      {
+        "name": "Ponyta",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
+        "attacks": [
+            "Charge",
+            "Flammeche"
+        ],
+        "stats": {
+            "hp": 81,
+            "attack": 116,
+            "special_attack": 96,
+            "speed": 121,
+            "defense": 86,
+            "special_defense": 96
         }
+    },
+    {
+        "name": "Galopa",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png",
+        "attacks": [
+            "Charge",
+            "Flammeche",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 96,
+            "attack": 131,
+            "special_attack": 131,
+            "speed": 136,
+            "defense": 101,
+            "special_defense": 111
+        }
+    }
+
       ]
     },
 
@@ -222,19 +565,114 @@
       },
       "pokemons": [
         {
-          "name": "Bulbizarre",
-          "type": ["plante"],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-          "attacks": ["Fouet Lianes", "Charge"],
+          "name": "Rhinocorne",
+          "type": [
+              "sol",
+              "roche"
+          ],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
+          "attacks": [
+              "Charge",
+              "Corps Perdu"
+          ],
           "stats": {
-            "hp": 45,
-            "attack": 49,
-            "special_attack": 65,
-            "speed": 45,
-            "defense": 49,
-            "special_defense": 65
+              "hp": 111,
+              "attack": 116,
+              "special_attack": 61,
+              "speed": 56,
+              "defense": 126,
+              "special_defense": 61
           }
+      },
+      {
+          "name": "Rhinoferos",
+          "type": [
+              "sol",
+              "roche"
+          ],
+          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
+          "attacks": [
+              "Charge",
+              "Corps Perdu",
+              "Seisme"
+          ],
+          "stats": {
+              "hp": 136,
+              "attack": 161,
+              "special_attack": 86,
+              "speed": 71,
+              "defense": 151,
+              "special_defense": 86
+          }
+      },
+      {
+        "name": "Triopikeur",
+        "type": [
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
+        "attacks": [
+            "Charge",
+            
+            "Seisme"
+        ],
+        "stats": {
+            "hp": 126,
+            "attack": 131,
+            "special_attack": 81,
+            "speed": 71,
+            "defense": 121,
+            "special_defense": 86
         }
+    },
+    {
+      "name": "Nidoqueen",
+      "type": [
+          "sol",
+          "poison"
+      ],
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
+      "attacks": [
+          "Charge",
+          "Piqure",
+          "Bomb-Beurk",
+         
+          "Seisme"
+      ],
+      "stats": {
+          "hp": 121,
+          "attack": 123,
+          "special_attack": 106,
+          "speed": 116,
+          "defense": 118,
+          "special_defense": 106
+      }
+  },
+  {
+    "name": "Nidoking",
+    "type": [
+        "sol",
+        "poison"
+    ],
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
+    "attacks": [
+        "Charge",
+        "Piqure",
+        "Bomb-Beurk",
+        
+        "Seisme"
+    ],
+    "stats": {
+        "hp": 102,
+        "attack": 133,
+        "special_attack": 116,
+        "speed": 126,
+        "defense": 108,
+        "special_defense": 106
+    }
+}
+
+
       ]
     },
 
