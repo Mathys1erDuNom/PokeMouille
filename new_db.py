@@ -12,9 +12,6 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
-cur.execute("DROP TABLE IF EXISTS new_captures;")
-conn.commit()
-
 
 
 
