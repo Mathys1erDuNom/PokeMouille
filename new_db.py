@@ -14,8 +14,7 @@ cur = conn.cursor()
 
 
 
-cur.execute("DROP TABLE IF EXISTS new_captures;")
-conn.commit()
+
 
 # Crée la table si elle n'existe pas
 cur.execute("""

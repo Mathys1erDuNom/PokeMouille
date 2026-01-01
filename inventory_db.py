@@ -16,8 +16,6 @@ cur = conn.cursor()
 
 
 
-cur.execute("DROP TABLE IF EXISTS inventory;")
-conn.commit()
 
 
 
