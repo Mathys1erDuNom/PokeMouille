@@ -5,7 +5,7 @@ import random
 from money_db import get_balance, add_money, remove_money
 
 class SlotMachine(View):
-    def __init__(self, user_id, bet_amount=5):
+    def __init__(self, user_id, bet_amount=50):
         super().__init__(timeout=60)
         self.user_id = user_id
         self.bet_amount = bet_amount
@@ -15,8 +15,8 @@ class SlotMachine(View):
             "🍒": {"weight": 35, "name": "Cerise"},      # 35%
             "🍋": {"weight": 30, "name": "Citron"},      # 30%
             "🍊": {"weight": 20, "name": "Orange"},      # 20%
-            "⭐": {"weight": 10, "name": "Étoile"},      # 10%
-            "💎": {"weight": 5, "name": "Diamant"}       # 5%
+            "⭐": {"weight": 5, "name": "Étoile"},      # 5%
+            "💎": {"weight": 1, "name": "Diamant"}       # 1%
         }
         
         # Gains selon le nombre de symboles identiques
@@ -188,7 +188,7 @@ class PlayAgainButton(Button):
                        "🍊🍊🍊 → 500 💰🐊\n"
                        "🍋🍋🍋 → 200 💰🐊\n"
                        "🍒🍒🍒 → 100 💰🐊\n\n"
-                       f"**Mise :** 5 💰🐊\n"
+                       f"**Mise :** 50 💰🐊\n"
                        f"**Votre solde :** {balance} 💰🐊",
             color=discord.Color.gold()
         )

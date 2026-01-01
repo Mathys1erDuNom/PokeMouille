@@ -76,7 +76,7 @@ class SlotMachineButton(Button):
                        "🍊🍊🍊 → 500 💰🐊\n"
                        "🍋🍋🍋 → 200 💰🐊\n"
                        "🍒🍒🍒 → 100 💰🐊\n"
-                       f"**Mise :** 5 💰🐊\n"
+                       f"**Mise :** 50 💰🐊\n"
                        f"**Votre solde :** {balance} 💰🐊",
             color=discord.Color.gold()
         )
@@ -101,7 +101,7 @@ def setup_casino(bot):
                        "🎴 **Deviner la couleur** - Devinez 4 couleurs d'affilée\n"
                        "   Mise : 10 💰🐊 | Gain : 50 💰🐊 | Remboursement si 3/4\n\n"
                        "🎰 **Machine à sous** - Alignez 3 symboles identiques\n"
-                       "   Mise : 5 💰🐊 | Gains : 100-10 000 💰🐊\n"
+                       "   Mise : 50 💰🐊 | Gains : 100-10 000 💰🐊\n"
                        f"━━━━━━━━━━━━━━━━━━━━━━━\n"
                        f"💰🐊 **Votre solde :** {balance:,} Croco dollars",
             color=discord.Color.gold()
