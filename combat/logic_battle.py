@@ -32,6 +32,46 @@ BADGES_ADVERSAIRES = {
 }
 
 
+async def handle_victory(interaction, adversaire_name, repliques=None):
+    repliques = repliques or {}
+
+    badge_id = BADGES_ADVERSAIRES.get(adversaire_name)
+    user_id = str(interaction.user.id)
+
+    if badge_id:
+        user_badges = get_user_badges(user_id)
+        badge_info = next((b for b in BADGE_DATA if b["id"] == badge_id), None)
+
+        if badge_info:
+            badge_image_path = os.path.join(script_dir, "..", badge_info["image"])
+            file = discord.File(badge_image_path, filename="badge.png")
+
+            if badge_id not in user_badges:
+                give_badge(user_id, badge_id)
+                reward = 500
+                add_money(user_id, reward)
+
+                emb = discord.Embed(
+                    title=f"🏅 Nouveau Badge : {badge_info['name']}",
+                    description=f"{badge_info.get('description','')}\n💰 Vous gagnez **{reward}** Croco dollars !",
+                    color=0xFFD700
+                )
+                emb.set_image(url="attachment://badge.png")
+                await interaction.channel.send(file=file, embed=emb)
+            else:
+                reward = 10
+                add_money(user_id, reward)
+                await interaction.channel.send(
+                    f"🎉 Tu as déjà le badge **{badge_info['name']}**.\n"
+                    f"💰 Tu reçois **{reward}** Croco dollars."
+                )
+
+    if repliques.get("lose"):
+        await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
+
+    await interaction.channel.send("🎉 **Victoire du joueur !**")
+
+
 
 # ✨ NEW: petite fonction utilitaire pour afficher les effets
 def _format_damage_line(target_label: str, dmg: int, details: dict) -> str:
@@ -168,58 +208,13 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                         if not state.switch_bot():
                             embed = build_turn_embed(state, tour, fields, adversaire_name)
                             await interaction.channel.send(embed=embed)
-                             # ---- LOGIQUE BADGE ----
-                            
-
-
-                            badge_id = BADGES_ADVERSAIRES.get(adversaire_name)
-                            if badge_id:
-                                user_id = str(interaction.user.id)
-                                user_badges = get_user_badges(user_id)
-                                badge_info = next((b for b in BADGE_DATA if b["id"] == badge_id), None)
-
-                                if badge_info:
-                                    badge_image_path = os.path.join(script_dir, "..", badge_info["image"])
-                                    file = discord.File(badge_image_path, filename="badge.png")
-
-                                    if badge_id not in user_badges:
-                                    # Nouveau badge → grande récompense
-                                        give_badge(user_id, badge_id)
-                                        reward = 300  # montant normal pour un nouveau badge
-                                        add_money(user_id, reward)
-
-                                        emb = discord.Embed(
-                                            title=f"🏅 Nouveau Badge : {badge_info['name']}",
-                                            description=f"{badge_info.get('description','')}\n💰 Vous gagnez **{reward}** Croco dollars !",
-                                            color=0xFFD700
-                                        )
-                                        emb.set_image(url="attachment://badge.png")
-                                        await interaction.channel.send(file=file, embed=emb)
-                                    else:
-                                        # Badge déjà possédé → petite récompense
-                                        reward = 20
-                                        add_money(user_id, reward)
-                                        await interaction.channel.send(
-                                            f"🎉 Tu as déjà le badge **{badge_info['name']}**.\n"
-                                            f"💰 Tu reçois quand même **{reward}** Croco dollars pour ta victoire !"
-                                        )
-
-
-
-
-
-
-                                else:
-                                    await interaction.channel.send(f"Tu as déjà ce badge pour {adversaire_name} !")
-
-
-
+                        
                             # -----------------------
 
                             # Message final de victoire
                             if repliques.get("lose"):
                                 await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
-                            await interaction.channel.send("🎉 **Victoire du joueur !**")
+                            await handle_victory(interaction, adversaire_name, repliques)
                             return
                         else:
                                 fields.append((
@@ -322,7 +317,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                             embed = build_turn_embed(state, tour, fields,  adversaire_name)
                             await interaction.channel.send(embed=embed)
                             await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
-                            await interaction.channel.send("🎉 **Victoire du joueur !**")
+                            await handle_victory(interaction, adversaire_name, repliques)
                             return
                         else:
                             fields.append((
