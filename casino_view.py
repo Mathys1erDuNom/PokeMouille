@@ -107,7 +107,7 @@ def setup_casino(bot):
                        f"💰🐊 **Votre solde :** {balance:,} Croco dollars",
             color=discord.Color.gold()
         )
-        embed.set_footer(text="Bonne chance ! 🍀")
+        embed.set_footer(text="Bonne chance ! 🍀🍀")
         
         view = CasinoView()
         await ctx.send(embed=embed, view=view)
