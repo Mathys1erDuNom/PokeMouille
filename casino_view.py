@@ -40,7 +40,7 @@ class CardGameButton(Button):
                        "• Atteignez 3 bonnes réponses → Mise remboursée\n"
                        "• Moins de 3 → Vous perdez votre mise\n\n"
                        "**Mise :** 10 💰🐊\n"
-                       "**Gain :** 50 💰🐊 (si 4/4) | Remboursement (si 3/4)\n\n"
+                       "**Gain :** 100 💰🐊 (si 4/4) | Remboursement (si 3/4)\n\n"
                        f"**Votre solde :** {balance} 💰🐊",
             color=discord.Color.gold()
         )
@@ -71,12 +71,13 @@ class SlotMachineButton(Button):
             title="🎰 Machine à Sous",
             description="**Alignez les symboles pour gagner !**\n\n"
                        "**Gains :**\n"
-                       "💎💎💎 → 10 000 💰🐊 | 💎💎 → 5000 💰🐊\n"
-                       "⭐⭐⭐ → 7000 💰🐊 | ⭐⭐ → 1000 💰🐊\n"
+                       "💎💎💎 → 10 000 💰🐊\n"
+                       "⭐⭐⭐ → 7000 💰🐊 \n"
                        "🍊🍊🍊 → 500 💰🐊\n"
                        "🍋🍋🍋 → 200 💰🐊\n"
                        "🍒🍒🍒 → 100 💰🐊\n"
-                       f"**Mise :** 50 💰🐊\n"
+                       "☠️ → PERDU\n\n"
+                       f"**Mise :** 10 💰🐊\n"
                        f"**Votre solde :** {balance} 💰🐊",
             color=discord.Color.gold()
         )
@@ -99,9 +100,9 @@ def setup_casino(bot):
             title="🎰 Bienvenue au Casino ! 🎰",
             description="Choisissez un jeu pour tenter votre chance !\n\n"
                        "🎴 **Deviner la couleur** - Devinez 4 couleurs d'affilée\n"
-                       "   Mise : 10 💰🐊 | Gain : 50 💰🐊 | Remboursement si 3/4\n\n"
+                       "   Mise : 10 💰🐊 | Gain : 100 💰🐊 | Remboursement si 3/4\n\n"
                        "🎰 **Machine à sous** - Alignez 3 symboles identiques\n"
-                       "   Mise : 50 💰🐊 | Gains : 100-10 000 💰🐊\n"
+                       "   Mise : 10 💰🐊 | Gains : 100-10 000 💰🐊\n"
                        f"━━━━━━━━━━━━━━━━━━━━━━━\n"
                        f"💰🐊 **Votre solde :** {balance:,} Croco dollars",
             color=discord.Color.gold()

@@ -5,18 +5,20 @@ import random
 from money_db import get_balance, add_money, remove_money
 
 class SlotMachine(View):
-    def __init__(self, user_id, bet_amount=50):
+    def __init__(self, user_id, bet_amount=10):
         super().__init__(timeout=60)
         self.user_id = user_id
         self.bet_amount = bet_amount
         
         # Symboles avec leurs poids (total = 100 pour des pourcentages directs)
         self.symbols = {
-            "🍒": {"weight": 35, "name": "Cerise"},      # 35%
-            "🍋": {"weight": 30, "name": "Citron"},      # 30%
-            "🍊": {"weight": 20, "name": "Orange"},      # 20%
-            "⭐": {"weight": 5, "name": "Étoile"},      # 5%
-            "💎": {"weight": 1, "name": "Diamant"}       # 1%
+            
+            "☠️": {"weight": 15, "name": "Cerise"},      # 15%
+            "🍒": {"weight": 30, "name": "Cerise"},      # 30%
+            "🍋": {"weight": 25, "name": "Citron"},      # 25%
+            "🍊": {"weight": 15, "name": "Orange"},      # 15%
+            "⭐": {"weight": 10, "name": "Étoile"},      # 10%
+            "💎": {"weight": 5, "name": "Diamant"}       # 5%
         }
         
         # Gains selon le nombre de symboles identiques
@@ -24,8 +26,8 @@ class SlotMachine(View):
             "🍒": {"3": 100},
             "🍋": {"3": 200},
             "🍊": {"3": 500},
-            "⭐": {"2": 1000, "3": 7000},
-            "💎": {"2": 5000, "3": 10000}
+            "⭐": {"3": 7000},
+            "💎": {"3":10000}
         }
         
         self.add_item(SpinButton(self))
@@ -183,11 +185,12 @@ class PlayAgainButton(Button):
             title="🎰 Machine à Sous",
             description="**Alignez les symboles pour gagner !**\n\n"
                        "**Gains :**\n"
-                       "💎💎💎 → 10 000 💰🐊 | 💎💎 → 5000 💰🐊\n"
-                       "⭐⭐⭐ → 7000 💰🐊 | ⭐⭐ → 1000 💰🐊\n"
+                       "💎💎💎 → 10 000 💰🐊\n"
+                       "⭐⭐⭐ → 7000 💰🐊 \n"
                        "🍊🍊🍊 → 500 💰🐊\n"
                        "🍋🍋🍋 → 200 💰🐊\n"
                        "🍒🍒🍒 → 100 💰🐊\n\n"
+                       "☠️ → PERDU\n\n"
                        f"**Mise :** 50 💰🐊\n"
                        f"**Votre solde :** {balance} 💰🐊",
             color=discord.Color.gold()

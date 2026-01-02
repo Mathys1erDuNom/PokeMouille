@@ -5,7 +5,7 @@ import random
 from money_db import get_balance, add_money, remove_money
 
 class CardColorGame(View):
-    def __init__(self, user_id, bet_amount=10, win_amount=50):
+    def __init__(self, user_id, bet_amount=10, win_amount=100):
         super().__init__(timeout=120)
         self.user_id = user_id
         self.bet_amount = bet_amount
