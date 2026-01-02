@@ -13,10 +13,10 @@ class SlotMachine(View):
         # Symboles avec leurs poids (total = 100 pour des pourcentages directs)
         self.symbols = {
             
-            "☠️": {"weight": 15, "name": "Cerise"},      # 15%
-            "🍒": {"weight": 30, "name": "Cerise"},      # 30%
+            "☠️": {"weight": 5, "name": "Cerise"},      # 5%
+            "🍒": {"weight": 35, "name": "Cerise"},      # 35%
             "🍋": {"weight": 25, "name": "Citron"},      # 25%
-            "🍊": {"weight": 15, "name": "Orange"},      # 15%
+            "🍊": {"weight": 20, "name": "Orange"},      # 20%
             "⭐": {"weight": 10, "name": "Étoile"},      # 10%
             "💎": {"weight": 5, "name": "Diamant"}       # 5%
         }

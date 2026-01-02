@@ -11,7 +11,7 @@ class CardColorGame(View):
         self.bet_amount = bet_amount
         self.win_amount = win_amount
         self.correct_guesses = 0  # Nombre de bonnes réponses consécutives
-        self.target_guesses = 4   # Nombre requis pour gagner
+        self.target_guesses = 3   # Nombre requis pour gagner
         self.game_started = False
         
         # Cartes avec leurs couleurs
@@ -122,8 +122,8 @@ class CardColorGame(View):
                 
                 await interaction.response.edit_message(embed=embed, view=self)
         else:
-            # DÉFAITE - mais on rembourse si 3 bonnes réponses
-            if self.correct_guesses >= 3:
+            # DÉFAITE - mais on rembourse si 2 bonnes réponses
+            if self.correct_guesses >= 2:
                 # Remboursement de la mise
                 add_money(self.user_id, self.bet_amount)
                 new_balance = get_balance(self.user_id)
@@ -135,7 +135,7 @@ class CardColorGame(View):
                                f"❌ Mauvaise réponse !\n\n"
                                f"**Progression atteinte :** {self.correct_guesses}/{self.target_guesses}\n"
                                f"{self.get_progress_bar()}\n\n"
-                               f"💚 **Vous avez atteint 3 bonnes réponses !**\n"
+                               f"💚 **Vous avez atteint 2 bonnes réponses !**\n"
                                f"Votre mise de {self.bet_amount} 💰🐊 vous est remboursée.\n\n"
                                f"**Gain/Perte :** ±0 💰🐊\n"
                                f"**Nouveau solde :** {new_balance} 💰🐊",

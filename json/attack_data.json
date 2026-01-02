@@ -8,7 +8,7 @@
   {
     "name": "Morsure",
     "type": "tenebres",
-    "damage": 20,
+    "damage": 60,
     "category": "physique"
   },
   {
