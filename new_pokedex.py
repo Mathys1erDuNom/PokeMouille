@@ -9,7 +9,7 @@ from new_db import get_new_captures
 from utils import is_croco
 from combat.utils import normalize_text
 from new_db import delete_capture
-from new_db import boost_iv
+from new_db import increase_pokemon_iv
 
 
 
