@@ -9,6 +9,7 @@ from new_db import get_new_captures
 from utils import is_croco
 from combat.utils import normalize_text
 from new_db import delete_capture
+from new_db import boost_iv
 
 
 
@@ -368,4 +369,22 @@ def setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_spri
         user_id = user.id
         delete_capture(user_id, pokemon_name)
         await ctx.send(f"❌ Pokémon **{pokemon_name}** supprimé du Pokédex de {user.display_name}.")
+
+
+    @bot.command()
+    async def boost_iv(ctx, user: discord.Member, pokemon_name: str, iv_increase: int):
+        """
+        Augmente les IV d'un Pokémon pour un utilisateur.
+        Exemple : !boost_iv @Pierre Pikachu 5
+        """
+        if iv_increase < 1:
+            await ctx.send("❌ Le nombre d'IV à augmenter doit être au moins 1.")
+            return
+
+        success = increase_pokemon_iv(user.id, pokemon_name, iv_increase)
+
+        if success:
+            await ctx.send(f"✅ Les IV du Pokémon **{pokemon_name}** de {user.display_name} ont été augmentés de {iv_increase} points ! (max 31)")
+        else:
+            await ctx.send(f"❌ Pokémon **{pokemon_name}** introuvable pour {user.display_name}.")    
     

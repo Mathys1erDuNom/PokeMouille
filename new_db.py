@@ -118,3 +118,48 @@ def delete_capture(user_id, pokemon_name):
         print(f"[CACHE] Cache du pokédex invalidé pour {user_id}")
     except ImportError:
         print("[WARNING] Impossible d'importer invalidate_new_pokedex_cache")
+
+
+def increase_pokemon_iv(user_id, pokemon_name, iv_increase):
+    """
+    Augmente les IV d'un Pokémon pour un utilisateur.
+    Les IV sont plafonnés à 31.
+    """
+    user_id = str(user_id)
+
+    # Récupère le Pokémon
+    cur.execute("""
+        SELECT ivs FROM new_captures
+        WHERE user_id = %s AND name = %s
+    """, (user_id, pokemon_name))
+    row = cur.fetchone()
+
+    if not row:
+        print(f"[WARNING] Pokémon {pokemon_name} non trouvé pour {user_id}")
+        return False
+
+    ivs = row[0]  # dict JSON
+
+    # Augmente chaque IV selon iv_increase, max 31
+    for stat in ivs:
+        ivs[stat] = min(31, ivs[stat] + iv_increase)
+
+    # Met à jour la base
+    cur.execute("""
+        UPDATE new_captures
+        SET ivs = %s
+        WHERE user_id = %s AND name = %s
+    """, (Json(ivs), user_id, pokemon_name))
+    conn.commit()
+
+    print(f"[INFO] IV du Pokémon {pokemon_name} de {user_id} augmentés de {iv_increase}")
+    
+    # 🔥 Invalider le cache du pokédex
+    try:
+        from new_pokedex import invalidate_new_pokedex_cache
+        invalidate_new_pokedex_cache(user_id)
+        print(f"[CACHE] Cache du pokédex invalidé pour {user_id}")
+    except ImportError:
+        print("[WARNING] Impossible d'importer invalidate_new_pokedex_cache")
+
+    return True
