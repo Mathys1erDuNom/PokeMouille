@@ -370,7 +370,7 @@ def setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_spri
         delete_capture(user_id, pokemon_name)
         await ctx.send(f"❌ Pokémon **{pokemon_name}** supprimé du Pokédex de {user.display_name}.")
 
-
+    is_croco()
     @bot.command()
     async def boost_iv(ctx, user: discord.Member, pokemon_name: str, iv_increase: int):
         """
