@@ -94,3 +94,27 @@ def get_new_captures(user_id):
         })
     
     return captures
+
+
+def delete_capture(user_id, pokemon_name):
+    """
+    Supprime un Pokémon capturé pour un utilisateur et invalide le cache du Pokédex.
+    """
+    user_id = str(user_id)
+
+    # Supprimer la capture
+    cur.execute("""
+        DELETE FROM new_captures
+        WHERE user_id = %s AND name = %s
+    """, (user_id, pokemon_name))
+    conn.commit()
+
+    print(f"[INFO] Pokémon {pokemon_name} supprimé pour l'utilisateur {user_id}")
+
+    # 🔥 Invalider le cache du Pokédex pour cet utilisateur
+    try:
+        from new_pokedex import invalidate_new_pokedex_cache
+        invalidate_new_pokedex_cache(user_id)
+        print(f"[CACHE] Cache du pokédex invalidé pour {user_id}")
+    except ImportError:
+        print("[WARNING] Impossible d'importer invalidate_new_pokedex_cache")

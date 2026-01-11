@@ -6,8 +6,9 @@ import requests, io, os
 from io import BytesIO
 import json
 from new_db import get_new_captures
-
+from utils import is_croco
 from combat.utils import normalize_text
+from new_db import delete_capture
 
 
 
@@ -356,3 +357,15 @@ def setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_spri
         )
 
         await ctx.send(embed=embed, file=file, view=view)
+
+    @is_croco()
+    @bot.command()
+    async def remove_pokemon(ctx, user: discord.Member, pokemon_name: str):
+        """
+        Supprime un Pokémon du Pokédex d'un utilisateur choisi.
+        Exemple : !remove_pokemon @Pierre Pikachu
+        """
+        user_id = user.id
+        delete_capture(user_id, pokemon_name)
+        await ctx.send(f"❌ Pokémon **{pokemon_name}** supprimé du Pokédex de {user.display_name}.")
+    
