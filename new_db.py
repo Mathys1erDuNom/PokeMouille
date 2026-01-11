@@ -119,17 +119,16 @@ def delete_capture(user_id, pokemon_name):
     except ImportError:
         print("[WARNING] Impossible d'importer invalidate_new_pokedex_cache")
 
-
 def increase_pokemon_iv(user_id, pokemon_name, iv_increase):
     """
     Augmente les IV d'un Pokémon pour un utilisateur.
-    Les IV sont plafonnés à 31.
+    Les IV sont plafonnés à 31, et les stats sont mises à jour en conséquence.
     """
     user_id = str(user_id)
 
     # Récupère le Pokémon
     cur.execute("""
-        SELECT ivs FROM new_captures
+        SELECT ivs, stats FROM new_captures
         WHERE user_id = %s AND name = %s
     """, (user_id, pokemon_name))
     row = cur.fetchone()
@@ -138,21 +137,24 @@ def increase_pokemon_iv(user_id, pokemon_name, iv_increase):
         print(f"[WARNING] Pokémon {pokemon_name} non trouvé pour {user_id}")
         return False
 
-    ivs = row[0]  # dict JSON
+    ivs = row[0]    # dict JSON des IV
+    stats = row[1]  # dict JSON des stats finales
 
-    # Augmente chaque IV selon iv_increase, max 31
+    # Augmente chaque IV selon iv_increase, max 31, et mets à jour la stat
     for stat in ivs:
+        old_iv = ivs[stat]
         ivs[stat] = min(31, ivs[stat] + iv_increase)
+        stats[stat] = stats.get(stat, 0) + (ivs[stat] - old_iv)  # ajout de la différence réelle
 
     # Met à jour la base
     cur.execute("""
         UPDATE new_captures
-        SET ivs = %s
+        SET ivs = %s, stats = %s
         WHERE user_id = %s AND name = %s
-    """, (Json(ivs), user_id, pokemon_name))
+    """, (Json(ivs), Json(stats), user_id, pokemon_name))
     conn.commit()
 
-    print(f"[INFO] IV du Pokémon {pokemon_name} de {user_id} augmentés de {iv_increase}")
+    print(f"[INFO] IV et stats du Pokémon {pokemon_name} de {user_id} augmentés de {iv_increase}")
     
     # 🔥 Invalider le cache du pokédex
     try:
