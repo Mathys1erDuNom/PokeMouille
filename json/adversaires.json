@@ -1,8 +1,8 @@
 [   
 
   {
-    "id": "champion_roche",
-    "name": "Pierre",
+    "id": "champion_de_Mérouville",
+    "name": "Roxanne",
     "repliques": {
       "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
       "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -32,33 +32,53 @@
         }
     },
     {
-      "name": "Onix",
-      "type": [
-          "roche",
-          "sol"
-      ],
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
-      "attacks": [
-          "Lance-Pierre",
-          "Seisme"
-      ],
-      "stats": {
-          "hp": 66,
-          "attack": 76,
-          "special_attack": 61,
-          "speed": 101,
-          "defense": 191,
-          "special_defense": 76
-      }
-  }
+        "name": "Racaillou",
+        "type": [
+            "roche",
+            "sol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/74.png",
+        "attacks": [
+            "Charge",
+            "Lance-Pierre"
+        ],
+        "stats": {
+            "hp": 71,
+            "attack": 111,
+            "special_attack": 61,
+            "speed": 51,
+            "defense": 131,
+            "special_defense": 61
+        }
+    },
+    {
+        "name": "Tarinor_shiny",
+        "type": [
+            "roche"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/299.png",
+        "attacks": [
+            "Charge",
+            "Jet de Pierre"
+        ],
+        "stats": {
+            "hp": 61,
+            "attack": 76,
+            "defense": 166,
+            "special_attack": 76,
+            "special_defense": 121,
+            "speed": 61
+        }
+    }
+    
 
     ]
   },
 
 
   {
-    "id": "champion_Eau",
-    "name": "Ondine",
+    "id": "champion_de_Myokara",
+    "name": "Bastien",
     "repliques": {
       "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
       "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -67,53 +87,72 @@
       "lose": "Je reconnais ta force. Tu as gagné."
     },
     "pokemons": [
-      {
-        "name": "Stari",
-        "type": [
-            "eau",
-            "psy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/120.png",
-        "attacks": [
-            "Pistolet a O",
-            "Choc Psy"
-        ],
-        "stats": {
-            "hp": 61,
-            "attack": 76,
-            "special_attack": 101,
-            "speed": 86,
-            "defense": 86,
-            "special_defense": 86
+        {
+            "name": "Machoc",
+            "type": [
+                "combat"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/66.png",
+            "attacks": [
+                "Charge",
+                "Poing Karate"
+            ],
+            "stats": {
+                "hp": 101,
+                "attack": 111,
+                "special_attack": 66,
+                "speed": 66,
+                "defense": 81,
+                "special_defense": 66
+            }
+        },
+        {
+            "name": "Meditikka",
+            "type": [
+                "combat",
+                "psy"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/307.png",
+            "attacks": [
+                "Ecras’Face",
+                "Ultimapoing",
+                "Poing Feu"
+            ],
+            "stats": {
+                "hp": 61,
+                "attack": 71,
+                "defense": 86,
+                "special_attack": 71,
+                "special_defense": 86,
+                "speed": 91
+            }
+        },
+        {
+            "name": "Makuhita",
+            "type": [
+                "combat"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/296.png",
+            "attacks": [
+                "Ultimapoing",
+                "Poing Feu",
+                "Poing Glace"
+            ],
+            "stats": {
+                "hp": 103,
+                "attack": 91,
+                "defense": 61,
+                "special_attack": 51,
+                "special_defense": 61,
+                "speed": 56
+            }
         }
-    },
-    {
-        "name": "Staross",
-        "type": [
-            "eau",
-            "psy"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/121.png",
-        "attacks": [
-            "Pistolet a O",
-            "Choc Psy",
-            "Psyko"
-        ],
-        "stats": {
-            "hp": 91,
-            "attack": 106,
-            "special_attack": 132,
-            "speed": 116,
-            "defense": 116,
-            "special_defense": 116
-        }
-    }
     ]
   },
 
   {
-    "id": "champion_Foudre",
-    "name": "Major Bob",
+    "id": "champion_de_Lavandia",
+    "name": "Voltère",
     "repliques": {
       "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
       "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -142,44 +181,68 @@
         }
     },
     {
-      "name": "Pikachu",
-      "type": [
-          "electrique"
-      ],
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-      "attacks": [
-          "Eclair",
-          "Charge"
-      ],
-      "stats": {
-          "hp": 66,
-          "attack": 86,
-          "special_attack": 81,
-          "speed": 120,
-          "defense": 70,
-          "special_defense": 80
-      }
-  },
-  {
-      "name": "Raichu",
-      "type": [
-          "electrique"
-      ],
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png",
-      "attacks": [
-          "Eclair",
-          "Charge",
-          "Tonnerre"
-      ],
-      "stats": {
-          "hp": 91,
-          "attack": 121,
-          "special_attack": 121,
-          "speed": 141,
-          "defense": 86,
-          "special_defense": 11
-      }
-  }
+        "name": "Dynavolt",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/309.png",
+        "attacks": [
+            "Coup d’Boule",
+            "Charge",
+            "Plaquage"
+        ],
+        "stats": {
+            "hp": 71,
+            "attack": 76,
+            "defense": 71,
+            "special_attack": 96,
+            "special_defense": 71,
+            "speed": 96
+        }
+    },
+    {
+        "name": "Magneton",
+        "type": [
+            "electrique",
+            "acier"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/82.png",
+        "attacks": [
+            "Eclair",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 81,
+            "attack": 91,
+            "special_attack": 151,
+            "speed": 101,
+            "defense": 126,
+            "special_defense": 116
+        }
+    },
+    {
+        "name": "Elecsprint",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/310.png",
+        "attacks": [
+            "Coup d’Boule",
+            "Charge",
+            "Plaquage",
+            "Tonnerre"
+        ],
+        "stats": {
+            "hp": 101,
+            "attack": 106,
+            "defense": 91,
+            "special_attack": 136,
+            "special_defense": 91,
+            "speed": 136
+        }
+    }
+    
+  
 
     ]
   },
@@ -189,8 +252,8 @@
 
 
     {
-      "id": "champion_plante",
-      "name": "Erika",
+      "id": "champion_de_Vermilava",
+      "name": "Adriane",
       "repliques": {
         "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
         "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -200,67 +263,91 @@
       },
       "pokemons": [
         {
-          "name": "Empiflor",
-          "type": [
-              "plante",
-              "poison"
-          ],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
-          "attacks": [
-              "Fouet Lianes",
+            "name": "Chamallot",
+            "type": [
+                "feu",
+                "sol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/322.png",
+            "attacks": [
+                "Ecrasement",
+                "Coup d’Boule",
+                "Charge",
+                "Lance-Flammes"
+            ],
+            "stats": {
+                "hp": 91,
+                "attack": 91,
+                "defense": 71,
+                "special_attack": 96,
+                "special_defense": 76,
+                "speed": 67
+            }
+        },
+        {
+            "name": "Limagma",
+            "type": [
+                "feu"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/218.png",
+            "attacks": [
+                "Plaquage",
           
-              "Canon Graine",
-              "Bomb-Beurk"
-          ],
-          "stats": {
-              "hp": 106,
-              "attack": 111,
-              "special_attack": 131,
-              "speed": 81,
-              "defense": 96,
-              "special_defense": 131
-          }
-      },
-      {
-        "name": "Saquedeneu",
-        "type": [
-            "plante"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
-        "attacks": [
-            "Charge",
-            "Fouet Lianes"
-        ],
-        "stats": {
-            "hp": 86,
-            "attack": 101,
-            "special_attack": 71,
-            "speed": 61,
-            "defense": 71,
-            "special_defense": 86
+                "Lance-Flammes"
+            ],
+            "stats": {
+                "hp": 71,
+                "attack": 71,
+                "defense": 71,
+                "special_attack": 101,
+                "special_defense": 71,
+                "speed": 51
+            }
+        },
+        {
+            "name": "Camerupt",
+            "type": [
+                "feu",
+                "sol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/323.png",
+            "attacks": [
+                "Coup d’Boule",
+                "Charge",
+                "Plaquage",
+                "Lance-Flammes"
+            ],
+            "stats": {
+                "hp": 101,
+                "attack": 131,
+                "defense": 101,
+                "special_attack": 136,
+                "special_defense": 106,
+                "speed": 71
+            }
+        },
+        {
+            "name": "Chartor",
+            "type": [
+                "feu"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/324.png",
+            "attacks": [
+                "Coup d’Boule",
+                "Charge",
+                "Plaquage",
+                "Lance-Flammes"
+            ],
+            "stats": {
+                "hp": 101,
+                "attack": 116,
+                "defense": 171,
+                "special_attack": 116,
+                "special_defense": 101,
+                "speed": 51
+            }
         }
-    },
-    {
-      "name": "Rafflesia",
-      "type": [
-          "plante",
-          "poison"
-      ],
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/45.png",
-      "attacks": [
-          "Fouet Lianes",
-          "Canon Graine",
-          "Bomb-Beurk"
-      ],
-      "stats": {
-          "hp": 116,
-          "attack": 111,
-          "special_attack": 121,
-          "speed": 81,
-          "defense": 121,
-          "special_defense": 126
-      }
-  }
+
 
       ]
     },
@@ -268,8 +355,8 @@
 
 
     {
-      "id": "champion_Poison",
-      "name": "Koga",
+      "id": "champion_de_Clémenti-Ville",
+      "name": "Norman",
       "repliques": {
         "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
         "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -279,178 +366,81 @@
       },
       "pokemons": [
         {
-          "name": "Smogo",
-          "type": [
-              "poison"
-          ],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
-          "attacks": [
-          
-              "Bomb-Beurk"
-          ],
-          "stats": {
-              "hp": 71,
-              "attack": 96,
-              "special_attack": 71,
-              "speed": 66,
-              "defense": 126,
-              "special_defense": 76
-          }
-      },
-      {
-          "name": "Smogogo",
-          "type": [
-              "poison"
-          ],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
-          "attacks": [
-              
-              "Bomb-Beurk"
-             
-          ],
-          "stats": {
-              "hp": 96,
-              "attack": 121,
-              "special_attack": 106,
-              "speed": 91,
-              "defense": 151,
-              "special_defense": 101
-          }
-      },
-      {
-        "name": "Smogo",
-        "type": [
-            "poison"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
-        "attacks": [
-        
-            "Bomb-Beurk"
-        ],
-        "stats": {
-            "hp": 71,
-            "attack": 96,
-            "special_attack": 71,
-            "speed": 66,
-            "defense": 126,
-            "special_defense": 76
-        }
-    },
-    {
-      "name": "Grotadmorv",
-      "type": [
-          "poison"
-      ],
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/89.png",
-      "attacks": [
-          "Boue-Bombe",
-          "Bomb-Beurk",
-          "Lance-Flammes"
-      ],
-      "stats": {
-          "hp": 121,
-          "attack": 126,
-          "special_attack": 96,
-          "speed": 76,
-          "defense": 151,
-          "special_defense": 101
-      }
-    }
-        
-      ]
-    },
-
-
-
-    {
-      "id": "champion_Psy",
-      "name": "Morgane",
-      "repliques": {
-        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
-        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
-        "lose_pokemon": "Oh non… il a été vaincu…",
-        "win": "La nature triomphe toujours.",
-        "lose": "Je reconnais ta force. Tu as gagné."
-      },
-      "pokemons": [
+            "name": "Spinda",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/327.png",
+            "attacks": [
+                "Charge"
+            ],
+            "stats": {
+                "hp": 91,
+                "attack": 91,
+                "defense": 91,
+                "special_attack": 91,
+                "special_defense": 91,
+                "speed": 91
+            }
+        },
         {
-          "name": "Kadabra",
-          "type": [
-              "psy"
-          ],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/64.png",
-          "attacks": [
-              "Choc Psy",
-              "Psyko"
-          ],
-          "stats": {
-              "hp": 71,
-              "attack": 66,
-              "special_attack": 151,
-              "speed": 136,
-              "defense": 61,
-              "special_defense": 101
-          }
-      },
-      {
-          "name": "Alakazam",
-          "type": [
-              "psy"
-          ],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
-          "attacks": [
-              "Choc Psy",
-              "Psyko"
-          ],
-          "stats": {
-              "hp": 86,
-              "attack": 81,
-              "special_attack": 166,
-              "speed": 151,
-              "defense": 76,
-              "special_defense": 126
-          }
-      },
-      {
-        "name": "M. Mime",
-        "type": [
-            "psy",
-            "fee"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
-        "attacks": [
-            "Choc Psy"
-        ],
-        "stats": {
-            "hp": 70,
-            "attack": 76,
-            "special_attack": 131,
-            "speed": 121,
-            "defense": 96,
-            "special_defense": 151
+            "name": "Vigoroth",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/288.png",
+            "attacks": [
+                "Ultimapoing",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 111,
+                "attack": 111,
+                "defense": 111,
+                "special_attack": 86,
+                "special_defense": 86,
+                "speed": 121
+            }
+        },
+        {
+            "name": "Lineon",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/264.png",
+            "attacks": [
+                "Coupe",
+               
+                "Coup d’Boule"
+            ],
+            "stats": {
+                "hp": 119,
+                "attack": 101,
+                "defense": 92,
+                "special_attack": 81,
+                "special_defense": 92,
+                "speed": 131
+            }
+        },
+        {
+            "name": "Monaflemit_shiny",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/289.png",
+            "attacks": [
+                "Ultimapoing",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 181,
+                "attack": 191,
+                "defense": 131,
+                "special_attack": 126,
+                "special_defense": 96,
+                "speed": 131
+            }
         }
-    },
-    {
-      "name": "Aeromite",
-      "type": [
-          "insecte",
-          "poison"
-      ],
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/49.png",
-      "attacks": [
-          "Dard-Venin",
-          "Piqure"
-      ],
-      "stats": {
-          "hp": 101,
-          "attack": 91,
-          "special_attack": 121,
-          "speed": 96,
-          "defense": 111,
-          "special_defense": 121
-      }
-  }
-
         
       ]
     },
@@ -458,8 +448,8 @@
 
 
     {
-      "id": "champion_Feu",
-      "name": "Auguste",
+      "id": "champion_de_Cimetronelle",
+      "name": "Alizée",
       "repliques": {
         "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
         "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -469,208 +459,308 @@
       },
       "pokemons": [
         {
-          "name": "Caninos",
-          "type": [
-              "feu"
-          ],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/58.png",
-          "attacks": [
-              "Flammeche",
-              "Morsure"
-          ],
-          "stats": {
-              "hp": 86,
-              "attack": 101,
-              "special_attack": 91,
-              "speed": 121,
-              "defense": 76,
-              "special_defense": 81
-          }
-      },
-      {
-          "name": "Arcanin",
-          "type": [
-              "feu"
-          ],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/59.png",
-          "attacks": [
-              "Flammeche",
-              "Morsure",
-              "Lance-Flammes"
-          ],
-          "stats": {
-              "hp": 121,
-              "attack": 141,
-              "special_attack": 131,
-              "speed": 126,
-              "defense": 111,
-              "special_defense": 111
-          }
-      },
-      {
-        "name": "Ponyta",
-        "type": [
-            "feu"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/77.png",
-        "attacks": [
-            "Charge",
-            "Flammeche"
-        ],
-        "stats": {
-            "hp": 81,
-            "attack": 116,
-            "special_attack": 96,
-            "speed": 121,
-            "defense": 86,
-            "special_defense": 96
-        }
-    },
-    {
-        "name": "Galopa",
-        "type": [
-            "feu"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/78.png",
-        "attacks": [
-            "Charge",
-            "Flammeche",
-            "Lance-Flammes"
-        ],
-        "stats": {
-            "hp": 96,
-            "attack": 131,
-            "special_attack": 131,
-            "speed": 136,
-            "defense": 101,
-            "special_defense": 111
-        }
-    }
-
-      ]
-    },
-
-
-
-
-    {
-      "id": "champion_Sol",
-      "name": "Giovanni",
-      "repliques": {
-        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
-        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
-        "lose_pokemon": "Oh non… il a été vaincu…",
-        "win": "La nature triomphe toujours.",
-        "lose": "Je reconnais ta force. Tu as gagné."
-      },
-      "pokemons": [
+            "name": "Tylton",
+            "type": [
+                "normal",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/333.png",
+            "attacks": [
+                
+                "Chage",
+                "Cru-Aile"
+            ],
+            "stats": {
+                "hp": 76,
+                "attack": 71,
+                "defense": 91,
+                "special_attack": 71,
+                "special_defense": 106,
+                "speed": 81
+            }
+        },
         {
-          "name": "Rhinocorne",
-          "type": [
-              "sol",
-              "roche"
-          ],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/111.png",
-          "attacks": [
-              "Charge",
-              "Corps Perdu"
-          ],
-          "stats": {
-              "hp": 111,
-              "attack": 116,
-              "special_attack": 61,
-              "speed": 56,
-              "defense": 126,
-              "special_defense": 61
-          }
-      },
-      {
-          "name": "Rhinoferos",
-          "type": [
-              "sol",
-              "roche"
-          ],
-          "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/112.png",
-          "attacks": [
-              "Charge",
-              "Corps Perdu",
-              "Seisme"
-          ],
-          "stats": {
-              "hp": 136,
-              "attack": 161,
-              "special_attack": 86,
-              "speed": 71,
-              "defense": 151,
-              "special_defense": 86
-          }
-      },
-      {
-        "name": "Triopikeur",
-        "type": [
-            "sol"
-        ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
-        "attacks": [
-            "Charge",
+            "name": "Altaria",
+            "type": [
+                "dragon",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png",
+            "attacks": [
             
-            "Seisme"
-        ],
-        "stats": {
-            "hp": 126,
-            "attack": 131,
-            "special_attack": 81,
-            "speed": 71,
-            "defense": 121,
-            "special_defense": 86
+                "Chage",
+                "Cru-Aile"
+            ],
+            "stats": {
+                "hp": 106,
+                "attack": 101,
+                "defense": 121,
+                "special_attack": 101,
+                "special_defense": 136,
+                "speed": 111
+            }
+        },
+        {
+            "name": "Tropius",
+            "type": [
+                "plante",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/357.png",
+            "attacks": [
+                "Coupe-Vent",
+                "Fouet Lianes",
+                
+                "Coupe"
+            ],
+            "stats": {
+                "hp": 130,
+                "attack": 99,
+                "defense": 114,
+                "special_attack": 103,
+                "special_defense": 118,
+                "speed": 82
+            }
+        },
+        {
+            "name": "Bekipan",
+            "type": [
+                "eau",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/279.png",
+            "attacks": [
+                "Cru-Aile",
+                "Pistolet a O",
+             
+                "Plaquage"
+            ],
+            "stats": {
+                "hp": 91,
+                "attack": 81,
+                "defense": 131,
+                "special_attack": 126,
+                "special_defense": 101,
+                "speed": 96
+            }
         }
-    },
-    {
-      "name": "Nidoqueen",
-      "type": [
-          "sol",
-          "poison"
-      ],
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/31.png",
-      "attacks": [
-          "Charge",
-          "Piqure",
-          "Bomb-Beurk",
-         
-          "Seisme"
-      ],
-      "stats": {
-          "hp": 121,
-          "attack": 123,
-          "special_attack": 106,
-          "speed": 116,
-          "defense": 118,
-          "special_defense": 106
-      }
-  },
-  {
-    "name": "Nidoking",
-    "type": [
-        "sol",
-        "poison"
-    ],
-    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/34.png",
-    "attacks": [
-        "Charge",
-        "Piqure",
-        "Bomb-Beurk",
         
-        "Seisme"
-    ],
-    "stats": {
-        "hp": 102,
-        "attack": 133,
-        "special_attack": 116,
-        "speed": 126,
-        "defense": 108,
-        "special_defense": 106
-    }
-}
+      ]
+    },
+
+
+
+    {
+      "id": "champion_de_Algatia",
+      "name": "Lévy&Tatia",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Kaorine",
+            "type": [
+                "sol",
+                "psy"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/344.png",
+            "attacks": [
+                "Coup d’Boule",
+                "Damocles",
+                "Laser Glace"
+            ],
+            "stats": {
+                "hp": 91,
+                "attack": 101,
+                "defense": 136,
+                "special_attack": 101,
+                "special_defense": 151,
+                "speed": 106
+            }
+        },
+        {
+            "name": "Xatu",
+            "type": [
+                "psy",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/178.png",
+            "attacks": [
+          
+                "Picpic",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 96,
+                "attack": 106,
+                "defense": 101,
+                "special_attack": 126,
+                "special_defense": 101,
+                "speed": 126
+            }
+        },{
+            "name": "Seleroc",
+            "type": [
+                "roche",
+                "psy"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/337.png",
+            "attacks": [
+                "Charge",
+                "Jet de Pierre"
+            ],
+            "stats": {
+                "hp": 121,
+                "attack": 86,
+                "defense": 96,
+                "special_attack": 126,
+                "special_defense": 116,
+                "speed": 101
+            }
+        },
+        {
+            "name": "Solaroc",
+            "type": [
+                "roche",
+                "psy"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/338.png",
+            "attacks": [
+             
+                "Charge",
+                "Jet de Pierre"
+            ],
+            "stats": {
+                "hp": 121,
+                "attack": 126,
+                "defense": 116,
+                "special_attack": 86,
+                "special_defense": 96,
+                "speed": 101
+            }
+        }
+
+      ]
+    },
+
+
+
+
+    {
+      "id": "champion_de_Atalanopolis",
+      "name": "Juan",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Lovdisc",
+            "type": [
+                "eau"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/370.png",
+            "attacks": [
+                "Charge",
+                "Pistolet a O"
+            ],
+            "stats": {
+                "hp": 74,
+                "attack": 61,
+                "defense": 86,
+                "special_attack": 71,
+                "special_defense": 96,
+                "speed": 128
+            }
+        },
+        {
+            "name": "Barbicha",
+            "type": [
+                "eau",
+                "sol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/340.png",
+            "attacks": [
+                "Coup d’Boule",
+                "Plaquage",
+                "Belier"
+            ],
+            "stats": {
+                "hp": 131,
+                "attack": 109,
+                "defense": 104,
+                "special_attack": 106,
+                "special_defense": 102,
+                "speed": 91
+            }
+        },
+        {
+            "name": "Colhomard",
+            "type": [
+                "eau",
+                "tenebres"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/342.png",
+            "attacks": [
+                "Force Poigne",
+                "Guillotine"
+            ],
+            "stats": {
+                "hp": 94,
+                "attack": 151,
+                "defense": 116,
+                "special_attack": 121,
+                "special_defense": 86,
+                "speed": 86
+            }
+        },
+        {
+            "name": "Phogleur",
+            "type": [
+                "glace",
+                "eau"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/364.png",
+            "attacks": [
+                "Laser Glace",
+                "Pistolet a O"
+            ],
+            "stats": {
+                "hp": 121,
+                "attack": 91,
+                "defense": 101,
+                "special_attack": 106,
+                "special_defense": 101,
+                "speed": 76
+            }
+        },
+        {
+            "name": "Hyporoi",
+            "type": [
+                "eau",
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/230.png",
+            "attacks": [
+                "Pistolet a O",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 106,
+                "attack": 126,
+                "defense": 126,
+                "special_attack": 126,
+                "special_defense": 126,
+                "speed": 116
+            }
+        }
 
 
       ]
