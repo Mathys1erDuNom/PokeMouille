@@ -208,9 +208,6 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                         
                             # -----------------------
 
-                            # Message final de victoire
-                            if repliques.get("lose"):
-                                await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
                             await handle_victory(interaction, adversaire_name, repliques)
                             return
                         else:
