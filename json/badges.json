@@ -54,5 +54,61 @@
         "image": "images/badges/8.png",
         "description": "Obtenu après avoir vaincu Giovanni, la champion de l'arène Sol",
         "generation": 1
+    },
+    {
+        "id": 17,
+        "name": "Badge Roche",
+        "image": "images/badges/17.png",
+        "description": "Obtenu après avoir vaincu Roxanne, la champion de l'arène Roche",
+        "generation": 3
+    },
+    {
+        "id": 18,
+        "name": "Badge Poing",
+        "image": "images/badges/18.png",
+        "description": "Obtenu après avoir vaincu Bastien, la champion de l'arène Combat",
+        "generation": 3
+    },
+    {
+        "id": 19,
+        "name": "Badge Dynamo",
+        "image": "images/badges/19.png",
+        "description": "Obtenu après avoir vaincu Voltère, la champion de l'arène Dynamique ehehe",
+        "generation": 3
+    },
+    {
+        "id": 20,
+        "name": "Badge Chaleur",
+        "image": "images/badges/20.png",
+        "description": "Obtenu après avoir vaincu Adriane, la champion de l'arène Feu",
+        "generation": 3
+    },
+    {
+        "id": 21,
+        "name": "Badge Balancier",
+        "image": "images/badges/21.png",
+        "description": "Obtenu après avoir vaincu Norman, la champion de l'arène Normal",
+        "generation": 3
+    },
+    {
+        "id": 22,
+        "name": "Badge Plume",
+        "image": "images/badges/22.png",
+        "description": "Obtenu après avoir vaincu Alizée, la champion de l'arène Vol",
+        "generation": 3
+    },
+    {
+        "id": 23,
+        "name": "Badge Esprit",
+        "image": "images/badges/23.png",
+        "description": "Obtenu après avoir vaincu Lévy&Tatua, la champion de l'arène Psy",
+        "generation": 3
+    },
+    {
+        "id": 24,
+        "name": "Badge Pluie",
+        "image": "images/badges/24.png",
+        "description": "Obtenu après avoir vaincu Juan, la champion de l'arène Eau",
+        "generation": 3
     }
 ]

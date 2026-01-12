@@ -2,7 +2,7 @@
 
   {
     "id": "champion_de_Mérouville",
-    "name": "Roxanne",
+    "name": "Roxanne (Roche)",
     "repliques": {
       "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
       "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -78,7 +78,7 @@
 
   {
     "id": "champion_de_Myokara",
-    "name": "Bastien",
+    "name": "Bastien (Combat)",
     "repliques": {
       "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
       "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -152,7 +152,7 @@
 
   {
     "id": "champion_de_Lavandia",
-    "name": "Voltère",
+    "name": "Voltère (Electrique)",
     "repliques": {
       "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
       "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -253,7 +253,7 @@
 
     {
       "id": "champion_de_Vermilava",
-      "name": "Adriane",
+      "name": "Adriane (Feu)",
       "repliques": {
         "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
         "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -356,7 +356,7 @@
 
     {
       "id": "champion_de_Clémenti-Ville",
-      "name": "Norman",
+      "name": "Norman (Normal)",
       "repliques": {
         "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
         "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -449,7 +449,7 @@
 
     {
       "id": "champion_de_Cimetronelle",
-      "name": "Alizée",
+      "name": "Alizée (Vol)",
       "repliques": {
         "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
         "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -552,7 +552,7 @@
 
     {
       "id": "champion_de_Algatia",
-      "name": "Lévy&Tatia",
+      "name": "Lévy&Tatia (Psy)",
       "repliques": {
         "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
         "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -652,7 +652,7 @@
 
     {
       "id": "champion_de_Atalanopolis",
-      "name": "Juan",
+      "name": "Juan (Eau)",
       "repliques": {
         "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
         "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
