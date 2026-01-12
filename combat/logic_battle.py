@@ -302,10 +302,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                     ))
 
                     if state.is_bot_ko():
-                        if repliques.get("ko"):
-                            await interaction.channel.send(
-                            f"🧑‍🎤 **{adversaire_name}** : {repliques['ko']}"
-                        )
+                        
 
                         
                         fields.append(("💥 K.O.", f"{state.active_bot['name']} ({adversaire_name}) est K.O. !"))
