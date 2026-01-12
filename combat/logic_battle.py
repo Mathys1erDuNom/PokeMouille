@@ -20,14 +20,14 @@ with open(badges_path, "r", encoding="utf-8") as f:
 
 # Dictionnaire qui lie le nom de l'adversaire à l'ID du badge
 BADGES_ADVERSAIRES = {
-    "Roxanne": 17,   # ID du badge Roche
-    "Bastien": 18,
-    "Voltère": 19,
-    "Adriane": 20, # ID du badge Cascade
-    "Norman" : 21,
-    "Alizée" : 22,
-    "Lévy&Tatia" : 23,
-    "Juan": 24
+    "Roxanne (Roche)": 17,   # ID du badge Roche
+    "Bastien (Combat)": 18,
+    "Voltère (Electrique)": 19,
+    "Adriane (Feu)": 20, # ID du badge Cascade
+    "Norman (Normal)" : 21,
+    "Alizée (Vol)" : 22,
+    "Lévy&Tatia (Psy)" : 23,
+    "Juan (Eau)": 24
     # ajouter d'autres si nécessaire
 }
 
@@ -197,10 +197,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                     ))
 
                     if state.is_bot_ko():
-                        if repliques.get("ko"):
-                            await interaction.channel.send(
-                            f"🧑‍🎤 **{adversaire_name}** : {repliques['ko']}"
-                        )
+                        
 
                         
                         fields.append(("💥 K.O.", f"{state.active_bot['name']} ({adversaire_name}) est K.O. !"))
