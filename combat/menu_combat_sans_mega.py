@@ -142,15 +142,12 @@ class ValidateButton(Button):
             bot_name = "Bot"
             bot_repliques = {}
         
-        pokemon_reward_index = adversaire.get("pokemon_reward_index", 0) if adversaire else 0
-
         await start_battle_turn_based(
             interaction,
-            player_team=selected_pokemons,
-            bot_team=bot_team,
+            selected_pokemons,
+            bot_team,
             adversaire_name=bot_name,
-            repliques=bot_repliques,
-            pokemon_reward_index=pokemon_reward_index
+            repliques=bot_repliques
         )
 
 class AdversaireSelect(Select):
