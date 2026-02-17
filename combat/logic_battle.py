@@ -18,18 +18,6 @@ badges_path = os.path.join(script_dir, "..", "json", "badges.json")
 with open(badges_path, "r", encoding="utf-8") as f:
     BADGE_DATA = json.load(f)
 
-# Dictionnaire qui lie le nom de l'adversaire à l'ID du badge
-BADGES_ADVERSAIRES = {
-    "Roxanne (Roche)": 17,   # ID du badge Roche
-    "Bastien (Combat)": 18,
-    "Voltère (Electrique)": 19,
-    "Adriane (Feu)": 20, # ID du badge Cascade
-    "Norman (Normal)" : 21,
-    "Alizée (Vol)" : 22,
-    "Lévy&Tatia (Psy)" : 23,
-    "Juan (Eau)": 24
-    # ajouter d'autres si nécessaire
-}
 
 
 async def handle_victory(interaction, adversaire_name, bot_team=None, pokemon_reward_index=0, repliques=None):
@@ -163,6 +151,8 @@ async def prompt_player_action(interaction, state):
 async def start_battle_turn_based(interaction, player_team, bot_team, adversaire_name="Bot", repliques=None, pokemon_reward_index=0):
     
     repliques = repliques or {}
+    # ✅ Priorité à l'index défini dans les répliques du boss
+    pokemon_reward_index = repliques.get("pokemon_reward_index", pokemon_reward_index)
 
     if repliques.get("start"):
         await interaction.channel.send(
