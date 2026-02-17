@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Méga-Alakazam",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10037.png",
+       
+        "attacks": [
+            "Psyko",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 50,
+            "special_attack": 175,
+            "speed": 150,
+            "defense": 65,
+            "special_defense": 105
+        }
+    }
+    
+]
