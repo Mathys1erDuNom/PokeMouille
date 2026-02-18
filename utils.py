@@ -13,29 +13,24 @@ _daily_spawn_time = None
 _last_generated_date = None
 
 def get_daily_spawn_window():
-    """Génère (ou récupère) l'heure de spawn aléatoire du jour."""
     global _daily_spawn_time, _last_generated_date
-    
-    today = datetime.date.today()
+    tz = pytz.timezone("Europe/Paris")
+    today = datetime.datetime.now(tz).date()
     if _last_generated_date != today:
-        # Nouvelle journée → nouvelle heure aléatoire entre 20h30 et 22h30
-        # (22h30 + 1h = 23h30 max)
-        minutes_offset = random.randint(0, 120)  # 0 à 120 min après 20h30
-        _daily_spawn_time = datetime.time(20, 30) 
+        minutes_offset = random.randint(0, 120)
         _daily_spawn_time = (
             datetime.datetime.combine(today, datetime.time(20, 30))
             + datetime.timedelta(minutes=minutes_offset)
         ).time()
         _last_generated_date = today
-    
     return _daily_spawn_time
 
 def is_in_spawn_window() -> bool:
-    now = datetime.datetime.now()
+    tz = pytz.timezone("Europe/Paris")
+    now = datetime.datetime.now(tz).replace(tzinfo=None)
     today = now.date()
     spawn_start = datetime.datetime.combine(today, get_daily_spawn_window())
     spawn_end = spawn_start + datetime.timedelta(hours=1)
-    print(f"[DEBUG] now={now}, spawn_start={spawn_start}, spawn_end={spawn_end}, in_window={spawn_start <= now <= spawn_end}")
     return spawn_start <= now <= spawn_end
 
 def is_croco():
