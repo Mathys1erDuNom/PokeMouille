@@ -17,7 +17,7 @@ import uuid
 from croco_event import setup_croco_event
 from money_view import setup_money
 
-from utils import is_battle_time
+from utils import is_in_spawn_window
 
 from casino_view import setup_casino
 
@@ -747,19 +747,29 @@ setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites,
 print("[DEBUG] Ready to run bot...")
 
 
+def is_battle_time():
+    def predicate(ctx):
+        return is_in_spawn_window()
+    return commands.check(predicate)
+
 @bot.command()
 @is_battle_time()
 async def battle(ctx):
     user_id = str(ctx.author.id)
     captures = get_new_captures(user_id)
-
     if not captures:
         await ctx.send("Tu n'as aucun Pokémon à utiliser en combat.")
         return
-
     pokemons = [entry["name"] for entry in captures]
     view = SelectionView(pokemons, full_pokemon_data)
-    await ctx.send("Choisis jusqu’à 6 Pokémon pour ton équipe de combat :", view=view)
+    await ctx.send("Choisis jusqu'à 6 Pokémon pour ton équipe de combat :", view=view)
+
+@battle.error
+async def battle_error(ctx, error):
+    if isinstance(error, commands.CheckFailure):
+        spawn_time = get_daily_spawn_window()
+        spawn_end = (datetime.datetime.combine(datetime.date.today(), spawn_time) + datetime.timedelta(hours=1)).time()
+        await ctx.send(f"⚔️ Les combats ne sont disponibles qu'entre **{spawn_time.strftime('%Hh%M')}** et **{spawn_end.strftime('%Hh%M')}** ce soir !")
 
 
 setup_croco_event(

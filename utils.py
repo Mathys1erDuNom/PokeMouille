@@ -41,11 +41,6 @@ def is_in_spawn_window() -> bool:
     return spawn_start <= now <= spawn_end
 
 
-def is_battle_time():
-    def predicate(ctx):
-        return is_in_spawn_window()
-    return commands.check(predicate)
-
 
 def is_croco():
     def predicate(ctx):
