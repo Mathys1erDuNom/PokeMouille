@@ -31,16 +31,12 @@ def get_daily_spawn_window():
     return _daily_spawn_time
 
 def is_in_spawn_window() -> bool:
-    """Retourne True si on est dans la fenêtre d'1h du jour."""
-    now = datetime.datetime.now()  # adapte avec pytz si tu as un timezone
+    now = datetime.datetime.now()
     today = now.date()
-    
     spawn_start = datetime.datetime.combine(today, get_daily_spawn_window())
     spawn_end = spawn_start + datetime.timedelta(hours=1)
-    
+    print(f"[DEBUG] now={now}, spawn_start={spawn_start}, spawn_end={spawn_end}, in_window={spawn_start <= now <= spawn_end}")
     return spawn_start <= now <= spawn_end
-
-
 
 def is_croco():
     def predicate(ctx):
