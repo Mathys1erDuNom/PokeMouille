@@ -5,7 +5,46 @@ import random, asyncio, os, json
 TARGET_USER_ID_CROCO = int(os.getenv("TARGET_USER_ID_CROCO"))
 
 
+import datetime
+import pytz
 
+# Heure aléatoire générée une fois par jour
+_daily_spawn_time = None
+_last_generated_date = None
+
+def get_daily_spawn_window():
+    """Génère (ou récupère) l'heure de spawn aléatoire du jour."""
+    global _daily_spawn_time, _last_generated_date
+    
+    today = datetime.date.today()
+    if _last_generated_date != today:
+        # Nouvelle journée → nouvelle heure aléatoire entre 20h30 et 22h30
+        # (22h30 + 1h = 23h30 max)
+        minutes_offset = random.randint(0, 120)  # 0 à 120 min après 20h30
+        _daily_spawn_time = datetime.time(20, 30) 
+        _daily_spawn_time = (
+            datetime.datetime.combine(today, datetime.time(20, 30))
+            + datetime.timedelta(minutes=minutes_offset)
+        ).time()
+        _last_generated_date = today
+    
+    return _daily_spawn_time
+
+def is_in_spawn_window() -> bool:
+    """Retourne True si on est dans la fenêtre d'1h du jour."""
+    now = datetime.datetime.now()  # adapte avec pytz si tu as un timezone
+    today = now.date()
+    
+    spawn_start = datetime.datetime.combine(today, get_daily_spawn_window())
+    spawn_end = spawn_start + datetime.timedelta(hours=1)
+    
+    return spawn_start <= now <= spawn_end
+
+
+def is_battle_time():
+    def predicate(ctx):
+        return is_in_spawn_window()
+    return commands.check(predicate)
 
 
 def is_croco():

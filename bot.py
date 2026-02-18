@@ -17,6 +17,7 @@ import uuid
 from croco_event import setup_croco_event
 from money_view import setup_money
 
+from utils import is_battle_time
 
 from casino_view import setup_casino
 
@@ -747,6 +748,7 @@ print("[DEBUG] Ready to run bot...")
 
 
 @bot.command()
+@is_battle_time()
 async def battle(ctx):
     user_id = str(ctx.author.id)
     captures = get_new_captures(user_id)
