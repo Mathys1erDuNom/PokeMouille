@@ -752,6 +752,14 @@ print("[DEBUG] Ready to run bot...")
 import datetime
 import pytz
 
+
+@bot.command()
+@is_croco()
+async def battletime(ctx):
+    spawn_time = get_daily_spawn_window()
+    spawn_end = (datetime.datetime.combine(datetime.date.today(), spawn_time) + datetime.timedelta(hours=1)).time()
+    await ctx.author.send(f"⚔️ Les combats sont disponibles aujourd'hui entre **{spawn_time.strftime('%Hh%M')}** et **{spawn_end.strftime('%Hh%M')}** !")
+    
 def is_battle_time():
     def predicate(ctx):
         return is_in_spawn_window()
@@ -772,9 +780,7 @@ async def battle(ctx):
 @battle.error
 async def battle_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
-        spawn_time = get_daily_spawn_window()
-        spawn_end = (datetime.datetime.combine(datetime.date.today(), spawn_time) + datetime.timedelta(hours=1)).time()
-        await ctx.send(f"⚔️ Les combats ne sont disponibles qu'entre **{spawn_time.strftime('%Hh%M')}** et **{spawn_end.strftime('%Hh%M')}** ce soir !")
+        await ctx.author.send("⚔️ Les combats ne sont pas disponibles maintenant. Ce sera durant 1h entre 20h30 et 23h30.")
 
 
 setup_croco_event(
