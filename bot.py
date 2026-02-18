@@ -768,7 +768,7 @@ def is_battle_time():
 @bot.command()
 async def battle(ctx):
     if not is_in_spawn_window():
-        await ctx.author.send("⚔️ Les combats ne sont pas disponibles maintenant. Ce sera durant 1h entre 20h30 et 23h30.")
+        await ctx.send("⚔️ Les combats ne sont pas disponibles maintenant. Ce sera durant 1h entre 20h30 et 23h30.")
         return
 
     user_id = str(ctx.author.id)
@@ -780,6 +780,7 @@ async def battle(ctx):
     pokemons = [entry["name"] for entry in captures]
     view = SelectionView(pokemons, full_pokemon_data)
     await ctx.send("Choisis jusqu'à 6 Pokémon pour ton équipe de combat :", view=view)
+
 
 @battle.error
 async def battle_error(ctx, error):
