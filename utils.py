@@ -17,9 +17,9 @@ def get_daily_spawn_window():
     tz = pytz.timezone("Europe/Paris")
     today = datetime.datetime.now(tz).date()
     if _last_generated_date != today:
-        minutes_offset = random.randint(0, 120)
+        minutes_offset = random.randint(0, 60)
         _daily_spawn_time = (
-            datetime.datetime.combine(today, datetime.time(20, 30))
+            datetime.datetime.combine(today, datetime.time(18, 00))
             + datetime.timedelta(minutes=minutes_offset)
         ).time()
         _last_generated_date = today
