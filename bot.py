@@ -248,9 +248,9 @@ full_pokedex = full_pokemon_data
 # --- MEGA ---
 #####################################
 
-gen2_normal_path = os.path.join(json_dir, "mega.json")
-if os.path.exists(gen2_normal_path):
-    with open(gen2_normal_path, "r", encoding="utf-8") as f:
+gen_mega_path = os.path.join(json_dir, "mega.json")
+if os.path.exists(gen_mega_path):
+    with open(gen_mega_path, "r", encoding="utf-8") as f:
         data = json.load(f)
         full_pokedex.extend(data)
 ##############################################################
