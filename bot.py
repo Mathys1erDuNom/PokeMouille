@@ -248,11 +248,7 @@ full_pokedex = full_pokemon_data
 # --- MEGA ---
 #####################################
 
-gen_mega_path = os.path.join(json_dir, "mega.json")
-if os.path.exists(gen_mega_path):
-    with open(gen_mega_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        full_pokedex.extend(data)
+
 ##############################################################
 ##############################################################
 
@@ -743,8 +739,8 @@ setup_guess_pokemon_command(
 )
 
 bot.is_under_ban = is_under_ban
-setup_pokedex(bot, full_pokemon_shiny_data, full_pokedex, type_sprites, attack_type_map, json_dir)
-setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokedex, type_sprites, attack_type_map, json_dir)
+setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir)
+setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir)
 
 print("[DEBUG] Ready to run bot...")
 
