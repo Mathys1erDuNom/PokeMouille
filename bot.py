@@ -752,6 +752,36 @@ print("[DEBUG] Ready to run bot...")
 import datetime
 import pytz
 
+from discord.ext import tasks
+
+BATTLE_CHANNEL_ID = 123456789  # Remplace par l'ID de ton channel
+
+@tasks.loop(minutes=1)
+async def check_battle_window():
+    now = datetime.datetime.now().time()
+    spawn_time = get_daily_spawn_window()
+    spawn_end = (datetime.datetime.combine(datetime.date.today(), spawn_time) + datetime.timedelta(hours=1)).time()
+    
+    # Vérifie si on est exactement au début de la fenêtre (à la minute près)
+    now_rounded = now.replace(second=0, microsecond=0)
+    spawn_rounded = spawn_time.replace(second=0, microsecond=0)
+    
+    if now_rounded == spawn_rounded:
+        channel = bot.get_channel(BATTLE_CHANNEL_ID)
+        if channel:
+            await channel.send(
+                f"⚔️ **Les combats sont maintenant disponibles !** "
+                f"Vous avez jusqu'à **{spawn_end.strftime('%Hh%M')}** pour vous battre. "
+                f"Utilisez `!battle` pour commencer !"
+            )
+
+@check_battle_window.before_loop
+async def before_check():
+    await bot.wait_until_ready()
+
+# Lance la tâche au démarrage du bot
+check_battle_window.start()
+
 
 @bot.command()
 @is_croco()
