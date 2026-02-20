@@ -779,9 +779,7 @@ async def check_battle_window():
                 f"Utilisez `!battle` pour commencer !"
             )
 
-@check_battle_window.before_loop
-async def before_check():
-    await bot.wait_until_ready()
+
 
 
 
@@ -833,6 +831,9 @@ setup_croco_event(
 
 setup_inventory(bot)
 
+@check_battle_window.before_loop
+async def before_check():
+    await bot.wait_until_ready()
 
 
 
