@@ -25,13 +25,27 @@ def get_daily_spawn_window():
         _last_generated_date = today
     return _daily_spawn_time
 
-def is_in_spawn_window() -> bool:
+TEXT_CHANNEL_ID = int(os.getenv("CHANNEL_ID_COPAING"))
+
+async def is_in_spawn_window(bot) -> bool:
+    global _spawn_announced
     tz = pytz.timezone("Europe/Paris")
     now = datetime.datetime.now(tz).replace(tzinfo=None)
     today = now.date()
     spawn_start = datetime.datetime.combine(today, get_daily_spawn_window())
     spawn_end = spawn_start + datetime.timedelta(hours=1)
-    return spawn_start <= now <= spawn_end
+    
+    in_window = spawn_start <= now <= spawn_end
+    
+    if in_window and not _spawn_announced:
+        channel = bot.get_channel(TEXT_CHANNEL_ID)
+        if channel:
+            await channel.send("🐊 Le crocodile est apparu ! Vous avez 1 heure !")
+        _spawn_announced = True
+    elif not in_window:
+        _spawn_announced = False
+    
+    return in_window
 
 def is_croco():
     def predicate(ctx):
