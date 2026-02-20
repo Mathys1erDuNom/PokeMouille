@@ -703,8 +703,12 @@ async def tempspawn(ctx):
 
 @bot.event
 async def on_ready():
-    print(f"Bot prêt en tant que {bot.user}")
-    check_voice_channel.start()
+    if not check_battle_window.is_running():
+        check_battle_window.start()
+    print(f"Bot connecté en tant que {bot.user}")
+
+# Démarre le bot
+bot.run(TOKEN)
 
 @bot.event
 async def on_message(message):
@@ -779,8 +783,7 @@ async def check_battle_window():
 async def before_check():
     await bot.wait_until_ready()
 
-# Lance la tâche au démarrage du bot
-check_battle_window.start()
+
 
 
 @bot.command()
