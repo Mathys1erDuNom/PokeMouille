@@ -767,7 +767,7 @@ def is_battle_time():
 
 @bot.command()
 async def battle(ctx):
-    if not is_in_spawn_window():
+    if not await is_in_spawn_window(ctx.bot):
         await ctx.send("⚔️ Les combats ne sont pas disponibles maintenant. Ce sera durant 1h entre 20h30 et 23h30.")
         return
 
