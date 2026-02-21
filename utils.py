@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands, tasks
 import random, asyncio, os, json
-
+_spawn_announced = False
 TARGET_USER_ID_CROCO = int(os.getenv("TARGET_USER_ID_CROCO"))
 
 
@@ -28,6 +28,7 @@ def get_daily_spawn_window():
 TEXT_CHANNEL_ID = int(os.getenv("CHANNEL_ID_COPAING"))
 
 async def is_in_spawn_window(bot) -> bool:
+ 
     global _spawn_announced
     tz = pytz.timezone("Europe/Paris")
     now = datetime.datetime.now(tz).replace(tzinfo=None)
