@@ -34,6 +34,7 @@ async def is_in_spawn_window(bot) -> bool:
     today = now.date()
     spawn_start = datetime.datetime.combine(today, get_daily_spawn_window())
     spawn_end = spawn_start + datetime.timedelta(hours=1)
+    print(f"[DEBUG] now={now} | spawn_start={spawn_start} | spawn_end={spawn_end} | in_window={spawn_start <= now <= spawn_end}")
     
     in_window = spawn_start <= now <= spawn_end
     
