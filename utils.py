@@ -17,12 +17,12 @@ def get_daily_spawn_window():
     tz = pytz.timezone("Europe/Paris")
     today = datetime.datetime.now(tz).date()
     if _last_generated_date != today:
-       #  minutes_offset = random.randint(0, 60)
-        _daily_spawn_time = (
+         minutes_offset = random.randint(0, 10)
+         _daily_spawn_time = (
             datetime.datetime.combine(today, datetime.time(17, 10))
-          #   + datetime.timedelta(minutes=minutes_offset)
+            + datetime.timedelta(minutes=minutes_offset)
         ).time()
-        _last_generated_date = today
+         _last_generated_date = today
     return _daily_spawn_time
 
 TEXT_CHANNEL_ID = int(os.getenv("CHANNEL_ID_COPAING"))
