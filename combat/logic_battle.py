@@ -55,8 +55,8 @@ async def handle_victory(interaction, adversaire_name, bot_team=None, pokemon_re
             emb.set_image(url=reward_pokemon["image"])
         emb.add_field(name="IVs", value=" | ".join(f"{k}: {v}" for k, v in ivs.items()), inline=False)
 
-        add_money(user_id, 500)
-        emb.add_field(name="💰 Récompense", value="**500** Croco dollars !", inline=False)
+        add_money(user_id, 50)
+        emb.add_field(name="💰 Récompense", value="**50** Croco dollars !", inline=False)
 
         await interaction.channel.send(embed=emb)
     else:
