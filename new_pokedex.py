@@ -359,16 +359,34 @@ def setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_spri
 
         await ctx.send(embed=embed, file=file, view=view)
 
-    @is_croco()
+
+
+    is_croco()
     @bot.command()
-    async def remove_pokemon(ctx, user: discord.Member, pokemon_name: str):
+    async def remove_pokemon(ctx, user_input: str, pokemon_name: str):
         """
-        Supprime un Pokémon du Pokédex d'un utilisateur choisi.
-        Exemple : !remove_pokemon @Pierre Pikachu
+        Accepte un @mention, un ID, ou un nom d'utilisateur.
         """
-        user_id = user.id
+        # Extraire l'ID si c'est une mention utilisateur (<@123...>)
+        import re
+        match = re.match(r"<@!?(\d+)>", user_input)
+        if match:
+            user_id = int(match.group(1))
+        elif user_input.isdigit():
+            user_id = int(user_input)
+        else:
+            await ctx.send("❌ Utilisateur invalide. Utilise une mention `@Utilisateur` ou un ID.")
+            return
+
+        member = ctx.guild.get_member(user_id)
+        display_name = member.display_name if member else str(user_id)
+
         delete_capture(user_id, pokemon_name)
-        await ctx.send(f"❌ Pokémon **{pokemon_name}** supprimé du Pokédex de {user.display_name}.")
+        await ctx.send(f"❌ Pokémon **{pokemon_name}** supprimé du Pokédex de {display_name}.")
+        
+
+
+
 
     is_croco()
     @bot.command()
