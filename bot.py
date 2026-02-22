@@ -743,8 +743,8 @@ setup_guess_pokemon_command(
 )
 
 bot.is_under_ban = is_under_ban
-setup_pokedex(bot, full_pokemon_shiny_data, full_pokedex, type_sprites, attack_type_map, json_dir)
-setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir)
+setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir)
+setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokedex, type_sprites, attack_type_map, json_dir)
 
 print("[DEBUG] Ready to run bot...")
 
