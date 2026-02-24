@@ -1,6 +1,107 @@
 [   
 
-{
+  {
+    "id": "champion_de_Mérouville",
+    "name": "Hector",
+    "repliques": {
+      "start": "Tu oses me défier ? Je vais t'écraser ",
+      "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+      "lose_pokemon": "Oh non… il a été vaincu…",
+      "pokemon_reward_index": 3,
+      "win": "La nature triomphe toujours.",
+      "lose": "Je reconnais ta force. Tu as gagné."
+    },
+    "pokemons": [
+        {
+            "name": "Artikodin",
+            "type": [
+                "glace",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+            "attacks": [
+                "Eclats Glace",
+                "Cru-Aile",
+                "Vent Glace"
+            ],
+            "stats": {
+                "hp": 121,
+                "attack": 136,
+                "special_attack": 161,
+                "speed": 136,
+                "defense": 131,
+                "special_defense": 121
+            }
+        },
+        {
+            "name": "Electhor",
+            "type": [
+                "electrique",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+            "attacks": [
+                "Eclair",
+                "Cru-Aile",
+                "Tonnerre"
+            ],
+            "stats": {
+                "hp": 121,
+                "attack": 121,
+                "special_attack": 1161,
+                "speed": 131,
+                "defense": 111,
+                "special_defense": 130
+            }
+        },
+        {
+            "name": "Sulfura",
+            "type": [
+                "feu",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
+           
+            "attacks": [
+                "Braise",
+                "Cru-Aile",
+                "Lance-Flammes"
+            ],
+            "stats": {
+                "hp": 121,
+                "attack": 131,
+                "special_attack": 161,
+                "speed": 121,
+                "defense": 121,
+                "special_defense": 111
+            }
+        },
+        {
+            "name": "Méga-Alakazam",
+            "type": [
+                "psy"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10037.png",
+           
+            "attacks": [
+                "Psyko",
+                "Balle Ombre"
+            ],
+            "stats": {
+                "hp": 55,
+                "attack": 50,
+                "special_attack": 175,
+                "speed": 150,
+                "defense": 65,
+                "special_defense": 105
+            }
+        }
+    
+
+    ]
+  },
+
+  {
     "id": "champion_de_Mérouville",
     "name": "Micka",
     "repliques": {
@@ -128,5 +229,6 @@
 
     ]
   }
-  ]
+
+]
   

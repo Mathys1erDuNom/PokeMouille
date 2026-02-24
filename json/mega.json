@@ -18,6 +18,28 @@
             "defense": 65,
             "special_defense": 105
         }
+    },
+    {
+        "name": "Méga-Scarabrute",
+        "type": [
+            "insecte",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10040.png",
+       
+        "attacks": [
+            "Close Combat",
+            "Pique",
+            "Tornade"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 155,
+            "special_attack": 65,
+            "speed": 105,
+            "defense": 120,
+            "special_defense": 90
+        }
     }
     
 ]
