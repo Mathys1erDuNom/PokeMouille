@@ -2,7 +2,7 @@
 
 {
     "id": "champion_de_Mérouville",
-    "name": "Micka",
+    "name": "Helio",
     "repliques": {
       "start": "Tu oses me défier ? Je vais t'écraser ",
       "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
@@ -13,18 +13,36 @@
     },
     "pokemons": [
         {
-            "name": "Celebi_shiny",
+            "name": "Darkrai_shiny",
             "type": [
-                "psy",
+                "tenebres"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/491.png",
+            "attacks": [
+                "Vibrobscur",
+                "Balle Ombre",
+                "Bombe-Beurk",
+                "Psyko"
+            ],
+            "stats": {
+                "hp": 110,
+                "attack": 130,
+                "defense": 130,
+                "special_attack": 175,
+                "special_defense": 130,
+                "speed": 165
+            }
+        },
+        {
+            "name": "Shaymin_shiny",
+            "type": [
                 "plante"
             ],
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/251.png",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/492.png",
             "attacks": [
-               
-                "Psyko",
-                "Canon Graine",
                 "Tempete Verte",
-                "Balle Ombre"
+                "Psyko",
+                "Eclat Magique"
             ],
             "stats": {
                 "hp": 140,
@@ -36,78 +54,55 @@
             }
         },
         {
-            "name": "Ho-Oh",
+            "name": "Arceus_shiny",
             "type": [
-                "feu",
-                "vol"
+                "normal"
             ],
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/493.png",
             "attacks": [
-                "Telluriforce",
-                "Tranche-Nuit",
-                "Cannicule",
-                "Meteore"
+                "Jugement",
+                "Balle Ombre",
+                "Bourdon",
+                "Cannicule"
             ],
             "stats": {
-                "hp": 146,
-                "attack": 170,
-                "defense": 1300,
-                "special_attack": 150,
-                "special_defense": 194,
-                "speed": 130
+                "hp": 160,
+                "attack": 150,
+                "defense": 160,
+                "special_attack": 160,
+                "special_defense": 160,
+                "speed": 160
             }
         },
         {
-            "name": "Tyranocif",
+            "name": "Carchacrok_shiny",
             "type": [
-                "roche",
-                "tenebres"
+                "dragon",
+                "sol"
             ],
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/445.png",
             "attacks": [
-                "Morsure",
-                "Seisme",
-                "Lance-Pierre",
-                "Lame de Roc"
-            ],
-            "stats": {
-                "hp": 140,
-                "attack": 174,
-                "defense": 150,
-                "special_attack": 135,
-                "special_defense": 140,
-                "speed": 101
-            }
-        },
-        {
-            "name": "Lugia",
-            "type": [
-                "psy",
-                "vol"
-            ],
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png",
-            "attacks": [
-                "Hydrocanon",
-                "Tranche-Nuit",
-                "Psyko",
+                "Coupe",
+                "Dracochoc",
+                "Dracogriffe",
                 "Seisme"
             ],
             "stats": {
-                "hp": 146,
-                "attack": 130,
-                "defense": 170,
-                "special_attack": 130,
-                "special_defense": 194,
-                "speed": 150
+                "hp": 148,
+                "attack": 170,
+                "defense": 135,
+                "special_attack": 140,
+                "special_defense": 145,
+                "speed": 142
             }
         },
         {
-            "name": "Méga-Scarabrute",
+            "name": "Méga-Ectoplasma",
             "type": [
-                "insecte",
-                "vol"
+                "spectre",
+                "poison"
             ],
-            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10040.png",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10038.png",
            
             "attacks": [
                 "Close Combat",
@@ -115,14 +110,15 @@
                 "Tornade"
             ],
             "stats": {
-                "hp": 65,
-                "attack": 155,
-                "special_attack": 65,
-                "speed": 105,
-                "defense": 120,
-                "special_defense": 90
+                "hp": 60,
+                "attack": 65,
+                "special_attack": 170,
+                "speed": 130,
+                "defense": 80,
+                "special_defense": 95
             }
         }
+       
 
     
 

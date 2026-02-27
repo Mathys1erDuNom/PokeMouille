@@ -34,7 +34,7 @@ async def is_in_spawn_window(bot) -> bool:
     now = datetime.datetime.now(tz).replace(tzinfo=None)
     today = now.date()
     spawn_start = datetime.datetime.combine(today, get_daily_spawn_window())
-    spawn_end = spawn_start + datetime.timedelta(hours=1)
+    spawn_end = spawn_start + datetime.timedelta(hours=2)
     print(f"[DEBUG] now={now} | spawn_start={spawn_start} | spawn_end={spawn_end} | in_window={spawn_start <= now <= spawn_end}")
     
     in_window = spawn_start <= now <= spawn_end
@@ -42,7 +42,7 @@ async def is_in_spawn_window(bot) -> bool:
     if in_window and not _spawn_announced:
         channel = bot.get_channel(TEXT_CHANNEL_ID)
         if channel:
-            await channel.send("🐊 Le crocodile est apparu ! Vous avez 1 heure !")
+            await channel.send("🐊 Le crocodile est apparu ! Vous avez 2 heure !")
         _spawn_announced = True
     elif not in_window:
         _spawn_announced = False

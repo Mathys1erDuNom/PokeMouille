@@ -40,6 +40,28 @@
             "defense": 120,
             "special_defense": 90
         }
+    },
+    {
+        "name": "Méga-Ectoplasma",
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10038.png",
+       
+        "attacks": [
+            "Close Combat",
+            "Pique",
+            "Tornade"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 65,
+            "special_attack": 170,
+            "speed": 130,
+            "defense": 80,
+            "special_defense": 95
+        }
     }
     
 ]
