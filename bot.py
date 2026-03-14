@@ -55,6 +55,8 @@ import discord
 from discord.ui import Select, View
 from dotenv import load_dotenv
 
+from fishing import setup_fishing
+
 load_dotenv()
 
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -1002,9 +1004,7 @@ setup_inventory(bot)
 
 setup_regions()
 
-# 👇 Ajoute ces deux lignes
-import asyncio
-asyncio.get_event_loop().run_until_complete(bot.load_extension("fishing"))
+setup_fishing(bot, cur)
 
 
 @bot.command()
