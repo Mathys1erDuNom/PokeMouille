@@ -40,8 +40,8 @@ def load_region_data(region: str):
     except FileNotFoundError:
         shiny_data = []
 
-    normal_water = [p for p in normal_data if "water" in [t.lower() for t in p.get("type", [])]]
-    shiny_water  = [p for p in shiny_data  if "water" in [t.lower() for t in p.get("type", [])]]
+    normal_water = [p for p in normal_data if "eau" in [t.lower() for t in p.get("type", [])]]
+    shiny_water  = [p for p in shiny_data  if "eau" in [t.lower() for t in p.get("type", [])]]
     return normal_water, shiny_water
 
 
