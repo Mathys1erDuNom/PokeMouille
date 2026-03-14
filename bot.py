@@ -47,7 +47,7 @@ from money_db import add_money
 from shop_view import setup_shop
 
 from badge_view import setup_badges
-
+from regions_system import setup_regions, region_command
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
@@ -424,7 +424,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
         DEFAULT_SHINY_RATE = 64
 
 
-
+'''
 @tasks.loop(seconds=120)
 async def check_voice_channel():
     bot.last_check_voice_time = time.time()
@@ -465,6 +465,7 @@ async def wait_and_spawn(wait_time, channel):
         pass
     finally:
         spawn_task[guild_id] = None
+'''        
 
 
 
@@ -764,7 +765,7 @@ async def battletime(ctx):
 @bot.command()
 async def battle(ctx):
     if not await is_in_spawn_window(bot):
-        await ctx.send("❌ Le crocodile n'est pas apparu ! Revenez entre 21h30 et 22h30.")
+        await ctx.send("❌ Le crocodile n'est pas apparu ! Revenez entre 21h30 et 23h30.")
         return
     user_id = str(ctx.author.id)
     captures = get_new_captures(user_id)
@@ -783,7 +784,7 @@ async def battle_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
         await ctx.author.send("⚔️ Les combats ne sont pas disponibles maintenant. Ce sera durant 1h entre 21h30 et 22h30.")
 
-
+'''
 setup_croco_event(
     bot,
     VOICE_CHANNEL_ID,
@@ -793,10 +794,16 @@ setup_croco_event(
     role_id=ROLE_ID,
     interval_seconds=60  # ajuste librement
 )
+'''
 
 setup_inventory(bot)
 
 
+setup_regions()
+
+@bot.command()
+async def region(ctx):
+    await region_command(ctx)
 
 
 bot.run(TOKEN)
