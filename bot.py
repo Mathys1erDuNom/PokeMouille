@@ -356,7 +356,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
         spawn_origin_manual[guild_id] = True
     else:
         spawn_origin_manual[guild_id] = False
-        if current_auto_pokemon.get(guild_id):
+        if not dm_user and current_auto_pokemon.get(guild_id):
             print(f"[INFO] Un Pokémon auto est déjà présent sur le serveur {guild_id}, on ne remplace pas.")
             return
 
@@ -408,11 +408,12 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     else:
         pokemon_name_spawned = pokemon["name"]
 
-    if force:
-        current_pokemon[guild_id] = pokemon_name_spawned
-    else:
-        current_auto_pokemon[guild_id] = pokemon_name_spawned
-        current_pokemon[guild_id] = pokemon_name_spawned
+    if not dm_user:
+        if force:
+            current_pokemon[guild_id] = pokemon_name_spawned
+        else:
+            current_auto_pokemon[guild_id] = pokemon_name_spawned
+            current_pokemon[guild_id] = pokemon_name_spawned
 
     # -----------------------
     # IV ET STATS
@@ -827,20 +828,44 @@ async def timecheck(ctx):
 @bot.command()
 @is_croco()
 async def tempspawn(ctx):
-    guild_id = ctx.guild.id
-    if guild_id not in spawn_task or spawn_task[guild_id] is None:
-        await ctx.author.send("⏱ Aucun spawn automatique en cours.")
+    vc = bot.get_channel(VOICE_CHANNEL_ID)
+    if vc is None:
+        await ctx.send("❌ Impossible de trouver le salon vocal.")
         return
 
-    remaining = spawn_remaining_time.get(guild_id)
-    if remaining is None:
-        await ctx.author.send("⏱ Le temps de spawn n'est pas encore initialisé.")
+    members_in_vc = [m for m in vc.members if not m.bot]
+
+    if not members_in_vc:
+        await ctx.send("❌ Aucun membre en vocal actuellement.")
         return
 
-    minutes, seconds = divmod(remaining, 60)
-    await ctx.author.send(f"⏱ Prochain spawn automatique dans {minutes} min {seconds:02d} sec.")
+    embed = discord.Embed(
+        title="⏱️ Prochains spawns DM",
+        color=0x00FF00
+    )
 
+    for member in members_in_vc:
+        task = dm_spawn_tasks.get(member.id)
 
+        if task is None or task.done():
+            status = "❌ Aucune tâche en cours"
+        else:
+            # On récupère le temps restant depuis spawn_remaining_time si dispo
+            # Sinon on indique juste qu'une tâche tourne
+            remaining = dm_spawn_remaining_time.get(member.id)
+            if remaining and remaining > 0:
+                minutes, seconds = divmod(remaining, 60)
+                status = f"🕐 **{minutes} min {seconds} sec**"
+            else:
+                status = "🔄 En cours (temps non disponible)"
+
+        embed.add_field(
+            name=member.display_name,
+            value=status,
+            inline=False
+        )
+
+    await ctx.send(embed=embed)
 
 
 @bot.event
