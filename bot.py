@@ -383,7 +383,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     region_shiny_data = full_pokemon_shiny_data
 
     if dm_user:
-        cur.execute("SELECT region FROM user_regions WHERE user_id = ?", (str(dm_user.id),))
+        cur.execute("SELECT region FROM user_regions WHERE user_id = %s", (str(dm_user.id),))
         row = cur.fetchone()
         user_region = row[0] if row else None
 
