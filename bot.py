@@ -76,7 +76,7 @@ DEFAULT_SHINY_RATE = 64
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-
+dm_spawn_tasks = {}  # { member_id: asyncio.Task }
 
 
 # Chargement des données Pokémon (chemin absolu du script)
@@ -543,48 +543,70 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
 ####################################################################################################################        
 
 
-'''
+
 @tasks.loop(seconds=120)
 async def check_voice_channel():
     bot.last_check_voice_time = time.time()
-    # Exemple simple pour un serveur avec ID et channels fixes
     vc = bot.get_channel(VOICE_CHANNEL_ID)
     channel = bot.get_channel(TEXT_CHANNEL_ID)
-
     if channel is None or vc is None:
         return
 
     guild_id = channel.guild.id
+    members_in_vc = [m for m in vc.members if not m.bot]
 
-    if len(vc.members) > 0:
-        if guild_id not in spawn_task or spawn_task[guild_id] is None:
-            if current_auto_pokemon.get(guild_id) is None:
-                wait_time = random.randint(600,1200)  # 10 à 20 minutes
-                minutes, seconds = divmod(wait_time, 60)  # ✅ calcule minutes et secondes
-                print(f"[INFO] Spawn automatique prévu dans {minutes} min {seconds} sec.")
-                spawn_task[guild_id] = asyncio.create_task(wait_and_spawn(wait_time, channel))
+    if len(members_in_vc) > 0:
+        # Lance une tâche individuelle pour chaque membre qui n'en a pas encore
+        for member in members_in_vc:
+            if member.id not in dm_spawn_tasks or dm_spawn_tasks[member.id] is None or dm_spawn_tasks[member.id].done():
+                wait_time = random.randint(1800, 2400)  # 30 à 40 minutes
+                minutes, seconds = divmod(wait_time, 60)
+                print(f"[INFO] Spawn DM prévu pour {member.display_name} dans {minutes} min {seconds} sec.")
+                dm_spawn_tasks[member.id] = asyncio.create_task(
+                    wait_and_spawn_dm(wait_time, channel, member)
+                )
     else:
-        if guild_id in spawn_task and spawn_task[guild_id] is not None and not spawn_task[guild_id].done():
-            spawn_task[guild_id].cancel()
-            
-            spawn_task[guild_id] = None
+        # Plus personne en vocal : on annule toutes les tâches DM en cours
+        for member_id, task in list(dm_spawn_tasks.items()):
+            if task is not None and not task.done():
+                task.cancel()
+                print(f"[INFO] Tâche DM annulée pour le membre {member_id} (vocal vide).")
+            dm_spawn_tasks[member_id] = None
 
 
-async def wait_and_spawn(wait_time, channel):
-    guild_id = channel.guild.id
+async def wait_and_spawn_dm(wait_time, channel, member: discord.Member):
     try:
         for remaining in range(wait_time, 0, -1):
-            spawn_remaining_time[guild_id] = remaining
             await asyncio.sleep(1)
-        spawn_remaining_time[guild_id] = 0
-        await spawn_pokemon(channel)
+
+            # Si le membre a quitté le vocal entre-temps, on arrête
+            vc = bot.get_channel(VOICE_CHANNEL_ID)
+            if vc is None or member not in vc.members:
+                print(f"[INFO] {member.display_name} a quitté le vocal, spawn DM annulé.")
+                return
+
+        # Spawn dans les DM du membre
+        await spawn_pokemon(channel=channel, dm_user=member)
+        print(f"[INFO] Pokémon spawné en DM pour {member.display_name}.")
+
+        # Relance automatiquement un nouveau compteur
+        vc = bot.get_channel(VOICE_CHANNEL_ID)
+        if vc and member in vc.members:
+            new_wait = random.randint(1800, 2400)
+            minutes, seconds = divmod(new_wait, 60)
+            print(f"[INFO] Prochain spawn DM pour {member.display_name} dans {minutes} min {seconds} sec.")
+            dm_spawn_tasks[member.id] = asyncio.create_task(
+                wait_and_spawn_dm(new_wait, channel, member)
+            )
+        else:
+            dm_spawn_tasks[member.id] = None
+
     except asyncio.CancelledError:
         pass
-    except Exception:
-        pass
+    except Exception as e:
+        print(f"[ERREUR wait_and_spawn_dm] {e}")
     finally:
-        spawn_task[guild_id] = None
-'''        
+        pass
 
 
 
