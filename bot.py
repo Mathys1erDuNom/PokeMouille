@@ -1002,6 +1002,11 @@ setup_inventory(bot)
 
 setup_regions()
 
+# 👇 Ajoute ces deux lignes
+import asyncio
+asyncio.get_event_loop().run_until_complete(bot.load_extension("fishing"))
+
+
 @bot.command()
 async def region(ctx):
     await region_command(ctx)
