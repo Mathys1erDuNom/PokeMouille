@@ -49,6 +49,20 @@ from shop_view import setup_shop
 from badge_view import setup_badges
 from regions import setup_regions, region_command
 
+import os
+import psycopg2
+import discord
+from discord.ui import Select, View
+from dotenv import load_dotenv
+
+load_dotenv()
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+conn = psycopg2.connect(DATABASE_URL, sslmode="require")
+cur = conn.cursor()
+
+
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
 
