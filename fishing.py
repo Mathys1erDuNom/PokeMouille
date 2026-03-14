@@ -10,7 +10,7 @@ from discord.ext import commands
 # -----------------------
 FISH_TIMER_MIN = 60
 FISH_TIMER_MAX = 300
-SHINY_RATE = 1 / 512
+SHINY_RATE = 1 / 64
 NO_CATCH_RATE = 0.35
 
 JSON_DIR = os.path.join(os.path.dirname(__file__), "json")
