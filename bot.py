@@ -441,9 +441,13 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     pokemon_instance["ivs"] = ivs
     pokemon_instance["stats_iv"] = stats_with_iv
 
-    current_pokemon_data[guild_id] = pokemon_instance
-    pokemon_caught[guild_id] = False
-    spawn_origin_manual[guild_id] = force
+    if dm_user:
+        current_pokemon_data[dm_user.id] = pokemon_instance
+        pokemon_caught[dm_user.id] = False
+    else:
+        current_pokemon_data[guild_id] = pokemon_instance
+        pokemon_caught[guild_id] = False
+        spawn_origin_manual[guild_id] = force
 
     if target_user:
         allowed_user[guild_id] = target_user.id
@@ -508,22 +512,17 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     # -----------------------
     # ENVOI SUR LE CHANNEL
     # -----------------------
-    try:
-        channel_embed = discord.Embed(title=title, color=color)
+    if not dm_user:
+        try:
+            channel_embed = discord.Embed(title=title, description=description, color=color)
+            channel_embed.set_image(url="attachment://spawn.png")
 
-        if dm_user:
-            channel_embed.description = f"🔒 Un Pokémon a été envoyé en DM à **{dm_user.display_name}** !"
-        else:
-            channel_embed.description = description
+            file_channel = discord.File(fp=BytesIO(composed_file_bytes), filename="spawn.png")
+            content = f"<@&{ROLE_ID}>"
+            await channel.send(content=content, embed=channel_embed, file=file_channel)
 
-        channel_embed.set_image(url="attachment://spawn.png")
-
-        file_channel = discord.File(fp=BytesIO(composed_file_bytes), filename="spawn.png")
-        content = f"<@&{ROLE_ID}>"
-        await channel.send(content=content, embed=channel_embed, file=file_channel)
-
-    except Exception as e:
-        print(f"[ERREUR ENVOI CHANNEL] {e}")
+        except Exception as e:
+            print(f"[ERREUR ENVOI CHANNEL] {e}")
 
     # -----------------------
     # ENVOI EN DM
@@ -672,55 +671,73 @@ def is_under_ban(guild_id, user_id):
 
 @bot.command()
 async def catch(ctx):
-    guild_id = ctx.guild.id
-    trace_id = str(uuid.uuid4())[:8]  # identifiant court unique pour ce catch
-    
-    # 🔒 Empêche les captures simultanées sur ce serveur
-    if guild_id in catch_in_progress:
+    # Détermine si on est en DM ou sur un serveur
+    is_dm = isinstance(ctx.channel, discord.DMChannel)
+
+    if is_dm:
+        lookup_id = ctx.author.id
+        guild_id = None
+    else:
+        guild_id = ctx.guild.id
+        lookup_id = guild_id
+
+    trace_id = str(uuid.uuid4())[:8]
+
+    # 🔒 Empêche les captures simultanées
+    if lookup_id in catch_in_progress:
         return
-    catch_in_progress.add(guild_id)
-    
+    catch_in_progress.add(lookup_id)
+
     try:
-        # Vérifie le ban
-        if is_under_ban(guild_id, ctx.author.id):
+        # Vérifie le ban (seulement sur serveur)
+        if not is_dm and is_under_ban(guild_id, ctx.author.id):
             print(f"[TRACE {trace_id}] [LOG] Joueur sous ban, refus.")
             await ctx.send("⏳ Tu es sous ban. Attends encore un peu avant de répondre.")
             return
-        
-        # Vérifie la présence dans le salon vocal
-        vc = bot.get_channel(VOICE_CHANNEL_ID)
-        if vc is None:
-            print(f"[TRACE {trace_id}] [LOG] Salon vocal introuvable")
-            await ctx.send("❌ Salon vocal introuvable.")
-            return
-        
-        if ctx.author.id != TARGET_USER_ID_CROCO and ctx.author not in vc.members:
-            print(f"[TRACE {trace_id}] [LOG] Auteur pas dans le salon vocal.")
-            await ctx.send("❌ Tu dois être dans le salon vocal pour capturer un Pokémon.")
-            return
-        
+
+        # Vérifie la présence dans le salon vocal (seulement sur serveur)
+        if not is_dm:
+            vc = bot.get_channel(VOICE_CHANNEL_ID)
+            if vc is None:
+                print(f"[TRACE {trace_id}] [LOG] Salon vocal introuvable")
+                await ctx.send("❌ Salon vocal introuvable.")
+                return
+            if ctx.author.id != TARGET_USER_ID_CROCO and ctx.author not in vc.members:
+                print(f"[TRACE {trace_id}] [LOG] Auteur pas dans le salon vocal.")
+                await ctx.send("❌ Tu dois être dans le salon vocal pour capturer un Pokémon.")
+                return
+
         # Vérifie qu'un Pokémon est présent
-        current = current_pokemon.get(guild_id)
-        if current is None:
-            if pokemon_caught.get(guild_id, False):
-                print(f"[TRACE {trace_id}] [LOG] Aucun Pokémon mais déjà capturé, on ne dit rien.")
+        if is_dm:
+            current = current_pokemon_data.get(lookup_id)
+            if current is None or pokemon_caught.get(lookup_id, False):
+                if pokemon_caught.get(lookup_id, False):
+                    print(f"[TRACE {trace_id}] [LOG] Pokémon déjà capturé en DM.")
+                    return
+                await ctx.send(f"❌ Aucun Pokémon à capturer. [TRACE {trace_id}]")
                 return
-            print(f"[TRACE {trace_id}] [LOG] Aucun Pokémon à capturer -> Envoi du message d'erreur.")
-            await ctx.send(f"❌ Aucun Pokémon à capturer. [TRACE {trace_id}]")
-            return
-        
-        # Vérifie la restriction d'utilisateur
-        if guild_id in allowed_user:
-            if ctx.author.id != allowed_user[guild_id]:
-                allowed_name = ctx.guild.get_member(allowed_user[guild_id]).display_name
-                print(f"[TRACE {trace_id}] [LOG] Pokémon réservé à un autre joueur ({allowed_user[guild_id]} / {allowed_name})")
-                await ctx.send(f"❌ Seul {allowed_name} peut capturer ce Pokémon.")
+            pokemon_data = current
+            pokemon_name = pokemon_data["name"]
+        else:
+            current = current_pokemon.get(guild_id)
+            if current is None:
+                if pokemon_caught.get(guild_id, False):
+                    print(f"[TRACE {trace_id}] [LOG] Aucun Pokémon mais déjà capturé, on ne dit rien.")
+                    return
+                await ctx.send(f"❌ Aucun Pokémon à capturer. [TRACE {trace_id}]")
                 return
-        
-        # On a bien un Pokémon
-        pokemon_name = current
-        pokemon_data = current_pokemon_data[guild_id]
-        
+
+            # Vérifie la restriction d'utilisateur (seulement sur serveur)
+            if guild_id in allowed_user:
+                if ctx.author.id != allowed_user[guild_id]:
+                    allowed_name = ctx.guild.get_member(allowed_user[guild_id]).display_name
+                    print(f"[TRACE {trace_id}] [LOG] Pokémon réservé à {allowed_name}")
+                    await ctx.send(f"❌ Seul {allowed_name} peut capturer ce Pokémon.")
+                    return
+
+            pokemon_name = current
+            pokemon_data = current_pokemon_data[guild_id]
+
         # Envoi du message Pokéball
         embed_pokeball = discord.Embed(
             description=f"**{ctx.author.display_name} lance une Pokéball !**",
@@ -729,17 +746,16 @@ async def catch(ctx):
         if pokeball_url:
             embed_pokeball.set_thumbnail(url=pokeball_url)
         await ctx.send(embed=embed_pokeball)
-        
+
         # Sauvegarde
         ivs = pokemon_data.get("ivs", {})
         stats_with_iv = pokemon_data.get("stats_iv", pokemon_data["stats"])
         save_new_capture(ctx.author.id, pokemon_name, ivs, stats_with_iv, pokemon_data)
-        
-        # 💰 Récompense en argent pour la capture
-        reward_amount = 20  # Vous pouvez ajuster le montant
+
+        # 💰 Récompense
+        reward_amount = 20
         new_balance = add_money(ctx.author.id, reward_amount)
-        
-        # Envoi du message de capture avec la récompense
+
         embed_captured = discord.Embed(
             description=(
                 f"🎉 **{ctx.author.display_name} a capturé {pokemon_name} !\n"
@@ -752,13 +768,16 @@ async def catch(ctx):
         if pokemon_data.get("image", ""):
             embed_captured.set_image(url=pokemon_data["image"])
         await ctx.send(embed=embed_captured)
-        
-        # Reset du spawn
-        reset_spawn(guild_id)
-        
-    finally:
-        catch_in_progress.discard(guild_id)
 
+        # Reset du spawn
+        if is_dm:
+            pokemon_caught[lookup_id] = True
+            current_pokemon_data.pop(lookup_id, None)
+        else:
+            reset_spawn(guild_id)
+
+    finally:
+        catch_in_progress.discard(lookup_id)
 
 
 @bot.command()
