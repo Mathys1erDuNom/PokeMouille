@@ -47,7 +47,7 @@ from money_db import add_money
 from shop_view import setup_shop
 
 from badge_view import setup_badges
-from regions_system import setup_regions, region_command
+from regions import setup_regions, region_command
 
 # Ici, déclare la constante globale :
 CHECK_VOICE_CHANNEL_INTERVAL = 120  # secondes
