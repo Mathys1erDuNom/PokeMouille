@@ -180,68 +180,106 @@ pokeball_url = next((item["image"] for item in items_data if item["name"].lower(
 
 
 #####################################
-# --- 🔥 AJOUT DES FICHIERS GEN 1 ---
+# --- 🔥 GEN 1 — KANTO ---
 #####################################
 pokemon_file_path = os.path.join(json_dir, "pokemon_gen1_normal.json")
+with open(pokemon_file_path, "r", encoding="utf-8") as f:
+    kanto_pokemon_data = json.load(f)
 
 with open(os.path.join(json_dir, "pokemon_gen1_shiny.json"), "r", encoding="utf-8") as f:
-    full_pokemon_shiny_data = json.load(f)
-
-with open(pokemon_file_path, "r", encoding="utf-8") as f:
-    full_pokemon_data = json.load(f)
+    kanto_shiny_data = json.load(f)
 
 #####################################
-# --- 🔥 AJOUT DES FICHIERS GEN 2 ---
+# --- 🔥 GEN 2 — JOHTO ---
 #####################################
+johto_pokemon_data = []
+johto_shiny_data = []
 
 gen2_normal_path = os.path.join(json_dir, "pokemon_gen2_normal.json")
 if os.path.exists(gen2_normal_path):
     with open(gen2_normal_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        full_pokemon_data.extend(data)
-        
+        johto_pokemon_data = json.load(f)
+
 gen2_shiny_path = os.path.join(json_dir, "pokemon_gen2_shiny.json")
 if os.path.exists(gen2_shiny_path):
     with open(gen2_shiny_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        full_pokemon_shiny_data.extend(data)
-        
+        johto_shiny_data = json.load(f)
 
 #####################################
-# --- 🔥 AJOUT DES FICHIERS GEN 3 ---
+# --- 🔥 GEN 3 — HOENN ---
 #####################################
+hoenn_pokemon_data = []
+hoenn_shiny_data = []
 
 gen3_normal_path = os.path.join(json_dir, "pokemon_gen3_normal.json")
 if os.path.exists(gen3_normal_path):
     with open(gen3_normal_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        full_pokemon_data.extend(data)
-        
+        hoenn_pokemon_data = json.load(f)
+
 gen3_shiny_path = os.path.join(json_dir, "pokemon_gen3_shiny.json")
 if os.path.exists(gen3_shiny_path):
     with open(gen3_shiny_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        full_pokemon_shiny_data.extend(data)
-
+        hoenn_shiny_data = json.load(f)
 
 #####################################
-# --- 🔥 AJOUT DES FICHIERS GEN 4 ---
+# --- 🔥 GEN 4 — SINNOH ---
 #####################################
+sinnoh_pokemon_data = []
+sinnoh_shiny_data = []
 
 gen4_normal_path = os.path.join(json_dir, "pokemon_gen4_normal.json")
 if os.path.exists(gen4_normal_path):
     with open(gen4_normal_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        full_pokemon_data.extend(data)
-        
+        sinnoh_pokemon_data = json.load(f)
+
 gen4_shiny_path = os.path.join(json_dir, "pokemon_gen4_shiny.json")
 if os.path.exists(gen4_shiny_path):
     with open(gen4_shiny_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        full_pokemon_shiny_data.extend(data)
+        sinnoh_shiny_data = json.load(f)
+'''
+#####################################
+# --- 🔥 GEN 5 — UNYS ---
+#####################################
+unys_pokemon_data = []
+unys_shiny_data = []
 
-##############################################################
-##############################################################
+gen5_normal_path = os.path.join(json_dir, "pokemon_gen5_normal.json")
+if os.path.exists(gen5_normal_path):
+    with open(gen5_normal_path, "r", encoding="utf-8") as f:
+        unys_pokemon_data = json.load(f)
+
+gen5_shiny_path = os.path.join(json_dir, "pokemon_gen5_shiny.json")
+if os.path.exists(gen5_shiny_path):
+    with open(gen5_shiny_path, "r", encoding="utf-8") as f:
+        unys_shiny_data = json.load(f)
+'''
+#####################################
+# --- 🔥 POOLS GLOBAUX (toutes régions) ---
+#####################################
+full_pokemon_data = (
+    kanto_pokemon_data +
+    johto_pokemon_data +
+    hoenn_pokemon_data +
+    sinnoh_pokemon_data 
+)
+
+full_pokemon_shiny_data = (
+    kanto_shiny_data +
+    johto_shiny_data +
+    hoenn_shiny_data +
+    sinnoh_shiny_data 
+)
+
+#####################################
+# --- 🔥 MAPPING RÉGION → VARIABLES ---
+#####################################
+REGION_DATA_MAP = {
+    "Kanto": (kanto_pokemon_data, kanto_shiny_data),
+    "Johto": (johto_pokemon_data, johto_shiny_data),
+    "Hoenn": (hoenn_pokemon_data, hoenn_shiny_data),
+    "Sinnoh": (sinnoh_pokemon_data, sinnoh_shiny_data)
+
+}
         
 full_pokedex = full_pokemon_data.copy() 
         #####################################
@@ -306,10 +344,11 @@ def apply_ivs(base_stats, ivs):
         for stat in base_stats
     }
 
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################
 
-
-
-async def spawn_pokemon(channel, force=False, author=None, target_user: discord.Member = None, pokemon_name: str = None, shiny_rate=64):
+async def spawn_pokemon(channel, force=False, author=None, target_user: discord.Member = None, pokemon_name: str = None, shiny_rate=64, dm_user: discord.Member = None):
     guild_id = channel.guild.id
 
     # Gestion des spawns manuel vs auto
@@ -321,26 +360,49 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
             print(f"[INFO] Un Pokémon auto est déjà présent sur le serveur {guild_id}, on ne remplace pas.")
             return
 
-    # Choix du Pokémon
+    # -----------------------
+    # FILTRAGE PAR RÉGION
+    # -----------------------
+    region_pokemon_data = full_pokemon_data
+    region_shiny_data = full_pokemon_shiny_data
+
+    if dm_user:
+        cur.execute("SELECT region FROM user_regions WHERE user_id = ?", (str(dm_user.id),))
+        row = cur.fetchone()
+        user_region = row[0] if row else None
+
+        if user_region and user_region in REGION_DATA_MAP:
+            region_pokemon_data, region_shiny_data = REGION_DATA_MAP[user_region]
+
+            # Sécurité : si la liste est vide, fallback sur le pool global
+            if not region_pokemon_data:
+                region_pokemon_data = full_pokemon_data
+                region_shiny_data = full_pokemon_shiny_data
+
+    # -----------------------
+    # CHOIX DU POKÉMON
+    # -----------------------
     if pokemon_name:
-        pokemon = next((p for p in full_pokemon_data if p["name"].lower() == pokemon_name.lower()), None)
+        pokemon = next((p for p in region_pokemon_data if p["name"].lower() == pokemon_name.lower()), None)
         if not pokemon:
-            await channel.send(f"❌ Le Pokémon {pokemon_name} est introuvable.")
+            await channel.send(f"❌ Le Pokémon `{pokemon_name}` est introuvable dans cette région.")
             return
 
         is_shiny = (random.randint(1, shiny_rate) == 1)
         if is_shiny:
-            shiny_match = next((p for p in full_pokemon_shiny_data if p["name"].lower().replace("_shiny", "") == pokemon_name.lower()), None)
+            shiny_match = next((p for p in region_shiny_data if p["name"].lower().replace("_shiny", "") == pokemon_name.lower()), None)
             if shiny_match:
                 pokemon = shiny_match
 
         print(f"[DEBUG] shiny_rate={shiny_rate}, is_shiny={is_shiny}, pokemon={pokemon['name']}".encode('utf-8', errors='replace').decode('utf-8'))
     else:
         is_shiny = (random.randint(1, shiny_rate) == 1)
-        pokemon = random.choice(full_pokemon_shiny_data if is_shiny else full_pokemon_data)
+        pokemon = random.choice(region_shiny_data if is_shiny else region_pokemon_data)
         print(f"[DEBUG] shiny_rate={shiny_rate}, is_shiny={is_shiny}, pokemon={pokemon['name']}".encode('utf-8', errors='replace').decode('utf-8'))
 
-    # Nom du Pokémon affiché
+    # -----------------------
+    # NOM AFFICHÉ
+    # -----------------------
     if is_shiny and not pokemon["name"].endswith("_shiny"):
         pokemon_name_spawned = pokemon["name"] + "_shiny"
     else:
@@ -352,7 +414,9 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
         current_auto_pokemon[guild_id] = pokemon_name_spawned
         current_pokemon[guild_id] = pokemon_name_spawned
 
-    # 🎯 Ajout des IV et stats finales
+    # -----------------------
+    # IV ET STATS
+    # -----------------------
     ivs = generate_ivs()
     stats_with_iv = apply_ivs(pokemon["stats"], ivs)
 
@@ -369,59 +433,114 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     else:
         allowed_user.pop(guild_id, None)
 
-    # 📢 Préparation de l'embed de spawn
+    # -----------------------
+    # CONSTRUCTION DE L'EMBED
+    # -----------------------
     if is_shiny:
         display_name = pokemon["name"].replace("_shiny", "") + " ✨"
-        title = f"✨ **Un {display_name} brillant sauvage apparaît** grâce à {author.display_name} !" if author else f"✨ **Un {display_name} brillant sauvage est apparu !**"
-        description = "C'est un Pokémon BRILLANT ! Tape vite ! !catch pour le capturer !"
+        title = (
+            f"✨ **Un {display_name} brillant sauvage apparaît** grâce à {author.display_name} !"
+            if author else
+            f"✨ **Un {display_name} brillant sauvage est apparu !**"
+        )
+        description = "C'est un Pokémon BRILLANT ! Tape vite `!catch` pour le capturer !"
         color = 0xFFD700
     else:
         display_name = pokemon["name"]
-        title = f"⚡ Un {display_name} sauvage apparaît grâce à {author.display_name} !" if author else f"Un {display_name} sauvage est apparu !"
-        description = "Tape !catch pour le capturer !"
+        title = (
+            f"⚡ Un **{display_name}** sauvage apparaît grâce à {author.display_name} !"
+            if author else
+            f"Un **{display_name}** sauvage est apparu !"
+        )
+        description = "Tape `!catch` pour le capturer !"
         color = 0x00FF00
 
     if target_user:
-        title += f"\n🎯 Seul {target_user.display_name} peut le capturer !"
+        title += f"\n🎯 Seul **{target_user.display_name}** peut le capturer !"
 
-    embed = discord.Embed(title=title, description=description, color=color)
+    # -----------------------
+    # CRÉATION DE L'IMAGE
+    # -----------------------
+    composed_file_bytes = None
 
-    # 📷 Création de l'image spawn
     try:
-        background = get_background_image_for_pokemon(pokemon)  # <= fond selon type(s)
-
+        background = get_background_image_for_pokemon(pokemon)
         poke_url = pokemon.get("image", "")
-        if poke_url.startswith("http"):
-            response = requests.get(poke_url, timeout=15)
-            pokemon_img = Image.open(BytesIO(response.content)).convert("RGBA").resize((392, 392))
 
-            composed = background.copy()
-            x = (background.width - pokemon_img.width) // 2
-            y = (background.height - pokemon_img.height) // 2
-            composed.paste(pokemon_img, (x, y), pokemon_img)
+        if not poke_url.startswith("http"):
+            await channel.send("❌ Erreur : image du Pokémon invalide.")
+            return
 
-            output = BytesIO()
-            composed.save(output, format="PNG")
-            output.seek(0)
+        response = requests.get(poke_url, timeout=15)
+        pokemon_img = Image.open(BytesIO(response.content)).convert("RGBA").resize((392, 392))
 
-            file = discord.File(fp=output, filename="spawn.png")
-            content = f"<@&{ROLE_ID}>"
-            embed.set_image(url="attachment://spawn.png")
+        composed = background.copy()
+        x = (background.width - pokemon_img.width) // 2
+        y = (background.height - pokemon_img.height) // 2
+        composed.paste(pokemon_img, (x, y), pokemon_img)
 
-            await channel.send(content=content, embed=embed, file=file)
-        else:
-            await channel.send("Erreur : image du Pokémon invalide.")
+        output = BytesIO()
+        composed.save(output, format="PNG")
+        composed_file_bytes = output.getvalue()
+
     except Exception as e:
         await channel.send("❌ Erreur lors de la création de l'image.")
         print(f"[ERREUR IMAGE SPAWN] {e}")
+        return
 
+    # -----------------------
+    # ENVOI SUR LE CHANNEL
+    # -----------------------
+    try:
+        channel_embed = discord.Embed(title=title, color=color)
 
+        if dm_user:
+            channel_embed.description = f"🔒 Un Pokémon a été envoyé en DM à **{dm_user.display_name}** !"
+        else:
+            channel_embed.description = description
 
+        channel_embed.set_image(url="attachment://spawn.png")
 
+        file_channel = discord.File(fp=BytesIO(composed_file_bytes), filename="spawn.png")
+        content = f"<@&{ROLE_ID}>"
+        await channel.send(content=content, embed=channel_embed, file=file_channel)
 
+    except Exception as e:
+        print(f"[ERREUR ENVOI CHANNEL] {e}")
+
+    # -----------------------
+    # ENVOI EN DM
+    # -----------------------
+    if dm_user:
+        try:
+            dm_embed = discord.Embed(title=title, description=description, color=color)
+            dm_embed.set_image(url="attachment://spawn.png")
+
+            if target_user:
+                dm_embed.add_field(
+                    name="🎯 Restriction",
+                    value=f"Seul **{target_user.display_name}** peut capturer ce Pokémon.",
+                    inline=False
+                )
+
+            file_dm = discord.File(fp=BytesIO(composed_file_bytes), filename="spawn.png")
+            await dm_user.send(embed=dm_embed, file=file_dm)
+
+        except discord.Forbidden:
+            await channel.send(f"⚠️ Impossible d'envoyer un DM à **{dm_user.display_name}** (DMs désactivés).")
+        except Exception as e:
+            print(f"[ERREUR ENVOI DM] {e}")
+
+    # -----------------------
+    # RESET SHINY RATE
+    # -----------------------
     if force:
         global DEFAULT_SHINY_RATE
         DEFAULT_SHINY_RATE = 64
+
+####################################################################################################################
+####################################################################################################################
+####################################################################################################################        
 
 
 '''
