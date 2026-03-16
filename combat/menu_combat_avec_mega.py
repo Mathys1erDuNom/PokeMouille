@@ -112,14 +112,24 @@ class ValidateButton(Button):
         
         user_id = str(interaction.user.id)
         all_captures = get_new_captures(user_id)
-        
-        # Crée la liste ordonnée des Pokémon pour le combat
+
+        # Construit un index nom -> liste de pokémons (pour gérer les doublons)
+        from collections import defaultdict
+        name_to_pokemons = defaultdict(list)
+        for p in all_captures:
+            name_to_pokemons[p.get("name")].append(p)
+
+        # Compteur pour piocher dans l'ordre en cas de doublons
+        name_usage_count = defaultdict(int)
+
         selected_pokemons = []
         for name in unique_selected:
-            for p in all_captures:
-                if p.get("name") == name:
-                    selected_pokemons.append(p)
-                    break
+            matches = name_to_pokemons.get(name, [])
+            count = name_usage_count[name]
+            if count < len(matches):
+                selected_pokemons.append(matches[count])
+                name_usage_count[name] += 1    
+
         
         # 🔒 Sécurité : aucun Pokémon valide trouvé
         if not selected_pokemons:
@@ -142,12 +152,15 @@ class ValidateButton(Button):
             bot_name = "Bot"
             bot_repliques = {}
         
+        pokemon_reward_index = adversaire.get("pokemon_reward_index", 0) if adversaire else 0
+
         await start_battle_turn_based(
             interaction,
-            selected_pokemons,
-            bot_team,
+            player_team=selected_pokemons,
+            bot_team=bot_team,
             adversaire_name=bot_name,
-            repliques=bot_repliques
+            repliques=bot_repliques,
+            pokemon_reward_index=pokemon_reward_index
         )
 
 class AdversaireSelect(Select):
@@ -181,10 +194,13 @@ class SelectionView(View):
         
         # Découpe en options (25 max par menu)
         self.chunk_size = 25
+        # Dans SelectionView.__init__, remplace la construction des option_chunks :
+        # Dans SelectionView.__init__, remplace la construction des option_chunks :
+        all_pokemons = list(enumerate(pokemons))  # (index_global, name)
         self.option_chunks = [
-            [discord.SelectOption(label=name, value=name) 
-             for name in pokemons[i:i + self.chunk_size]]
-            for i in range(0, len(pokemons), self.chunk_size)
+            [discord.SelectOption(label=name, value=str(idx))
+            for idx, name in all_pokemons[i:i + self.chunk_size]]
+            for i in range(0, len(all_pokemons), self.chunk_size)
         ]
         
         # Pagination : 4 menus/page (lignes 0..3), ligne 4 pour les boutons

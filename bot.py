@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 import time
 from PIL import Image, ImageDraw, ImageFont
 
-from combat.menu_combat_sans_mega import SelectionView
+from combat.menu_combat import SelectionView
 
 import stat
 

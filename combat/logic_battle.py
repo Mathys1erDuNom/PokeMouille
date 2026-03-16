@@ -18,55 +18,59 @@ badges_path = os.path.join(script_dir, "..", "json", "badges.json")
 with open(badges_path, "r", encoding="utf-8") as f:
     BADGE_DATA = json.load(f)
 
+# Dictionnaire qui lie le nom de l'adversaire à l'ID du badge
+BADGES_ADVERSAIRES = {
+    "Roxanne (Roche)": 17,   # ID du badge Roche
+    "Bastien (Combat)": 18,
+    "Voltère (Electrique)": 19,
+    "Adriane (Feu)": 20, # ID du badge Cascade
+    "Norman (Normal)" : 21,
+    "Alizée (Vol)" : 22,
+    "Lévy&Tatia (Psy)" : 23,
+    "Juan (Eau)": 24
+    # ajouter d'autres si nécessaire
+}
 
 
-async def handle_victory(interaction, adversaire_name, bot_team=None, pokemon_reward_index=0, repliques=None):
+async def handle_victory(interaction, adversaire_name, repliques=None):
     repliques = repliques or {}
+
+    badge_id = BADGES_ADVERSAIRES.get(adversaire_name)
     user_id = str(interaction.user.id)
 
-    # 🎁 Récompense : un Pokémon de l'équipe adverse
-    if bot_team and pokemon_reward_index < len(bot_team):
-        reward_pokemon = bot_team[pokemon_reward_index]
-        pokemon_name = reward_pokemon["name"]
+    if badge_id:
+        user_badges = get_user_badges(user_id)
+        badge_info = next((b for b in BADGE_DATA if b["id"] == badge_id), None)
 
-        # Génère des IV aléatoires
-        import random
-        ivs = {
-            "hp": random.randint(0, 31),
-            "attack": random.randint(0, 31),
-            "defense": random.randint(0, 31),
-            "special_attack": random.randint(0, 31),
-            "special_defense": random.randint(0, 31),
-            "speed": random.randint(0, 31),
-        }
+        if badge_info:
+            badge_image_path = os.path.join(script_dir, "..", badge_info["image"])
+            file = discord.File(badge_image_path, filename="badge.png")
 
-        # Stats finales = stats de base + IV
-        final_stats = {stat: reward_pokemon["stats"].get(stat, 0) + ivs[stat] for stat in ivs}
+            if badge_id not in user_badges:
+                give_badge(user_id, badge_id)
+                reward = 500
+                add_money(user_id, reward)
 
-        from new_db import save_new_capture
-        save_new_capture(user_id, pokemon_name, ivs, final_stats, reward_pokemon)
-
-        emb = discord.Embed(
-            title=f"🎉 Tu as obtenu {pokemon_name} !",
-            description=f"**{adversaire_name}** t'a remis son **{pokemon_name}** en signe de respect !",
-            color=0xFFD700
-        )
-        if reward_pokemon.get("image"):
-            emb.set_image(url=reward_pokemon["image"])
-        emb.add_field(name="IVs", value=" | ".join(f"{k}: {v}" for k, v in ivs.items()), inline=False)
-
-        add_money(user_id, 50)
-        emb.add_field(name="💰 Récompense", value="**50** Croco dollars !", inline=False)
-
-        await interaction.channel.send(embed=emb)
-    else:
-        add_money(user_id, 10)
-        await interaction.channel.send(f"💰 Tu reçois **10** Croco dollars.")
+                emb = discord.Embed(
+                    title=f"🏅 Nouveau Badge : {badge_info['name']}",
+                    description=f"{badge_info.get('description','')}\n💰 Vous gagnez **{reward}** Croco dollars !",
+                    color=0xFFD700
+                )
+                emb.set_image(url="attachment://badge.png")
+                await interaction.channel.send(file=file, embed=emb)
+            else:
+                reward = 10
+                add_money(user_id, reward)
+                await interaction.channel.send(
+                    f"🎉 Tu as déjà le badge **{badge_info['name']}**.\n"
+                    f"💰 Tu reçois **{reward}** Croco dollars."
+                )
 
     if repliques.get("lose"):
         await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
 
     await interaction.channel.send("🎉 **Victoire du joueur !**")
+
 
 
 # ✨ NEW: petite fonction utilitaire pour afficher les effets
@@ -148,11 +152,8 @@ async def prompt_player_action(interaction, state):
 
 
 
-async def start_battle_turn_based(interaction, player_team, bot_team, adversaire_name="Bot", repliques=None, pokemon_reward_index=0):
-    
+async def start_battle_turn_based(interaction, player_team, bot_team, adversaire_name="Bot", repliques=None):
     repliques = repliques or {}
-    # ✅ Priorité à l'index défini dans les répliques du boss
-    pokemon_reward_index = repliques.get("pokemon_reward_index", pokemon_reward_index)
 
     if repliques.get("start"):
         await interaction.channel.send(
@@ -207,7 +208,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                         
                             # -----------------------
 
-                            await handle_victory(interaction, adversaire_name, bot_team=bot_team, pokemon_reward_index=pokemon_reward_index, repliques=repliques)
+                            await handle_victory(interaction, adversaire_name, repliques)
                             return
                         else:
                                 fields.append((
@@ -307,7 +308,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                             embed = build_turn_embed(state, tour, fields,  adversaire_name)
                             await interaction.channel.send(embed=embed)
                             
-                            await handle_victory(interaction, adversaire_name, bot_team=bot_team, pokemon_reward_index=pokemon_reward_index, repliques=repliques)
+                            await handle_victory(interaction, adversaire_name, repliques)
                             return
                         else:
                             fields.append((

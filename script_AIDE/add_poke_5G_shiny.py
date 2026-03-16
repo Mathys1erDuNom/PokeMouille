@@ -2,7 +2,7 @@ import requests
 import json
 import time
 
-# Pokémon de la génération 5 (Sinnoh) : IDs 494 à 649
+# Pokémon de la génération 4 (Sinnoh) : IDs 387 à 
 GEN4_START = 387
 GEN4_END = 493
 

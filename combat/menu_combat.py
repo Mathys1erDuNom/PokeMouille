@@ -4,21 +4,33 @@ from math import ceil
 from new_db import get_new_captures
 import json
 import os
-from combat.logic_battle_sans_mega import start_battle_turn_based
+from combat.logic_battle_avec_mega import start_battle_turn_based
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-ADVERSAIRES_FILE = os.path.join(script_dir, "../json/adversaires.json")
 
-def get_all_adversaires():
-    with open(ADVERSAIRES_FILE, "r", encoding="utf-8") as f:
+
+# Remplace l'import et la fonction existante
+from regions import get_user_region  # ton fichier de gestion des régions
+
+ADVERSAIRES_DIR = os.path.join(script_dir, "../json/adversaires")
+
+def get_adversaires_by_region(region: str):
+    """Charge le fichier d'adversaires correspondant à la région."""
+    if not region:
+        return []
+    filename = os.path.join(ADVERSAIRES_DIR, f"{region.lower()}.json")
+    if not os.path.exists(filename):
+        return []
+    with open(filename, "r", encoding="utf-8") as f:
         return json.load(f)
 
 def get_adversaire_by_name(name: str):
-    adversaires = get_all_adversaires()
+    adversaires = get_adversaires_by_region()
     for adv in adversaires:
         if adv["name"].lower() == name.lower():
             return adv
     return None
+
 
 # ---- Menus ----
 class PokemonSelectMenu(Select):
@@ -112,24 +124,14 @@ class ValidateButton(Button):
         
         user_id = str(interaction.user.id)
         all_captures = get_new_captures(user_id)
-
-        # Construit un index nom -> liste de pokémons (pour gérer les doublons)
-        from collections import defaultdict
-        name_to_pokemons = defaultdict(list)
-        for p in all_captures:
-            name_to_pokemons[p.get("name")].append(p)
-
-        # Compteur pour piocher dans l'ordre en cas de doublons
-        name_usage_count = defaultdict(int)
-
+        
+        # Crée la liste ordonnée des Pokémon pour le combat
         selected_pokemons = []
         for name in unique_selected:
-            matches = name_to_pokemons.get(name, [])
-            count = name_usage_count[name]
-            if count < len(matches):
-                selected_pokemons.append(matches[count])
-                name_usage_count[name] += 1    
-
+            for p in all_captures:
+                if p.get("name") == name:
+                    selected_pokemons.append(p)
+                    break
         
         # 🔒 Sécurité : aucun Pokémon valide trouvé
         if not selected_pokemons:
@@ -152,15 +154,12 @@ class ValidateButton(Button):
             bot_name = "Bot"
             bot_repliques = {}
         
-        pokemon_reward_index = adversaire.get("pokemon_reward_index", 0) if adversaire else 0
-
         await start_battle_turn_based(
             interaction,
-            player_team=selected_pokemons,
-            bot_team=bot_team,
+            selected_pokemons,
+            bot_team,
             adversaire_name=bot_name,
-            repliques=bot_repliques,
-            pokemon_reward_index=pokemon_reward_index
+            repliques=bot_repliques
         )
 
 class AdversaireSelect(Select):
@@ -184,23 +183,20 @@ class AdversaireSelect(Select):
 
 # ---- Vue principale avec pagination ----
 class SelectionView(View):
-    def __init__(self, pokemons, full_pokemon_data):
+    def __init__(self, pokemons, full_pokemon_data, user_id : str):
         super().__init__(timeout=300)
         self.selections = {}  # custom_id -> [values]
         self.selection_order = {}  # pokemon_name -> timestamp
         self.full_pokemon_data = full_pokemon_data
         self.chosen_adversaire = None
-        self.adversaires = get_all_adversaires()
+        self.adversaires = get_adversaires_by_region(get_user_region(user_id))
         
         # Découpe en options (25 max par menu)
         self.chunk_size = 25
-        # Dans SelectionView.__init__, remplace la construction des option_chunks :
-        # Dans SelectionView.__init__, remplace la construction des option_chunks :
-        all_pokemons = list(enumerate(pokemons))  # (index_global, name)
         self.option_chunks = [
-            [discord.SelectOption(label=name, value=str(idx))
-            for idx, name in all_pokemons[i:i + self.chunk_size]]
-            for i in range(0, len(all_pokemons), self.chunk_size)
+            [discord.SelectOption(label=name, value=name) 
+             for name in pokemons[i:i + self.chunk_size]]
+            for i in range(0, len(pokemons), self.chunk_size)
         ]
         
         # Pagination : 4 menus/page (lignes 0..3), ligne 4 pour les boutons
