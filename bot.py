@@ -982,9 +982,9 @@ async def battletime(ctx):
 
 @bot.command()
 async def battle(ctx):
-    if not await is_in_spawn_window(bot):
-        await ctx.send("❌ Le crocodile n'est pas apparu ! Revenez entre 21h30 et 23h30.")
-        return
+    #if not await is_in_spawn_window(bot):
+     #   await ctx.send("❌ Le crocodile n'est pas apparu ! Revenez entre 21h30 et 23h30.")
+      #  return
     user_id = str(ctx.author.id)
     captures = get_new_captures(user_id)
 
