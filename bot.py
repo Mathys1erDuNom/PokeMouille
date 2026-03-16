@@ -995,7 +995,7 @@ async def battle(ctx):
         return
 
     pokemons = [entry["name"] for entry in captures]
-    view = SelectionView(pokemons, full_pokemon_data)
+    view = SelectionView(pokemons, full_pokemon_data, user_id=str(ctx.author.id))
     await ctx.send("Choisis jusqu’à 6 Pokémon pour ton équipe de combat :", view=view)
 
 '''
