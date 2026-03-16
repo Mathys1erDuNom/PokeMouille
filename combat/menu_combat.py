@@ -183,33 +183,31 @@ class AdversaireSelect(Select):
 
 # ---- Vue principale avec pagination ----
 class SelectionView(View):
-    def __init__(self, pokemons, full_pokemon_data, user_id : str):
+    def __init__(self, pokemons, full_pokemon_data, user_id: str):
         super().__init__(timeout=300)
-        self.selections = {}  # custom_id -> [values]
-        self.selection_order = {}  # pokemon_name -> timestamp
+        self.selections = {}
+        self.selection_order = {}
         self.full_pokemon_data = full_pokemon_data
         self.chosen_adversaire = None
-        self.adversaires = get_adversaires_by_region(get_user_region(user_id))
 
-        # ⚠️ Sécurité : pas d'adversaires disponibles
+        region = get_user_region(user_id)  # ← doit être AVANT get_adversaires_by_region
+        self.adversaires = get_adversaires_by_region(region)
+
         if not self.adversaires:
             raise ValueError(f"Aucun adversaire disponible pour la région : {region}")
-        
-        # Découpe en options (25 max par menu)
+
         self.chunk_size = 25
         self.option_chunks = [
-            [discord.SelectOption(label=name, value=name) 
+            [discord.SelectOption(label=name, value=name)
              for name in pokemons[i:i + self.chunk_size]]
             for i in range(0, len(pokemons), self.chunk_size)
         ]
-        
-        # Pagination : 4 menus/page (lignes 0..3), ligne 4 pour les boutons
+
         self.menus_per_page = 4
         self.page = 0
         self.total_menus = len(self.option_chunks)
         self.total_pages = max(1, ceil(self.total_menus / self.menus_per_page))
-        
-        # D'abord, on montre le menu adversaire
+
         self.clear_items()
         self.add_item(AdversaireSelect(self.adversaires, self))
 
