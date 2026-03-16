@@ -979,6 +979,8 @@ async def battletime(ctx):
     spawn_end = (datetime.datetime.combine(datetime.date.today(), spawn_time) + datetime.timedelta(hours=1)).time()
     await ctx.author.send(f"⚔️ Les combats sont disponibles aujourd'hui entre **{spawn_time.strftime('%Hh%M')}** et **{spawn_end.strftime('%Hh%M')}** !")
 '''
+'''
+'''
 
 @bot.command()
 async def battle(ctx):
