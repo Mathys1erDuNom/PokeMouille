@@ -971,14 +971,14 @@ print("[DEBUG] Ready to run bot...")
 import datetime
 import pytz
 
-
+'''
 @bot.command()
 @is_croco()
 async def battletime(ctx):
     spawn_time = get_daily_spawn_window()
     spawn_end = (datetime.datetime.combine(datetime.date.today(), spawn_time) + datetime.timedelta(hours=1)).time()
     await ctx.author.send(f"⚔️ Les combats sont disponibles aujourd'hui entre **{spawn_time.strftime('%Hh%M')}** et **{spawn_end.strftime('%Hh%M')}** !")
-    
+'''
 
 @bot.command()
 async def battle(ctx):
@@ -996,13 +996,13 @@ async def battle(ctx):
     view = SelectionView(pokemons, full_pokemon_data)
     await ctx.send("Choisis jusqu’à 6 Pokémon pour ton équipe de combat :", view=view)
 
-
+'''
 @battle.error
 async def battle_error(ctx, error):
     if isinstance(error, commands.CheckFailure):
         await ctx.author.send("⚔️ Les combats ne sont pas disponibles maintenant. Ce sera durant 1h entre 21h30 et 22h30.")
 
-'''
+
 setup_croco_event(
     bot,
     VOICE_CHANNEL_ID,
