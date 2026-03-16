@@ -998,7 +998,7 @@ async def battle(ctx):
 
     pokemons = [entry["name"] for entry in captures]
     try :
-        view = SelectionView(pokemons, full_pokemon_data)
+        view = SelectionView(pokemons, full_pokemon_data, user_id=str(ctx.author.id))
     except ValueError as e:
         await ctx.send(f"❌ {e}\nUtilise la commande pour choisir ta région d'abord.")
         return
