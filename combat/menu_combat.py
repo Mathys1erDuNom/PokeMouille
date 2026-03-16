@@ -19,18 +19,19 @@ def get_adversaires_by_region(region: str):
     if not region:
         return []
     filename = os.path.join(ADVERSAIRES_DIR, f"{region.lower()}.json")
+    print(f"[DEBUG] Fichier cherché : {filename}")
+    print(f"[DEBUG] Fichier existe : {os.path.exists(filename)}")
     if not os.path.exists(filename):
         return []
     with open(filename, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def get_adversaire_by_name(name: str):
-    adversaires = get_adversaires_by_region()
+def get_adversaire_by_name(name: str, region: str):  # ← ajout region
+    adversaires = get_adversaires_by_region(region)  # ← on passe la région
     for adv in adversaires:
         if adv["name"].lower() == name.lower():
             return adv
     return None
-
 
 # ---- Menus ----
 class PokemonSelectMenu(Select):
@@ -176,7 +177,8 @@ class AdversaireSelect(Select):
 
     async def callback(self, interaction: discord.Interaction):
         name = self.values[0]
-        adversaire = get_adversaire_by_name(name)
+        region = getattr(self.parent_view, "region", None)  # ← récupère la région
+        adversaire = get_adversaire_by_name(name, region)
         if adversaire:
             self.parent_view.chosen_adversaire = adversaire
             await self.parent_view.show_pokemon_select(interaction)
