@@ -190,6 +190,10 @@ class SelectionView(View):
         self.full_pokemon_data = full_pokemon_data
         self.chosen_adversaire = None
         self.adversaires = get_adversaires_by_region(get_user_region(user_id))
+
+        # ⚠️ Sécurité : pas d'adversaires disponibles
+        if not self.adversaires:
+            raise ValueError(f"Aucun adversaire disponible pour la région : {region}")
         
         # Découpe en options (25 max par menu)
         self.chunk_size = 25

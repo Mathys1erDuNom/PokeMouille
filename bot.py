@@ -982,6 +982,8 @@ async def battletime(ctx):
 '''
 '''
 
+
+
 @bot.command()
 async def battle(ctx):
     #if not await is_in_spawn_window(bot):
@@ -995,8 +997,14 @@ async def battle(ctx):
         return
 
     pokemons = [entry["name"] for entry in captures]
-    view = SelectionView(pokemons, full_pokemon_data, user_id=str(ctx.author.id))
-    await ctx.send("Choisis jusqu’à 6 Pokémon pour ton équipe de combat :", view=view)
+    try :
+        view = SelectionView(pokemons, full_pokemon_data)
+    except ValueError as e:
+        await ctx.send(f"❌ {e}\nUtilise la commande pour choisir ta région d'abord.")
+        return
+
+    await ctx.send("Choisis jusqu'à 6 Pokémon pour ton équipe de combat :", view=view)
+   
 
 '''
 @battle.error
