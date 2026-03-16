@@ -12,13 +12,13 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 # Remplace l'import et la fonction existante
 from regions import get_user_region  # ton fichier de gestion des régions
 
-ADVERSAIRES_DIR = os.path.join(script_dir, "../json/adversaires")
+ADVERSAIRES_DIR = os.path.join(script_dir, "../json/")
 
 def get_adversaires_by_region(region: str):
     """Charge le fichier d'adversaires correspondant à la région."""
     if not region:
         return []
-    filename = os.path.join(ADVERSAIRES_DIR, f"{region.lower()}.json")
+    filename = os.path.join(ADVERSAIRES_DIR, f"adversaires_{region.lower()}.json")
     print(f"[DEBUG] Fichier cherché : {filename}")
     print(f"[DEBUG] Fichier existe : {os.path.exists(filename)}")
     if not os.path.exists(filename):
