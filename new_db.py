@@ -46,25 +46,27 @@ def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
     
     if existing_count == 0:
         final_name = pokemon_name
+        # Insère la capture
+        cur.execute("""
+            INSERT INTO new_captures (user_id, name, ivs, stats, image, type, attacks)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+        """, (
+            user_id,
+            final_name,
+            Json(ivs),
+            Json(final_stats),
+            pokemon.get("image", ""),
+            Json(pokemon.get("type", [])),
+            Json(pokemon.get("attacks", []))
+        ))
+        conn.commit()
+    
+        print(f"[INFO] Pokémon {final_name} enregistré pour l'utilisateur {user_id}")
     else:
-        final_name = f"{pokemon_name}{existing_count + 1}"
+        increase_pokemon_iv(user_id, pokemon_name, 3)
+        print(f"[INFO] Pokémon {pokemon} a eu ses IV augmenté de 3  {user_id}")
     
-    # Insère la capture
-    cur.execute("""
-        INSERT INTO new_captures (user_id, name, ivs, stats, image, type, attacks)
-        VALUES (%s, %s, %s, %s, %s, %s, %s)
-    """, (
-        user_id,
-        final_name,
-        Json(ivs),
-        Json(final_stats),
-        pokemon.get("image", ""),
-        Json(pokemon.get("type", [])),
-        Json(pokemon.get("attacks", []))
-    ))
-    conn.commit()
     
-    print(f"[INFO] Pokémon {final_name} enregistré pour l'utilisateur {user_id}")
     
     # 🔥 INVALIDER LE CACHE après chaque capture
     try:
