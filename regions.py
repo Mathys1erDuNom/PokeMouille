@@ -21,11 +21,7 @@ AVAILABLE_REGIONS = [
     "Johto",
     "Hoenn",
     "Sinnoh",
-    "Unys",
-    "Kalos",
-    "Alola",
-    "Galar",
-    "Paldea"
+    "Unys"
 ]
 
 

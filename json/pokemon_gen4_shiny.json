@@ -78,6 +78,26 @@
         }
     },
     {
+        "name": "Chimpenfeu_shiny",
+        "type": [
+            "feu",
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/391.png",
+        "attacks": [
+            "Flammeche",
+            "Griffe"
+        ],
+        "stats": {
+            "hp": 64,
+            "attack": 78,
+            "defense": 52,
+            "special_attack": 78,
+            "special_defense": 52,
+            "speed": 81
+        }
+    },
+    {
         "name": "Simiabraz_shiny",
         "type": [
             "feu",
@@ -86,7 +106,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/392.png",
         "attacks": [
             "Flammeche",
-            "Griffe"
+            "Griffe",
+            "Poing Feu",
+            "Close Combat"
         ],
         "stats": {
             "hp": 76,
@@ -167,7 +189,6 @@
         "attacks": [
             "Coupe",
             "Cru-Ailes"
-            
         ],
         "stats": {
             "hp": 40,
@@ -188,7 +209,6 @@
         "attacks": [
             "Coupe",
             "Cru-Ailes"
-            
         ],
         "stats": {
             "hp": 55,
@@ -209,7 +229,6 @@
         "attacks": [
             "Coupe",
             "Cru-Ailes",
-            
             "Close Combat"
         ],
         "stats": {
@@ -285,7 +304,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/402.png",
         "attacks": [
-           
             "Piqure",
             "Coupe"
         ],
@@ -305,7 +323,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/403.png",
         "attacks": [
-           
             "Charge",
             "Eclair"
         ],
@@ -591,7 +608,6 @@
         "attacks": [
             "Eclair",
             "Charge"
-            
         ],
         "stats": {
             "hp": 60,
@@ -767,8 +783,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/426.png",
         "attacks": [
+            "Coupe",
             "Tornade",
-            "Balle Ombre"
+            "Vol"
         ],
         "stats": {
             "hp": 150,
@@ -827,7 +844,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/429.png",
         "attacks": [
             "Balle Ombre",
-            
             "Rafale Psy"
         ],
         "stats": {
@@ -905,7 +921,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/433.png",
         "attacks": [
-          
             "Charge",
             "Rafale Psy"
         ],
@@ -1007,7 +1022,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/438.png",
         "attacks": [
-         
             "Coup d’Boule",
             "Charge"
         ],
@@ -1031,8 +1045,6 @@
             "Écras’Face",
             "Rafale Psy",
             "Eclat Magique"
-
-           
         ],
         "stats": {
             "hp": 20,
@@ -1051,7 +1063,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/440.png",
         "attacks": [
             "Écras’Face",
-          
             "Charge"
         ],
         "stats": {
@@ -1232,7 +1243,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/449.png",
         "attacks": [
-            
             "Seisme",
             "Coup d’Boule"
         ],
@@ -1272,7 +1282,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/451.png",
         "attacks": [
-            
             "Dard-Venin",
             "Pique",
             "Bombe-Beurk"
@@ -1378,7 +1387,6 @@
         "attacks": [
             "Pistolet à O",
             "Charge"
-            
         ],
         "stats": {
             "hp": 49,
@@ -1499,7 +1507,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/462.png",
         "attacks": [
-            
             "Tonnerre",
             "Luminocanon"
         ],
@@ -1618,7 +1625,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/468.png",
         "attacks": [
             "Écras’Face",
-    
             "Cru-Ailes",
             "Pouvoir Lunaire"
         ],
@@ -1639,7 +1645,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/469.png",
         "attacks": [
-            
             "Bourdon",
             "Cru-Ailes"
         ],

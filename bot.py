@@ -254,7 +254,7 @@ gen4_shiny_path = os.path.join(json_dir, "pokemon_gen4_shiny.json")
 if os.path.exists(gen4_shiny_path):
     with open(gen4_shiny_path, "r", encoding="utf-8") as f:
         sinnoh_shiny_data = json.load(f)
-'''
+
 #####################################
 # --- 🔥 GEN 5 — UNYS ---
 #####################################
@@ -270,7 +270,7 @@ gen5_shiny_path = os.path.join(json_dir, "pokemon_gen5_shiny.json")
 if os.path.exists(gen5_shiny_path):
     with open(gen5_shiny_path, "r", encoding="utf-8") as f:
         unys_shiny_data = json.load(f)
-'''
+
 #####################################
 # --- 🔥 POOLS GLOBAUX (toutes régions) ---
 #####################################
@@ -278,14 +278,16 @@ full_pokemon_data = (
     kanto_pokemon_data +
     johto_pokemon_data +
     hoenn_pokemon_data +
-    sinnoh_pokemon_data 
+    sinnoh_pokemon_data +
+    unys_pokemon_data
 )
 
 full_pokemon_shiny_data = (
     kanto_shiny_data +
     johto_shiny_data +
     hoenn_shiny_data +
-    sinnoh_shiny_data 
+    sinnoh_shiny_data +
+    unys_shiny_data
 )
 
 #####################################
@@ -295,7 +297,10 @@ REGION_DATA_MAP = {
     "Kanto": (kanto_pokemon_data, kanto_shiny_data),
     "Johto": (johto_pokemon_data, johto_shiny_data),
     "Hoenn": (hoenn_pokemon_data, hoenn_shiny_data),
-    "Sinnoh": (sinnoh_pokemon_data, sinnoh_shiny_data)
+    "Sinnoh": (sinnoh_pokemon_data, sinnoh_shiny_data),
+    "Unys": (unys_pokemon_data, unys_shiny_data),
+    
+
 
 }
         

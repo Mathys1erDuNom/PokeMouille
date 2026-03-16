@@ -1,38 +1,30 @@
-import os
-import psycopg2
-from dotenv import load_dotenv
+import json
 
-load_dotenv()  # Charge le DATABASE_URL depuis ton .env
-DATABASE_URL = os.getenv("postgresql://postgres:EilXxALETOCxwXmbAWTzDAmTJLphQOVk@postgres.railway.internal:5432/railway")
+# fichiers
+input_file = "json/pokemon_gen4_normal.json"
+output_file = "pokemon_gen4_shiny.json"
 
-try:
-    # Connexion à la base
-    conn = psycopg2.connect(DATABASE_URL, sslmode="require")
-    cur = conn.cursor()
+# charger les pokemon normaux
+with open(input_file, "r", encoding="utf-8") as f:
+    pokemons = json.load(f)
 
-    print("[INFO] Connexion réussie à la base PostgreSQL.")
+shiny_pokemons = []
 
-    # Étape 1 : Supprimer l'ancienne clé primaire si elle existe
-    cur.execute("""
-        ALTER TABLE new_captures
-        DROP CONSTRAINT IF EXISTS new_captures_pkey;
-    """)
-    print("[INFO] Ancienne clé primaire supprimée (si elle existait).")
+for pokemon in pokemons:
+    shiny_pokemon = pokemon.copy()
 
-    # Étape 2 : Créer la nouvelle clé primaire composite (user_id + name)
-    cur.execute("""
-        ALTER TABLE new_captures
-        ADD PRIMARY KEY (user_id, name);
-    """)
-    print("[INFO] Nouvelle clé primaire (user_id, name) créée.")
+    # modifier le nom
+    shiny_pokemon["name"] = pokemon["name"] + "_shiny"
 
-    # Commit des changements
-    conn.commit()
+    # modifier l'image (ajouter /shiny/)
+    shiny_pokemon["image"] = pokemon["image"].replace(
+        "/pokemon/", "/pokemon/shiny/"
+    )
 
-except Exception as e:
-    print(f"[ERREUR] {e}")
+    shiny_pokemons.append(shiny_pokemon)
 
-finally:
-    cur.close()
-    conn.close()
-    print("[INFO] Connexion fermée.")
+# sauvegarder
+with open(output_file, "w", encoding="utf-8") as f:
+    json.dump(shiny_pokemons, f, indent=4, ensure_ascii=False)
+
+print("Fichier shiny généré :", output_file)

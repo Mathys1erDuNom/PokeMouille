@@ -2,9 +2,9 @@ import requests
 import json
 import time
 
-# Pokémon de la génération 4 (Sinnoh) : IDs 387 à 493
-GEN4_START = 387
-GEN4_END = 493
+# Pokémon de la génération 5 (Sinnoh) : IDs 494 à 649
+GEN4_START = 494
+GEN4_END = 649
 
 # Mapping des types anglais -> français
 TYPE_TRANSLATION = {
@@ -95,11 +95,11 @@ def get_pokemon_data(pokemon_id):
         if len(attacks) < 2:
             attacks.append("Charge")
         
-        # Image SHINY
-        image = data['sprites']['front_shiny']
+        # Image
+        image = data['sprites']['front_default']
         
         pokemon_data = {
-            "name": french_name + "_shiny",
+            "name": french_name,
             "type": types,
             "image": image,
             "attacks": attacks,
@@ -113,11 +113,11 @@ def get_pokemon_data(pokemon_id):
         print(f"❌ Erreur pour le Pokémon #{pokemon_id}: {e}")
         return None
 
-def generate_gen4_json():
-    """Génère le fichier JSON pour la génération 4 SHINY"""
+def generate_gen5_json():
+    """Génère le fichier JSON pour la génération 4"""
     pokemon_list = []
     
-    print("✨ Récupération des Pokémon SHINY de la 4G (Sinnoh)...")
+    print("🔄 Récupération des Pokémon de la 4G (Sinnoh)...")
     print(f"📊 Pokémon {GEN4_START} à {GEN4_END}")
     print("-" * 50)
     
@@ -126,17 +126,16 @@ def generate_gen4_json():
         if pokemon_data:
             pokemon_list.append(pokemon_data)
         
-        # Pause pour éviter de surcharger l'API
-        time.sleep(0.5)
+        
     
     # Sauvegarde dans un fichier JSON
-    output_file = "pokemon_gen4_shiny.json"
+    output_file = "pokemon_gen5_normal.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(pokemon_list, f, ensure_ascii=False, indent=4)
     
     print("-" * 50)
     print(f"✅ Fichier généré : {output_file}")
-    print(f"📦 {len(pokemon_list)} Pokémon shiny enregistrés")
+    print(f"📦 {len(pokemon_list)} Pokémon enregistrés")
 
 if __name__ == "__main__":
-    generate_gen4_json()
+    generate_gen5_json()
