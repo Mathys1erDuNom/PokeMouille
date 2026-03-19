@@ -4,7 +4,7 @@ from math import ceil
 from new_db import get_new_captures
 import json
 import os
-from combat.logic_battle_avec_mega import start_battle_turn_based
+from combat.logic_battle import start_battle_turn_based
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 
