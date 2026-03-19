@@ -127,12 +127,17 @@ class ValidateButton(Button):
         all_captures = get_new_captures(user_id)
         
         # Crée la liste ordonnée des Pokémon pour le combat
-        selected_pokemons = []
-        for name in unique_selected:
-            for p in all_captures:
-                if p.get("name") == name:
-                    selected_pokemons.append(p)
-                    break
+        captures_by_name = {}
+        for p in all_captures:
+            name = p.get("name")
+            if name and name not in captures_by_name:
+                captures_by_name[name] = p
+
+        selected_pokemons = [
+            captures_by_name[name]
+            for name in unique_selected
+            if name in captures_by_name
+        ]
         
         # 🔒 Sécurité : aucun Pokémon valide trouvé
         if not selected_pokemons:
@@ -162,6 +167,10 @@ class ValidateButton(Button):
             adversaire_name=bot_name,
             repliques=bot_repliques
         )
+
+
+
+
 class AdversaireSelect(Select):
     def __init__(self, adversaires, parent_view):
         options = [
