@@ -162,11 +162,15 @@ class ValidateButton(Button):
             adversaire_name=bot_name,
             repliques=bot_repliques
         )
-
 class AdversaireSelect(Select):
     def __init__(self, adversaires, parent_view):
-        options = [discord.SelectOption(label=adv["name"], value=adv["name"]) 
-                  for adv in adversaires]
+        options = [
+            discord.SelectOption(
+                label=f"{i+1}. {adv['name']}",
+                value=adv["name"]
+            )
+            for i, adv in enumerate(adversaires)
+        ]
         super().__init__(
             placeholder="Choisis ton adversaire",
             min_values=1,
