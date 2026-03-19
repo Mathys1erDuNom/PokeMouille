@@ -1,114 +1,305 @@
 [
     {
         "id": 1,
-        "name": "Badge Roche",
+        "name": "Badge Roche 1G (1)",
         "image": "images/badges/1.png",
         "description": "Obtenu après avoir vaincu Pierre le champion de l'arène Roche.",
         "generation": 1
     },
     {
         "id": 2,
-        "name": "Badge Cascade",
+        "name": "Badge Cascade 1G (2)",
         "image": "images/badges/2.png",
         "description": "Obtenu après avoir vaincu Ondine, la championne de l'arène Cascade",
         "generation": 1
     },
     {
         "id": 3,
-        "name": "Badge Foudre",
+        "name": "Badge Foudre 1G (3)",
         "image": "images/badges/3.png",
         "description": "Obtenu après avoir vaincu Major Bob, la champion de l'arène Foudre",
         "generation": 1
     },
     {
         "id": 4,
-        "name": "Badge Prisme",
+        "name": "Badge Prisme 1G (4)",
         "image": "images/badges/4.png",
         "description": "Obtenu après avoir vaincu Erika, la championne de l'arène Plante",
         "generation": 1
     },
     {
         "id": 5,
-        "name": "Badge Âme",
+        "name": "Badge Âme 1G (5)",
         "image": "images/badges/5.png",
         "description": "Obtenu après avoir vaincu Koga, la champion de l'arène Poison",
         "generation": 1
     },
     {
         "id": 6,
-        "name": "Badge Marais",
+        "name": "Badge Marais 1G (6)" ,
         "image": "images/badges/6.png",
-        "description": "Obtenu après avoir vaincu Morgane, la champion de l'arène Pqy",
+        "description": "Obtenu après avoir vaincu Morgane, la champion de l'arène Psy",
         "generation": 1
     },
     {
         "id": 7,
-        "name": "Badge Volcan",
+        "name": "Badge Volcan 1G (7)",
         "image": "images/badges/7.png",
         "description": "Obtenu après avoir vaincu Auguste, la champion de l'arène Feu",
         "generation": 1
     },
     {
         "id": 8,
-        "name": "Badge Terre",
+        "name": "Badge Terre 1G (8)" ,
         "image": "images/badges/8.png",
         "description": "Obtenu après avoir vaincu Giovanni, la champion de l'arène Sol",
         "generation": 1
     },
+
+
+
+
+    {
+        "id": 9,
+        "name": "Badge Zéphyr 2G (1)" ,
+        "image": "images/badges/9.png",
+        "description": "Obtenu après avoir vaincu Albert, la champion de l'arène Vol",
+        "generation": 2
+    },
+    {
+        "id": 10,
+        "name": "Badge Essaim 2G (2)",
+        "image": "images/badges/10.png",
+        "description": "Obtenu après avoir vaincu Hector, la champion de l'arène Insecte",
+        "generation": 2
+    },
+    {
+        "id": 11,
+        "name": "Badge Plaine 2G (3)",
+        "image": "images/badges/11.png",
+        "description": "Obtenu après avoir vaincu Blanche, la champion de l'arène Normal",
+        "generation": 2
+    },
+    {
+        "id": 12,
+        "name": "Badge Brume 2G (4)",
+        "image": "images/badges/12.png",
+        "description": "Obtenu après avoir vaincu Mortimer, la champion de l'arène Spectre",
+        "generation": 2
+    },
+    {
+        "id": 13,
+        "name": "Badge Choc 2G (5)",
+        "image": "images/badges/13.png",
+        "description": "Obtenu après avoir vaincu Chuck, la champion de l'arène Combat",
+        "generation": 2
+    },
+    {
+        "id": 14,
+        "name": "Badge Minéral 2G (6)",
+        "image": "images/badges/14.png",
+        "description": "Obtenu après avoir vaincu Jasmine, la champion de l'arène Acier",
+        "generation": 2
+    },
+    {
+        "id": 15,
+        "name": "Badge Glacier 2G (7)",
+        "image": "images/badges/15.png",
+        "description": "Obtenu après avoir vaincu Frédo, la champion de l'arène Glace",
+        "generation": 2
+    },
+    {
+        "id": 16,
+        "name": "Badge Lever 2G (8)",
+        "image": "images/badges/16.png",
+        "description": "Obtenu après avoir vaincu Sandra, la champion de l'arène Dragon",
+        "generation": 2
+    },
+
+
+
+
+
     {
         "id": 17,
-        "name": "Badge Roche",
+        "name": "Badge Roche 3G (1)",
         "image": "images/badges/17.png",
         "description": "Obtenu après avoir vaincu Roxanne, la champion de l'arène Roche",
         "generation": 3
     },
     {
         "id": 18,
-        "name": "Badge Poing",
+        "name": "Badge Poing 3G (2)",
         "image": "images/badges/18.png",
         "description": "Obtenu après avoir vaincu Bastien, la champion de l'arène Combat",
         "generation": 3
     },
     {
         "id": 19,
-        "name": "Badge Dynamo",
+        "name": "Badge Dynamo 3G (3)",
         "image": "images/badges/19.png",
         "description": "Obtenu après avoir vaincu Voltère, la champion de l'arène Dynamique ehehe",
         "generation": 3
     },
     {
         "id": 20,
-        "name": "Badge Chaleur",
+        "name": "Badge Chaleur 3G (4)",
         "image": "images/badges/20.png",
         "description": "Obtenu après avoir vaincu Adriane, la champion de l'arène Feu",
         "generation": 3
     },
     {
         "id": 21,
-        "name": "Badge Balancier",
+        "name": "Badge Balancier 3G (5)",
         "image": "images/badges/21.png",
         "description": "Obtenu après avoir vaincu Norman, la champion de l'arène Normal",
         "generation": 3
     },
     {
         "id": 22,
-        "name": "Badge Plume",
+        "name": "Badge Plume 3G (6)",
         "image": "images/badges/22.png",
         "description": "Obtenu après avoir vaincu Alizée, la champion de l'arène Vol",
         "generation": 3
     },
     {
         "id": 23,
-        "name": "Badge Esprit",
+        "name": "Badge Esprit 3G (7)",
         "image": "images/badges/23.png",
         "description": "Obtenu après avoir vaincu Lévy&Tatua, la champion de l'arène Psy",
         "generation": 3
     },
     {
         "id": 24,
-        "name": "Badge Pluie",
+        "name": "Badge Pluie 3G (8)",
         "image": "images/badges/24.png",
         "description": "Obtenu après avoir vaincu Juan, la champion de l'arène Eau",
         "generation": 3
+    },
+
+
+
+
+
+    {
+        "id": 25,
+        "name": "Badge Charbon 4G (1)",
+        "image": "images/badges/25.png",
+        "description": "Obtenu après avoir vaincu Pierre, la champion de l'arène Roche",
+        "generation": 4
+    },
+    {
+        "id": 26,
+        "name": "Badge Forêt 4G (2)",
+        "image": "images/badges/26.png",
+        "description": "Obtenu après avoir vaincu Flo, la champion de l'arène Plante",
+        "generation": 4
+    }, 
+    {
+        "id": 27,
+        "name": "Badge Pavé 4G (3)",
+        "image": "images/badges/27.png",
+        "description": "Obtenu après avoir vaincu Mélina, la champion de l'arène Combat",
+        "generation": 4
+    },
+    {
+        "id": 28,
+        "name": "Badge Palustre 4G (4)",
+        "image": "images/badges/28.png",
+        "description": "Obtenu après avoir vaincu Lovis, la champion de l'arène Eau",
+        "generation": 4
+    },
+    {
+        "id": 29,
+        "name": "Badge Fantôme 4G (5)",
+        "image": "images/badges/29.png",
+        "description": "Obtenu après avoir vaincu Kiméra, la champion de l'arène Spectre",
+        "generation": 4
+    },
+    {
+        "id": 30,
+        "name": "Badge Mine 4G (6)",
+        "image": "images/badges/30.png",
+        "description": "Obtenu après avoir vaincu Charles, la champion de l'arène Acier",
+        "generation": 4
+    },
+    {
+        "id": 31,
+        "name": "Badge Glaçon 4G (7)",
+        "image": "images/badges/31.png",
+        "description": "Obtenu après avoir vaincu Gladys, la champion de l'arène Glace",
+        "generation": 4
+    },
+    {
+        "id": 32,
+        "name": "Badge Phare 4G (8)",
+        "image": "images/badges/32.png",
+        "description": "Obtenu après avoir vaincu Tanguy, la champion de l'arène Electrique",
+        "generation": 4
+    },
+
+
+
+
+    {
+        "id": 33,
+        "name": "Badge Triple 5G (1)",
+        "image": "images/badges/33.png",
+        "description": "Obtenu après avoir vaincu Rachid / Armando / Noa (Trio)",
+        "generation": 5
+    },
+    {
+        "id": 34,
+        "name": "Badge Basique 5G (2)",
+        "image": "images/badges/34.png",
+        "description": "Obtenu après avoir vaincu Aloé, la champion de l'arène Normal",
+        "generation": 5
+    },
+    {
+        "id": 36,
+        "name": "Badge Élytre 5G (3)",
+        "image": "images/badges/36.png",
+        "description": "Obtenu après avoir vaincu Artie, la champion de l'arène Plantz",
+        "generation": 5
+    },
+    {
+        "id": 37,
+        "name": "Badge Volt 5G (4)",
+        "image": "images/badges/37.png",
+        "description": "Obtenu après avoir vaincu Inezia, la champion de l'arène Electrique",
+        "generation": 5
+    },
+    {
+        "id": 38,
+        "name": "Badge Sismique 5G (5)",
+        "image": "images/badges/38.png",
+        "description": "Obtenu après avoir vaincu Bardane, la champion de l'arène Sol",
+        "generation": 5
+    },
+    {
+        "id": 39,
+        "name": "Badge Jet 5G (6)",
+        "image": "images/badges/39.png",
+        "description": "Obtenu après avoir vaincu Carolina, la champion de l'arène Vol",
+        "generation": 5
+    },
+    {
+        "id": 40,
+        "name": "Badge Stalactite 5G (7)",
+        "image": "images/badges/40.png",
+        "description": "Obtenu après avoir vaincu Zhu, la champion de l'arène Glace",
+        "generation": 5
+    },
+    {
+        "id": 41,
+        "name": "Badge Stalactite 5G (8)",
+        "image": "images/badges/41.png",
+        "description": "Obtenu après avoir vaincu Iris / Watson, la champion de l'arène Dragon",
+        "generation": 5
     }
+
+
+
+
+
 ]
