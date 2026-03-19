@@ -1,4 +1,4 @@
-# logic_battle.py
+
 
 import discord
 import asyncio
