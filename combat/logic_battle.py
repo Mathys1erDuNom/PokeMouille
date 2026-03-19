@@ -20,15 +20,55 @@ with open(badges_path, "r", encoding="utf-8") as f:
 
 # Dictionnaire qui lie le nom de l'adversaire à l'ID du badge
 BADGES_ADVERSAIRES = {
-    "Roxanne (Roche)": 17,   # ID du badge Roche
+
+####1G
+    "Pierre (Roche)": 1,
+    "Ondine (Eau)" : 2,
+    "Major Bob (Electrique)": 3,
+    "Erika (Plante)": 4,
+    "Koga (Poison)" : 5,
+    "Morgane (Psy)" : 6,
+    "Auguste (Feu)" : 7,
+    "Giovanni (Sol)" : 8,
+###2G
+
+    "Albert (Normal/vol)" : 9,
+    "Hector (Plante)": 10,
+    "Blanche (Normal)" : 11,
+    "Mortimer (Spectre)" : 12,
+    "Chuck (Combat)" : 13,
+    "Jasmine (Acier)" : 14,
+    "Frédo (Glace)" : 15,
+    "Sandra (Dragon)" : 16,
+####3G
+    "Roxanne (Roche)": 17,   
     "Bastien (Combat)": 18,
     "Voltère (Electrique)": 19,
-    "Adriane (Feu)": 20, # ID du badge Cascade
+    "Adriane (Feu)": 20, 
     "Norman (Normal)" : 21,
     "Alizée (Vol)" : 22,
     "Lévy&Tatia (Psy)" : 23,
-    "Juan (Eau)": 24
-    # ajouter d'autres si nécessaire
+    "Juan (Eau)": 24,
+#####4G
+    "Pierrick (Roche)" : 25,
+    "Flo (Plante)" : 26,
+    "Mélina (Combat)" : 27,
+    "Lovis (Eau)" : 28,
+    "Kiméra (Spectre)" : 29,
+    "Charles (Acier)" : 30,
+    "Gladyce (Glace)" : 31,
+    "Tanguy (Electrique)" : 32,
+######5G
+
+    "Rachid / Armando / Noa (Trio)" : 33,
+    "Aloé (Normal)" : 34,
+    "Artie (Plante)" : 36,
+    "Inezia (Electrique)" : 37,
+    "Bardane (Sol)" : 38,
+    "Carolina (Vol)" : 39,
+    "Zhu (Glace)" : 40,
+    "Iris / Watson (Dragon)" : 41,
+
 }
 
 
