@@ -198,6 +198,9 @@ class SelectionView(View):
         self.chosen_adversaire = None
 
         region = get_user_region(user_id)  # ← doit être AVANT get_adversaires_by_region
+        print(f"[DEBUG] région pour {user_id} : {region}")
+        self.region = region  # ← cette ligne manque
+        print(f"[DEBUG] région pour {user_id} : {region}")
         self.adversaires = get_adversaires_by_region(region)
 
         if not self.adversaires:
