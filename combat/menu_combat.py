@@ -177,11 +177,16 @@ class AdversaireSelect(Select):
 
     async def callback(self, interaction: discord.Interaction):
         name = self.values[0]
-        region = getattr(self.parent_view, "region", None)  # ← récupère la région
+        region = getattr(self.parent_view, "region", None)
         adversaire = get_adversaire_by_name(name, region)
         if adversaire:
             self.parent_view.chosen_adversaire = adversaire
             await self.parent_view.show_pokemon_select(interaction)
+        else:
+            await interaction.response.send_message(
+                f"❌ Adversaire '{name}' introuvable pour la région '{region}'.",
+                ephemeral=True
+            )
 
 # ---- Vue principale avec pagination ----
 class SelectionView(View):
