@@ -12,6 +12,11 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
+
+cur.execute("ALTER DATABASE railway REFRESH COLLATION VERSION;")
+
+
+
 # Crée la table si elle n'existe pas
 cur.execute("""
 CREATE TABLE IF NOT EXISTS captures (
