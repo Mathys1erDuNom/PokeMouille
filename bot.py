@@ -582,7 +582,7 @@ async def check_voice_channel():
         # Lance une tâche individuelle pour chaque membre qui n'en a pas encore
         for member in members_in_vc:
             if member.id not in dm_spawn_tasks or dm_spawn_tasks[member.id] is None or dm_spawn_tasks[member.id].done():
-                wait_time = random.randint(60, 90)  # 1min à 1min30 minutes
+                wait_time = random.randint(3000, 3600)  # 50 minutes à 1h
                 minutes, seconds = divmod(wait_time, 60)
                 print(f"[INFO] Spawn DM prévu pour {member.display_name} dans {minutes} min {seconds} sec.")
                 dm_spawn_tasks[member.id] = asyncio.create_task(
