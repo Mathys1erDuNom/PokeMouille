@@ -596,11 +596,16 @@ async def check_voice_channel():
                 print(f"[INFO] Tâche DM annulée pour le membre {member_id} (vocal vide).")
             dm_spawn_tasks[member_id] = None
 
-
 async def wait_and_spawn_dm(wait_time, channel, member: discord.Member):
     try:
+        # Initialise le temps restant dès le lancement
+        dm_spawn_remaining_time[member.id] = wait_time
+
         for remaining in range(wait_time, 0, -1):
             await asyncio.sleep(1)
+
+            # Met à jour le temps restant chaque seconde
+            dm_spawn_remaining_time[member.id] = remaining - 1
 
             # Si le membre a quitté le vocal entre-temps, on arrête
             vc = bot.get_channel(VOICE_CHANNEL_ID)
@@ -629,8 +634,9 @@ async def wait_and_spawn_dm(wait_time, channel, member: discord.Member):
     except Exception as e:
         print(f"[ERREUR wait_and_spawn_dm] {e}")
     finally:
-        pass
-
+        # Nettoyage du temps restant dans tous les cas
+        dm_spawn_remaining_time.pop(member.id, None)
+        
 
 
 @bot.command(name="shutdown")
