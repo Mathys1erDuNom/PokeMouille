@@ -1051,7 +1051,7 @@ setup_quiz_commands(
 )
  
  #  Durée entre chaque événement (en secondes)
-EVENT_INTERVAL = 20 * 60  # 20 minute
+EVENT_INTERVAL = 1 * 60  # 20 minute
 # ──────────────────────────────────────────────────────────────────
 #  Boucle automatique
 # ──────────────────────────────────────────────────────────────────
