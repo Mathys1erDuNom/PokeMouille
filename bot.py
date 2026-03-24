@@ -1086,7 +1086,7 @@ async def auto_event_loop():
 
         chosen = random.choice(["quiz", "devine"])
         next_event_name = "🧠 Quiz Pokémon" if chosen == "quiz" else "🔍 Devine le Pokémon"
-        next_event_time = datetime.datetime.now() + datetime.timedelta(seconds=EVENT_INTERVAL)
+        next_event_time = datetime.now() + timedelta(seconds=EVENT_INTERVAL)
 
 ###h
 
