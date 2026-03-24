@@ -1,0 +1,360 @@
+[   
+
+  {
+    "id": "champion_de_Mérouville",
+    "name": "Hector",
+    "repliques": {
+      "start": "Tu oses me défier ? Je vais t'écraser ",
+      "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+      "lose_pokemon": "Oh non… il a été vaincu…",
+      "pokemon_reward_index": 3,
+      "win": "La nature triomphe toujours.",
+      "lose": "Je reconnais ta force. Tu as gagné."
+    },
+    "pokemons": [
+        {
+            "name": "Artikodin",
+            "type": [
+                "glace",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+            "attacks": [
+                "Eclats Glace",
+                "Cru-Aile",
+                "Vent Glace"
+            ],
+            "stats": {
+                "hp": 121,
+                "attack": 136,
+                "special_attack": 161,
+                "speed": 136,
+                "defense": 131,
+                "special_defense": 121
+            }
+        },
+        {
+            "name": "Electhor",
+            "type": [
+                "electrique",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+            "attacks": [
+                "Eclair",
+                "Cru-Aile",
+                "Tonnerre"
+            ],
+            "stats": {
+                "hp": 121,
+                "attack": 121,
+                "special_attack": 1161,
+                "speed": 131,
+                "defense": 111,
+                "special_defense": 130
+            }
+        },
+        {
+            "name": "Sulfura",
+            "type": [
+                "feu",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
+           
+            "attacks": [
+                "Braise",
+                "Cru-Aile",
+                "Lance-Flammes"
+            ],
+            "stats": {
+                "hp": 121,
+                "attack": 131,
+                "special_attack": 161,
+                "speed": 121,
+                "defense": 121,
+                "special_defense": 111
+            }
+        },
+        {
+            "name": "Méga-Alakazam",
+            "type": [
+                "psy"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10037.png",
+           
+            "attacks": [
+                "Psyko",
+                "Balle Ombre"
+            ],
+            "stats": {
+                "hp": 55,
+                "attack": 50,
+                "special_attack": 175,
+                "speed": 150,
+                "defense": 65,
+                "special_defense": 105
+            }
+        }
+    
+
+    ]
+  },
+
+  {
+    "id": "champion_de_Mérouville",
+    "name": "Micka",
+    "repliques": {
+      "start": "Tu oses me défier ? Je vais t'écraser ",
+      "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+      "lose_pokemon": "Oh non… il a été vaincu…",
+      "pokemon_reward_index": 4,
+      "win": "La nature triomphe toujours.",
+      "lose": "Je reconnais ta force. Tu as gagné."
+    },
+    "pokemons": [
+        {
+            "name": "Celebi_shiny",
+            "type": [
+                "psy",
+                "plante"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/251.png",
+            "attacks": [
+               
+                "Psyko",
+                "Canon Graine",
+                "Tempete Verte",
+                "Balle Ombre"
+            ],
+            "stats": {
+                "hp": 140,
+                "attack": 140,
+                "defense": 140,
+                "special_attack": 140,
+                "special_defense": 140,
+                "speed": 140
+            }
+        },
+        {
+            "name": "Ho-Oh",
+            "type": [
+                "feu",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png",
+            "attacks": [
+                "Telluriforce",
+                "Tranche-Nuit",
+                "Cannicule",
+                "Meteore"
+            ],
+            "stats": {
+                "hp": 146,
+                "attack": 170,
+                "defense": 1300,
+                "special_attack": 150,
+                "special_defense": 194,
+                "speed": 130
+            }
+        },
+        {
+            "name": "Tyranocif",
+            "type": [
+                "roche",
+                "tenebres"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/248.png",
+            "attacks": [
+                "Morsure",
+                "Seisme",
+                "Lance-Pierre",
+                "Lame de Roc"
+            ],
+            "stats": {
+                "hp": 140,
+                "attack": 174,
+                "defense": 150,
+                "special_attack": 135,
+                "special_defense": 140,
+                "speed": 101
+            }
+        },
+        {
+            "name": "Lugia",
+            "type": [
+                "psy",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png",
+            "attacks": [
+                "Hydrocanon",
+                "Tranche-Nuit",
+                "Psyko",
+                "Seisme"
+            ],
+            "stats": {
+                "hp": 146,
+                "attack": 130,
+                "defense": 170,
+                "special_attack": 130,
+                "special_defense": 194,
+                "speed": 150
+            }
+        },
+        {
+            "name": "Méga-Scarabrute",
+            "type": [
+                "insecte",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10040.png",
+           
+            "attacks": [
+                "Close Combat",
+                "Pique",
+                "Tornade"
+            ],
+            "stats": {
+                "hp": 65,
+                "attack": 155,
+                "special_attack": 65,
+                "speed": 105,
+                "defense": 120,
+                "special_defense": 90
+            }
+        }
+
+    
+
+    ]
+  },
+
+
+  {
+    "id": "champion_de_Mérouville",
+    "name": "Helio",
+    "repliques": {
+      "start": "Tu oses me défier ? Je vais t'écraser ",
+      "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+      "lose_pokemon": "Oh non… il a été vaincu…",
+      "pokemon_reward_index": 4,
+      "win": "La nature triomphe toujours.",
+      "lose": "Je reconnais ta force. Tu as gagné."
+    },
+    "pokemons": [
+        {
+            "name": "Darkrai_shiny",
+            "type": [
+                "tenebres"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/491.png",
+            "attacks": [
+                "Vibrobscur",
+                "Balle Ombre",
+                "Bombe-Beurk",
+                "Psyko"
+            ],
+            "stats": {
+                "hp": 110,
+                "attack": 130,
+                "defense": 130,
+                "special_attack": 175,
+                "special_defense": 130,
+                "speed": 165
+            }
+        },
+        {
+            "name": "Shaymin_shiny",
+            "type": [
+                "plante"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/492.png",
+            "attacks": [
+                "Tempete Verte",
+                "Psyko",
+                "Eclat Magique"
+            ],
+            "stats": {
+                "hp": 140,
+                "attack": 140,
+                "defense": 140,
+                "special_attack": 140,
+                "special_defense": 140,
+                "speed": 140
+            }
+        },
+        {
+            "name": "Arceus_shiny",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/493.png",
+            "attacks": [
+                "Jugement",
+                "Balle Ombre",
+                "Bourdon",
+                "Cannicule"
+            ],
+            "stats": {
+                "hp": 160,
+                "attack": 150,
+                "defense": 160,
+                "special_attack": 160,
+                "special_defense": 160,
+                "speed": 160
+            }
+        },
+        {
+            "name": "Carchacrok_shiny",
+            "type": [
+                "dragon",
+                "sol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/445.png",
+            "attacks": [
+                "Coupe",
+                "Dracochoc",
+                "Dracogriffe",
+                "Seisme"
+            ],
+            "stats": {
+                "hp": 148,
+                "attack": 170,
+                "defense": 135,
+                "special_attack": 140,
+                "special_defense": 145,
+                "speed": 142
+            }
+        },
+        {
+            "name": "Méga-Ectoplasma",
+            "type": [
+                "spectre",
+                "poison"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10038.png",
+           
+            "attacks": [
+                "Close Combat",
+                "Pique",
+                "Tornade"
+            ],
+            "stats": {
+                "hp": 60,
+                "attack": 65,
+                "special_attack": 170,
+                "speed": 130,
+                "defense": 80,
+                "special_defense": 95
+            }
+        }
+       
+
+    
+
+    ]
+  }
+
+]
+  

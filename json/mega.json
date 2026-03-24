@@ -1,0 +1,67 @@
+[
+    {
+        "name": "Méga-Alakazam",
+        "type": [
+            "psy"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10037.png",
+       
+        "attacks": [
+            "Psyko",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 50,
+            "special_attack": 175,
+            "speed": 150,
+            "defense": 65,
+            "special_defense": 105
+        }
+    },
+    {
+        "name": "Méga-Scarabrute",
+        "type": [
+            "insecte",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10040.png",
+       
+        "attacks": [
+            "Close Combat",
+            "Pique",
+            "Tornade"
+        ],
+        "stats": {
+            "hp": 65,
+            "attack": 155,
+            "special_attack": 65,
+            "speed": 105,
+            "defense": 120,
+            "special_defense": 90
+        }
+    },
+    {
+        "name": "Méga-Ectoplasma",
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10038.png",
+       
+        "attacks": [
+            "Close Combat",
+            "Pique",
+            "Tornade"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 65,
+            "special_attack": 170,
+            "speed": 130,
+            "defense": 80,
+            "special_defense": 95
+        }
+    }
+    
+]

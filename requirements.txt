@@ -1,0 +1,8 @@
+discord.py
+python-dotenv
+Pillow
+requests
+aiohttp
+psycopg2-binary
+datetime
+pytz

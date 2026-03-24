@@ -1,0 +1,42 @@
+[
+  {
+    "item_name": "Poké Ball",
+    "rarity": "common",
+    "description": "Une Poké ball basique qui contient un Pokémon.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png",
+    "extra": "spawn_pokemon",
+    "price" : 200
+  },
+  {
+    "item_name": "Master Ball",
+    "rarity": "legendary",
+    "description": "Une Master ball qui contient sûrement un Pokémon légendaire",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png",
+    "extra": "spawn_pokemon_legendary",
+    "price" : 1000
+  },
+  {
+    "item_name": "Hyper Ball",
+    "rarity": "rare",
+    "description": "Une Hyper ball qui contient un Pokémon très rare",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
+    "extra": "spawn_pokemon_rare",
+    "price" : 500
+  },
+  {
+    "item_name": "Master Ball S",
+    "rarity": "legendary",
+    "description": "Une Master ball qui contient sûrement un Pokémon légendaire shiny",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png",
+    "extra": "spawn_pokemon_legendaire_maybe_shiny",
+    "price" : 3000
+  },
+  {
+    "item_name": "Hyper Ball S",
+    "rarity": "rare",
+    "description": "Une Hyper ball qui contient un Pokémon très rare shiny",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
+    "extra": "spawn_pokemon_rare_maybe_shiny",
+    "price" : 1500
+  }
+]
