@@ -1062,6 +1062,7 @@ next_event_time = None
 next_event_name = None
 
 
+
 async def auto_event_loop():
     await bot.wait_until_ready()
     global next_event_time, next_event_name
@@ -1086,7 +1087,7 @@ async def auto_event_loop():
 
         chosen = random.choice(["quiz", "devine"])
         next_event_name = "🧠 Quiz Pokémon" if chosen == "quiz" else "🔍 Devine le Pokémon"
-        next_event_time = datetime.now() + timedelta(seconds=EVENT_INTERVAL)
+        next_event_time = datetime.now() + timedelta(seconds=EVENT_INTERVAL) + timedelta(hours=1)
 
 ###h
 
@@ -1134,7 +1135,7 @@ async def timeevent(ctx):
         await ctx.send("⏸️ Aucun événement prévu — le vocal est vide.")
         return
 
-    remaining = next_event_time - datetime.datetime.now()
+    remaining = next_event_time - datetime.now()
     total_seconds = int(remaining.total_seconds())
 
     if total_seconds <= 0:
