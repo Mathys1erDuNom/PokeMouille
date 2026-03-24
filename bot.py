@@ -1075,7 +1075,7 @@ async def auto_event_loop():
         print(f"[ERREUR] Salon vocal introuvable (id={VOICE_CHANNEL_ID}).")
         return
     while not bot.is_closed():
-        EVENT_INTERVAL = random.randint(1, 5) * 60  # ← tirage aléatoire à chaque tour 1 à 5min
+        EVENT_INTERVAL = random.randint(20, 25) * 60  # ← tirage aléatoire à chaque tour 20 à 25 min
         if len(voice_channel.members) == 0:
             next_event_time = None
             next_event_name = None
