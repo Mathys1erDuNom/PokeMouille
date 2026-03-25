@@ -680,7 +680,7 @@ def is_under_ban(guild_id, user_id):
     return False
 
 
-
+'''
 ######################################################################################
 ######################################################################################
 ######################################################################################
@@ -775,6 +775,115 @@ async def catch(ctx):
     finally:
         catch_in_progress.discard(lookup_id)
 
+'''
+######################################################################################
+######################################################################################
+######################################################################################
+
+# On définit un cooldown de 1 utilisation toutes les 30 secondes par utilisateur
+@bot.command()
+@commands.cooldown(1, 30, commands.BucketType.user)
+async def catch(ctx):
+    if ctx.channel.id != TEXT_CHANNEL_ID:
+        await ctx.send(f"❌ Cette commande est uniquement disponible dans <#{TEXT_CHANNEL_ID}>.")
+        # On reset le cooldown pour que l'utilisateur n'ait pas à attendre s'il s'est trompé de salon
+        ctx.command.reset_cooldown(ctx)
+        return
+
+    guild_id = ctx.guild.id
+    lookup_id = guild_id
+    trace_id = str(uuid.uuid4())[:8]
+
+    if lookup_id in catch_in_progress:
+        ctx.command.reset_cooldown(ctx) # Empêche de bloquer le cooldown si la commande est spam
+        return
+    catch_in_progress.add(lookup_id)
+
+    try:
+        if is_under_ban(guild_id, ctx.author.id):
+            await ctx.send("⏳ Tu es sous ban. Attends encore un peu avant de répondre.")
+            return
+
+        vc = bot.get_channel(VOICE_CHANNEL_ID)
+        if vc is None:
+            await ctx.send("❌ Salon vocal introuvable.")
+            return
+        if ctx.author.id != TARGET_USER_ID_CROCO and ctx.author not in vc.members:
+            await ctx.send("❌ Tu dois être dans le salon vocal pour capturer un Pokémon.")
+            ctx.command.reset_cooldown(ctx) # On reset pour qu'il puisse retenter dès qu'il rejoint le vocal
+            return
+
+        current = current_pokemon.get(guild_id)
+        if current is None:
+            if not pokemon_caught.get(guild_id, False):
+                await ctx.send(f"❌ Aucun Pokémon à capturer. [TRACE {trace_id}]")
+            ctx.command.reset_cooldown(ctx)
+            return
+
+        if guild_id in allowed_user and ctx.author.id != allowed_user[guild_id]:
+            allowed_name = ctx.guild.get_member(allowed_user[guild_id]).display_name
+            await ctx.send(f"❌ Seul {allowed_name} peut capturer ce Pokémon.")
+            ctx.command.reset_cooldown(ctx)
+            return
+
+        # --- 🎲 SYSTÈME DE CHANCE (1 chance sur 3) ---
+        reussite = random.randint(1, 3) # Génère 1, 2 ou 3
+        
+        # On envoie d'abord la Pokéball
+        embed_pokeball = discord.Embed(
+            description=f"**{ctx.author.display_name} lance une Pokéball !**",
+            color=0xFF0000
+        )
+        if pokeball_url:
+            embed_pokeball.set_thumbnail(url=pokeball_url)
+        await ctx.send(embed=embed_pokeball)
+
+        if reussite != 1:  # Échec (66% de chance d'échouer)
+            print(f"[TRACE {trace_id}] [LOG] Échec de la capture (Tirage: {reussite})")
+            await ctx.send(f"💨 **Oh non ! Le Pokémon s'est échappé de la Ball !** Retente dans 30 secondes.")
+            return # On s'arrête ici, le cooldown de 30s s'applique !
+
+        # --- 🎉 SUCCESS (Si reussite == 1, 33% de chance) ---
+        pokemon_name = current
+        pokemon_data = current_pokemon_data[guild_id]
+
+        ivs = pokemon_data.get("ivs", {})
+        stats_with_iv = pokemon_data.get("stats_iv", pokemon_data["stats"])
+        save_new_capture(ctx.author.id, pokemon_name, ivs, stats_with_iv, pokemon_data)
+
+        reward_amount = 20
+        new_balance = add_money(ctx.author.id, reward_amount)
+
+        embed_captured = discord.Embed(
+            description=(
+                f"🎉 **{ctx.author.display_name} a capturé {pokemon_name} !\n"
+                f"Vise bien l'aveugle**\n\n"
+                f"💰 Récompense : **+{reward_amount:,}** Croco dollars\n"
+                f"💰🐊 Nouveau solde : **{new_balance:,}** Croco dollars"
+            ),
+            color=0x00CC66
+        )
+        if pokemon_data.get("image", ""):
+            embed_captured.set_image(url=pokemon_data["image"])
+        await ctx.send(embed=embed_captured)
+
+        # On libère le cooldown si la capture est réussie pour que le prochain Pokémon puisse être capturé direct
+        ctx.command.reset_cooldown(ctx) 
+        reset_spawn(guild_id)
+
+    finally:
+        catch_in_progress.discard(lookup_id)
+
+
+
+@catch.error
+async def catch_error(ctx, error):
+    if isinstance(error, commands.CommandOnCooldown):
+        await ctx.send(f"⏳ Calme-toi ! La Pokéball est encore brûlante. Réessaie dans **{error.retry_after:.1f} secondes**.")
+    else:
+        raise error # Laisse passer les autres types d'erreurs
+    
+    
 
 ######################################################################################
 ######################################################################################
