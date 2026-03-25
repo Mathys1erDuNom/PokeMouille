@@ -1053,16 +1053,16 @@ async def tempspawn(ctx):
 
     channel = bot.get_channel(TEXT_CHANNEL_ID)
 
-    # ✅ FIX : si une tâche manque pour un membre en vocal, on la crée maintenant
-    #for member in members_in_vc:
-     #   task = dm_spawn_tasks.get(member.id)
-      #  if task is None or task.done():
-       #     wait_time = random.randint(60 * 60, 120 * 60) ##1min à 2min
-        #    minutes, seconds = divmod(wait_time, 60)
-         #   print(f"[INFO][tempspawn] Spawn DM lancé pour {member.display_name} dans {minutes} min {seconds} sec.")
-          #  dm_spawn_tasks[member.id] = asyncio.create_task(
-           #     wait_and_spawn_dm(wait_time, channel, member)
-            #)
+    #✅ FIX : si une tâche manque pour un membre en vocal, on la crée maintenant
+    for member in members_in_vc:
+        task = dm_spawn_tasks.get(member.id)
+        if task is None or task.done():
+            wait_time = random.randint(60 * 60, 120 * 60) ##1h à 2h
+            minutes, seconds = divmod(wait_time, 60)
+            print(f"[INFO][tempspawn] Spawn DM lancé pour {member.display_name} dans {minutes} min {seconds} sec.")
+            dm_spawn_tasks[member.id] = asyncio.create_task(
+                wait_and_spawn_dm(wait_time, channel, member)
+            )
 
     embed = discord.Embed(
         title="⏱️ Prochains spawns DM",
