@@ -471,7 +471,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
             if author else
             f"✨ **Un {display_name} brillant sauvage est apparu !**"
         )
-        description = "C'est un Pokémon BRILLANT ! Tape vite `!catch` pour le capturer !"
+        description = "C'est un Pokémon BRILLANT ! Tape vite `!catch` ou '!capture' pour le capturer"
         color = 0xFFD700
     else:
         display_name = pokemon["name"]
@@ -480,7 +480,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
             if author else
             f"Un **{display_name}** sauvage est apparu !"
         )
-        description = "Tape `!catch` pour le capturer !"
+        description = "C'est un Pokémon BRILLANT ! Tape vite `!catch` ou '!capture' pour le capturer"
         color = 0x00FF00
 
     if target_user:
@@ -775,6 +775,75 @@ async def catch(ctx):
     finally:
         catch_in_progress.discard(lookup_id)
 
+
+######################################################################################
+######################################################################################
+######################################################################################
+
+@bot.command()
+async def capture(ctx):
+    if not isinstance(ctx.channel, discord.DMChannel):
+        await ctx.send("❌ Cette commande est uniquement disponible en message privé.")
+        return
+
+    lookup_id = ctx.author.id
+    trace_id = str(uuid.uuid4())[:8]
+
+    # 🔒 Empêche les captures simultanées
+    if lookup_id in catch_in_progress:
+        return
+    catch_in_progress.add(lookup_id)
+
+    try:
+        # Vérifie qu'un Pokémon est présent
+        current = current_pokemon_data.get(lookup_id)
+        if current is None or pokemon_caught.get(lookup_id, False):
+            if pokemon_caught.get(lookup_id, False):
+                print(f"[TRACE {trace_id}] [LOG] Pokémon déjà capturé en DM.")
+                return
+            await ctx.send(f"❌ Aucun Pokémon à capturer. [TRACE {trace_id}]")
+            return
+
+        pokemon_data = current
+        pokemon_name = pokemon_data["name"]
+
+        # Envoi du message Pokéball
+        embed_pokeball = discord.Embed(
+            description=f"**{ctx.author.display_name} lance une Pokéball !**",
+            color=0xFF0000
+        )
+        if pokeball_url:
+            embed_pokeball.set_thumbnail(url=pokeball_url)
+        await ctx.send(embed=embed_pokeball)
+
+        # Sauvegarde
+        ivs = pokemon_data.get("ivs", {})
+        stats_with_iv = pokemon_data.get("stats_iv", pokemon_data["stats"])
+        save_new_capture(ctx.author.id, pokemon_name, ivs, stats_with_iv, pokemon_data)
+
+        # 💰 Récompense
+        reward_amount = 20
+        new_balance = add_money(ctx.author.id, reward_amount)
+
+        embed_captured = discord.Embed(
+            description=(
+                f"🎉 **{ctx.author.display_name} a capturé {pokemon_name} !\n"
+                f"Vise bien l'aveugle**\n\n"
+                f"💰 Récompense : **+{reward_amount:,}** Croco dollars\n"
+                f"💰🐊 Nouveau solde : **{new_balance:,}** Croco dollars"
+            ),
+            color=0x00CC66
+        )
+        if pokemon_data.get("image", ""):
+            embed_captured.set_image(url=pokemon_data["image"])
+        await ctx.send(embed=embed_captured)
+
+        # Reset du spawn DM
+        pokemon_caught[lookup_id] = True
+        current_pokemon_data.pop(lookup_id, None)
+
+    finally:
+        catch_in_progress.discard(lookup_id)
 
 ######################################################################################
 ######################################################################################
