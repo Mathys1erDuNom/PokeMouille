@@ -689,7 +689,13 @@ def is_under_ban(guild_id, user_id):
 @bot.command()
 async def catch(ctx):
     # Détermine si on est en DM ou sur un serveur
+    # Détermine si on est en DM ou sur un serveur
     is_dm = isinstance(ctx.channel, discord.DMChannel)
+
+    # ✅ Restriction au salon TEXT_CHANNEL_ID (sauf DM)
+    if not is_dm and ctx.channel.id != TEXT_CHANNEL_ID:
+        await ctx.send(f"❌ Cette commande est uniquement disponible dans <#{TEXT_CHANNEL_ID}>.")
+        return
 
     if is_dm:
         lookup_id = ctx.author.id
