@@ -685,25 +685,14 @@ def is_under_ban(guild_id, user_id):
 ######################################################################################
 ######################################################################################
 
-
 @bot.command()
 async def catch(ctx):
-    # Détermine si on est en DM ou sur un serveur
-    # Détermine si on est en DM ou sur un serveur
-    is_dm = isinstance(ctx.channel, discord.DMChannel)
-
-    # ✅ Restriction au salon TEXT_CHANNEL_ID (sauf DM)
-    if not is_dm and ctx.channel.id != TEXT_CHANNEL_ID:
+    if ctx.channel.id != TEXT_CHANNEL_ID:
         await ctx.send(f"❌ Cette commande est uniquement disponible dans <#{TEXT_CHANNEL_ID}>.")
         return
 
-    if is_dm:
-        lookup_id = ctx.author.id
-        guild_id = None
-    else:
-        guild_id = ctx.guild.id
-        lookup_id = guild_id
-
+    guild_id = ctx.guild.id
+    lookup_id = guild_id
     trace_id = str(uuid.uuid4())[:8]
 
     # 🔒 Empêche les captures simultanées
@@ -712,54 +701,42 @@ async def catch(ctx):
     catch_in_progress.add(lookup_id)
 
     try:
-        # Vérifie le ban (seulement sur serveur)
-        if not is_dm and is_under_ban(guild_id, ctx.author.id):
+        # Vérifie le ban
+        if is_under_ban(guild_id, ctx.author.id):
             print(f"[TRACE {trace_id}] [LOG] Joueur sous ban, refus.")
             await ctx.send("⏳ Tu es sous ban. Attends encore un peu avant de répondre.")
             return
 
-        # Vérifie la présence dans le salon vocal (seulement sur serveur)
-        if not is_dm:
-            vc = bot.get_channel(VOICE_CHANNEL_ID)
-            if vc is None:
-                print(f"[TRACE {trace_id}] [LOG] Salon vocal introuvable")
-                await ctx.send("❌ Salon vocal introuvable.")
-                return
-            if ctx.author.id != TARGET_USER_ID_CROCO and ctx.author not in vc.members:
-                print(f"[TRACE {trace_id}] [LOG] Auteur pas dans le salon vocal.")
-                await ctx.send("❌ Tu dois être dans le salon vocal pour capturer un Pokémon.")
-                return
+        # Vérifie la présence dans le salon vocal
+        vc = bot.get_channel(VOICE_CHANNEL_ID)
+        if vc is None:
+            print(f"[TRACE {trace_id}] [LOG] Salon vocal introuvable")
+            await ctx.send("❌ Salon vocal introuvable.")
+            return
+        if ctx.author.id != TARGET_USER_ID_CROCO and ctx.author not in vc.members:
+            print(f"[TRACE {trace_id}] [LOG] Auteur pas dans le salon vocal.")
+            await ctx.send("❌ Tu dois être dans le salon vocal pour capturer un Pokémon.")
+            return
 
         # Vérifie qu'un Pokémon est présent
-        if is_dm:
-            current = current_pokemon_data.get(lookup_id)
-            if current is None or pokemon_caught.get(lookup_id, False):
-                if pokemon_caught.get(lookup_id, False):
-                    print(f"[TRACE {trace_id}] [LOG] Pokémon déjà capturé en DM.")
-                    return
-                await ctx.send(f"❌ Aucun Pokémon à capturer. [TRACE {trace_id}]")
+        current = current_pokemon.get(guild_id)
+        if current is None:
+            if pokemon_caught.get(guild_id, False):
+                print(f"[TRACE {trace_id}] [LOG] Aucun Pokémon mais déjà capturé, on ne dit rien.")
                 return
-            pokemon_data = current
-            pokemon_name = pokemon_data["name"]
-        else:
-            current = current_pokemon.get(guild_id)
-            if current is None:
-                if pokemon_caught.get(guild_id, False):
-                    print(f"[TRACE {trace_id}] [LOG] Aucun Pokémon mais déjà capturé, on ne dit rien.")
-                    return
-                await ctx.send(f"❌ Aucun Pokémon à capturer. [TRACE {trace_id}]")
+            await ctx.send(f"❌ Aucun Pokémon à capturer. [TRACE {trace_id}]")
+            return
+
+        # Vérifie la restriction d'utilisateur
+        if guild_id in allowed_user:
+            if ctx.author.id != allowed_user[guild_id]:
+                allowed_name = ctx.guild.get_member(allowed_user[guild_id]).display_name
+                print(f"[TRACE {trace_id}] [LOG] Pokémon réservé à {allowed_name}")
+                await ctx.send(f"❌ Seul {allowed_name} peut capturer ce Pokémon.")
                 return
 
-            # Vérifie la restriction d'utilisateur (seulement sur serveur)
-            if guild_id in allowed_user:
-                if ctx.author.id != allowed_user[guild_id]:
-                    allowed_name = ctx.guild.get_member(allowed_user[guild_id]).display_name
-                    print(f"[TRACE {trace_id}] [LOG] Pokémon réservé à {allowed_name}")
-                    await ctx.send(f"❌ Seul {allowed_name} peut capturer ce Pokémon.")
-                    return
-
-            pokemon_name = current
-            pokemon_data = current_pokemon_data[guild_id]
+        pokemon_name = current
+        pokemon_data = current_pokemon_data[guild_id]
 
         # Envoi du message Pokéball
         embed_pokeball = discord.Embed(
@@ -793,15 +770,10 @@ async def catch(ctx):
         await ctx.send(embed=embed_captured)
 
         # Reset du spawn
-        if is_dm:
-            pokemon_caught[lookup_id] = True
-            current_pokemon_data.pop(lookup_id, None)
-        else:
-            reset_spawn(guild_id)
+        reset_spawn(guild_id)
 
     finally:
         catch_in_progress.discard(lookup_id)
-
 
 
 ######################################################################################
