@@ -882,7 +882,6 @@ async def timecheck(ctx):
 
 
 
-
 @bot.command()
 @is_croco()
 async def tempspawn(ctx):
@@ -892,10 +891,22 @@ async def tempspawn(ctx):
         return
 
     members_in_vc = [m for m in vc.members if not m.bot]
-
     if not members_in_vc:
         await ctx.send("❌ Aucun membre en vocal actuellement.")
         return
+
+    channel = bot.get_channel(TEXT_CHANNEL_ID)
+
+    # ✅ FIX : si une tâche manque pour un membre en vocal, on la crée maintenant
+    for member in members_in_vc:
+        task = dm_spawn_tasks.get(member.id)
+        if task is None or task.done():
+            wait_time = random.randint(300, 600)
+            minutes, seconds = divmod(wait_time, 60)
+            print(f"[INFO][tempspawn] Spawn DM lancé pour {member.display_name} dans {minutes} min {seconds} sec.")
+            dm_spawn_tasks[member.id] = asyncio.create_task(
+                wait_and_spawn_dm(wait_time, channel, member)
+            )
 
     embed = discord.Embed(
         title="⏱️ Prochains spawns DM",
@@ -904,27 +915,18 @@ async def tempspawn(ctx):
 
     for member in members_in_vc:
         task = dm_spawn_tasks.get(member.id)
-
         if task is None or task.done():
             status = "❌ Aucune tâche en cours"
         else:
-            # On récupère le temps restant depuis spawn_remaining_time si dispo
-            # Sinon on indique juste qu'une tâche tourne
             remaining = dm_spawn_remaining_time.get(member.id)
-            if remaining and remaining > 0:
+            if remaining is not None and remaining > 0:
                 minutes, seconds = divmod(remaining, 60)
                 status = f"🕐 **{minutes} min {seconds} sec**"
             else:
-                status = "🔄 En cours (temps non disponible)"
-
-        embed.add_field(
-            name=member.display_name,
-            value=status,
-            inline=False
-        )
+                status = "🔄 Démarrage en cours..."
+        embed.add_field(name=member.display_name, value=status, inline=False)
 
     await ctx.send(embed=embed)
-
 
 @bot.event
 async def on_ready():
