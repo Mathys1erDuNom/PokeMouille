@@ -780,9 +780,9 @@ async def catch(ctx):
 ######################################################################################
 ######################################################################################
 
-# On définit un cooldown de 1 utilisation toutes les 30 secondes par utilisateur
+# On définit un cooldown de 1 utilisation toutes les 10 secondes par utilisateur
 @bot.command()
-@commands.cooldown(1, 30, commands.BucketType.user)
+@commands.cooldown(1, 10, commands.BucketType.user)
 async def catch(ctx):
     if ctx.channel.id != TEXT_CHANNEL_ID:
         await ctx.send(f"❌ Cette commande est uniquement disponible dans <#{TEXT_CHANNEL_ID}>.")
@@ -883,7 +883,7 @@ async def catch_error(ctx, error):
     else:
         raise error # Laisse passer les autres types d'erreurs
     
-    
+
 
 ######################################################################################
 ######################################################################################
