@@ -907,7 +907,7 @@ async def tempspawn(ctx):
     for member in members_in_vc:
         task = dm_spawn_tasks.get(member.id)
         if task is None or task.done():
-            wait_time = random.randint(60 * 60, 120 * 60) ##1h à 2h
+            wait_time = random.randint(1 * 60, 2 * 60) ##1min à 2min
             minutes, seconds = divmod(wait_time, 60)
             print(f"[INFO][tempspawn] Spawn DM lancé pour {member.display_name} dans {minutes} min {seconds} sec.")
             dm_spawn_tasks[member.id] = asyncio.create_task(
