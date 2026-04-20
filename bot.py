@@ -1233,14 +1233,14 @@ async def auto_event_loop():
         print(f"[ERREUR] Salon vocal introuvable (id={VOICE_CHANNEL_ID}).")
         return
     while not bot.is_closed():
-        EVENT_INTERVAL = random.randint(20, 25) * 60  # ← tirage aléatoire à chaque tour 20 à 25 min
+        EVENT_INTERVAL = random.randint(1, 2) * 60  # ← tirage aléatoire à chaque tour 20 à 25 min
         if len(voice_channel.members) == 0:
             next_event_time = None
             next_event_name = None
             print(f"[AUTO] Personne dans le vocal, vérification dans 1 min...")
             await asyncio.sleep(60)
             continue
-        chosen = random.choice(["quiz", "devine"])
+        chosen = random.choice(["quiz", "devine", "spawn"])
         next_event_name = "🧠 Quiz Pokémon" if chosen == "quiz" else "🔍 Devine le Pokémon"
         next_event_time = datetime.now(TIMEZONE) + timedelta(seconds=EVENT_INTERVAL)
         print(
@@ -1258,10 +1258,12 @@ async def auto_event_loop():
         print(f"[AUTO] Lancement de : {next_event_name} ({len(voice_channel.members)} joueur(s) présent(s))")
         if chosen == "quiz":
             await bot.run_quiz(text_channel)
-        else:
+        if chosen == "devine":
             await bot.run_devine(text_channel)
+        if chosen == "spawn":
+            await spawn_pokemon(channel=ctx.channel, force=True, author=ctx.author, shiny_rate=DEFAULT_SHINY_RATE)
 
-
+        
 
 
 
