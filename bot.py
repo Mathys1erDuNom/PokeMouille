@@ -1256,12 +1256,12 @@ async def auto_event_loop():
             await asyncio.sleep(60)
             continue
         print(f"[AUTO] Lancement de : {next_event_name} ({len(voice_channel.members)} joueur(s) présent(s))")
-        if chosen == "quiz":
-            await bot.run_quiz(text_channel)
-        elif chosen == "devine":
-            await bot.run_devine(text_channel)
-        else :
-            await spawn_pokemon(text_channel)
+        #if chosen == "quiz":
+         #   await bot.run_quiz(text_channel)
+        #elif chosen == "devine":
+         #   await bot.run_devine(text_channel)
+        #else :
+        await spawn_pokemon(text_channel)
        # if chosen == "spawn":
         #    await spawn_pokemon(channel=ctx.channel, force=True, author=ctx.author, shiny_rate=DEFAULT_SHINY_RATE)
 
