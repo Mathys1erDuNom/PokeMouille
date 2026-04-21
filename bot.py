@@ -606,11 +606,12 @@ async def wait_and_spawn_dm(wait_time, channel, member: discord.Member):
 
             # Met à jour le temps restant chaque seconde
             dm_spawn_remaining_time[member.id] = remaining - 1
-
             # Print toutes les 60 secondes
             if remaining % 60 == 0 and remaining > 0:
                 minutes, seconds = divmod(remaining, 60)
                 print(f"[DM SPAWN] {member.display_name} — spawn dans {minutes} min {seconds} sec.")
+
+            
 
             # Si le membre a quitté le vocal entre-temps, on arrête
             vc = bot.get_channel(VOICE_CHANNEL_ID)
