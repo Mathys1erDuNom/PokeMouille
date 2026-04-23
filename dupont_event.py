@@ -5,6 +5,8 @@ import asyncio
 import random
 import io
 
+from money_db import add_money, remove_money
+
 
 import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -118,6 +120,18 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
             for child in self.view.children:
                 child.disabled = True
             await interaction.response.edit_message(view=self.view)
+
+            if riche_or_not:
+                # On prend l'argent du riche → on ajoute au joueur
+                add_money(interaction.user.id, somme)
+            else:
+                # On donne au pauvre → on retire au joueur
+                success = remove_money(interaction.user.id, somme)
+                if not success:
+                    await channel.send(f"❌ {interaction.user.mention} tu n'as pas assez de Croco dollars pour faire ce don !")
+                    interaction_done.set()
+                    return
+
             await channel.send(f"**{personnage['name']}** : {texte_fin}")
             interaction_done.set()
 
