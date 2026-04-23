@@ -5,7 +5,8 @@ import asyncio
 import random
 import io
 
-from money_db import add_money, remove_money
+from money_db import add_money, remove_money, get_balance
+
 
 
 import os
