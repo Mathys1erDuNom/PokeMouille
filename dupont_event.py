@@ -27,7 +27,7 @@ tableau_riche = [
             "Merci de m'avoir délésté de quelques billets, c'est pour la bonne cause !",
             "L'argent ne fait pas le bonheur... mais ça aide !"
         ],
-        "adresse_image": "images/bg_acier.png"
+        "adresse_image": "images/famille/homme.png"
     },
     {
         "id": 1,
@@ -41,7 +41,7 @@ tableau_riche = [
             "Bien joué ! Cet argent sera mieux utilisé ailleurs.",
             "Je ne manquerai pas ces quelques billets, croyez-moi."
         ],
-        "adresse_image": "images/bg_acier.png"
+        "adresse_image": "images/famille/femme.png"
     }
 ]
 
@@ -58,7 +58,7 @@ tableau_pauvre = [
             "Que Dieu vous bénisse... je vais pouvoir manger ce soir.",
             "Merci du fond du cœur, vous êtes une bonne personne."
         ],
-        "adresse_image": "images/bg_acier.png"
+        "adresse_image": "images/famille/homme.png"
     },
     {
         "id": 1,
@@ -72,7 +72,7 @@ tableau_pauvre = [
             "Mes enfants vont pouvoir avoir un repas chaud ce soir, merci !",
             "Vous ne savez pas à quel point ça compte pour nous."
         ],
-        "adresse_image": "images/bg_acier.png"
+        "adresse_image": "images/famille/femme.png"
     }
 ]
 
