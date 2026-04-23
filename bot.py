@@ -29,6 +29,7 @@ from quiz_spawn import setup_quiz_commands
 from devine_poke import setup_guess_pokemon_command
 
 from dupont_event import run_interaction_personnage
+from dupont_event import setup_dupont_command
 
 from combat.utils import normalize_text
 
@@ -1197,6 +1198,7 @@ setup_regions()
 
 setup_fishing(bot, cur)
 
+setup_dupont_command(bot)
 
 
 
