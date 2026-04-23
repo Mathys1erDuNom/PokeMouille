@@ -116,6 +116,7 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
         def __init__(self):
             super().__init__(label=label_bouton, style=discord.ButtonStyle.success)
 
+  
         async def callback(self, interaction: discord.Interaction):
             for child in self.view.children:
                 child.disabled = True
@@ -124,16 +125,42 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
             if riche_or_not:
                 # On prend l'argent du riche → on ajoute au joueur
                 add_money(interaction.user.id, somme)
+                new_balance = get_balance(interaction.user.id)
+                await channel.send(f"**{personnage['name']}** : {texte_fin}")
+                await channel.send(
+                    f"💰 {interaction.user.mention} a pris **{somme:,}** Croco dollars à {personnage['name']} !\n"
+                    f"🐊 Nouveau solde : **{new_balance:,}** Croco dollars."
+                )
             else:
                 # On donne au pauvre → on retire au joueur
                 success = remove_money(interaction.user.id, somme)
                 if not success:
-                    await channel.send(f"❌ {interaction.user.mention} tu n'as pas assez de Croco dollars pour faire ce don !")
+                    balance = get_balance(interaction.user.id)
+                    await channel.send(
+                        f"❌ {interaction.user.mention} tu n'as pas assez de Croco dollars pour faire ce don !\n"
+                        f"🐊 Solde actuel : **{balance:,}** Croco dollars."
+                    )
                     interaction_done.set()
                     return
+                new_balance = get_balance(interaction.user.id)
+                await channel.send(f"**{personnage['name']}** : {texte_fin}")
+                await channel.send(
+                    f"🤝 {interaction.user.mention} a donné **{somme:,}** Croco dollars à {personnage['name']} !\n"
+                    f"🐊 Nouveau solde : **{new_balance:,}** Croco dollars."
+                )
 
-            await channel.send(f"**{personnage['name']}** : {texte_fin}")
-            interaction_done.set()
+            interaction_done.set()    
+        
+
+
+
+
+
+
+
+
+
+
 
     class ActionView(View):
         def __init__(self):
