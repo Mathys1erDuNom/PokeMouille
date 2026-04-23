@@ -5,6 +5,10 @@ import asyncio
 import random
 import io
 
+
+import os
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 # ─── Tableaux de personnages ───────────────────────────────────────────────────
 
 tableau_riche = [
@@ -20,7 +24,7 @@ tableau_riche = [
             "Merci de m'avoir délésté de quelques billets, c'est pour la bonne cause !",
             "L'argent ne fait pas le bonheur... mais ça aide !"
         ],
-        "adresse_image": "https://exemple.com/jean_riche.png"
+        "adresse_image": "images/back_acier.png"
     },
     {
         "id": 1,
@@ -34,7 +38,7 @@ tableau_riche = [
             "Bien joué ! Cet argent sera mieux utilisé ailleurs.",
             "Je ne manquerai pas ces quelques billets, croyez-moi."
         ],
-        "adresse_image": "https://exemple.com/marie_riche.png"
+        "adresse_image": "images/back_acier.png"
     }
 ]
 
@@ -51,7 +55,7 @@ tableau_pauvre = [
             "Que Dieu vous bénisse... je vais pouvoir manger ce soir.",
             "Merci du fond du cœur, vous êtes une bonne personne."
         ],
-        "adresse_image": "https://exemple.com/pierre_pauvre.png"
+        "adresse_image": "images/back_acier.png"
     },
     {
         "id": 1,
@@ -65,7 +69,7 @@ tableau_pauvre = [
             "Mes enfants vont pouvoir avoir un repas chaud ce soir, merci !",
             "Vous ne savez pas à quel point ça compte pour nous."
         ],
-        "adresse_image": "https://exemple.com/lucie_pauvre.png"
+        "adresse_image": "images/back_acier.png"
     }
 ]
 
@@ -91,15 +95,11 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
         label_bouton = f"🤝 Donner {somme} pièces"
 
     # ── Image ─────────────────────────────────────────────────────────────────
+  
     try:
-        async with aiohttp.ClientSession() as session:
-            async with session.get(image_url) as resp:
-                if resp.status == 200:
-                    data = await resp.read()
-                    file = discord.File(fp=io.BytesIO(data), filename="personnage.png")
-                    await channel.send(file=file)
-                else:
-                    await channel.send(f"*(image indisponible pour {personnage['name']})*")
+        image_path = os.path.join(script_dir, personnage["adresse_image"])
+        file = discord.File(fp=image_path, filename="personnage.png")
+        await channel.send(file=file)
     except Exception as e:
         print(f"[ERREUR IMAGE] {e}")
         await channel.send(f"*(image indisponible pour {personnage['name']})*")
