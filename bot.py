@@ -28,6 +28,8 @@ import unicodedata
 from quiz_spawn import setup_quiz_commands
 from devine_poke import setup_guess_pokemon_command
 
+from dupont_event import run_interaction_personnage
+
 from combat.utils import normalize_text
 
 from pokedex import setup_pokedex
@@ -1246,7 +1248,7 @@ async def auto_event_loop():
             print(f"[AUTO] Personne dans le vocal, vérification dans 1 min...")
             await asyncio.sleep(60)
             continue
-        chosen = random.choice(["quiz", "devine", "spawn"])
+        chosen = random.choice(["quiz", "devine", "spawn", "dupont"])
         next_event_name = "🧠 Quiz Pokémon" if chosen == "quiz" else "🔍 Devine le Pokémon"
         next_event_time = datetime.now(TIMEZONE) + timedelta(seconds=EVENT_INTERVAL)
         print(
@@ -1268,6 +1270,8 @@ async def auto_event_loop():
            await bot.run_devine(text_channel)
         elif chosen == "spawn" :
             await spawn_pokemon(text_channel)
+        elif chosen == "dupon":
+            await run_interaction_personnage(text_channel, False)    
  
 
         
@@ -1306,6 +1310,13 @@ async def timeevent(ctx):
         f"⏱️ Dans **{minutes} min {seconds} sec** "
         f"(à {next_event_time.strftime('%H:%M:%S')})"
     )
+
+@bot.command()
+async def event_dupont(ctx):
+    run_interaction_personnage(TEXT_CHANNEL_ID, False)    
+
+    
+
  
 
 
