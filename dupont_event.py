@@ -73,18 +73,9 @@ tableau_pauvre = [
 # ─── Fonction principale ───────────────────────────────────────────────────────
 
 async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not: bool):
-    """
-    Lance une interaction avec un personnage aléatoire.
-
-    :param channel:      Le salon Discord où envoyer les messages.
-    :param riche_or_not: True  → personnage riche (on lui prend de l'argent)
-                         False → personnage pauvre (on lui donne de l'argent)
-    """
-
     tableau = tableau_riche if riche_or_not else tableau_pauvre
 
-    # Choix aléatoire du personnage (id 0 à 3) et du texte (index 0 à 3 limité à la taille)
-    personnage = tableau[random.randint(0, len(tableau) - 1)]
+    personnage          = tableau[random.randint(0, len(tableau) - 1)]
     index_premier_texte = random.randint(0, len(personnage["premier_texte"]) - 1)
     index_texte_fin     = random.randint(0, len(personnage["texte_fin"]) - 1)
 
@@ -93,13 +84,13 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
     image_url     = personnage["adresse_image"]
 
     if riche_or_not:
-        somme   = personnage["somme_prendre"]
+        somme        = personnage["somme_prendre"]
         label_bouton = f"💰 Prendre {somme} pièces"
     else:
-        somme   = personnage["somme_don"]
+        somme        = personnage["somme_don"]
         label_bouton = f"🤝 Donner {somme} pièces"
 
-    # ── Envoi de l'image ──────────────────────────────────────────────────────
+    # ── Image ─────────────────────────────────────────────────────────────────
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(image_url) as resp:
@@ -113,10 +104,10 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
         print(f"[ERREUR IMAGE] {e}")
         await channel.send(f"*(image indisponible pour {personnage['name']})*")
 
-    # ── Envoi du premier texte ────────────────────────────────────────────────
+    # ── Premier texte ─────────────────────────────────────────────────────────
     await channel.send(f"**{personnage['name']}** : {premier_texte}")
 
-    # ── Bouton d'interaction ──────────────────────────────────────────────────
+    # ── Bouton ────────────────────────────────────────────────────────────────
     interaction_done = asyncio.Event()
 
     class ActionButton(Button):
@@ -124,12 +115,9 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
             super().__init__(label=label_bouton, style=discord.ButtonStyle.success)
 
         async def callback(self, interaction: discord.Interaction):
-            # Désactive tous les boutons immédiatement
             for child in self.view.children:
                 child.disabled = True
             await interaction.response.edit_message(view=self.view)
-
-            # Affiche le texte de fin
             await channel.send(f"**{personnage['name']}** : {texte_fin}")
             interaction_done.set()
 
@@ -149,6 +137,36 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
 
     view = ActionView()
     view.message = await channel.send("Que faites-vous ?", view=view)
-
-    # Attend que quelqu'un clique (ou que le timeout expire)
     await interaction_done.wait()
+
+
+# ─── Setup de la commande ──────────────────────────────────────────────────────
+
+def setup_dupont_command(bot, authorized_user_id=None):
+
+    @bot.command(name="event_dupont")
+    async def event_dupont(ctx, type_event: str = None):
+        """
+        Lance un event Dupont manuellement.
+        Usage : !event_dupont riche   →  personnage riche
+                !event_dupont pauvre  →  personnage pauvre
+                !event_dupont         →  choix aléatoire
+        """
+        if authorized_user_id is not None and ctx.author.id != authorized_user_id:
+            await ctx.send("⛔ Tu n'as pas la permission d'utiliser cette commande.")
+            return
+
+        if type_event is None:
+            riche_or_not = random.choice([True, False])
+        elif type_event.lower() == "riche":
+            riche_or_not = True
+        elif type_event.lower() == "pauvre":
+            riche_or_not = False
+        else:
+            await ctx.send("❌ Argument invalide. Utilise `riche`, `pauvre`, ou laisse vide pour un choix aléatoire.")
+            return
+
+        await run_interaction_personnage(ctx.channel, riche_or_not)
+
+    # Expose run_interaction_personnage pour l'appeler depuis le main
+    bot.run_interaction_personnage = run_interaction_personnage

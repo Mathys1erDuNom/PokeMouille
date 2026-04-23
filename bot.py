@@ -1311,9 +1311,7 @@ async def timeevent(ctx):
         f"(à {next_event_time.strftime('%H:%M:%S')})"
     )
 
-@bot.command()
-async def event_dupont(ctx):
-    run_interaction_personnage(TEXT_CHANNEL_ID, False)    
+
 
     
 
