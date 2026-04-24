@@ -19,13 +19,17 @@ tableau_riche = [
         "id": 0,
         "name": "Jean Dupont",
         "premier_texte": [
-            "Bonjour, je suis Jean Dupont, un riche entrepreneur. J'ai plus d'argent qu'il ne m'en faut...",
-            "La vie m'a bien souri. Peut-être un peu trop, d'ailleurs."
+            "Oh tu as l'air dans le besoin, tu me fais pitié. Moi grâce à mon traf..., mon commerce honorable et fructueux, je suis plein à l'as. Aller prends cette pièce et hors de ma vue.",
+            "Mais non je te dis qu'il ne nous dérangera plus, je te le dis, il ne peut pas. Qu'est-ce que tu fais là ? Tu ne serais pas en train de m'espionner ? Prends ça, et ne t'avises pas de mettre ton nez dans mes affaires, ou tu en subiras les conséquences.",
+            "Tu as l'air désespéré et pathétique. Prends cet argent, et fiche le camp : je ne voudrais pas que mes clients pensent que je collabore avec des vauriens dans ton genre. Tu me fais penser à ces affreuses bestioles que mes clients collectionnent : pitoyables et sans aucune intelligence.",
+            "Eh toi là, oui tu as l'air pauvre, tiens prends cette pièce, et dis bien que c'est moi qui te l'ai donnée, je dois remonter ma popularité. Par contre ne reste pas à côté de moi, tu me fais honte."
+
+
         ],
-        "somme_prendre": 500,
+        "somme_prendre": 10,
         "texte_fin": [
-            "Merci de m'avoir délésté de quelques billets, c'est pour la bonne cause !",
-            "L'argent ne fait pas le bonheur... mais ça aide !"
+            "",
+            ""
         ],
         "adresse_image": "images/famille/homme.png"
     },
@@ -33,13 +37,15 @@ tableau_riche = [
         "id": 1,
         "name": "Marie Dupont",
         "premier_texte": [
-            "Je suis Marie Dupont, héritière d'une grande fortune familiale.",
-            "Mon coffre-fort déborde, autant en profiter !"
+            "Oh, bonjour toi. Tu as besoin d'argent ? Tiens, en voilà un peu, que je t'offre avec plaisir. Tu sais, il m'arrive de me sentir seule ici, mon mari est toujours très occupé... Heureusement que j'ai mes enfants !",
+            "Oh que tu as l'air charmant ! Voilà une petite somme, garde-la et utilise-la judicieusement. Tu me fais beaucoup penser à mes enfants, tu sais. Je donnerais ma vie pour les protéger...",
+            "Oh bonjour, qu'il est bon d'avoir de la compagnie. Je me sens un peu seule en ce moment, mon fils et son père n'arrêtent pas de se disputer, à propos de son activité... Il n'a jamais pu supporter ce que son père faisait. J'ai trouvé ce qu'il faisait à ces pauvres bêtes terrible au début, mais le bien de mes enfants passe au-dessus de tout le reste. J'ai bien peur que la vérité finisse par éclater au grand jour, et que mes enfants perdent tout ce qu'ils possèdent... Désolé de t'avoir dérangé, tiens, prends cet argent pour m'avoir écouté.",
+            "Bonjour, qu'est-ce que vous êtes mignon, j'ai envie de vous faire un cadeau, tenez"
         ],
-        "somme_prendre": 750,
+        "somme_prendre": 100,
         "texte_fin": [
-            "Bien joué ! Cet argent sera mieux utilisé ailleurs.",
-            "Je ne manquerai pas ces quelques billets, croyez-moi."
+            "",
+            ""
         ],
         "adresse_image": "images/famille/femme.png"
     }
