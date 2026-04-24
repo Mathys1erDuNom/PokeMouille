@@ -127,6 +127,8 @@ def setup_casino(bot):
                        "   Mise : 10 💰🐊 | Gain : 100 💰🐊 | Remboursement si 3/4\n\n"
                        "🎰 **Machine à sous** - Alignez 3 symboles identiques\n"
                        "   Mise : 10 💰🐊 | Gains : 100-10 000 💰🐊\n"
+                       "🎰 **Machine à sous** - Plus ou moins / égale\n"
+                       "   Mise : 10 💰🐊 | Gains : 20-100 💰🐊\n"
                        f"━━━━━━━━━━━━━━━━━━━━━━━\n"
                        f"💰🐊 **Votre solde :** {balance:,} Croco dollars",
             color=discord.Color.gold()

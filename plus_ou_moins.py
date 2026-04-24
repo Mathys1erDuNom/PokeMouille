@@ -6,7 +6,7 @@ from money_db import get_balance, add_money, remove_money
 
 # Mise et gains
 BET_AMOUNT = 10
-EXACT_MULTIPLIER = 5   # x5 pour total exact → gain 50 💰
+EXACT_MULTIPLIER = 10   # x10 pour total exact → gain 100💰
 HIGHLOW_MULTIPLIER = 2  # x2 pour haut/bas → gain 20 💰
 
 # Représentation visuelle des dés
