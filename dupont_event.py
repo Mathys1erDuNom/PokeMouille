@@ -184,7 +184,7 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
                     pass
 
     view = ActionView()
-    #view.message = await channel.send("Que faites-vous ?", view=view)
+    view.message = await channel.send("", view=view)
     await interaction_done.wait()
 
 
@@ -205,7 +205,7 @@ def setup_dupont_command(bot, authorized_user_id=None):
             return
 
         if type_event is None:
-            riche_or_not = random.choice([True, False])
+            riche_or_not = True
         elif type_event.lower() == "riche":
             riche_or_not = True
         elif type_event.lower() == "pauvre":
