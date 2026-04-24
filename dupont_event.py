@@ -184,7 +184,7 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
                     pass
 
     view = ActionView()
-    view.message = await channel.send("Que faites-vous ?", view=view)
+    #view.message = await channel.send("Que faites-vous ?", view=view)
     await interaction_done.wait()
 
 
