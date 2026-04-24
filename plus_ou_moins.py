@@ -158,8 +158,9 @@ class DiceGame(View):
                 color=discord.Color.red()
             )
 
-        embed.set_footer(text="Tapez /casino pour rejouer ! 🎲")
+        embed.set_footer(text="Bonne chance ! 🎲")
         self.clear_items()
+        self.add_item(ReplayButton(self.user_id))
         await interaction.response.edit_message(embed=embed, view=self)
 
 
@@ -260,3 +261,35 @@ class EqualButton(Button):
 
     async def callback(self, interaction: discord.Interaction):
         await self.game_view.resolve_bet(interaction, "equal", None)
+
+
+# ------------------------------------------------------------------ #
+#  Bouton — Rejouer                                                   #
+# ------------------------------------------------------------------ #
+
+class ReplayButton(Button):
+    def __init__(self, user_id: int):
+        super().__init__(
+            label="Rejouer",
+            style=discord.ButtonStyle.success,
+            emoji="🔄"
+        )
+        self.user_id = user_id
+
+    async def callback(self, interaction: discord.Interaction):
+        new_game = DiceGame(user_id=self.user_id)
+        balance = get_balance(self.user_id)
+
+        embed = discord.Embed(
+            title="🎲 Jeu de Dés",
+            description="**Choisissez votre mode de pari :**\n\n"
+                        "🎯 **Total exact** → Devinez le total précis (2-12)\n"
+                        f"   Gain : **{BET_AMOUNT * EXACT_MULTIPLIER} 💰🐊** (x{EXACT_MULTIPLIER})\n\n"
+                        "📊 **Haut / Bas / Égal** → Estimez la zone du total\n"
+                        f"   Gain : **{BET_AMOUNT * HIGHLOW_MULTIPLIER} 💰🐊** (x{HIGHLOW_MULTIPLIER})\n\n"
+                        f"**Mise :** {BET_AMOUNT} 💰🐊\n"
+                        f"**Votre solde :** {balance} 💰🐊",
+            color=discord.Color.gold()
+        )
+        embed.set_footer(text="Bonne chance ! 🍀")
+        await interaction.response.edit_message(embed=embed, view=new_game)
