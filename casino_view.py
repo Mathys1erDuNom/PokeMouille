@@ -4,16 +4,40 @@ from discord.ui import View, Button
 from card_game import CardColorGame
 from slot_machine import SlotMachine
 from money_db import get_balance
+from plus_ou_moins import DiceGame
+
+# Dans CasinoView.__init__ :
+
 
 class CasinoView(View):
     def __init__(self):
         super().__init__(timeout=180)
         self.add_item(CardGameButton())
         self.add_item(SlotMachineButton())
+        self.add_item(DiceGameButton())
         
     async def on_timeout(self):
         for item in self.children:
             item.disabled = True
+
+            
+class DiceGameButton(Button):
+    def __init__(self):
+        super().__init__(label="🎲 Jeu de Dés", style=discord.ButtonStyle.danger, emoji="🎲")
+
+    async def callback(self, interaction: discord.Interaction):
+        balance = get_balance(interaction.user.id)
+        view = DiceGame(user_id=interaction.user.id)
+        embed = discord.Embed(
+            title="🎲 Jeu de Dés",
+            description="**Pariez sur le résultat de 2 dés !**\n\n"
+                       "🎯 **Total exact** → Gain x5 (50 💰🐊)\n"
+                       "📊 **Haut / Bas / Égal** → Gain x2 (20 💰🐊)\n\n"
+                       f"**Mise :** 10 💰🐊\n**Votre solde :** {balance} 💰🐊",
+            color=discord.Color.gold()
+        )
+        await interaction.response.send_message(embed=embed, view=view, ephemeral=True)
+
 
 
 class CardGameButton(Button):
