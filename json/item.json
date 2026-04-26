@@ -72,7 +72,7 @@
     "rarity": "rare",
     "description": "Augmente les IV en attaque spéciale de 4",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/calcium.png",
-    "extra": "buff_attaque_spé",
+    "extra": "buff_attaque_spe",
     "price" : 500
   },
   {
@@ -80,7 +80,7 @@
     "rarity": "rare",
     "description": "Augmenter les IV en défense spéciale de 4",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zinc.png",
-    "extra": "buff_defense_spé",
+    "extra": "buff_defense_spe",
     "price" : 500
   },
   {
