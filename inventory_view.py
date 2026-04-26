@@ -18,37 +18,23 @@ from buff_iv import BuffPokemonView
 from new_db import get_new_captures
 
 # Chargement du fichier item.json
-
 item_json_path = os.path.join(script_dir, "json", "item.json")
-
 with open(item_json_path, "r", encoding="utf-8") as f:
     ITEM_LIST = json.load(f)
 
 
-
-import json
 import discord
 from io import BytesIO
 import requests
 
 async def get_pokemon_image_embed(pokemon_name: str, json_file: str, is_shiny: bool = False) -> (discord.Embed, discord.File):
-    """
-    Renvoie un embed Discord et un fichier avec l'image du Pokémon.
-
-    :param pokemon_name: Nom du Pokémon à afficher
-    :param json_file: Chemin du fichier JSON contenant les données des Pokémon
-    :param is_shiny: Indique si le Pokémon est shiny (pour le préfixe ✨)
-    """
-    # Chargement du JSON
     with open(json_file, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    # Recherche du Pokémon
     pokemon_data = next((p for p in data if p["name"].lower() == pokemon_name.lower()), None)
     if not pokemon_data:
         return None, None
 
-    # Préparation de l'image
     image_url = pokemon_data.get("image")
     if image_url.startswith("http"):
         resp = requests.get(image_url)
@@ -58,7 +44,6 @@ async def get_pokemon_image_embed(pokemon_name: str, json_file: str, is_shiny: b
     else:
         file = None
 
-    # Préparation de l'embed
     shiny_text = "✨ " if is_shiny else ""
     embed = discord.Embed(title=f"{shiny_text}{pokemon_data['name']}")
     if file:
@@ -67,6 +52,35 @@ async def get_pokemon_image_embed(pokemon_name: str, json_file: str, is_shiny: b
     return embed, file
 
 
+# ─── Helper spawn ─────────────────────────────────────────────────────────────
+
+async def _handle_spawn(interaction, spawn_func, json_normal, json_shiny, shiny_rate):
+    """Factorisation du spawn Pokémon pour éviter la répétition."""
+    if spawn_func is None:
+        await interaction.followup.send("❌ La fonction de spawn n'est pas définie.", ephemeral=True)
+        return
+
+    pokemon_name, is_shiny = await spawn_func(
+        interaction.user,
+        json_file=json_normal,
+        shiny_rate=shiny_rate
+    )
+
+    if not pokemon_name:
+        await interaction.followup.send("❌ Impossible de spawn le Pokémon.", ephemeral=True)
+        return
+
+    json_file_to_use = json_shiny if is_shiny else f"json/{json_normal}"
+    embed, file = await get_pokemon_image_embed(pokemon_name, json_file=json_file_to_use, is_shiny=is_shiny)
+
+    if embed and file:
+        await interaction.followup.send(content="🎉 Vous avez gagné un Pokémon !", embed=embed, file=file, ephemeral=True)
+    else:
+        await interaction.followup.send("❌ Impossible de trouver l'image du Pokémon.", ephemeral=True)
+
+
+# ─── Views inventaire ─────────────────────────────────────────────────────────
+
 class InventoryView(View):
     def __init__(self, items, spawn_func=None):
         super().__init__(timeout=180)
@@ -74,18 +88,14 @@ class InventoryView(View):
         self.spawn_func = spawn_func
         self.page = 0
         self.max_per_page = 10
-    
         self.update_buttons()
 
     def update_buttons(self):
         self.clear_items()
         start = self.page * self.max_per_page
         end = start + self.max_per_page
-
         for item in self.items[start:end]:
-           self.add_item(InventoryItemButton(item, self))
-
-
+            self.add_item(InventoryItemButton(item, self))
         if self.page > 0:
             self.add_item(InventoryPrevButton(self))
         if end < len(self.items):
@@ -118,7 +128,6 @@ class InventoryNextButton(Button):
         await interaction.response.edit_message(view=self.view_ref)
 
 
-
 class UseItemButton(Button):
     def __init__(self, item, user_id, spawn_func=None):
         super().__init__(label="🛠 Utiliser", style=discord.ButtonStyle.success)
@@ -128,7 +137,6 @@ class UseItemButton(Button):
 
     async def callback(self, interaction: discord.Interaction):
         new_qty, extra = use_item(self.user_id, self.item["name"])
-        
 
         if new_qty is None:
             await interaction.response.send_message(
@@ -136,7 +144,7 @@ class UseItemButton(Button):
             )
             return
 
-        # Défère l'interaction immédiatement
+        # ✅ Un seul defer, tout de suite
         await interaction.response.defer(ephemeral=True)
 
         msg = f"✅ Vous avez utilisé **{self.item['name']}**."
@@ -145,260 +153,79 @@ class UseItemButton(Button):
         else:
             msg += f" Il vous en reste {new_qty}."
 
-        # Effets spécifiques
+        # ─── Effets spécifiques ───────────────────────────────────────────────
+
         if extra == "spawn_pokemon":
-            if self.spawn_func is not None:
+            await interaction.followup.send(msg, ephemeral=True)
+            await _handle_spawn(
+                interaction, self.spawn_func,
+                json_normal="pokemon_all_pokeball_normal.json",
+                json_shiny="json/pokemon_all_pokeball_shiny.json",
+                shiny_rate=64
+            )
 
-                pokemon_name, is_shiny = await self.spawn_func(
-                    interaction.user,
-                    json_file="pokemon_all_pokeball_normal.json",  # 📦 JSON choisi ici
-                    shiny_rate=64  # ✨ shiny boosté
-                )
+        elif extra == "spawn_pokemon_rare":
+            await interaction.followup.send(msg, ephemeral=True)
+            await _handle_spawn(
+                interaction, self.spawn_func,
+                json_normal="pokemon_rare_pokeball_normal.json",
+                json_shiny="json/pokemon_rare_pokeball_shiny.json",
+                shiny_rate=64
+            )
 
-                if pokemon_name:
-                    json_file_to_use = "json/pokemon_all_pokeball_shiny.json" if is_shiny else "json/pokemon_all_pokeball_normal.json"
+        elif extra == "spawn_pokemon_rare_maybe_shiny":
+            await interaction.followup.send(msg, ephemeral=True)
+            await _handle_spawn(
+                interaction, self.spawn_func,
+                json_normal="pokemon_rare_pokeball_normal.json",
+                json_shiny="json/pokemon_rare_pokeball_shiny.json",
+                shiny_rate=2
+            )
 
-                    embed, file = await get_pokemon_image_embed(
-                        pokemon_name, 
-                        json_file= json_file_to_use ,
-                        is_shiny=is_shiny
-                    )
-                    if embed and file:
-                        await interaction.followup.send(
-                            content="🎉 Vous avez gagné un Pokémon !",
-                            embed=embed,
-                            file=file,
-                            ephemeral=True
-                        )
-                    else:
-                        await interaction.followup.send(
-                            "❌ Impossible de trouver l'image du Pokémon.",
-                            ephemeral=True
-                        )    
-                else:
-                    await interaction.followup.send(
-                    "❌ Impossible de spawn le Pokémon.",
-                    ephemeral=True
-                )
-            else:
-                await interaction.followup.send(
-                "❌ La fonction de spawn n'est pas définie.",
-                ephemeral=True
-                )
+        elif extra == "spawn_pokemon_legendaire_maybe_shiny":
+            await interaction.followup.send(msg, ephemeral=True)
+            await _handle_spawn(
+                interaction, self.spawn_func,
+                json_normal="pokemon_legendaire_normal.json",
+                json_shiny="json/pokemon_legendaire_shiny.json",
+                shiny_rate=2
+            )
 
- ##########################
+        elif extra == "spawn_pokemon_legendary":
+            await interaction.followup.send(msg, ephemeral=True)
+            await _handle_spawn(
+                interaction, self.spawn_func,
+                json_normal="pokemon_legendaire_normal.json",
+                json_shiny="json/pokemon_legendaire_shiny.json",
+                shiny_rate=64
+            )
 
-        # Effets spécifiques
-        if extra == "spawn_pokemon_rare":
-            if self.spawn_func is not None:
-
-                pokemon_name, is_shiny = await self.spawn_func(
-                    interaction.user,
-                    json_file="pokemon_rare_pokeball_normal.json",  # 📦 JSON choisi ici
-                    shiny_rate=64  # ✨ shiny boosté
-                )
-
-                if pokemon_name:
-                    json_file_to_use = "json/pokemon_rare_pokeball_shiny.json" if is_shiny else "json/pokemon_rare_pokeball_normal.json"
-
-                    embed, file = await get_pokemon_image_embed(
-                        pokemon_name, 
-                        json_file= json_file_to_use ,
-                        is_shiny=is_shiny
-                    )
-                    if embed and file:
-                        await interaction.followup.send(
-                            content="🎉 Vous avez gagné un Pokémon !",
-                            embed=embed,
-                            file=file,
-                            ephemeral=True
-                        )
-                    else:
-                        await interaction.followup.send(
-                            "❌ Impossible de trouver l'image du Pokémon.",
-                            ephemeral=True
-                        )    
-                else:
-                    await interaction.followup.send(
-                    "❌ Impossible de spawn le Pokémon.",
-                    ephemeral=True
-                )
-            else:
-                await interaction.followup.send(
-                "❌ La fonction de spawn n'est pas définie.",
-                ephemeral=True
-                )
-###################
-        # Effets spécifiques
-        if extra == "spawn_pokemon_rare_maybe_shiny":
-            if self.spawn_func is not None:
-
-                pokemon_name, is_shiny = await self.spawn_func(
-                    interaction.user,
-                    json_file="pokemon_rare_pokeball_normal.json",  # 📦 JSON choisi ici
-                    shiny_rate=2  # ✨ shiny boosté
-                )
-
-                if pokemon_name:
-                    json_file_to_use = "json/pokemon_rare_pokeball_shiny.json" if is_shiny else "json/pokemon_rare_pokeball_normal.json"
-
-                    embed, file = await get_pokemon_image_embed(
-                        pokemon_name, 
-                        json_file= json_file_to_use ,
-                        is_shiny=is_shiny
-                    )
-                    if embed and file:
-                        await interaction.followup.send(
-                            content="🎉 Vous avez gagné un Pokémon !",
-                            embed=embed,
-                            file=file,
-                            ephemeral=True
-                        )
-                    else:
-                        await interaction.followup.send(
-                            "❌ Impossible de trouver l'image du Pokémon.",
-                            ephemeral=True
-                        )    
-                else:
-                    await interaction.followup.send(
-                    "❌ Impossible de spawn le Pokémon.",
-                    ephemeral=True
-                )
-            else:
-                await interaction.followup.send(
-                "❌ La fonction de spawn n'est pas définie.",
-                ephemeral=True
-                )        
-
-
-
-
-
-###################
-         # Effets spécifiques
-        if extra == "spawn_pokemon_legendaire_maybe_shiny":
-            if self.spawn_func is not None:
-
-                pokemon_name, is_shiny = await self.spawn_func(
-                    interaction.user,
-                    json_file="pokemon_legendaire_normal.json",  # 📦 JSON choisi ici
-                    shiny_rate=2   # ✨ shiny boosté
-                )
-
-                if pokemon_name:
-                    json_file_to_use = "json/pokemon_legendaire_shiny.json" if is_shiny else "json/pokemon_legendaire_normal.json"
-                    embed, file = await get_pokemon_image_embed(
-                        pokemon_name, 
-                        json_file=json_file_to_use,
-                        is_shiny=is_shiny
-                    )
-                    if embed and file:
-                        await interaction.followup.send(
-                            content="🎉 Vous avez gagné un Pokémon !",
-                            embed=embed,
-                            file=file,
-                            ephemeral=True
-                        )
-                    else:
-                        await interaction.followup.send(
-                            "❌ Impossible de trouver l'image du Pokémon.",
-                            ephemeral=True
-                        )    
-                else:
-                    await interaction.followup.send(
-                    "❌ Impossible de spawn le Pokémon.",
-                    ephemeral=True
-                )
-            else:
-                await interaction.followup.send(
-                "❌ La fonction de spawn n'est pas définie.",
-                ephemeral=True
-                )        
-
-
-
-#####################
-
-        if extra == "spawn_pokemon_legendary":
-            if self.spawn_func is not None:
-
-                pokemon_name, is_shiny = await self.spawn_func(
-                    interaction.user,
-                    json_file="pokemon_legendaire_normal.json",  # 📦 JSON choisi ici
-                    shiny_rate=64   # ✨ shiny boosté
-                )
-
-                if pokemon_name:
-                    json_file_to_use = "json/pokemon_legendaire_shiny.json" if is_shiny else "json/pokemon_legendaire_normal.json"
-                    embed, file = await get_pokemon_image_embed(
-                        pokemon_name, 
-                        json_file=json_file_to_use,
-                        is_shiny=is_shiny
-                    )
-                    if embed and file:
-                        await interaction.followup.send(
-                            content="🎉 Vous avez gagné un Pokémon !",
-                            embed=embed,
-                            file=file,
-                            ephemeral=True
-                        )
-                    else:
-                        await interaction.followup.send(
-                            "❌ Impossible de trouver l'image du Pokémon.",
-                            ephemeral=True
-                        )    
-                else:
-                    await interaction.followup.send(
-                    "❌ Impossible de spawn le Pokémon.",
-                    ephemeral=True
-                )
-            else:
-                await interaction.followup.send(
-                "❌ La fonction de spawn n'est pas définie.",
-                ephemeral=True
-                )
-
-#####################
-#####################
-        if extra in ("buff_pv", "buff_attaque", "buff_attaque_spe", "buff_defense", "buff_defense_spe", "buff_vitesse"):
-            
- 
-            await interaction.response.defer(ephemeral=True)
- 
+        elif extra in ("buff_pv", "buff_attaque", "buff_attaque_spe", "buff_defense", "buff_defense_spe", "buff_vitesse"):
             captures = get_new_captures(str(interaction.user.id))
             pokemons = [entry["name"] for entry in captures]
- 
+
             if not pokemons:
-                await interaction.followup.send(
-                    "❌ Tu n'as aucun Pokémon capturé.",
-                    ephemeral=True
-                )
+                await interaction.followup.send(msg, ephemeral=True)
+                await interaction.followup.send("❌ Tu n'as aucun Pokémon capturé.", ephemeral=True)
                 return
- 
+
             view = BuffPokemonView(str(interaction.user.id), pokemons, iv_increase=4)
- 
             embed = discord.Embed(
                 title="💊 Buff IV",
                 description="Choisis le Pokémon à améliorer :",
                 color=0xf39c12
             )
- 
+            await interaction.followup.send(msg, ephemeral=True)
             await interaction.followup.send(embed=embed, view=view, ephemeral=True)
- 
 
-#####################
-
-
-
+        else:
+            # Aucun effet spécial → on envoie juste le message de confirmation
+            await interaction.followup.send(msg, ephemeral=True)
 
 
+# ─── Utilitaire texte ─────────────────────────────────────────────────────────
 
-
-
-        # Envoie maintenant le message générique
-        await interaction.followup.send(msg, ephemeral=True)
-
-def draw_multiline_text(draw, text, position, font, max_width, fill=(0,0,0)):
+def draw_multiline_text(draw, text, position, font, max_width, fill=(0, 0, 0)):
     words = text.split()
     lines = []
     current_line = ""
@@ -421,11 +248,12 @@ def draw_multiline_text(draw, text, position, font, max_width, fill=(0,0,0)):
         y += line_height
 
 
+# ─── Bouton item inventaire ───────────────────────────────────────────────────
 
 class InventoryItemButton(Button):
     def __init__(self, item, parent_view):
         super().__init__(
-            label=f"{item.get('name','Inconnu')} ×{item.get('quantity', 1)}",
+            label=f"{item.get('name', 'Inconnu')} ×{item.get('quantity', 1)}",
             style=discord.ButtonStyle.primary
         )
         self.item = item
@@ -434,21 +262,17 @@ class InventoryItemButton(Button):
     async def callback(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
 
-        # Création de la carte visuelle de l'item
         name = self.item["name"]
         quantity = self.item["quantity"]
-        rarity = self.item["rarity"]
         description = self.item["description"]
         image_url = self.item["image"]
 
-        # 🔥 Chargement de l'image de fond
         width, height = 600, 400
         try:
             card = Image.open(os.path.join(images_dir, "image_item.png")).convert("RGBA")
             card = card.resize((width, height), Image.Resampling.LANCZOS)
         except Exception as e:
             print(f"[ERREUR] Impossible de charger le fond image_item.png : {e}")
-            # Fallback : fond uni si l'image n'existe pas
             card = Image.new("RGBA", (width, height), (245, 245, 245, 255))
 
         draw = ImageDraw.Draw(card)
@@ -460,12 +284,10 @@ class InventoryItemButton(Button):
             font = ImageFont.load_default()
             font_small = font
 
-        # Texte sur le fond
         draw.text((70, 130), f"{name}", fill="black", font=font)
         draw.text((70, 180), f"Quantité : {quantity}", fill="black", font=font_small)
         draw_multiline_text(draw, description or "Aucune description.", (70, 230), font_small, max_width=240)
 
-        # Image de l'objet
         if image_url and image_url.startswith("http"):
             try:
                 resp = requests.get(image_url)
@@ -485,22 +307,16 @@ class InventoryItemButton(Button):
         embed.set_image(url="attachment://item.png")
 
         view = View()
-        view.add_item(
-            UseItemButton(
-                self.item,
-                interaction.user.id,
-                spawn_func=self.parent_view.spawn_func
-            )
-        )
+        view.add_item(UseItemButton(
+            self.item,
+            interaction.user.id,
+            spawn_func=self.parent_view.spawn_func
+        ))
 
-        await interaction.followup.send(
-            file=file,
-            embed=embed,
-            view=view,
-            ephemeral=True
-        )
-    
+        await interaction.followup.send(file=file, embed=embed, view=view, ephemeral=True)
 
+
+# ─── Setup commandes ──────────────────────────────────────────────────────────
 
 def setup_inventory(bot, spawn_func=None):
 
@@ -514,24 +330,17 @@ def setup_inventory(bot, spawn_func=None):
         view = InventoryView(items, spawn_func=spawn_pokemon_for_user)
         await ctx.send("🎒 **Votre inventaire :**", view=view)
 
-
-    # 👉 Nouvelle commande GIVE
     @is_croco()
     @bot.command(name="give")
     async def give(ctx, user: discord.User, *, item_name: str):
-        """Donne un item à un utilisateur."""
-
-        # Recherche de l'item dans item.json
         found_item = next(
             (i for i in ITEM_LIST if i["item_name"].lower() == item_name.lower()),
             None
         )
-
         if not found_item:
             await ctx.send(f"❌ Grand Maître suprême des Crocodiles, l'item `{item_name}` n'existe pas.")
             return
 
-        # Ajout de l'item dans la DB
         add_item(
             user_id=user.id,
             name=found_item["item_name"],
@@ -540,18 +349,16 @@ def setup_inventory(bot, spawn_func=None):
             description=found_item.get("description", ""),
             image=found_item.get("image", ""),
             extra=found_item.get("extra"),
-            price = found_item.get("price")
+            price=found_item.get("price")
         )
-        
 
         await ctx.send(
             f"🎁 Grand Maître suprême des Crocodiles, l'item **{found_item['item_name']}** "
             f"a été ajouté à l'inventaire de **{user.mention}**."
         )
+
     @is_croco()
     @bot.command(name="inventaire_vide")
     async def inventaire_vide(ctx, user: discord.User):
-        """Supprime tous les items de l'inventaire d'un utilisateur."""
-    
         delete_inventory(user.id)
         await ctx.send(f"🗑️ Grand Maître suprême des Crocodiles, l'inventaire de {user.mention} a été vidé !")
