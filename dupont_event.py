@@ -14,6 +14,21 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # ─── Tableaux de personnages ───────────────────────────────────────────────────
 
+'''
+Père -> Jean Dupon
+Mère Bienvellante -> Marie Dupont
+
+Enfant A (n'aime pas les actions de son père = colère) -> Sophie Dupont
+
+Enfant B (ne sait rien du trafic = ignorance) -> Serge Dupont
+
+Enfant C (complice car son père le terrifie = peur) -> Anne Dupont
+
+Enfant D (l'ainé, héritier de l'empire de son père, 
+qui est lui aussi complice mais lui l'a choisi, car son père manipulateur lui a fait miroiter un avenir prospère grâce au trafic = naiveté)
+
+'''
+
 tableau_riche = [
     {
         "id": 0,
@@ -31,7 +46,7 @@ tableau_riche = [
             "",
             ""
         ],
-        "adresse_image": "images/famille/homme.png"
+        "adresse_image": "images/famille/jean.png"
     },
     {
         "id": 1,
@@ -47,7 +62,61 @@ tableau_riche = [
             "",
             ""
         ],
-        "adresse_image": "images/famille/femme.png"
+        "adresse_image": "images/famille/marie.png"
+    },
+    {
+        "id": 2,
+        "name": "Sophie Dupont",
+        "premier_texte": [
+            "Je n'en reviens toujours pas de ce qu'il fait, il est tellement corrompu... J'aimerais avoir l'influence nécessaire pour faire cesser tout cela, mais seul je n'irais pas bien loin.... Tiens, prends cet argent, il est sale et je n'en veux pas. Peut-être qu'en échange, tu pourras m'aider, au moment venu...",
+            "Oh tiens, bonjour. As-tu besoin d'argent ? Tiens, tu peux prendre un peu du mien. De toutes façons, je n'en veux pas, cela ne m'intéresse pas, je ne suis pas comme eux. Je veux simplement faire éclater la vérité et sauver ces pauvres créatures du sort qui les attend...",
+            "Je suis sûr que c'est sa faute si Bernard a disparu, je ne peux pas encore le prouver mais j'en suis sûr. Ah tiens, je croyais être seul, je réfléchissais à voix haute, tant que tu es là, tu veux de l'argent ? Je n'en veux pas.",
+            "Hey, j'ai une question, comment tu ferais pour dénoncer des choses dont personne n'est au courant et qui sont problématiques ? Mmmh, euh je me suis emporté, tiens prends cet argent, désolé de t'avoir dérangé"
+
+
+        ],
+        "somme_prendre": 60,
+        "texte_fin": [
+            "",
+            ""
+        ],
+        "adresse_image": "images/famille/sophie.png"
+    },
+    {
+        "id": 3,
+        "name": "Serge Dupont",
+        "premier_texte": [
+            "Bonjour ! Mais qui es-tu ? As-tu besoin d'un coup de main ? Ma famille est riche grâce à mon père, qui mène un noble commerce avec le casino ! Mes deux frères aînés travaillent avec lui, mais mon autre frère a toujours été distant, et je n'ai jamais su pourquoi. Sûrement une petite querelle de famille ! Tu me parais sympathique, tiens, cadeau !",
+            "Oh bonjour ! J'aime bien ta tête, tu as l'air d'une personne honnête et respectable. Des gens disent que mon père est un criminel, sans coeur. Je ne comprends pas pourquoi ces bruits courent. Père dit que ce sont des journalistes, et qu'il ne faut pas les écouter ! Tiens, prends cet argent, je n'en manque pas",
+            "Bonjour, j'ai une question. C'est normal les engueulades dans une famille ?  Désolée, je suis un peu préoccupée, car mon frère et père se disputent encore à propos de ces animaux. Je ne sais pas trop de quoi ils parlent, à vrai dire. Ils vont sûrement se réconcilier bientôt ! Merci de m'avoir écouté, tiens !",
+            "Bonjour, tu n'aurais pas vu un Ramoloss ? Je ne trouve plus mon Ramoloss et ça me fait peur. Père dit qu'il s'est enfui lors d'une balade et que ça ne servait à rien de le chercher, mais je veux le retrouver! Tu en as vu un ? Non... Tant pis merci quand même, tiens prends cet argent et si tu en vois un, essaye de me retrouver !"
+        
+
+        ],
+        "somme_prendre": 50,
+        "texte_fin": [
+            "",
+            ""
+        ],
+        "adresse_image": "images/famille/serge.png"
+    },
+    {
+        "id": 4,
+        "name": "Anne Dupont",
+        "premier_texte": [
+             "Ah, tiens, bonjour. Tu peux prendre cet argent, si tu veux, nous en avons beaucoup. Mais ne dis pas à Père que je te l'ai donné...",
+             "Bonjour. Tu veux de l'argent ? C'est d'accord, en voici un peu, mais je ne suis pas d'humeur. J'ai encore entendu leurs cris, ces pauvres animaux... Les hommes de main de Père avaient mal fermé la porte de la pièce. C'était glaçant.... Enfin, oublie cela et ne le répète à personne, j'en ai déjà trop dit.",
+             "Il l'a fait disparaître, c'est sûr, on n'a plus de nouvelles de lui, en même temps quelle idée d'essayer de lui mettre des bâtons dans les roues... Mince, je pensais être seul, tiens prends cet argent et ne répète rien à personne.",
+             "Oui monsieur je sais que vous avez beaucoup perdu au casino, mais vous savez c'est le jeu et ça peut arriver dans tous les casinos, nous respectons toutes les règles. Ouf c'était moins une, il faut que je le contacte pour qu'il règle cette histoire. Mince je ne t'avais pas vu, tu sais quoi, prends cet argent et ne dis rien à personne de ce que tu as entendu."
+        
+
+        ],
+        "somme_prendre": 30,
+        "texte_fin": [
+            "",
+            ""
+        ],
+        "adresse_image": "images/famille/anne.png"
     }
 ]
 
