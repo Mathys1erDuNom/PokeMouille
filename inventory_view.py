@@ -357,6 +357,7 @@ class UseItemButton(Button):
                 ephemeral=True
                 )
 
+#####################
 
 
 
@@ -365,9 +366,6 @@ class UseItemButton(Button):
 
 
 
-
-        elif extra == "boost":
-            await interaction.followup.send("⚡ Vous avez reçu un boost !", ephemeral=True)
 
         # Envoie maintenant le message générique
         await interaction.followup.send(msg, ephemeral=True)

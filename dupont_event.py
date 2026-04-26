@@ -54,7 +54,7 @@ tableau_riche = [
         "premier_texte": [
             "Oh, bonjour toi. Tu as besoin d'argent ? Tiens, en voilà un peu, que je t'offre avec plaisir. Tu sais, il m'arrive de me sentir seule ici, mon mari est toujours très occupé... Heureusement que j'ai mes enfants !",
             "Oh que tu as l'air charmant ! Voilà une petite somme, garde-la et utilise-la judicieusement. Tu me fais beaucoup penser à mes enfants, tu sais. Je donnerais ma vie pour les protéger...",
-            "Oh bonjour, qu'il est bon d'avoir de la compagnie. Je me sens un peu seule en ce moment, mon fils et son père n'arrêtent pas de se disputer, à propos de son activité... Il n'a jamais pu supporter ce que son père faisait. J'ai trouvé ce qu'il faisait à ces pauvres bêtes terrible au début, mais le bien de mes enfants passe au-dessus de tout le reste. J'ai bien peur que la vérité finisse par éclater au grand jour, et que mes enfants perdent tout ce qu'ils possèdent... Désolé de t'avoir dérangé, tiens, prends cet argent pour m'avoir écouté.",
+            "Oh bonjour, qu'il est bon d'avoir de la compagnie. Je me sens un peu seule en ce moment, ma fille et son père n'arrêtent pas de se disputer, à propos de son activité... Elle n'a jamais pu supporter ce que son père faisait. J'ai trouvé ce qu'il faisait à ces pauvres bêtes terrible au début, mais le bien de mes enfants passe au-dessus de tout le reste. J'ai bien peur que la vérité finisse par éclater au grand jour, et que mes enfants perdent tout ce qu'ils possèdent... Désolé de t'avoir dérangé, tiens, prends cet argent pour m'avoir écouté.",
             "Bonjour, qu'est-ce que vous êtes mignon, j'ai envie de vous faire un cadeau, tenez"
         ],
         "somme_prendre": 100,
@@ -121,34 +121,7 @@ tableau_riche = [
 ]
 
 tableau_pauvre = [
-    {
-        "id": 0,
-        "name": "Pierre Michu",
-        "premier_texte": [
-            "S'il vous plaît... je n'ai pas mangé depuis deux jours.",
-            "Pierre Michu, ancien ouvrier, à la rue depuis six mois."
-        ],
-        "somme_don": 50,
-        "texte_fin": [
-            "Que Dieu vous bénisse... je vais pouvoir manger ce soir.",
-            "Merci du fond du cœur, vous êtes une bonne personne."
-        ],
-        "adresse_image": "images/famille/homme.png"
-    },
-    {
-        "id": 1,
-        "name": "Lucie Bernard",
-        "premier_texte": [
-            "Excusez-moi... auriez-vous un peu de monnaie pour un café ?",
-            "Je m'appelle Lucie, j'élève seule mes deux enfants."
-        ],
-        "somme_don": 30,
-        "texte_fin": [
-            "Mes enfants vont pouvoir avoir un repas chaud ce soir, merci !",
-            "Vous ne savez pas à quel point ça compte pour nous."
-        ],
-        "adresse_image": "images/famille/femme.png"
-    }
+  
 ]
 
 
@@ -156,8 +129,11 @@ tableau_pauvre = [
 
 async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not: bool):
     tableau = tableau_riche if riche_or_not else tableau_pauvre
+    if not tableau:
+        await channel.send("❌ Aucun personnage disponible pour ce type d'événement.")
+        return
 
-    personnage          = tableau[random.randint(0, len(tableau) - 1)]
+    personnage          = random.choice(tableau)
     index_premier_texte = random.randint(0, len(personnage["premier_texte"]) - 1)
     index_texte_fin     = random.randint(0, len(personnage["texte_fin"]) - 1)
 
@@ -227,12 +203,6 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
 
             interaction_done.set()    
         
-
-
-
-
-
-
 
 
 

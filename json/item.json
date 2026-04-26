@@ -38,5 +38,57 @@
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
     "extra": "spawn_pokemon_rare_maybe_shiny",
     "price" : 1500
+  },
+
+
+  {
+    "item_name": "PV Plus",
+    "rarity": "rare",
+    "description": "Augmente les IV en PV de 4",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hp-up.png",
+    "extra": "buff_PV",
+    "price" : 500
+  },
+  {
+    "item_name": "Protéine",
+    "rarity": "rare",
+    "description": "Augmente les IV en attaque de 4",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protein.png",
+    "extra": "buff_attaque",
+    "price" : 500
+  },
+  {
+    "item_name": "Fer",
+    "rarity": "rare",
+    "description": "Augmente les IV en défense de 4",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron.png",
+    "extra": "buff_defense",
+    "price" : 500
+  },
+
+  
+  {
+    "item_name": "Calcium",
+    "rarity": "rare",
+    "description": "Augmente les IV en attaque spéciale de 4",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/calcium.png",
+    "extra": "buff_attaque_spé",
+    "price" : 500
+  },
+  {
+    "item_name": "Zinc",
+    "rarity": "rare",
+    "description": "Augmenter les IV en défense spéciale de 4",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zinc.png",
+    "extra": "buff_defense_spé",
+    "price" : 500
+  },
+  {
+    "item_name": "Carbone",
+    "rarity": "rare",
+    "description": "Augmenter les IV en vitesse de 4",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/carbos.png",
+    "extra": "buff_vitesse",
+    "price" : 500
   }
 ]
