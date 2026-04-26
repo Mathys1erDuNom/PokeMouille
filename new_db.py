@@ -13,9 +13,6 @@ conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
 
-
-
-
 # Crée la table si elle n'existe pas
 cur.execute("""
 CREATE TABLE IF NOT EXISTS new_captures (
@@ -121,10 +118,16 @@ def delete_capture(user_id, pokemon_name):
     except ImportError:
         print("[WARNING] Impossible d'importer invalidate_new_pokedex_cache")
 
-def increase_pokemon_iv(user_id, pokemon_name, iv_increase):
+
+def increase_pokemon_iv(user_id, pokemon_name, iv_increase, stat_name=None):
     """
     Augmente les IV d'un Pokémon pour un utilisateur.
     Les IV sont plafonnés à 31, et les stats sont mises à jour en conséquence.
+
+    Paramètres :
+    - iv_increase : nombre de points à ajouter
+    - stat_name   : (optionnel) nom de la stat ciblée (ex: "attack", "speed")
+                    Si None, tous les IV sont augmentés.
     """
     user_id = str(user_id)
 
@@ -142,11 +145,26 @@ def increase_pokemon_iv(user_id, pokemon_name, iv_increase):
     ivs = row[0]    # dict JSON des IV
     stats = row[1]  # dict JSON des stats finales
 
-    # Augmente chaque IV selon iv_increase, max 31, et mets à jour la stat
-    for stat in ivs:
-        old_iv = ivs[stat]
-        ivs[stat] = min(31, ivs[stat] + iv_increase)
-        stats[stat] = stats.get(stat, 0) + (ivs[stat] - old_iv)  # ajout de la différence réelle
+    if stat_name is not None:
+        # Vérifie que la stat existe bien
+        if stat_name not in ivs:
+            print(f"[WARNING] Stat '{stat_name}' introuvable pour {pokemon_name} (stats disponibles : {list(ivs.keys())})")
+            return False
+
+        # Augmente uniquement l'IV ciblé
+        old_iv = ivs[stat_name]
+        ivs[stat_name] = min(31, ivs[stat_name] + iv_increase)
+        stats[stat_name] = stats.get(stat_name, 0) + (ivs[stat_name] - old_iv)
+
+        print(f"[INFO] IV '{stat_name}' du Pokémon {pokemon_name} de {user_id} augmenté de {iv_increase}")
+    else:
+        # Augmente tous les IV
+        for stat in ivs:
+            old_iv = ivs[stat]
+            ivs[stat] = min(31, ivs[stat] + iv_increase)
+            stats[stat] = stats.get(stat, 0) + (ivs[stat] - old_iv)
+
+        print(f"[INFO] Tous les IV du Pokémon {pokemon_name} de {user_id} augmentés de {iv_increase}")
 
     # Met à jour la base
     cur.execute("""
@@ -156,8 +174,6 @@ def increase_pokemon_iv(user_id, pokemon_name, iv_increase):
     """, (Json(ivs), Json(stats), user_id, pokemon_name))
     conn.commit()
 
-    print(f"[INFO] IV et stats du Pokémon {pokemon_name} de {user_id} augmentés de {iv_increase}")
-    
     # 🔥 Invalider le cache du pokédex
     try:
         from new_pokedex import invalidate_new_pokedex_cache

@@ -14,7 +14,8 @@ from inventory_db import use_item
 from utils import spawn_pokemon_for_user
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
-
+from buff_iv import BuffPokemonView
+from new_db import get_new_captures
 
 # Chargement du fichier item.json
 
@@ -358,7 +359,34 @@ class UseItemButton(Button):
                 )
 
 #####################
+#####################
+        if extra in ("buff_pv", "buff_attaque", "buff_attaque_spe", "buff_defense", "buff_defense_spe", "buff_vitesse"):
+            
+ 
+            await interaction.response.defer(ephemeral=True)
+ 
+            captures = get_new_captures(str(interaction.user.id))
+            pokemons = [entry["name"] for entry in captures]
+ 
+            if not pokemons:
+                await interaction.followup.send(
+                    "❌ Tu n'as aucun Pokémon capturé.",
+                    ephemeral=True
+                )
+                return
+ 
+            view = BuffPokemonView(str(interaction.user.id), pokemons, iv_increase=4)
+ 
+            embed = discord.Embed(
+                title="💊 Buff IV",
+                description="Choisis le Pokémon à améliorer :",
+                color=0xf39c12
+            )
+ 
+            await interaction.followup.send(embed=embed, view=view, ephemeral=True)
+ 
 
+#####################
 
 
 
