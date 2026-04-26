@@ -46,7 +46,7 @@
     "rarity": "rare",
     "description": "Augmente les IV en PV de 4",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hp-up.png",
-    "extra": "buff_PV",
+    "extra": "buff_pv",
     "price" : 500
   },
   {
