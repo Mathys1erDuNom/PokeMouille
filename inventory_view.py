@@ -201,6 +201,10 @@ class UseItemButton(Button):
             )
 
         elif extra in ("buff_pv", "buff_attaque", "buff_attaque_spe", "buff_defense", "buff_defense_spe", "buff_vitesse"):
+            from buff_iv import EXTRA_TO_STAT, STAT_LABELS
+            stat_key = EXTRA_TO_STAT[extra]
+            stat_label = STAT_LABELS[stat_key]
+
             captures = get_new_captures(str(interaction.user.id))
             pokemons = [entry["name"] for entry in captures]
 
@@ -209,10 +213,10 @@ class UseItemButton(Button):
                 await interaction.followup.send("❌ Tu n'as aucun Pokémon capturé.", ephemeral=True)
                 return
 
-            view = BuffPokemonView(str(interaction.user.id), pokemons, iv_increase=4)
+            view = BuffPokemonView(str(interaction.user.id), pokemons, stat_key=stat_key, iv_increase=4)
             embed = discord.Embed(
-                title="💊 Buff IV",
-                description="Choisis le Pokémon à améliorer :",
+                title=f"💊 Buff {stat_label}",
+                description=f"Choisis le Pokémon qui recevra **+4 IV en {stat_label}** :",
                 color=0xf39c12
             )
             await interaction.followup.send(msg, ephemeral=True)
