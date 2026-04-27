@@ -24,7 +24,7 @@ Enfant B (ne sait rien du trafic = ignorance) -> Serge Dupont
 
 Enfant C (complice car son père le terrifie = peur) -> Anne Dupont
 
-Enfant D (l'ainé, héritier de l'empire de son père, 
+Enfant D (l'ainé, héritier de l'empire de son père, -> Bernard Dupong
 qui est lui aussi complice mais lui l'a choisi, car son père manipulateur lui a fait miroiter un avenir prospère grâce au trafic = naiveté)
 
 '''
@@ -117,6 +117,24 @@ tableau_riche = [
             ""
         ],
         "adresse_image": "images/famille/anne.png"
+    },
+    {
+        "id": 5,
+        "name": "Bernard Dupont",
+        "premier_texte": [
+            "Il s'est chargé de lui, une bonne chose de faite, de nos jours les gens fouines dans les affaires des autres, quel irrespect. Oh excuse-moi, je ne t'avais pas vu, tiens prends cet argent, c'est de l'argent d'un, ce n'est pas rien !",
+            "Oh, bonjour ! Prends donc un peu d'argent. J'ai de plus en plus de responsabilités dans l'entreprise de Père, mon avenir prospère s'approche à grands pas ! Tout se passe exactement comme nous l'avons prévu, avec Père.",
+            "Bonjour. Ah, oui, tiens, prends ton argent. Au fait, as-tu vu ma soeur ? Père était dans une fureur monstrueuse après leur discussion. Ce petit écervelé n'a pas intérêt à mettre le nez dans nos affaires, à Père et moi. Et toi non plus, d'ailleurs.",
+            "Prendre le Pokémon du petit n'était peut-être pas la meilleure des idées, mais sa queue rapporte tellement. Hein quoi, qu'est-ce que tu fais là ? Tu m'espionnais ? Ok on va faire quelque chose, prends ça et ne dis rien à personne"
+
+         
+        ],
+        "somme_prendre": 20,
+        "texte_fin": [
+            "",
+            ""
+        ],
+        "adresse_image": "images/famille/bernard.png"
     }
 ]
 
