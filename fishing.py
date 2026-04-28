@@ -8,18 +8,24 @@ from discord.ext import commands
 # -----------------------
 # CONFIGURATION PÊCHE
 # -----------------------
-FISH_TIMER_MIN = 300
-FISH_TIMER_MAX = 500
+FISH_TIMER_MIN = 10
+FISH_TIMER_MAX = 15
 SHINY_RATE = 1 / 64
-NO_CATCH_RATE = 0.35
+
+# Probabilités des résultats
+NO_CATCH_RATE = 0.40  # 40% rien
+ITEM_RATE     = 0.30  # 30% item  → roll entre 0.40 et 0.70
+# 30% Pokémon → roll > 0.70
 
 JSON_DIR = os.path.join(os.path.dirname(__file__), "json")
+FISHING_ITEMS_FILE = os.path.join(JSON_DIR, "fishing_items.json")
 
 REGION_FILES = {
     "Kanto":  ("pokemon_gen1_normal.json", "pokemon_gen1_shiny.json"),
     "Johto":  ("pokemon_gen2_normal.json", "pokemon_gen2_shiny.json"),
     "Hoenn":  ("pokemon_gen3_normal.json", "pokemon_gen3_shiny.json"),
     "Sinnoh": ("pokemon_gen4_normal.json", "pokemon_gen4_shiny.json"),
+    "Unys":   ("pokemon_gen5_normal.json", "pokemon_gen5_shiny.json"),
 }
 
 fishing_in_progress: set[int] = set()
@@ -43,6 +49,14 @@ def load_region_data(region: str):
     normal_water = [p for p in normal_data if "eau" in [t.lower() for t in p.get("type", [])]]
     shiny_water  = [p for p in shiny_data  if "eau" in [t.lower() for t in p.get("type", [])]]
     return normal_water, shiny_water
+
+
+def load_fishing_items() -> list:
+    try:
+        with open(FISHING_ITEMS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
 
 
 def get_user_region(cur, user_id: str) -> str | None:
@@ -121,13 +135,48 @@ def setup_fishing(bot: commands.Bot, cur):
         await asyncio.sleep(wait_time)
         fishing_in_progress.discard(user_id)
 
-        if random.random() < NO_CATCH_RATE:
+        roll = random.random()  # tirage unique entre 0 et 1
+        roll = 0.5
+        # --- CAS 1 : Rien (40%) ---
+        if roll < NO_CATCH_RATE:
             await dm.send(
                 "💨 **Rien au bout de la ligne...**\n"
                 "Aucun Pokémon n'a mordu. Retente ta chance !"
             )
             return
 
+        # --- CAS 2 : Item (30%) ---
+        if roll < NO_CATCH_RATE + ITEM_RATE :
+            fishing_items = load_fishing_items()
+            if fishing_items:
+                found_item = random.choice(fishing_items)
+                from inventory_view import add_item
+                add_item(
+                    user_id=user_id_str,
+                    name=found_item["item_name"],
+                    quantity=1,
+                    rarity=found_item.get("rarity", "common"),
+                    description=found_item.get("description", ""),
+                    image=found_item.get("image", ""),
+                    extra=found_item.get("extra"),
+                    price=found_item.get("price"),
+                )
+                embed = discord.Embed(
+                    title="🎣 Tu as remonté un item !",
+                    description=f"**{found_item['item_name']}** a été ajouté à ton inventaire.",
+                    color=discord.Color.green()
+                )
+                if found_item.get("image"):
+                    embed.set_thumbnail(url=found_item["image"])
+                if found_item.get("description"):
+                    embed.add_field(name="Description", value=found_item["description"], inline=False)
+                embed.add_field(name="Rareté", value=found_item.get("rarity", "common").capitalize(), inline=True)
+                embed.set_footer(text=f"Région : {region}")
+                await dm.send(embed=embed)
+                return
+            # Fallback si fishing_items.json vide → tombe dans Pokémon
+
+        # --- CAS 3 : Pokémon (30%, ou fallback) ---
         is_shiny = random.random() < SHINY_RATE
         if is_shiny and shiny_pool:
             pokemon = random.choice(shiny_pool)
