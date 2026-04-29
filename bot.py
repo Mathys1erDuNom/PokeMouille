@@ -1194,7 +1194,7 @@ setup_croco_event(
 setup_inventory(bot)
 
 
-setup_regions()
+setup_regions(bot)
 
 setup_fishing(bot, cur)
 

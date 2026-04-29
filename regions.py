@@ -126,11 +126,11 @@ class RegionView(View):
 # COMMANDE
 # -----------------------
 
-async def region_command(ctx):
-
-    view = RegionView()
-
-    await ctx.send(
-        "🌍 Choisis la région où tu veux aller :",
-        view=view
-    )
+def setup_region(bot):
+    @bot.command()
+    async def region(ctx):
+        view = RegionView()
+        await ctx.send(
+            "🌍 Choisis la région où tu veux aller :",
+            view=view
+        )
