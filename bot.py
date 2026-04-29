@@ -50,7 +50,7 @@ from money_db import add_money
 from shop_view import setup_shop
 
 from badge_view import setup_badges
-from regions import setup_regions# region_command
+from regions import setup_regions, setup_region # region_command
 
 import os
 import psycopg2
@@ -1194,7 +1194,8 @@ setup_croco_event(
 setup_inventory(bot)
 
 
-setup_regions(bot)
+setup_region(bot)
+setup_regions()
 
 setup_fishing(bot, cur)
 
