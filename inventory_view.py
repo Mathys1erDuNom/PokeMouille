@@ -224,7 +224,7 @@ class UseItemButton(Button):
 
 ############## Pour les items pas utiles desuite ou pas ici
 
-        elif extra == "nothing":
+        elif extra in ("nothing", "pêche", "pêche_super", "pêche_mega"):
             await interaction.followup.send("⏳ Chaque chose en son temps…", ephemeral=True)     
 
         else:
