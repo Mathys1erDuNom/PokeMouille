@@ -18,6 +18,12 @@ ITEM_RATE     = 0.30
 JSON_DIR = os.path.join(os.path.dirname(__file__), "json")
 FISHING_ITEMS_FILE = os.path.join(JSON_DIR, "fishing_items.json")
 
+RODS = {
+    "Canne":       {"emoji": "1️⃣"},
+    "Super Canne": {"emoji": "2️⃣"},
+    "Mega Canne":  {"emoji": "3️⃣"},
+}
+
 # Remplace la constante FISHING_ITEMS_FILE par un dict par canne
 ROD_ITEMS_FILES = {
     "Canne":       os.path.join(JSON_DIR, "/pêche/canne.json"),
