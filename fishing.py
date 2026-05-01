@@ -8,8 +8,8 @@ from discord.ext import commands
 # -----------------------
 # CONFIGURATION PÊCHE
 # -----------------------
-FISH_TIMER_MIN = 10
-FISH_TIMER_MAX = 15
+FISH_TIMER_MIN = 300 #5min
+FISH_TIMER_MAX = 900 #15 min
 SHINY_RATE = 1 / 64
 
 NO_CATCH_RATE = 0.40
