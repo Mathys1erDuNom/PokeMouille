@@ -139,6 +139,70 @@ tableau_riche = [
 ]
 
 tableau_pauvre = [
+    {
+        "id": 1,
+        "name": "Marie Dupont",
+        "premier_texte": [
+
+            "Bonjour, excusez-moi de vous déranger, après l'arrestation de mon mari et de notre fils, nous avons tout perdu, nous n'avons plus rien et je dois nourrir mes enfants, pourriez-vous me donner un peu d'argent ou de la nourriture si vous en avez ?",
+            "Bonjour, non ça ne va pas du tout. J'étais au courant qu'il y avait des choses louches dans ce que faisaient mon mari, j'aurais sûrement dû agir ou lui parler... J'étais aveuglé par la sécurité que cela apportait à notre famille. Nos enfants ne manquaient de rien. Aujourd'hui je n'arrive plus à les nourrir... Auriez-vous de la nourriture ou un peu d'argent ?",
+            "Je sais que ce que faisait mon mari était mal... Mais pourquoi nos enfants devraient souffrir de ces actions ?? Cela m'attriste d'autant plus qu'un de mes fils soit lui aussi en prison. Je sais bien que leur commerce était illégal, mais je ne peux m'empêcher de ressentir de la haine contre la personne qui les a dénoncés, même si malheureusement je ne sais pas qui est cette personne."
+         
+        ],
+        "somme_don": 50,
+        "texte_fin": [
+            "",
+            ""
+        ],
+        "adresse_image": "images/famille/pauvre/marie.png"
+    },
+
+    {
+        "id": 2,
+        "name": "Sophie Dupont",
+        "premier_texte": [
+
+        
+        ],
+        "somme_don": 100,
+        "texte_fin": [
+            "Tous les crimes de mon père ont été découverts... Même si c'était ce que je voulais, je ne m'attendais pas à ce que mon frère finisse aussi sous les barreaux... Il était sous l'influence de notre père, c'est injuste... Je sais que je ne voulais pas de l'argent sale de mon père, mais c'est vraiment dur de voir ma mère, elle est si triste. À vrai dire, nous n'avons plus rien et nous avons du mal à trouver à manger... Aurait-tu par hasard de la nourriture ou un peu d'argent ?",
+            "Hahahaha, je meurs de faim. Sans l'argent sale de mon père, ma famille et moi n'avons plus rien... Je n'avais pas réalisé que nous étions si dépendants de lui... Tu aurais quelque chose qui pourrait aider ma famille ?"
+        ],
+        "adresse_image": "images/famille/pauvre/sophie.png"
+    },
+       {
+        "id": 3,
+        "name": "Anne Dupont",
+        "premier_texte": [
+            "Ma famille et moi n'avons plus rien, par pitié aidez-nous !",
+            "Je ne sais pas où nous allons dormir ce soir. Nous mourrons de faim avec ma famille. Après l'arrestation de mon père et de mon frère, nous avons tous perdu. S'il te plaît, aurais-tu quelque chose qui pourrait aider ma famille ?"
+
+        
+        ],
+        "somme_don": 60,
+        "texte_fin": [
+            "",
+            ""
+        ],
+        "adresse_image": "images/famille/pauvre/anne.png"
+    },
+
+       {
+        "id": 4,
+        "name": "Serge Dupont",
+        "premier_texte": [
+
+        
+        ],
+        "somme_don": 30,
+        "texte_fin": [
+            "C'est une injustice, mon père et mon frère sont en prison ! Ils sont accusés de choses qu'ils n'ont pas commises, c'est une honte. Maintenant, nous sommes devenus pauvres avec ma famille, nous n'avons plus à manger, tu aurais quelque chose qui pourrait nous aider ?",
+            "Je suis tellement énervé, j'aimerais retrouver celui qui a pu mentir à la police ! Comment mon père et mon frère pourraient-ils être coupables de cela ! Ils travaillaient dur au casino. Père gagnait sa vie honnêtement et maintenant nous avons tout perdu, qui a osé nous faire ça ???? Ma famille et moi n'avons rien à manger, pourrais-tu nous aider ?"
+         
+        ],
+        "adresse_image": "images/famille/pauvre/serge.png"
+    }
   
 ]
 
@@ -260,9 +324,9 @@ def setup_dupont_command(bot, authorized_user_id=None):
         if authorized_user_id is not None and ctx.author.id != authorized_user_id:
             await ctx.send("⛔ Tu n'as pas la permission d'utiliser cette commande.")
             return
-
+        #Pour choisir quand c'est aléatoire
         if type_event is None:
-            riche_or_not = True
+            riche_or_not = False
         elif type_event.lower() == "riche":
             riche_or_not = True
         elif type_event.lower() == "pauvre":
