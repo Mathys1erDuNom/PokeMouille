@@ -26,9 +26,9 @@ RODS = {
 
 # Remplace la constante FISHING_ITEMS_FILE par un dict par canne
 ROD_ITEMS_FILES = {
-    "Canne":       os.path.join(JSON_DIR, "/pêche/canne.json"),
-    "Super Canne": os.path.join(JSON_DIR, "/pêche/super_canne.json"),
-    "Méga Canne":  os.path.join(JSON_DIR, "/pêche/mega_canne.json"),
+    "Canne":       os.path.join(JSON_DIR, "pêche", "canne.json"),
+    "Super Canne": os.path.join(JSON_DIR, "pêche", "super_canne.json"),
+    "Méga Canne":  os.path.join(JSON_DIR, "pêche", "mega_canne.json"),
 }
 
 REGION_TO_GEN = {
@@ -40,19 +40,14 @@ REGION_TO_GEN = {
 }
 
 
-ROD_TO_KEY = {
-    "Canne":       "canne",
-    "Super Canne": "super_canne",
-    "Méga Canne":  "mega_canne",
-}
+
 
 fishing_in_progress: set[int] = set()
 
 def load_rod_data(rod_name: str, region: str):
     gen = REGION_TO_GEN.get(region)
-    rod_key = ROD_TO_KEY.get(rod_name)
-    if not gen or not rod_key:
-        print(f"[DEBUG] région='{region}' → gen='{gen}' | canne='{rod_name}' → rod_key='{rod_key}'")
+    if not gen:
+        print(f"[DEBUG] région='{region}' → gen='{gen}'")
         return [], []
 
     def _load(filename):
@@ -60,22 +55,20 @@ def load_rod_data(rod_name: str, region: str):
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
-            # Filtre eau en ignorant la casse ET l'anglais
             eau_types = {"eau", "water"}
             filtered = [
                 p for p in data
                 if any(t.lower() in eau_types for t in p.get("type", []))
             ]
-            print(f"[DEBUG] {filename} → {len(data)} Pokémon total, {len(filtered)} de type Eau")
+            print(f"[DEBUG] {filename} → {len(data)} total, {len(filtered)} de type Eau")
             return filtered
         except FileNotFoundError:
             print(f"[DEBUG] Fichier introuvable : {filepath}")
             return []
 
-    normal = _load(f"pokemon_{rod_key}_{gen}_normal.json")
-    shiny  = _load(f"pokemon_{rod_key}_{gen}_shiny.json")
+    normal = _load(f"pokemon_{gen}_normal.json")
+    shiny  = _load(f"pokemon_{gen}_shiny.json")
     return normal, shiny
-
 
 # Modifie load_fishing_items pour prendre la canne en paramètre
 def load_fishing_items(rod_name: str) -> list:
