@@ -222,9 +222,17 @@ class UseItemButton(Button):
             await interaction.followup.send(msg, ephemeral=True)
             await interaction.followup.send(embed=embed, view=view, ephemeral=True)
 
+##############Pour les items pas utiles desuite ou pas ici
+
+        elif extra == "nothing":
+            await interaction.followup.send("⏳ Chaque chose en son temps…", ephemeral=True)     
+
         else:
             # Aucun effet spécial → on envoie juste le message de confirmation
             await interaction.followup.send(msg, ephemeral=True)
+
+
+
 
 
 # ─── Utilitaire texte ─────────────────────────────────────────────────────────
