@@ -136,7 +136,7 @@ def setup_fishing(bot: commands.Bot, cur):
         fishing_in_progress.discard(user_id)
 
         roll = random.random()  # tirage unique entre 0 et 1
-        roll = 0.5
+        
         # --- CAS 1 : Rien (40%) ---
         if roll < NO_CATCH_RATE:
             await dm.send(

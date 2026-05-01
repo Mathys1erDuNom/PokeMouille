@@ -90,5 +90,30 @@
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/carbos.png",
     "extra": "buff_vitesse",
     "price" : 500
+  },
+
+  {
+    "item_name": "Canne",
+    "rarity": "common",
+    "description": "Permet de pêcher, !peche en MP",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-rod.png",
+    "extra": "pêche",
+    "price" : 300
+  },
+  {
+    "item_name": "Super Canne",
+    "rarity": "common",
+    "description": "Permet de pêcher avec de meilleurs chance d'obtenir de meilleures choses, !peche en MP",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/good-rod.png",
+    "extra": "pêche_super",
+    "price" : 500
+  },
+  {
+    "item_name": "Méga Canne",
+    "rarity": "common",
+    "description": "Permet de pêcher avec beaucoup plus de chance d'obtenir de meilleures choses, !peche en MP",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-rod.png",
+    "extra": "pêche_mega",
+    "price" : 700
   }
 ]
