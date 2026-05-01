@@ -220,11 +220,14 @@ def setup_fishing(bot: commands.Bot, cur):
         minutes = wait_time // 60
         seconds = wait_time % 60
 
+        
+        print(f"[PÊCHE] {ctx.author} (ID: {user_id}) | Canne : {chosen_rod} | Région : {region} | Attente : {wait_time}s")
+
         try:
             dm = await ctx.author.create_dm()
             await dm.send(
                 f"🎣 **Tu lances ta {chosen_rod} dans les eaux de {region} !**\n"
-                f"⏳ Attends environ **{minutes}min {seconds}s**... quelque chose va peut-être mordre."
+                f"⏳ Quelque chose va peut-être mordre... Reste à l'affût !"
             )
             await ctx.send(f"{ctx.author.mention} 📩 Check tes DMs !", delete_after=5)
         except discord.Forbidden:
