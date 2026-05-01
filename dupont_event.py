@@ -293,7 +293,7 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
     class ActionView(View):
         def __init__(self):
             #le bouton expire au bout de 10 min
-            super().__init__(timeout=(10*60))
+            super().__init__(timeout=600)
             self.add_item(ActionButton())
 
         async def on_timeout(self):
