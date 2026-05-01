@@ -115,42 +115,41 @@ def save_fish_capture(user_id: str, pokemon: dict, is_shiny: bool):
 # CHOIX DE LA CANNE
 # -----------------------
 async def ask_rod_choice(ctx, available_rods: list[str]) -> str | None:
-    """
-    Envoie un message avec réactions pour choisir la canne.
-    Retourne le nom de la canne choisie, ou None si timeout.
-    """
-    # Une réaction par canne disponible
-    rod_emojis = {rod: RODS[rod]["emoji"] for rod in available_rods}
-    # Utilise des emojis numérotés pour éviter les conflits si emojis identiques
-    number_emojis = ["1️⃣", "2️⃣", "3️⃣"]
-    emoji_to_rod = {}
+    result = asyncio.get_event_loop().create_future()
 
-    lines = ["**🎣 Quelle canne veux-tu utiliser ?**\n"]
-    for i, rod in enumerate(available_rods):
-        emoji = number_emojis[i]
-        emoji_to_rod[emoji] = rod
-        lines.append(f"{emoji} — **{rod}**")
-    lines.append("\n⏱️ Tu as **30 secondes** pour choisir.")
+    class RodSelect(discord.ui.Select):
+        def __init__(self):
+            options = [
+                discord.SelectOption(label=rod, emoji=RODS[rod]["emoji"])
+                for rod in available_rods
+            ]
+            super().__init__(placeholder="Choisis ta canne...", options=options)
 
-    msg = await ctx.send("\n".join(lines))
-    for emoji in emoji_to_rod:
-        await msg.add_reaction(emoji)
+        async def callback(self, interaction: discord.Interaction):
+            if interaction.user != ctx.author:
+                await interaction.response.send_message("❌ Ce n'est pas ton choix !", ephemeral=True)
+                return
+            result.set_result(self.values[0])
+            await interaction.response.defer()
 
-    def check(reaction, user):
-        return (
-            user == ctx.author
-            and str(reaction.emoji) in emoji_to_rod
-            and reaction.message.id == msg.id
-        )
+    class RodView(discord.ui.View):
+        def __init__(self):
+            super().__init__(timeout=30)
+            self.add_item(RodSelect())
 
-    try:
-        reaction, _ = await ctx.bot.wait_for("reaction_add", timeout=30.0, check=check)
-        chosen_rod = emoji_to_rod[str(reaction.emoji)]
-        await msg.delete()
-        return chosen_rod
-    except asyncio.TimeoutError:
-        await msg.delete()
-        return None
+        async def on_timeout(self):
+            if not result.done():
+                result.set_result(None)
+
+    view = RodView()
+    msg = await ctx.send(
+        f"{ctx.author.mention} 🎣 **Quelle canne veux-tu utiliser ?**",
+        view=view
+    )
+
+    chosen = await result
+    await msg.delete()
+    return chosen
 
 
 # -----------------------
