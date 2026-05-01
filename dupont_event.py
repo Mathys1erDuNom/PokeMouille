@@ -162,12 +162,14 @@ tableau_pauvre = [
         "name": "Sophie Dupont",
         "premier_texte": [
 
-        
+            "Tous les crimes de mon père ont été découverts... Même si c'était ce que je voulais, je ne m'attendais pas à ce que mon frère finisse aussi sous les barreaux... Il était sous l'influence de notre père, c'est injuste... Je sais que je ne voulais pas de l'argent sale de mon père, mais c'est vraiment dur de voir ma mère, elle est si triste. À vrai dire, nous n'avons plus rien et nous avons du mal à trouver à manger... Aurait-tu par hasard de la nourriture ou un peu d'argent ?",
+            "Hahahaha, je meurs de faim. Sans l'argent sale de mon père, ma famille et moi n'avons plus rien... Je n'avais pas réalisé que nous étions si dépendants de lui... Tu aurais quelque chose qui pourrait aider ma famille ?"
+
         ],
         "somme_don": 100,
         "texte_fin": [
-            "Tous les crimes de mon père ont été découverts... Même si c'était ce que je voulais, je ne m'attendais pas à ce que mon frère finisse aussi sous les barreaux... Il était sous l'influence de notre père, c'est injuste... Je sais que je ne voulais pas de l'argent sale de mon père, mais c'est vraiment dur de voir ma mère, elle est si triste. À vrai dire, nous n'avons plus rien et nous avons du mal à trouver à manger... Aurait-tu par hasard de la nourriture ou un peu d'argent ?",
-            "Hahahaha, je meurs de faim. Sans l'argent sale de mon père, ma famille et moi n'avons plus rien... Je n'avais pas réalisé que nous étions si dépendants de lui... Tu aurais quelque chose qui pourrait aider ma famille ?"
+             "",
+            ""
         ],
         "adresse_image": "images/famille/pauvre/sophie.png"
     },
@@ -192,14 +194,17 @@ tableau_pauvre = [
         "id": 4,
         "name": "Serge Dupont",
         "premier_texte": [
+             "C'est une injustice, mon père et mon frère sont en prison ! Ils sont accusés de choses qu'ils n'ont pas commises, c'est une honte. Maintenant, nous sommes devenus pauvres avec ma famille, nous n'avons plus à manger, tu aurais quelque chose qui pourrait nous aider ?",
+             "Je suis tellement énervé, j'aimerais retrouver celui qui a pu mentir à la police ! Comment mon père et mon frère pourraient-ils être coupables de cela ! Ils travaillaient dur au casino. Père gagnait sa vie honnêtement et maintenant nous avons tout perdu, qui a osé nous faire ça ???? Ma famille et moi n'avons rien à manger, pourrais-tu nous aider ?"
+         
 
         
         ],
         "somme_don": 30,
         "texte_fin": [
-            "C'est une injustice, mon père et mon frère sont en prison ! Ils sont accusés de choses qu'ils n'ont pas commises, c'est une honte. Maintenant, nous sommes devenus pauvres avec ma famille, nous n'avons plus à manger, tu aurais quelque chose qui pourrait nous aider ?",
-            "Je suis tellement énervé, j'aimerais retrouver celui qui a pu mentir à la police ! Comment mon père et mon frère pourraient-ils être coupables de cela ! Ils travaillaient dur au casino. Père gagnait sa vie honnêtement et maintenant nous avons tout perdu, qui a osé nous faire ça ???? Ma famille et moi n'avons rien à manger, pourrais-tu nous aider ?"
-         
+             "",
+            ""
+           
         ],
         "adresse_image": "images/famille/pauvre/serge.png"
     }
