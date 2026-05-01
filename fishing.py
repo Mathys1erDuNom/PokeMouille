@@ -21,14 +21,14 @@ FISHING_ITEMS_FILE = os.path.join(JSON_DIR, "fishing_items.json")
 RODS = {
     "Canne":       {"emoji": "1️⃣"},
     "Super Canne": {"emoji": "2️⃣"},
-    "Mega Canne":  {"emoji": "3️⃣"},
+    "Méga Canne":  {"emoji": "3️⃣"},
 }
 
 # Remplace la constante FISHING_ITEMS_FILE par un dict par canne
 ROD_ITEMS_FILES = {
     "Canne":       os.path.join(JSON_DIR, "/pêche/canne.json"),
     "Super Canne": os.path.join(JSON_DIR, "/pêche/super_canne.json"),
-    "Mega Canne":  os.path.join(JSON_DIR, "/pêche/mega_canne.json"),
+    "Méga Canne":  os.path.join(JSON_DIR, "/pêche/mega_canne.json"),
 }
 
 REGION_TO_GEN = {
@@ -42,7 +42,7 @@ REGION_TO_GEN = {
 ROD_TO_KEY = {
     "Canne":       "canne",
     "Super Canne": "super_canne",
-    "Mega Canne":  "mega_canne",
+    "Méga Canne":  "mega_canne",
 }
 
 fishing_in_progress: set[int] = set()
@@ -181,7 +181,7 @@ def setup_fishing(bot: commands.Bot, cur):
         if not available_rods:
             await ctx.send(
                 f"{ctx.author.mention} ❌ Tu n'as aucune canne à pêche ! "
-                f"Procure-toi une **Canne**, une **Super Canne** ou une **Mega Canne**.",
+                f"Procure-toi une **Canne**, une **Super Canne** ou une **Méga Canne**.",
                 delete_after=8
             )
             return
