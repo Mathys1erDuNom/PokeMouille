@@ -60,9 +60,8 @@ def load_rod_data(rod_name: str, region: str):
             return [p for p in data if "eau" in [t.lower() for t in p.get("type", [])]]
         except FileNotFoundError:
             return []
-
-    normal = _load(f"pokemon_{rod_key}_{gen}_normal.json")
-    shiny  = _load(f"pokemon_{rod_key}_{gen}_shiny.json")
+    normal = _load(f"pokemon_{gen}_normal.json")
+    shiny  = _load(f"pokemon_{gen}_shiny.json")
     return normal, shiny
 
 
