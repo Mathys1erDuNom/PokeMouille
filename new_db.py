@@ -318,7 +318,7 @@ def evolve_pokemon(user_id, pokemon):
 # SETUP DISCORD
 # ──────────────────────────────────────────────
 
-def setup(bot):
+def setupxp(bot):
     @is_croco()
     @bot.command(name="addxp")
     async def addxp(ctx, member: discord.Member, pokemon_name: str, xp: int):

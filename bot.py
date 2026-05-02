@@ -41,7 +41,7 @@ from new_pokedex import setup_new_pokedex
 from io import BytesIO
 
 from db import save_capture, get_captures
-from new_db_avantmodif import save_new_capture, get_new_captures
+from new_db import save_new_capture, get_new_captures, setupxp
 
 from inventory_view import setup_inventory
 from utils import is_croco
@@ -1125,6 +1125,7 @@ with open(badges_file, "r", encoding="utf-8") as f:
 setup_badges(bot, full_badge_data)
 
 
+setupxp(bot)
 
 setup_casino(bot)
 
