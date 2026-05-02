@@ -16,7 +16,7 @@
         "xp_evo": 100,
         "evo": {
             "name": "Herbizarre",
-            "file": "pokemons.json"
+            "file": "pokemons_shiny.json"
         }
     },
     {
@@ -36,7 +36,7 @@
         "xp_evo": 200,
         "evo": {
             "name": "Florizarre",
-            "file": "pokemons.json"
+            "file": "pokemons_shiny.json"
         }
     },
     {
