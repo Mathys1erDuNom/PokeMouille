@@ -4,12 +4,15 @@ import discord
 import psycopg2
 from psycopg2.extras import Json
 from dotenv import load_dotenv
-from utils import is_croco
 from discord.ext import commands
 
 # Charge les variables d'environnement
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
+
+# Chemin absolu vers le dossier json
+script_dir = os.path.dirname(os.path.abspath(__file__))
+json_dir   = os.path.join(script_dir, "json")
 
 # Connexion globale à la base
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
@@ -276,7 +279,7 @@ def evolve_pokemon(user_id, pokemon):
 
     # Charge le fichier JSON de l'évolution
     try:
-        with open(f"json/{evo_file}", "r", encoding="utf-8") as f:
+        with open(os.path.join(json_dir, evo_file), "r", encoding="utf-8") as f:
             all_pokemons = json.load(f)
     except FileNotFoundError:
         return {"success": False, "reason": f"Fichier `json/{evo_file}` introuvable."}
@@ -318,9 +321,10 @@ def evolve_pokemon(user_id, pokemon):
 # SETUP DISCORD
 # ──────────────────────────────────────────────
 
-def setupxp(bot):
-    @is_croco()
+def setup(bot):
+
     @bot.command(name="addxp")
+    @commands.has_permissions(administrator=True)
     async def addxp(ctx, member: discord.Member, pokemon_name: str, xp: int):
         """
         !addxp @utilisateur <nom_pokemon> <xp>
