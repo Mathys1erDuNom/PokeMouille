@@ -15,7 +15,7 @@ from utils import spawn_pokemon_for_user
 script_dir = os.path.dirname(os.path.abspath(__file__))
 images_dir = os.path.join(script_dir, "images")
 from buff_iv import BuffPokemonView
-from new_db import get_new_captures
+from new_db_avantmodif import get_new_captures
 
 # Chargement du fichier item.json
 item_json_path = os.path.join(script_dir, "json", "item.json")

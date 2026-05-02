@@ -41,7 +41,7 @@ from new_pokedex import setup_new_pokedex
 from io import BytesIO
 
 from db import save_capture, get_captures
-from new_db import save_new_capture, get_new_captures
+from new_db_avantmodif import save_new_capture, get_new_captures
 
 from inventory_view import setup_inventory
 from utils import is_croco
@@ -203,13 +203,13 @@ pokeball_url = next((item["image"] for item in items_data if item["name"].lower(
 #####################################
 # --- 🔥 GEN 1 — KANTO ---
 #####################################
-pokemon_file_path = os.path.join(json_dir, "pokemon_gen1_normal.json")
+pokemon_file_path = os.path.join(json_dir, "pokemon.json")
 with open(pokemon_file_path, "r", encoding="utf-8") as f:
     kanto_pokemon_data = json.load(f)
 
-with open(os.path.join(json_dir, "pokemon_gen1_shiny.json"), "r", encoding="utf-8") as f:
+with open(os.path.join(json_dir, "pokemon_shiny.json"), "r", encoding="utf-8") as f:
     kanto_shiny_data = json.load(f)
-
+'''
 #####################################
 # --- 🔥 GEN 2 — JOHTO ---
 #####################################
@@ -274,23 +274,25 @@ if os.path.exists(gen5_shiny_path):
     with open(gen5_shiny_path, "r", encoding="utf-8") as f:
         unys_shiny_data = json.load(f)
 
+
+'''
 #####################################
 # --- 🔥 POOLS GLOBAUX (toutes régions) ---
 #####################################
 full_pokemon_data = (
-    kanto_pokemon_data +
-    johto_pokemon_data +
-    hoenn_pokemon_data +
-    sinnoh_pokemon_data +
-    unys_pokemon_data
+    kanto_pokemon_data #+
+ #   johto_pokemon_data +
+  #  hoenn_pokemon_data +
+   # sinnoh_pokemon_data +
+    #unys_pokemon_data
 )
 
 full_pokemon_shiny_data = (
-    kanto_shiny_data +
-    johto_shiny_data +
-    hoenn_shiny_data +
-    sinnoh_shiny_data +
-    unys_shiny_data
+    kanto_shiny_data #+
+   # johto_shiny_data +
+    #hoenn_shiny_data +
+    #sinnoh_shiny_data +
+    #unys_shiny_data
 )
 
 #####################################
@@ -298,10 +300,10 @@ full_pokemon_shiny_data = (
 #####################################
 REGION_DATA_MAP = {
     "Kanto": (kanto_pokemon_data, kanto_shiny_data),
-    "Johto": (johto_pokemon_data, johto_shiny_data),
-    "Hoenn": (hoenn_pokemon_data, hoenn_shiny_data),
-    "Sinnoh": (sinnoh_pokemon_data, sinnoh_shiny_data),
-    "Unys": (unys_pokemon_data, unys_shiny_data),
+   # "Johto": (johto_pokemon_data, johto_shiny_data),
+   # "Hoenn": (hoenn_pokemon_data, hoenn_shiny_data),
+   # "Sinnoh": (sinnoh_pokemon_data, sinnoh_shiny_data),
+   # "Unys": (unys_pokemon_data, unys_shiny_data),
     
 
 

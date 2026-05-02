@@ -1,7 +1,7 @@
 import discord
 from discord.ui import View, Select, Button
 from math import ceil
-from new_db import get_new_captures
+from new_db_avantmodif import get_new_captures
 import json
 import os
 from combat.logic_battle import start_battle_turn_based

@@ -97,7 +97,7 @@ def get_available_rods(user_id: str) -> list[str]:
 
 
 def save_fish_capture(user_id: str, pokemon: dict, is_shiny: bool):
-    from new_db import save_new_capture
+    from new_db_avantmodif import save_new_capture
     base_stats = pokemon.get("stats", {})
     ivs = {stat: random.randint(0, 31) for stat in base_stats}
     final_stats = {stat: base_stats[stat] + ivs[stat] for stat in base_stats}
