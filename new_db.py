@@ -321,7 +321,7 @@ def evolve_pokemon(user_id, pokemon):
 # SETUP DISCORD
 # ──────────────────────────────────────────────
 
-def setup(bot):
+def setupxp(bot):
 
     @bot.command(name="addxp")
     @commands.has_permissions(administrator=True)
