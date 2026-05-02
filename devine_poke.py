@@ -7,6 +7,7 @@ import json
 import os
 import aiohttp
 import io
+from utils import is_croco
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 json_dir = os.path.join(script_dir, "json")
@@ -147,6 +148,7 @@ def setup_guess_pokemon_command(bot, spawn_pokemon=None, role_id=None, authorize
 
     # ─── Commande manuelle (usage admin) ───────────────────────────────────────
     @bot.command()
+    @is_croco()
     async def devine(ctx):
         if authorized_user_id is not None and ctx.author.id != authorized_user_id:
             await ctx.send("⛔ Tu n'as pas la permission d'utiliser cette commande.")

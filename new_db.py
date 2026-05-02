@@ -1,7 +1,11 @@
 import os
+import json
+import discord
 import psycopg2
 from psycopg2.extras import Json
 from dotenv import load_dotenv
+from utils import is_croco
+from discord.ext import commands
 
 # Charge les variables d'environnement
 load_dotenv()
@@ -33,7 +37,6 @@ conn.commit()
 
 # ──────────────────────────────────────────────
 # MIGRATION : ajoute les colonnes si elles n'existent pas encore
-# (utile si la table existait déjà avant cette mise à jour)
 # ──────────────────────────────────────────────
 for column, definition in [
     ("current_xp", "INT DEFAULT 0"),
@@ -54,13 +57,13 @@ conn.commit()
 
 
 # ──────────────────────────────────────────────
-# FONCTIONS
+# FONCTIONS BASE DE DONNÉES
 # ──────────────────────────────────────────────
 
 def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
     """
     Enregistre une nouvelle capture et invalide le cache du pokédex pour cet utilisateur.
-    
+
     pokemon peut contenir les clés optionnelles :
         - current_xp (int)
         - xp_evo     (int)
@@ -68,12 +71,10 @@ def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
     """
     user_id = str(user_id)
 
-    # Normalise le champ evo
     evo = pokemon.get("evo", {"name": "pas evo", "file": "pas evo"})
     if evo in (None, "pas evo", ""):
         evo = {"name": "pas evo", "file": "pas evo"}
 
-    # Vérifie combien de fois ce Pokémon a déjà été capturé pour cet utilisateur
     cur.execute("""
         SELECT COUNT(*) FROM new_captures
         WHERE user_id = %s AND name LIKE %s || '%%'
@@ -103,7 +104,6 @@ def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
         increase_pokemon_iv(user_id, pokemon_name, 3)
         print(f"[INFO] Pokémon {pokemon_name} a eu ses IVs augmentés de 3 pour {user_id}")
 
-    # Invalider le cache après chaque capture
     try:
         from new_pokedex import invalidate_new_pokedex_cache
         invalidate_new_pokedex_cache(user_id)
@@ -139,9 +139,7 @@ def get_new_captures(user_id):
 
 
 def delete_capture(user_id, pokemon_name):
-    """
-    Supprime un Pokémon capturé pour un utilisateur et invalide le cache du Pokédex.
-    """
+    """Supprime un Pokémon capturé pour un utilisateur et invalide le cache du Pokédex."""
     user_id = str(user_id)
 
     cur.execute("""
@@ -249,3 +247,121 @@ def add_xp(user_id, pokemon_name, xp_gained):
 
     can_evolve = xp_evo > 0 and new_xp >= xp_evo
     return can_evolve
+
+
+# ──────────────────────────────────────────────
+# ÉVOLUTION
+# ──────────────────────────────────────────────
+
+def evolve_pokemon(user_id, pokemon):
+    """
+    Fait évoluer un Pokémon vers sa prochaine forme.
+
+    Paramètres :
+    - user_id : ID de l'utilisateur (str ou int)
+    - pokemon : dict du Pokémon actuel (tel que retourné par get_new_captures)
+
+    Retourne :
+    - {"success": True,  "evo_name": str}  si l'évolution a réussi
+    - {"success": False, "reason": str}    si l'évolution est impossible
+    """
+    user_id  = str(user_id)
+    evo      = pokemon.get("evo", {})
+    evo_name = evo.get("name", "pas evo")
+    evo_file = evo.get("file", "pas evo")
+
+    # Vérifie qu'une évolution existe
+    if evo_name == "pas evo" or evo_file == "pas evo":
+        return {"success": False, "reason": "Ce Pokémon n'a pas d'évolution."}
+
+    # Charge le fichier JSON de l'évolution
+    try:
+        with open(f"json/{evo_file}", "r", encoding="utf-8") as f:
+            all_pokemons = json.load(f)
+    except FileNotFoundError:
+        return {"success": False, "reason": f"Fichier `json/{evo_file}` introuvable."}
+
+    evo_data = next(
+        (p for p in all_pokemons if p["name"].lower() == evo_name.lower()),
+        None
+    )
+    if not evo_data:
+        return {"success": False, "reason": f"**{evo_name}** introuvable dans `json/{evo_file}`."}
+
+    # Nouveaux IV : IV actuels + 4, plafonnés à 31
+    old_ivs  = pokemon.get("ivs", {})
+    new_ivs  = {stat: min(31, val + 4) for stat, val in old_ivs.items()}
+
+    # Stats finales = stats de base de l'évolution + nouveaux IV
+    base_stats = evo_data.get("stats", {})
+    new_stats  = {stat: base_stats.get(stat, 0) + new_ivs.get(stat, 0) for stat in base_stats}
+
+    # Dict du nouveau Pokémon à enregistrer
+    new_pokemon = {
+        "image":      evo_data.get("image", ""),
+        "type":       evo_data.get("type", []),
+        "attacks":    evo_data.get("attacks", []),
+        "current_xp": 0,
+        "xp_evo":     evo_data.get("xp_evo", 0),
+        "evo":        evo_data.get("evo", {"name": "pas evo", "file": "pas evo"}),
+    }
+
+    # Supprime l'ancienne forme puis enregistre la nouvelle
+    delete_capture(user_id, pokemon["name"])
+    save_new_capture(user_id, evo_name, new_ivs, new_stats, new_pokemon)
+
+    print(f"[EVO] {pokemon['name']} → {evo_name} pour l'utilisateur {user_id}")
+    return {"success": True, "evo_name": evo_name}
+
+
+# ──────────────────────────────────────────────
+# SETUP DISCORD
+# ──────────────────────────────────────────────
+
+def setup(bot):
+    @is_croco()
+    @bot.command(name="addxp")
+    async def addxp(ctx, member: discord.Member, pokemon_name: str, xp: int):
+        """
+        !addxp @utilisateur <nom_pokemon> <xp>
+        Ajoute de l'XP à un Pokémon. Déclenche l'évolution si le seuil est atteint.
+        """
+        user_id = str(member.id)
+
+        # Cherche le Pokémon dans la collection de l'utilisateur
+        captures = get_new_captures(user_id)
+        pokemon  = next((p for p in captures if p["name"].lower() == pokemon_name.lower()), None)
+
+        if not pokemon:
+            await ctx.send(f"❌ **{pokemon_name}** introuvable dans la collection de {member.display_name}.")
+            return
+
+        # Ajoute l'XP
+        can_evolve = add_xp(user_id, pokemon["name"], xp)
+
+        if not can_evolve:
+            updated    = next((p for p in get_new_captures(user_id) if p["name"] == pokemon["name"]), None)
+            current_xp = updated["current_xp"] if updated else "?"
+            xp_evo     = updated["xp_evo"]     if updated else "?"
+
+            await ctx.send(
+                f"✅ **+{xp} XP** ajouté à **{pokemon['name']}** de {member.mention} !\n"
+                f"📊 XP actuel : `{current_xp} / {xp_evo}`"
+            )
+            return
+
+        # Seuil atteint → tente l'évolution
+        result = evolve_pokemon(user_id, pokemon)
+
+        if not result["success"]:
+            await ctx.send(
+                f"✅ **+{xp} XP** ajouté à **{pokemon['name']}** de {member.mention}.\n"
+                f"⚠️ Évolution impossible : {result['reason']}"
+            )
+            return
+
+        await ctx.send(
+            f"🎉 **{pokemon['name']}** de {member.mention} a évolué en **{result['evo_name']}** !\n"
+            f"✨ IV hérités **+4** sur toutes les stats.\n"
+            f"🗑️ **{pokemon['name']}** a été retiré de la collection."
+        )
