@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS new_captures (
     stats JSONB,
     image TEXT,
     type JSONB,
-    attacks JSONB,
+    attacks JSONB
 
 );
 """)
