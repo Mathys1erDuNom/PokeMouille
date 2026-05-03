@@ -1248,6 +1248,7 @@ EVENT_INTERVAL = 25 * 60  # 1 minute
 next_event_time = None
 next_event_name = None
 TIMEZONE = pytz.timezone("Europe/Paris")
+
 async def auto_event_loop():
     await bot.wait_until_ready()
     global next_event_time, next_event_name, _last_chenil_tick
@@ -1313,9 +1314,13 @@ async def auto_event_loop():
                         entry = get_chenil(member.id)
                         if not entry:
                             continue
+                        print(f"[CHENIL TICK] {member.name} en vocal avec {entry['pokemon_name']} au chenil — calcul XP...")
                         tranches = add_vocal_seconds(member.id, TICK_MINUTES * 60)
                         if tranches > 0:
+                            print(f"[CHENIL TICK] ✅ {member.name} → {tranches} tranche(s) → +{tranches * XP_PAR_TRANCHE} XP pour {entry['pokemon_name']}")
                             await _notifier_xp_chenil(member, entry, tranches)
+                        else:
+                            print(f"[CHENIL TICK] ⏳ {member.name} → pas encore assez de temps vocal (tranche incomplète)")
         # ─────────────────────────────────────────────────────────────────────
 
 
