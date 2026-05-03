@@ -1116,6 +1116,7 @@ setup_money(bot)
 setup_shop(bot)
 setup_chenil(bot)
 
+
 badges_file = os.path.join(script_dir, "json", "badges.json")
 
 # Charger les données des badges depuis le JSON
