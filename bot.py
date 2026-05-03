@@ -852,7 +852,7 @@ async def catch(ctx):
 
         if reussite != 1:  # Échec (50% de chance d'échouer)
             print(f"[TRACE {trace_id}] [LOG] Échec de la capture (Tirage: {reussite})")
-            await ctx.send(f"💨 **Oh non ! Le Pokémon s'est échappé de la Ball !** Retente dans 30 secondes.")
+            await ctx.send(f"💨 **Oh non ! Le Pokémon s'est échappé de la Ball !** Retente dans 10 secondes.")
             return # On s'arrête ici, le cooldown de 10s s'applique !
 
         # --- 🎉 SUCCESS (Si reussite == 1, 50% de chance) ---
