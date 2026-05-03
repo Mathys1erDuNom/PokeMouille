@@ -92,28 +92,19 @@ def remove_chenil(user_id):
 
 
 def add_vocal_seconds(user_id, seconds):
-    """
-    Ajoute des secondes vocales au compteur du chenil.
-    Calcule combien d'heures complètes ont été accumulées depuis le dernier don d'XP,
-    donne 10 XP par heure complète et conserve le reste.
-
-    Retourne le nombre d'heures complètes écoulées (peut être 0).
-    """
     entry = get_chenil(user_id)
     if not entry:
+        print(f"[CHENIL] Aucune entrée chenil pour {user_id}")  # ← ici
         return 0
 
-    new_seconds    = entry["vocal_seconds"] + seconds
-    full_hours     = new_seconds // SECONDES_PAR_TRANCHE
-    remainder      = new_seconds % SECONDES_PAR_TRANCHE
+    new_seconds = entry["vocal_seconds"] + seconds
+    full_hours  = new_seconds // SECONDES_PAR_TRANCHE
+    remainder   = new_seconds % SECONDES_PAR_TRANCHE
 
-    # Sauvegarde uniquement le reste (les heures complètes sont consommées)
-    cur.execute("""
-        UPDATE chenil SET vocal_seconds = %s
-        WHERE user_id = %s
-    """, (remainder, str(user_id)))
+    print(f"[CHENIL] user={user_id} +{seconds}s → total={new_seconds}s, tranches={full_hours}, reste={remainder}s")  # ← ici
+
+    cur.execute("UPDATE chenil SET vocal_seconds = %s WHERE user_id = %s", (remainder, str(user_id)))
     conn.commit()
-
     return int(full_hours)
 
 
