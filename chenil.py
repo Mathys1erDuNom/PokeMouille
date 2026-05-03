@@ -27,9 +27,9 @@ from discord.ext import commands, tasks
 # CONFIGURATION — modifie ces valeurs pour ajuster le système
 # ──────────────────────────────────────────────────────────────────────────────
 
-SECONDES_PAR_TRANCHE = 60   # Temps vocal (en secondes) pour gagner de l'XP (3600 = 1h)
+SECONDES_PAR_TRANCHE = 120   # Temps vocal (en secondes) pour gagner de l'XP (3600 = 1h)
 XP_PAR_TRANCHE       = 50     # XP gagné à chaque tranche complète
-TICK_MINUTES         = 5      # Fréquence (en minutes) de la tâche de fond
+TICK_MINUTES         = 1      # Fréquence (en minutes) de la tâche de fond
 
 # ──────────────────────────────────────────────────────────────────────────────
 
