@@ -1,22 +1,52 @@
-# chenil.py
+"""
+chenil.py
+─────────
+Système de chenil pour bot Discord Pokémon.
+
+Commandes :
+  !chenil <nom_pokemon>   → Dépose un Pokémon au chenil
+  !retirer_chenil         → Retire le Pokémon du chenil
+  !voir_chenil            → Affiche le Pokémon actuellement au chenil
+
+Fonctionnement :
+  - 1 seul Pokémon au chenil à la fois par utilisateur
+  - Le Pokémon gagne 10 XP pour chaque heure passée en vocal
+  - L'XP est calculé en temps réel selon le temps vocal accumulé
+  - Si le seuil d'évolution est atteint, l'évolution est déclenchée automatiquement
+"""
 
 import os
 import time
 import psycopg2
+from psycopg2.extras import Json
+from dotenv import load_dotenv
 import discord
 from discord.ext import commands, tasks
-from dotenv import load_dotenv
-from new_db import get_new_captures, add_xp, evolve_pokemon
 
-SECONDES_PAR_TRANCHE = 120
-XP_PAR_TRANCHE       = 50
-TICK_MINUTES         = 1
+# ──────────────────────────────────────────────────────────────────────────────
+# CONFIGURATION — modifie ces valeurs pour ajuster le système
+# ──────────────────────────────────────────────────────────────────────────────
 
+SECONDES_PAR_TRANCHE = 120   # Temps vocal (en secondes) pour gagner de l'XP (3600 = 1h)
+XP_PAR_TRANCHE       = 50     # XP gagné à chaque tranche complète
+TICK_MINUTES         = 1      # Fréquence (en minutes) de la tâche de fond
+
+# ──────────────────────────────────────────────────────────────────────────────
+
+# ── Import des fonctions du bot principal ─────────────────────────────────────
+from new_db import (
+    get_new_captures,
+    add_xp,
+    evolve_pokemon,
+)
+
+# ── Connexion base de données ─────────────────────────────────────────────────
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
+# ── Création de la table chenil ───────────────────────────────────────────────
 cur.execute("""
 CREATE TABLE IF NOT EXISTS chenil (
     user_id         TEXT PRIMARY KEY,
@@ -27,14 +57,24 @@ CREATE TABLE IF NOT EXISTS chenil (
 conn.commit()
 
 
-# ── DB helpers ────────────────────────────────────────────────────────────────
+# ──────────────────────────────────────────────────────────────────────────────
+# FONCTIONS BASE DE DONNÉES
+# ──────────────────────────────────────────────────────────────────────────────
 
 def get_chenil(user_id):
-    cur.execute("SELECT pokemon_name, vocal_seconds FROM chenil WHERE user_id = %s", (str(user_id),))
+    """Retourne le Pokémon au chenil pour un utilisateur, ou None."""
+    cur.execute("""
+        SELECT pokemon_name, vocal_seconds FROM chenil
+        WHERE user_id = %s
+    """, (str(user_id),))
     row = cur.fetchone()
-    return {"pokemon_name": row[0], "vocal_seconds": row[1]} if row else None
+    if row:
+        return {"pokemon_name": row[0], "vocal_seconds": row[1]}
+    return None
+
 
 def set_chenil(user_id, pokemon_name):
+    """Dépose un Pokémon au chenil (remplace si déjà un)."""
     cur.execute("""
         INSERT INTO chenil (user_id, pokemon_name, vocal_seconds)
         VALUES (%s, %s, 0)
@@ -44,37 +84,57 @@ def set_chenil(user_id, pokemon_name):
     """, (str(user_id), pokemon_name))
     conn.commit()
 
+
 def remove_chenil(user_id):
+    """Retire le Pokémon du chenil."""
     cur.execute("DELETE FROM chenil WHERE user_id = %s", (str(user_id),))
     conn.commit()
 
+
 def add_vocal_seconds(user_id, seconds):
+    """
+    Ajoute des secondes vocales au compteur du chenil.
+    Calcule combien d'heures complètes ont été accumulées depuis le dernier don d'XP,
+    donne 10 XP par heure complète et conserve le reste.
+
+    Retourne le nombre d'heures complètes écoulées (peut être 0).
+    """
     entry = get_chenil(user_id)
     if not entry:
         return 0
-    new_seconds = entry["vocal_seconds"] + seconds
-    full_tranches = new_seconds // SECONDES_PAR_TRANCHE
-    remainder     = new_seconds % SECONDES_PAR_TRANCHE
-    cur.execute("UPDATE chenil SET vocal_seconds = %s WHERE user_id = %s", (remainder, str(user_id)))
+
+    new_seconds    = entry["vocal_seconds"] + seconds
+    full_hours     = new_seconds // SECONDES_PAR_TRANCHE
+    remainder      = new_seconds % SECONDES_PAR_TRANCHE
+
+    # Sauvegarde uniquement le reste (les heures complètes sont consommées)
+    cur.execute("""
+        UPDATE chenil SET vocal_seconds = %s
+        WHERE user_id = %s
+    """, (remainder, str(user_id)))
     conn.commit()
-    return int(full_tranches)
+
+    return int(full_hours)
 
 
-# ── Cog principal ─────────────────────────────────────────────────────────────
+# ──────────────────────────────────────────────────────────────────────────────
+# SUIVI VOCAL EN TEMPS RÉEL
+# ──────────────────────────────────────────────────────────────────────────────
 
-class ChenilCog(commands.Cog):
-    def __init__(self, bot):
-        self.bot = bot
-        self._vocal_start: dict[int, float] = {}
-        self.tick_vocal.start()
+# Dict en mémoire : user_id (int) → timestamp d'entrée en vocal
+_vocal_start: dict[int, float] = {}
 
-    def cog_unload(self):
-        self.tick_vocal.cancel()
 
-    # ── Tâche de fond ─────────────────────────────────────────────────────────
+def setup_chenil(bot):
+
+    # ── Tâche de fond : vérifie toutes les 5 min les membres déjà en vocal ──
     @tasks.loop(minutes=TICK_MINUTES)
-    async def tick_vocal(self):
-        for guild in self.bot.guilds:
+    async def tick_vocal():
+        """
+        Toutes les 5 minutes, ajoute 300 secondes aux membres actuellement
+        en vocal et qui ont un Pokémon au chenil.
+        """
+        for guild in bot.guilds:
             for vc in guild.voice_channels:
                 for member in vc.members:
                     if member.bot:
@@ -83,77 +143,117 @@ class ChenilCog(commands.Cog):
                     if not entry:
                         continue
 
-                    tranches = add_vocal_seconds(member.id, TICK_MINUTES * 60)
-                    if tranches > 0:
-                        await self._give_xp(member, entry, tranches)
+                    hours = add_vocal_seconds(member.id, TICK_MINUTES * 60)
+                    if hours > 0:
+                        xp_gained  = hours * XP_PAR_TRANCHE
+                        pokemon    = next(
+                            (p for p in get_new_captures(str(member.id))
+                             if p["name"].lower() == entry["pokemon_name"].lower()),
+                            None
+                        )
+                        if not pokemon:
+                            continue
 
-    @tick_vocal.before_loop
-    async def before_tick(self):
-        await self.bot.wait_until_ready()
+                        can_evolve = add_xp(str(member.id), pokemon["name"], xp_gained)
 
-    # ── Événement vocal ───────────────────────────────────────────────────────
-    @commands.Cog.listener()
-    async def on_voice_state_update(self, member, before, after):
+                        # Notifie le membre en DM
+                        try:
+                            msg = (
+                                f"🐾 **{pokemon['name']}** au chenil a gagné "
+                                f"**+{xp_gained} XP** grâce à ton temps en vocal !"
+                            )
+                            if can_evolve:
+                                result = evolve_pokemon(str(member.id), pokemon)
+                                if result["success"]:
+                                    msg += (
+                                        f"\n🎉 Il a évolué en **{result['evo_name']}** ! "
+                                        f"Il a été retiré du chenil automatiquement."
+                                    )
+                                    remove_chenil(member.id)
+                            await member.send(msg)
+                        except discord.Forbidden:
+                            pass  # DM désactivés
+
+    # ── Événement : entrée en vocal ──────────────────────────────────────────
+    @bot.event
+    async def on_voice_state_update(member, before, after):
         if member.bot:
             return
 
-        # Entrée en vocal
+        # Entrée dans un salon vocal
         if before.channel is None and after.channel is not None:
-            self._vocal_start[member.id] = time.time()
+            _vocal_start[member.id] = time.time()
 
-        # Sortie du vocal
+        # Sortie d'un salon vocal
         elif before.channel is not None and after.channel is None:
-            start = self._vocal_start.pop(member.id, None)
+            start = _vocal_start.pop(member.id, None)
             if start is None:
                 return
+
             entry = get_chenil(member.id)
             if not entry:
                 return
-            elapsed = int(time.time() - start)
-            tranches = add_vocal_seconds(member.id, elapsed)
-            if tranches > 0:
-                await self._give_xp(member, entry, tranches)
 
-    # ── Logique XP / évolution ────────────────────────────────────────────────
-    async def _give_xp(self, member, entry, tranches):
-        xp_gained = tranches * XP_PAR_TRANCHE
-        pokemon = next(
-            (p for p in get_new_captures(str(member.id))
-             if p["name"].lower() == entry["pokemon_name"].lower()),
-            None
-        )
-        if not pokemon:
-            return
+            elapsed_seconds = int(time.time() - start)
+            hours = add_vocal_seconds(member.id, elapsed_seconds)
 
-        can_evolve = add_xp(str(member.id), pokemon["name"], xp_gained)
+            if hours > 0:
+                xp_gained = hours * XP_PAR_TRANCHE
+                pokemon   = next(
+                    (p for p in get_new_captures(str(member.id))
+                     if p["name"].lower() == entry["pokemon_name"].lower()),
+                    None
+                )
+                if not pokemon:
+                    return
 
-        msg = f"🐾 **{pokemon['name']}** au chenil a gagné **+{xp_gained} XP** grâce à ton temps en vocal !"
-        if can_evolve:
-            result = evolve_pokemon(str(member.id), pokemon)
-            if result["success"]:
-                msg += f"\n🎉 Il a évolué en **{result['evo_name']}** ! Il a été retiré du chenil automatiquement."
-                remove_chenil(member.id)
+                can_evolve = add_xp(str(member.id), pokemon["name"], xp_gained)
 
-        try:
-            await member.send(msg)
-        except discord.Forbidden:
-            pass
+                try:
+                    msg = (
+                        f"🐾 **{pokemon['name']}** au chenil a gagné "
+                        f"**+{xp_gained} XP** grâce à ton temps en vocal !"
+                    )
+                    if can_evolve:
+                        result = evolve_pokemon(str(member.id), pokemon)
+                        if result["success"]:
+                            msg += (
+                                f"\n🎉 Il a évolué en **{result['evo_name']}** ! "
+                                f"Il a été retiré du chenil automatiquement."
+                            )
+                            remove_chenil(member.id)
+                    await member.send(msg)
+                except discord.Forbidden:
+                    pass
 
-    # ── Commandes ─────────────────────────────────────────────────────────────
-    @commands.command(name="chenil")
-    async def chenil_cmd(self, ctx, *, pokemon_name: str = None):
+    # ── Commande : déposer au chenil ─────────────────────────────────────────
+    @bot.command(name="chenil")
+    async def chenil_cmd(ctx, *, pokemon_name: str = None):
+        """
+        !chenil <nom_pokemon>
+        Dépose un Pokémon au chenil. Il gagnera 10 XP par heure passée en vocal.
+        """
         if pokemon_name is None:
-            await ctx.send("❌ Précise le nom du Pokémon.\nUsage : `!chenil <nom_pokemon>`")
+            await ctx.send(
+                "❌ Précise le nom du Pokémon.\n"
+                "Usage : `!chenil <nom_pokemon>`"
+            )
             return
 
         user_id  = str(ctx.author.id)
         captures = get_new_captures(user_id)
-        pokemon  = next((p for p in captures if p["name"].lower() == pokemon_name.lower()), None)
+        pokemon  = next(
+            (p for p in captures if p["name"].lower() == pokemon_name.lower()),
+            None
+        )
 
         if not pokemon:
-            await ctx.send(f"❌ Tu ne possèdes pas de **{pokemon_name}**.")
+            await ctx.send(
+                f"❌ Tu ne possèdes pas de **{pokemon_name}**."
+            )
             return
 
+        # Vérifie si un Pokémon est déjà au chenil
         existing = get_chenil(user_id)
         if existing:
             await ctx.send(
@@ -163,37 +263,56 @@ class ChenilCog(commands.Cog):
             return
 
         set_chenil(user_id, pokemon["name"])
+
         xp_evo = pokemon.get("xp_evo", 0)
         seuil  = f"`{pokemon.get('current_xp', 0)} / {xp_evo} XP`" if xp_evo > 0 else "pas d'évolution"
-        minutes_par_tranche = SECONDES_PAR_TRANCHE // 60
 
         await ctx.send(
             f"🏠 **{pokemon['name']}** a été déposé au chenil !\n"
-            f"⚡ Il gagnera **{XP_PAR_TRANCHE} XP** toutes les **{minutes_par_tranche} min** de vocal.\n"
+            f"⚡ Il gagnera **{XP_PAR_TRANCHE} XP** toutes les **{SECONDES_PAR_TRANCHE // 3600}h** de vocal.\n"
             f"📊 XP actuel : {seuil}"
         )
 
-    @commands.command(name="retirer_chenil")
-    async def retirer_chenil_cmd(self, ctx):
+    # ── Commande : retirer du chenil ─────────────────────────────────────────
+    @bot.command(name="retirer_chenil")
+    async def retirer_chenil_cmd(ctx):
+        """
+        !retirer_chenil
+        Retire le Pokémon actuellement au chenil.
+        """
         user_id = str(ctx.author.id)
         entry   = get_chenil(user_id)
+
         if not entry:
             await ctx.send("❌ Tu n'as aucun Pokémon au chenil.")
             return
 
         remove_chenil(user_id)
+
+        # Récupère l'XP à jour pour l'affichage
         pokemon = next(
             (p for p in get_new_captures(user_id)
              if p["name"].lower() == entry["pokemon_name"].lower()),
             None
         )
-        xp_info = f"\n📊 XP actuel : `{pokemon['current_xp']} / {pokemon['xp_evo']}`" if pokemon else ""
-        await ctx.send(f"✅ **{entry['pokemon_name']}** a été retiré du chenil.{xp_info}")
+        xp_info = ""
+        if pokemon:
+            xp_info = f"\n📊 XP actuel : `{pokemon['current_xp']} / {pokemon['xp_evo']}`"
 
-    @commands.command(name="voir_chenil")
-    async def voir_chenil_cmd(self, ctx):
+        await ctx.send(
+            f"✅ **{entry['pokemon_name']}** a été retiré du chenil.{xp_info}"
+        )
+
+    # ── Commande : voir le chenil ─────────────────────────────────────────────
+    @bot.command(name="voir_chenil")
+    async def voir_chenil_cmd(ctx):
+        """
+        !voir_chenil
+        Affiche le Pokémon actuellement au chenil et son XP.
+        """
         user_id = str(ctx.author.id)
         entry   = get_chenil(user_id)
+
         if not entry:
             await ctx.send("🏠 Ton chenil est vide. Utilise `!chenil <nom>` pour y déposer un Pokémon.")
             return
@@ -203,24 +322,30 @@ class ChenilCog(commands.Cog):
              if p["name"].lower() == entry["pokemon_name"].lower()),
             None
         )
-        minutes_restantes   = entry["vocal_seconds"] // 60
+
+        minutes_restantes = entry["vocal_seconds"] // 60
         minutes_par_tranche = SECONDES_PAR_TRANCHE // 60
-        temps_info = f"\n⏱️ Temps vocal en cours : `{minutes_restantes} min / {minutes_par_tranche} min`" \
-                     if entry["vocal_seconds"] > 0 else ""
+        heures_restantes = ""
+        if entry["vocal_seconds"] > 0:
+            heures_restantes = f"\n⏱️ Temps vocal en cours : `{minutes_restantes} min / {minutes_par_tranche} min`"
 
         if pokemon:
             xp_evo = pokemon.get("xp_evo", 0)
             seuil  = f"`{pokemon['current_xp']} / {xp_evo} XP`" if xp_evo > 0 else "pas d'évolution"
             await ctx.send(
                 f"🏠 Au chenil : **{pokemon['name']}**\n"
-                f"📊 XP : {seuil}{temps_info}\n"
-                f"⚡ Gain : **{XP_PAR_TRANCHE} XP** toutes les **{minutes_par_tranche} min** de vocal"
+                f"📊 XP : {seuil}{heures_restantes}\n"
+                f"⚡ Gain : **{XP_PAR_TRANCHE} XP** toutes les **{SECONDES_PAR_TRANCHE // 3600}h** de vocal"
             )
         else:
-            await ctx.send(f"🏠 Au chenil : **{entry['pokemon_name']}**\n⚠️ Pokémon introuvable.{temps_info}")
+            await ctx.send(
+                f"🏠 Au chenil : **{entry['pokemon_name']}**\n"
+                f"⚠️ Pokémon introuvable dans ta collection.{heures_restantes}"
+            )
 
-
-# ── Fonction d'enregistrement ─────────────────────────────────────────────────
-
-async def setup_chenil(bot):
-    await bot.add_cog(ChenilCog(bot))
+    # Démarre la tâche de fond une fois le bot prêt
+    @bot.event
+    async def on_ready():
+        if not tick_vocal.is_running():
+            tick_vocal.start()
+        print("[CHENIL] Tâche de fond démarrée.")
