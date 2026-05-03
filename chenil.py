@@ -27,9 +27,9 @@ from discord.ext import commands, tasks
 # CONFIGURATION — modifie ces valeurs pour ajuster le système
 # ──────────────────────────────────────────────────────────────────────────────
 
-SECONDES_PAR_TRANCHE = 60   # Temps vocal (en secondes) pour gagner de l'XP (3600 = 1h)
-XP_PAR_TRANCHE       = 100     # XP gagné à chaque tranche complète
-TICK_MINUTES         = 1      # Fréquence (en minutes) de la tâche de fond
+SECONDES_PAR_TRANCHE = 3600   # Temps vocal (en secondes) pour gagner de l'XP (3600 = 1h)
+XP_PAR_TRANCHE       = 10     # XP gagné à chaque tranche complète
+TICK_MINUTES         = 5      # Fréquence (en minutes) de la tâche de fond
 
 # ──────────────────────────────────────────────────────────────────────────────
 
@@ -343,5 +343,9 @@ def setup_chenil(bot):
                 f"⚠️ Pokémon introuvable dans ta collection.{heures_restantes}"
             )
 
-    # Démarre la tâche de fond
-    tick_vocal.start()
+    # Démarre la tâche de fond une fois le bot prêt
+    @bot.event
+    async def on_ready():
+        if not tick_vocal.is_running():
+            tick_vocal.start()
+        print("[CHENIL] Tâche de fond démarrée.")
