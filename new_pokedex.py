@@ -231,6 +231,16 @@ class PokemonButton(Button):
             draw.text((x, y), line, font=font, fill="black")
             y += 25
 
+
+        # --- XP ---
+        current_xp = p_data.get("current_xp", 0)
+        xp_evo     = p_data.get("xp_evo", 0)
+        y += 10
+        if xp_evo > 0:
+            draw.text((x, y), f"XP : {current_xp} / {xp_evo}", font=font_bold, fill="black")
+        else:
+            draw.text((x, y), f"XP : {current_xp} (pas d'évolution)", font=font, fill="black")    
+
         # --- Stats ---
         x, y = pos_stats
         draw.text((x, y), "Stats :", font=font_bold, fill="black")

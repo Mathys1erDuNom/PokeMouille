@@ -59,6 +59,7 @@ from discord.ui import Select, View
 from dotenv import load_dotenv
 
 from fishing import setup_fishing
+from chenil import setup_chenil
 
 load_dotenv()
 
@@ -1113,7 +1114,7 @@ setup_money(bot)
 
 
 setup_shop(bot)
-
+setup_chenil(bot)
 
 badges_file = os.path.join(script_dir, "json", "badges.json")
 
