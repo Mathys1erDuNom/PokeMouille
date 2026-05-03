@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageFont
 import requests, io, os
 from io import BytesIO
 import json
-from new_db_avantmodif import get_new_captures
+from new_db import get_new_captures
 from utils import is_croco
 from combat.utils import normalize_text
 from new_db_avantmodif import delete_capture
