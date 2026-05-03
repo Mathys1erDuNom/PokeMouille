@@ -1304,6 +1304,12 @@ async def auto_event_loop():
             await run_interaction_personnage(text_channel, False)
 
  
+
+
+
+
+
+
  
 @bot.event
 async def on_ready():

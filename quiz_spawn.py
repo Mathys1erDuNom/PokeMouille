@@ -61,7 +61,7 @@ def setup_quiz_commands(bot, spawn_pokemon, role_id, is_under_ban_func, question
 
     class QuizView(View):
         def __init__(self, question_data):
-            super().__init__(timeout=10)
+            super().__init__(timeout=600)
             self.message = None
             for option in question_data["options"]:
                 self.add_item(QuizButton(label=option, correct_answer=question_data["answer"]))
