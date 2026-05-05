@@ -1,6 +1,6 @@
 [
     {
-        "name": "Victini",
+        "name": "Victini_shiny",
         "type": [
             "psy",
             "feu"
@@ -27,7 +27,7 @@
         }
     },
     {
-        "name": "Vipélierre",
+        "name": "Vipélierre_shiny",
         "type": [
             "plante"
         ],
@@ -48,12 +48,12 @@
         "current_xp": 0,
         "xp_evo": 308,
         "evo": {
-            "name": "Lianaja",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Lianaja_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Lianaja",
+        "name": "Lianaja_shiny",
         "type": [
             "plante"
         ],
@@ -74,12 +74,12 @@
         "current_xp": 0,
         "xp_evo": 413,
         "evo": {
-            "name": "Majaspic",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Majaspic_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Majaspic",
+        "name": "Majaspic_shiny",
         "type": [
             "plante"
         ],
@@ -105,7 +105,7 @@
         }
     },
     {
-        "name": "Gruikui",
+        "name": "Gruikui_shiny",
         "type": [
             "feu"
         ],
@@ -126,12 +126,12 @@
         "current_xp": 0,
         "xp_evo": 308,
         "evo": {
-            "name": "Grotichon",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Grotichon_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Grotichon",
+        "name": "Grotichon_shiny",
         "type": [
             "feu",
             "combat"
@@ -153,12 +153,12 @@
         "current_xp": 0,
         "xp_evo": 418,
         "evo": {
-            "name": "Roitiflam",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Roitiflam_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Roitiflam",
+        "name": "Roitiflam_shiny",
         "type": [
             "feu",
             "combat"
@@ -185,7 +185,7 @@
         }
     },
     {
-        "name": "Moustillon",
+        "name": "Moustillon_shiny",
         "type": [
             "eau"
         ],
@@ -206,12 +206,12 @@
         "current_xp": 0,
         "xp_evo": 308,
         "evo": {
-            "name": "Mateloutre",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Mateloutre_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Mateloutre",
+        "name": "Mateloutre_shiny",
         "type": [
             "eau"
         ],
@@ -232,12 +232,12 @@
         "current_xp": 0,
         "xp_evo": 413,
         "evo": {
-            "name": "Clamiral",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Clamiral_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Clamiral",
+        "name": "Clamiral_shiny",
         "type": [
             "eau"
         ],
@@ -263,7 +263,7 @@
         }
     },
     {
-        "name": "Ratentif",
+        "name": "Ratentif_shiny",
         "type": [
             "normal"
         ],
@@ -284,12 +284,12 @@
         "current_xp": 0,
         "xp_evo": 255,
         "evo": {
-            "name": "Miradar",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Miradar_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Miradar",
+        "name": "Miradar_shiny",
         "type": [
             "normal"
         ],
@@ -315,7 +315,7 @@
         }
     },
     {
-        "name": "Ponchiot",
+        "name": "Ponchiot_shiny",
         "type": [
             "normal"
         ],
@@ -336,12 +336,12 @@
         "current_xp": 0,
         "xp_evo": 275,
         "evo": {
-            "name": "Ponchien",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Ponchien_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Ponchien",
+        "name": "Ponchien_shiny",
         "type": [
             "normal"
         ],
@@ -362,12 +362,12 @@
         "current_xp": 0,
         "xp_evo": 370,
         "evo": {
-            "name": "Mastouffe",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Mastouffe_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Mastouffe",
+        "name": "Mastouffe_shiny",
         "type": [
             "normal"
         ],
@@ -393,7 +393,7 @@
         }
     },
     {
-        "name": "Chacripan",
+        "name": "Chacripan_shiny",
         "type": [
             "tenebres"
         ],
@@ -414,12 +414,12 @@
         "current_xp": 0,
         "xp_evo": 281,
         "evo": {
-            "name": "Léopardus",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Léopardus_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Léopardus",
+        "name": "Léopardus_shiny",
         "type": [
             "tenebres"
         ],
@@ -445,7 +445,7 @@
         }
     },
     {
-        "name": "Feuillajou",
+        "name": "Feuillajou_shiny",
         "type": [
             "plante"
         ],
@@ -466,12 +466,12 @@
         "current_xp": 0,
         "xp_evo": 316,
         "evo": {
-            "name": "Feuiloutan",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Feuiloutan_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Feuiloutan",
+        "name": "Feuiloutan_shiny",
         "type": [
             "plante"
         ],
@@ -497,7 +497,7 @@
         }
     },
     {
-        "name": "Flamajou",
+        "name": "Flamajou_shiny",
         "type": [
             "feu"
         ],
@@ -518,12 +518,12 @@
         "current_xp": 0,
         "xp_evo": 316,
         "evo": {
-            "name": "Flamoutan",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Flamoutan_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Flamoutan",
+        "name": "Flamoutan_shiny",
         "type": [
             "feu"
         ],
@@ -549,7 +549,7 @@
         }
     },
     {
-        "name": "Flotajou",
+        "name": "Flotajou_shiny",
         "type": [
             "eau"
         ],
@@ -570,12 +570,12 @@
         "current_xp": 0,
         "xp_evo": 316,
         "evo": {
-            "name": "Flotoutan",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Flotoutan_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Flotoutan",
+        "name": "Flotoutan_shiny",
         "type": [
             "eau"
         ],
@@ -601,7 +601,7 @@
         }
     },
     {
-        "name": "Munna",
+        "name": "Munna_shiny",
         "type": [
             "psy"
         ],
@@ -622,12 +622,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Mushana",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Mushana_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Mushana",
+        "name": "Mushana_shiny",
         "type": [
             "psy"
         ],
@@ -653,7 +653,7 @@
         }
     },
     {
-        "name": "Poichigeon",
+        "name": "Poichigeon_shiny",
         "type": [
             "normal",
             "vol"
@@ -675,12 +675,12 @@
         "current_xp": 0,
         "xp_evo": 264,
         "evo": {
-            "name": "Colombeau",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Colombeau_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Colombeau",
+        "name": "Colombeau_shiny",
         "type": [
             "normal",
             "vol"
@@ -702,12 +702,12 @@
         "current_xp": 0,
         "xp_evo": 358,
         "evo": {
-            "name": "Déflaisan",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Déflaisan_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Déflaisan",
+        "name": "Déflaisan_shiny",
         "type": [
             "normal",
             "vol"
@@ -734,7 +734,7 @@
         }
     },
     {
-        "name": "Zébibron",
+        "name": "Zébibron_shiny",
         "type": [
             "electrique"
         ],
@@ -755,12 +755,12 @@
         "current_xp": 0,
         "xp_evo": 295,
         "evo": {
-            "name": "Zéblitz",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Zéblitz_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Zéblitz",
+        "name": "Zéblitz_shiny",
         "type": [
             "electrique"
         ],
@@ -786,7 +786,7 @@
         }
     },
     {
-        "name": "Nodulithe",
+        "name": "Nodulithe_shiny",
         "type": [
             "roche"
         ],
@@ -807,12 +807,12 @@
         "current_xp": 0,
         "xp_evo": 280,
         "evo": {
-            "name": "Géolithe",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Géolithe_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Géolithe",
+        "name": "Géolithe_shiny",
         "type": [
             "roche"
         ],
@@ -833,12 +833,12 @@
         "current_xp": 0,
         "xp_evo": 390,
         "evo": {
-            "name": "Gigalithe",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Gigalithe_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Gigalithe",
+        "name": "Gigalithe_shiny",
         "type": [
             "roche"
         ],
@@ -864,7 +864,7 @@
         }
     },
     {
-        "name": "Chovsourir",
+        "name": "Chovsourir_shiny",
         "type": [
             "psy",
             "vol"
@@ -886,12 +886,12 @@
         "current_xp": 0,
         "xp_evo": 323,
         "evo": {
-            "name": "Rhinolove",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Rhinolove_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Rhinolove",
+        "name": "Rhinolove_shiny",
         "type": [
             "psy",
             "vol"
@@ -918,7 +918,7 @@
         }
     },
     {
-        "name": "Rototaupe",
+        "name": "Rototaupe_shiny",
         "type": [
             "sol"
         ],
@@ -939,12 +939,12 @@
         "current_xp": 0,
         "xp_evo": 328,
         "evo": {
-            "name": "Minotaupe",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Minotaupe_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Minotaupe",
+        "name": "Minotaupe_shiny",
         "type": [
             "sol",
             "acier"
@@ -971,7 +971,7 @@
         }
     },
     {
-        "name": "Nanméouïe",
+        "name": "Nanméouïe_shiny",
         "type": [
             "normal"
         ],
@@ -997,7 +997,7 @@
         }
     },
     {
-        "name": "Charpenti",
+        "name": "Charpenti_shiny",
         "type": [
             "combat"
         ],
@@ -1018,12 +1018,12 @@
         "current_xp": 0,
         "xp_evo": 305,
         "evo": {
-            "name": "Ouvrifier",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Ouvrifier_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Ouvrifier",
+        "name": "Ouvrifier_shiny",
         "type": [
             "combat"
         ],
@@ -1044,12 +1044,12 @@
         "current_xp": 0,
         "xp_evo": 405,
         "evo": {
-            "name": "Bétochef",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Bétochef_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Bétochef",
+        "name": "Bétochef_shiny",
         "type": [
             "combat"
         ],
@@ -1075,7 +1075,7 @@
         }
     },
     {
-        "name": "Tritonde",
+        "name": "Tritonde_shiny",
         "type": [
             "eau"
         ],
@@ -1096,12 +1096,12 @@
         "current_xp": 0,
         "xp_evo": 294,
         "evo": {
-            "name": "Batracné",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Batracné_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Batracné",
+        "name": "Batracné_shiny",
         "type": [
             "eau",
             "sol"
@@ -1123,12 +1123,12 @@
         "current_xp": 0,
         "xp_evo": 384,
         "evo": {
-            "name": "Crapustule",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Crapustule_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Crapustule",
+        "name": "Crapustule_shiny",
         "type": [
             "eau",
             "sol"
@@ -1155,7 +1155,7 @@
         }
     },
     {
-        "name": "Judokrak",
+        "name": "Judokrak_shiny",
         "type": [
             "combat"
         ],
@@ -1181,7 +1181,7 @@
         }
     },
     {
-        "name": "Karaclée",
+        "name": "Karaclée_shiny",
         "type": [
             "combat"
         ],
@@ -1207,7 +1207,7 @@
         }
     },
     {
-        "name": "Larveyette",
+        "name": "Larveyette_shiny",
         "type": [
             "insecte",
             "plante"
@@ -1229,12 +1229,12 @@
         "current_xp": 0,
         "xp_evo": 310,
         "evo": {
-            "name": "Couverdure",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Couverdure_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Couverdure",
+        "name": "Couverdure_shiny",
         "type": [
             "insecte",
             "plante"
@@ -1256,12 +1256,12 @@
         "current_xp": 0,
         "xp_evo": 380,
         "evo": {
-            "name": "Manternel",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Manternel_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Manternel",
+        "name": "Manternel_shiny",
         "type": [
             "insecte",
             "plante"
@@ -1288,7 +1288,7 @@
         }
     },
     {
-        "name": "Venipatte",
+        "name": "Venipatte_shiny",
         "type": [
             "insecte",
             "poison"
@@ -1310,12 +1310,12 @@
         "current_xp": 0,
         "xp_evo": 260,
         "evo": {
-            "name": "Scobolide",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Scobolide_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Scobolide",
+        "name": "Scobolide_shiny",
         "type": [
             "insecte",
             "poison"
@@ -1337,12 +1337,12 @@
         "current_xp": 0,
         "xp_evo": 360,
         "evo": {
-            "name": "Brutapode",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Brutapode_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Brutapode",
+        "name": "Brutapode_shiny",
         "type": [
             "insecte",
             "poison"
@@ -1369,7 +1369,7 @@
         }
     },
     {
-        "name": "Doudouvet",
+        "name": "Doudouvet_shiny",
         "type": [
             "plante",
             "fee"
@@ -1391,12 +1391,12 @@
         "current_xp": 0,
         "xp_evo": 280,
         "evo": {
-            "name": "Farfaduvet",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Farfaduvet_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Farfaduvet",
+        "name": "Farfaduvet_shiny",
         "type": [
             "plante",
             "fee"
@@ -1423,7 +1423,7 @@
         }
     },
     {
-        "name": "Chlorobule",
+        "name": "Chlorobule_shiny",
         "type": [
             "plante"
         ],
@@ -1444,12 +1444,12 @@
         "current_xp": 0,
         "xp_evo": 280,
         "evo": {
-            "name": "Fragilady",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Fragilady_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Fragilady",
+        "name": "Fragilady_shiny",
         "type": [
             "plante"
         ],
@@ -1475,7 +1475,7 @@
         }
     },
     {
-        "name": "Bargantua",
+        "name": "Bargantua_shiny",
         "type": [
             "eau"
         ],
@@ -1501,7 +1501,7 @@
         }
     },
     {
-        "name": "Mascaïman",
+        "name": "Mascaïman_shiny",
         "type": [
             "sol",
             "tenebres"
@@ -1523,12 +1523,12 @@
         "current_xp": 0,
         "xp_evo": 292,
         "evo": {
-            "name": "Escroco",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Escroco_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Escroco",
+        "name": "Escroco_shiny",
         "type": [
             "sol",
             "tenebres"
@@ -1550,12 +1550,12 @@
         "current_xp": 0,
         "xp_evo": 351,
         "evo": {
-            "name": "Crocorible",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Crocorible_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Crocorible",
+        "name": "Crocorible_shiny",
         "type": [
             "sol",
             "tenebres"
@@ -1582,7 +1582,7 @@
         }
     },
     {
-        "name": "Darumarond",
+        "name": "Darumarond_shiny",
         "type": [
             "feu"
         ],
@@ -1603,12 +1603,12 @@
         "current_xp": 0,
         "xp_evo": 315,
         "evo": {
-            "name": "Darumacho",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Darumacho_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Darumacho",
+        "name": "Darumacho_shiny",
         "type": [
             "feu"
         ],
@@ -1634,7 +1634,7 @@
         }
     },
     {
-        "name": "Maracachi",
+        "name": "Maracachi_shiny",
         "type": [
             "plante"
         ],
@@ -1660,7 +1660,7 @@
         }
     },
     {
-        "name": "Crabicoque",
+        "name": "Crabicoque_shiny",
         "type": [
             "insecte",
             "roche"
@@ -1682,12 +1682,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Crabaraque",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Crabaraque_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Crabaraque",
+        "name": "Crabaraque_shiny",
         "type": [
             "insecte",
             "roche"
@@ -1714,7 +1714,7 @@
         }
     },
     {
-        "name": "Baggiguane",
+        "name": "Baggiguane_shiny",
         "type": [
             "tenebres",
             "combat"
@@ -1736,12 +1736,12 @@
         "current_xp": 0,
         "xp_evo": 348,
         "evo": {
-            "name": "Baggaïd",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Baggaïd_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Baggaïd",
+        "name": "Baggaïd_shiny",
         "type": [
             "tenebres",
             "combat"
@@ -1768,7 +1768,7 @@
         }
     },
     {
-        "name": "Cryptéro",
+        "name": "Cryptéro_shiny",
         "type": [
             "psy",
             "vol"
@@ -1795,7 +1795,7 @@
         }
     },
     {
-        "name": "Tutafeh",
+        "name": "Tutafeh_shiny",
         "type": [
             "spectre"
         ],
@@ -1816,12 +1816,12 @@
         "current_xp": 0,
         "xp_evo": 303,
         "evo": {
-            "name": "Tutankafer",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Tutankafer_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Tutankafer",
+        "name": "Tutankafer_shiny",
         "type": [
             "spectre"
         ],
@@ -1847,7 +1847,7 @@
         }
     },
     {
-        "name": "Carapagos",
+        "name": "Carapagos_shiny",
         "type": [
             "eau",
             "roche"
@@ -1869,12 +1869,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Mégapagos",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Mégapagos_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Mégapagos",
+        "name": "Mégapagos_shiny",
         "type": [
             "eau",
             "roche"
@@ -1901,7 +1901,7 @@
         }
     },
     {
-        "name": "Arkéapti",
+        "name": "Arkéapti_shiny",
         "type": [
             "roche",
             "vol"
@@ -1923,12 +1923,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Aéroptéryx",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Aéroptéryx_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Aéroptéryx",
+        "name": "Aéroptéryx_shiny",
         "type": [
             "roche",
             "vol"
@@ -1955,7 +1955,7 @@
         }
     },
     {
-        "name": "Miamiasme",
+        "name": "Miamiasme_shiny",
         "type": [
             "poison"
         ],
@@ -1976,12 +1976,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Miasmax",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Miasmax_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Miasmax",
+        "name": "Miasmax_shiny",
         "type": [
             "poison"
         ],
@@ -2007,7 +2007,7 @@
         }
     },
     {
-        "name": "Zorua",
+        "name": "Zorua_shiny",
         "type": [
             "tenebres"
         ],
@@ -2028,12 +2028,12 @@
         "current_xp": 0,
         "xp_evo": 330,
         "evo": {
-            "name": "Zoroark",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Zoroark_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Zoroark",
+        "name": "Zoroark_shiny",
         "type": [
             "tenebres"
         ],
@@ -2059,7 +2059,7 @@
         }
     },
     {
-        "name": "Chinchidou",
+        "name": "Chinchidou_shiny",
         "type": [
             "normal"
         ],
@@ -2080,12 +2080,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Pashmilla",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Pashmilla_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Pashmilla",
+        "name": "Pashmilla_shiny",
         "type": [
             "normal"
         ],
@@ -2111,7 +2111,7 @@
         }
     },
     {
-        "name": "Scrutella",
+        "name": "Scrutella_shiny",
         "type": [
             "psy"
         ],
@@ -2132,12 +2132,12 @@
         "current_xp": 0,
         "xp_evo": 290,
         "evo": {
-            "name": "Mesmérella",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Mesmérella_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Mesmérella",
+        "name": "Mesmérella_shiny",
         "type": [
             "psy"
         ],
@@ -2158,12 +2158,12 @@
         "current_xp": 0,
         "xp_evo": 390,
         "evo": {
-            "name": "Sidérella",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Sidérella_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Sidérella",
+        "name": "Sidérella_shiny",
         "type": [
             "psy"
         ],
@@ -2189,7 +2189,7 @@
         }
     },
     {
-        "name": "Nucléos",
+        "name": "Nucléos_shiny",
         "type": [
             "psy"
         ],
@@ -2210,12 +2210,12 @@
         "current_xp": 0,
         "xp_evo": 290,
         "evo": {
-            "name": "Méios",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Méios_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Méios",
+        "name": "Méios_shiny",
         "type": [
             "psy"
         ],
@@ -2236,12 +2236,12 @@
         "current_xp": 0,
         "xp_evo": 370,
         "evo": {
-            "name": "Symbios",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Symbios_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Symbios",
+        "name": "Symbios_shiny",
         "type": [
             "psy"
         ],
@@ -2267,7 +2267,7 @@
         }
     },
     {
-        "name": "Couaneton",
+        "name": "Couaneton_shiny",
         "type": [
             "eau",
             "vol"
@@ -2289,12 +2289,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Lakmécygne",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Lakmécygne_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Lakmécygne",
+        "name": "Lakmécygne_shiny",
         "type": [
             "eau",
             "vol"
@@ -2321,7 +2321,7 @@
         }
     },
     {
-        "name": "Sorbébé",
+        "name": "Sorbébé_shiny",
         "type": [
             "glace"
         ],
@@ -2342,12 +2342,12 @@
         "current_xp": 0,
         "xp_evo": 305,
         "evo": {
-            "name": "Sorboul",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Sorboul_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Sorboul",
+        "name": "Sorboul_shiny",
         "type": [
             "glace"
         ],
@@ -2368,12 +2368,12 @@
         "current_xp": 0,
         "xp_evo": 395,
         "evo": {
-            "name": "Sorbouboul",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Sorbouboul_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Sorbouboul",
+        "name": "Sorbouboul_shiny",
         "type": [
             "glace"
         ],
@@ -2399,7 +2399,7 @@
         }
     },
     {
-        "name": "Vivaldaim",
+        "name": "Vivaldaim_shiny",
         "type": [
             "normal",
             "plante"
@@ -2421,12 +2421,12 @@
         "current_xp": 0,
         "xp_evo": 335,
         "evo": {
-            "name": "Haydaim",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Haydaim_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Haydaim",
+        "name": "Haydaim_shiny",
         "type": [
             "normal",
             "plante"
@@ -2453,7 +2453,7 @@
         }
     },
     {
-        "name": "Emolga",
+        "name": "Emolga_shiny",
         "type": [
             "electrique",
             "vol"
@@ -2480,7 +2480,7 @@
         }
     },
     {
-        "name": "Carabing",
+        "name": "Carabing_shiny",
         "type": [
             "insecte"
         ],
@@ -2501,12 +2501,12 @@
         "current_xp": 0,
         "xp_evo": 315,
         "evo": {
-            "name": "Lançargot",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Lançargot_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Lançargot",
+        "name": "Lançargot_shiny",
         "type": [
             "insecte",
             "acier"
@@ -2533,7 +2533,7 @@
         }
     },
     {
-        "name": "Trompignon",
+        "name": "Trompignon_shiny",
         "type": [
             "plante",
             "poison"
@@ -2555,12 +2555,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Gaulet",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Gaulet_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Gaulet",
+        "name": "Gaulet_shiny",
         "type": [
             "plante",
             "poison"
@@ -2587,7 +2587,7 @@
         }
     },
     {
-        "name": "Viskuse",
+        "name": "Viskuse_shiny",
         "type": [
             "eau",
             "spectre"
@@ -2609,12 +2609,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Moyade",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Moyade_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Moyade",
+        "name": "Moyade_shiny",
         "type": [
             "eau",
             "spectre"
@@ -2641,7 +2641,7 @@
         }
     },
     {
-        "name": "Mamanbo",
+        "name": "Mamanbo_shiny",
         "type": [
             "eau"
         ],
@@ -2667,7 +2667,7 @@
         }
     },
     {
-        "name": "Statitik",
+        "name": "Statitik_shiny",
         "type": [
             "insecte",
             "electrique"
@@ -2689,12 +2689,12 @@
         "current_xp": 0,
         "xp_evo": 319,
         "evo": {
-            "name": "Mygavolt",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Mygavolt_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Mygavolt",
+        "name": "Mygavolt_shiny",
         "type": [
             "insecte",
             "electrique"
@@ -2721,7 +2721,7 @@
         }
     },
     {
-        "name": "Grindur",
+        "name": "Grindur_shiny",
         "type": [
             "plante",
             "acier"
@@ -2743,12 +2743,12 @@
         "current_xp": 0,
         "xp_evo": 305,
         "evo": {
-            "name": "Noacier",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Noacier_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Noacier",
+        "name": "Noacier_shiny",
         "type": [
             "plante",
             "acier"
@@ -2775,7 +2775,7 @@
         }
     },
     {
-        "name": "Tic",
+        "name": "Tic_shiny",
         "type": [
             "acier"
         ],
@@ -2796,12 +2796,12 @@
         "current_xp": 0,
         "xp_evo": 300,
         "evo": {
-            "name": "Clic",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Clic_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Clic",
+        "name": "Clic_shiny",
         "type": [
             "acier"
         ],
@@ -2822,12 +2822,12 @@
         "current_xp": 0,
         "xp_evo": 440,
         "evo": {
-            "name": "Cliticlic",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Cliticlic_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Cliticlic",
+        "name": "Cliticlic_shiny",
         "type": [
             "acier"
         ],
@@ -2853,7 +2853,7 @@
         }
     },
     {
-        "name": "Anchwatt",
+        "name": "Anchwatt_shiny",
         "type": [
             "electrique"
         ],
@@ -2874,12 +2874,12 @@
         "current_xp": 0,
         "xp_evo": 275,
         "evo": {
-            "name": "Lampéroie",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Lampéroie_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Lampéroie",
+        "name": "Lampéroie_shiny",
         "type": [
             "electrique"
         ],
@@ -2900,12 +2900,12 @@
         "current_xp": 0,
         "xp_evo": 405,
         "evo": {
-            "name": "Ohmassacre",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Ohmassacre_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Ohmassacre",
+        "name": "Ohmassacre_shiny",
         "type": [
             "electrique"
         ],
@@ -2931,7 +2931,7 @@
         }
     },
     {
-        "name": "Lewsor",
+        "name": "Lewsor_shiny",
         "type": [
             "psy"
         ],
@@ -2952,12 +2952,12 @@
         "current_xp": 0,
         "xp_evo": 335,
         "evo": {
-            "name": "Neitram",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Neitram_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Neitram",
+        "name": "Neitram_shiny",
         "type": [
             "psy"
         ],
@@ -2983,7 +2983,7 @@
         }
     },
     {
-        "name": "Funécire",
+        "name": "Funécire_shiny",
         "type": [
             "spectre",
             "feu"
@@ -3005,12 +3005,12 @@
         "current_xp": 0,
         "xp_evo": 275,
         "evo": {
-            "name": "Mélancolux",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Mélancolux_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Mélancolux",
+        "name": "Mélancolux_shiny",
         "type": [
             "spectre",
             "feu"
@@ -3032,12 +3032,12 @@
         "current_xp": 0,
         "xp_evo": 370,
         "evo": {
-            "name": "Lugulabre",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Lugulabre_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Lugulabre",
+        "name": "Lugulabre_shiny",
         "type": [
             "spectre",
             "feu"
@@ -3064,7 +3064,7 @@
         }
     },
     {
-        "name": "Coupenotte",
+        "name": "Coupenotte_shiny",
         "type": [
             "dragon"
         ],
@@ -3085,12 +3085,12 @@
         "current_xp": 0,
         "xp_evo": 320,
         "evo": {
-            "name": "Incisache",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Incisache_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Incisache",
+        "name": "Incisache_shiny",
         "type": [
             "dragon"
         ],
@@ -3111,12 +3111,12 @@
         "current_xp": 0,
         "xp_evo": 410,
         "evo": {
-            "name": "Tranchodon",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Tranchodon_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Tranchodon",
+        "name": "Tranchodon_shiny",
         "type": [
             "dragon"
         ],
@@ -3142,7 +3142,7 @@
         }
     },
     {
-        "name": "Polarhume",
+        "name": "Polarhume_shiny",
         "type": [
             "glace"
         ],
@@ -3163,12 +3163,12 @@
         "current_xp": 0,
         "xp_evo": 305,
         "evo": {
-            "name": "Polagriffe",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Polagriffe_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Polagriffe",
+        "name": "Polagriffe_shiny",
         "type": [
             "glace"
         ],
@@ -3194,7 +3194,7 @@
         }
     },
     {
-        "name": "Hexagel",
+        "name": "Hexagel_shiny",
         "type": [
             "glace"
         ],
@@ -3220,7 +3220,7 @@
         }
     },
     {
-        "name": "Escargaume",
+        "name": "Escargaume_shiny",
         "type": [
             "insecte"
         ],
@@ -3241,12 +3241,12 @@
         "current_xp": 0,
         "xp_evo": 305,
         "evo": {
-            "name": "Limaspeed",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Limaspeed_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Limaspeed",
+        "name": "Limaspeed_shiny",
         "type": [
             "insecte"
         ],
@@ -3272,7 +3272,7 @@
         }
     },
     {
-        "name": "Limonde",
+        "name": "Limonde_shiny",
         "type": [
             "sol",
             "electrique"
@@ -3299,7 +3299,7 @@
         }
     },
     {
-        "name": "Kungfouine",
+        "name": "Kungfouine_shiny",
         "type": [
             "combat"
         ],
@@ -3320,12 +3320,12 @@
         "current_xp": 0,
         "xp_evo": 350,
         "evo": {
-            "name": "Shaofouine",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Shaofouine_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Shaofouine",
+        "name": "Shaofouine_shiny",
         "type": [
             "combat"
         ],
@@ -3351,7 +3351,7 @@
         }
     },
     {
-        "name": "Drakkarmin",
+        "name": "Drakkarmin_shiny",
         "type": [
             "dragon"
         ],
@@ -3377,7 +3377,7 @@
         }
     },
     {
-        "name": "Gringolem",
+        "name": "Gringolem_shiny",
         "type": [
             "sol",
             "spectre"
@@ -3399,12 +3399,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Golemastoc",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Golemastoc_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Golemastoc",
+        "name": "Golemastoc_shiny",
         "type": [
             "sol",
             "spectre"
@@ -3431,7 +3431,7 @@
         }
     },
     {
-        "name": "Scalpion",
+        "name": "Scalpion_shiny",
         "type": [
             "tenebres",
             "acier"
@@ -3453,12 +3453,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Scalproie",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Scalproie_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Scalproie",
+        "name": "Scalproie_shiny",
         "type": [
             "tenebres",
             "acier"
@@ -3485,7 +3485,7 @@
         }
     },
     {
-        "name": "Frison",
+        "name": "Frison_shiny",
         "type": [
             "normal"
         ],
@@ -3511,7 +3511,7 @@
         }
     },
     {
-        "name": "Furaiglon",
+        "name": "Furaiglon_shiny",
         "type": [
             "normal",
             "vol"
@@ -3533,12 +3533,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Gueriaigle",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Gueriaigle_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Gueriaigle",
+        "name": "Gueriaigle_shiny",
         "type": [
             "normal",
             "vol"
@@ -3565,7 +3565,7 @@
         }
     },
     {
-        "name": "Vostourno",
+        "name": "Vostourno_shiny",
         "type": [
             "tenebres",
             "vol"
@@ -3587,12 +3587,12 @@
         "current_xp": 0,
         "xp_evo": 0,
         "evo": {
-            "name": "Vaututrice",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Vaututrice_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Vaututrice",
+        "name": "Vaututrice_shiny",
         "type": [
             "tenebres",
             "vol"
@@ -3619,7 +3619,7 @@
         }
     },
     {
-        "name": "Aflamanoir",
+        "name": "Aflamanoir_shiny",
         "type": [
             "feu"
         ],
@@ -3645,7 +3645,7 @@
         }
     },
     {
-        "name": "Fermite",
+        "name": "Fermite_shiny",
         "type": [
             "insecte",
             "acier"
@@ -3672,7 +3672,7 @@
         }
     },
     {
-        "name": "Solochi",
+        "name": "Solochi_shiny",
         "type": [
             "tenebres",
             "dragon"
@@ -3694,12 +3694,12 @@
         "current_xp": 0,
         "xp_evo": 300,
         "evo": {
-            "name": "Diamat",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Diamat_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Diamat",
+        "name": "Diamat_shiny",
         "type": [
             "tenebres",
             "dragon"
@@ -3721,12 +3721,12 @@
         "current_xp": 0,
         "xp_evo": 420,
         "evo": {
-            "name": "Trioxhydre",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Trioxhydre_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Trioxhydre",
+        "name": "Trioxhydre_shiny",
         "type": [
             "tenebres",
             "dragon"
@@ -3753,7 +3753,7 @@
         }
     },
     {
-        "name": "Pyronille",
+        "name": "Pyronille_shiny",
         "type": [
             "insecte",
             "feu"
@@ -3775,12 +3775,12 @@
         "current_xp": 0,
         "xp_evo": 360,
         "evo": {
-            "name": "Pyrax",
-            "file": "pokemon_gen5_normal.json"
+            "name": "Pyrax_shiny",
+            "file": "pokemon_gen5_shiny.json"
         }
     },
     {
-        "name": "Pyrax",
+        "name": "Pyrax_shiny",
         "type": [
             "insecte",
             "feu"
@@ -3807,7 +3807,7 @@
         }
     },
     {
-        "name": "Cobaltium",
+        "name": "Cobaltium_shiny",
         "type": [
             "acier",
             "combat"
@@ -3834,7 +3834,7 @@
         }
     },
     {
-        "name": "Terrakium",
+        "name": "Terrakium_shiny",
         "type": [
             "roche",
             "combat"
@@ -3861,7 +3861,7 @@
         }
     },
     {
-        "name": "Viridium",
+        "name": "Viridium_shiny",
         "type": [
             "plante",
             "combat"
@@ -3888,7 +3888,7 @@
         }
     },
     {
-        "name": "Boréas",
+        "name": "Boréas_shiny",
         "type": [
             "vol"
         ],
@@ -3914,7 +3914,7 @@
         }
     },
     {
-        "name": "Fulguris",
+        "name": "Fulguris_shiny",
         "type": [
             "electrique",
             "vol"
@@ -3941,7 +3941,7 @@
         }
     },
     {
-        "name": "Reshiram",
+        "name": "Reshiram_shiny",
         "type": [
             "dragon",
             "feu"
@@ -3968,7 +3968,7 @@
         }
     },
     {
-        "name": "Zekrom",
+        "name": "Zekrom_shiny",
         "type": [
             "dragon",
             "electrique"
@@ -3995,7 +3995,7 @@
         }
     },
     {
-        "name": "Démétéros",
+        "name": "Démétéros_shiny",
         "type": [
             "sol",
             "vol"
@@ -4022,7 +4022,7 @@
         }
     },
     {
-        "name": "Kyurem",
+        "name": "Kyurem_shiny",
         "type": [
             "dragon",
             "glace"
@@ -4049,7 +4049,7 @@
         }
     },
     {
-        "name": "Keldeo",
+        "name": "Keldeo_shiny",
         "type": [
             "eau",
             "combat"
@@ -4076,7 +4076,7 @@
         }
     },
     {
-        "name": "Meloetta",
+        "name": "Meloetta_shiny",
         "type": [
             "normal",
             "psy"
@@ -4103,7 +4103,7 @@
         }
     },
     {
-        "name": "Genesect",
+        "name": "Genesect_shiny",
         "type": [
             "insecte",
             "acier"
