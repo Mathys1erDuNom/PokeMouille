@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 from discord.ext import commands
 import discord
 
+from new_db import get_new_captures, add_xp, evolve_pokemon
+
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
 
@@ -64,7 +66,7 @@ async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int 
     - xp_amount     : XP à donner quand le seuil est atteint
     - threshold     : nombre de checks avant de donner l'XP (1 check = 1 min)
     """
-    from new_captures import get_new_captures, add_xp, evolve_pokemon
+    
 
     ids_presents = {m.id for m in members_in_vc}
 
@@ -119,7 +121,7 @@ def setup_chenil(bot):
     @bot.command(name="chenil")
     async def chenil_cmd(ctx, pokemon_name: str):
         """!chenil <nom_pokemon> — Place un Pokémon dans le chenil (1 seul à la fois)."""
-        from new_captures import get_new_captures
+    
 
         uid      = str(ctx.author.id)
         captures = get_new_captures(uid)
