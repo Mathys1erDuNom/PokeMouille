@@ -162,7 +162,7 @@ def setup_chenil(bot):
     @commands.has_permissions(administrator=True)
     async def add_chenil_xp_cmd(ctx, member: discord.Member, xp: int):
         """!add_chenil_xp @utilisateur <xp> — (Admin) Ajoute manuellement de l'XP au chenil."""
-        from new_captures import get_new_captures, add_xp, evolve_pokemon
+     
 
         uid          = str(member.id)
         pokemon_name = get_chenil_pokemon(uid)
