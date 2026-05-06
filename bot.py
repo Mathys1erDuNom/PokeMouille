@@ -1311,6 +1311,9 @@ from chenil import tick_chenil_xp
 # dict persistant entre les tours de boucle  { user_id (int): nb_checks (int) }
 chenil_xp_counters: dict[int, int] = {}
 
+from chenil import setup_chenil 
+
+setup_chenil(bot)
 
 async def auto_event_loop():
     await bot.wait_until_ready()
