@@ -57,7 +57,7 @@ def remove_chenil_pokemon(user_id: str):
 # FONCTION APPELÉE PAR LA BOUCLE PRINCIPALE
 # ──────────────────────────────────────────────
 
-async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int = 20, threshold: int = 20):
+async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int = 20, threshold: int = 1):
     """
     À appeler chaque minute depuis auto_event_loop.
 
