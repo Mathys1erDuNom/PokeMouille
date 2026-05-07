@@ -12,6 +12,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur  = conn.cursor()
+text_channel = None
 
 # ──────────────────────────────────────────────
 # TABLE
@@ -119,7 +120,9 @@ async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int 
 # COMMANDES DISCORD
 # ──────────────────────────────────────────────
 
-def setup_chenil(bot):
+def setup_chenil(bot, channel):
+    global text_channel
+    text_channel = channel 
 
     @bot.command(name="chenil")
     async def chenil_cmd(ctx, pokemon_name: str):

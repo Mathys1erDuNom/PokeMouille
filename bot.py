@@ -1313,7 +1313,7 @@ chenil_xp_counters: dict[int, int] = {}
 
 from chenil import setup_chenil 
 
-setup_chenil(bot)
+setup_chenil(bot,TEXT_CHANNEL_ID)
 
 async def auto_event_loop():
     await bot.wait_until_ready()
