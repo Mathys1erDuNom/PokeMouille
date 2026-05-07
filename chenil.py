@@ -58,6 +58,7 @@ def remove_chenil_pokemon(user_id: str):
 # ──────────────────────────────────────────────
 
 async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int = 20, threshold: int = 1):
+    global text_channel
     """
     À appeler chaque minute depuis auto_event_loop.
 
@@ -102,12 +103,14 @@ async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int 
 
         can_evolve = add_xp(str(uid), pokemon["name"], xp_amount)
         print(f"[CHENIL] +{xp_amount} XP pour {pokemon['name']} de {uid}.")
+        await text_channel.send(f"🏠 **+{xp_amount} XP** pour **{pokemon['name']}** de <@{uid}> grâce au chenil !")
 
         if can_evolve:
             result = evolve_pokemon(str(uid), pokemon)
             if result["success"]:
                 print(f"[CHENIL] {pokemon['name']} de {uid} a évolué en {result['evo_name']} !")
                 set_chenil_pokemon(str(uid), result["evo_name"])
+                await text_channel.send(f"🎉 **{pokemon['name']}** de <@{uid}> a évolué en **{result['evo_name']}** grâce au chenil !")
             else:
                 print(f"[CHENIL] Évolution impossible : {result['reason']}")
 
