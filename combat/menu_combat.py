@@ -1,13 +1,11 @@
 import discord
 from discord.ui import View, Select, Button
-from math import ceil
 from new_db_avantmodif import get_new_captures
 import json
 import os
 from combat.logic_battle import start_battle_turn_based
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-
 from regions import get_user_region
 
 ADVERSAIRES_DIR = os.path.join(script_dir, "../json/")
@@ -31,7 +29,7 @@ def get_adversaire_by_name(name: str, region: str):
 
 # ---- Slot unique par position ----
 class SlotSelect(Select):
-    def __init__(self, slot_number, pokemon_names, parent_view):
+    def __init__(self, slot_number, row_number, pokemon_names, parent_view):
         options = [discord.SelectOption(label="(aucun)", value="aucun")] + [
             discord.SelectOption(label=name, value=name)
             for name in pokemon_names
@@ -42,24 +40,43 @@ class SlotSelect(Select):
             max_values=1,
             options=options,
             custom_id=f"slot_{slot_number}",
-            row=min(slot_number - 1, 3)
+            row=row_number
         )
         self.slot = slot_number
         self.parent_view = parent_view
 
     async def callback(self, interaction: discord.Interaction):
         self.parent_view.slots[self.slot] = self.values[0]
-        await interaction.response.defer()
+        self.parent_view.rebuild()
+        await interaction.response.edit_message(view=self.parent_view)
 
 
-# ---- Bouton valider ----
-class ValidateButton(Button):
+# ---- Bouton Suivant (page 1 → page 2) ----
+class NextButton(Button):
     def __init__(self, view: "SelectionView"):
+        super().__init__(label="Suivant ➡️", style=discord.ButtonStyle.primary, row=4)
+        self.parent_view = view
+
+    async def callback(self, interaction: discord.Interaction):
+        view2 = SelectionView2(
+            slots=self.parent_view.slots,
+            pokemon_names=self.parent_view.pokemon_names,
+            full_pokemon_data=self.parent_view.full_pokemon_data,
+            chosen_adversaire=self.parent_view.chosen_adversaire
+        )
+        await interaction.response.edit_message(
+            content="✅ Slots 5 et 6 (optionnels) :",
+            view=view2
+        )
+
+
+# ---- Bouton Valider (page 2) ----
+class ValidateButton(Button):
+    def __init__(self, view: "SelectionView2"):
         super().__init__(label="✅ Valider", style=discord.ButtonStyle.success, row=4)
         self.parent_view = view
 
     async def callback(self, interaction: discord.Interaction):
-        # Récupère les slots remplis dans l'ordre
         unique_selected = [
             name for slot, name in sorted(self.parent_view.slots.items())
             if name != "aucun"
@@ -68,14 +85,6 @@ class ValidateButton(Button):
         if len(unique_selected) == 0:
             await interaction.response.send_message(
                 "❌ Tu dois sélectionner au moins un Pokémon.",
-                ephemeral=True
-            )
-            return
-
-        # Vérifie les doublons
-        if len(unique_selected) != len(set(unique_selected)):
-            await interaction.response.send_message(
-                "❌ Tu as sélectionné le même Pokémon dans plusieurs slots.",
                 ephemeral=True
             )
             return
@@ -107,7 +116,7 @@ class ValidateButton(Button):
             )
             return
 
-        adversaire = getattr(self.parent_view, "chosen_adversaire", None)
+        adversaire = self.parent_view.chosen_adversaire
         if adversaire:
             bot_team = adversaire["pokemons"]
             bot_name = adversaire["name"]
@@ -126,14 +135,36 @@ class ValidateButton(Button):
         )
 
 
+# ---- Vue page 2 (slots 5 et 6) ----
+class SelectionView2(View):
+    def __init__(self, slots, pokemon_names, full_pokemon_data, chosen_adversaire):
+        super().__init__(timeout=300)
+        self.slots = slots
+        self.pokemon_names = pokemon_names
+        self.full_pokemon_data = full_pokemon_data
+        self.chosen_adversaire = chosen_adversaire
+        self.rebuild()
+
+    def rebuild(self):
+        self.clear_items()
+        for row_number, slot in enumerate([5, 6]):
+            taken = {v for k, v in self.slots.items() if k != slot and v != "aucun"}
+            filtered_names = [n for n in self.pokemon_names if n not in taken]
+            select = SlotSelect(slot, row_number, filtered_names, self)
+            current = self.slots.get(slot, "aucun")
+            if current and current != "aucun":
+                for opt in select.options:
+                    if opt.value == current:
+                        opt.default = True
+            self.add_item(select)
+        self.add_item(ValidateButton(self))
+
+
 # ---- Select adversaire ----
 class AdversaireSelect(Select):
     def __init__(self, adversaires, parent_view):
         options = [
-            discord.SelectOption(
-                label=f"{i+1}. {adv['name']}",
-                value=adv["name"]
-            )
+            discord.SelectOption(label=f"{i+1}. {adv['name']}", value=adv["name"])
             for i, adv in enumerate(adversaires)
         ]
         super().__init__(
@@ -158,7 +189,7 @@ class AdversaireSelect(Select):
             )
 
 
-# ---- Vue principale ----
+# ---- Vue principale (slots 1 à 4) ----
 class SelectionView(View):
     def __init__(self, pokemons, full_pokemon_data, user_id: str):
         super().__init__(timeout=300)
@@ -181,20 +212,20 @@ class SelectionView(View):
         self.clear_items()
         self.rebuild()
         await interaction.response.edit_message(
-            content=f"✅ Adversaire : **{self.chosen_adversaire['name']}**\nChoisis tes Pokémon par slot (slot 1 = premier en combat) :",
+            content=f"✅ Adversaire : **{self.chosen_adversaire['name']}**\nChoisis tes Pokémon — slots 1 à 4 (slot 1 = premier en combat) :",
             view=self
         )
 
     def rebuild(self):
         self.clear_items()
-        for slot in range(1, 7):
+        for row_number, slot in enumerate(range(1, 5)):
             taken = {v for k, v in self.slots.items() if k != slot and v != "aucun"}
             filtered_names = [n for n in self.pokemon_names if n not in taken]
-            select = SlotSelect(slot, filtered_names, self)
+            select = SlotSelect(slot, row_number, filtered_names, self)
             current = self.slots.get(slot, "aucun")
             if current and current != "aucun":
                 for opt in select.options:
                     if opt.value == current:
                         opt.default = True
             self.add_item(select)
-        self.add_item(ValidateButton(self))  # row=4
+        self.add_item(NextButton(self))
