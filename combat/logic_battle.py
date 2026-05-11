@@ -13,6 +13,9 @@ from badge_db import give_badge, get_user_badges
 from money_db import add_money
 
 
+from new_db import get_new_captures, add_xp, evolve_pokemon
+
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 badges_path = os.path.join(script_dir, "..", "json", "badges.json")
 with open(badges_path, "r", encoding="utf-8") as f:
@@ -74,23 +77,18 @@ BADGES_ADVERSAIRES = {
 
 async def handle_victory(interaction, adversaire_name, repliques=None):
     repliques = repliques or {}
-
     badge_id = BADGES_ADVERSAIRES.get(adversaire_name)
     user_id = str(interaction.user.id)
-
     if badge_id:
         user_badges = get_user_badges(user_id)
         badge_info = next((b for b in BADGE_DATA if b["id"] == badge_id), None)
-
         if badge_info:
             badge_image_path = os.path.join(script_dir, "..", badge_info["image"])
             file = discord.File(badge_image_path, filename="badge.png")
-
             if badge_id not in user_badges:
                 give_badge(user_id, badge_id)
                 reward = 500
                 add_money(user_id, reward)
-
                 emb = discord.Embed(
                     title=f"🏅 Nouveau Badge : {badge_info['name']}",
                     description=f"{badge_info.get('description','')}\n💰 Vous gagnez **{reward}** Croco dollars !",
@@ -106,11 +104,22 @@ async def handle_victory(interaction, adversaire_name, repliques=None):
                     f"💰 Tu reçois **{reward}** Croco dollars."
                 )
 
+    # ── XP de victoire pour tous les Pokémons ────────────────────────
+    xp_victoire = 20
+    captures = get_new_captures(user_id)
+    for pokemon in captures:
+        can_evolve = add_xp(user_id, pokemon["name"], xp_victoire)
+        await interaction.channel.send(f"⚔️ **+{xp_victoire} XP** pour **{pokemon['name']}** !")
+        if can_evolve:
+            result = evolve_pokemon(user_id, pokemon)
+            if result["success"]:
+                await interaction.channel.send(f"🎉 **{pokemon['name']}** a évolué en **{result['evo_name']}** !")
+            else:
+                await interaction.channel.send(f"⚠️ Évolution impossible pour **{pokemon['name']}** : {result['reason']}")
+
     if repliques.get("lose"):
         await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
-
     await interaction.channel.send("🎉 **Victoire du joueur !**")
-
 
 
 # ✨ NEW: petite fonction utilitaire pour afficher les effets
