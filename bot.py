@@ -1337,7 +1337,7 @@ async def auto_event_loop():
             next_event_time = None
             next_event_name = None
             chenil_xp_counters.clear()   # reset des compteurs si vocal vide
-            print(f"[AUTO] Personne dans le vocal, vérification dans 1 min...")
+            # print(f"[AUTO] Personne dans le vocal, vérification dans 1 min...")
             await asyncio.sleep(60)
             continue
 

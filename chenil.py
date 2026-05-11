@@ -60,7 +60,7 @@ def remove_chenil_pokemon(user_id: str):
 _bot = None
 _text_channel_id = None
 
-async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int = 20, threshold: int = 1):
+async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int = 10, threshold: int = 30):
 
     channel = _bot.get_channel(_text_channel_id)
     """
