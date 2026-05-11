@@ -165,7 +165,7 @@ class SelectionView(View):
         self.full_pokemon_data = full_pokemon_data
         self.chosen_adversaire = None
         self.pokemon_names = pokemons
-        self.slots = {i: "" for i in range(1, 6)}  # ⚠️ 5 slots max (row 0-4, row 4 = bouton)
+        self.slots = {i: "" for i in range(1, 5)}
 
         region = get_user_region(user_id)
         self.region = region
@@ -187,7 +187,7 @@ class SelectionView(View):
 
     def rebuild(self):
         self.clear_items()
-        for slot in range(1, 6):  # slots 1 à 5
+        for slot in range(1, 5):
             select = SlotSelect(slot, self.pokemon_names, self)
             # Restaure la valeur déjà choisie
             current = self.slots.get(slot, "")
