@@ -852,8 +852,8 @@ async def catch(ctx):
             ctx.command.reset_cooldown(ctx)
             return
 
-        # --- 🎲 SYSTÈME DE CHANCE (1 chance sur 2) ---
-        reussite = random.randint(1, 2) # Génère 1, 2
+        # --- 🎲 SYSTÈME DE CHANCE (1 chance sur 4) ---
+        reussite = random.randint(1, 4) # Génère 1, 4
         
         # On envoie d'abord la Pokéball
         embed_pokeball = discord.Embed(
@@ -864,12 +864,12 @@ async def catch(ctx):
             embed_pokeball.set_thumbnail(url=pokeball_url)
         await ctx.send(embed=embed_pokeball)
 
-        if reussite != 1:  # Échec (50% de chance d'échouer)
+        if reussite == 1:  # Échec 
             print(f"[TRACE {trace_id}] [LOG] Échec de la capture (Tirage: {reussite})")
             await ctx.send(f"💨 **Oh non ! Le Pokémon s'est échappé de la Ball !** Retente dans 10 secondes.")
             return # On s'arrête ici, le cooldown de 10s s'applique !
 
-        # --- 🎉 SUCCESS (Si reussite == 1, 50% de chance) ---
+        # --- 🎉 SUCCESS (Si reussite != 1 ) ---
         pokemon_name = current
         pokemon_data = current_pokemon_data[guild_id]
 
