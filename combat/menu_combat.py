@@ -42,7 +42,7 @@ class SlotSelect(Select):
             max_values=1,
             options=options,
             custom_id=f"slot_{slot_number}",
-            row=slot_number - 1  # rows 0 à 4 (donc max 5 slots)
+            row=min(slot_number - 1, 3)
         )
         self.slot = slot_number
         self.parent_view = parent_view
@@ -165,7 +165,7 @@ class SelectionView(View):
         self.full_pokemon_data = full_pokemon_data
         self.chosen_adversaire = None
         self.pokemon_names = pokemons
-        self.slots = {i: "aucun" for i in range(1, 5)}
+        self.slots = {i: "aucun" for i in range(1, 7)}
 
         region = get_user_region(user_id)
         self.region = region
@@ -187,10 +187,11 @@ class SelectionView(View):
 
     def rebuild(self):
         self.clear_items()
-        for slot in range(1, 5):
-            select = SlotSelect(slot, self.pokemon_names, self)
-            # Restaure la valeur déjà choisie
-            current = self.slots.get(slot, "")
+        for slot in range(1, 7):
+            taken = {v for k, v in self.slots.items() if k != slot and v != "aucun"}
+            filtered_names = [n for n in self.pokemon_names if n not in taken]
+            select = SlotSelect(slot, filtered_names, self)
+            current = self.slots.get(slot, "aucun")
             if current and current != "aucun":
                 for opt in select.options:
                     if opt.value == current:
