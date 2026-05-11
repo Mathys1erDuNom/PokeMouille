@@ -104,7 +104,7 @@ def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
         conn.commit()
         print(f"[INFO] Pokémon {pokemon_name} enregistré pour l'utilisateur {user_id}")
     else:
-        increase_pokemon_iv(user_id, pokemon_name, 3)
+        increase_pokemon_iv(user_id, pokemon_name, 4)
         print(f"[INFO] Pokémon {pokemon_name} a eu ses IVs augmentés de 3 pour {user_id}")
 
     try:
