@@ -12,7 +12,7 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur  = conn.cursor()
-text_channel = None
+
 
 # ──────────────────────────────────────────────
 # TABLE
@@ -57,9 +57,12 @@ def remove_chenil_pokemon(user_id: str):
 # ──────────────────────────────────────────────
 # FONCTION APPELÉE PAR LA BOUCLE PRINCIPALE
 # ──────────────────────────────────────────────
+_bot = None
+_text_channel_id = None
 
 async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int = 20, threshold: int = 1):
-    global text_channel
+
+    channel = _bot.get_channel(_text_channel_id)
     """
     À appeler chaque minute depuis auto_event_loop.
 
@@ -104,14 +107,14 @@ async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int 
 
         can_evolve = add_xp(str(uid), pokemon["name"], xp_amount)
         print(f"[CHENIL] +{xp_amount} XP pour {pokemon['name']} de {uid}.")
-        await text_channel.send(f"🏠 **+{xp_amount} XP** pour **{pokemon['name']}** de <@{uid}> grâce au chenil !")
+        await channel.send(f"🏠 **+{xp_amount} XP** pour **{pokemon['name']}** de <@{uid}> grâce au chenil !")
 
         if can_evolve:
             result = evolve_pokemon(str(uid), pokemon)
             if result["success"]:
                 print(f"[CHENIL] {pokemon['name']} de {uid} a évolué en {result['evo_name']} !")
                 set_chenil_pokemon(str(uid), result["evo_name"])
-                await text_channel.send(f"🎉 **{pokemon['name']}** de <@{uid}> a évolué en **{result['evo_name']}** grâce au chenil !")
+                await channel.send(f"🎉 **{pokemon['name']}** de <@{uid}> a évolué en **{result['evo_name']}** grâce au chenil !")
             else:
                 print(f"[CHENIL] Évolution impossible : {result['reason']}")
 
@@ -120,9 +123,10 @@ async def tick_chenil_xp(members_in_vc: list, xp_counters: dict, xp_amount: int 
 # COMMANDES DISCORD
 # ──────────────────────────────────────────────
 
-def setup_chenil(bot, channel):
-    global text_channel
-    text_channel = channel 
+def setup_chenil(bot, channel_id):
+    global _bot, _text_channel_id
+    _bot = bot
+    _text_channel_id = channel_id
 
     @bot.command(name="chenil")
     async def chenil_cmd(ctx, pokemon_name: str):
