@@ -32,7 +32,7 @@ def get_adversaire_by_name(name: str, region: str):
 # ---- Slot unique par position ----
 class SlotSelect(Select):
     def __init__(self, slot_number, pokemon_names, parent_view):
-        options = [discord.SelectOption(label="(aucun)", value="")] + [
+        options = [discord.SelectOption(label="(aucun)", value="aucun")] + [
             discord.SelectOption(label=name, value=name)
             for name in pokemon_names
         ]
@@ -62,7 +62,7 @@ class ValidateButton(Button):
         # Récupère les slots remplis dans l'ordre
         unique_selected = [
             name for slot, name in sorted(self.parent_view.slots.items())
-            if name != ""
+            if name != "aucun"
         ]
 
         if len(unique_selected) == 0:
@@ -165,7 +165,7 @@ class SelectionView(View):
         self.full_pokemon_data = full_pokemon_data
         self.chosen_adversaire = None
         self.pokemon_names = pokemons
-        self.slots = {i: "" for i in range(1, 5)}
+        self.slots = {i: "aucun" for i in range(1, 5)}
 
         region = get_user_region(user_id)
         self.region = region
@@ -191,7 +191,7 @@ class SelectionView(View):
             select = SlotSelect(slot, self.pokemon_names, self)
             # Restaure la valeur déjà choisie
             current = self.slots.get(slot, "")
-            if current:
+            if current and current != "aucun":
                 for opt in select.options:
                     if opt.value == current:
                         opt.default = True
