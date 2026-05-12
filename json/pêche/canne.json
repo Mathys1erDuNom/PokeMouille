@@ -4,7 +4,7 @@
         "rarity": "Commun",
         "description": "Une baie qui à du tomber dans l'eau",
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berries/aguav-berry.png",
-        "extra": "nothing",
+        "extra": "baie",
         "price" : 0
       },
       {
@@ -12,7 +12,7 @@
         "rarity": "Commun",
         "description": "Une baie qui à du tomber dans l'eau",
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berries/apicot-berry.png",
-        "extra": "nothing",
+        "extra": "baie",
         "price" : 0
       },
       {
@@ -20,7 +20,7 @@
         "rarity": "Commun",
         "description": "Une baie qui à du tomber dans l'eau",
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berries/cheri-berry.png",
-        "extra": "nothing",
+        "extra": "baie",
         "price" : 0
       },
       {
@@ -28,7 +28,7 @@
         "rarity": "Commun",
         "description": "Une baie qui à du tomber dans l'eau",
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berries/belue-berry.png",
-        "extra": "nothing",
+        "extra": "baie",
         "price" : 0
       },
       {
@@ -36,7 +36,7 @@
         "rarity": "Commun",
         "description": "Une baie qui à du tomber dans l'eau",
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berries/durin-berry.png",
-        "extra": "nothing",
+        "extra": "baie",
         "price" : 0
       },
       {
@@ -44,7 +44,7 @@
         "rarity": "Commun",
         "description": "Une baie qui à du tomber dans l'eau",
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berries/sitrus-berry.png",
-        "extra": "nothing",
+        "extra": "baie",
         "price" : 0
       }
   ]
