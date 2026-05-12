@@ -7,7 +7,7 @@ import io
 from inventory_db import get_inventory, use_item
 from money_db import add_money, remove_money, get_balance
 
-
+from discord.ui import View, Button, Select
 
 import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
