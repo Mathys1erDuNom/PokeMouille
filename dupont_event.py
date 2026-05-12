@@ -213,7 +213,6 @@ tableau_pauvre = [
 
 
 # ─── Fonction principale ───────────────────────────────────────────────────────
-
 async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not: bool):
     tableau = tableau_riche if riche_or_not else tableau_pauvre
     if not tableau:
@@ -226,17 +225,11 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
 
     premier_texte = personnage["premier_texte"][index_premier_texte]
     texte_fin     = personnage["texte_fin"][index_texte_fin]
-    image_url     = personnage["adresse_image"]
 
-    if riche_or_not:
-        somme        = personnage["somme_prendre"]
-        label_bouton = f"💰 Prendre {somme} pièces"
-    else:
-        somme        = personnage["somme_don"]
-        label_bouton = f"🤝 Donner {somme} pièces"
+    somme        = personnage["somme_prendre"] if riche_or_not else personnage["somme_don"]
+    label_bouton = f"💰 Prendre {somme} pièces" if riche_or_not else f"🤝 Donner {somme} pièces"
 
     # ── Image ─────────────────────────────────────────────────────────────────
-  
     try:
         image_path = os.path.join(script_dir, personnage["adresse_image"])
         file = discord.File(fp=image_path, filename="personnage.png")
@@ -248,21 +241,23 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
     # ── Premier texte ─────────────────────────────────────────────────────────
     await channel.send(f"**{personnage['name']}** : {premier_texte}")
 
-    # ── Bouton ────────────────────────────────────────────────────────────────
+    # ── Vue ───────────────────────────────────────────────────────────────────
     interaction_done = asyncio.Event()
 
-    class ActionButton(Button):
-        def __init__(self):
-            super().__init__(label=label_bouton, style=discord.ButtonStyle.success)
+    # ════════════════════════════════════════════════════════════════════════
+    # CAS RICHE : un seul bouton
+    # ════════════════════════════════════════════════════════════════════════
+    if riche_or_not:
 
-  
-        async def callback(self, interaction: discord.Interaction):
-            for child in self.view.children:
-                child.disabled = True
-            await interaction.response.edit_message(view=self.view)
+        class RicheButton(Button):
+            def __init__(self):
+                super().__init__(label=label_bouton, style=discord.ButtonStyle.success)
 
-            if riche_or_not:
-                # On prend l'argent du riche → on ajoute au joueur
+            async def callback(self, interaction: discord.Interaction):
+                for child in self.view.children:
+                    child.disabled = True
+                await interaction.response.edit_message(view=self.view)
+
                 add_money(interaction.user.id, somme)
                 new_balance = get_balance(interaction.user.id)
                 await channel.send(f"**{personnage['name']}** : {texte_fin}")
@@ -270,48 +265,168 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
                     f"💰 {interaction.user.mention} a pris **{somme:,}** Croco dollars à {personnage['name']} !\n"
                     f"🐊 Nouveau solde : **{new_balance:,}** Croco dollars."
                 )
-            else:
-                # On donne au pauvre → on retire au joueur
+                interaction_done.set()
+
+        class RicheView(View):
+            def __init__(self):
+                super().__init__(timeout=600)
+                self.add_item(RicheButton())
+
+            async def on_timeout(self):
+                for child in self.children:
+                    child.disabled = True
+                if self.message:
+                    try:
+                        await self.message.edit(view=self)
+                    except Exception:
+                        pass
+
+        view = RicheView()
+        view.message = await channel.send("", view=view)
+
+    # ════════════════════════════════════════════════════════════════════════
+    # CAS PAUVRE : deux boutons → argent ou baie
+    # ════════════════════════════════════════════════════════════════════════
+    else:
+
+        class ItemSelectView(View):
+            def __init__(self, baies: list, original_interaction: discord.Interaction):
+                super().__init__(timeout=120)
+                self.original_interaction = original_interaction
+
+                options = [
+                    discord.SelectOption(
+                        label=item["name"][:100],
+                        description=f"Quantité : {item['quantity']}  •  {item['rarity']}",
+                        value=item["name"],
+                    )
+                    for item in baies[:25]
+                ]
+
+                select = Select(
+                    placeholder="Choisis une baie à donner…",
+                    options=options,
+                    min_values=1,
+                    max_values=1,
+                )
+                select.callback = self.select_callback
+                self.add_item(select)
+
+            async def select_callback(self, interaction: discord.Interaction):
+                if interaction.user.id != self.original_interaction.user.id:
+                    await interaction.response.send_message(
+                        "❌ Ce n'est pas ton interaction !", ephemeral=True
+                    )
+                    return
+
+                chosen_item = interaction.data["values"][0]
+                new_qty, _ = use_item(interaction.user.id, chosen_item, quantity=1)
+
+                if new_qty is None:
+                    await interaction.response.send_message(
+                        f"❌ Tu ne possèdes pas **{chosen_item}** dans ton inventaire.",
+                        ephemeral=True,
+                    )
+                    return
+
+                for child in self.children:
+                    child.disabled = True
+                await interaction.response.edit_message(view=self)
+
+                await channel.send(f"**{personnage['name']}** : {texte_fin}")
+                await channel.send(
+                    f"🫐 {interaction.user.mention} a donné **{chosen_item}** à {personnage['name']} !\n"
+                    f"📦 Quantité restante : **{new_qty}**."
+                )
+                interaction_done.set()
+
+            async def on_timeout(self):
+                for child in self.children:
+                    child.disabled = True
+
+        class PauvreView(View):
+            def __init__(self):
+                super().__init__(timeout=600)
+
+                btn_argent = Button(
+                    label=label_bouton,
+                    style=discord.ButtonStyle.success,
+                    custom_id="btn_argent",
+                )
+                btn_argent.callback = self.argent_callback
+                self.add_item(btn_argent)
+
+                btn_item = Button(
+                    label="🫐 Donner une baie",
+                    style=discord.ButtonStyle.primary,
+                    custom_id="btn_item",
+                )
+                btn_item.callback = self.item_callback
+                self.add_item(btn_item)
+
+            def _disable_all(self):
+                for child in self.children:
+                    child.disabled = True
+
+            async def argent_callback(self, interaction: discord.Interaction):
+                self._disable_all()
+                await interaction.response.edit_message(view=self)
+
                 success = remove_money(interaction.user.id, somme)
                 if not success:
                     balance = get_balance(interaction.user.id)
                     await channel.send(
-                        f"❌ {interaction.user.mention} tu n'as pas assez de Croco dollars pour faire ce don !\n"
+                        f"❌ {interaction.user.mention} tu n'as pas assez de Croco dollars !\n"
                         f"🐊 Solde actuel : **{balance:,}** Croco dollars."
                     )
                     interaction_done.set()
                     return
+
                 new_balance = get_balance(interaction.user.id)
                 await channel.send(f"**{personnage['name']}** : {texte_fin}")
                 await channel.send(
                     f"🤝 {interaction.user.mention} a donné **{somme:,}** Croco dollars à {personnage['name']} !\n"
                     f"🐊 Nouveau solde : **{new_balance:,}** Croco dollars."
                 )
+                interaction_done.set()
 
-            interaction_done.set()    
-        
+            async def item_callback(self, interaction: discord.Interaction):
+                # Filtre uniquement les items dont le nom commence par "Baie"
+                all_items = get_inventory(interaction.user.id)
+                baies = [item for item in all_items if item["name"].startswith("Baie")]
 
+                if not baies:
+                    await interaction.response.send_message(
+                        "❌ Tu n'as aucune baie à donner… Mais tu peux toujours faire un don en Croco dollars ! 🐊",
+                        ephemeral=True,
+                    )
+                    return  # Les boutons restent actifs
 
+                self._disable_all()
+                await interaction.response.edit_message(view=self)
 
+                item_view = ItemSelectView(baies, interaction)
+                await channel.send(
+                    f"🫐 {interaction.user.mention}, choisis la baie que tu veux donner à **{personnage['name']}** :",
+                    view=item_view,
+                )
 
+                await item_view.wait()
+                if not interaction_done.is_set():
+                    await channel.send(f"⏰ Temps écoulé, {interaction.user.mention} n'a rien donné.")
+                    interaction_done.set()
 
-    class ActionView(View):
-        def __init__(self):
-            #le bouton expire au bout de 10 min
-            super().__init__(timeout=600)
-            self.add_item(ActionButton())
+            async def on_timeout(self):
+                self._disable_all()
+                if self.message:
+                    try:
+                        await self.message.edit(view=self)
+                    except Exception:
+                        pass
 
-        async def on_timeout(self):
-            for child in self.children:
-                child.disabled = True
-            if self.message:
-                try:
-                    await self.message.edit(view=self)
-                except Exception:
-                    pass
+        view = PauvreView()
+        view.message = await channel.send("", view=view)
 
-    view = ActionView()
-    view.message = await channel.send("", view=view)
     await interaction_done.wait()
 
 
@@ -321,16 +436,10 @@ def setup_dupont_command(bot, authorized_user_id=None):
 
     @bot.command(name="event_dupont")
     async def event_dupont(ctx, type_event: str = None):
-        """
-        Lance un event Dupont manuellement.
-        Usage : !event_dupont riche   →  personnage riche
-                !event_dupont pauvre  →  personnage pauvre
-                !event_dupont         →  choix aléatoire
-        """
         if authorized_user_id is not None and ctx.author.id != authorized_user_id:
             await ctx.send("⛔ Tu n'as pas la permission d'utiliser cette commande.")
             return
-        #Pour choisir quand c'est aléatoire
+
         if type_event is None:
             riche_or_not = False
         elif type_event.lower() == "riche":
@@ -338,10 +447,9 @@ def setup_dupont_command(bot, authorized_user_id=None):
         elif type_event.lower() == "pauvre":
             riche_or_not = False
         else:
-            await ctx.send("❌ Argument invalide. Utilise `riche`, `pauvre`, ou laisse vide pour un choix aléatoire.")
+            await ctx.send("❌ Argument invalide. Utilise `riche`, `pauvre`, ou laisse vide.")
             return
 
         await run_interaction_personnage(ctx.channel, riche_or_not)
 
-    # Expose run_interaction_personnage pour l'appeler depuis le main
     bot.run_interaction_personnage = run_interaction_personnage
