@@ -1101,7 +1101,7 @@ async def tempspawn(ctx):
 async def on_ready():
     print(f"Bot prêt en tant que {bot.user}")
     check_voice_channel.start()
-    await check_voice_channel()  # ← premier appel immédiat
+    await check_voice_channel.coro()  # ← correct pour discord.py
 
 @bot.event
 async def on_message(message):
