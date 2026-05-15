@@ -586,6 +586,9 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
 ####################################################################################################################        
 
 
+## Intervalle spawn MP
+MIN_SPAWN = 14400
+MAX_SPAWN = 18000
 
 @tasks.loop(seconds=120)
 async def check_voice_channel():
@@ -603,7 +606,7 @@ async def check_voice_channel():
         # Lance une tâche individuelle pour chaque membre qui n'en a pas encore
         for member in members_in_vc:
             if member.id not in dm_spawn_tasks or dm_spawn_tasks[member.id] is None or dm_spawn_tasks[member.id].done():
-                wait_time = random.randint(300, 600)  
+                wait_time = random.randint(MIN_SPAWN, MAX_SPAWN) #### Premier spawn
                 minutes, seconds = divmod(wait_time, 60)
                 print(f"[INFO] Spawn DM prévu pour {member.display_name} dans {minutes} min {seconds} sec.")
                 dm_spawn_tasks[member.id] = asyncio.create_task(
@@ -646,14 +649,14 @@ async def wait_and_spawn_dm(wait_time, channel, member: discord.Member):
                 print(f"[INFO] {member.display_name} a quitté le vocal, spawn DM annulé.")
                 return
 
-        # Spawn dans les DM du membre
+        # Spawn dans les DM du membre, shiny rate = 1/32
         await spawn_pokemon(channel=channel, dm_user=member, shiny_rate=32)
         print(f"[INFO] Pokémon spawné en DM pour {member.display_name}.")
 
         # Relance automatiquement un nouveau compteur
         vc = bot.get_channel(VOICE_CHANNEL_ID)
         if vc and member in vc.members:
-            new_wait = random.randint(1800, 2400)
+            new_wait = random.randint(MIN_SPAWN, MAX_SPAWN) ###Spawn MP boucle après
             minutes, seconds = divmod(new_wait, 60)
             print(f"[INFO] Prochain spawn DM pour {member.display_name} dans {minutes} min {seconds} sec.")
             dm_spawn_tasks[member.id] = asyncio.create_task(
