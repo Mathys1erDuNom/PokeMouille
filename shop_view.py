@@ -17,7 +17,13 @@ images_json_path = os.path.join(script_dir, "json", "images.json")
 with open(item_json_path, "r", encoding="utf-8") as f:
     ITEM_LIST = json.load(f)
 
-
+# Chargement du fichier images.json pour les URLs des images de fond
+try:
+    with open(images_json_path, "r", encoding="utf-8") as f:
+        IMAGES_DATA = json.load(f)
+except Exception as e:
+    print(f"[SHOP] Erreur lors du chargement de images.json : {e}")
+    IMAGES_DATA = {}
 
 
 class ShopView(View):
