@@ -587,8 +587,8 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
 
 
 ## Intervalle spawn MP
-MIN_SPAWN = 14400
-MAX_SPAWN = 18000
+MIN_SPAWN = 30#14400
+MAX_SPAWN = 60#18000
 
 @tasks.loop(seconds=120)
 async def check_voice_channel():
@@ -686,7 +686,7 @@ async def wait_and_spawn_dm(wait_time, channel, member: discord.Member):
         dm_spawn_remaining_time.pop(member.id, None)
 
 
-        
+
 
 @bot.command(name="shutdown")
 @is_croco()
