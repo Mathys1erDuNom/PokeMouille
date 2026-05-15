@@ -616,6 +616,12 @@ async def check_voice_channel():
                 task.cancel()
                 print(f"[INFO] Tâche DM annulée pour le membre {member_id} (vocal vide).")
             dm_spawn_tasks[member_id] = None
+    # ← AJOUTE ICI
+    @check_voice_channel.before_loop
+    async def before_check_voice():
+        await bot.wait_until_ready()
+
+      
 
 async def wait_and_spawn_dm(wait_time, channel, member: discord.Member):
     try:
