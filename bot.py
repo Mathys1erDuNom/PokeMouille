@@ -609,6 +609,17 @@ async def check_voice_channel():
                 wait_time = random.randint(MIN_SPAWN, MAX_SPAWN) #### Premier spawn
                 minutes, seconds = divmod(wait_time, 60)
                 print(f"[INFO] Spawn DM prévu pour {member.display_name} dans {minutes} min {seconds} sec.")
+                ###
+
+                hours, remainder = divmod(wait_time, 3600)
+                minutes, seconds = divmod(remainder, 60)
+
+                if hours > 0:
+                    print(f"[INFO] Spawn DM prévu pour {member.display_name} dans {hours}h {minutes} min {seconds} sec.")
+                else:
+                    print(f"[INFO] Spawn DM prévu pour {member.display_name} dans {minutes} min {seconds} sec.")
+
+                ##
                 dm_spawn_tasks[member.id] = asyncio.create_task(
                     wait_and_spawn_dm(wait_time, channel, member)
                 )
