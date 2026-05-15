@@ -1391,10 +1391,6 @@ async def auto_event_loop():
 
 
  
-@bot.event
-async def on_ready():
-    print(f"[BOT] Connecté en tant que {bot.user} ({bot.user.id})")
-    asyncio.ensure_future(auto_event_loop())
 
 
 @bot.command()
