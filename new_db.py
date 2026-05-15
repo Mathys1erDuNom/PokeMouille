@@ -38,25 +38,7 @@ CREATE TABLE IF NOT EXISTS new_captures (
 conn.commit()
 
 
-# ──────────────────────────────────────────────
-# MIGRATION : ajoute les colonnes si elles n'existent pas encore
-# ──────────────────────────────────────────────
-for column, definition in [
-    ("current_xp", "INT DEFAULT 0"),
-    ("xp_evo",     "INT DEFAULT 0"),
-    ("evo",        "JSONB DEFAULT '{\"name\": \"pas evo\", \"file\": \"pas evo\"}'::jsonb"),
-]:
-    cur.execute("""
-        SELECT column_name FROM information_schema.columns
-        WHERE table_name = 'new_captures' AND column_name = %s
-    """, (column,))
-    if not cur.fetchone():
-        cur.execute(f"ALTER TABLE new_captures ADD COLUMN {column} {definition}")
-        print(f"[MIGRATION] Colonne '{column}' ajoutée.")
-    else:
-        print(f"[MIGRATION] Colonne '{column}' déjà présente, rien à faire.")
 
-conn.commit()
 
 
 # ──────────────────────────────────────────────
