@@ -589,6 +589,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
 
 @tasks.loop(seconds=120)
 async def check_voice_channel():
+    print(f"[DEBUG] check_voice_channel exécutée")  # ← à ajouter temporairement
     bot.last_check_voice_time = time.time()
     vc = bot.get_channel(VOICE_CHANNEL_ID)
     channel = bot.get_channel(TEXT_CHANNEL_ID)
@@ -1101,7 +1102,7 @@ async def tempspawn(ctx):
 async def on_ready():
     print(f"Bot prêt en tant que {bot.user}")
     check_voice_channel.start()
-    await check_voice_channel.coro()  # ← correct pour discord.py
+    bot.loop.create_task(check_voice_channel())  # ← appel immédiat fiable
 
 @bot.event
 async def on_message(message):
