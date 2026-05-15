@@ -608,7 +608,6 @@ async def check_voice_channel():
             if member.id not in dm_spawn_tasks or dm_spawn_tasks[member.id] is None or dm_spawn_tasks[member.id].done():
                 wait_time = random.randint(MIN_SPAWN, MAX_SPAWN) #### Premier spawn
                 minutes, seconds = divmod(wait_time, 60)
-                print(f"[INFO] Spawn DM prévu pour {member.display_name} dans {minutes} min {seconds} sec.")
                 ###
 
                 hours, remainder = divmod(wait_time, 3600)
@@ -636,23 +635,22 @@ async def check_voice_channel():
         await bot.wait_until_ready()
 
       
-
 async def wait_and_spawn_dm(wait_time, channel, member: discord.Member):
     try:
-        # Initialise le temps restant dès le lancement
         dm_spawn_remaining_time[member.id] = wait_time
 
         for remaining in range(wait_time, 0, -1):
             await asyncio.sleep(1)
-
-            # Met à jour le temps restant chaque seconde
             dm_spawn_remaining_time[member.id] = remaining - 1
+
             # Print toutes les 60 secondes
             if remaining % 60 == 0 and remaining > 0:
-                minutes, seconds = divmod(remaining, 60)
-                print(f"[DM SPAWN] {member.display_name} — spawn dans {minutes} min {seconds} sec.")
-
-            
+                hours, remainder = divmod(remaining, 3600)
+                minutes, seconds = divmod(remainder, 60)
+                if hours > 0:
+                    print(f"[DM SPAWN] {member.display_name} — spawn dans {hours}h {minutes} min {seconds} sec.")
+                else:
+                    print(f"[DM SPAWN] {member.display_name} — spawn dans {minutes} min {seconds} sec.")
 
             # Si le membre a quitté le vocal entre-temps, on arrête
             vc = bot.get_channel(VOICE_CHANNEL_ID)
@@ -667,9 +665,13 @@ async def wait_and_spawn_dm(wait_time, channel, member: discord.Member):
         # Relance automatiquement un nouveau compteur
         vc = bot.get_channel(VOICE_CHANNEL_ID)
         if vc and member in vc.members:
-            new_wait = random.randint(MIN_SPAWN, MAX_SPAWN) ###Spawn MP boucle après
-            minutes, seconds = divmod(new_wait, 60)
-            print(f"[INFO] Prochain spawn DM pour {member.display_name} dans {minutes} min {seconds} sec.")
+            new_wait = random.randint(MIN_SPAWN, MAX_SPAWN)
+            hours, remainder = divmod(new_wait, 3600)
+            minutes, seconds = divmod(remainder, 60)
+            if hours > 0:
+                print(f"[INFO] Prochain spawn DM pour {member.display_name} dans {hours}h {minutes} min {seconds} sec.")
+            else:
+                print(f"[INFO] Prochain spawn DM pour {member.display_name} dans {minutes} min {seconds} sec.")
             dm_spawn_tasks[member.id] = asyncio.create_task(
                 wait_and_spawn_dm(new_wait, channel, member)
             )
@@ -681,10 +683,10 @@ async def wait_and_spawn_dm(wait_time, channel, member: discord.Member):
     except Exception as e:
         print(f"[ERREUR wait_and_spawn_dm] {e}")
     finally:
-        # Nettoyage du temps restant dans tous les cas
         dm_spawn_remaining_time.pop(member.id, None)
-        
 
+
+        
 
 @bot.command(name="shutdown")
 @is_croco()
