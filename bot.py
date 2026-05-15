@@ -1098,11 +1098,17 @@ async def tempspawn(ctx):
     await ctx.send(embed=embed)
 
 
+
+@check_voice_channel.before_loop
+async def before_check_voice():
+    await bot.wait_until_ready()
+
 @bot.event
 async def on_ready():
-    print(f"Bot prêt en tant que {bot.user}")
-    check_voice_channel.start()
-    bot.loop.create_task(check_voice_channel())  # ← appel immédiat fiable
+    print(f"[BOT] Connecté en tant que {bot.user} ({bot.user.id})")
+    asyncio.ensure_future(auto_event_loop())
+    if not check_voice_channel.is_running():
+        check_voice_channel.start()
 
 @bot.event
 async def on_message(message):
