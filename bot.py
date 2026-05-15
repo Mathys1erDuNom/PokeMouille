@@ -1101,7 +1101,6 @@ async def tempspawn(ctx):
 async def on_ready():
     print(f"Bot prêt en tant que {bot.user}")
     check_voice_channel.start()
-    await check_voice_channel.coro()
 
 @bot.event
 async def on_message(message):
