@@ -61,7 +61,7 @@ import discord
 from discord.ext import commands
 import os, random, json
 from utils import is_croco
-from new_db_avantmodif import save_new_capture  # ou save_capture selon ton usage
+from new_db import save_new_capture  # ou save_capture selon ton usage
 
 import stat  # pour les stats
 
