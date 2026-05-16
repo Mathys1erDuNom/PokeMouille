@@ -68,7 +68,7 @@
             "speed": 80
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 525,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -82,7 +82,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/155.png",
         "attacks": [
             "Coupe",
-            "Coup dBoule"
+            "Coup dBoule",
+            "Poing Feu"
         ],
         "stats": {
             "hp": 39,
@@ -93,7 +94,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 309,
         "evo": {
             "name": "Feurisson",
             "file": "pokemon_gen2_normal.json"
@@ -107,7 +108,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/156.png",
         "attacks": [
             "Coupe",
-            "Coup dBoule"
+            "Coup dBoule",
+            "Poing Feu"
         ],
         "stats": {
             "hp": 58,
@@ -144,7 +146,7 @@
             "speed": 100
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 534,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -220,7 +222,7 @@
             "speed": 78
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 530,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -268,7 +270,7 @@
             "speed": 90
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 415,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -320,7 +322,7 @@
             "speed": 70
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 452,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -373,7 +375,7 @@
             "speed": 85
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 390,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -452,7 +454,7 @@
             "speed": 130
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 535,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -478,7 +480,7 @@
             "speed": 67
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 330,
         "evo": {
             "name": "Lanturn",
             "file": "pokemon_gen2_normal.json"
@@ -505,7 +507,7 @@
             "speed": 67
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 460,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -556,7 +558,7 @@
             "speed": 15
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 218,
         "evo": {
             "name": "Melofee",
             "file": "pokemon_gen1_normal.json"
@@ -632,7 +634,7 @@
             "speed": 40
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 405,
         "evo": {
             "name": "Togekiss",
             "file": "pokemon_gen4_normal.json"
@@ -683,7 +685,7 @@
             "speed": 95
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 470,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -708,7 +710,7 @@
             "speed": 35
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 280,
         "evo": {
             "name": "Lainergie",
             "file": "pokemon_gen2_normal.json"
@@ -733,7 +735,7 @@
             "speed": 45
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 365,
         "evo": {
             "name": "Pharamp",
             "file": "pokemon_gen2_normal.json"
@@ -758,7 +760,7 @@
             "speed": 55
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 510,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -782,7 +784,7 @@
             "speed": 50
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 490,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -837,7 +839,7 @@
             "speed": 50
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 420,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -862,7 +864,7 @@
             "speed": 30
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 410,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -888,7 +890,7 @@
             "speed": 70
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 500,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -902,7 +904,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/187.png",
         "attacks": [
-            "Coup dBoule"
+            "Coup dBoule",
+            "Canon Graine"
         ],
         "stats": {
             "hp": 35,
@@ -928,7 +931,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/188.png",
         "attacks": [
             "Coup dBoule",
-            "Charge"
+            "Charge",
+            "Canon Graine"
         ],
         "stats": {
             "hp": 55,
@@ -939,7 +943,7 @@
             "speed": 80
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 340,
         "evo": {
             "name": "Cotovol",
             "file": "pokemon_gen2_normal.json"
@@ -954,7 +958,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/189.png",
         "attacks": [
             "Coup dBoule",
-            "Charge"
+            "Charge",
+            "Canon Graine"
         ],
         "stats": {
             "hp": 75,
@@ -965,7 +970,7 @@
             "speed": 110
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 460,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -990,7 +995,7 @@
             "speed": 85
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 360,
         "evo": {
             "name": "Capidextre",
             "file": "pokemon_gen4_normal.json"
@@ -1004,7 +1009,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/191.png",
         "attacks": [
             "Coupe",
-            "Charge"
+            "Charge",
+            "Canon Graine"
         ],
         "stats": {
             "hp": 30,
@@ -1015,7 +1021,7 @@
             "speed": 30
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 180,
         "evo": {
             "name": "Heliatronc",
             "file": "pokemon_gen2_normal.json"
@@ -1028,7 +1034,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/192.png",
         "attacks": [
-            "EcraseFace"
+            "EcraseFace",
+            "Canon Graine"
         ],
         "stats": {
             "hp": 75,
@@ -1039,7 +1046,7 @@
             "speed": 30
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 425,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1065,7 +1072,7 @@
             "speed": 95
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 390,
         "evo": {
             "name": "Yanmega",
             "file": "pokemon_gen4_normal.json"
@@ -1091,7 +1098,7 @@
             "speed": 15
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 210,
         "evo": {
             "name": "Maraiste",
             "file": "pokemon_gen2_normal.json"
@@ -1107,7 +1114,8 @@
         "attacks": [
             "Ultimapoing",
             "Poing Glace",
-            "Souplesse"
+            "Souplesse",
+            "Pistolet a O"
         ],
         "stats": {
             "hp": 95,
@@ -1118,7 +1126,7 @@
             "speed": 35
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 430,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1143,7 +1151,7 @@
             "speed": 110
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 525,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1168,7 +1176,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 525,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1195,7 +1203,7 @@
             "speed": 91
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 405,
         "evo": {
             "name": "Corboss",
             "file": "pokemon_gen4_normal.json"
@@ -1246,7 +1254,7 @@
             "speed": 85
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 435,
         "evo": {
             "name": "Magirêve",
             "file": "pokemon_gen4_normal.json"
@@ -1270,7 +1278,7 @@
             "speed": 48
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 336,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1295,7 +1303,7 @@
             "speed": 33
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 405,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1322,7 +1330,7 @@
             "speed": 85
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 455,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1348,7 +1356,7 @@
             "speed": 15
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 290,
         "evo": {
             "name": "Foretress",
             "file": "pokemon_gen2_normal.json"
@@ -1375,7 +1383,7 @@
             "speed": 40
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 465,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1400,7 +1408,7 @@
             "speed": 45
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 415,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1454,7 +1462,7 @@
             "speed": 30
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 510,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1479,7 +1487,7 @@
             "speed": 30
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 300,
         "evo": {
             "name": "Granbull",
             "file": "pokemon_gen2_normal.json"
@@ -1504,7 +1512,7 @@
             "speed": 45
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 450,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1530,7 +1538,7 @@
             "speed": 85
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 440,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1556,7 +1564,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 500,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1638,7 +1646,7 @@
             "speed": 115
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 430,
         "evo": {
             "name": "Dimoret",
             "file": "pokemon_gen4_normal.json"
@@ -1689,7 +1697,7 @@
             "speed": 55
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 500,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1714,7 +1722,7 @@
             "speed": 20
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 250,
         "evo": {
             "name": "Volcaropod",
             "file": "pokemon_gen2_normal.json"
@@ -1740,7 +1748,7 @@
             "speed": 30
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 430,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1767,7 +1775,7 @@
             "speed": 50
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 250,
         "evo": {
             "name": "Cochignon",
             "file": "pokemon_gen2_normal.json"
@@ -1795,7 +1803,7 @@
             "speed": 50
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 450,
         "evo": {
             "name": "Mammochon",
             "file": "pokemon_gen4_normal.json"
@@ -1823,7 +1831,7 @@
             "speed": 35
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 410,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1848,7 +1856,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 300,
         "evo": {
             "name": "Octillery",
             "file": "pokemon_gen2_normal.json"
@@ -1872,7 +1880,7 @@
             "speed": 45
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 405,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1898,7 +1906,7 @@
             "speed": 75
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 330,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1925,7 +1933,7 @@
             "speed": 70
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 485,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1940,7 +1948,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/227.png",
         "attacks": [
             "Coupe",
-            "Cru-Ailes"
+            "Cru-Ailes",
+            "Griffe Acier"
         ],
         "stats": {
             "hp": 65,
@@ -1951,7 +1960,7 @@
             "speed": 70
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 465,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1978,7 +1987,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 330,
         "evo": {
             "name": "Demolosse",
             "file": "pokemon_gen2_normal.json"
@@ -2005,7 +2014,7 @@
             "speed": 95
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 500,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2031,7 +2040,7 @@
             "speed": 85
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 540,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2083,7 +2092,7 @@
             "speed": 50
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 500,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2109,7 +2118,7 @@
             "speed": 60
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 515,
         "evo": {
             "name": "Porygon-Z",
             "file": "pokemon_gen4_normal.json"
@@ -2135,7 +2144,7 @@
             "speed": 85
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 465,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2159,7 +2168,7 @@
             "speed": 75
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 250,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2185,7 +2194,7 @@
             "speed": 35
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 210,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2211,7 +2220,7 @@
             "speed": 70
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 455,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2238,7 +2247,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 305,
         "evo": {
             "name": "Lippoutou",
             "file": "pokemon_gen1_normal.json"
@@ -2313,7 +2322,7 @@
             "speed": 100
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 490,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2339,7 +2348,7 @@
             "speed": 55
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 540,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2366,7 +2375,7 @@
             "speed": 115
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 580,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2393,7 +2402,7 @@
             "speed": 100
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 580,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2420,7 +2429,7 @@
             "speed": 85
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 580,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2474,7 +2483,7 @@
             "speed": 51
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 410,
         "evo": {
             "name": "Tyranocif",
             "file": "pokemon_gen2_normal.json"
@@ -2502,7 +2511,7 @@
             "speed": 61
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 600,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2530,7 +2539,7 @@
             "speed": 110
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 680,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2558,7 +2567,7 @@
             "speed": 90
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 680,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2586,7 +2595,7 @@
             "speed": 100
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 600,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"

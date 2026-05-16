@@ -9,7 +9,8 @@
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
-            "Poing Éclair"
+            "Poing Éclair",
+            "Psyko"
         ],
         "stats": {
             "hp": 100,
@@ -20,7 +21,7 @@
             "speed": 100
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 600,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -33,9 +34,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/495.png",
         "attacks": [
-            "Danse Lames",
             "Coupe",
-            "Étreinte"
+            "Etreinte",
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 45,
@@ -59,9 +60,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/496.png",
         "attacks": [
-            "Danse Lames",
+            "Fouet Lianes",
             "Coupe",
-            "Étreinte"
+            "Etreinte"
         ],
         "stats": {
             "hp": 60,
@@ -85,9 +86,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/497.png",
         "attacks": [
-            "Danse Lames",
+            "Fouet Lianes",
             "Coupe",
-            "Étreinte"
+            "Etreinte",
+            "Tempete Verte"
         ],
         "stats": {
             "hp": 75,
@@ -98,7 +100,7 @@
             "speed": 113
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 528,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -167,7 +169,8 @@
         "attacks": [
             "Poing Feu",
             "Poing Éclair",
-            "Charge"
+            "Charge",
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 110,
@@ -178,7 +181,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 528,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -191,7 +194,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/501.png",
         "attacks": [
-            "Danse Lames",
+            "Pistolet à O",
             "Coupe",
             "Charge"
         ],
@@ -217,7 +220,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/502.png",
         "attacks": [
-            "Danse Lames",
+            "Pistolet à O",
             "Coupe",
             "Charge"
         ],
@@ -243,9 +246,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/503.png",
         "attacks": [
-            "Danse Lames",
+            "Pistolet à O",
             "Coupe",
-            "Charge"
+            "Charge",
+            "Surf"
         ],
         "stats": {
             "hp": 95,
@@ -256,7 +260,7 @@
             "speed": 70
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 528,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -269,7 +273,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/504.png",
         "attacks": [
-            "Danse Lames",
             "Coupe",
             "Souplesse"
         ],
@@ -295,9 +298,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/505.png",
         "attacks": [
-            "Poing Feu",
-            "Poing Glace",
-            "Poing Éclair"
+            "Coupe",
+            "Souplesse"
         ],
         "stats": {
             "hp": 60,
@@ -308,7 +310,7 @@
             "speed": 77
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 420,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -321,9 +323,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/506.png",
         "attacks": [
-            "Jet de Sable",
+    
             "Charge",
-            "Bélier"
+            "Belier"
         ],
         "stats": {
             "hp": 45,
@@ -348,8 +350,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/507.png",
         "attacks": [
             "Charge",
-            "Bélier",
-            "Groz’Yeux"
+            "Belier"
         ],
         "stats": {
             "hp": 65,
@@ -374,8 +375,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/508.png",
         "attacks": [
             "Charge",
-            "Bélier",
-            "Groz’Yeux"
+            "Belier"
         ],
         "stats": {
             "hp": 85,
@@ -386,7 +386,7 @@
             "speed": 80
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 500,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -438,7 +438,7 @@
             "speed": 106
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 446,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -477,9 +477,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/512.png",
         "attacks": [
+            "Griffe",
             "Coupe",
-            "Groz’Yeux",
-            "Ultralaser"
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 75,
@@ -490,7 +490,7 @@
             "speed": 101
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 498,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -531,7 +531,7 @@
         "attacks": [
             "Poing Feu",
             "Coupe",
-            "Groz’Yeux"
+            "Griffe"
         ],
         "stats": {
             "hp": 75,
@@ -542,7 +542,7 @@
             "speed": 101
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 498,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -557,7 +557,8 @@
         "attacks": [
             "Poing Glace",
             "Griffe",
-            "Coupe"
+            "Coupe",
+            "Pistolet à O"
         ],
         "stats": {
             "hp": 50,
@@ -583,7 +584,7 @@
         "attacks": [
             "Poing Glace",
             "Coupe",
-            "Groz’Yeux"
+            "Pistolet à O"
         ],
         "stats": {
             "hp": 75,
@@ -594,7 +595,7 @@
             "speed": 101
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 498,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -607,9 +608,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/517.png",
         "attacks": [
-            "Sonic Boom",
-            "Rafale Psy",
-            "Cage Éclair"
+           
+            "Rafale Psy"
+  
         ],
         "stats": {
             "hp": 76,
@@ -620,7 +621,7 @@
             "speed": 24
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 292,
         "evo": {
             "name": "Mushana",
             "file": "pokemon_gen5_normal.json"
@@ -633,9 +634,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/518.png",
         "attacks": [
-            "Rafale Psy",
-            "Ultralaser",
-            "Cage Éclair"
+            "Rafale Psy"
         ],
         "stats": {
             "hp": 116,
@@ -646,7 +645,7 @@
             "speed": 29
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 487,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -662,7 +661,7 @@
         "attacks": [
             "Coupe-Vent",
             "Tornade",
-            "Vol"
+            "Charge"
         ],
         "stats": {
             "hp": 50,
@@ -689,7 +688,7 @@
         "attacks": [
             "Coupe-Vent",
             "Tornade",
-            "Vol"
+            "Cru-Ailes"
         ],
         "stats": {
             "hp": 62,
@@ -716,7 +715,7 @@
         "attacks": [
             "Coupe-Vent",
             "Tornade",
-            "Vol"
+            "Cru-Ailes"
         ],
         "stats": {
             "hp": 80,
@@ -727,7 +726,7 @@
             "speed": 93
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 488,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -742,7 +741,7 @@
         "attacks": [
             "Écrasement",
             "Double Pied",
-            "Jet de Sable"
+            "Tonnerre"
         ],
         "stats": {
             "hp": 45,
@@ -768,7 +767,7 @@
         "attacks": [
             "Écrasement",
             "Double Pied",
-            "Jet de Sable"
+            "Tonnerre"
         ],
         "stats": {
             "hp": 75,
@@ -779,7 +778,7 @@
             "speed": 116
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 497,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -792,7 +791,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/524.png",
         "attacks": [
-            "Jet de Sable",
+        
+            "Jet de Pierre",
             "Coup d’Boule",
             "Charge"
         ],
@@ -818,7 +818,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/525.png",
         "attacks": [
-            "Jet de Sable",
+            "Jet de Pierre",
             "Coup d’Boule",
             "Charge"
         ],
@@ -844,7 +844,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/526.png",
         "attacks": [
-            "Jet de Sable",
+            "Jet de Pierre",
             "Coup d’Boule",
             "Charge"
         ],
@@ -857,7 +857,7 @@
             "speed": 25
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 515,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -872,8 +872,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/527.png",
         "attacks": [
             "Tornade",
-            "Vol",
-            "Ultrason"
+            "Rafale Psy"
+            
         ],
         "stats": {
             "hp": 65,
@@ -899,8 +899,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/528.png",
         "attacks": [
             "Tornade",
-            "Vol",
-            "Ultralaser"
+            "Rafale Psy"
         ],
         "stats": {
             "hp": 67,
@@ -911,7 +910,7 @@
             "speed": 114
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 425,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -925,8 +924,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/529.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
-            "Coupe"
+            "Coupe",
+            "Seisme"
         ],
         "stats": {
             "hp": 60,
@@ -952,8 +951,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
-            "Coupe"
+            "Seisme",
+            "Coupe",
+            "Griffe Acier"
         ],
         "stats": {
             "hp": 110,
@@ -964,7 +964,7 @@
             "speed": 88
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 508,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -990,7 +990,7 @@
             "speed": 50
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 445,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1068,7 +1068,7 @@
             "speed": 45
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 505,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1148,7 +1148,7 @@
             "speed": 74
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 509,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1174,7 +1174,7 @@
             "speed": 45
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 465,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1200,7 +1200,7 @@
             "speed": 85
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 465,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1281,7 +1281,7 @@
             "speed": 92
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 500,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1362,7 +1362,7 @@
             "speed": 112
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 485,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1416,7 +1416,7 @@
             "speed": 116
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 480,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1468,7 +1468,7 @@
             "speed": 90
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 480,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1494,7 +1494,7 @@
             "speed": 98
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 460,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1575,7 +1575,7 @@
             "speed": 92
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 519,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1627,7 +1627,7 @@
             "speed": 95
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 480,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1653,7 +1653,7 @@
             "speed": 60
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 461,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1680,7 +1680,7 @@
             "speed": 55
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 325,
         "evo": {
             "name": "Crabaraque",
             "file": "pokemon_gen5_normal.json"
@@ -1707,7 +1707,7 @@
             "speed": 45
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 485,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1761,7 +1761,7 @@
             "speed": 58
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 488,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1788,7 +1788,7 @@
             "speed": 97
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 490,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1840,7 +1840,7 @@
             "speed": 30
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 483,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1867,7 +1867,7 @@
             "speed": 22
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 355,
         "evo": {
             "name": "Mégapagos",
             "file": "pokemon_gen5_normal.json"
@@ -1894,7 +1894,7 @@
             "speed": 32
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 495,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1921,7 +1921,7 @@
             "speed": 70
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 401,
         "evo": {
             "name": "Aéroptéryx",
             "file": "pokemon_gen5_normal.json"
@@ -1948,7 +1948,7 @@
             "speed": 110
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 567,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -1974,7 +1974,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 329,
         "evo": {
             "name": "Miasmax",
             "file": "pokemon_gen5_normal.json"
@@ -2000,7 +2000,7 @@
             "speed": 75
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 474,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2052,7 +2052,7 @@
             "speed": 105
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 510,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2078,7 +2078,7 @@
             "speed": 75
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 300,
         "evo": {
             "name": "Pashmilla",
             "file": "pokemon_gen5_normal.json"
@@ -2104,7 +2104,7 @@
             "speed": 115
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 470,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2182,7 +2182,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 490,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2260,7 +2260,7 @@
             "speed": 30
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 490,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2287,7 +2287,7 @@
             "speed": 55
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 305,
         "evo": {
             "name": "Lakmécygne",
             "file": "pokemon_gen5_normal.json"
@@ -2314,7 +2314,7 @@
             "speed": 98
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 473,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2392,7 +2392,7 @@
             "speed": 79
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 535,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2446,7 +2446,7 @@
             "speed": 95
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 475,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2473,7 +2473,7 @@
             "speed": 103
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 428,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2526,7 +2526,7 @@
             "speed": 20
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 495,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2553,7 +2553,7 @@
             "speed": 15
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 294,
         "evo": {
             "name": "Gaulet",
             "file": "pokemon_gen5_normal.json"
@@ -2580,7 +2580,7 @@
             "speed": 30
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 464,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2607,7 +2607,7 @@
             "speed": 40
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 335,
         "evo": {
             "name": "Moyade",
             "file": "pokemon_gen5_normal.json"
@@ -2634,7 +2634,7 @@
             "speed": 60
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 480,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2660,7 +2660,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 470,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2714,7 +2714,7 @@
             "speed": 108
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 472,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2768,7 +2768,7 @@
             "speed": 20
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 489,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2846,7 +2846,7 @@
             "speed": 90
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 520,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2924,7 +2924,7 @@
             "speed": 50
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 515,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -2976,7 +2976,7 @@
             "speed": 40
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 485,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3057,7 +3057,7 @@
             "speed": 80
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 520,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3135,7 +3135,7 @@
             "speed": 97
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 540,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3187,7 +3187,7 @@
             "speed": 50
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 505,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3213,7 +3213,7 @@
             "speed": 105
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 515,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3265,7 +3265,7 @@
             "speed": 145
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 495,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3292,7 +3292,7 @@
             "speed": 32
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 471,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3344,7 +3344,7 @@
             "speed": 105
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 510,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3370,7 +3370,7 @@
             "speed": 48
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 485,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3397,7 +3397,7 @@
             "speed": 35
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 303,
         "evo": {
             "name": "Golemastoc",
             "file": "pokemon_gen5_normal.json"
@@ -3424,7 +3424,7 @@
             "speed": 55
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 483,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3451,7 +3451,7 @@
             "speed": 60
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 340,
         "evo": {
             "name": "Scalproie",
             "file": "pokemon_gen5_normal.json"
@@ -3478,7 +3478,7 @@
             "speed": 70
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 490,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3504,7 +3504,7 @@
             "speed": 55
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 490,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3531,7 +3531,7 @@
             "speed": 60
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 350,
         "evo": {
             "name": "Gueriaigle",
             "file": "pokemon_gen5_normal.json"
@@ -3558,7 +3558,7 @@
             "speed": 80
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 510,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3585,7 +3585,7 @@
             "speed": 60
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 370,
         "evo": {
             "name": "Vaututrice",
             "file": "pokemon_gen5_normal.json"
@@ -3612,7 +3612,7 @@
             "speed": 80
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 510,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3638,7 +3638,7 @@
             "speed": 65
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 484,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3665,7 +3665,7 @@
             "speed": 109
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 484,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3746,7 +3746,7 @@
             "speed": 98
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 600,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3800,7 +3800,7 @@
             "speed": 100
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 550,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3827,7 +3827,7 @@
             "speed": 108
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 580,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3854,7 +3854,7 @@
             "speed": 108
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 580,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3881,7 +3881,7 @@
             "speed": 108
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 580,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3907,7 +3907,7 @@
             "speed": 111
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 580,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3934,7 +3934,7 @@
             "speed": 111
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 580,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3961,7 +3961,7 @@
             "speed": 90
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 680,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -3988,7 +3988,7 @@
             "speed": 90
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 680,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -4015,7 +4015,7 @@
             "speed": 101
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 600,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -4042,7 +4042,7 @@
             "speed": 95
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 660,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -4069,7 +4069,7 @@
             "speed": 108
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 580,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -4096,7 +4096,7 @@
             "speed": 90
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 600,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
@@ -4123,7 +4123,7 @@
             "speed": 99
         },
         "current_xp": 0,
-        "xp_evo": 0,
+        "xp_evo": 600,
         "evo": {
             "name": "pas evo",
             "file": "pas evo"
