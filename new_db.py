@@ -202,10 +202,6 @@ def increase_pokemon_iv(user_id, pokemon_name, iv_increase, stat_name=None):
 
 
 def add_xp(user_id, pokemon_name, xp_gained):
-    """
-    Ajoute de l'XP à un Pokémon.
-    Retourne True si le Pokémon peut évoluer (current_xp >= xp_evo), False sinon.
-    """
     user_id = str(user_id)
 
     cur.execute("""
@@ -219,6 +215,12 @@ def add_xp(user_id, pokemon_name, xp_gained):
         return False
 
     current_xp, xp_evo = row
+
+    # ── Bloqué définitivement ────────────────────────────────────────────────
+    if xp_evo == -1:
+        print(f"[INFO] {pokemon_name} ne peut plus gagner d'XP (bloqué).")
+        return "blocked"
+
     new_xp = current_xp + xp_gained
 
     cur.execute("""
@@ -232,7 +234,6 @@ def add_xp(user_id, pokemon_name, xp_gained):
 
     can_evolve = xp_evo > 0 and new_xp >= xp_evo
     return can_evolve
-
 
 # ──────────────────────────────────────────────
 # ÉVOLUTION
@@ -465,13 +466,8 @@ def setupxp(bot):
     @bot.command(name="addxp")
     @commands.has_permissions(administrator=True)
     async def addxp(ctx, member: discord.Member, pokemon_name: str, xp: int):
-        """
-        !addxp @utilisateur <nom_pokemon> <xp>
-        Ajoute de l'XP à un Pokémon. Déclenche l'évolution si le seuil est atteint.
-        """
         user_id = str(member.id)
 
-        # Cherche le Pokémon dans la collection de l'utilisateur
         captures = get_new_captures(user_id)
         pokemon  = next((p for p in captures if p["name"].lower() == pokemon_name.lower()), None)
 
@@ -479,27 +475,41 @@ def setupxp(bot):
             await ctx.send(f"❌ **{pokemon_name}** introuvable dans la collection de {member.display_name}.")
             return
 
-        # Ajoute l'XP
         can_evolve = add_xp(user_id, pokemon["name"], xp)
 
+        # ── Bloqué définitivement ────────────────────────────────────────────────
+        if can_evolve == "blocked":
+            await ctx.send(
+                f"🔒 **{pokemon['name']}** de {member.mention} ne peut plus gagner d'XP."
+            )
+            return
+
+        # ── Seuil pas encore atteint ─────────────────────────────────────────────
         if not can_evolve:
             updated    = next((p for p in get_new_captures(user_id) if p["name"] == pokemon["name"]), None)
             current_xp = updated["current_xp"] if updated else "?"
             xp_evo     = updated["xp_evo"]     if updated else "?"
-
             await ctx.send(
                 f"✅ **+{xp} XP** ajouté à **{pokemon['name']}** de {member.mention} !\n"
                 f"📊 XP actuel : `{current_xp} / {xp_evo}`"
             )
             return
 
-        # Seuil atteint → tente l'évolution
+        # ── Seuil atteint → tente l'évolution ───────────────────────────────────
         result = evolve_pokemon(user_id, pokemon)
 
         if not result["success"]:
+            # Pas d'évolution → bonus IV + bloque l'XP définitivement
+            increase_pokemon_iv(user_id, pokemon["name"], 4)
+            cur.execute("""
+                UPDATE new_captures
+                SET xp_evo = -1
+                WHERE user_id = %s AND name = %s
+            """, (user_id, pokemon["name"]))
+            conn.commit()
             await ctx.send(
-                f"✅ **+{xp} XP** ajouté à **{pokemon['name']}** de {member.mention}.\n"
-                f"⚠️ Évolution impossible : {result['reason']}"
+                f"⚡ **{pokemon['name']}** de {member.mention} n'a pas d'évolution → **+4 IV** sur toutes les stats !\n"
+                f"🔒 **{pokemon['name']}** ne peut plus gagner d'XP."
             )
             return
 
