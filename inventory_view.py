@@ -55,14 +55,13 @@ async def get_pokemon_image_embed(pokemon_name: str, json_file: str, is_shiny: b
 # ─── Helper spawn ─────────────────────────────────────────────────────────────
 
 async def _handle_spawn(interaction, spawn_func, json_normal, json_shiny, shiny_rate):
-    """Factorisation du spawn Pokémon pour éviter la répétition."""
     if spawn_func is None:
         await interaction.followup.send("❌ La fonction de spawn n'est pas définie.", ephemeral=True)
         return
 
     pokemon_name, is_shiny = await spawn_func(
         interaction.user,
-        json_file=json_normal,
+        json_file=json_normal,   # spawn_pokemon_for_user gère lui-même le chemin et le shiny
         shiny_rate=shiny_rate
     )
 
@@ -70,15 +69,21 @@ async def _handle_spawn(interaction, spawn_func, json_normal, json_shiny, shiny_
         await interaction.followup.send("❌ Impossible de spawn le Pokémon.", ephemeral=True)
         return
 
-    json_file_to_use = json_shiny if is_shiny else f"json/{json_normal}"
-    embed, file = await get_pokemon_image_embed(pokemon_name, json_file=json_file_to_use, is_shiny=is_shiny)
+    # Le fichier à utiliser pour l'embed image uniquement
+    json_file_to_use = json_normal.replace("_normal.json", "_shiny.json") if is_shiny else json_normal
+    json_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "json", json_file_to_use)
+
+    embed, file = await get_pokemon_image_embed(pokemon_name, json_file=json_path, is_shiny=is_shiny)
 
     if embed and file:
-        await interaction.followup.send(content="🎉 Vous avez gagné un Pokémon !", embed=embed, file=file, ephemeral=True)
+        await interaction.followup.send(
+            content="🎉 Vous avez gagné un Pokémon !",
+            embed=embed,
+            file=file,
+            ephemeral=True
+        )
     else:
         await interaction.followup.send("❌ Impossible de trouver l'image du Pokémon.", ephemeral=True)
-
-
 # ─── Views inventaire ─────────────────────────────────────────────────────────
 
 class InventoryView(View):
