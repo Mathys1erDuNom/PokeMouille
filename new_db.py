@@ -327,6 +327,28 @@ def setupxp(bot):
         if evo_name.lower() == "pas_evo":
             new_evo = {"name": "pas evo", "file": "pas evo"}
         else:
+            # ── Vérifie que le fichier JSON existe ──────────────────────────────
+            json_path = os.path.join(json_dir, evo_file)
+            if not os.path.isfile(json_path):
+                await ctx.send(
+                    f"❌ Fichier `json/{evo_file}` introuvable.\n"
+                    f"📁 Fichiers disponibles : `{', '.join(os.listdir(json_dir))}`"
+                )
+                return
+
+            # ── Vérifie que le Pokémon existe dans ce fichier ───────────────────
+            with open(json_path, "r", encoding="utf-8") as f:
+                all_pokemons = json.load(f)
+
+            evo_data = next((p for p in all_pokemons if p["name"].lower() == evo_name.lower()), None)
+            if not evo_data:
+                noms = [p["name"] for p in all_pokemons]
+                await ctx.send(
+                    f"❌ **{evo_name}** introuvable dans `json/{evo_file}`.\n"
+                    f"📋 Pokémon disponibles : `{', '.join(noms)}`"
+                )
+                return
+
             new_evo = {"name": evo_name, "file": evo_file}
 
         cur.execute("""
@@ -351,7 +373,6 @@ def setupxp(bot):
                 f"✅ Évolution de **{pokemon['name']}** ({member.mention}) mise à jour !\n"
                 f"➡️ Évolue en **{evo_name}** (fichier : `{evo_file}`)"
             )
-
 
     @bot.command(name="addattack")
     @commands.has_permissions(administrator=True)
