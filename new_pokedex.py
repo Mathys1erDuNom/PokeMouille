@@ -8,8 +8,8 @@ import json
 from new_db import get_new_captures
 from utils import is_croco
 from combat.utils import normalize_text
-from new_db_avantmodif import delete_capture
-from new_db_avantmodif import increase_pokemon_iv
+from new_db import delete_capture
+from new_db import increase_pokemon_iv
 
 
 
@@ -376,10 +376,6 @@ def setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_spri
     is_croco()
     @bot.command()
     async def remove_pokemon(ctx, user_input: str, pokemon_name: str):
-        """
-        Accepte un @mention, un ID, ou un nom d'utilisateur.
-        """
-        # Extraire l'ID si c'est une mention utilisateur (<@123...>)
         import re
         match = re.match(r"<@!?(\d+)>", user_input)
         if match:
@@ -394,6 +390,7 @@ def setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_spri
         display_name = member.display_name if member else str(user_id)
 
         delete_capture(user_id, pokemon_name)
+        invalidate_new_pokedex_cache(str(user_id))  # ← filet de sécurité explicite
         await ctx.send(f"❌ Pokémon **{pokemon_name}** supprimé du Pokédex de {display_name}.")
         
 
