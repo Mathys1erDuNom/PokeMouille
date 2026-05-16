@@ -587,8 +587,8 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
 
 
 ## Intervalle spawn MP
-MIN_SPAWN = 30#14400 #4h
-MAX_SPAWN = 60#18000 #5h
+MIN_SPAWN = 14400 #4h
+MAX_SPAWN = 18000 #5h
 
 @tasks.loop(seconds=120)
 async def check_voice_channel():
