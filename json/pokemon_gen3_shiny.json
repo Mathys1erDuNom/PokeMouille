@@ -4,7 +4,7 @@
         "type": [
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/252.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/252.png",
         "attacks": [
             "Charge"
         ],
@@ -28,7 +28,7 @@
         "type": [
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/253.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/253.png",
         "attacks": [
             "Charge",
             "Canon Graine"
@@ -53,7 +53,7 @@
         "type": [
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/254.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/254.png",
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
@@ -79,7 +79,7 @@
         "type": [
             "feu"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/255.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/255.png",
         "attacks": [
             "Griffe"
         ],
@@ -104,7 +104,7 @@
             "feu",
             "combat"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/256.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/256.png",
         "attacks": [
             "Ultimapoing",
             "Poing Feu"
@@ -130,7 +130,7 @@
             "feu",
             "combat"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/257.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/257.png",
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
@@ -156,7 +156,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/258.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/258.png",
         "attacks": [
             "Ecrasement",
             "Coup d’Boule",
@@ -183,7 +183,7 @@
             "eau",
             "sol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/259.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/259.png",
         "attacks": [
             "Pistolet a O",
             "Ecrasement"
@@ -209,7 +209,7 @@
             "eau",
             "sol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/260.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/260.png",
         "attacks": [
             "Seisme",
             "Pistolet a O",
@@ -235,7 +235,7 @@
         "type": [
             "tenebres"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/261.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/261.png",
         "attacks": [
             "Morsure",
             "Charge"
@@ -260,7 +260,7 @@
         "type": [
             "tenebres"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/262.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/262.png",
         "attacks": [
             "Morsure",
             "Charge"
@@ -285,7 +285,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/263.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/263.png",
         "attacks": [
             "Coupe",
             "Coup d’Boule"
@@ -310,7 +310,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/264.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/264.png",
         "attacks": [
             "Coupe",
             "Coup d’Boule"
@@ -335,7 +335,7 @@
         "type": [
             "insecte"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/265.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/265.png",
         "attacks": [
             "Charge",
             "Dard-Venin"
@@ -360,7 +360,7 @@
         "type": [
             "insecte"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/266.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/266.png",
         "attacks": [
             "Charge",
             "Dard-Venin"
@@ -386,7 +386,7 @@
             "insecte",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/267.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/267.png",
         "attacks": [
             "Tornade",
             "Charge"
@@ -411,7 +411,7 @@
         "type": [
             "insecte"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/268.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/268.png",
         "attacks": [
             "Charge",
             "Dard-Venin"
@@ -437,7 +437,7 @@
             "insecte",
             "poison"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/269.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/269.png",
         "attacks": [
             "Tornade",
             "Charge",
@@ -464,7 +464,7 @@
             "eau",
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/270.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/270.png",
         "attacks": [
             "Coup d’Boule",
             "Plaquage",
@@ -491,7 +491,7 @@
             "eau",
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/271.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/271.png",
         "attacks": [
             "Charge",
             "Pistolet a O"
@@ -517,7 +517,7 @@
             "eau",
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/272.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/272.png",
         "attacks": [
             "Canon Graine",
             "Pistolet a O",
@@ -543,7 +543,7 @@
         "type": [
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/273.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/273.png",
         "attacks": [
             "Coupe-Vent",
             "Coup d’Boule"
@@ -569,7 +569,7 @@
             "plante",
             "tenebres"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/274.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/274.png",
         "attacks": [
             "Ecras’Face",
             "Coupe-Vent"
@@ -595,7 +595,7 @@
             "plante",
             "tenebres"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/275.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/275.png",
         "attacks": [
             "Ecras’Face",
             "Coupe"
@@ -621,7 +621,7 @@
             "normal",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/276.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/276.png",
         "attacks": [
             "Cru-Aile",
             "Charge"
@@ -647,7 +647,7 @@
             "normal",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/277.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/277.png",
         "attacks": [
             "Cru-Aile",
             "Charge"
@@ -673,7 +673,7 @@
             "eau",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/278.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/278.png",
         "attacks": [
             "Tornade",
             "Cru-Aile",
@@ -700,7 +700,7 @@
             "eau",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/279.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/279.png",
         "attacks": [
             "Cru-Aile",
             "Pistolet a O",
@@ -727,7 +727,7 @@
             "psy",
             "fee"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/280.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/280.png",
         "attacks": [
             "Pouvoir Lunaire",
             "Psyko"
@@ -753,7 +753,7 @@
             "psy",
             "fee"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/281.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/281.png",
         "attacks": [
             "Pouvoir Lunaire",
             "Psyko"
@@ -779,7 +779,7 @@
             "psy",
             "fee"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/282.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/282.png",
         "attacks": [
             "Pouvoir Lunaire",
             "Psyko"
@@ -805,7 +805,7 @@
             "insecte",
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/283.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/283.png",
         "attacks": [
             "Pistolet a O",
             "Charge"
@@ -831,7 +831,7 @@
             "insecte",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/284.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/284.png",
         "attacks": [
             "Tornade",
             "Charge"
@@ -856,7 +856,7 @@
         "type": [
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/285.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/285.png",
         "attacks": [
             "Coup d’Boule",
             "Charge"
@@ -882,7 +882,7 @@
             "plante",
             "combat"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/286.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/286.png",
         "attacks": [
             "Ultimapoing",
             "Poing Eclair",
@@ -908,7 +908,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/287.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/287.png",
         "attacks": [
             "Charge"
         ],
@@ -932,7 +932,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/288.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/288.png",
         "attacks": [
             "Ultimapoing",
             "Charge"
@@ -957,7 +957,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/289.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/289.png",
         "attacks": [
             "Ultimapoing",
             "Charge"
@@ -983,7 +983,7 @@
             "insecte",
             "sol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/290.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/290.png",
         "attacks": [
             "Griffe",
             "Coupe",
@@ -1010,7 +1010,7 @@
             "insecte",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/291.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/291.png",
         "attacks": [
             "Griffe",
             "Coupe"
@@ -1036,7 +1036,7 @@
             "insecte",
             "spectre"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/292.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/292.png",
         "attacks": [
             "Griffe",
             "Coupe"
@@ -1061,7 +1061,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/293.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/293.png",
         "attacks": [
             "Ecras’Face",
             "Charge"
@@ -1086,7 +1086,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/294.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/294.png",
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
@@ -1112,7 +1112,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/295.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/295.png",
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
@@ -1138,7 +1138,7 @@
         "type": [
             "combat"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/296.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/296.png",
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
@@ -1164,7 +1164,7 @@
         "type": [
             "combat"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/297.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/297.png",
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
@@ -1190,7 +1190,7 @@
         "type": [
             "roche"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/299.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/299.png",
         "attacks": [
             "Charge",
             "Jet de Pierre"
@@ -1215,7 +1215,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/300.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/300.png",
         "attacks": [
             "Torgnoles",
             "Coup d’Boule",
@@ -1241,7 +1241,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/301.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/301.png",
         "attacks": [
             "Torgnoles",
             "Coup d’Boule",
@@ -1268,7 +1268,7 @@
             "tenebres",
             "spectre"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/302.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/302.png",
         "attacks": [
             "Charge"
         ],
@@ -1293,7 +1293,7 @@
             "acier",
             "fee"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/303.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/303.png",
         "attacks": [
             "Charge",
             "Marelle"
@@ -1319,7 +1319,7 @@
             "acier",
             "roche"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/304.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/304.png",
         "attacks": [
             "Coupe",
             "Ecrasement",
@@ -1346,7 +1346,7 @@
             "acier",
             "roche"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/305.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/305.png",
         "attacks": [
             "Coupe",
             "Coup d’Boule",
@@ -1373,7 +1373,7 @@
             "acier",
             "roche"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/306.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/306.png",
         "attacks": [
             "Jet de Pierre",
             "Charge",
@@ -1400,7 +1400,7 @@
             "combat",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/307.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/307.png",
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
@@ -1427,7 +1427,7 @@
             "combat",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/308.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/308.png",
         "attacks": [
             "Ecras’Face",
             "Ultimapoing",
@@ -1453,7 +1453,7 @@
         "type": [
             "electrique"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/309.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/309.png",
         "attacks": [
             "Coup d’Boule",
             "Charge",
@@ -1479,7 +1479,7 @@
         "type": [
             "electrique"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/310.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/310.png",
         "attacks": [
             "Coup d’Boule",
             "Charge",
@@ -1506,7 +1506,7 @@
         "type": [
             "electrique"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/311.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/311.png",
         "attacks": [
             "Charge"
         ],
@@ -1530,7 +1530,7 @@
         "type": [
             "electrique"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/312.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/312.png",
         "attacks": [
             "Charge"
         ],
@@ -1554,7 +1554,7 @@
         "type": [
             "insecte"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/313.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/313.png",
         "attacks": [
             "Charge"
         ],
@@ -1578,7 +1578,7 @@
         "type": [
             "insecte"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/314.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/314.png",
         "attacks": [
             "Charge"
         ],
@@ -1603,7 +1603,7 @@
             "plante",
             "poison"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/315.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/315.png",
         "attacks": [
             "Dard-Venin",
             "Fouet Lianes"
@@ -1628,7 +1628,7 @@
         "type": [
             "poison"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/316.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/316.png",
         "attacks": [
             "Ecras’Face"
         ],
@@ -1652,7 +1652,7 @@
         "type": [
             "poison"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/317.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/317.png",
         "attacks": [
             "Dard-Venin"
         ],
@@ -1677,7 +1677,7 @@
             "eau",
             "tenebres"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/318.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/318.png",
         "attacks": [
             "Charge",
             "Pistolet a O",
@@ -1704,7 +1704,7 @@
             "eau",
             "tenebres"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/319.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/319.png",
         "attacks": [
             "Charge",
             "Pistolet a O",
@@ -1730,7 +1730,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/320.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/320.png",
         "attacks": [
             "Charge",
             "Pistolet a O"
@@ -1755,7 +1755,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/321.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/321.png",
         "attacks": [
             "Charge",
             "Pistolet a O"
@@ -1781,7 +1781,7 @@
             "feu",
             "sol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/322.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/322.png",
         "attacks": [
             "Ecrasement",
             "Coup d’Boule",
@@ -1809,7 +1809,7 @@
             "feu",
             "sol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/323.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/323.png",
         "attacks": [
             "Coup d’Boule",
             "Charge",
@@ -1836,7 +1836,7 @@
         "type": [
             "feu"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/324.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/324.png",
         "attacks": [
             "Coup d’Boule",
             "Charge",
@@ -1863,7 +1863,7 @@
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/325.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/325.png",
         "attacks": [
             "Charge"
         ],
@@ -1887,7 +1887,7 @@
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/326.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/326.png",
         "attacks": [
             "Charge"
         ],
@@ -1911,7 +1911,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/327.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/327.png",
         "attacks": [
             "Charge"
         ],
@@ -1935,7 +1935,7 @@
         "type": [
             "sol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/328.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/328.png",
         "attacks": [
             "Charge",
             "Jet de Pierre"
@@ -1961,7 +1961,7 @@
             "sol",
             "dragon"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/329.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/329.png",
         "attacks": [
             "Jet de Pierre",
             "Charge"
@@ -1987,7 +1987,7 @@
             "sol",
             "dragon"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/330.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/330.png",
         "attacks": [
             "Jet de Pierre",
             "Seisme",
@@ -2013,7 +2013,7 @@
         "type": [
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/331.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/331.png",
         "attacks": [
             "Fouet Lianes"
         ],
@@ -2038,7 +2038,7 @@
             "plante",
             "tenebres"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/332.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/332.png",
         "attacks": [
             "Fouet Lianes"
         ],
@@ -2063,7 +2063,7 @@
             "normal",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/333.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/333.png",
         "attacks": [
             "Chage",
             "Cru-Aile"
@@ -2089,7 +2089,7 @@
             "dragon",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/334.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/334.png",
         "attacks": [
             "Chage",
             "Cru-Aile"
@@ -2114,7 +2114,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/335.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/335.png",
         "attacks": [
             "Tranche",
             "Charge"
@@ -2139,7 +2139,7 @@
         "type": [
             "poison"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/336.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/336.png",
         "attacks": [
             "Chage",
             "Dard-Venin"
@@ -2165,7 +2165,7 @@
             "roche",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/337.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/337.png",
         "attacks": [
             "Charge",
             "Jet de Pierre"
@@ -2191,7 +2191,7 @@
             "roche",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/338.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/338.png",
         "attacks": [
             "Charge",
             "Jet de Pierre"
@@ -2217,7 +2217,7 @@
             "eau",
             "sol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/339.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/339.png",
         "attacks": [
             "Coup d’Boule",
             "Belier",
@@ -2244,7 +2244,7 @@
             "eau",
             "sol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/340.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/340.png",
         "attacks": [
             "Coup d’Boule",
             "Plaquage",
@@ -2270,7 +2270,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/341.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/341.png",
         "attacks": [
             "Force Poigne",
             "Guillotine"
@@ -2296,7 +2296,7 @@
             "eau",
             "tenebres"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/342.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/342.png",
         "attacks": [
             "Force Poigne",
             "Guillotine"
@@ -2322,7 +2322,7 @@
             "sol",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/343.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/343.png",
         "attacks": [
             "Coup d’Boule",
             "Damocles",
@@ -2349,7 +2349,7 @@
             "sol",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/344.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/344.png",
         "attacks": [
             "Coup d’Boule",
             "Damocles",
@@ -2376,7 +2376,7 @@
             "roche",
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/345.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/345.png",
         "attacks": [
             "Plaquage"
         ],
@@ -2401,7 +2401,7 @@
             "roche",
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/346.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/346.png",
         "attacks": [
             "Coup d’Boule"
         ],
@@ -2426,7 +2426,7 @@
             "roche",
             "insecte"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/347.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/347.png",
         "attacks": [
             "Griffe",
             "Coupe"
@@ -2452,7 +2452,7 @@
             "roche",
             "insecte"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/348.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/348.png",
         "attacks": [
             "Griffe",
             "Coupe"
@@ -2477,7 +2477,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/349.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/349.png",
         "attacks": [
             "Charge",
             "Pistolet a O"
@@ -2502,7 +2502,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/350.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/350.png",
         "attacks": [
             "Charge",
             "Pistolet a O"
@@ -2527,7 +2527,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/351.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/351.png",
         "attacks": [
             "Coup d’Boule",
             "Charge",
@@ -2553,7 +2553,7 @@
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/352.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/352.png",
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
@@ -2579,7 +2579,7 @@
         "type": [
             "spectre"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/353.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/353.png",
         "attacks": [
             "Coup d’Boule",
             "Plaquage",
@@ -2605,7 +2605,7 @@
         "type": [
             "spectre"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/354.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/354.png",
         "attacks": [
             "Coup d’Boule",
             "Plaquage"
@@ -2630,7 +2630,7 @@
         "type": [
             "spectre"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/355.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/355.png",
         "attacks": [
             "Balle Ombre",
             "Frappe Psy"
@@ -2655,7 +2655,7 @@
         "type": [
             "spectre"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/356.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/356.png",
         "attacks": [
             "Balle Ombre",
             "Frappe Psy"
@@ -2681,7 +2681,7 @@
             "plante",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/357.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/357.png",
         "attacks": [
             "Coupe-Vent",
             "Coupe"
@@ -2706,7 +2706,7 @@
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/358.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/358.png",
         "attacks": [
             "Charge"
         ],
@@ -2730,7 +2730,7 @@
         "type": [
             "tenebres"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/359.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/359.png",
         "attacks": [
             "Griffe",
             "Coupe-Vent",
@@ -2756,7 +2756,7 @@
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/360.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/360.png",
         "attacks": [
             "Frappe Psy"
         ],
@@ -2780,7 +2780,7 @@
         "type": [
             "glace"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/361.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/361.png",
         "attacks": [
             "Coup d’Boule",
             "Plaquage",
@@ -2806,7 +2806,7 @@
         "type": [
             "glace"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/362.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/362.png",
         "attacks": [
             "Laser Glace"
         ],
@@ -2831,7 +2831,7 @@
             "glace",
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/363.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/363.png",
         "attacks": [
             "Laser Glace",
             "Pistolet a O"
@@ -2857,7 +2857,7 @@
             "glace",
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/364.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/364.png",
         "attacks": [
             "Laser Glace",
             "Pistolet a O"
@@ -2883,7 +2883,7 @@
             "glace",
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/365.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/365.png",
         "attacks": [
             "Laser Glace",
             "Pistolet a O"
@@ -2908,7 +2908,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/366.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/366.png",
         "attacks": [
             "Plaquage",
             "Pistolet a O"
@@ -2933,7 +2933,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/367.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/367.png",
         "attacks": [
             "Pistolet a O",
             "Plaquage"
@@ -2958,7 +2958,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/368.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/368.png",
         "attacks": [
             "Pistolet a O",
             "Plaquage"
@@ -2984,7 +2984,7 @@
             "eau",
             "roche"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/369.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/369.png",
         "attacks": [
             "Pistolet a O",
             "Plaquage",
@@ -3010,7 +3010,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/370.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/370.png",
         "attacks": [
             "Charge",
             "Pistolet a O"
@@ -3035,7 +3035,7 @@
         "type": [
             "dragon"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/371.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/371.png",
         "attacks": [
             "Coupe",
             "Dracochoc",
@@ -3061,7 +3061,7 @@
         "type": [
             "dragon"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/372.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/372.png",
         "attacks": [
             "Coupe",
             "Dracochoc",
@@ -3089,7 +3089,7 @@
             "dragon",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/373.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/373.png",
         "attacks": [
             "Dracochoc",
             "Lance Flamme",
@@ -3117,7 +3117,7 @@
             "acier",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/374.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/374.png",
         "attacks": [
             "Coup d’Boule",
             "Charge",
@@ -3144,7 +3144,7 @@
             "acier",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/375.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/375.png",
         "attacks": [
             "Poing Glace",
             "Poing Eclair",
@@ -3171,7 +3171,7 @@
             "acier",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/376.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/376.png",
         "attacks": [
             "Poing Glace",
             "Poing Eclair",
@@ -3197,7 +3197,7 @@
         "type": [
             "roche"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/377.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/377.png",
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
@@ -3223,7 +3223,7 @@
         "type": [
             "glace"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/378.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/378.png",
         "attacks": [
             "Ultimapoing",
             "Poing Glace",
@@ -3249,7 +3249,7 @@
         "type": [
             "acier"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/379.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/379.png",
         "attacks": [
             "Ultimapoing",
             "Queue de fer",
@@ -3276,7 +3276,7 @@
             "dragon",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/380.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/380.png",
         "attacks": [
             "Frappe Psy",
             "Dracochoc"
@@ -3302,7 +3302,7 @@
             "dragon",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/381.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/381.png",
         "attacks": [
             "Frappe Psy",
             "Dracochoc"
@@ -3327,7 +3327,7 @@
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/382.png",
         "attacks": [
             "Giga Impact",
             "Laser Glace",
@@ -3354,7 +3354,7 @@
         "type": [
             "sol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/383.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/383.png",
         "attacks": [
             "Cannicule",
             "Poing Feu",
@@ -3382,7 +3382,7 @@
             "dragon",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/384.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/384.png",
         "attacks": [
             "Vent Glace",
             "Vent Violent",
@@ -3410,7 +3410,7 @@
             "acier",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/385.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/385.png",
         "attacks": [
             "Fouet Lianes",
             "Frappe Psy",
@@ -3436,7 +3436,7 @@
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/386.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/386.png",
         "attacks": [
             "Poing Feu",
             "Poing Glace",

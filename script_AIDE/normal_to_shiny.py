@@ -18,8 +18,8 @@ import sys
 script_dir  = os.path.dirname(os.path.abspath(__file__))
 root_dir    = os.path.join(script_dir, "..")
 
-INPUT_FILE  = os.path.join(root_dir, "json",  "pokemon_legendaire_normal.json")
-OUTPUT_FILE = os.path.join(root_dir, "json",  "pokemon_legendaire_shiny.json")
+INPUT_FILE  = os.path.join(root_dir, "json",  "pokemon_rare_pokeball_normal.json")
+OUTPUT_FILE = os.path.join(root_dir, "json",  "pokemon_rare_pokeball_shiny.json")
 # ──────────────────────────────────────────────────────────────────────────────
 
 
@@ -28,6 +28,11 @@ def make_shiny(pokemon: dict) -> dict:
 
     # Nom du Pokémon
     p["name"] = p["name"] + "_shiny"
+
+    # Image : /sprites/pokemon/2.png → /sprites/pokemon/shiny/2.png
+    image = p.get("image", "")
+    if "sprites/pokemon/" in image and "/shiny/" not in image:
+        p["image"] = image.replace("sprites/pokemon/", "sprites/pokemon/shiny/")
 
     # Champ evo
     evo = dict(p.get("evo", {}))

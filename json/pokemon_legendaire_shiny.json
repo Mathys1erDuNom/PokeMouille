@@ -1,11 +1,10 @@
-[   
-
+[
     {
-        "name": "Mewtwo",
+        "name": "Mewtwo_shiny",
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/150.png",
         "attacks": [
             "Choc Psy",
             "Psyko",
@@ -25,13 +24,14 @@
             "name": "pas evo",
             "file": "pas evo"
         }
-    },{
-        "name": "Artikodin",
+    },
+    {
+        "name": "Artikodin_shiny",
         "type": [
             "glace",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/144.png",
         "attacks": [
             "Eclats Glace",
             "Cru-Aile",
@@ -53,12 +53,12 @@
         }
     },
     {
-        "name": "Electhor",
+        "name": "Electhor_shiny",
         "type": [
             "electrique",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/145.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/145.png",
         "attacks": [
             "Eclair",
             "Cru-Aile",
@@ -80,12 +80,12 @@
         }
     },
     {
-        "name": "Sulfura",
+        "name": "Sulfura_shiny",
         "type": [
             "feu",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/146.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/146.png",
         "attacks": [
             "Braise",
             "Cru-Aile",
@@ -107,11 +107,11 @@
         }
     },
     {
-        "name": "Mew",
+        "name": "Mew_shiny",
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/151.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/151.png",
         "attacks": [
             "Choc Psy",
             "Psyko",
@@ -131,13 +131,14 @@
             "name": "pas evo",
             "file": "pas evo"
         }
-    },{
-        "name": "Lugia",
+    },
+    {
+        "name": "Lugia_shiny",
         "type": [
             "psy",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/249.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/249.png",
         "attacks": [
             "Hydrocanon",
             "Tranche-Nuit",
@@ -158,12 +159,13 @@
             "name": "pas evo",
             "file": "pas evo"
         }
-    },{
-        "name": "Raikou",
+    },
+    {
+        "name": "Raikou_shiny",
         "type": [
             "electrique"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/243.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/243.png",
         "attacks": [
             "Tonnerre",
             "Coup dBoule",
@@ -186,11 +188,11 @@
         }
     },
     {
-        "name": "Entei",
+        "name": "Entei_shiny",
         "type": [
             "feu"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/244.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/244.png",
         "attacks": [
             "Morsure",
             "Ecrasement",
@@ -213,11 +215,11 @@
         }
     },
     {
-        "name": "Suicune",
+        "name": "Suicune_shiny",
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/245.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/245.png",
         "attacks": [
             "Morsure",
             "Tornade",
@@ -240,12 +242,12 @@
         }
     },
     {
-        "name": "Ho-Oh",
+        "name": "Ho-Oh_shiny",
         "type": [
             "feu",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/250.png",
         "attacks": [
             "Telluriforce",
             "Tranche-Nuit",
@@ -268,12 +270,12 @@
         }
     },
     {
-        "name": "Celebi",
+        "name": "Celebi_shiny",
         "type": [
             "psy",
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/251.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/251.png",
         "attacks": [
             "Psyko",
             "Canon Graine",
@@ -294,12 +296,13 @@
             "name": "pas evo",
             "file": "pas evo"
         }
-    },{
-        "name": "Regirock",
+    },
+    {
+        "name": "Regirock_shiny",
         "type": [
             "roche"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/377.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/377.png",
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
@@ -321,11 +324,11 @@
         }
     },
     {
-        "name": "Regice",
+        "name": "Regice_shiny",
         "type": [
             "glace"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/378.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/378.png",
         "attacks": [
             "Ultimapoing",
             "Poing Glace",
@@ -347,11 +350,11 @@
         }
     },
     {
-        "name": "Registeel",
+        "name": "Registeel_shiny",
         "type": [
             "acier"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/379.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/379.png",
         "attacks": [
             "Ultimapoing",
             "Queue de fer",
@@ -373,12 +376,12 @@
         }
     },
     {
-        "name": "Latias",
+        "name": "Latias_shiny",
         "type": [
             "dragon",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/380.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/380.png",
         "attacks": [
             "Frappe Psy",
             "Dracochoc"
@@ -399,12 +402,12 @@
         }
     },
     {
-        "name": "Latios",
+        "name": "Latios_shiny",
         "type": [
             "dragon",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/381.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/381.png",
         "attacks": [
             "Frappe Psy",
             "Dracochoc"
@@ -425,11 +428,11 @@
         }
     },
     {
-        "name": "Kyogre",
+        "name": "Kyogre_shiny",
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/382.png",
         "attacks": [
             "Giga Impact",
             "Laser Glace",
@@ -452,11 +455,11 @@
         }
     },
     {
-        "name": "Groudon",
+        "name": "Groudon_shiny",
         "type": [
             "sol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/383.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/383.png",
         "attacks": [
             "Cannicule",
             "Poing Feu",
@@ -479,12 +482,12 @@
         }
     },
     {
-        "name": "Rayquaza",
+        "name": "Rayquaza_shiny",
         "type": [
             "dragon",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/384.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/384.png",
         "attacks": [
             "Vent Glace",
             "Vent Violent",
@@ -507,12 +510,12 @@
         }
     },
     {
-        "name": "Jirachi",
+        "name": "Jirachi_shiny",
         "type": [
             "acier",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/385.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/385.png",
         "attacks": [
             "Fouet Lianes",
             "Frappe Psy",
@@ -534,11 +537,11 @@
         }
     },
     {
-        "name": "Deoxys",
+        "name": "Deoxys_shiny",
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/386.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/386.png",
         "attacks": [
             "Poing Feu",
             "Poing Glace",
@@ -559,13 +562,14 @@
             "name": "pas evo",
             "file": "pas evo"
         }
-    },{
-        "name": "Motisma",
+    },
+    {
+        "name": "Motisma_shiny",
         "type": [
             "electrique",
             "spectre"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/479.png",
         "attacks": [
             "Eclair",
             "Tonnerre",
@@ -587,11 +591,11 @@
         }
     },
     {
-        "name": "Créhelf",
+        "name": "Créhelf_shiny",
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/480.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/480.png",
         "attacks": [
             "Rafale Psy",
             "Psyko"
@@ -612,11 +616,11 @@
         }
     },
     {
-        "name": "Créfollet",
+        "name": "Créfollet_shiny",
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/481.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/481.png",
         "attacks": [
             "Rafale Psy",
             "Psyko"
@@ -637,11 +641,11 @@
         }
     },
     {
-        "name": "Créfadet",
+        "name": "Créfadet_shiny",
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/482.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/482.png",
         "attacks": [
             "Rafale Psy",
             "Psyko"
@@ -662,12 +666,12 @@
         }
     },
     {
-        "name": "Dialga",
+        "name": "Dialga_shiny",
         "type": [
             "acier",
             "dragon"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/483.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/483.png",
         "attacks": [
             "Hurle-Temps",
             "Dracogriffe",
@@ -690,12 +694,12 @@
         }
     },
     {
-        "name": "Palkia",
+        "name": "Palkia_shiny",
         "type": [
             "eau",
             "dragon"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/484.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/484.png",
         "attacks": [
             "Hydrocanon",
             "Spatio-Rift",
@@ -718,12 +722,12 @@
         }
     },
     {
-        "name": "Heatran",
+        "name": "Heatran_shiny",
         "type": [
             "feu",
             "acier"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/485.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/485.png",
         "attacks": [
             "Cannicule",
             "Telluriforce",
@@ -746,11 +750,11 @@
         }
     },
     {
-        "name": "Regigigas",
+        "name": "Regigigas_shiny",
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/486.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/486.png",
         "attacks": [
             "Giga Impact",
             "Ultimapoing",
@@ -773,12 +777,12 @@
         }
     },
     {
-        "name": "Giratina",
+        "name": "Giratina_shiny",
         "type": [
             "spectre",
             "dragon"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/487.png",
         "attacks": [
             "Telluriforce",
             "Dracogriffe",
@@ -801,11 +805,11 @@
         }
     },
     {
-        "name": "Cresselia",
+        "name": "Cresselia_shiny",
         "type": [
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/488.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/488.png",
         "attacks": [
             "Rafale Psy",
             "Balle Ombre",
@@ -828,11 +832,11 @@
         }
     },
     {
-        "name": "Phione",
+        "name": "Phione_shiny",
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/489.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/489.png",
         "attacks": [
             "Surf",
             "Vent Glace",
@@ -854,11 +858,11 @@
         }
     },
     {
-        "name": "Manaphy",
+        "name": "Manaphy_shiny",
         "type": [
             "eau"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/490.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/490.png",
         "attacks": [
             "Surf",
             "Vent Glace",
@@ -880,11 +884,11 @@
         }
     },
     {
-        "name": "Darkrai",
+        "name": "Darkrai_shiny",
         "type": [
             "tenebres"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/491.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/491.png",
         "attacks": [
             "Vibrobscur",
             "Balle Ombre",
@@ -907,11 +911,11 @@
         }
     },
     {
-        "name": "Shaymin",
+        "name": "Shaymin_shiny",
         "type": [
             "plante"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/492.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/492.png",
         "attacks": [
             "Tempete Verte",
             "Psyko",
@@ -933,11 +937,11 @@
         }
     },
     {
-        "name": "Arceus",
+        "name": "Arceus_shiny",
         "type": [
             "normal"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/493.png",
         "attacks": [
             "Jugement",
             "Balle Ombre",
@@ -958,13 +962,14 @@
             "name": "pas evo",
             "file": "pas evo"
         }
-    },{
-        "name": "Cobaltium",
+    },
+    {
+        "name": "Cobaltium_shiny",
         "type": [
             "acier",
             "combat"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/638.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/638.png",
         "attacks": [
             "Pied Saute",
             "Luminocanon",
@@ -986,12 +991,12 @@
         }
     },
     {
-        "name": "Terrakium",
+        "name": "Terrakium_shiny",
         "type": [
             "roche",
             "combat"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/639.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/639.png",
         "attacks": [
             "Eboulement",
             "Coupe",
@@ -1014,14 +1019,13 @@
         }
     },
     {
-        "name": "Viridium",
+        "name": "Viridium_shiny",
         "type": [
             "plante",
             "combat"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/640.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/640.png",
         "attacks": [
-       
             "Coupe",
             "Double Pied",
             "Mawashi Geri"
@@ -1042,11 +1046,11 @@
         }
     },
     {
-        "name": "Boréas",
+        "name": "Boréas_shiny",
         "type": [
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/641.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/641.png",
         "attacks": [
             "Tornade",
             "Vol",
@@ -1068,12 +1072,12 @@
         }
     },
     {
-        "name": "Fulguris",
+        "name": "Fulguris_shiny",
         "type": [
             "electrique",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/642.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/642.png",
         "attacks": [
             "Poing Eclair",
             "Vol",
@@ -1096,12 +1100,12 @@
         }
     },
     {
-        "name": "Reshiram",
+        "name": "Reshiram_shiny",
         "type": [
             "dragon",
             "feu"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/643.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/643.png",
         "attacks": [
             "Coupe",
             "Lance-Flammes",
@@ -1123,12 +1127,12 @@
         }
     },
     {
-        "name": "Zekrom",
+        "name": "Zekrom_shiny",
         "type": [
             "dragon",
             "electrique"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/644.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/644.png",
         "attacks": [
             "Coupe",
             "Tonnerre",
@@ -1150,14 +1154,13 @@
         }
     },
     {
-        "name": "Démétéros",
+        "name": "Démétéros_shiny",
         "type": [
             "sol",
             "vol"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/645.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/645.png",
         "attacks": [
-
             "Vol",
             "Charge",
             "Seisme"
@@ -1178,15 +1181,14 @@
         }
     },
     {
-        "name": "Kyurem",
+        "name": "Kyurem_shiny",
         "type": [
             "dragon",
             "glace"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/646.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/646.png",
         "attacks": [
             "Coupe",
-            
             "Colere",
             "Laser Glace"
         ],
@@ -1206,12 +1208,12 @@
         }
     },
     {
-        "name": "Keldeo",
+        "name": "Keldeo_shiny",
         "type": [
             "eau",
             "combat"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/647.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/647.png",
         "attacks": [
             "Surf",
             "Belier",
@@ -1233,12 +1235,12 @@
         }
     },
     {
-        "name": "Meloetta",
+        "name": "Meloetta_shiny",
         "type": [
             "normal",
             "psy"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/648.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/648.png",
         "attacks": [
             "Psyko",
             "Charge"
@@ -1259,15 +1261,14 @@
         }
     },
     {
-        "name": "Genesect",
+        "name": "Genesect_shiny",
         "type": [
             "insecte",
             "acier"
         ],
-        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/649.png",
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/649.png",
         "attacks": [
             "Bourdon",
-        
             "Luminocanon"
         ],
         "stats": {
@@ -1285,7 +1286,4 @@
             "file": "pas evo"
         }
     }
-
-
-
 ]
