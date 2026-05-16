@@ -2,12 +2,14 @@
     {
         "name": "Bulbizarre",
         "type": [
-            "plante"
+            "plante",
+            "poison"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
         "attacks": [
             "Fouet Lianes",
-            "Charge"
+            "Charge",
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 45,
@@ -16,17 +18,25 @@
             "speed": 45,
             "defense": 49,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 318,
+        "evo": {
+            "name": "Herbizarre",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
         "name": "Herbizarre",
         "type": [
-            "plante"
+            "plante",
+            "poison"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
         "attacks": [
             "Fouet Lianes",
-            "Charge"
+            "Charge",
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 60,
@@ -35,18 +45,26 @@
             "speed": 60,
             "defense": 63,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 405,
+        "evo": {
+            "name": "Florizarre",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
         "name": "Florizarre",
         "type": [
-            "plante"
+            "plante",
+            "poison"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
         "attacks": [
             "Fouet Lianes",
             "Charge",
-            "Canon Graine"
+            "Canon Graine",
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 80,
@@ -55,6 +73,12 @@
             "speed": 80,
             "defense": 83,
             "special_defense": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 525,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -74,6 +98,12 @@
             "speed": 65,
             "defense": 43,
             "special_defense": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 309,
+        "evo": {
+            "name": "Reptincel",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -94,6 +124,12 @@
             "speed": 80,
             "defense": 58,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 405,
+        "evo": {
+            "name": "Dracaufeu",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -115,6 +151,12 @@
             "speed": 100,
             "defense": 78,
             "special_defense": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 534,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -134,6 +176,12 @@
             "speed": 43,
             "defense": 65,
             "special_defense": 64
+        },
+        "current_xp": 0,
+        "xp_evo": 314,
+        "evo": {
+            "name": "Carabaffe",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -154,6 +202,12 @@
             "speed": 58,
             "defense": 80,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 405,
+        "evo": {
+            "name": "Tortank",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -174,6 +228,12 @@
             "speed": 78,
             "defense": 100,
             "special_defense": 105
+        },
+        "current_xp": 0,
+        "xp_evo": 530,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -193,6 +253,12 @@
             "speed": 45,
             "defense": 35,
             "special_defense": 20
+        },
+        "current_xp": 0,
+        "xp_evo": 195,
+        "evo": {
+            "name": "Chrysacier",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -211,6 +277,12 @@
             "speed": 30,
             "defense": 55,
             "special_defense": 25
+        },
+        "current_xp": 0,
+        "xp_evo": 205,
+        "evo": {
+            "name": "Papilusion",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -220,7 +292,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
         "attacks": [
-         
             "Vent Violent",
             "Piqure"
         ],
@@ -231,6 +302,12 @@
             "speed": 70,
             "defense": 50,
             "special_defense": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 405,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -250,6 +327,12 @@
             "speed": 50,
             "defense": 30,
             "special_defense": 20
+        },
+        "current_xp": 0,
+        "xp_evo": 195,
+        "evo": {
+            "name": "Coconfort",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -268,6 +351,12 @@
             "speed": 35,
             "defense": 50,
             "special_defense": 25
+        },
+        "current_xp": 0,
+        "xp_evo": 205,
+        "evo": {
+            "name": "Dardargnan",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -278,7 +367,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
         "attacks": [
             "Dard-Venin",
-          
             "Piqure"
         ],
         "stats": {
@@ -288,6 +376,12 @@
             "speed": 75,
             "defense": 40,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 395,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -307,6 +401,12 @@
             "speed": 56,
             "defense": 40,
             "special_defense": 35
+        },
+        "current_xp": 0,
+        "xp_evo": 251,
+        "evo": {
+            "name": "Roucoups",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -327,6 +427,12 @@
             "speed": 71,
             "defense": 55,
             "special_defense": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 349,
+        "evo": {
+            "name": "Roucarnage",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -347,6 +453,12 @@
             "speed": 101,
             "defense": 75,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 474,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -367,6 +479,12 @@
             "speed": 72,
             "defense": 35,
             "special_defense": 35
+        },
+        "current_xp": 0,
+        "xp_evo": 263,
+        "evo": {
+            "name": "Rattatac",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -387,6 +505,12 @@
             "speed": 97,
             "defense": 60,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 423,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -407,6 +531,12 @@
             "speed": 70,
             "defense": 30,
             "special_defense": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 261,
+        "evo": {
+            "name": "Rapasdepic",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -427,6 +557,12 @@
             "speed": 100,
             "defense": 65,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 446,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -436,7 +572,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/23.png",
         "attacks": [
-            
             "Bomb-Beurk",
             "Charge"
         ],
@@ -447,6 +582,12 @@
             "speed": 55,
             "defense": 44,
             "special_defense": 54
+        },
+        "current_xp": 0,
+        "xp_evo": 313,
+        "evo": {
+            "name": "Arbok",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -456,7 +597,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/24.png",
         "attacks": [
-            
             "Bomb-Beurk",
             "Charge",
             "Morsure"
@@ -468,6 +608,12 @@
             "speed": 80,
             "defense": 69,
             "special_defense": 79
+        },
+        "current_xp": 0,
+        "xp_evo": 463,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -487,6 +633,12 @@
             "speed": 90,
             "defense": 40,
             "special_defense": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 320,
+        "evo": {
+            "name": "Raichu",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -507,6 +659,12 @@
             "speed": 110,
             "defense": 55,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 485,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -526,6 +684,12 @@
             "speed": 40,
             "defense": 85,
             "special_defense": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 325,
+        "evo": {
+            "name": "Sablaireau",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -546,6 +710,12 @@
             "speed": 65,
             "defense": 110,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 475,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -565,6 +735,12 @@
             "speed": 41,
             "defense": 52,
             "special_defense": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 275,
+        "evo": {
+            "name": "Nidorina",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -584,6 +760,12 @@
             "speed": 56,
             "defense": 67,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 365,
+        "evo": {
+            "name": "Nidoqueen",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -597,7 +779,6 @@
             "Charge",
             "Piqure",
             "Bomb-Beurk",
-           
             "Seisme"
         ],
         "stats": {
@@ -607,6 +788,12 @@
             "speed": 85,
             "defense": 87,
             "special_defense": 75
+        },
+        "current_xp": 0,
+        "xp_evo": 504,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -626,6 +813,12 @@
             "speed": 50,
             "defense": 40,
             "special_defense": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 273,
+        "evo": {
+            "name": "Nidorino",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -638,7 +831,6 @@
             "Charge",
             "Piqure",
             "Bomb-Beurk"
-            
         ],
         "stats": {
             "hp": 61,
@@ -647,6 +839,12 @@
             "speed": 65,
             "defense": 57,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 365,
+        "evo": {
+            "name": "Nidoking",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -660,7 +858,6 @@
             "Charge",
             "Piqure",
             "Bomb-Beurk",
-            
             "Seisme"
         ],
         "stats": {
@@ -670,6 +867,12 @@
             "speed": 95,
             "defense": 77,
             "special_defense": 75
+        },
+        "current_xp": 0,
+        "xp_evo": 515,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -690,6 +893,12 @@
             "speed": 35,
             "defense": 48,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 323,
+        "evo": {
+            "name": "Melodelfe",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -710,6 +919,12 @@
             "speed": 60,
             "defense": 73,
             "special_defense": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 473,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -729,6 +944,12 @@
             "speed": 65,
             "defense": 40,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 299,
+        "evo": {
+            "name": "Feunard",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -749,6 +970,12 @@
             "speed": 100,
             "defense": 75,
             "special_defense": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 505,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -759,7 +986,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/39.png",
         "attacks": [
-        
             "Pouvoir Lunaire",
             "Charge"
         ],
@@ -770,6 +996,12 @@
             "speed": 20,
             "defense": 20,
             "special_defense": 25
+        },
+        "current_xp": 0,
+        "xp_evo": 270,
+        "evo": {
+            "name": "Grodoudou",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -780,7 +1012,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/40.png",
         "attacks": [
-     
             "Pouvoir Lunaire",
             "Charge",
             "Ecrasement"
@@ -792,6 +1023,12 @@
             "speed": 45,
             "defense": 45,
             "special_defense": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 425,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -812,6 +1049,12 @@
             "speed": 55,
             "defense": 35,
             "special_defense": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 245,
+        "evo": {
+            "name": "Nosferalto",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -823,8 +1066,6 @@
         "attacks": [
             "Morsure",
             "Dard-Venin",
-        
-            
             "Cru-Aile"
         ],
         "stats": {
@@ -834,6 +1075,12 @@
             "speed": 90,
             "defense": 70,
             "special_defense": 75
+        },
+        "current_xp": 0,
+        "xp_evo": 455,
+        "evo": {
+            "name": "Nostenfer",
+            "file": "pokemon_gen2_normal.json"
         }
     },
     {
@@ -854,6 +1101,12 @@
             "speed": 35,
             "defense": 48,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 290,
+        "evo": {
+            "name": "Ortide",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -874,6 +1127,12 @@
             "speed": 30,
             "defense": 70,
             "special_defense": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 385,
+        "evo": {
+            "name": "Rafflesia",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -895,6 +1154,12 @@
             "speed": 50,
             "defense": 90,
             "special_defense": 95
+        },
+        "current_xp": 0,
+        "xp_evo": 490,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -907,7 +1172,6 @@
         "attacks": [
             "Griffe",
             "Piqure"
-            
         ],
         "stats": {
             "hp": 35,
@@ -916,6 +1180,12 @@
             "speed": 25,
             "defense": 55,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 285,
+        "evo": {
+            "name": "Parasect",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -936,6 +1206,12 @@
             "speed": 30,
             "defense": 80,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 425,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -956,6 +1232,12 @@
             "speed": 50,
             "defense": 50,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 280,
+        "evo": {
+            "name": "Aéromite",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -976,6 +1258,12 @@
             "speed": 65,
             "defense": 80,
             "special_defense": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 445,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -994,6 +1282,12 @@
             "speed": 35,
             "defense": 40,
             "special_defense": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 235,
+        "evo": {
+            "name": "Triopikeur",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1004,7 +1298,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/51.png",
         "attacks": [
             "Charge",
-            
             "Seisme"
         ],
         "stats": {
@@ -1014,6 +1307,12 @@
             "speed": 40,
             "defense": 90,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 420,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1033,6 +1332,12 @@
             "speed": 90,
             "defense": 35,
             "special_defense": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 290,
+        "evo": {
+            "name": "Persian",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1052,6 +1357,12 @@
             "speed": 115,
             "defense": 60,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 440,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1071,6 +1382,12 @@
             "speed": 55,
             "defense": 48,
             "special_defense": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 320,
+        "evo": {
+            "name": "Akwakwak",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1090,6 +1407,12 @@
             "speed": 90,
             "defense": 63,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 440,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1110,6 +1433,12 @@
             "speed": 70,
             "defense": 35,
             "special_defense": 35
+        },
+        "current_xp": 0,
+        "xp_evo": 295,
+        "evo": {
+            "name": "Colossinge",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1130,6 +1459,12 @@
             "speed": 95,
             "defense": 60,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 455,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1149,6 +1484,12 @@
             "speed": 90,
             "defense": 45,
             "special_defense": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 370,
+        "evo": {
+            "name": "Arcanin",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1169,6 +1510,12 @@
             "speed": 95,
             "defense": 80,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 555,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1188,6 +1535,12 @@
             "speed": 40,
             "defense": 40,
             "special_defense": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 250,
+        "evo": {
+            "name": "Tetarte",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1207,6 +1560,12 @@
             "speed": 50,
             "defense": 52,
             "special_defense": 53
+        },
+        "current_xp": 0,
+        "xp_evo": 322,
+        "evo": {
+            "name": "Tartard",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1229,6 +1588,12 @@
             "speed": 60,
             "defense": 78,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 447,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1247,6 +1612,12 @@
             "speed": 90,
             "defense": 15,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 310,
+        "evo": {
+            "name": "Kadabra",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1266,6 +1637,12 @@
             "speed": 105,
             "defense": 30,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 400,
+        "evo": {
+            "name": "Alakazam",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1285,6 +1662,12 @@
             "speed": 120,
             "defense": 45,
             "special_defense": 95
+        },
+        "current_xp": 0,
+        "xp_evo": 500,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1304,6 +1687,12 @@
             "speed": 35,
             "defense": 50,
             "special_defense": 35
+        },
+        "current_xp": 0,
+        "xp_evo": 305,
+        "evo": {
+            "name": "Machopeur",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1324,6 +1713,12 @@
             "speed": 45,
             "defense": 70,
             "special_defense": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 405,
+        "evo": {
+            "name": "Mackogneur",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1345,6 +1740,12 @@
             "speed": 55,
             "defense": 80,
             "special_defense": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 505,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1364,6 +1765,12 @@
             "speed": 30,
             "defense": 35,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 305,
+        "evo": {
+            "name": "Boustiflor",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1376,7 +1783,6 @@
         "attacks": [
             "Fouet Lianes",
             "Bomb-Beurk",
-           
             "Canon Graine"
         ],
         "stats": {
@@ -1386,6 +1792,12 @@
             "speed": 40,
             "defense": 50,
             "special_defense": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 390,
+        "evo": {
+            "name": "Empiflor",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1397,7 +1809,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/71.png",
         "attacks": [
             "Fouet Lianes",
-        
             "Canon Graine",
             "Bomb-Beurk"
         ],
@@ -1408,6 +1819,12 @@
             "speed": 50,
             "defense": 65,
             "special_defense": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 470,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1428,6 +1845,12 @@
             "speed": 70,
             "defense": 35,
             "special_defense": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 335,
+        "evo": {
+            "name": "Tentacruel",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1439,7 +1862,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/73.png",
         "attacks": [
             "Pistolet a O",
-            "Dard-Venin"
+            "Dard-Venin",
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 80,
@@ -1448,6 +1872,12 @@
             "speed": 100,
             "defense": 65,
             "special_defense": 120
+        },
+        "current_xp": 0,
+        "xp_evo": 515,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1468,6 +1898,12 @@
             "speed": 20,
             "defense": 100,
             "special_defense": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 300,
+        "evo": {
+            "name": "Gravalanch",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1489,6 +1925,12 @@
             "speed": 25,
             "defense": 115,
             "special_defense": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 380,
+        "evo": {
+            "name": "Grolem",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1511,6 +1953,12 @@
             "speed": 45,
             "defense": 130,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 495,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1530,6 +1978,12 @@
             "speed": 90,
             "defense": 55,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 410,
+        "evo": {
+            "name": "Galopa",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1550,6 +2004,12 @@
             "speed": 105,
             "defense": 70,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 500,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1570,6 +2030,12 @@
             "speed": 15,
             "defense": 65,
             "special_defense": 110
+        },
+        "current_xp": 0,
+        "xp_evo": 420,
+        "evo": {
+            "name": "Flagadoss",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1590,6 +2056,12 @@
             "speed": 30,
             "defense": 80,
             "special_defense": 120
+        },
+        "current_xp": 0,
+        "xp_evo": 500,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1610,6 +2082,12 @@
             "speed": 45,
             "defense": 70,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 325,
+        "evo": {
+            "name": "Magneton",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1630,6 +2108,12 @@
             "speed": 70,
             "defense": 95,
             "special_defense": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 480,
+        "evo": {
+            "name": "Magnézone",
+            "file": "pokemon_gen4_normal.json"
         }
     },
     {
@@ -1650,6 +2134,12 @@
             "speed": 70,
             "defense": 65,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 415,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1670,6 +2160,12 @@
             "speed": 75,
             "defense": 45,
             "special_defense": 35
+        },
+        "current_xp": 0,
+        "xp_evo": 310,
+        "evo": {
+            "name": "Dodrio",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1691,6 +2187,12 @@
             "speed": 110,
             "defense": 70,
             "special_defense": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 470,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1710,6 +2212,12 @@
             "speed": 45,
             "defense": 80,
             "special_defense": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 445,
+        "evo": {
+            "name": "Lamantine",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1731,6 +2239,12 @@
             "speed": 60,
             "defense": 90,
             "special_defense": 95
+        },
+        "current_xp": 0,
+        "xp_evo": 525,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1750,6 +2264,12 @@
             "speed": 35,
             "defense": 95,
             "special_defense": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 320,
+        "evo": {
+            "name": "Grotadmorv",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1770,6 +2290,12 @@
             "speed": 45,
             "defense": 120,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 475,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1789,6 +2315,12 @@
             "speed": 35,
             "defense": 100,
             "special_defense": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 315,
+        "evo": {
+            "name": "Crustabri",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1810,6 +2342,12 @@
             "speed": 50,
             "defense": 125,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 485,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1829,6 +2367,12 @@
             "speed": 80,
             "defense": 30,
             "special_defense": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 305,
+        "evo": {
+            "name": "Spectrum",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1848,6 +2392,12 @@
             "speed": 105,
             "defense": 45,
             "special_defense": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 425,
+        "evo": {
+            "name": "Ectoplasma",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1860,7 +2410,6 @@
         "attacks": [
             "Balle Ombre",
             "Bomb-Beurk",
-            
             "Lance-Flammes"
         ],
         "stats": {
@@ -1870,6 +2419,12 @@
             "speed": 130,
             "defense": 60,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 535,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1890,6 +2445,12 @@
             "speed": 70,
             "defense": 160,
             "special_defense": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 385,
+        "evo": {
+            "name": "Steelix",
+            "file": "pokemon_gen2_normal.json"
         }
     },
     {
@@ -1908,6 +2469,12 @@
             "speed": 42,
             "defense": 65,
             "special_defense": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 348,
+        "evo": {
+            "name": "Hypnomade",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1927,6 +2494,12 @@
             "speed": 67,
             "defense": 90,
             "special_defense": 115
+        },
+        "current_xp": 0,
+        "xp_evo": 503,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1946,6 +2519,12 @@
             "speed": 50,
             "defense": 90,
             "special_defense": 25
+        },
+        "current_xp": 0,
+        "xp_evo": 325,
+        "evo": {
+            "name": "Krabboss",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -1966,6 +2545,12 @@
             "speed": 75,
             "defense": 115,
             "special_defense": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 475,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1985,6 +2570,12 @@
             "speed": 100,
             "defense": 50,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 330,
+        "evo": {
+            "name": "Électrode",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2004,6 +2595,12 @@
             "speed": 150,
             "defense": 70,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 490,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2023,6 +2620,12 @@
             "speed": 20,
             "defense": 50,
             "special_defense": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 215,
+        "evo": {
+            "name": "Noadkoko",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2044,6 +2647,12 @@
             "speed": 30,
             "defense": 85,
             "special_defense": 75
+        },
+        "current_xp": 0,
+        "xp_evo": 505,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2063,6 +2672,12 @@
             "speed": 35,
             "defense": 100,
             "special_defense": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 330,
+        "evo": {
+            "name": "Ossatueur",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2083,6 +2698,12 @@
             "speed": 45,
             "defense": 125,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 455,
+        "evo": {
+            "name": "Ossassoulie",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2102,6 +2723,12 @@
             "speed": 87,
             "defense": 53,
             "special_defense": 110
+        },
+        "current_xp": 0,
+        "xp_evo": 455,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2122,6 +2749,12 @@
             "speed": 98,
             "defense": 79,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 462,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2141,6 +2774,12 @@
             "speed": 60,
             "defense": 80,
             "special_defense": 75
+        },
+        "current_xp": 0,
+        "xp_evo": 460,
+        "evo": {
+            "name": "Coudlangue",
+            "file": "pokemon_gen4_normal.json"
         }
     },
     {
@@ -2150,7 +2789,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/109.png",
         "attacks": [
-        
             "Bomb-Beurk"
         ],
         "stats": {
@@ -2160,6 +2798,12 @@
             "speed": 35,
             "defense": 95,
             "special_defense": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 320,
+        "evo": {
+            "name": "Smogogo",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2169,9 +2813,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/110.png",
         "attacks": [
-            
             "Bomb-Beurk"
-           
         ],
         "stats": {
             "hp": 65,
@@ -2180,6 +2822,12 @@
             "speed": 60,
             "defense": 120,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 480,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2200,6 +2848,12 @@
             "speed": 25,
             "defense": 95,
             "special_defense": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 345,
+        "evo": {
+            "name": "Rhinoféros",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2221,6 +2875,12 @@
             "speed": 40,
             "defense": 120,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 505,
+        "evo": {
+            "name": "Rhinastoc",
+            "file": "pokemon_gen4_normal.json"
         }
     },
     {
@@ -2231,7 +2891,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/113.png",
         "attacks": [
             "Charge",
-            
             "Pouvoir Lunaire"
         ],
         "stats": {
@@ -2241,6 +2900,12 @@
             "speed": 50,
             "defense": 5,
             "special_defense": 105
+        },
+        "current_xp": 0,
+        "xp_evo": 450,
+        "evo": {
+            "name": "Leuphorie",
+            "file": "pokemon_gen2_normal.json"
         }
     },
     {
@@ -2260,6 +2925,12 @@
             "speed": 30,
             "defense": 40,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 290,
+        "evo": {
+            "name": "Bouldeneu",
+            "file": "pokemon_gen4_normal.json"
         }
     },
     {
@@ -2279,6 +2950,12 @@
             "speed": 95,
             "defense": 80,
             "special_defense": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 515,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2298,6 +2975,12 @@
             "speed": 50,
             "defense": 45,
             "special_defense": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 300,
+        "evo": {
+            "name": "Hypocéan",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2318,6 +3001,12 @@
             "speed": 70,
             "defense": 65,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 420,
+        "evo": {
+            "name": "Hyporoi",
+            "file": "pokemon_gen2_normal.json"
         }
     },
     {
@@ -2336,6 +3025,12 @@
             "speed": 60,
             "defense": 65,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 395,
+        "evo": {
+            "name": "Poissoroy",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2346,7 +3041,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/119.png",
         "attacks": [
             "Pistolet a O",
-        
             "Laser Glace"
         ],
         "stats": {
@@ -2356,6 +3050,12 @@
             "speed": 70,
             "defense": 95,
             "special_defense": 110
+        },
+        "current_xp": 0,
+        "xp_evo": 565,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2376,6 +3076,12 @@
             "speed": 55,
             "defense": 55,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 310,
+        "evo": {
+            "name": "Staross",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2397,6 +3103,12 @@
             "speed": 85,
             "defense": 85,
             "special_defense": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 490,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2416,6 +3128,12 @@
             "speed": 90,
             "defense": 65,
             "special_defense": 120
+        },
+        "current_xp": 0,
+        "xp_evo": 460,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2436,6 +3154,12 @@
             "speed": 85,
             "defense": 80,
             "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 480,
+        "evo": {
+            "name": "Cizayox",
+            "file": "pokemon_gen2_normal.json"
         }
     },
     {
@@ -2456,6 +3180,12 @@
             "speed": 95,
             "defense": 95,
             "special_defense": 110
+        },
+        "current_xp": 0,
+        "xp_evo": 530,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2475,6 +3205,12 @@
             "speed": 105,
             "defense": 57,
             "special_defense": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 480,
+        "evo": {
+            "name": "Élekable",
+            "file": "pokemon_gen4_normal.json"
         }
     },
     {
@@ -2494,6 +3230,12 @@
             "speed": 93,
             "defense": 57,
             "special_defense": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 495,
+        "evo": {
+            "name": "Maganon",
+            "file": "pokemon_gen4_normal.json"
         }
     },
     {
@@ -2515,6 +3257,12 @@
             "speed": 75,
             "defense": 75,
             "special_defense": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 470,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2534,6 +3282,12 @@
             "speed": 110,
             "defense": 95,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 490,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2552,6 +3306,12 @@
             "speed": 80,
             "defense": 55,
             "special_defense": 20
+        },
+        "current_xp": 0,
+        "xp_evo": 200,
+        "evo": {
+            "name": "Léviator",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2573,6 +3333,12 @@
             "speed": 81,
             "defense": 79,
             "special_defense": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 540,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2593,6 +3359,12 @@
             "speed": 60,
             "defense": 80,
             "special_defense": 95
+        },
+        "current_xp": 0,
+        "xp_evo": 545,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2611,6 +3383,12 @@
             "speed": 48,
             "defense": 48,
             "special_defense": 48
+        },
+        "current_xp": 0,
+        "xp_evo": 288,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2630,6 +3408,12 @@
             "speed": 55,
             "defense": 50,
             "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 330,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2649,6 +3433,12 @@
             "speed": 60,
             "defense": 65,
             "special_defense": 95
+        },
+        "current_xp": 0,
+        "xp_evo": 525,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2668,6 +3458,12 @@
             "speed": 130,
             "defense": 60,
             "special_defense": 95
+        },
+        "current_xp": 0,
+        "xp_evo": 525,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2687,6 +3483,12 @@
             "speed": 110,
             "defense": 60,
             "special_defense": 110
+        },
+        "current_xp": 0,
+        "xp_evo": 570,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2706,6 +3508,12 @@
             "speed": 40,
             "defense": 70,
             "special_defense": 75
+        },
+        "current_xp": 0,
+        "xp_evo": 395,
+        "evo": {
+            "name": "Porygon2",
+            "file": "pokemon_gen2_normal.json"
         }
     },
     {
@@ -2726,6 +3534,12 @@
             "speed": 35,
             "defense": 100,
             "special_defense": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 355,
+        "evo": {
+            "name": "Amonistar",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2747,6 +3561,12 @@
             "speed": 55,
             "defense": 125,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 505,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2767,6 +3587,12 @@
             "speed": 55,
             "defense": 90,
             "special_defense": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 345,
+        "evo": {
+            "name": "Kabutops",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2788,6 +3614,12 @@
             "speed": 80,
             "defense": 105,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 500,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2809,6 +3641,12 @@
             "speed": 130,
             "defense": 65,
             "special_defense": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 505,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2829,6 +3667,12 @@
             "speed": 30,
             "defense": 65,
             "special_defense": 110
+        },
+        "current_xp": 0,
+        "xp_evo": 540,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2850,6 +3694,12 @@
             "speed": 85,
             "defense": 100,
             "special_defense": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 575,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2871,6 +3721,12 @@
             "speed": 100,
             "defense": 85,
             "special_defense": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 580,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2892,6 +3748,12 @@
             "speed": 90,
             "defense": 90,
             "special_defense": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 580,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2911,6 +3773,12 @@
             "speed": 50,
             "defense": 45,
             "special_defense": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 300,
+        "evo": {
+            "name": "Draco",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2930,6 +3798,12 @@
             "speed": 70,
             "defense": 65,
             "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 420,
+        "evo": {
+            "name": "Dracolosse",
+            "file": "pokemon_gen1_normal.json"
         }
     },
     {
@@ -2951,6 +3825,12 @@
             "speed": 80,
             "defense": 95,
             "special_defense": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 600,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2971,6 +3851,12 @@
             "speed": 130,
             "defense": 90,
             "special_defense": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 680,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2991,14 +3877,12 @@
             "speed": 100,
             "defense": 100,
             "special_defense": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 600,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     }
-    
-
-    
-
-
-
-
-
 ]

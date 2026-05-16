@@ -218,13 +218,13 @@ pokeball_url = next((item["image"] for item in items_data if item["name"].lower(
 #####################################
 # --- 🔥 GEN 1 — KANTO ---
 #####################################
-pokemon_file_path = os.path.join(json_dir, "pokemons.json")
+pokemon_file_path = os.path.join(json_dir, "pokemon_gen1_normaljson")
 with open(pokemon_file_path, "r", encoding="utf-8") as f:
     kanto_pokemon_data = json.load(f)
 
-with open(os.path.join(json_dir, "pokemons_shiny.json"), "r", encoding="utf-8") as f:
+with open(os.path.join(json_dir, "pokemon_gen1_normaljson"), "r", encoding="utf-8") as f:
     kanto_shiny_data = json.load(f)
-'''
+
 #####################################
 # --- 🔥 GEN 2 — JOHTO ---
 #####################################
@@ -240,7 +240,7 @@ gen2_shiny_path = os.path.join(json_dir, "pokemon_gen2_shiny.json")
 if os.path.exists(gen2_shiny_path):
     with open(gen2_shiny_path, "r", encoding="utf-8") as f:
         johto_shiny_data = json.load(f)
-
+'''
 #####################################
 # --- 🔥 GEN 3 — HOENN ---
 #####################################
