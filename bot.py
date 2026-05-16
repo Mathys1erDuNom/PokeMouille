@@ -218,11 +218,11 @@ pokeball_url = next((item["image"] for item in items_data if item["name"].lower(
 #####################################
 # --- 🔥 GEN 1 — KANTO ---
 #####################################
-pokemon_file_path = os.path.join(json_dir, "pokemon_gen1_normaljson")
+pokemon_file_path = os.path.join(json_dir, "pokemon_gen1_normal.json")
 with open(pokemon_file_path, "r", encoding="utf-8") as f:
     kanto_pokemon_data = json.load(f)
 
-with open(os.path.join(json_dir, "pokemon_gen1_normaljson"), "r", encoding="utf-8") as f:
+with open(os.path.join(json_dir, "pokemon_gen1_shiny.json"), "r", encoding="utf-8") as f:
     kanto_shiny_data = json.load(f)
 
 #####################################
