@@ -3,7 +3,7 @@
         "name": "Bulbizarre",
         "type": ["plante"],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
-        "attacks": ["Fouet Lianes", "Charge","Écras’Face"],
+        "attacks": ["Fouet Lianes", "Charge"],
         "stats": {
             "hp": 45,
             "attack": 49,

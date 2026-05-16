@@ -464,6 +464,12 @@
     "effect": "baisse precision"
   },
   {
+    "name": "Ultralaser",
+    "type": "normal",
+    "damage": 130,
+    "category": "speciale"
+  },
+  {
     "name": "Vent Violent",
     "type": "vol",
     "damage": 120,
@@ -642,7 +648,7 @@
     "category": "speciale"
   },
   {
-    "name": "Colère",
+    "name": "Colere",
     "type": "dragon",
     "damage": 90,
     "category": "physique"
