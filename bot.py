@@ -295,16 +295,16 @@ if os.path.exists(gen5_shiny_path):
 # --- 🔥 POOLS GLOBAUX (toutes régions) ---
 #####################################
 full_pokemon_data = (
-    kanto_pokemon_data #+
- #   johto_pokemon_data +
+    kanto_pokemon_data +
+   johto_pokemon_data# +
   #  hoenn_pokemon_data +
    # sinnoh_pokemon_data +
     #unys_pokemon_data
 )
 
 full_pokemon_shiny_data = (
-    kanto_shiny_data #+
-   # johto_shiny_data +
+    kanto_shiny_data +
+    johto_shiny_data #+
     #hoenn_shiny_data +
     #sinnoh_shiny_data +
     #unys_shiny_data
