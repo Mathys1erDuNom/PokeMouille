@@ -18,8 +18,8 @@ import sys
 script_dir  = os.path.dirname(os.path.abspath(__file__))
 root_dir    = os.path.join(script_dir, "..")
 
-INPUT_FILE  = os.path.join(root_dir, "json", "new_pokemons", "pokemon_gen5_normal.json")
-OUTPUT_FILE = os.path.join(root_dir, "json", "new_pokemons", "pokemon_gen5_shiny.json")
+INPUT_FILE  = os.path.join(root_dir, "json",  "pokemon_legendaire_normal.json")
+OUTPUT_FILE = os.path.join(root_dir, "json",  "pokemon_legendaire_shiny.json")
 # ──────────────────────────────────────────────────────────────────────────────
 
 
