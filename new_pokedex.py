@@ -233,15 +233,18 @@ class PokemonButton(Button):
             y += 25
 
         # --- XP (à droite des types) ---
-        # --- XP (à droite des types) ---
+        # --- XP ---
         current_xp = p_data.get("current_xp", 0)
         xp_evo     = p_data.get("xp_evo", 0)
-        xp_x, xp_y =  450, 365 #500, 170
-        draw.text((xp_x, xp_y), "XP actuel :", font=font_bold, fill="black")
-        if xp_evo > 0:
-            draw.text((xp_x, xp_y + 25), f"{current_xp} / {xp_evo}", font=font, fill="black")
+        xp_x, xp_y = 450, 365
+        if xp_evo == -1:
+            draw.text((xp_x, xp_y),      "XP actuel :", font=font_bold, fill="black")
+            draw.text((xp_x, xp_y + 25), "Pas d'évo",   font=font,      fill="black")
+        elif xp_evo > 0:
+            draw.text((xp_x, xp_y),      "XP actuel :",              font=font_bold, fill="black")
+            draw.text((xp_x, xp_y + 25), f"{current_xp} / {xp_evo}", font=font,      fill="black")
         else:
-            draw.text((xp_x, xp_y + 25), f"{current_xp}  |  Pas d'évolution", font=font, fill="black")
+            draw.text((xp_x, xp_y),      "Pas d'évo", font=font_bold, fill="black")
 
         # --- Stats ---
         x, y = pos_stats
