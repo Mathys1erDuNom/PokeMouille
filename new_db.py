@@ -515,3 +515,31 @@ def setupxp(bot):
             f"✨ IV hérités **+4** sur toutes les stats.\n"
             f"🗑️ **{pokemon['name']}** a été retiré de la collection."
         )
+
+        
+    @bot.command(name="setxpevo")
+    @commands.has_permissions(administrator=True)
+    async def setxpevo(ctx, member: discord.Member, pokemon_name: str, xp_evo: int):
+        """
+        !setxpevo @utilisateur <nom_pokemon> <xp_evo>
+        Définit le seuil d'XP pour l'évolution d'un Pokémon.
+        """
+        user_id = str(member.id)
+
+        captures = get_new_captures(user_id)
+        pokemon  = next((p for p in captures if p["name"].lower() == pokemon_name.lower()), None)
+
+        if not pokemon:
+            await ctx.send(f"❌ **{pokemon_name}** introuvable dans la collection de {member.display_name}.")
+            return
+
+        cur.execute("""
+            UPDATE new_captures
+            SET xp_evo = %s, current_xp = 0
+            WHERE user_id = %s AND name = %s
+        """, (xp_evo, user_id, pokemon["name"]))
+        conn.commit()
+
+        await ctx.send(
+            f"✅ Seuil XP de **{pokemon['name']}** ({member.mention}) mis à jour : `0 / {xp_evo}`"
+        )    
