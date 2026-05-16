@@ -306,6 +306,53 @@ def evolve_pokemon(user_id, pokemon):
 def setupxp(bot):
 
 
+
+    @bot.command(name="setevo")
+    @commands.has_permissions(administrator=True)
+    async def setevo(ctx, member: discord.Member, pokemon_name: str, evo_name: str, evo_file: str):
+        """
+        !setevo @utilisateur <nom_pokemon> <nom_evolution> <fichier.json>
+        Modifie l'évolution d'un Pokémon et le fichier JSON dans lequel elle se trouve.
+        Utilise "pas_evo" comme nom et fichier pour supprimer l'évolution.
+        """
+        user_id  = str(member.id)
+        captures = get_new_captures(user_id)
+        pokemon  = next((p for p in captures if p["name"].lower() == pokemon_name.lower()), None)
+
+        if not pokemon:
+            await ctx.send(f"❌ **{pokemon_name}** introuvable dans la collection de {member.display_name}.")
+            return
+
+        # "pas_evo" → supprime l'évolution
+        if evo_name.lower() == "pas_evo":
+            new_evo = {"name": "pas evo", "file": "pas evo"}
+        else:
+            new_evo = {"name": evo_name, "file": evo_file}
+
+        cur.execute("""
+            UPDATE new_captures
+            SET evo = %s
+            WHERE user_id = %s AND name = %s
+        """, (Json(new_evo), user_id, pokemon["name"]))
+        conn.commit()
+
+        try:
+            from new_pokedex import invalidate_new_pokedex_cache
+            invalidate_new_pokedex_cache(user_id)
+        except ImportError:
+            pass
+
+        if evo_name.lower() == "pas_evo":
+            await ctx.send(
+                f"✅ L'évolution de **{pokemon['name']}** ({member.mention}) a été supprimée."
+            )
+        else:
+            await ctx.send(
+                f"✅ Évolution de **{pokemon['name']}** ({member.mention}) mise à jour !\n"
+                f"➡️ Évolue en **{evo_name}** (fichier : `{evo_file}`)"
+            )
+
+
     @bot.command(name="addattack")
     @commands.has_permissions(administrator=True)
     async def addattack(ctx, member: discord.Member, pokemon_name: str, *, attack_name: str):
