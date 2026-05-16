@@ -479,9 +479,7 @@ def setupxp(bot):
 
         # ── Bloqué définitivement ────────────────────────────────────────────────
         if can_evolve == "blocked":
-            await ctx.send(
-                f"🔒 **{pokemon['name']}** de {member.mention} ne peut plus gagner d'XP."
-            )
+            await ctx.send(f"🔒 **{pokemon['name']}** de {member.mention} ne peut plus gagner d'XP.")
             return
 
         # ── Seuil pas encore atteint ─────────────────────────────────────────────
@@ -499,7 +497,6 @@ def setupxp(bot):
         result = evolve_pokemon(user_id, pokemon)
 
         if not result["success"]:
-            # Pas d'évolution → bonus IV + bloque l'XP définitivement
             increase_pokemon_iv(user_id, pokemon["name"], 4)
             cur.execute("""
                 UPDATE new_captures
