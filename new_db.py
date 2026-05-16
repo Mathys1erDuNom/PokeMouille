@@ -305,6 +305,95 @@ def evolve_pokemon(user_id, pokemon):
 
 def setupxp(bot):
 
+
+    @bot.command(name="addattack")
+    @commands.has_permissions(administrator=True)
+    async def addattack(ctx, member: discord.Member, pokemon_name: str, *, attack_name: str):
+        """
+        !addattack @utilisateur <nom_pokemon> <nom_attaque>
+        Ajoute une attaque à un Pokémon. Si le Pokémon a déjà 4 attaques,
+        demande laquelle remplacer.
+        """
+        user_id  = str(member.id)
+        captures = get_new_captures(user_id)
+        pokemon  = next((p for p in captures if p["name"].lower() == pokemon_name.lower()), None)
+
+        if not pokemon:
+            await ctx.send(f"❌ **{pokemon_name}** introuvable dans la collection de {member.display_name}.")
+            return
+
+        attacks = pokemon.get("attacks", [])
+
+        # ── Moins de 4 attaques : ajout direct ──────────────────────────────────
+        if len(attacks) < 4:
+            attacks.append(attack_name)
+            cur.execute("""
+                UPDATE new_captures
+                SET attacks = %s
+                WHERE user_id = %s AND name = %s
+            """, (Json(attacks), user_id, pokemon["name"]))
+            conn.commit()
+
+            try:
+                from new_pokedex import invalidate_new_pokedex_cache
+                invalidate_new_pokedex_cache(user_id)
+            except ImportError:
+                pass
+
+            await ctx.send(
+                f"✅ L'attaque **{attack_name}** a été ajoutée à **{pokemon['name']}** "
+                f"de {member.mention} ! ({len(attacks)}/4 attaques)"
+            )
+            return
+
+        # ── 4 attaques : demande laquelle remplacer ──────────────────────────────
+        attack_list = "\n".join(f"{i+1}️⃣ {atk}" for i, atk in enumerate(attacks))
+        prompt_msg  = await ctx.send(
+            f"⚔️ **{pokemon['name']}** de {member.mention} possède déjà 4 attaques :\n"
+            f"{attack_list}\n\n"
+            f"Réponds avec le **numéro** (1-4) de l'attaque à remplacer par **{attack_name}**, "
+            f"ou `annuler` pour abandonner."
+        )
+
+        def check(m):
+            return (
+                m.author == ctx.author
+                and m.channel == ctx.channel
+                and (m.content.strip().lower() == "annuler" or m.content.strip() in ("1", "2", "3", "4"))
+            )
+
+        try:
+            reply = await bot.wait_for("message", check=check, timeout=30.0)
+        except Exception:
+            await ctx.send("⏰ Temps écoulé. Aucune modification effectuée.")
+            return
+
+        if reply.content.strip().lower() == "annuler":
+            await ctx.send("❌ Opération annulée.")
+            return
+
+        slot          = int(reply.content.strip()) - 1   # index 0-3
+        replaced      = attacks[slot]
+        attacks[slot] = attack_name
+
+        cur.execute("""
+            UPDATE new_captures
+            SET attacks = %s
+            WHERE user_id = %s AND name = %s
+        """, (Json(attacks), user_id, pokemon["name"]))
+        conn.commit()
+
+        try:
+            from new_pokedex import invalidate_new_pokedex_cache
+            invalidate_new_pokedex_cache(user_id)
+        except ImportError:
+            pass
+
+        await ctx.send(
+            f"✅ L'attaque **{replaced}** de **{pokemon['name']}** ({member.mention}) "
+            f"a été remplacée par **{attack_name}** !"
+        )
+
     @bot.command(name="addxp")
     @commands.has_permissions(administrator=True)
     async def addxp(ctx, member: discord.Member, pokemon_name: str, xp: int):
