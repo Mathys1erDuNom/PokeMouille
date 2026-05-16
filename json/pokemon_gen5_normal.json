@@ -9,7 +9,8 @@
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
-            "Poing Éclair"
+            "Poing Eclair",
+            "Psyko"
         ],
         "stats": {
             "hp": 100,
@@ -18,6 +19,12 @@
             "special_attack": 100,
             "special_defense": 100,
             "speed": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 600,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -27,9 +34,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/495.png",
         "attacks": [
-            "Danse Lames",
             "Coupe",
-            "Étreinte"
+            "Etreinte",
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 45,
@@ -38,6 +45,12 @@
             "special_attack": 45,
             "special_defense": 55,
             "speed": 63
+        },
+        "current_xp": 0,
+        "xp_evo": 308,
+        "evo": {
+            "name": "Lianaja",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -47,9 +60,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/496.png",
         "attacks": [
-            "Danse Lames",
+            "Fouet Lianes",
             "Coupe",
-            "Étreinte"
+            "Etreinte"
         ],
         "stats": {
             "hp": 60,
@@ -58,6 +71,12 @@
             "special_attack": 60,
             "special_defense": 75,
             "speed": 83
+        },
+        "current_xp": 0,
+        "xp_evo": 413,
+        "evo": {
+            "name": "Majaspic",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -67,9 +86,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/497.png",
         "attacks": [
-            "Danse Lames",
+            "Fouet Lianes",
             "Coupe",
-            "Étreinte"
+            "Etreinte",
+            "Tempete Verte"
         ],
         "stats": {
             "hp": 75,
@@ -78,6 +98,12 @@
             "special_attack": 75,
             "special_defense": 95,
             "speed": 113
+        },
+        "current_xp": 0,
+        "xp_evo": 528,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -98,6 +124,12 @@
             "special_attack": 45,
             "special_defense": 45,
             "speed": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 308,
+        "evo": {
+            "name": "Grotichon",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -109,7 +141,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/499.png",
         "attacks": [
             "Poing Feu",
-            "Poing Éclair",
+            "Poing Eclair",
             "Charge"
         ],
         "stats": {
@@ -119,6 +151,12 @@
             "special_attack": 70,
             "special_defense": 55,
             "speed": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 418,
+        "evo": {
+            "name": "Roitiflam",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -130,8 +168,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/500.png",
         "attacks": [
             "Poing Feu",
-            "Poing Éclair",
-            "Charge"
+            "Poing Eclair",
+            "Charge",
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 110,
@@ -140,6 +179,12 @@
             "special_attack": 100,
             "special_defense": 65,
             "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 528,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -149,7 +194,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/501.png",
         "attacks": [
-            "Danse Lames",
+            "Pistolet à O",
             "Coupe",
             "Charge"
         ],
@@ -160,6 +205,12 @@
             "special_attack": 63,
             "special_defense": 45,
             "speed": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 308,
+        "evo": {
+            "name": "Mateloutre",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -169,7 +220,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/502.png",
         "attacks": [
-            "Danse Lames",
+            "Pistolet à O",
             "Coupe",
             "Charge"
         ],
@@ -180,6 +231,12 @@
             "special_attack": 83,
             "special_defense": 60,
             "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 413,
+        "evo": {
+            "name": "Clamiral",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -189,9 +246,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/503.png",
         "attacks": [
-            "Danse Lames",
+            "Pistolet à O",
             "Coupe",
-            "Charge"
+            "Charge",
+            "Surf"
         ],
         "stats": {
             "hp": 95,
@@ -200,6 +258,12 @@
             "special_attack": 108,
             "special_defense": 70,
             "speed": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 528,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -209,7 +273,6 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/504.png",
         "attacks": [
-            "Danse Lames",
             "Coupe",
             "Souplesse"
         ],
@@ -220,6 +283,12 @@
             "special_attack": 35,
             "special_defense": 39,
             "speed": 42
+        },
+        "current_xp": 0,
+        "xp_evo": 255,
+        "evo": {
+            "name": "Miradar",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -229,9 +298,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/505.png",
         "attacks": [
-            "Poing Feu",
-            "Poing Glace",
-            "Poing Éclair"
+            "Coupe",
+            "Souplesse"
         ],
         "stats": {
             "hp": 60,
@@ -240,6 +308,12 @@
             "special_attack": 60,
             "special_defense": 69,
             "speed": 77
+        },
+        "current_xp": 0,
+        "xp_evo": 420,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -249,9 +323,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/506.png",
         "attacks": [
-            "Jet de Sable",
+    
             "Charge",
-            "Bélier"
+            "Belier"
         ],
         "stats": {
             "hp": 45,
@@ -260,6 +334,12 @@
             "special_attack": 25,
             "special_defense": 45,
             "speed": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 275,
+        "evo": {
+            "name": "Ponchien",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -270,8 +350,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/507.png",
         "attacks": [
             "Charge",
-            "Bélier",
-            "Groz’Yeux"
+            "Belier"
         ],
         "stats": {
             "hp": 65,
@@ -280,6 +359,12 @@
             "special_attack": 35,
             "special_defense": 65,
             "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 370,
+        "evo": {
+            "name": "Mastouffe",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -290,8 +375,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/508.png",
         "attacks": [
             "Charge",
-            "Bélier",
-            "Groz’Yeux"
+            "Belier"
         ],
         "stats": {
             "hp": 85,
@@ -300,6 +384,12 @@
             "special_attack": 45,
             "special_defense": 90,
             "speed": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 500,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -320,6 +410,12 @@
             "special_attack": 50,
             "special_defense": 37,
             "speed": 66
+        },
+        "current_xp": 0,
+        "xp_evo": 281,
+        "evo": {
+            "name": "Léopardus",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -340,6 +436,12 @@
             "special_attack": 88,
             "special_defense": 50,
             "speed": 106
+        },
+        "current_xp": 0,
+        "xp_evo": 446,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -360,6 +462,12 @@
             "special_attack": 53,
             "special_defense": 48,
             "speed": 64
+        },
+        "current_xp": 0,
+        "xp_evo": 316,
+        "evo": {
+            "name": "Feuiloutan",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -369,9 +477,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/512.png",
         "attacks": [
+            "Griffe",
             "Coupe",
-            "Groz’Yeux",
-            "Ultralaser"
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 75,
@@ -380,6 +488,12 @@
             "special_attack": 98,
             "special_defense": 63,
             "speed": 101
+        },
+        "current_xp": 0,
+        "xp_evo": 498,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -400,6 +514,12 @@
             "special_attack": 53,
             "special_defense": 48,
             "speed": 64
+        },
+        "current_xp": 0,
+        "xp_evo": 316,
+        "evo": {
+            "name": "Flamoutan",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -411,7 +531,7 @@
         "attacks": [
             "Poing Feu",
             "Coupe",
-            "Groz’Yeux"
+            "Griffe"
         ],
         "stats": {
             "hp": 75,
@@ -420,6 +540,12 @@
             "special_attack": 98,
             "special_defense": 63,
             "speed": 101
+        },
+        "current_xp": 0,
+        "xp_evo": 498,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -431,7 +557,8 @@
         "attacks": [
             "Poing Glace",
             "Griffe",
-            "Coupe"
+            "Coupe",
+            "Pistolet à O"
         ],
         "stats": {
             "hp": 50,
@@ -440,6 +567,12 @@
             "special_attack": 53,
             "special_defense": 48,
             "speed": 64
+        },
+        "current_xp": 0,
+        "xp_evo": 316,
+        "evo": {
+            "name": "Flotoutan",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -451,7 +584,7 @@
         "attacks": [
             "Poing Glace",
             "Coupe",
-            "Groz’Yeux"
+            "Pistolet à O"
         ],
         "stats": {
             "hp": 75,
@@ -460,6 +593,12 @@
             "special_attack": 98,
             "special_defense": 63,
             "speed": 101
+        },
+        "current_xp": 0,
+        "xp_evo": 498,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -469,9 +608,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/517.png",
         "attacks": [
-            "Sonic Boom",
-            "Rafale Psy",
-            "Cage Éclair"
+           
+            "Rafale Psy"
+  
         ],
         "stats": {
             "hp": 76,
@@ -480,6 +619,12 @@
             "special_attack": 67,
             "special_defense": 55,
             "speed": 24
+        },
+        "current_xp": 0,
+        "xp_evo": 292,
+        "evo": {
+            "name": "Mushana",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -489,9 +634,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/518.png",
         "attacks": [
-            "Rafale Psy",
-            "Ultralaser",
-            "Cage Éclair"
+            "Rafale Psy"
         ],
         "stats": {
             "hp": 116,
@@ -500,6 +643,12 @@
             "special_attack": 107,
             "special_defense": 95,
             "speed": 29
+        },
+        "current_xp": 0,
+        "xp_evo": 487,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -512,7 +661,7 @@
         "attacks": [
             "Coupe-Vent",
             "Tornade",
-            "Vol"
+            "Charge"
         ],
         "stats": {
             "hp": 50,
@@ -521,6 +670,12 @@
             "special_attack": 36,
             "special_defense": 30,
             "speed": 43
+        },
+        "current_xp": 0,
+        "xp_evo": 264,
+        "evo": {
+            "name": "Colombeau",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -533,7 +688,7 @@
         "attacks": [
             "Coupe-Vent",
             "Tornade",
-            "Vol"
+            "Cru-Ailes"
         ],
         "stats": {
             "hp": 62,
@@ -542,6 +697,12 @@
             "special_attack": 50,
             "special_defense": 42,
             "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 358,
+        "evo": {
+            "name": "Déflaisan",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -554,7 +715,7 @@
         "attacks": [
             "Coupe-Vent",
             "Tornade",
-            "Vol"
+            "Cru-Ailes"
         ],
         "stats": {
             "hp": 80,
@@ -563,6 +724,12 @@
             "special_attack": 65,
             "special_defense": 55,
             "speed": 93
+        },
+        "current_xp": 0,
+        "xp_evo": 488,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -572,9 +739,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/522.png",
         "attacks": [
-            "Écrasement",
+            "Ecrasement",
             "Double Pied",
-            "Jet de Sable"
+            "Tonnerre"
         ],
         "stats": {
             "hp": 45,
@@ -583,6 +750,12 @@
             "special_attack": 50,
             "special_defense": 32,
             "speed": 76
+        },
+        "current_xp": 0,
+        "xp_evo": 295,
+        "evo": {
+            "name": "Zéblitz",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -592,9 +765,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/523.png",
         "attacks": [
-            "Écrasement",
+            "Ecrasement",
             "Double Pied",
-            "Jet de Sable"
+            "Tonnerre"
         ],
         "stats": {
             "hp": 75,
@@ -603,6 +776,12 @@
             "special_attack": 80,
             "special_defense": 63,
             "speed": 116
+        },
+        "current_xp": 0,
+        "xp_evo": 497,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -612,7 +791,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/524.png",
         "attacks": [
-            "Jet de Sable",
+        
+            "Jet de Pierre",
             "Coup d’Boule",
             "Charge"
         ],
@@ -623,6 +803,12 @@
             "special_attack": 25,
             "special_defense": 25,
             "speed": 15
+        },
+        "current_xp": 0,
+        "xp_evo": 280,
+        "evo": {
+            "name": "Géolithe",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -632,7 +818,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/525.png",
         "attacks": [
-            "Jet de Sable",
+            "Jet de Pierre",
             "Coup d’Boule",
             "Charge"
         ],
@@ -643,6 +829,12 @@
             "special_attack": 50,
             "special_defense": 40,
             "speed": 20
+        },
+        "current_xp": 0,
+        "xp_evo": 390,
+        "evo": {
+            "name": "Gigalithe",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -652,7 +844,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/526.png",
         "attacks": [
-            "Jet de Sable",
+            "Jet de Pierre",
             "Coup d’Boule",
             "Charge"
         ],
@@ -663,6 +855,12 @@
             "special_attack": 60,
             "special_defense": 80,
             "speed": 25
+        },
+        "current_xp": 0,
+        "xp_evo": 515,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -674,8 +872,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/527.png",
         "attacks": [
             "Tornade",
-            "Vol",
-            "Ultrason"
+            "Rafale Psy"
+            
         ],
         "stats": {
             "hp": 65,
@@ -684,6 +882,12 @@
             "special_attack": 55,
             "special_defense": 43,
             "speed": 72
+        },
+        "current_xp": 0,
+        "xp_evo": 323,
+        "evo": {
+            "name": "Rhinolove",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -695,8 +899,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/528.png",
         "attacks": [
             "Tornade",
-            "Vol",
-            "Ultralaser"
+            "Rafale Psy"
         ],
         "stats": {
             "hp": 67,
@@ -705,6 +908,12 @@
             "special_attack": 77,
             "special_defense": 55,
             "speed": 114
+        },
+        "current_xp": 0,
+        "xp_evo": 425,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -715,8 +924,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/529.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
-            "Coupe"
+            "Coupe",
+            "Seisme"
         ],
         "stats": {
             "hp": 60,
@@ -725,6 +934,12 @@
             "special_attack": 30,
             "special_defense": 45,
             "speed": 68
+        },
+        "current_xp": 0,
+        "xp_evo": 328,
+        "evo": {
+            "name": "Minotaupe",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -736,8 +951,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
-            "Coupe"
+            "Seisme",
+            "Coupe",
+            "Griffe Acier"
         ],
         "stats": {
             "hp": 110,
@@ -746,6 +962,12 @@
             "special_attack": 50,
             "special_defense": 65,
             "speed": 88
+        },
+        "current_xp": 0,
+        "xp_evo": 508,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -755,7 +977,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/531.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Torgnoles",
             "Ultimapoing"
         ],
@@ -766,6 +988,12 @@
             "special_attack": 60,
             "special_defense": 86,
             "speed": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 445,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -775,7 +1003,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/532.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Poing Comète",
             "Ultimapoing"
         ],
@@ -786,6 +1014,12 @@
             "special_attack": 25,
             "special_defense": 35,
             "speed": 35
+        },
+        "current_xp": 0,
+        "xp_evo": 305,
+        "evo": {
+            "name": "Ouvrifier",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -795,7 +1029,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/533.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Ultimapoing",
             "Poing Feu"
         ],
@@ -806,6 +1040,12 @@
             "special_attack": 40,
             "special_defense": 50,
             "speed": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 405,
+        "evo": {
+            "name": "Bétochef",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -815,7 +1055,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/534.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Ultimapoing",
             "Poing Feu"
         ],
@@ -826,6 +1066,12 @@
             "special_attack": 55,
             "special_defense": 65,
             "speed": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 505,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -835,9 +1081,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/535.png",
         "attacks": [
-            "Rugissement",
-            "Ultrason",
-            "Acide"
+            
+          "Pistolet à O"
+  
         ],
         "stats": {
             "hp": 50,
@@ -846,6 +1092,12 @@
             "special_attack": 50,
             "special_defense": 40,
             "speed": 64
+        },
+        "current_xp": 0,
+        "xp_evo": 294,
+        "evo": {
+            "name": "Batracné",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -856,9 +1108,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/536.png",
         "attacks": [
-            "Rugissement",
-            "Ultrason",
-            "Acide"
+          
+            "Pistolet à O",
+            "Seisme"
         ],
         "stats": {
             "hp": 75,
@@ -867,6 +1119,12 @@
             "special_attack": 65,
             "special_defense": 55,
             "speed": 69
+        },
+        "current_xp": 0,
+        "xp_evo": 384,
+        "evo": {
+            "name": "Crapustule",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -878,7 +1136,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/537.png",
         "attacks": [
             "Ultimapoing",
-            "Poing Glace",
+            "Pistolet à O",
+            "Seisme",
             "Ultimawashi"
         ],
         "stats": {
@@ -888,6 +1147,12 @@
             "special_attack": 85,
             "special_defense": 75,
             "speed": 74
+        },
+        "current_xp": 0,
+        "xp_evo": 509,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -908,6 +1173,12 @@
             "special_attack": 30,
             "special_defense": 85,
             "speed": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 465,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -917,7 +1188,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/539.png",
         "attacks": [
-            "Poing Karaté",
+            "Poing Karate",
             "Ultimapoing",
             "Poing Feu"
         ],
@@ -928,6 +1199,12 @@
             "special_attack": 30,
             "special_defense": 75,
             "speed": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 465,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -939,7 +1216,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/540.png",
         "attacks": [
             "Coupe-Vent",
-            "Coupe",
+            "Bourdon",
             "Charge"
         ],
         "stats": {
@@ -949,6 +1226,12 @@
             "special_attack": 40,
             "special_defense": 60,
             "speed": 42
+        },
+        "current_xp": 0,
+        "xp_evo": 310,
+        "evo": {
+            "name": "Couverdure",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -959,9 +1242,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/541.png",
         "attacks": [
-            "Coupe",
-            "Charge",
-            "Bélier"
+            "Coupe-Vent",
+            "Bourdon",
+            "Charge"
         ],
         "stats": {
             "hp": 55,
@@ -970,6 +1253,12 @@
             "special_attack": 50,
             "special_defense": 80,
             "speed": 42
+        },
+        "current_xp": 0,
+        "xp_evo": 380,
+        "evo": {
+            "name": "Manternel",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -980,9 +1269,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/542.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Charge"
+            "Coupe-Vent",
+            "Bourdon",
+            "Charge",
+            "Tempete Verte"
         ],
         "stats": {
             "hp": 75,
@@ -991,6 +1281,12 @@
             "special_attack": 70,
             "special_defense": 80,
             "speed": 92
+        },
+        "current_xp": 0,
+        "xp_evo": 500,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1001,9 +1297,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/543.png",
         "attacks": [
-            "Bélier",
-            "Damoclès",
-            "Dard-Venin"
+            "Belier",
+      
+            "Dard-Venin",
+            "Direct Toxik"
         ],
         "stats": {
             "hp": 30,
@@ -1012,6 +1309,12 @@
             "special_attack": 30,
             "special_defense": 39,
             "speed": 57
+        },
+        "current_xp": 0,
+        "xp_evo": 260,
+        "evo": {
+            "name": "Scobolide",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1022,9 +1325,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/544.png",
         "attacks": [
-            "Bélier",
-            "Damoclès",
-            "Dard-Venin"
+            "Belier",
+      
+            "Dard-Venin",
+            "Direct Toxik"
         ],
         "stats": {
             "hp": 40,
@@ -1033,6 +1337,12 @@
             "special_attack": 40,
             "special_defense": 79,
             "speed": 47
+        },
+        "current_xp": 0,
+        "xp_evo": 360,
+        "evo": {
+            "name": "Brutapode",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1043,9 +1353,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/545.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Bélier"
+            "Belier",
+      
+            "Dard-Venin",
+            "Direct Toxik"
         ],
         "stats": {
             "hp": 60,
@@ -1054,6 +1365,12 @@
             "special_attack": 55,
             "special_defense": 69,
             "speed": 112
+        },
+        "current_xp": 0,
+        "xp_evo": 485,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1064,9 +1381,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/546.png",
         "attacks": [
-            "Vole-Vie",
-            "Méga-Sangsue",
-            "Vampigraine"
+           
+            "Canon Graine",
+            "Marelle"
         ],
         "stats": {
             "hp": 40,
@@ -1075,6 +1392,12 @@
             "special_attack": 37,
             "special_defense": 50,
             "speed": 66
+        },
+        "current_xp": 0,
+        "xp_evo": 280,
+        "evo": {
+            "name": "Farfaduvet",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1085,9 +1408,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/547.png",
         "attacks": [
-            "Tornade",
-            "Ultralaser",
-            "Vole-Vie"
+                   
+            "Canon Graine",
+            "Marelle"
         ],
         "stats": {
             "hp": 60,
@@ -1096,6 +1419,12 @@
             "special_attack": 77,
             "special_defense": 75,
             "speed": 116
+        },
+        "current_xp": 0,
+        "xp_evo": 480,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1105,9 +1434,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/548.png",
         "attacks": [
-            "Coupe",
-            "Vole-Vie",
-            "Méga-Sangsue"
+            "Tempete Verte",
+            "Charge"
         ],
         "stats": {
             "hp": 45,
@@ -1116,6 +1444,12 @@
             "special_attack": 70,
             "special_defense": 50,
             "speed": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 280,
+        "evo": {
+            "name": "Fragilady",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1125,9 +1459,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/549.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Ultralaser"
+            "Tempete Verte",
+            "Charge"
         ],
         "stats": {
             "hp": 70,
@@ -1136,6 +1469,12 @@
             "special_attack": 110,
             "special_defense": 75,
             "speed": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 480,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1145,9 +1484,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/550.png",
         "attacks": [
-            "Coupe",
+            
             "Coup d’Boule",
-            "Charge"
+            "Charge",
+            "Pistolet à O"
         ],
         "stats": {
             "hp": 70,
@@ -1156,6 +1496,12 @@
             "special_attack": 80,
             "special_defense": 55,
             "speed": 98
+        },
+        "current_xp": 0,
+        "xp_evo": 460,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1167,8 +1513,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/551.png",
         "attacks": [
             "Coupe",
-            "Jet de Sable",
-            "Plaquage"
+            "Seisme",
+            "Tranche-Nuit"
         ],
         "stats": {
             "hp": 50,
@@ -1177,6 +1523,12 @@
             "special_attack": 35,
             "special_defense": 35,
             "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 292,
+        "evo": {
+            "name": "Escroco",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1187,9 +1539,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/552.png",
         "attacks": [
-            "Ultimapoing",
             "Coupe",
-            "Ultimawashi"
+            "Seisme",
+            "Tranche-Nuit"
         ],
         "stats": {
             "hp": 60,
@@ -1198,6 +1550,12 @@
             "special_attack": 45,
             "special_defense": 45,
             "speed": 74
+        },
+        "current_xp": 0,
+        "xp_evo": 351,
+        "evo": {
+            "name": "Crocorible",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1208,9 +1566,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/553.png",
         "attacks": [
-            "Ultimapoing",
             "Coupe",
-            "Ultimawashi"
+            "Seisme",
+            "Tranche-Nuit",
+            "Morsure"
         ],
         "stats": {
             "hp": 95,
@@ -1219,6 +1578,12 @@
             "special_attack": 65,
             "special_defense": 70,
             "speed": 92
+        },
+        "current_xp": 0,
+        "xp_evo": 519,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1239,6 +1604,12 @@
             "special_attack": 15,
             "special_defense": 45,
             "speed": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 315,
+        "evo": {
+            "name": "Darumacho",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1259,6 +1630,12 @@
             "special_attack": 30,
             "special_defense": 55,
             "speed": 95
+        },
+        "current_xp": 0,
+        "xp_evo": 480,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1268,9 +1645,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/556.png",
         "attacks": [
-            "Dard-Nuée",
-            "Picpic",
-            "Vole-Vie"
+            "Canon Graine",
+            "Charge"
+          
         ],
         "stats": {
             "hp": 75,
@@ -1279,6 +1656,12 @@
             "special_attack": 106,
             "special_defense": 67,
             "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 461,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1289,9 +1672,11 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/557.png",
         "attacks": [
-            "Danse Lames",
+         
             "Coupe",
-            "Jet de Sable"
+            "Pique",
+            "Eboulement"
+         
         ],
         "stats": {
             "hp": 50,
@@ -1300,6 +1685,12 @@
             "special_attack": 35,
             "special_defense": 35,
             "speed": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 325,
+        "evo": {
+            "name": "Crabaraque",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1310,9 +1701,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/558.png",
         "attacks": [
-            "Danse Lames",
             "Coupe",
-            "Jet de Sable"
+            "Pique",
+            "Eboulement"
         ],
         "stats": {
             "hp": 70,
@@ -1321,6 +1712,12 @@
             "special_attack": 65,
             "special_defense": 75,
             "speed": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 485,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1333,7 +1730,8 @@
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
-            "Poing Glace"
+            "Poing Glace",
+            "Vibrobscur"
         ],
         "stats": {
             "hp": 50,
@@ -1342,6 +1740,12 @@
             "special_attack": 35,
             "special_defense": 70,
             "speed": 48
+        },
+        "current_xp": 0,
+        "xp_evo": 348,
+        "evo": {
+            "name": "Baggaïd",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1354,7 +1758,8 @@
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
-            "Poing Glace"
+            "Poing Glace",
+            "Vibrobscur"
         ],
         "stats": {
             "hp": 65,
@@ -1363,6 +1768,12 @@
             "special_attack": 45,
             "special_defense": 115,
             "speed": 58
+        },
+        "current_xp": 0,
+        "xp_evo": 488,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1375,7 +1786,7 @@
         "attacks": [
             "Tornade",
             "Cyclone",
-            "Vol"
+            "Rafale Psy"
         ],
         "stats": {
             "hp": 72,
@@ -1384,6 +1795,12 @@
             "special_attack": 103,
             "special_defense": 80,
             "speed": 97
+        },
+        "current_xp": 0,
+        "xp_evo": 490,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1393,9 +1810,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/562.png",
         "attacks": [
-            "Entrave",
-            "Toxik",
-            "Psyko"
+            
+            "Psyko",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 38,
@@ -1404,6 +1821,12 @@
             "special_attack": 55,
             "special_defense": 65,
             "speed": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 303,
+        "evo": {
+            "name": "Tutankafer",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1413,9 +1836,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/563.png",
         "attacks": [
-            "Entrave",
-            "Ultralaser",
-            "Toxik"
+            "Psyko",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 58,
@@ -1424,6 +1846,12 @@
             "special_attack": 95,
             "special_defense": 105,
             "speed": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 483,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1434,9 +1862,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/564.png",
         "attacks": [
-            "Souplesse",
-            "Plaquage",
-            "Morsure"
+            "Surf",
+            "Eboulement"
         ],
         "stats": {
             "hp": 54,
@@ -1445,6 +1872,12 @@
             "special_attack": 53,
             "special_defense": 45,
             "speed": 22
+        },
+        "current_xp": 0,
+        "xp_evo": 355,
+        "evo": {
+            "name": "Mégapagos",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1455,9 +1888,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/565.png",
         "attacks": [
-            "Plaquage",
-            "Morsure",
-            "Pistolet à O"
+            "Surf",
+            "Eboulement"
         ],
         "stats": {
             "hp": 74,
@@ -1466,6 +1898,12 @@
             "special_attack": 83,
             "special_defense": 65,
             "speed": 32
+        },
+        "current_xp": 0,
+        "xp_evo": 495,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1478,7 +1916,7 @@
         "attacks": [
             "Coupe",
             "Cru-Ailes",
-            "Mania"
+            "Eboulement"
         ],
         "stats": {
             "hp": 55,
@@ -1487,6 +1925,12 @@
             "special_attack": 74,
             "special_defense": 45,
             "speed": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 401,
+        "evo": {
+            "name": "Aéroptéryx",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1499,7 +1943,7 @@
         "attacks": [
             "Coupe",
             "Cru-Ailes",
-            "Vol"
+            "Eboulement"
         ],
         "stats": {
             "hp": 75,
@@ -1508,6 +1952,12 @@
             "special_attack": 112,
             "special_defense": 65,
             "speed": 110
+        },
+        "current_xp": 0,
+        "xp_evo": 567,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1517,9 +1967,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/568.png",
         "attacks": [
-            "Écras’Face",
-            "Torgnoles",
-            "Jet de Sable"
+            "EcraseFace",
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 50,
@@ -1528,6 +1977,12 @@
             "special_attack": 40,
             "special_defense": 62,
             "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 329,
+        "evo": {
+            "name": "Miasmax",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1537,9 +1992,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/569.png",
         "attacks": [
-            "Écras’Face",
-            "Torgnoles",
-            "Plaquage"
+            "EcraseFace",
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 80,
@@ -1548,6 +2002,12 @@
             "special_attack": 60,
             "special_defense": 82,
             "speed": 75
+        },
+        "current_xp": 0,
+        "xp_evo": 474,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1558,7 +2018,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/570.png",
         "attacks": [
             "Griffe",
-            "Danse Lames",
+            "Tranche-Nuit",
             "Coupe"
         ],
         "stats": {
@@ -1568,6 +2028,12 @@
             "special_attack": 80,
             "special_defense": 40,
             "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 330,
+        "evo": {
+            "name": "Zoroark",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1577,9 +2043,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/571.png",
         "attacks": [
-            "Ultimapoing",
             "Griffe",
-            "Danse Lames"
+            "Tranche-Nuit",
+            "Coupe"
         ],
         "stats": {
             "hp": 60,
@@ -1588,6 +2054,12 @@
             "special_attack": 120,
             "special_defense": 60,
             "speed": 105
+        },
+        "current_xp": 0,
+        "xp_evo": 510,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1597,7 +2069,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/572.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Torgnoles",
             "Souplesse"
         ],
@@ -1608,6 +2080,12 @@
             "special_attack": 40,
             "special_defense": 40,
             "speed": 75
+        },
+        "current_xp": 0,
+        "xp_evo": 300,
+        "evo": {
+            "name": "Pashmilla",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1617,9 +2095,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/573.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Souplesse",
-            "Bélier"
+            "Belier"
         ],
         "stats": {
             "hp": 75,
@@ -1628,6 +2106,12 @@
             "special_attack": 65,
             "special_defense": 60,
             "speed": 115
+        },
+        "current_xp": 0,
+        "xp_evo": 470,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1637,7 +2121,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/574.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Torgnoles",
             "Rafale Psy"
         ],
@@ -1648,6 +2132,12 @@
             "special_attack": 55,
             "special_defense": 65,
             "speed": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 290,
+        "evo": {
+            "name": "Mesmérella",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1657,7 +2147,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/575.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Torgnoles",
             "Rafale Psy"
         ],
@@ -1668,6 +2158,12 @@
             "special_attack": 75,
             "special_defense": 85,
             "speed": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 390,
+        "evo": {
+            "name": "Sidérella",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1677,9 +2173,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/576.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Torgnoles",
-            "Plaquage"
+            "Rafale Psy"
         ],
         "stats": {
             "hp": 70,
@@ -1688,6 +2184,12 @@
             "special_attack": 95,
             "special_defense": 110,
             "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 490,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1697,9 +2199,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/577.png",
         "attacks": [
-            "Rafale Psy",
-            "Cage Éclair",
-            "Fatal-Foudre"
+            "Rafale Psy"
+         
         ],
         "stats": {
             "hp": 45,
@@ -1708,6 +2209,12 @@
             "special_attack": 105,
             "special_defense": 50,
             "speed": 20
+        },
+        "current_xp": 0,
+        "xp_evo": 290,
+        "evo": {
+            "name": "Méios",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1717,9 +2224,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/578.png",
         "attacks": [
-            "Rafale Psy",
-            "Cage Éclair",
-            "Fatal-Foudre"
+            "Rafale Psy"
         ],
         "stats": {
             "hp": 65,
@@ -1728,6 +2233,12 @@
             "special_attack": 125,
             "special_defense": 60,
             "speed": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 370,
+        "evo": {
+            "name": "Symbios",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1737,9 +2248,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/579.png",
         "attacks": [
-            "Ultimapoing",
-            "Poing Feu",
-            "Poing Glace"
+            "Rafale Psy"
         ],
         "stats": {
             "hp": 110,
@@ -1748,6 +2257,12 @@
             "special_attack": 125,
             "special_defense": 85,
             "speed": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 490,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1760,7 +2275,7 @@
         "attacks": [
             "Tornade",
             "Cru-Ailes",
-            "Vol"
+            "Pistolet à O"
         ],
         "stats": {
             "hp": 62,
@@ -1769,6 +2284,12 @@
             "special_attack": 44,
             "special_defense": 50,
             "speed": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 305,
+        "evo": {
+            "name": "Lakmécygne",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1781,7 +2302,7 @@
         "attacks": [
             "Tornade",
             "Cru-Ailes",
-            "Vol"
+            "Pistolet à O"
         ],
         "stats": {
             "hp": 75,
@@ -1790,6 +2311,12 @@
             "special_attack": 87,
             "special_defense": 63,
             "speed": 98
+        },
+        "current_xp": 0,
+        "xp_evo": 473,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1799,9 +2326,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/582.png",
         "attacks": [
-            "Brume",
-            "Laser Glace",
-            "Blizzard"
+        
+            "Laser Glace"
         ],
         "stats": {
             "hp": 36,
@@ -1810,6 +2336,12 @@
             "special_attack": 65,
             "special_defense": 60,
             "speed": 44
+        },
+        "current_xp": 0,
+        "xp_evo": 305,
+        "evo": {
+            "name": "Sorboul",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1819,9 +2351,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/583.png",
         "attacks": [
-            "Brume",
-            "Laser Glace",
-            "Blizzard"
+          
+            "Laser Glace"
         ],
         "stats": {
             "hp": 51,
@@ -1830,6 +2361,12 @@
             "special_attack": 80,
             "special_defense": 75,
             "speed": 59
+        },
+        "current_xp": 0,
+        "xp_evo": 395,
+        "evo": {
+            "name": "Sorbouboul",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1839,9 +2376,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/584.png",
         "attacks": [
-            "Brume",
-            "Laser Glace",
-            "Blizzard"
+      
+            "Laser Glace"
         ],
         "stats": {
             "hp": 71,
@@ -1850,6 +2386,12 @@
             "special_attack": 110,
             "special_defense": 95,
             "speed": 79
+        },
+        "current_xp": 0,
+        "xp_evo": 535,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1861,8 +2403,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/585.png",
         "attacks": [
             "Double Pied",
-            "Pied Sauté",
-            "Jet de Sable"
+            "Pied Saute"
+           
         ],
         "stats": {
             "hp": 60,
@@ -1871,6 +2413,12 @@
             "special_attack": 40,
             "special_defense": 50,
             "speed": 75
+        },
+        "current_xp": 0,
+        "xp_evo": 335,
+        "evo": {
+            "name": "Haydaim",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1881,9 +2429,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/586.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Double Pied"
+            "Double Pied",
+            "Pied Saute",
+            "Canon Graine"
         ],
         "stats": {
             "hp": 80,
@@ -1892,6 +2440,12 @@
             "special_attack": 60,
             "special_defense": 70,
             "speed": 95
+        },
+        "current_xp": 0,
+        "xp_evo": 475,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1903,8 +2457,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/587.png",
         "attacks": [
             "Coupe",
-            "Mimi-Queue",
-            "Lance-Soleil"
+
+            "Tonnerre"
         ],
         "stats": {
             "hp": 55,
@@ -1913,6 +2467,12 @@
             "special_attack": 75,
             "special_defense": 60,
             "speed": 103
+        },
+        "current_xp": 0,
+        "xp_evo": 428,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1922,9 +2482,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/588.png",
         "attacks": [
-            "Danse Lames",
+
             "Coupe",
-            "Coup d’Boule"
+            "Pique"
         ],
         "stats": {
             "hp": 50,
@@ -1933,6 +2493,12 @@
             "special_attack": 40,
             "special_defense": 45,
             "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 315,
+        "evo": {
+            "name": "Lançargot",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1943,9 +2509,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/589.png",
         "attacks": [
-            "Danse Lames",
             "Coupe",
-            "Coup d’Boule"
+            "Pique",
+            "Luminocanon"
         ],
         "stats": {
             "hp": 70,
@@ -1954,6 +2520,12 @@
             "special_attack": 60,
             "special_defense": 105,
             "speed": 20
+        },
+        "current_xp": 0,
+        "xp_evo": 495,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -1964,9 +2536,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/590.png",
         "attacks": [
-            "Plaquage",
-            "Vole-Vie",
-            "Méga-Sangsue"
+        
+            "Fouet Lianes",
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 69,
@@ -1975,6 +2547,12 @@
             "special_attack": 55,
             "special_defense": 55,
             "speed": 15
+        },
+        "current_xp": 0,
+        "xp_evo": 294,
+        "evo": {
+            "name": "Gaulet",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -1985,9 +2563,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/591.png",
         "attacks": [
-            "Plaquage",
-            "Ultralaser",
-            "Vole-Vie"
+            "Fouet Lianes",
+            "Bomb-Beurk"
         ],
         "stats": {
             "hp": 114,
@@ -1996,6 +2573,12 @@
             "special_attack": 85,
             "special_defense": 80,
             "speed": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 464,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2006,9 +2589,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/592.png",
         "attacks": [
-            "Étreinte",
+            "Etreinte",
             "Dard-Venin",
-            "Brume"
+            "Surf"
         ],
         "stats": {
             "hp": 55,
@@ -2017,6 +2600,12 @@
             "special_attack": 65,
             "special_defense": 85,
             "speed": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 335,
+        "evo": {
+            "name": "Moyade",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2027,9 +2616,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/593.png",
         "attacks": [
-            "Étreinte",
+            "Etreinte",
             "Dard-Venin",
-            "Pistolet à O"
+            "Surf",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 100,
@@ -2038,6 +2628,12 @@
             "special_attack": 85,
             "special_defense": 105,
             "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 480,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2047,9 +2643,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/594.png",
         "attacks": [
-            "Écras’Face",
-            "Torgnoles",
-            "Plaquage"
+            "Pistolet à O",
+            "Charge"
         ],
         "stats": {
             "hp": 165,
@@ -2058,6 +2653,12 @@
             "special_attack": 40,
             "special_defense": 45,
             "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 470,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2068,9 +2669,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/595.png",
         "attacks": [
-            "Coupe",
-            "Dard-Venin",
-            "Dard-Nuée"
+            "Pique",
+            "Tonnerre"
+           
         ],
         "stats": {
             "hp": 50,
@@ -2079,6 +2680,12 @@
             "special_attack": 57,
             "special_defense": 50,
             "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 319,
+        "evo": {
+            "name": "Mygavolt",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2089,9 +2696,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/596.png",
         "attacks": [
-            "Coupe",
-            "Dard-Venin",
-            "Dard-Nuée"
+            "Pique",
+            "Tonnerre"
+            
         ],
         "stats": {
             "hp": 70,
@@ -2100,6 +2707,12 @@
             "special_attack": 97,
             "special_defense": 60,
             "speed": 108
+        },
+        "current_xp": 0,
+        "xp_evo": 472,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2110,9 +2723,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/597.png",
         "attacks": [
-            "Charge",
-            "Dard-Nuée",
-            "Vampigraine"
+            "Luminocanon",
+            "Fouet Lianes"
         ],
         "stats": {
             "hp": 44,
@@ -2121,6 +2733,12 @@
             "special_attack": 24,
             "special_defense": 86,
             "speed": 10
+        },
+        "current_xp": 0,
+        "xp_evo": 305,
+        "evo": {
+            "name": "Noacier",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2131,9 +2749,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/598.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Charge"
+            "Luminocanon",
+            "Fouet Lianes",
+            "Ultralaser"
         ],
         "stats": {
             "hp": 74,
@@ -2142,6 +2760,12 @@
             "special_attack": 54,
             "special_defense": 116,
             "speed": 20
+        },
+        "current_xp": 0,
+        "xp_evo": 489,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2151,8 +2775,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/599.png",
         "attacks": [
-            "Force Poigne",
-            "Étreinte",
+            "Luminocanon",
+            "Etreinte",
             "Ultralaser"
         ],
         "stats": {
@@ -2162,6 +2786,12 @@
             "special_attack": 45,
             "special_defense": 60,
             "speed": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 300,
+        "evo": {
+            "name": "Clic",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2171,8 +2801,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/600.png",
         "attacks": [
-            "Force Poigne",
-            "Étreinte",
+            "Luminocanon",
+            "Etreinte",
             "Ultralaser"
         ],
         "stats": {
@@ -2182,6 +2812,12 @@
             "special_attack": 70,
             "special_defense": 85,
             "speed": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 440,
+        "evo": {
+            "name": "Cliticlic",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2191,8 +2827,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/601.png",
         "attacks": [
-            "Force Poigne",
-            "Étreinte",
+            "Luminocanon",
+            "Etreinte",
             "Ultralaser"
         ],
         "stats": {
@@ -2202,6 +2838,12 @@
             "special_attack": 70,
             "special_defense": 85,
             "speed": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 520,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2212,8 +2854,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/602.png",
         "attacks": [
             "Charge",
-            "Cage Éclair",
-            "Étincelle"
+            "Tonnerre"
         ],
         "stats": {
             "hp": 35,
@@ -2222,6 +2863,12 @@
             "special_attack": 45,
             "special_defense": 40,
             "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 275,
+        "evo": {
+            "name": "Lampéroie",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2231,9 +2878,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/603.png",
         "attacks": [
-            "Étreinte",
-            "Coup d’Boule",
-            "Plaquage"
+            "Charge",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 65,
@@ -2242,6 +2888,12 @@
             "special_attack": 75,
             "special_defense": 70,
             "speed": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 405,
+        "evo": {
+            "name": "Ohmassacre",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2251,9 +2903,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/604.png",
         "attacks": [
-            "Poing Feu",
-            "Poing Éclair",
-            "Coupe"
+            "Charge",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 85,
@@ -2262,6 +2913,12 @@
             "special_attack": 105,
             "special_defense": 80,
             "speed": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 515,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2272,8 +2929,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/605.png",
         "attacks": [
             "Coup d’Boule",
-            "Rugissement",
-            "Entrave"
+            "Rafale Psy"
         ],
         "stats": {
             "hp": 55,
@@ -2282,6 +2938,12 @@
             "special_attack": 85,
             "special_defense": 55,
             "speed": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 335,
+        "evo": {
+            "name": "Neitram",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2292,7 +2954,6 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/606.png",
         "attacks": [
             "Coup d’Boule",
-            "Rugissement",
             "Rafale Psy"
         ],
         "stats": {
@@ -2302,6 +2963,12 @@
             "special_attack": 125,
             "special_defense": 95,
             "speed": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 485,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2312,9 +2979,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/607.png",
         "attacks": [
-            "Acide",
-            "Flammèche",
-            "Lance-Flammes"
+            "Flammeche",
+            "Lance-Flammes",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 50,
@@ -2323,6 +2990,12 @@
             "special_attack": 65,
             "special_defense": 55,
             "speed": 20
+        },
+        "current_xp": 0,
+        "xp_evo": 275,
+        "evo": {
+            "name": "Mélancolux",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2333,9 +3006,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/608.png",
         "attacks": [
-            "Flammèche",
+            "Flammeche",
             "Lance-Flammes",
-            "Lance-Soleil"
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 60,
@@ -2344,6 +3017,12 @@
             "special_attack": 95,
             "special_defense": 60,
             "speed": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 370,
+        "evo": {
+            "name": "Lugulabre",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2354,9 +3033,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/609.png",
         "attacks": [
-            "Flammèche",
+            "Flammeche",
             "Lance-Flammes",
-            "Ultralaser"
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 60,
@@ -2365,6 +3044,12 @@
             "special_attack": 145,
             "special_defense": 90,
             "speed": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 520,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2375,7 +3060,7 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/610.png",
         "attacks": [
             "Griffe",
-            "Guillotine",
+            "Dracochoc",
             "Coupe-Vent"
         ],
         "stats": {
@@ -2385,6 +3070,12 @@
             "special_attack": 30,
             "special_defense": 40,
             "speed": 57
+        },
+        "current_xp": 0,
+        "xp_evo": 320,
+        "evo": {
+            "name": "Incisache",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2395,8 +3086,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/611.png",
         "attacks": [
             "Griffe",
-            "Guillotine",
-            "Danse Lames"
+            "Dracochoc",
+            "Coupe-Vent"
         ],
         "stats": {
             "hp": 66,
@@ -2405,6 +3096,12 @@
             "special_attack": 40,
             "special_defense": 50,
             "speed": 67
+        },
+        "current_xp": 0,
+        "xp_evo": 410,
+        "evo": {
+            "name": "Tranchodon",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2415,8 +3112,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/612.png",
         "attacks": [
             "Griffe",
-            "Guillotine",
-            "Danse Lames"
+            "Dracochoc",
+            "Coupe-Vent"
         ],
         "stats": {
             "hp": 76,
@@ -2425,6 +3122,12 @@
             "special_attack": 60,
             "special_defense": 70,
             "speed": 97
+        },
+        "current_xp": 0,
+        "xp_evo": 540,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2445,6 +3148,12 @@
             "special_attack": 60,
             "special_defense": 40,
             "speed": 40
+        },
+        "current_xp": 0,
+        "xp_evo": 305,
+        "evo": {
+            "name": "Polagriffe",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2456,7 +3165,7 @@
         "attacks": [
             "Ultimapoing",
             "Poing Glace",
-            "Danse Lames"
+            "Coupe"
         ],
         "stats": {
             "hp": 95,
@@ -2465,6 +3174,12 @@
             "special_attack": 70,
             "special_defense": 80,
             "speed": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 505,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2474,9 +3189,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/615.png",
         "attacks": [
-            "Étreinte",
-            "Plaquage",
-            "Bélier"
+            
+            "Belier",
+            "Laser Glace"
         ],
         "stats": {
             "hp": 80,
@@ -2485,6 +3200,12 @@
             "special_attack": 95,
             "special_defense": 135,
             "speed": 105
+        },
+        "current_xp": 0,
+        "xp_evo": 515,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2494,9 +3215,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/616.png",
         "attacks": [
-            "Plaquage",
-            "Damoclès",
-            "Acide"
+            "Bourdon"
         ],
         "stats": {
             "hp": 50,
@@ -2505,6 +3224,12 @@
             "special_attack": 40,
             "special_defense": 65,
             "speed": 25
+        },
+        "current_xp": 0,
+        "xp_evo": 305,
+        "evo": {
+            "name": "Limaspeed",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2514,9 +3239,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/617.png",
         "attacks": [
-            "Plaquage",
-            "Acide",
-            "Ultralaser"
+            "Bourdon"
         ],
         "stats": {
             "hp": 80,
@@ -2525,6 +3248,12 @@
             "special_attack": 100,
             "special_defense": 60,
             "speed": 145
+        },
+        "current_xp": 0,
+        "xp_evo": 495,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2535,9 +3264,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/618.png",
         "attacks": [
-            "Charge",
-            "Pistolet à O",
-            "Surf"
+            "Eboulement",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 109,
@@ -2546,6 +3274,12 @@
             "special_attack": 81,
             "special_defense": 99,
             "speed": 32
+        },
+        "current_xp": 0,
+        "xp_evo": 471,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2555,7 +3289,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/619.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Torgnoles",
             "Ultimapoing"
         ],
@@ -2566,6 +3300,12 @@
             "special_attack": 55,
             "special_defense": 50,
             "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 350,
+        "evo": {
+            "name": "Shaofouine",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2575,7 +3315,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/620.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Torgnoles",
             "Ultimapoing"
         ],
@@ -2586,6 +3326,12 @@
             "special_attack": 95,
             "special_defense": 60,
             "speed": 105
+        },
+        "current_xp": 0,
+        "xp_evo": 510,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2597,7 +3343,8 @@
         "attacks": [
             "Ultimapoing",
             "Poing Feu",
-            "Poing Éclair"
+            "Poing Eclair",
+            "Dracochoc"
         ],
         "stats": {
             "hp": 77,
@@ -2606,6 +3353,12 @@
             "special_attack": 60,
             "special_defense": 90,
             "speed": 48
+        },
+        "current_xp": 0,
+        "xp_evo": 485,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2616,9 +3369,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/622.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Ultimapoing",
-            "Poing Feu"
+            "Seisme",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 59,
@@ -2627,6 +3381,12 @@
             "special_attack": 35,
             "special_defense": 50,
             "speed": 35
+        },
+        "current_xp": 0,
+        "xp_evo": 303,
+        "evo": {
+            "name": "Golemastoc",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2637,9 +3397,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/623.png",
         "attacks": [
-            "Écras’Face",
+            "EcraseFace",
             "Ultimapoing",
-            "Poing Feu"
+            "Seisme",
+            "Balle Ombre"
         ],
         "stats": {
             "hp": 89,
@@ -2648,6 +3409,12 @@
             "special_attack": 55,
             "special_defense": 80,
             "speed": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 483,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2660,7 +3427,7 @@
         "attacks": [
             "Griffe",
             "Guillotine",
-            "Danse Lames"
+            "Tranche-Nuit"
         ],
         "stats": {
             "hp": 45,
@@ -2669,6 +3436,12 @@
             "special_attack": 40,
             "special_defense": 40,
             "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 340,
+        "evo": {
+            "name": "Scalproie",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2681,7 +3454,7 @@
         "attacks": [
             "Griffe",
             "Guillotine",
-            "Danse Lames"
+            "Tranche-Nuit"
         ],
         "stats": {
             "hp": 65,
@@ -2690,6 +3463,12 @@
             "special_attack": 60,
             "special_defense": 70,
             "speed": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 490,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2699,9 +3478,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/626.png",
         "attacks": [
-            "Danse Lames",
+     
             "Coupe",
-            "Écrasement"
+            "Ecrasement"
         ],
         "stats": {
             "hp": 95,
@@ -2710,6 +3489,12 @@
             "special_attack": 40,
             "special_defense": 95,
             "speed": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 490,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2731,6 +3516,12 @@
             "special_attack": 37,
             "special_defense": 50,
             "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 350,
+        "evo": {
+            "name": "Gueriaigle",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2752,6 +3543,12 @@
             "special_attack": 57,
             "special_defense": 75,
             "speed": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 510,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2764,7 +3561,7 @@
         "attacks": [
             "Coupe",
             "Tornade",
-            "Cyclone"
+            "Tranche-Nuit"
         ],
         "stats": {
             "hp": 70,
@@ -2773,6 +3570,12 @@
             "special_attack": 45,
             "special_defense": 65,
             "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 370,
+        "evo": {
+            "name": "Vaututrice",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2785,7 +3588,7 @@
         "attacks": [
             "Coupe",
             "Tornade",
-            "Cyclone"
+            "Tranche-Nuit"
         ],
         "stats": {
             "hp": 110,
@@ -2794,6 +3597,12 @@
             "special_attack": 55,
             "special_defense": 95,
             "speed": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 510,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2804,8 +3613,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/631.png",
         "attacks": [
             "Poing Feu",
-            "Poing Éclair",
-            "Coupe"
+            "Coupe",
+            "Lance-Flammes"
         ],
         "stats": {
             "hp": 85,
@@ -2814,6 +3623,12 @@
             "special_attack": 105,
             "special_defense": 66,
             "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 484,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2824,7 +3639,7 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/632.png",
         "attacks": [
-            "Force Poigne",
+           
             "Guillotine",
             "Coupe"
         ],
@@ -2835,6 +3650,12 @@
             "special_attack": 48,
             "special_defense": 48,
             "speed": 109
+        },
+        "current_xp": 0,
+        "xp_evo": 484,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2845,9 +3666,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/633.png",
         "attacks": [
-            "Souplesse",
-            "Coup d’Boule",
-            "Charge"
+            "Tranche-Nuit",
+            "Dracochoc"
         ],
         "stats": {
             "hp": 52,
@@ -2856,6 +3676,12 @@
             "special_attack": 45,
             "special_defense": 50,
             "speed": 38
+        },
+        "current_xp": 0,
+        "xp_evo": 300,
+        "evo": {
+            "name": "Diamat",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2866,9 +3692,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/634.png",
         "attacks": [
-            "Souplesse",
-            "Coup d’Boule",
-            "Charge"
+            "Tranche-Nuit",
+            "Dracochoc"
         ],
         "stats": {
             "hp": 72,
@@ -2877,6 +3702,12 @@
             "special_attack": 65,
             "special_defense": 70,
             "speed": 58
+        },
+        "current_xp": 0,
+        "xp_evo": 420,
+        "evo": {
+            "name": "Trioxhydre",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2887,9 +3718,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/635.png",
         "attacks": [
-            "Vol",
-            "Souplesse",
-            "Coup d’Boule"
+            "Tranche-Nuit",
+            "Dracochoc"
         ],
         "stats": {
             "hp": 92,
@@ -2898,6 +3728,12 @@
             "special_attack": 125,
             "special_defense": 90,
             "speed": 98
+        },
+        "current_xp": 0,
+        "xp_evo": 600,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2908,9 +3744,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/636.png",
         "attacks": [
-            "Plaquage",
-            "Bélier",
-            "Mania"
+        
+            "Lance-Flammes",
+            "Bourdon"
         ],
         "stats": {
             "hp": 55,
@@ -2919,6 +3755,12 @@
             "special_attack": 50,
             "special_defense": 55,
             "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 360,
+        "evo": {
+            "name": "Pyrax",
+            "file": "pokemon_gen5_normal.json"
         }
     },
     {
@@ -2929,9 +3771,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png",
         "attacks": [
-            "Tornade",
-            "Cyclone",
-            "Vol"
+            "Lance-Flammes",
+            "Bourdon"
         ],
         "stats": {
             "hp": 85,
@@ -2940,6 +3781,12 @@
             "special_attack": 135,
             "special_defense": 105,
             "speed": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 550,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2950,9 +3797,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/638.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
-            "Double Pied"
+            "Pied Saute",
+            "Luminocanon",
+            "Charge"
         ],
         "stats": {
             "hp": 91,
@@ -2961,6 +3808,12 @@
             "special_attack": 90,
             "special_defense": 72,
             "speed": 108
+        },
+        "current_xp": 0,
+        "xp_evo": 580,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2971,9 +3824,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/639.png",
         "attacks": [
-            "Danse Lames",
+            "Eboulement",
             "Coupe",
-            "Double Pied"
+            "Seisme",
+            "Mawashi Geri"
         ],
         "stats": {
             "hp": 91,
@@ -2982,6 +3836,12 @@
             "special_attack": 72,
             "special_defense": 90,
             "speed": 108
+        },
+        "current_xp": 0,
+        "xp_evo": 580,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -2992,9 +3852,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/640.png",
         "attacks": [
-            "Danse Lames",
+       
             "Coupe",
-            "Double Pied"
+            "Double Pied",
+            "Mawashi Geri"
         ],
         "stats": {
             "hp": 91,
@@ -3003,6 +3864,12 @@
             "special_attack": 90,
             "special_defense": 129,
             "speed": 108
+        },
+        "current_xp": 0,
+        "xp_evo": 580,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -3023,6 +3890,12 @@
             "special_attack": 125,
             "special_defense": 80,
             "speed": 111
+        },
+        "current_xp": 0,
+        "xp_evo": 580,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -3033,9 +3906,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/642.png",
         "attacks": [
-            "Poing Éclair",
+            "Poing Eclair",
             "Vol",
-            "Charge"
+            "Charge",
+            "Tonnerre"
         ],
         "stats": {
             "hp": 79,
@@ -3044,6 +3918,12 @@
             "special_attack": 125,
             "special_defense": 80,
             "speed": 111
+        },
+        "current_xp": 0,
+        "xp_evo": 580,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -3055,8 +3935,8 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/643.png",
         "attacks": [
             "Coupe",
-            "Vol",
-            "Plaquage"
+            "Lance-Flammes",
+            "Colere"
         ],
         "stats": {
             "hp": 100,
@@ -3065,6 +3945,12 @@
             "special_attack": 150,
             "special_defense": 120,
             "speed": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 680,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -3075,9 +3961,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/644.png",
         "attacks": [
-            "Poing Éclair",
             "Coupe",
-            "Vol"
+            "Tonnerre",
+            "Colere"
         ],
         "stats": {
             "hp": 100,
@@ -3086,6 +3972,12 @@
             "special_attack": 120,
             "special_defense": 100,
             "speed": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 680,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -3096,9 +3988,10 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/645.png",
         "attacks": [
-            "Danse Lames",
+
             "Vol",
-            "Charge"
+            "Charge",
+            "Seisme"
         ],
         "stats": {
             "hp": 89,
@@ -3107,6 +4000,12 @@
             "special_attack": 115,
             "special_defense": 80,
             "speed": 101
+        },
+        "current_xp": 0,
+        "xp_evo": 600,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -3118,8 +4017,9 @@
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/646.png",
         "attacks": [
             "Coupe",
-            "Vol",
-            "Plaquage"
+            
+            "Colere",
+            "Laser Glace"
         ],
         "stats": {
             "hp": 125,
@@ -3128,6 +4028,12 @@
             "special_attack": 130,
             "special_defense": 90,
             "speed": 95
+        },
+        "current_xp": 0,
+        "xp_evo": 660,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -3138,8 +4044,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/647.png",
         "attacks": [
-            "Danse Lames",
-            "Coupe",
+            "Surf",
+            "Belier",
             "Double Pied"
         ],
         "stats": {
@@ -3149,6 +4055,12 @@
             "special_attack": 129,
             "special_defense": 90,
             "speed": 108
+        },
+        "current_xp": 0,
+        "xp_evo": 580,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -3159,9 +4071,8 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/648.png",
         "attacks": [
-            "Poing Feu",
-            "Poing Glace",
-            "Poing Éclair"
+            "Psyko",
+            "Charge"
         ],
         "stats": {
             "hp": 100,
@@ -3170,6 +4081,12 @@
             "special_attack": 128,
             "special_defense": 128,
             "speed": 90
+        },
+        "current_xp": 0,
+        "xp_evo": 600,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     },
     {
@@ -3180,9 +4097,9 @@
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/649.png",
         "attacks": [
-            "Vol",
-            "Lance-Flammes",
-            "Laser Glace"
+            "Bourdon",
+        
+            "Luminocanon"
         ],
         "stats": {
             "hp": 71,
@@ -3191,6 +4108,12 @@
             "special_attack": 120,
             "special_defense": 95,
             "speed": 99
+        },
+        "current_xp": 0,
+        "xp_evo": 600,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
         }
     }
 ]
