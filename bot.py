@@ -1237,7 +1237,11 @@ setup_fishing(bot, cur)
 setup_dupont_command(bot)
 
 
+from enquete import setup_enquete
+from inventory_db import add_item
+from regions import get_user_region
 
+setup_enquete(bot, get_user_region, add_item)
 # Après tes setup_*() :
 setup_guess_pokemon_command(
     bot,
