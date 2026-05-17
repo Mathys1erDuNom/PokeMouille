@@ -10,9 +10,9 @@ ENQUETE_JSON_PATH = os.path.join(script_dir, "json", "enquete.json")
 images_dir = os.path.join(script_dir, "images", "enquete")
 
 REGION_COMMANDS = {
-    "park":   {"region": "Kanto", "item": "Corps Ramoloss"},
-    "grotte": {"region": "Johto", "item": "nom_item_johto"},
-    "marche": {"region": "Hoenn", "item": "nom_item_hoenn"},
+    "parc":   {"region": "Kanto", "item": "Corps Ramoloss"},
+    "grotte": {"region": "Sinnoh", "item": "Veste avec une lettre"},
+    "m": {"region": "Unys", "item": "Livre de comptes falsifiés"},
 }
 
 def load_item(item_name):

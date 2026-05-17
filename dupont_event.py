@@ -70,7 +70,7 @@ tableau_riche = [
         "premier_texte": [
             "Je n'en reviens toujours pas de ce qu'il fait, il est tellement corrompu... J'aimerais avoir l'influence nécessaire pour faire cesser tout cela, mais seul je n'irais pas bien loin.... Tiens, prends cet argent, il est sale et je n'en veux pas. Peut-être qu'en échange, tu pourras m'aider, au moment venu...",
             "Oh tiens, bonjour. As-tu besoin d'argent ? Tiens, tu peux prendre un peu du mien. De toutes façons, je n'en veux pas, cela ne m'intéresse pas, je ne suis pas comme eux. Je veux simplement faire éclater la vérité et sauver ces pauvres créatures du sort qui les attend...",
-            "Je suis sûr que c'est sa faute si Bernard a disparu, je ne peux pas encore le prouver mais j'en suis sûr. Ah tiens, je croyais être seul, je réfléchissais à voix haute, tant que tu es là, tu veux de l'argent ? Je n'en veux pas.",
+            "Je suis sûr que c'est sa faute si Joseph a disparu, je ne peux pas encore le prouver mais j'en suis sûr. Ah tiens, je croyais être seul, je réfléchissais à voix haute, tant que tu es là, tu veux de l'argent ? Je n'en veux pas.",
             "Hey, j'ai une question, comment tu ferais pour dénoncer des choses dont personne n'est au courant et qui sont problématiques ? Mmmh, euh je me suis emporté, tiens prends cet argent, désolé de t'avoir dérangé"
 
 
@@ -89,9 +89,7 @@ tableau_riche = [
             "Bonjour ! Mais qui es-tu ? As-tu besoin d'un coup de main ? Ma famille est riche grâce à mon père, qui mène un noble commerce avec le casino ! Mes deux frères aînés travaillent avec lui, mais mon autre frère a toujours été distant, et je n'ai jamais su pourquoi. Sûrement une petite querelle de famille ! Tu me parais sympathique, tiens, cadeau !",
             "Oh bonjour ! J'aime bien ta tête, tu as l'air d'une personne honnête et respectable. Des gens disent que mon père est un criminel, sans coeur. Je ne comprends pas pourquoi ces bruits courent. Père dit que ce sont des journalistes, et qu'il ne faut pas les écouter ! Tiens, prends cet argent, je n'en manque pas",
             "Bonjour, j'ai une question. C'est normal les engueulades dans une famille ?  Désolée, je suis un peu préoccupée, car mon frère et père se disputent encore à propos de ces animaux. Je ne sais pas trop de quoi ils parlent, à vrai dire. Ils vont sûrement se réconcilier bientôt ! Merci de m'avoir écouté, tiens !",
-            "Bonjour, tu n'aurais pas vu un Ramoloss ? Je ne trouve plus mon Ramoloss et ça me fait peur. Père dit qu'il s'est enfui lors d'une balade et que ça ne servait à rien de le chercher, mais je veux le retrouver! Tu en as vu un ? Non... Tant pis merci quand même, tiens prends cet argent et si tu en vois un, essaye de me retrouver !"
-        
-
+            "Bonjour, tu n'aurais pas vu un Ramoloss ? Je ne trouve plus mon Ramoloss et ça me fait peur. Père dit qu'il s'est enfui lors d'une balade... mais je veux le retrouver ! On m'a dit qu'il y avait un parc dans la région de Kanto où on pouvait retrouver des Pokémon perdus... Si tu y vas un jour, tu pourrais peut-être demander aux gardes du parc (!parc)s'ils n'ont rien trouvé ? Tu en as vu un ? Non... Tant pis merci quand même, tiens prends cet argent !"
         ],
         "somme_prendre": 50,
         "texte_fin": [
@@ -106,7 +104,7 @@ tableau_riche = [
         "premier_texte": [
              "Ah, tiens, bonjour. Tu peux prendre cet argent, si tu veux, nous en avons beaucoup. Mais ne dis pas à Père que je te l'ai donné...",
              "Bonjour. Tu veux de l'argent ? C'est d'accord, en voici un peu, mais je ne suis pas d'humeur. J'ai encore entendu leurs cris, ces pauvres animaux... Les hommes de main de Père avaient mal fermé la porte de la pièce. C'était glaçant.... Enfin, oublie cela et ne le répète à personne, j'en ai déjà trop dit.",
-             "Il l'a fait disparaître, c'est sûr, on n'a plus de nouvelles de lui, en même temps quelle idée d'essayer de lui mettre des bâtons dans les roues... Mince, je pensais être seul, tiens prends cet argent et ne répète rien à personne.",
+            "Il l'a fait disparaître, c'est sûr, on n'a plus de nouvelles de lui... En même temps, quelle idée d'essayer de lui mettre des bâtons dans les roues. J'ai entendu dire qu'il avait fui vers Sinnoh, qu'il se cachait quelque part dans une grotte (!grotte) froide et sombre. Il aurait laissé quelque chose derrière lui là-bas... Mince, je pensais être seule, tiens prends cet argent et ne répète rien à personne."
              "Oui monsieur je sais que vous avez beaucoup perdu au casino, mais vous savez c'est le jeu et ça peut arriver dans tous les casinos, nous respectons toutes les règles. Ouf c'était moins une, il faut que je le contacte pour qu'il règle cette histoire. Mince je ne t'avais pas vu, tu sais quoi, prends cet argent et ne dis rien à personne de ce que tu as entendu."
         
 
@@ -122,7 +120,7 @@ tableau_riche = [
         "id": 5,
         "name": "Bernard Dupont",
         "premier_texte": [
-            "Il s'est chargé de lui, une bonne chose de faite, de nos jours les gens fouines dans les affaires des autres, quel irrespect. Oh excuse-moi, je ne t'avais pas vu, tiens prends cet argent, c'est de l'argent d'un, ce n'est pas rien !",
+           "Il s'est chargé de lui, une bonne chose de faite, de nos jours les gens fouinent dans les affaires des autres, quel irrespect. Heureusement que personne ne sait pour l'entrepôt (!entrepot) d'Unys... Oh excuse-moi, je ne t'avais pas vu, tiens prends cet argent, et oublie ce que tu viens d'entendre."
             "Oh, bonjour ! Prends donc un peu d'argent. J'ai de plus en plus de responsabilités dans l'entreprise de Père, mon avenir prospère s'approche à grands pas ! Tout se passe exactement comme nous l'avons prévu, avec Père.",
             "Bonjour. Ah, oui, tiens, prends ton argent. Au fait, as-tu vu ma soeur ? Père était dans une fureur monstrueuse après leur discussion. Ce petit écervelé n'a pas intérêt à mettre le nez dans nos affaires, à Père et moi. Et toi non plus, d'ailleurs.",
             "Prendre le Pokémon du petit n'était peut-être pas la meilleure des idées, mais sa queue rapporte tellement. Hein quoi, qu'est-ce que tu fais là ? Tu m'espionnais ? Ok on va faire quelque chose, prends ça et ne dis rien à personne"
