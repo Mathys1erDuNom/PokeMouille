@@ -21,7 +21,7 @@ def load_item(item_name):
         None
     )
 
-def make_command(bot, command_name, required_region, item_name, get_user_region, add_item):
+def make_command(bot, command_name, required_region, item_name, get_user_region, add_item, has_item):
     @bot.command(name=command_name)
     async def _command(ctx):
         user_id = ctx.author.id
@@ -34,8 +34,14 @@ def make_command(bot, command_name, required_region, item_name, get_user_region,
             )
             return
 
-        item_data = load_item(item_name)
+        # Vérification si l'item est déjà possédé
+        if has_item(user_id, item_name):
+            await ctx.send(
+                f"🔍 Tu as déjà fouillé ici... il n'y a plus rien à trouver."
+            )
+            return
 
+        item_data = load_item(item_name)
         if item_data is None:
             await ctx.send(f"⚠️ L'item **{item_name}** est introuvable dans le fichier JSON.")
             return
@@ -61,10 +67,9 @@ def make_command(bot, command_name, required_region, item_name, get_user_region,
         if item_data.get("image"):
             embed.set_image(url=item_data["image"])
         embed.set_footer(text=f"Trouvé par {ctx.author.display_name}")
-
         await ctx.send(embed=embed)
 
-def setup_enquete(bot, get_user_region, add_item):
+def setup_enquete(bot, get_user_region, add_item, has_item):
     for command_name, config in REGION_COMMANDS.items():
         make_command(
             bot=bot,
@@ -73,4 +78,5 @@ def setup_enquete(bot, get_user_region, add_item):
             item_name=config["item"],
             get_user_region=get_user_region,
             add_item=add_item,
+            has_item=has_item,
         )

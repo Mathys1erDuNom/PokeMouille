@@ -1238,10 +1238,17 @@ setup_dupont_command(bot)
 
 
 from enquete import setup_enquete
-from inventory_db import add_item
+from inventory_db import add_item, get_inventory
 from regions import get_user_region
 
-setup_enquete(bot, get_user_region, add_item)
+#setup_enquete(bot, get_user_region, add_item)
+setup_enquete(
+    bot=bot,
+    get_user_region=get_user_region,
+    add_item=add_item,
+    has_item=lambda user_id, item_name: item_name in get_inventory(user_id)  # adapte selon ta logique
+)
+
 # Après tes setup_*() :
 setup_guess_pokemon_command(
     bot,
