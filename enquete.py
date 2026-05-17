@@ -56,13 +56,11 @@ def make_command(bot, command_name, required_region, item_name, get_user_region,
             description=f"Tu as obtenu un **{item_data['item_name']}** !",
             color=discord.Color.green()
         )
-        embed.add_field(name="Rareté", value=item_data.get("rarity", "commun"), inline=True)
-        embed.add_field(name="Prix", value=f"{item_data.get('price', 0)} 💰", inline=True)
         if item_data.get("description"):
             embed.add_field(name="Description", value=item_data["description"], inline=False)
         if item_data.get("image"):
-            embed.set_thumbnail(url=item_data["image"])
-        embed.set_footer(text=f"Demandé par {ctx.author.display_name}")
+            embed.set_image(url=item_data["image"])
+        embed.set_footer(text=f"Trouvé par {ctx.author.display_name}")
 
         await ctx.send(embed=embed)
 
