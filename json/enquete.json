@@ -1,11 +1,10 @@
 [
     {
-      "item_name": "Corps Ramoloss",
-      "rarity": "common",
-      "description": "Une Poké ball basique qui contient un Pokémon.",
-      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png",
-      "extra": "nothing",
-      "price" : 0
+        "item_name": "Corps Ramoloss",
+        "rarity": "common",
+        "description": "Une Poké ball basique qui contient un Pokémon.",
+        "image": "Ramoloss.png",
+        "extra": "nothing",
+        "price": 0
     }
-  ]
-  
+]

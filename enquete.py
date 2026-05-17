@@ -3,7 +3,11 @@ import json
 import os
 import discord
 
-ENQUETE_JSON_PATH = "json/enquete.json"
+
+
+script_dir = os.path.dirname(os.path.abspath(__file__))
+ENQUETE_JSON_PATH = os.path.join(script_dir, "json", "enquete.json")
+images_dir = os.path.join(script_dir, "images", "enquete")
 
 REGION_COMMANDS = {
     "park":   {"region": "Kanto", "item": "Corps Ramoloss"},
@@ -57,6 +61,7 @@ def make_command(bot, command_name, required_region, item_name, get_user_region,
             price=item_data.get("price", 0),
         )
 
+        # Dans make_command, remplace le bloc embed par :
         embed = discord.Embed(
             title=f"📦 {required_region} — !{command_name}",
             description=f"Tu as obtenu un **{item_data['item_name']}** !",
@@ -64,10 +69,19 @@ def make_command(bot, command_name, required_region, item_name, get_user_region,
         )
         if item_data.get("description"):
             embed.add_field(name="Description", value=item_data["description"], inline=False)
-        if item_data.get("image"):
-            embed.set_image(url=item_data["image"])
         embed.set_footer(text=f"Trouvé par {ctx.author.display_name}")
-        await ctx.send(embed=embed)
+
+        image_filename = item_data.get("image", "")
+        if image_filename:
+            image_path = os.path.join(images_dir, image_filename)
+            if os.path.exists(image_path):
+                file = discord.File(image_path, filename=image_filename)
+                embed.set_image(url=f"attachment://{image_filename}")
+                await ctx.send(embed=embed, file=file)
+            else:
+                await ctx.send(embed=embed)
+        else:
+            await ctx.send(embed=embed)
 
 def setup_enquete(bot, get_user_region, add_item, has_item):
     for command_name, config in REGION_COMMANDS.items():
