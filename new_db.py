@@ -5,6 +5,7 @@ import psycopg2
 from psycopg2.extras import Json
 from dotenv import load_dotenv
 from discord.ext import commands
+from utils import is_croco
 
 # Charge les variables d'environnement
 load_dotenv()
@@ -307,7 +308,7 @@ def evolve_pokemon(user_id, pokemon):
 def setupxp(bot):
 
 
-
+    is_croco()
     @bot.command(name="setevo")
     @commands.has_permissions(administrator=True)
     async def setevo(ctx, member: discord.Member, pokemon_name: str, evo_name: str, evo_file: str):
@@ -374,7 +375,7 @@ def setupxp(bot):
                 f"✅ Évolution de **{pokemon['name']}** ({member.mention}) mise à jour !\n"
                 f"➡️ Évolue en **{evo_name}** (fichier : `{evo_file}`)"
             )
-
+    is_croco()
     @bot.command(name="addattack")
     @commands.has_permissions(administrator=True)
     async def addattack(ctx, member: discord.Member, pokemon_name: str, *, attack_name: str):
@@ -462,7 +463,7 @@ def setupxp(bot):
             f"✅ L'attaque **{replaced}** de **{pokemon['name']}** ({member.mention}) "
             f"a été remplacée par **{attack_name}** !"
         )
-
+    is_croco()
     @bot.command(name="addxp")
     @commands.has_permissions(administrator=True)
     async def addxp(ctx, member: discord.Member, pokemon_name: str, xp: int):
@@ -516,7 +517,7 @@ def setupxp(bot):
             f"🗑️ **{pokemon['name']}** a été retiré de la collection."
         )
 
-        
+    is_croco()    
     @bot.command(name="setxpevo")
     @commands.has_permissions(administrator=True)
     async def setxpevo(ctx, member: discord.Member, pokemon_name: str, xp_evo: int):
