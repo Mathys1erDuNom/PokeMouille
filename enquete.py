@@ -33,7 +33,7 @@ def make_command(bot, command_name, required_region, item_name, get_user_region,
 
         if region != required_region:
             await ctx.send(
-                f"❌ Cette commande n'est disponible que dans la région **{required_region}**. "
+                f"❌ Cette commande n'est pas disponible dans cette région. "
                 f"Tu es actuellement dans : **{region or 'aucune région'}**."
             )
             return
