@@ -1246,7 +1246,10 @@ setup_enquete(
     bot=bot,
     get_user_region=get_user_region,
     add_item=add_item,
-    has_item=lambda user_id, item_name: item_name in get_inventory(user_id)  # adapte selon ta logique
+    has_item=lambda user_id, item_name: any(
+        item["name"].lower() == item_name.lower()
+        for item in get_inventory(user_id)
+    )
 )
 
 # Après tes setup_*() :
