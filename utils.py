@@ -61,7 +61,7 @@ import discord
 from discord.ext import commands
 import os, random, json
 from utils import is_croco
-from new_db import save_new_capture  # ou save_capture selon ton usage
+  # ou save_capture selon ton usage
 
 import stat  # pour les stats
 
@@ -75,6 +75,7 @@ async def spawn_pokemon_for_user(user, json_file="pokemon_gen1_normal.json", shi
     Génère un Pokémon pour un utilisateur, d'abord en décidant s'il est shiny ou non,
     puis en le tirant dans le JSON correspondant.
     """
+    from new_db import save_new_capture
     # Roll shiny d'abord
     is_shiny = (random.randint(1, shiny_rate) == 1)
 
@@ -132,6 +133,7 @@ def setup_addpokemon_command(bot):
         Donne un Pokémon aléatoire depuis un fichier JSON à un utilisateur.
         !addpokemon @user pokemon_gen1_normal.json 64
         """
+        from new_db import save_new_capture
         data = load_json_file(json_file)
         if data is None:
             await ctx.send(f"❌ Fichier `{json_file}` introuvable.")
