@@ -12,7 +12,7 @@ images_dir = os.path.join(script_dir, "images", "enquete")
 REGION_COMMANDS = {
     "parc":   {"region": "Kanto", "item": "Corps Ramoloss"},
     "grotte": {"region": "Sinnoh", "item": "Veste avec une lettre"},
-    "m": {"region": "Unys", "item": "Livre de comptes falsifiés"},
+    "entrepot": {"region": "Unys", "item": "Livre de comptes falsifiés"},
 }
 
 def load_item(item_name):

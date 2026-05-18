@@ -11,7 +11,7 @@
         "item_name": "Veste avec une lettre",
         "rarity": "common",
         "description": "Une veste froide et humide, abandonnée à la hâte. Dans la poche intérieure, une lettre froissée, à moitié déchirée. On peut y lire : 'À ma famille, si vous lisez ces mots c'est que je n'ai pas pu rentrer. Je sais tout de leurs agissements, et eux le savent aussi. Je me sens en danger, surveillé à chaque instant. Je vous aime. Pardonnez-moi de vous avoir caché tout cela aussi longtemps. Ne cherchez pas à me venger, fuyez.  Joseph'",
-        "image": "veste_lettre.png",
+        "image": "veste.png",
         "extra": "nothing",
         "price": 0
     },
@@ -19,7 +19,7 @@
         "item_name": "Livre de comptes falsifiés",
         "rarity": "rare",
         "description": "Un épais registre aux pages jaunies, couvert de chiffres soigneusement arrangés pour tromper n'importe quel inspecteur. Des sommes colossales y transitent sous des noms d'entreprises fantômes. En bas de chaque page, une initiale revient : J.D.",
-        "image": "livre_comptes.png",
+        "image": "livre_compte.png",
         "extra": "nothing",
         "price": 0
     }
