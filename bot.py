@@ -1242,15 +1242,7 @@ from inventory_db import add_item, get_inventory
 from regions import get_user_region
 
 #setup_enquete(bot, get_user_region, add_item)
-setup_enquete(
-    bot=bot,
-    get_user_region=get_user_region,
-    add_item=add_item,
-    has_item=lambda user_id, item_name: any(
-        item["name"].lower() == item_name.lower()
-        for item in get_inventory(user_id)
-    )
-)
+setup_enquete(bot, get_user_region=get_user_region)
 
 # Après tes setup_*() :
 setup_guess_pokemon_command(
