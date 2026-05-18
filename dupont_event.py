@@ -439,7 +439,7 @@ def setup_dupont_command(bot, authorized_user_id=None):
             return
 
         if type_event is None:
-            riche_or_not = False
+            riche_or_not = True
         elif type_event.lower() == "riche":
             riche_or_not = True
         elif type_event.lower() == "pauvre":
