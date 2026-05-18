@@ -1369,8 +1369,20 @@ async def auto_event_loop():
         await tick_chenil_xp(members_humans, chenil_xp_counters)
 
         # ── Planification de l'événement ─────────────────────────────────
-        chosen = random.choice(["dupont"])#(["quiz", "devine", "spawn", "dupont"])
-        next_event_name = "🧠 Quiz Pokémon" if chosen == "quiz" else "🔍 Devine le Pokémon"
+        chosen = random.choice(["quiz", "devine", "spawn", "dupont"])
+
+        if chosen == "quiz":
+            next_event_name = "🧠 Quiz Pokémon"
+
+        elif chosen == "devine":
+            next_event_name = "🔍 Devine le Pokémon"
+
+        elif chosen == "spawn":
+            next_event_name = "✨ Spawn Pokémon"
+
+        elif chosen == "dupont":
+            next_event_name = "🕵️ Événement Dupont"
+
         next_event_time = datetime.now(TIMEZONE) + timedelta(seconds=EVENT_INTERVAL)
 
         print(
