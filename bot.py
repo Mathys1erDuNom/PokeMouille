@@ -1353,7 +1353,7 @@ async def auto_event_loop():
         return
 
     while not bot.is_closed():
-        EVENT_INTERVAL = random.randint(20, 25) * 60
+        EVENT_INTERVAL = random.randint(1, 2) * 60#(20, 25) * 60
 
         # ── Personne dans le vocal ────────────────────────────────────────
         if len(voice_channel.members) == 0:
@@ -1369,7 +1369,7 @@ async def auto_event_loop():
         await tick_chenil_xp(members_humans, chenil_xp_counters)
 
         # ── Planification de l'événement ─────────────────────────────────
-        chosen = random.choice(["quiz", "devine", "spawn", "dupont"])
+        chosen = random.choice(["dupont"])#(["quiz", "devine", "spawn", "dupont"])
         next_event_name = "🧠 Quiz Pokémon" if chosen == "quiz" else "🔍 Devine le Pokémon"
         next_event_time = datetime.now(TIMEZONE) + timedelta(seconds=EVENT_INTERVAL)
 
@@ -1421,7 +1421,7 @@ async def police(ctx):
     preuves = get_preuves(ctx.author.id)
     nombre_preuves = len(preuves)
 
-     print(riche_or_not)
+    print(riche_or_not)
 
     if nombre_preuves >= 3:
         riche_or_not = False
