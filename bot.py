@@ -1337,7 +1337,7 @@ chenil_xp_counters: dict[int, int] = {}
 from chenil import setup_chenil 
 
 setup_chenil(bot,TEXT_CHANNEL_ID)
-
+riche_or_not = True
 async def auto_event_loop():
     await bot.wait_until_ready()
     global next_event_time, next_event_name
@@ -1408,10 +1408,30 @@ async def auto_event_loop():
         elif chosen == "spawn":
             await spawn_pokemon(text_channel)
         elif chosen == "dupont":
-            await run_interaction_personnage(text_channel, False)
+            await run_interaction_personnage(text_channel, riche_or_not)
 
 
+from preuve_db import get_preuves
 
+
+@bot.command()
+async def police(ctx):
+    preuves = get_preuves(ctx.author.id)
+    nombre_preuves = len(preuves)
+    
+    if nombre_preuves >= 3:
+        riche_or_not = False
+
+    embed = discord.Embed(
+        title="🚔 Dossier de preuves",
+        description=(
+            f"**{ctx.author.display_name}** possède "
+            f"**{nombre_preuves} preuve(s)**.\n"
+        ),
+        color=0x3498db
+    )
+
+    await ctx.send(embed=embed) 
  
 
 

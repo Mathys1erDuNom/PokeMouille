@@ -66,3 +66,6 @@ def has_preuve(user_id, item_name):
                 WHERE user_id = %s AND item_name = %s
             """, (str(user_id), item_name))
             return cur.fetchone() is not None
+        
+
+        
