@@ -2,6 +2,7 @@ import json
 import os
 import discord
 from preuve_db import add_preuve, has_preuve, get_preuves, init_preuves_db
+from utils import is_croco
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 ENQUETE_JSON_PATH = os.path.join(script_dir, "json", "enquete.json")
@@ -145,3 +146,10 @@ def setup_enquete(bot, get_user_region):
         view = PreuvesView(ctx.author, liste)
         embed, file = view.make_embed()
         await ctx.send(embed=embed, file=file, view=view)
+
+    @bot.command(name="supprimer_preuves")
+    @is_croco()
+    async def supprimer_preuves(ctx, user: discord.User):
+        from preuve_db import delete_preuves
+        delete_preuves(user.id)
+        await ctx.send(f"🗑️ Les preuves de **{user.display_name}** ont été supprimées.")    

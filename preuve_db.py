@@ -52,6 +52,12 @@ def get_preuves(user_id):
         for row in rows
     ]
 
+def delete_preuves(user_id):
+    with get_connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute("DELETE FROM preuves WHERE user_id = %s", (str(user_id),))
+        conn.commit()
+
 def has_preuve(user_id, item_name):
     with get_connection() as conn:
         with conn.cursor() as cur:
