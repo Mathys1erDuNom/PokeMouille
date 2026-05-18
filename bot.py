@@ -1428,29 +1428,40 @@ from preuve_db import get_preuves
 
 @bot.command()
 async def police(ctx):
-    global riche_or_not  # obligatoire pour modifier la variable globale
-
+    global riche_or_not
     preuves = get_preuves(ctx.author.id)
     nombre_preuves = len(preuves)
-
-    print(riche_or_not)
-
+    
     if nombre_preuves >= 3:
         riche_or_not = False
-  
-
-    print(riche_or_not)
-
-    embed = discord.Embed(
-        title="🚔 Dossier de preuves",
-        description=(
-            f"**{ctx.author.display_name}** possède "
-            f"**{nombre_preuves} preuve(s)**.\n"
-            f"Statut global : {riche_or_not}"
-        ),
-        color=0x3498db
-    )
-
+        embed = discord.Embed(
+            title="🚔 La famille Dupont est démasquée !",
+            description=(
+                f"Grâce aux **{nombre_preuves} preuves** rassemblées par **{ctx.author.display_name}**, "
+                f"la justice a enfin pu agir.\n\n"
+                f"🔒 **Jean Dupont** et **Bernard Dupont** ont été **arrêtés** et inculpés pour :\n"
+                f"> 🔪 **Meurtre**\n"
+                f"> 🐾 **Trafic de Pokémon**\n"
+                f"> 📒 **Falsification des comptes du casino**\n\n"
+                f"🏛️ L'ensemble des **biens de la famille Dupont** a été **réquisitionné** par les autorités : "
+                f"le casino, l'entrepôt d'Unys, et toutes leurs autres propriétés sont désormais sous séquestre.\n\n"
+                f"🐾 Les Pokémon victimes de leur trafic vont enfin pouvoir être pris en charge et libérés.\n\n"
+                f"*La vérité a éclaté au grand jour. Justice est faite.*"
+            ),
+            color=0xe74c3c
+        )
+        embed.set_footer(text="Famille Dupont — Arrêtés & Biens réquisitionnés")
+    else:
+        embed = discord.Embed(
+            title="🚔 Dossier de preuves",
+            description=(
+                f"**{ctx.author.display_name}** possède **{nombre_preuves} preuve(s)**.\n\n"
+                f"⚠️ Il te faut encore **{3 - nombre_preuves} preuve(s)** "
+                f"pour confondre la famille Dupont..."
+            ),
+            color=0x3498db
+        )
+    
     await ctx.send(embed=embed)
 
 
