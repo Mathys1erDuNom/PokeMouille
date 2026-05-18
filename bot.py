@@ -1416,23 +1416,30 @@ from preuve_db import get_preuves
 
 @bot.command()
 async def police(ctx):
+    global riche_or_not  # obligatoire pour modifier la variable globale
+
     preuves = get_preuves(ctx.author.id)
     nombre_preuves = len(preuves)
-    
+
+     print(riche_or_not)
+
     if nombre_preuves >= 3:
         riche_or_not = False
+  
+
+    print(riche_or_not)
 
     embed = discord.Embed(
         title="🚔 Dossier de preuves",
         description=(
             f"**{ctx.author.display_name}** possède "
             f"**{nombre_preuves} preuve(s)**.\n"
+            f"Statut global : {riche_or_not}"
         ),
         color=0x3498db
     )
 
-    await ctx.send(embed=embed) 
- 
+    await ctx.send(embed=embed)
 
 
 @bot.command()
