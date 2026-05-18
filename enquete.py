@@ -55,7 +55,7 @@ def make_command(bot, command_name, required_region, item_name, get_user_region)
 
         embed = discord.Embed(
             title=f"🔎 {required_region} — !{command_name}",
-            description=f"Tu as trouvé une preuve : **{item_data['item_name']}** !",
+            description=f"Tu as trouvé une preuve : **{item_data['item_name']}** !, (!preuves afin de pouvoir revoir ses preuves)",
             color=discord.Color.green()
         )
         if item_data.get("description"):
