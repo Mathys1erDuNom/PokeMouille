@@ -188,6 +188,16 @@ def setup_fishing(bot: commands.Bot, cur):
                 delete_after=8
             )
             return
+        
+        # Vérif connexion au vocal
+        VOICE_CHANNEL_ID = int(os.getenv("VOICE_CHANNEL_ID_COPAING"))
+        voice_state = ctx.author.voice
+        if not voice_state or not voice_state.channel or voice_state.channel.id != VOICE_CHANNEL_ID:
+            await ctx.send(
+                f"{ctx.author.mention} 🔇 Tu dois être dans le salon vocal pour lancer ta ligne !",
+                delete_after=8
+            )
+            return
 
         # Choix de la canne (auto si une seule)
         if len(available_rods) == 1:
