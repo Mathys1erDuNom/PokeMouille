@@ -191,19 +191,27 @@ def setup_fishing(bot: commands.Bot, cur):
         
     
         # Vérif connexion au vocal
-        # Vérif que la commande est bien utilisée dans un serveur
-        if ctx.guild is None:
-            await ctx.send(
-                f"{ctx.author.mention} ❌ Cette commande doit être utilisée dans un serveur, pas en DM !",
-                delete_after=8
-            )
+        # Vérif connexion au vocal via le guild
+        VOICE_CHANNEL_ID = int(os.getenv("VOICE_CHANNEL_ID_COPAING"))
+        GUILD_ID = int(os.getenv("GUILD_ID")) 
+
+        print(f"[DEBUG] guild={guild}")
+        print(f"[DEBUG] member={member}")
+        print(f"[DEBUG] voice={member.voice if member else 'None'}")
+        print(f"[DEBUG] channel_id={member.voice.channel.id if member and member.voice and member.voice.channel else 'None'}")
+        print(f"[DEBUG] VOICE_CHANNEL_ID={VOICE_CHANNEL_ID}")
+
+        guild = bot.get_guild(GUILD_ID)
+        if guild is None:
+            await ctx.send("❌ Impossible de trouver le serveur.", delete_after=5)
             return
 
-        # Vérif connexion au vocal
-        VOICE_CHANNEL_ID = int(os.getenv("VOICE_CHANNEL_ID_COPAING"))
-        member = ctx.guild.get_member(user_id)
+        member = guild.get_member(user_id)
+        if member is None:
+            await ctx.send("❌ Impossible de te trouver dans le serveur.", delete_after=5)
+            return
 
-        voice_state = member.voice if member else None
+        voice_state = member.voice
         in_correct_channel = (
             voice_state is not None
             and voice_state.channel is not None
@@ -212,7 +220,7 @@ def setup_fishing(bot: commands.Bot, cur):
 
         if not in_correct_channel:
             await ctx.send(
-                f"{ctx.author.mention} 🔇 Tu dois être dans le salon vocal pour lancer ta ligne !",
+                f"{ctx.author.mention} 🔇 Tu dois être connecté au salon vocal pour lancer ta ligne !",
                 delete_after=8
             )
             return
