@@ -191,8 +191,17 @@ def setup_fishing(bot: commands.Bot, cur):
         
         # Vérif connexion au vocal
         VOICE_CHANNEL_ID = int(os.getenv("VOICE_CHANNEL_ID_COPAING"))
-        voice_state = ctx.author.voice
-        if not voice_state or not voice_state.channel or voice_state.channel.id != VOICE_CHANNEL_ID:
+        try:
+            voice_state = ctx.author.voice
+            in_correct_channel = (
+                voice_state is not None
+                and voice_state.channel is not None
+                and voice_state.channel.id == VOICE_CHANNEL_ID
+            )
+        except AttributeError:
+            in_correct_channel = False
+
+        if not in_correct_channel:
             await ctx.send(
                 f"{ctx.author.mention} 🔇 Tu dois être dans le salon vocal pour lancer ta ligne !",
                 delete_after=8
