@@ -189,17 +189,24 @@ def setup_fishing(bot: commands.Bot, cur):
             )
             return
         
+    
         # Vérif connexion au vocal
         VOICE_CHANNEL_ID = int(os.getenv("VOICE_CHANNEL_ID_COPAING"))
-        try:
-            voice_state = ctx.author.voice
-            in_correct_channel = (
-                voice_state is not None
-                and voice_state.channel is not None
-                and voice_state.channel.id == VOICE_CHANNEL_ID
+
+        member = ctx.guild.get_member(user_id)
+        if member is None:
+            await ctx.send(
+                f"{ctx.author.mention} ❌ Impossible de te trouver dans le serveur.",
+                delete_after=5
             )
-        except AttributeError:
-            in_correct_channel = False
+            return
+
+        voice_state = member.voice
+        in_correct_channel = (
+            voice_state is not None
+            and voice_state.channel is not None
+            and voice_state.channel.id == VOICE_CHANNEL_ID
+        )
 
         if not in_correct_channel:
             await ctx.send(
@@ -207,6 +214,7 @@ def setup_fishing(bot: commands.Bot, cur):
                 delete_after=8
             )
             return
+        print(f"[DEBUG VOCAL] member={member} | voice={member.voice} | channel={member.voice.channel.id if member.voice and member.voice.channel else 'None'} | attendu={VOICE_CHANNEL_ID}")
 
         # Choix de la canne (auto si une seule)
         if len(available_rods) == 1:
