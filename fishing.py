@@ -191,15 +191,9 @@ def setup_fishing(bot: commands.Bot, cur):
         
     
         # Vérif connexion au vocal
-        # Vérif connexion au vocal via le guild
+       # Vérif connexion au vocal via le guild
         VOICE_CHANNEL_ID = int(os.getenv("VOICE_CHANNEL_ID_COPAING"))
-        GUILD_ID = int(os.getenv("GUILD_ID")) 
-
-        print(f"[DEBUG] guild={guild}")
-        print(f"[DEBUG] member={member}")
-        print(f"[DEBUG] voice={member.voice if member else 'None'}")
-        print(f"[DEBUG] channel_id={member.voice.channel.id if member and member.voice and member.voice.channel else 'None'}")
-        print(f"[DEBUG] VOICE_CHANNEL_ID={VOICE_CHANNEL_ID}")
+        GUILD_ID = int(os.getenv("GUILD_ID"))
 
         guild = bot.get_guild(GUILD_ID)
         if guild is None:
@@ -210,6 +204,12 @@ def setup_fishing(bot: commands.Bot, cur):
         if member is None:
             await ctx.send("❌ Impossible de te trouver dans le serveur.", delete_after=5)
             return
+
+        print(f"[DEBUG] guild={guild}")
+        print(f"[DEBUG] member={member}")
+        print(f"[DEBUG] voice={member.voice}")
+        print(f"[DEBUG] channel_id={member.voice.channel.id if member.voice and member.voice.channel else 'None'}")
+        print(f"[DEBUG] VOICE_CHANNEL_ID={VOICE_CHANNEL_ID}")
 
         voice_state = member.voice
         in_correct_channel = (
