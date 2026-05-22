@@ -65,7 +65,6 @@ from fishing import setup_fishing
 # CHENIL — Configuration
 # ──────────────────────────────────────────────────────────────────────────────
 SECONDES_PAR_TRANCHE = 120   # Secondes de vocal pour gagner de l'XP
-XP_PAR_TRANCHE       = 50    # XP gagné par tranche complète
 TICK_MINUTES         = 1     # Fréquence du tick chenil (en minutes)
 
 # Tracking vocal en mémoire : user_id (int) → timestamp d'entrée
