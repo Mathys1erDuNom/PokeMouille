@@ -191,7 +191,7 @@ class PlayAgainButton(Button):
                        "🍋🍋🍋 → 200 💰🐊\n"
                        "🍒🍒🍒 → 100 💰🐊\n\n"
                        "☠️ → PERDU\n\n"
-                       f"**Mise :** 50 💰🐊\n"
+                       f"**Mise :** 10 💰🐊\n"
                        f"**Votre solde :** {balance} 💰🐊",
             color=discord.Color.gold()
         )
