@@ -34,7 +34,7 @@
   {
     "item_name": "Hyper Ball S",
     "rarity": "rare",
-    "description": "Une Hyper ball qui contient un Pokémon très rare shiny",
+    "description": "Une Hyper ball qui contient un Pokémon très rare sûrement shiny",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
     "extra": "spawn_pokemon_rare_maybe_shiny",
     "price" : 1500
