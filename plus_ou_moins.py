@@ -36,11 +36,8 @@ class DiceGame(View):
     async def show_exact_choice(self, interaction: discord.Interaction):
         """Affiche les boutons pour choisir un total exact (2-12)."""
         self.clear_items()
-        # Ligne 1 : 2 → 7
-        for total in range(2, 8):
-            self.add_item(ExactTotalButton(self, total))
-        # Ligne 2 : 8 → 12
-        for total in range(8, 13):
+        # Ligne 0 : 2-5 | Ligne 1 : 6-9 | Ligne 2 : 10-12
+        for total in range(2, 13):
             self.add_item(ExactTotalButton(self, total))
 
         embed = discord.Embed(
@@ -207,11 +204,10 @@ class ExactTotalButton(Button):
             style = discord.ButtonStyle.primary
         else:
             style = discord.ButtonStyle.secondary
-
         super().__init__(
             label=str(total),
             style=style,
-            row=0 if total <= 7 else 1
+            row=(total - 2) // 4   # 2-5 → row 0, 6-9 → row 1, 10-12 → row 2
         )
         self.game_view = game_view
         self.total = total
