@@ -122,7 +122,7 @@ tableau_riche = [
         "premier_texte": [
            "Il s'est chargé de lui, une bonne chose de faite, de nos jours les gens fouinent dans les affaires des autres, quel irrespect. Heureusement que personne ne sait pour l'entrepôt (!entrepot) d'Unys... Oh excuse-moi, je ne t'avais pas vu, tiens prends cet argent, et oublie ce que tu viens d'entendre."
             "Oh, bonjour ! Prends donc un peu d'argent. J'ai de plus en plus de responsabilités dans l'entreprise de Père, mon avenir prospère s'approche à grands pas ! Tout se passe exactement comme nous l'avons prévu, avec Père.",
-            "Bonjour. Ah, oui, tiens, prends ton argent. Au fait, as-tu vu ma soeur ? Père était dans une fureur monstrueuse après leur discussion. Ce petit écervelé n'a pas intérêt à mettre le nez dans nos affaires, à Père et moi. Et toi non plus, d'ailleurs.",
+            "Bonjour. Ah, oui, tiens, prends ton argent. Au fait, as-tu vu ma soeur ? Père était dans une fureur monstrueuse après leur discussion. Cette petite écervelée n'a pas intérêt à mettre le nez dans nos affaires, à Père et moi. Et toi non plus, d'ailleurs.",
             "Prendre le Pokémon du petit n'était peut-être pas la meilleure des idées, mais sa queue rapporte tellement. Hein quoi, qu'est-ce que tu fais là ? Tu m'espionnais ? Ok on va faire quelque chose, prends ça et ne dis rien à personne"
 
          
