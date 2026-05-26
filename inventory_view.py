@@ -305,11 +305,17 @@ class InventoryItemButton(Button):
         draw.text((70, 180), f"Quantité : {quantity}", fill="black", font=font_small)
         draw_multiline_text(draw, description or "Aucune description.", (70, 230), font_small, max_width=240)
 
-        if image_url and image_url.startswith("http"):
+        # APRÈS
+        if image_url:
             try:
-                resp = requests.get(image_url)
-                resp.raise_for_status()
-                item_img = Image.open(BytesIO(resp.content)).convert("RGBA")
+                if image_url.startswith("http"):
+                    resp = requests.get(image_url)
+                    resp.raise_for_status()
+                    item_img = Image.open(BytesIO(resp.content)).convert("RGBA")
+                else:
+                    local_path = os.path.join(script_dir, image_url)
+                    item_img = Image.open(local_path).convert("RGBA")
+
                 item_img = item_img.resize((100, 100), Image.Resampling.LANCZOS)
                 card.paste(item_img, (385, 120), item_img if item_img.mode == "RGBA" else None)
             except Exception as e:
