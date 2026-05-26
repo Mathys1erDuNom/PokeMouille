@@ -139,8 +139,8 @@ _text_channel_id = None
 async def tick_chenil_xp(
     members_in_vc: list,
     xp_counters:   dict,
-    xp_amount:     int = 10,
-    threshold:     int = 30,
+    xp_amount:     int = 400,#10,
+    threshold:     int = 1#30,
 ):
     """
     À appeler chaque minute depuis auto_event_loop.
