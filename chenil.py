@@ -139,8 +139,8 @@ _text_channel_id = None
 async def tick_chenil_xp(
     members_in_vc: list,
     xp_counters:   dict,
-    xp_amount:     int = 400,#10,
-    threshold:     int = 1#30,
+    xp_amount:     int = 10,
+    threshold:     int = 30,
 ):
     """
     À appeler chaque minute depuis auto_event_loop.
@@ -204,9 +204,34 @@ async def tick_chenil_xp(
                     )
                     continue
 
-                # Ajout direct via add_capture
-                from new_db import add_capture
-                add_capture(str(uid), pokemon_name, is_shiny=False)
+                # Ajout via save_new_capture avec IVs et stats depuis oeuf.json
+                from new_db import save_new_capture
+                import random as _random
+
+                oeuf_json_path = os.path.join(script_dir, "json", "marche_noir", "oeuf.json")
+                try:
+                    with open(oeuf_json_path, "r", encoding="utf-8") as _f:
+                        oeuf_pool = json.load(_f)
+                    chosen_data = next(
+                        (p for p in oeuf_pool if p.get("name") == pokemon_name),
+                        None
+                    )
+                except Exception as _e:
+                    chosen_data = None
+                    print(f"[CHENIL] Erreur lecture oeuf.json pour éclosion : {_e}")
+
+                if chosen_data:
+                    base_stats = chosen_data.get("stats", {})
+                    ivs = {stat: _random.randint(0, 31) for stat in base_stats}
+                    final_stats = {stat: base_stats[stat] + ivs[stat] for stat in base_stats}
+                    save_new_capture(str(uid), pokemon_name, ivs, final_stats, chosen_data)
+                else:
+                    # Fallback minimal si données introuvables
+                    ivs = {"hp": 15, "attack": 15, "defense": 15,
+                           "special_attack": 15, "special_defense": 15, "speed": 15}
+                    final_stats = ivs.copy()
+                    save_new_capture(str(uid), pokemon_name, ivs, final_stats, {})
+
                 await channel.send(
                     f"🎉 L'œuf de <@{uid}> a éclos ! "
                     f"Un **{pokemon_name}** en est sorti !"
@@ -361,8 +386,29 @@ def setup_chenil(bot, channel_id):
                 await ctx.send(f"🥚 L'œuf de {member.mention} a éclos mais oeuf.json est vide/introuvable.")
                 return
 
-            from new_db import add_capture
-            add_capture(uid, pokemon_name, is_shiny=False)
+            from new_db import save_new_capture
+            oeuf_json_path = os.path.join(script_dir, "json", "marche_noir", "oeuf.json")
+            try:
+                with open(oeuf_json_path, "r", encoding="utf-8") as _f:
+                    oeuf_pool = json.load(_f)
+                chosen_data = next(
+                    (p for p in oeuf_pool if p.get("name") == pokemon_name),
+                    None
+                )
+            except Exception:
+                chosen_data = None
+
+            if chosen_data:
+                import random as _random
+                base_stats  = chosen_data.get("stats", {})
+                ivs         = {stat: _random.randint(0, 31) for stat in base_stats}
+                final_stats = {stat: base_stats[stat] + ivs[stat] for stat in base_stats}
+                save_new_capture(uid, pokemon_name, ivs, final_stats, chosen_data)
+            else:
+                ivs = {"hp": 15, "attack": 15, "defense": 15,
+                       "special_attack": 15, "special_defense": 15, "speed": 15}
+                save_new_capture(uid, pokemon_name, ivs, ivs.copy(), {})
+
             await ctx.send(
                 f"🎉 L'œuf de {member.mention} a éclos ! "
                 f"Un **{pokemon_name}** en est sorti !"
