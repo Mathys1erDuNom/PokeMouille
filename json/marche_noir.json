@@ -4,7 +4,7 @@
       "price": 2000,
       "rarity": "legendary",
       "description": "Une Master Ball volée... elle contient sûrement un légendaire shiny. Chut, pas un mot.",
-      "image": "json/marche_noir/oeuf.png",
+      "image": "images/marche_noir/oeuf.png",
       "extra": null
     }
   ]
