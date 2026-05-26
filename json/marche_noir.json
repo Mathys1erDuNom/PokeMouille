@@ -1,0 +1,34 @@
+[
+    {
+      "item_name": "Master Ball S",
+      "price": 2000,
+      "rarity": "legendary",
+      "description": "Une Master Ball volée... elle contient sûrement un légendaire shiny. Chut, pas un mot.",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png",
+      "extra": null
+    },
+    {
+      "item_name": "Pierre Nuit",
+      "price": 800,
+      "rarity": "epic",
+      "description": "Introuvable au shop officiel. Fait évoluer certains Pokémon de type Ténèbres.",
+      "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-stone.png",
+      "extra": null
+    },
+    {
+      "item_name": "Ticket Dupont VIP",
+      "price": 1500,
+      "rarity": "epic",
+      "description": "Un accès privilégié aux événements Dupont. Chuchoté dans les ruelles sombres.",
+      "image": "",
+      "extra": null
+    },
+    {
+      "item_name": "Potion IV Max",
+      "price": 1200,
+      "rarity": "rare",
+      "description": "Augmente tous les IVs d'un Pokémon de +8. Origine douteuse, efficacité garantie.",
+      "image": "",
+      "extra": null
+    }
+  ]

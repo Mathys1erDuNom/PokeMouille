@@ -1423,7 +1423,8 @@ async def auto_event_loop():
 
 
 from preuve_db import get_preuves
-
+from marche_noir import setup_marche_noir
+setup_marche_noir(bot)
 
 @bot.command()
 async def police(ctx):
