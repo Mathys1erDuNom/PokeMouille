@@ -3,8 +3,10 @@
       "item_name": "Oeuf",
       "price": 2000,
       "rarity": "legendary",
-      "description": "Une Master Ball volée... elle contient sûrement un légendaire shiny. Chut, pas un mot.",
+      "description": "Un oeuf qui contient un pokémon",
       "image": "images/marche_noir/oeuf.png",
-      "extra": null
+      "extra":"oeuf",
+      "current_xp": 0,
+      "xp_evo": 400
     }
   ]
