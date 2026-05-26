@@ -23,7 +23,8 @@
             "name": "Magmar_shiny",
             "file": "pokemon_gen1_shiny.json"
         }
-    },  {
+    },
+    {
         "name": "Elekid_shiny",
         "type": [
             "electrique"
@@ -47,6 +48,181 @@
             "name": "Elektek_shiny",
             "file": "pokemon_gen1_shiny.json"
         }
+    },
+    {
+        "name": "Pichu_shiny",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/172.png",
+        "attacks": [
+            "Torgnoles",
+            "Poing Eclair"
+        ],
+        "stats": {
+            "hp": 20,
+            "attack": 40,
+            "defense": 15,
+            "special_attack": 35,
+            "special_defense": 35,
+            "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 205,
+        "evo": {
+            "name": "Pikachu_shiny",
+            "file": "pokemon_gen1_shiny.json"
+        }
+    },
+    {
+        "name": "Melo_shiny",
+        "type": [
+            "fee"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/173.png",
+        "attacks": [
+            "EcraseFace",
+            "Ultimapoing",
+            "Ultimawashi"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 25,
+            "defense": 28,
+            "special_attack": 45,
+            "special_defense": 55,
+            "speed": 15
+        },
+        "current_xp": 0,
+        "xp_evo": 218,
+        "evo": {
+            "name": "Melofee_shiny",
+            "file": "pokemon_gen1_shiny.json"
+        }
+    },
+    {
+        "name": "Toudoudou_shiny",
+        "type": [
+            "normal",
+            "fee"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/174.png",
+        "attacks": [
+            "EcraseFace",
+            "Ultimawashi"
+        ],
+        "stats": {
+            "hp": 90,
+            "attack": 30,
+            "defense": 15,
+            "special_attack": 40,
+            "special_defense": 20,
+            "speed": 15
+        },
+        "current_xp": 0,
+        "xp_evo": 210,
+        "evo": {
+            "name": "Rondoudou_shiny",
+            "file": "pokemon_gen1_shiny.json"
+        }
+    },
+    {
+        "name": "Togepi_shiny",
+        "type": [
+            "fee"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/175.png",
+        "attacks": [
+            "EcraseFace"
+        ],
+        "stats": {
+            "hp": 35,
+            "attack": 20,
+            "defense": 65,
+            "special_attack": 40,
+            "special_defense": 65,
+            "speed": 20
+        },
+        "current_xp": 0,
+        "xp_evo": 245,
+        "evo": {
+            "name": "Togetic_shiny",
+            "file": "pokemon_gen2_shiny.json"
+        }
+    },
+    {
+        "name": "Goinfrex_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/446.png",
+        "attacks": [
+            "Charge"
+        ],
+        "stats": {
+            "hp": 135,
+            "attack": 85,
+            "defense": 40,
+            "special_attack": 40,
+            "special_defense": 85,
+            "speed": 5
+        },
+        "current_xp": 0,
+        "xp_evo": 390,
+        "evo": {
+            "name": "Ronflex_shiny",
+            "file": "pokemon_gen1_shiny.json"
+        }
+    },
+    {
+        "name": "Riolu_shiny",
+        "type": [
+            "combat"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/447.png",
+        "attacks": [
+            "Ultimapoing",
+            "Close Combat",
+            "Griffe Acier"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 70,
+            "defense": 40,
+            "special_attack": 35,
+            "special_defense": 40,
+            "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 285,
+        "evo": {
+            "name": "Lucario_shiny",
+            "file": "pokemon_gen4_shiny.json"
+        }
+    },
+    {
+        "name": "Ptiravi_shiny",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/440.png",
+        "attacks": [
+            "Écras’Face",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 100,
+            "attack": 5,
+            "defense": 5,
+            "special_attack": 15,
+            "special_defense": 65,
+            "speed": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 220,
+        "evo": {
+            "name": "Leveinard_shiny",
+            "file": "pokemon_gen1_shiny.json"
+        }
     }
-   
 ]
