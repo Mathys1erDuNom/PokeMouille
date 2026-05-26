@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Magby_shiny",
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/240.png",
+        "attacks": [
+            "Charge",
+            "Poing Feu"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 75,
+            "defense": 37,
+            "special_attack": 70,
+            "special_defense": 55,
+            "speed": 83
+        },
+        "current_xp": 0,
+        "xp_evo": 365,
+        "evo": {
+            "name": "Magmar_shiny",
+            "file": "pokemon_gen1_shiny.json"
+        }
+    },  {
+        "name": "Elekid_shiny",
+        "type": [
+            "electrique"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/239.png",
+        "attacks": [
+            "Tonnerre",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 63,
+            "defense": 37,
+            "special_attack": 65,
+            "special_defense": 55,
+            "speed": 95
+        },
+        "current_xp": 0,
+        "xp_evo": 360,
+        "evo": {
+            "name": "Electhor_shiny",
+            "file": "pokemon_gen1_shiny.json"
+        }
+    }
+   
+]
