@@ -1,3 +1,4 @@
+import asyncio
 import discord
 from discord.ui import View, Button
 from PIL import Image, ImageDraw, ImageFont
@@ -87,7 +88,7 @@ class MarcheNoirItemButton(Button):
         rarity      = self.item.get("rarity", "common")
         description = self.item.get("description", "Aucune description.")
         image_url   = self.item.get("image", "")
-        balance     = get_balance(self.user_id)
+        balance     = await asyncio.to_thread(get_balance, self.user_id)
 
         # Couleurs par rareté
         rarity_colors = {
@@ -210,7 +211,7 @@ class AcheterMarcheNoirButton(Button):
 
         price   = self.item.get("price", 0)
         name    = self.item["item_name"]
-        balance = get_balance(self.user_id)
+        balance = await asyncio.to_thread(get_balance, self.user_id)
 
         if balance < price:
             await interaction.followup.send(
@@ -221,22 +222,24 @@ class AcheterMarcheNoirButton(Button):
             )
             return
 
-        if not remove_money(self.user_id, price):
+        success = await asyncio.to_thread(remove_money, self.user_id, price)
+        if not success:
             await interaction.followup.send("❌ Erreur lors de la transaction.", ephemeral=True)
             return
 
-        add_item(
-            user_id     = self.user_id,
-            name        = self.item["item_name"],
-            quantity    = 1,
-            rarity      = self.item.get("rarity", "common"),
-            description = self.item.get("description", ""),
-            image       = self.item.get("image", ""),
-            extra       = self.item.get("extra"),
-            price       = self.item.get("price", 0)
+        await asyncio.to_thread(
+            add_item,
+            self.user_id,
+            self.item["item_name"],
+            1,
+            self.item.get("rarity", "common"),
+            self.item.get("description", ""),
+            self.item.get("image", ""),
+            self.item.get("extra"),
+            self.item.get("price", 0)
         )
 
-        new_balance = get_balance(self.user_id)
+        new_balance = await asyncio.to_thread(get_balance, self.user_id)
         await interaction.followup.send(
             f"🖤 Transaction secrète effectuée...\n"
             f"🎁 Vous avez obtenu **{name}** pour **{price:,}** Croco dollars.\n"
@@ -253,7 +256,7 @@ def setup_marche_noir(bot):
     @bot.command(name="marchenoir")
     async def marche_noir(ctx):
         """Ouvre le marché noir — stock limité et aléatoire."""
-        balance = get_balance(ctx.author.id)
+        balance = await asyncio.to_thread(get_balance, ctx.author.id)
         stock   = get_stock_du_jour()
 
         embed = discord.Embed(
