@@ -170,11 +170,18 @@ class MarcheNoirItemButton(Button):
             y += 25
 
         # ── Image de l'item ─────────────────────────────────────────────────────
-        if image_url and image_url.startswith("http"):
+        if image_url:
             try:
-                resp = requests.get(image_url, timeout=5)
-                resp.raise_for_status()
-                item_img = Image.open(BytesIO(resp.content)).convert("RGBA")
+                if image_url.startswith("http"):
+                    # URL distante
+                    resp = requests.get(image_url, timeout=5)
+                    resp.raise_for_status()
+                    item_img = Image.open(BytesIO(resp.content)).convert("RGBA")
+                else:
+                    # Chemin local relatif au dossier du script
+                    local_path = os.path.join(script_dir, image_url)
+                    item_img = Image.open(local_path).convert("RGBA")
+
                 item_img = self.resize_keep_aspect(item_img, 200)
                 img_x = 530 + (200 - item_img.width) // 2
                 background.paste(item_img, (img_x, 140), item_img)
