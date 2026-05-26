@@ -139,7 +139,7 @@ _text_channel_id = None
 async def tick_chenil_xp(
     members_in_vc: list,
     xp_counters:   dict,
-    xp_amount:     int = 100,#10,
+    xp_amount:     int = 400,#10,
     threshold:     int = 1#30,
 ):
     """
@@ -204,31 +204,13 @@ async def tick_chenil_xp(
                     )
                     continue
 
-                # Spawn via spawn_pokemon_for_user
-                from utils import spawn_pokemon_for_user
-                guild  = _bot.guilds[0]
-                member = guild.get_member(uid)
-
-                if member:
-                    spawned_name, is_shiny = await spawn_pokemon_for_user(
-                        member,
-                        json_file="pokemon_all_pokeball_normal.json",
-                        shiny_rate=64,
-                        force_pokemon=pokemon_name  # si ta fonction le supporte
-                    )
-                    shiny_txt = " ✨ **shiny**" if is_shiny else ""
-                    await channel.send(
-                        f"🎉 L'œuf de <@{uid}> a éclos ! "
-                        f"Un **{spawned_name}**{shiny_txt} en est sorti !"
-                    )
-                else:
-                    # Fallback : on ajoute directement sans passer par spawn_pokemon_for_user
-                    from new_db import add_capture
-                    add_capture(str(uid), pokemon_name, is_shiny=False)
-                    await channel.send(
-                        f"🎉 L'œuf de <@{uid}> a éclos ! "
-                        f"Un **{pokemon_name}** en est sorti !"
-                    )
+                # Ajout direct via add_capture
+                from new_db import add_capture
+                add_capture(str(uid), pokemon_name, is_shiny=False)
+                await channel.send(
+                    f"🎉 L'œuf de <@{uid}> a éclos ! "
+                    f"Un **{pokemon_name}** en est sorti !"
+                )
 
             continue  # ne pas tomber dans le bloc Pokémon normal
 
