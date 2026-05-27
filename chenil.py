@@ -273,6 +273,9 @@ async def tick_chenil_xp(
                     f"🎉 L'œuf de <@{uid}> a éclos ! "
                     f"Un **{pokemon_name}** {shiny_emoji} en est sorti !"
                 )
+                
+                # Remet le Pokémon éclos dans le chenil automatiquement
+                set_chenil_pokemon(str(uid), pokemon_name)
 
             continue  # ne pas tomber dans le bloc Pokémon normal
 
@@ -303,6 +306,9 @@ async def tick_chenil_xp(
                     f"🎉 **{pokemon['name']}** de <@{uid}> a évolué en "
                     f"**{result['evo_name']}** grâce au chenil !"
                 )
+                # Le Pokémon évolué recommence avec 0 XP, donc on ne continue pas
+                # pour éviter de lui ajouter du XP deux fois
+                continue
             else:
                 print(f"[CHENIL] Évolution impossible : {result['reason']}")
 
@@ -442,6 +448,9 @@ def setup_chenil(bot, channel_id):
                 f"🎉 L'œuf de {member.mention} a éclos ! "
                 f"Un **{pokemon_name}** {shiny_emoji} en est sorti !"
             )
+            
+            # Remet le Pokémon éclos dans le chenil automatiquement
+            set_chenil_pokemon(uid, pokemon_name)
             return
 
         # ── Pokémon normal ────────────────────────────────────────────────────
