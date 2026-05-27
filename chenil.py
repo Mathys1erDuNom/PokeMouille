@@ -330,10 +330,31 @@ def setup_chenil(bot, channel_id):
         # Vérifie qu'il n'y a rien déjà dans le chenil
         current = get_chenil_pokemon(uid)
         if current:
-            await ctx.send(
-                f"⚠️ Tu as déjà **{current['name']}** dans le chenil. "
-                f"Utilise `!retirer_chenil` avant d'en mettre un autre."
-            )
+            if current["is_egg"]:
+                # Affiche l'info pour un œuf
+                await ctx.send(
+                    f"⚠️ Tu as déjà un **{current['name']}** dans le chenil.\n"
+                    f"🥚 Progression : `{current['egg_xp']} / {current['egg_xp_evo']}` XP\n"
+                    f"Utilise `!retirer_chenil` avant d'en mettre un autre."
+                )
+            else:
+                # Affiche l'info pour un Pokémon normal
+                captures = get_new_captures(uid)
+                pokemon = next(
+                    (p for p in captures if p["name"].lower() == current["name"].lower()),
+                    None
+                )
+                if pokemon:
+                    await ctx.send(
+                        f"⚠️ Tu as déjà un **{current['name']}** dans le chenil.\n"
+                        f"⭐ Progression : `{pokemon['current_xp']} / {pokemon['xp_evo']}` XP\n"
+                        f"Utilise `!retirer_chenil` avant d'en mettre un autre."
+                    )
+                else:
+                    await ctx.send(
+                        f"⚠️ Tu as déjà **{current['name']}** dans le chenil. "
+                        f"Utilise `!retirer_chenil` avant d'en mettre un autre."
+                    )
             return
 
         # Cherche d'abord un œuf dans l'inventaire
