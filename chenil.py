@@ -9,6 +9,7 @@ from discord.ext import commands
 import discord
 
 from new_db import get_new_captures, add_xp, evolve_pokemon
+from inventory_db import use_item
 
 load_dotenv()
 DATABASE_URL = os.getenv("DATABASE_URL")
@@ -240,6 +241,8 @@ async def tick_chenil_xp(
             )
 
             if ready:
+                # Récupère le nom de l'œuf avant de le retirer du chenil
+                egg_item_name = chenil_data["name"]
                 remove_chenil_pokemon(str(uid))
                 
                 # Éclosion avec vérification shiny
@@ -273,6 +276,9 @@ async def tick_chenil_xp(
                     f"🎉 L'œuf de <@{uid}> a éclos ! "
                     f"Un **{pokemon_name}** {shiny_emoji} en est sorti !"
                 )
+                
+                # Supprime l'œuf de l'inventaire
+                use_item(str(uid), egg_item_name, 1)
                 
                 # Remet le Pokémon éclos dans le chenil automatiquement
                 set_chenil_pokemon(str(uid), pokemon_name)
@@ -444,6 +450,8 @@ def setup_chenil(bot, channel_id):
                 return
 
             # Éclosion forcée avec vérification shiny
+            # Récupère le nom de l'œuf avant de le retirer du chenil
+            egg_item_name = chenil_data["name"]
             remove_chenil_pokemon(uid)
             pokemon_name, chosen_data, is_shiny = hatch_egg_with_shiny_check()
             
@@ -469,6 +477,9 @@ def setup_chenil(bot, channel_id):
                 f"🎉 L'œuf de {member.mention} a éclos ! "
                 f"Un **{pokemon_name}** {shiny_emoji} en est sorti !"
             )
+            
+            # Supprime l'œuf de l'inventaire
+            use_item(uid, egg_item_name, 1)
             
             # Remet le Pokémon éclos dans le chenil automatiquement
             set_chenil_pokemon(uid, pokemon_name)
