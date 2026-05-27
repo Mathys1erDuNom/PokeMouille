@@ -124,6 +124,52 @@ def get_random_egg_pokemon() -> str | None:
         return None
 
 
+def hatch_egg_with_shiny_check() -> tuple[str | None, dict | None, bool]:
+    """
+    Éclot un œuf en tenant compte du shiny rate.
+    
+    Retourne : (pokemon_name, chosen_data, is_shiny)
+    - pokemon_name : nom du Pokémon éclos, ou None si erreur
+    - chosen_data : données complètes du Pokémon depuis le JSON
+    - is_shiny : True si le Pokémon est shiny
+    """
+    import random as _random
+    
+    # Charge marche_noir.json pour obtenir le shiny_rate
+    marche_noir_path = os.path.join(script_dir, "json", "marche_noir.json")
+    shiny_rate = 16  # valeur par défaut
+    try:
+        with open(marche_noir_path, "r", encoding="utf-8") as f:
+            marche_noir_data = json.load(f)
+            if isinstance(marche_noir_data, list) and marche_noir_data:
+                shiny_rate = marche_noir_data[0].get("shiny_rate", 16)
+            elif isinstance(marche_noir_data, dict):
+                shiny_rate = marche_noir_data.get("shiny_rate", 16)
+    except Exception as e:
+        print(f"[CHENIL] Erreur lecture marche_noir.json : {e}")
+    
+    # Détermine si c'est shiny (1 chance sur shiny_rate)
+    is_shiny = _random.randint(1, shiny_rate) == 1
+    
+    # Charge le bon fichier JSON selon shiny ou pas
+    file_name = "oeuf_shiny.json" if is_shiny else "oeuf.json"
+    oeuf_json_path = os.path.join(script_dir, "json", "marche_noir", file_name)
+    
+    try:
+        with open(oeuf_json_path, "r", encoding="utf-8") as f:
+            pool = json.load(f)
+        if not pool:
+            print(f"[CHENIL] {file_name} est vide.")
+            return None, None, is_shiny
+        
+        chosen_data = _random.choice(pool)
+        pokemon_name = chosen_data.get("name") or chosen_data.get("pokemon_name")
+        return pokemon_name, chosen_data, is_shiny
+    except Exception as e:
+        print(f"[CHENIL] Erreur lecture {file_name} : {e}")
+        return None, None, is_shiny
+
+
 # ──────────────────────────────────────────────
 # GLOBALS (injectés par setup_chenil)
 # ──────────────────────────────────────────────
@@ -195,30 +241,20 @@ async def tick_chenil_xp(
 
             if ready:
                 remove_chenil_pokemon(str(uid))
-                pokemon_name = get_random_egg_pokemon()
+                
+                # Éclosion avec vérification shiny
+                pokemon_name, chosen_data, is_shiny = hatch_egg_with_shiny_check()
 
                 if not pokemon_name:
                     await channel.send(
                         f"🥚 L'œuf de <@{uid}> a éclos... mais rien n'en est sorti. "
-                        f"(Erreur oeuf.json)"
+                        f"(Erreur dans les fichiers JSON)"
                     )
                     continue
 
-                # Ajout via save_new_capture avec IVs et stats depuis oeuf.json
+                # Ajout via save_new_capture avec IVs et stats
                 from new_db import save_new_capture
                 import random as _random
-
-                oeuf_json_path = os.path.join(script_dir, "json", "marche_noir", "oeuf.json")
-                try:
-                    with open(oeuf_json_path, "r", encoding="utf-8") as _f:
-                        oeuf_pool = json.load(_f)
-                    chosen_data = next(
-                        (p for p in oeuf_pool if p.get("name") == pokemon_name),
-                        None
-                    )
-                except Exception as _e:
-                    chosen_data = None
-                    print(f"[CHENIL] Erreur lecture oeuf.json pour éclosion : {_e}")
 
                 if chosen_data:
                     base_stats = chosen_data.get("stats", {})
@@ -232,9 +268,10 @@ async def tick_chenil_xp(
                     final_stats = ivs.copy()
                     save_new_capture(str(uid), pokemon_name, ivs, final_stats, {})
 
+                shiny_emoji = "✨" if is_shiny else ""
                 await channel.send(
                     f"🎉 L'œuf de <@{uid}> a éclos ! "
-                    f"Un **{pokemon_name}** en est sorti !"
+                    f"Un **{pokemon_name}** {shiny_emoji} en est sorti !"
                 )
 
             continue  # ne pas tomber dans le bloc Pokémon normal
@@ -379,24 +416,15 @@ def setup_chenil(bot, channel_id):
                 )
                 return
 
-            # Éclosion forcée
+            # Éclosion forcée avec vérification shiny
             remove_chenil_pokemon(uid)
-            pokemon_name = get_random_egg_pokemon()
+            pokemon_name, chosen_data, is_shiny = hatch_egg_with_shiny_check()
+            
             if not pokemon_name:
-                await ctx.send(f"🥚 L'œuf de {member.mention} a éclos mais oeuf.json est vide/introuvable.")
+                await ctx.send(f"🥚 L'œuf de {member.mention} a éclos mais rien n'en est sorti (erreur JSON).")
                 return
 
             from new_db import save_new_capture
-            oeuf_json_path = os.path.join(script_dir, "json", "marche_noir", "oeuf.json")
-            try:
-                with open(oeuf_json_path, "r", encoding="utf-8") as _f:
-                    oeuf_pool = json.load(_f)
-                chosen_data = next(
-                    (p for p in oeuf_pool if p.get("name") == pokemon_name),
-                    None
-                )
-            except Exception:
-                chosen_data = None
 
             if chosen_data:
                 import random as _random
@@ -409,9 +437,10 @@ def setup_chenil(bot, channel_id):
                        "special_attack": 15, "special_defense": 15, "speed": 15}
                 save_new_capture(uid, pokemon_name, ivs, ivs.copy(), {})
 
+            shiny_emoji = "✨" if is_shiny else ""
             await ctx.send(
                 f"🎉 L'œuf de {member.mention} a éclos ! "
-                f"Un **{pokemon_name}** en est sorti !"
+                f"Un **{pokemon_name}** {shiny_emoji} en est sorti !"
             )
             return
 
