@@ -20,7 +20,7 @@ conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur  = conn.cursor()
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-marche_noir_json_path = os.path.join(script_dir, "json", "marche_noir.json")
+marche_noir_json_path = os.path.join(script_dir, "json","marche_noir", "marche_noir.json")
 images_dir = os.path.join(script_dir, "images")
 images_json_path = os.path.join(script_dir, "json", "images.json")
 
