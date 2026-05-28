@@ -1352,7 +1352,7 @@ async def auto_event_loop():
         return
 
     while not bot.is_closed():
-        EVENT_INTERVAL = random.randint(20, 25) * 60
+        EVENT_INTERVAL = random.randint(1, 2) * 60#(20, 25) * 60
 
         # ── Personne dans le vocal ────────────────────────────────────────
         if len(voice_channel.members) == 0:
@@ -1368,7 +1368,7 @@ async def auto_event_loop():
         await tick_chenil_xp(members_humans, chenil_xp_counters)
 
         # ── Planification de l'événement ─────────────────────────────────
-        chosen = random.choice(["quiz", "devine", "spawn", "dupont"])
+        chosen = random.choice(["marche_noir"])#(["quiz", "devine", "spawn", "dupont", "marche_noir"])
 
         if chosen == "quiz":
             next_event_name = "🧠 Quiz Pokémon"
@@ -1381,6 +1381,9 @@ async def auto_event_loop():
 
         elif chosen == "dupont":
             next_event_name = "🕵️ Événement Dupont"
+
+        elif chosen == "marche_noir":
+            next_event_name = "🌙 Événement Marché Noir"
 
         next_event_time = datetime.now(TIMEZONE) + timedelta(seconds=EVENT_INTERVAL)
 
@@ -1420,6 +1423,8 @@ async def auto_event_loop():
             await spawn_pokemon(text_channel)
         elif chosen == "dupont":
             await run_interaction_personnage(text_channel, riche_or_not)
+        elif chosen == "marche_noir":
+            await bot.run_marche_noir(text_channel)    
 
 
 from preuve_db import get_preuves
