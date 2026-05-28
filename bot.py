@@ -1370,7 +1370,13 @@ async def auto_event_loop():
         await tick_chenil_xp(members_humans, chenil_xp_counters)
 
         # ── Planification de l'événement ─────────────────────────────────
-        chosen = random.choice(["marche_noir"])#(["quiz", "devine", "spawn", "dupont", "marche_noir"])
+        # Ajoute marche_noir aux choix seulement s'il est disponible
+        if is_marche_noir_available():
+            available_events = ["quiz", "devine", "spawn", "dupont", "marche_noir"]
+        else:
+            available_events = ["quiz", "devine", "spawn", "dupont"]
+        
+        chosen = random.choice(available_events)
 
         if chosen == "quiz":
             next_event_name = "🧠 Quiz Pokémon"
@@ -1427,11 +1433,21 @@ async def auto_event_loop():
             await run_interaction_personnage(text_channel, riche_or_not)
         elif chosen == "marche_noir":
             await run_marche_noir(text_channel)
-               
+
 
 
 from preuve_db import get_preuves
 from marche_noir import setup_marche_noir, run_marche_noir
+
+# ── Fonction pour vérifier si marche noir est disponible ────────────────────
+def is_marche_noir_available():
+    """Vérifie si le marché noir est disponible (mardi 20h-00h)."""
+    now = datetime.now(TIMEZONE)
+    # weekday() : lundi=0, mardi=1, ...
+    is_tuesday = now.weekday() == 1
+    is_time_right = 20 <= now.hour < 24  # 20h à 23h59
+    return is_tuesday and is_time_right
+
 setup_marche_noir(bot)
 
 @bot.command()
