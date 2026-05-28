@@ -1372,10 +1372,9 @@ async def auto_event_loop():
         # ── Planification de l'événement ─────────────────────────────────
         # Ajoute marche_noir aux choix seulement s'il est disponible
         if is_marche_noir_available():
-            available_events = ["quiz", "devine", "spawn", "dupont", "marche_noir"]
+            available_events = ["marche_noir"]#, "spawn", "dupont", "devine", "spawn"]
         else:
-            available_events = ["quiz", "devine", "spawn", "dupont"]
-        
+            available_events = ["spawn", "dupont", "devine", "spawn"]
         chosen = random.choice(available_events)
 
         if chosen == "quiz":
@@ -1444,8 +1443,8 @@ def is_marche_noir_available():
     """Vérifie si le marché noir est disponible (mardi 20h-00h)."""
     now = datetime.now(TIMEZONE)
     # weekday() : lundi=0, mardi=1, ...
-    is_tuesday = now.weekday() == 1
-    is_time_right = 20 <= now.hour < 24  # 20h à 23h59
+    is_tuesday = now.weekday() == 3
+    is_time_right = 11 <= now.hour < 13  # 20h à 23h59
     return is_tuesday and is_time_right
 
 setup_marche_noir(bot)
