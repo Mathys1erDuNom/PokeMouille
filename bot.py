@@ -29,6 +29,8 @@ from quiz_spawn import setup_quiz_commands
 from devine_poke import setup_guess_pokemon_command
 
 from dupont_event import run_interaction_personnage
+
+
 from dupont_event import setup_dupont_command
 
 from combat.utils import normalize_text
@@ -1424,11 +1426,12 @@ async def auto_event_loop():
         elif chosen == "dupont":
             await run_interaction_personnage(text_channel, riche_or_not)
         elif chosen == "marche_noir":
-            await bot.run_marche_noir(text_channel)    
+            await run_marche_noir(text_channel)
+               
 
 
 from preuve_db import get_preuves
-from marche_noir import setup_marche_noir
+from marche_noir import setup_marche_noir, run_marche_noir
 setup_marche_noir(bot)
 
 @bot.command()

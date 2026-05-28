@@ -256,6 +256,30 @@ class AcheterMarcheNoirButton(Button):
         )
 
 
+# ─── Fonction standalone appelable sans contexte ───────────────────────────
+async def run_marche_noir(channel, user_id=None):
+    """Lance le marché noir directement dans un salon Discord donné."""
+    if user_id is None:
+        user_id = channel.guild.owner_id
+    
+    balance = await asyncio.to_thread(get_balance, user_id)
+    stock   = get_stock_du_jour()
+
+    embed = discord.Embed(
+        title="🖤 Marché Noir",
+        description=(
+            f"*Chut... t'as pas vu ça ici.*\n\n"
+            f"💰 Votre solde : **{balance:,}** Croco dollars\n"
+            f"🎲 Stock limité — **{len(stock)} article(s)** disponible(s) aujourd'hui.\n\n"
+            "Cliquez sur un article pour voir les détails."
+        ),
+        color=discord.Color.dark_gray()
+    )
+
+    view = MarcheNoirView(user_id, stock)
+    await channel.send(embed=embed, view=view)
+
+
 # ─── Setup ────────────────────────────────────────────────────────────────────
 def setup_marche_noir(bot):
     """Enregistre la commande !marchenoir sur le bot."""
@@ -263,19 +287,7 @@ def setup_marche_noir(bot):
     @bot.command(name="marchenoir")
     async def marche_noir(ctx):
         """Ouvre le marché noir — stock limité et aléatoire."""
-        balance = await asyncio.to_thread(get_balance, ctx.author.id)
-        stock   = get_stock_du_jour()
+        await run_marche_noir(ctx.channel, ctx.author.id)
 
-        embed = discord.Embed(
-            title="🖤 Marché Noir",
-            description=(
-                f"*Chut... t'as pas vu ça ici.*\n\n"
-                f"💰 Votre solde : **{balance:,}** Croco dollars\n"
-                f"🎲 Stock limité — **{len(stock)} article(s)** disponible(s) aujourd'hui.\n\n"
-                "Cliquez sur un article pour voir les détails."
-            ),
-            color=discord.Color.dark_gray()
-        )
-
-        view = MarcheNoirView(ctx.author.id, stock)
-        await ctx.send(embed=embed, view=view)
+    # Expose run_marche_noir pour pouvoir l'importer / l'appeler depuis le main
+    bot.run_marche_noir = run_marche_noir
