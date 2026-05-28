@@ -1,7 +1,7 @@
 [
     {
       "item_name": "Oeuf",
-      "price": 2000,
+      "price": 200,
       "rarity": "legendary",
       "description": "Un oeuf qui contient un pokémon",
       "image": "images/marche_noir/oeuf.png",
