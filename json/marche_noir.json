@@ -3,12 +3,12 @@
       "item_name": "Oeuf",
       "price": 200,
       "rarity": "legendary",
-      "description": "Un oeuf qui contient un pokémon",
+      "description": "Un oeuf qui contient un pokémon, 1/16 qu'il soit shiny",
       "image": "images/marche_noir/oeuf.png",
       "extra":"oeuf",
       "current_xp": 0,
       "xp_evo": 400,
-      "shiny_rate":1
+      "shiny_rate":16
   
     }
   ]
