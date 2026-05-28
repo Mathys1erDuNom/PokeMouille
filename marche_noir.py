@@ -9,11 +9,31 @@ import random
 from io import BytesIO
 from inventory_db import add_item
 from money_db import get_balance, remove_money
+import psycopg2
+from dotenv import load_dotenv
+from datetime import datetime
+
+load_dotenv()
+DATABASE_URL = os.getenv("DATABASE_URL")
+
+conn = psycopg2.connect(DATABASE_URL, sslmode="require")
+cur  = conn.cursor()
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 marche_noir_json_path = os.path.join(script_dir, "json", "marche_noir.json")
 images_dir = os.path.join(script_dir, "images")
 images_json_path = os.path.join(script_dir, "json", "images.json")
+
+# ─── Table pour tracer les achats du marché noir ───────────────────────────────
+cur.execute("""
+CREATE TABLE IF NOT EXISTS marche_noir_purchases (
+    user_id TEXT,
+    purchase_date DATE,
+    item_name TEXT,
+    PRIMARY KEY (user_id, purchase_date)
+);
+""")
+conn.commit()
 
 # ─── Chargement des items du marché noir ───────────────────────────────────────
 with open(marche_noir_json_path, "r", encoding="utf-8") as f:
@@ -26,6 +46,40 @@ try:
 except Exception as e:
     print(f"[MARCHE NOIR] Erreur lors du chargement de images.json : {e}")
     IMAGES_DATA = {}
+
+# ─── Stock disponible pour cette session ──────────────────────────────────────
+# Le marché noir tire aléatoirement N items à chaque ouverture
+NB_ITEMS_AFFICHES = 4  # Nombre d'items affichés au marché noir
+
+
+def has_bought_today(user_id: str) -> bool:
+    """Vérifie si l'utilisateur a déjà acheté quelque chose aujourd'hui."""
+    user_id = str(user_id)
+    today = datetime.now().date()
+    cur.execute("""
+        SELECT 1 FROM marche_noir_purchases
+        WHERE user_id = %s AND purchase_date = %s
+        LIMIT 1
+    """, (user_id, today))
+    return cur.fetchone() is not None
+
+
+def record_purchase(user_id: str, item_name: str) -> bool:
+    """Enregistre un achat pour l'utilisateur aujourd'hui."""
+    user_id = str(user_id)
+    today = datetime.now().date()
+    try:
+        cur.execute("""
+            INSERT INTO marche_noir_purchases (user_id, purchase_date, item_name)
+            VALUES (%s, %s, %s)
+        """, (user_id, today, item_name))
+        conn.commit()
+        return True
+    except Exception as e:
+        print(f"[MARCHE NOIR] Erreur lors de l'enregistrement de l'achat : {e}")
+        conn.rollback()
+        return False
+
 
 # ─── Stock disponible pour cette session ──────────────────────────────────────
 # Le marché noir tire aléatoirement N items à chaque ouverture
@@ -216,6 +270,15 @@ class AcheterMarcheNoirButton(Button):
     async def callback(self, interaction: discord.Interaction):
         await interaction.response.defer(ephemeral=True)
 
+        # Vérifie si l'utilisateur a déjà acheté aujourd'hui
+        if await asyncio.to_thread(has_bought_today, self.user_id):
+            await interaction.followup.send(
+                f"❌ Tu as déjà acheté quelque chose au marché noir aujourd'hui.\n"
+                f"🔄 Reviens demain pour continuer tes achats secrets !",
+                ephemeral=True
+            )
+            return
+
         price   = self.item.get("price", 0)
         name    = self.item["item_name"]
         balance = await asyncio.to_thread(get_balance, self.user_id)
@@ -245,6 +308,9 @@ class AcheterMarcheNoirButton(Button):
             self.item.get("extra"),
             self.item.get("price", 0)
         )
+
+        # Enregistre l'achat pour aujourd'hui
+        await asyncio.to_thread(record_purchase, self.user_id, name)
 
         new_balance = await asyncio.to_thread(get_balance, self.user_id)
         await interaction.followup.send(
