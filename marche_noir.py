@@ -176,7 +176,7 @@ class MarcheNoirItemButton(Button):
         if background is None:
             try:
                 background = Image.open(
-                    os.path.join(images_dir, "marche_noir.png")
+                    os.path.join(images_dir, "marche_noir", "marche_noir.png")
                 ).convert("RGBA")
                 background = background.resize((width, height), Image.Resampling.LANCZOS)
             except Exception:
