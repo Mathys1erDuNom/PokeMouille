@@ -19,7 +19,8 @@ json_dir   = os.path.join(script_dir, "json")
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
-
+cur.execute("DROP TABLE IF EXISTS new_captures")
+conn.commit()
 
 # Crée la table si elle n'existe pas
 cur.execute("""

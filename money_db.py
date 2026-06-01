@@ -11,7 +11,8 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
-
+cur.execute("DROP TABLE IF EXISTS argent")
+conn.commit()
 
 # Création de la table argent
 cur.execute("""
