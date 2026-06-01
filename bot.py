@@ -901,15 +901,10 @@ async def catch(ctx):
         stats_with_iv = pokemon_data.get("stats_iv", pokemon_data["stats"])
         save_new_capture(ctx.author.id, pokemon_name, ivs, stats_with_iv, pokemon_data)
 
-        reward_amount = 20
-        new_balance = add_money(ctx.author.id, reward_amount)
-
         embed_captured = discord.Embed(
             description=(
                 f"🎉 **{ctx.author.display_name} a capturé {pokemon_name} !\n"
-                f"Vise bien l'aveugle**\n\n"
-                f"💰 Récompense : **+{reward_amount:,}** Croco dollars\n"
-                f"💰🐊 Nouveau solde : **{new_balance:,}** Croco dollars"
+                f"Vise bien l'aveugle**"
             ),
             color=0x00CC66
         )
@@ -980,16 +975,10 @@ async def capture(ctx):
         stats_with_iv = pokemon_data.get("stats_iv", pokemon_data["stats"])
         save_new_capture(ctx.author.id, pokemon_name, ivs, stats_with_iv, pokemon_data)
 
-        # 💰 Récompense
-        reward_amount = 20
-        new_balance = add_money(ctx.author.id, reward_amount)
-
         embed_captured = discord.Embed(
             description=(
                 f"🎉 **{ctx.author.display_name} a capturé {pokemon_name} !\n"
-                f"Vise bien l'aveugle**\n\n"
-                f"💰 Récompense : **+{reward_amount:,}** Croco dollars\n"
-                f"💰🐊 Nouveau solde : **{new_balance:,}** Croco dollars"
+                f"Vise bien l'aveugle**"
             ),
             color=0x00CC66
         )
