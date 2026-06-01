@@ -1354,7 +1354,7 @@ async def auto_event_loop():
         return
 
     while not bot.is_closed():
-        EVENT_INTERVAL = random.randint(1, 2) * 60#(20, 25) * 60
+        EVENT_INTERVAL = random.randint(20, 25) * 60
 
         # ── Personne dans le vocal ────────────────────────────────────────
         if len(voice_channel.members) == 0:
