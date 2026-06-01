@@ -387,7 +387,7 @@
     {
         "name": "Roucool_shiny",
         "type": [
-            "normal"
+            "normal","vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/16.png",
         "attacks": [
@@ -412,7 +412,7 @@
     {
         "name": "Roucoups_shiny",
         "type": [
-            "normal"
+            "normal","vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/17.png",
         "attacks": [
@@ -438,7 +438,7 @@
     {
         "name": "Roucarnage_shiny",
         "type": [
-            "normal"
+            "normal","vol"
         ],
         "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/18.png",
         "attacks": [
