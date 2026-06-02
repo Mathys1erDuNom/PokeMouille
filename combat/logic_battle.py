@@ -75,7 +75,7 @@ BADGES_ADVERSAIRES = {
 }
 
 
-async def handle_victory(interaction, adversaire_name, repliques=None):
+async def handle_victory(interaction, adversaire_name, state, repliques=None):
     repliques = repliques or {}
     badge_id = BADGES_ADVERSAIRES.get(adversaire_name)
     user_id = str(interaction.user.id)
@@ -104,10 +104,9 @@ async def handle_victory(interaction, adversaire_name, repliques=None):
                     f"💰 Tu reçois **{reward}** Croco dollars."
                 )
 
-    # ── XP de victoire pour tous les Pokémons ────────────────────────
+    # ── XP de victoire pour les Pokémons du combat ────────────────────────
     xp_victoire = 20
-    captures = get_new_captures(user_id)
-    for pokemon in captures:
+    for pokemon in state.player_team:
         can_evolve = add_xp(user_id, pokemon["name"], xp_victoire)
         await interaction.channel.send(f"⚔️ **+{xp_victoire} XP** pour **{pokemon['name']}** !")
         if can_evolve:
@@ -257,7 +256,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                         
                             # -----------------------
 
-                            await handle_victory(interaction, adversaire_name, repliques)
+                            await handle_victory(interaction, adversaire_name, state, repliques)
                             return
                         else:
                                 fields.append((
@@ -357,7 +356,7 @@ async def start_battle_turn_based(interaction, player_team, bot_team, adversaire
                             embed = build_turn_embed(state, tour, fields,  adversaire_name)
                             await interaction.channel.send(embed=embed)
                             
-                            await handle_victory(interaction, adversaire_name, repliques)
+                            await handle_victory(interaction, adversaire_name, state, repliques)
                             return
                         else:
                             fields.append((
