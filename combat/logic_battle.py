@@ -79,6 +79,11 @@ async def handle_victory(interaction, adversaire_name, state, repliques=None):
     repliques = repliques or {}
     badge_id = BADGES_ADVERSAIRES.get(adversaire_name)
     user_id = str(interaction.user.id)
+    
+    # Incrémenter les victoires quotidiennes
+    from combat.battle_limit import increment_daily_victories
+    new_count = increment_daily_victories(user_id)
+    
     if badge_id:
         user_badges = get_user_badges(user_id)
         badge_info = next((b for b in BADGE_DATA if b["id"] == badge_id), None)
@@ -116,6 +121,9 @@ async def handle_victory(interaction, adversaire_name, state, repliques=None):
             else:
                 await interaction.channel.send(f"⚠️ Évolution impossible pour **{pokemon['name']}** : {result['reason']}")
 
+    # Afficher le statut des victoires quotidiennes
+    await interaction.channel.send(f"⚔️ **Victoires aujourd'hui : {new_count}/2**")
+    
     if repliques.get("lose"):
         await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
     await interaction.channel.send("🎉 **Victoire du joueur !**")

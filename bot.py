@@ -1182,6 +1182,15 @@ async def battle(ctx):
      #   await ctx.send("❌ Le crocodile n'est pas apparu ! Revenez entre 21h30 et 23h30.")
       #  return
     user_id = str(ctx.author.id)
+    
+    # Vérifier la limite de victoires quotidiennes
+    from combat.battle_limit import can_battle
+    can_battle_now, victories = can_battle(user_id, max_victories=2)
+    
+    if not can_battle_now:
+        await ctx.send(f"❌ Tu as déjà gagné {victories} combats aujourd'hui ! Reviens demain pour combattre à nouveau.")
+        return
+    
     captures = get_new_captures(user_id)
 
     if not captures:
