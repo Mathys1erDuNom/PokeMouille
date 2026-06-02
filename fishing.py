@@ -194,22 +194,41 @@ def setup_fishing(bot: commands.Bot, cur):
         VOICE_CHANNEL_ID = int(os.getenv("VOICE_CHANNEL_ID_COPAING"))
         GUILD_ID = int(os.getenv("GUILD_ID"))
 
+        print(f"[DEBUG PECHE] GUILD_ID={GUILD_ID}, VOICE_CHANNEL_ID={VOICE_CHANNEL_ID}")
+
         try:
             guild = await bot.fetch_guild(GUILD_ID)
-        except discord.Forbidden:
+            print(f"[DEBUG PECHE] ✅ Guild trouvée : {guild.name}")
+        except discord.Forbidden as e:
+            print(f"[DEBUG PECHE] ❌ Forbidden : {e}")
             await ctx.send("❌ Le bot n'a pas les permissions sur ce serveur.", delete_after=5)
             return
-        except discord.NotFound:
+        except discord.NotFound as e:
+            print(f"[DEBUG PECHE] ❌ NotFound : {e}")
             await ctx.send("❌ Impossible de trouver le serveur.", delete_after=5)
             return
+        except Exception as e:
+            print(f"[DEBUG PECHE] ❌ Exception inattendue : {type(e).__name__} - {e}")
+            await ctx.send(f"❌ Erreur serveur : {type(e).__name__}", delete_after=5)
+            return
 
+        print(f"[DEBUG PECHE] user_id={user_id}")
         member = guild.get_member(user_id)
+        print(f"[DEBUG PECHE] get_member résultat : {member}")
+        
         if member is None:
             # Essayer de fetch le membre si pas en cache
             try:
+                print(f"[DEBUG PECHE] Tentative fetch_member pour {user_id}...")
                 member = await guild.fetch_member(user_id)
-            except discord.NotFound:
+                print(f"[DEBUG PECHE] ✅ fetch_member réussi : {member.display_name}")
+            except discord.NotFound as e:
+                print(f"[DEBUG PECHE] ❌ Membre non trouvé : {e}")
                 await ctx.send("❌ Impossible de te trouver dans le serveur.", delete_after=5)
+                return
+            except Exception as e:
+                print(f"[DEBUG PECHE] ❌ Exception fetch_member : {type(e).__name__} - {e}")
+                await ctx.send(f"❌ Erreur : {type(e).__name__}", delete_after=5)
                 return
 
         print(f"[DEBUG] guild={guild}")
