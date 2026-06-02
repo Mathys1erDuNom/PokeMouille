@@ -197,19 +197,15 @@ def setup_fishing(bot: commands.Bot, cur):
         print(f"[DEBUG PECHE] GUILD_ID={GUILD_ID}, VOICE_CHANNEL_ID={VOICE_CHANNEL_ID}")
 
         try:
+            print(f"[DEBUG PECHE] Avant fetch_guild...")
             guild = await bot.fetch_guild(GUILD_ID)
             print(f"[DEBUG PECHE] ✅ Guild trouvée : {guild.name}")
-        except discord.Forbidden as e:
-            print(f"[DEBUG PECHE] ❌ Forbidden : {e}")
-            await ctx.send("❌ Le bot n'a pas les permissions sur ce serveur.", delete_after=5)
-            return
-        except discord.NotFound as e:
-            print(f"[DEBUG PECHE] ❌ NotFound : {e}")
-            await ctx.send("❌ Impossible de trouver le serveur.", delete_after=5)
-            return
         except Exception as e:
-            print(f"[DEBUG PECHE] ❌ Exception inattendue : {type(e).__name__} - {e}")
-            await ctx.send(f"❌ Erreur serveur : {type(e).__name__}", delete_after=5)
+            print(f"[DEBUG PECHE] ❌ ERREUR GÉNÉRALE : {type(e).__name__}")
+            print(f"[DEBUG PECHE] Message : {e}")
+            import traceback
+            print(f"[DEBUG PECHE] Traceback : {traceback.format_exc()}")
+            await ctx.send(f"❌ Erreur : {type(e).__name__} - {str(e)[:100]}", delete_after=5)
             return
 
         print(f"[DEBUG PECHE] user_id={user_id}")
