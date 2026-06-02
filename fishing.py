@@ -191,19 +191,26 @@ def setup_fishing(bot: commands.Bot, cur):
         
     
         # Vérif connexion au vocal
-       # Vérif connexion au vocal via le guild
         VOICE_CHANNEL_ID = int(os.getenv("VOICE_CHANNEL_ID_COPAING"))
         GUILD_ID = int(os.getenv("GUILD_ID"))
 
-        guild = bot.get_guild(GUILD_ID)
-        if guild is None:
+        try:
+            guild = await bot.fetch_guild(GUILD_ID)
+        except discord.Forbidden:
+            await ctx.send("❌ Le bot n'a pas les permissions sur ce serveur.", delete_after=5)
+            return
+        except discord.NotFound:
             await ctx.send("❌ Impossible de trouver le serveur.", delete_after=5)
             return
 
         member = guild.get_member(user_id)
         if member is None:
-            await ctx.send("❌ Impossible de te trouver dans le serveur.", delete_after=5)
-            return
+            # Essayer de fetch le membre si pas en cache
+            try:
+                member = await guild.fetch_member(user_id)
+            except discord.NotFound:
+                await ctx.send("❌ Impossible de te trouver dans le serveur.", delete_after=5)
+                return
 
         print(f"[DEBUG] guild={guild}")
         print(f"[DEBUG] member={member}")

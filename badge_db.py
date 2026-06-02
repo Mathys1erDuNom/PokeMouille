@@ -11,11 +11,6 @@ DATABASE_URL = os.getenv("DATABASE_URL")
 conn = psycopg2.connect(DATABASE_URL, sslmode="require")
 cur = conn.cursor()
 
-
-cur.execute("DROP TABLE IF EXISTS badges")
-conn.commit()
-
-
 # Création de la table badges
 cur.execute("""
 CREATE TABLE IF NOT EXISTS badges (
