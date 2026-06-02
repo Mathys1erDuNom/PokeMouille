@@ -9,14 +9,10 @@ import random
 from io import BytesIO
 from inventory_db import add_item
 from money_db import get_balance, remove_money
-import psycopg2
-from dotenv import load_dotenv
+from db_connection import get_connection
 from datetime import datetime
 
-load_dotenv()
-DATABASE_URL = os.getenv("DATABASE_URL")
-
-conn = psycopg2.connect(DATABASE_URL, sslmode="require")
+conn = get_connection()
 cur  = conn.cursor()
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -56,6 +52,8 @@ def has_bought_today(user_id: str) -> bool:
     """Vérifie si l'utilisateur a déjà acheté quelque chose aujourd'hui."""
     user_id = str(user_id)
     today = datetime.now().date()
+    conn = get_connection()
+    cur = conn.cursor()
     cur.execute("""
         SELECT 1 FROM marche_noir_purchases
         WHERE user_id = %s AND purchase_date = %s
@@ -69,6 +67,8 @@ def record_purchase(user_id: str, item_name: str) -> bool:
     user_id = str(user_id)
     today = datetime.now().date()
     try:
+        conn = get_connection()
+        cur = conn.cursor()
         cur.execute("""
             INSERT INTO marche_noir_purchases (user_id, purchase_date, item_name)
             VALUES (%s, %s, %s)

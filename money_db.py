@@ -1,20 +1,10 @@
 # money_db.py
-import os
-import psycopg2
-from dotenv import load_dotenv
-
-# Charge les variables d'environnement
-load_dotenv()
-DATABASE_URL = os.getenv("DATABASE_URL")
-
-# Connexion globale à la base
-conn = psycopg2.connect(DATABASE_URL, sslmode="require")
-cur = conn.cursor()
-
-cur.execute("DROP TABLE IF EXISTS argent")
-conn.commit()
+from db_connection import get_connection
 
 # Création de la table argent
+conn = get_connection()
+cur = conn.cursor()
+
 cur.execute("""
 CREATE TABLE IF NOT EXISTS argent (
     user_id TEXT PRIMARY KEY,
@@ -27,6 +17,8 @@ conn.commit()
 def get_balance(user_id):
     """Retourne le solde d'un utilisateur."""
     user_id = str(user_id)
+    conn = get_connection()
+    cur = conn.cursor()
     cur.execute("""
         SELECT balance FROM argent
         WHERE user_id = %s
@@ -48,6 +40,8 @@ def get_balance(user_id):
 def add_money(user_id, amount):
     """Ajoute de l'argent à un utilisateur."""
     user_id = str(user_id)
+    conn = get_connection()
+    cur = conn.cursor()
     
     # Vérifie si l'utilisateur existe
     cur.execute("""
@@ -83,6 +77,8 @@ def remove_money(user_id, amount):
         return False  # Solde insuffisant
     
     new_balance = current_balance - amount
+    conn = get_connection()
+    cur = conn.cursor()
     cur.execute("""
         UPDATE argent SET balance = %s
         WHERE user_id = %s
@@ -94,6 +90,8 @@ def remove_money(user_id, amount):
 def set_money(user_id, amount):
     """Définit le solde exact d'un utilisateur."""
     user_id = str(user_id)
+    conn = get_connection()
+    cur = conn.cursor()
     
     cur.execute("""
         SELECT balance FROM argent
