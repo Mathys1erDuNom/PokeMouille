@@ -26,9 +26,14 @@ Enfant C (complice car son père le terrifie = peur) -> Anne Dupont
 
 Enfant D (l'ainé, héritier de l'empire de son père, -> Bernard Dupong
 qui est lui aussi complice mais lui l'a choisi, car son père manipulateur lui a fait miroiter un avenir prospère grâce au trafic = naiveté)
-
 '''
 
+
+#Sophie
+#  "Je n'en reviens toujours pas de ce qu'il fait, il est tellement corrompu... J'aimerais avoir l'influence nécessaire pour faire cesser tout cela, mais seul je n'irais pas bien loin... Peut-être avec la police ? (!police) Tiens, prends cet argent, il est sale et je n'en veux pas.",
+
+#Anne
+ #   "Il l'a fait disparaître, c'est sûr, on n'a plus de nouvelles de lui... En même temps, quelle idée d'essayer de lui mettre des bâtons dans les roues. J'ai entendu dire qu'il avait fui vers Sinnoh, qu'il se cachait quelque part dans une grotte (!grotte) froide et sombre. Il aurait laissé quelque chose derrière lui là-bas... Mince, je pensais être seule, tiens prends cet argent et ne répète rien à personne."
 tableau_riche = [
     {
         "id": 0,
@@ -68,7 +73,7 @@ tableau_riche = [
         "id": 2,
         "name": "Sophie Dupont",
         "premier_texte": [
-            "Je n'en reviens toujours pas de ce qu'il fait, il est tellement corrompu... J'aimerais avoir l'influence nécessaire pour faire cesser tout cela, mais seul je n'irais pas bien loin... Peut-être avec la police ? (!police) Tiens, prends cet argent, il est sale et je n'en veux pas.",
+    
             "Oh tiens, bonjour. As-tu besoin d'argent ? Tiens, tu peux prendre un peu du mien. De toutes façons, je n'en veux pas, cela ne m'intéresse pas, je ne suis pas comme eux. Je veux simplement faire éclater la vérité et sauver ces pauvres créatures du sort qui les attend...",
             "Je suis sûr que c'est sa faute si Joseph a disparu, je ne peux pas encore le prouver mais j'en suis sûr. Ah tiens, je croyais être seul, je réfléchissais à voix haute, tant que tu es là, tu veux de l'argent ? Je n'en veux pas.",
             "Hey, j'ai une question, comment tu ferais pour dénoncer des choses dont personne n'est au courant et qui sont problématiques ? Mmmh, euh je me suis emporté, tiens prends cet argent, désolé de t'avoir dérangé"
@@ -104,7 +109,7 @@ tableau_riche = [
         "premier_texte": [
              "Ah, tiens, bonjour. Tu peux prendre cet argent, si tu veux, nous en avons beaucoup. Mais ne dis pas à Père que je te l'ai donné...",
              "Bonjour. Tu veux de l'argent ? C'est d'accord, en voici un peu, mais je ne suis pas d'humeur. J'ai encore entendu leurs cris, ces pauvres animaux... Les hommes de main de Père avaient mal fermé la porte de la pièce. C'était glaçant.... Enfin, oublie cela et ne le répète à personne, j'en ai déjà trop dit.",
-            "Il l'a fait disparaître, c'est sûr, on n'a plus de nouvelles de lui... En même temps, quelle idée d'essayer de lui mettre des bâtons dans les roues. J'ai entendu dire qu'il avait fui vers Sinnoh, qu'il se cachait quelque part dans une grotte (!grotte) froide et sombre. Il aurait laissé quelque chose derrière lui là-bas... Mince, je pensais être seule, tiens prends cet argent et ne répète rien à personne."
+        
              "Oui monsieur je sais que vous avez beaucoup perdu au casino, mais vous savez c'est le jeu et ça peut arriver dans tous les casinos, nous respectons toutes les règles. Ouf c'était moins une, il faut que je le contacte pour qu'il règle cette histoire. Mince je ne t'avais pas vu, tu sais quoi, prends cet argent et ne dis rien à personne de ce que tu as entendu."
         
 
