@@ -141,6 +141,14 @@ class UseItemButton(Button):
         self.spawn_func = spawn_func
 
     async def callback(self, interaction: discord.Interaction):
+        # ✅ Vérifier si c'est un item à ne pas consommer
+        if self.item.get("extra") in ("nothing", "pêche", "pêche_super", "pêche_mega", "baie"):
+            await interaction.response.defer(ephemeral=True)
+            msg = f"✅ Vous avez utilisé **{self.item['name']}**."
+            await interaction.followup.send(msg, ephemeral=True)
+            await interaction.followup.send("⏳ Chaque chose en son temps…", ephemeral=True)
+            return
+
         new_qty, extra = use_item(self.user_id, self.item["name"])
 
         if new_qty is None:
@@ -229,8 +237,8 @@ class UseItemButton(Button):
 
 ############## Pour les items pas utiles desuite ou pas ici
 
-        elif extra in ("nothing", "pêche", "pêche_super", "pêche_mega", "baie"):
-            await interaction.followup.send("⏳ Chaque chose en son temps…", ephemeral=True)     
+        #elif extra in ("nothing", "pêche", "pêche_super", "pêche_mega", "baie"):
+         #   await interaction.followup.send("⏳ Chaque chose en son temps…", ephemeral=True)     
 
         else:
             # Aucun effet spécial → on envoie juste le message de confirmation
