@@ -71,13 +71,15 @@ def increment_daily_attempts(user_id: str) -> int:
     try:
         conn = _get_connection()
         cur = conn.cursor()
+        
         cur.execute("""
             INSERT INTO battle_attempts (user_id, attempt_date, attempt_count)
             VALUES (%s, %s, 1)
             ON CONFLICT (user_id, attempt_date) DO UPDATE SET
-                attempt_count = attempt_count + 1
-            RETURNING attempt_count
+                attempt_count = battle_attempts.attempt_count + 1
+            RETURNING battle_attempts.attempt_count
         """, (user_id, today))
+        
         
         row = cur.fetchone()
         conn.commit()
