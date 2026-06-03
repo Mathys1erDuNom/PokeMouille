@@ -113,3 +113,12 @@ def reset_daily_battles():
     # Cette fonction peut être appelée par une tâche automatique
     # pour ne pas laisser la table trop grande
     pass
+
+
+
+def increment_daily_victories(user_id: str) -> int:
+    """
+    Alias pour incrémenter les victoires du jour.
+    Réutilise la même table battle_attempts.
+    """
+    return increment_daily_attempts(user_id)
