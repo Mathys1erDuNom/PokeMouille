@@ -142,7 +142,7 @@ class UseItemButton(Button):
 
     async def callback(self, interaction: discord.Interaction):
         # ✅ Vérifier si c'est un item à ne pas consommer
-        if self.item.get("extra") in ("nothing", "pêche", "pêche_super", "pêche_mega", "baie"):
+        if self.item.get("extra") in ("nothing", "pêche", "pêche_super", "pêche_mega", "baie", "oeuf"):
             await interaction.response.defer(ephemeral=True)
             msg = f"✅ Vous avez utilisé **{self.item['name']}**."
             await interaction.followup.send(msg, ephemeral=True)
