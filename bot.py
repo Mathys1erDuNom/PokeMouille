@@ -501,7 +501,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
             if author else
             f"Un **{display_name}** sauvage est apparu !"
         )
-        description = "C'est un Pokémon BRILLANT ! Tape vite `!catch` ou '!capture' pour le capturer"
+        description = "C'est un Pokémon ! Tape vite `!catch` ou '!capture' pour le capturer"
         color = 0x00FF00
 
     if target_user:
