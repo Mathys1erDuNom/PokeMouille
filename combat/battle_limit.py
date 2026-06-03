@@ -14,16 +14,16 @@ def _get_connection():
 
 
 def _init_table():
-    """Initialise la table des victoires."""
+    """Initialise la table des tentatives de combat."""
     try:
         conn = _get_connection()
         cur = conn.cursor()
         cur.execute("""
-        CREATE TABLE IF NOT EXISTS battle_victories (
+        CREATE TABLE IF NOT EXISTS battle_attempts (
             user_id TEXT NOT NULL,
-            victory_date DATE NOT NULL,
-            victory_count INTEGER DEFAULT 0,
-            PRIMARY KEY (user_id, victory_date)
+            attempt_date DATE NOT NULL,
+            attempt_count INTEGER DEFAULT 0,
+            PRIMARY KEY (user_id, attempt_date)
         );
         """)
         conn.commit()
@@ -37,8 +37,8 @@ def _init_table():
 _init_table()
 
 
-def get_daily_victories(user_id: str) -> int:
-    """Retourne le nombre de victoires du jour pour cet utilisateur."""
+def get_daily_attempts(user_id: str) -> int:
+    """Retourne le nombre de tentatives de combat du jour pour cet utilisateur."""
     user_id = str(user_id)
     today = date.today()
     
@@ -47,23 +47,23 @@ def get_daily_victories(user_id: str) -> int:
         conn = _get_connection()
         cur = conn.cursor()
         cur.execute("""
-            SELECT victory_count FROM battle_victories
-            WHERE user_id = %s AND victory_date = %s
+            SELECT attempt_count FROM battle_attempts
+            WHERE user_id = %s AND attempt_date = %s
         """, (user_id, today))
         
         row = cur.fetchone()
         cur.close()
         return row[0] if row else 0
     except Exception as e:
-        print(f"Erreur lors de la récupération des victoires: {e}")
+        print(f"Erreur lors de la récupération des tentatives: {e}")
         return 0
     finally:
         if conn:
             conn.close()
 
 
-def increment_daily_victories(user_id: str) -> int:
-    """Incrémente les victoires du jour et retourne le nouveau total."""
+def increment_daily_attempts(user_id: str) -> int:
+    """Incrémente les tentatives du jour et retourne le nouveau total."""
     user_id = str(user_id)
     today = date.today()
     
@@ -72,11 +72,11 @@ def increment_daily_victories(user_id: str) -> int:
         conn = _get_connection()
         cur = conn.cursor()
         cur.execute("""
-            INSERT INTO battle_victories (user_id, victory_date, victory_count)
+            INSERT INTO battle_attempts (user_id, attempt_date, attempt_count)
             VALUES (%s, %s, 1)
-            ON CONFLICT (user_id, victory_date) DO UPDATE SET
-                victory_count = victory_count + 1
-            RETURNING victory_count
+            ON CONFLICT (user_id, attempt_date) DO UPDATE SET
+                attempt_count = attempt_count + 1
+            RETURNING attempt_count
         """, (user_id, today))
         
         row = cur.fetchone()
@@ -86,22 +86,23 @@ def increment_daily_victories(user_id: str) -> int:
     except Exception as e:
         if conn:
             conn.rollback()
-        print(f"Erreur lors de l'incrémentation des victoires: {e}")
+        print(f"Erreur lors de l'incrémentation des tentatives: {e}")
         return 0
     finally:
         if conn:
             conn.close()
 
 
-def can_battle(user_id: str, max_victories: int = 2) -> tuple[bool, int]:
+def can_battle(user_id: str, max_attempts: int = 3) -> tuple[bool, int]:
     """
     Vérifie si l'utilisateur peut combattre aujourd'hui.
-    Retourne (peut_combattre, victoires_actuelles)
+    Limite: 3 tentatives par jour, reset à 00h.
+    Retourne (peut_combattre, tentatives_actuelles)
     """
     user_id = str(user_id)
     try:
-        victories = get_daily_victories(user_id)
-        return victories < max_victories, victories
+        attempts = get_daily_attempts(user_id)
+        return attempts < max_attempts, attempts
     except Exception as e:
         print(f"Erreur lors de la vérification de bataille: {e}")
         return True, 0

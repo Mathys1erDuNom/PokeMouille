@@ -1183,13 +1183,16 @@ async def battle(ctx):
       #  return
     user_id = str(ctx.author.id)
     
-    # Vérifier la limite de victoires quotidiennes
-    from combat.battle_limit import can_battle
-    can_battle_now, victories = can_battle(user_id, max_victories=2)
+    # Vérifier la limite de tentatives quotidiennes (3 par jour, reset à 00h)
+    from combat.battle_limit import can_battle, increment_daily_attempts
+    can_battle_now, attempts = can_battle(user_id, max_attempts=3)
     
     if not can_battle_now:
-        await ctx.send(f"❌ Tu as déjà gagné {victories} combats aujourd'hui ! Reviens demain pour combattre à nouveau.")
+        await ctx.send(f"❌ Tu as déjà utilisé tes 3 tentatives de combat pour aujourd'hui ! Reviens demain.")
         return
+    
+    # Incrémenter le compteur de tentatives
+    increment_daily_attempts(user_id)
     
     captures = get_new_captures(user_id)
 
