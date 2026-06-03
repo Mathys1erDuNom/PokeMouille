@@ -121,8 +121,7 @@ async def handle_victory(interaction, adversaire_name, state, repliques=None):
             else:
                 await interaction.channel.send(f"⚠️ Évolution impossible pour **{pokemon['name']}** : {result['reason']}")
 
-    # Afficher le statut des victoires quotidiennes
-    await interaction.channel.send(f"⚔️ **Victoires aujourd'hui : {new_count}/2**")
+   
     
     if repliques.get("lose"):
         await interaction.channel.send(f"🧑‍🎤 **{adversaire_name}** : {repliques['lose']}")
