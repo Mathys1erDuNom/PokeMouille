@@ -92,6 +92,37 @@ def get_stock_du_jour():
     return random.sample(MARCHE_NOIR_ITEMS, nb)
 
 
+
+#
+
+
+# ─── Vue d'introduction ───────────────────────────────────────────────────────
+class MarcheNoirIntroView(View):
+    def __init__(self):
+        super().__init__(timeout=300)
+
+    @discord.ui.button(label="🖤 Entrer dans le marché noir", style=discord.ButtonStyle.danger)
+    async def entrer(self, interaction: discord.Interaction, button: Button):
+        await interaction.response.defer(ephemeral=True)
+
+        user_id = str(interaction.user.id)
+        balance = await asyncio.to_thread(get_balance, user_id)
+        stock   = get_stock_du_jour()
+
+        embed = discord.Embed(
+            title="🖤 Marché Noir",
+            description=(
+                f"*Chut... t'as pas vu ça ici.*\n\n"
+                f"💰 Votre solde : **{balance:,}** Croco dollars\n"
+                f"🎲 Stock limité — **{len(stock)} article(s)** disponible(s) aujourd'hui.\n\n"
+                "Cliquez sur un article pour voir les détails."
+            ),
+            color=discord.Color.dark_gray()
+        )
+
+        view = MarcheNoirView(user_id, stock)
+        await interaction.followup.send(embed=embed, view=view, ephemeral=True)
+
 # ─── Vue principale du marché noir ────────────────────────────────────────────
 class MarcheNoirView(View):
     def __init__(self, user_id, stock):
@@ -324,25 +355,18 @@ class AcheterMarcheNoirButton(Button):
 
 # ─── Fonction standalone appelable sans contexte ───────────────────────────
 async def run_marche_noir(channel, user_id=None):
-    """Lance le marché noir directement dans un salon Discord donné."""
-    if user_id is None:
-        user_id = channel.guild.owner_id
-    
-    balance = await asyncio.to_thread(get_balance, user_id)
-    stock   = get_stock_du_jour()
-
+    """Lance le marché noir — affiche juste l'intro publique."""
     embed = discord.Embed(
         title="🖤 Marché Noir",
         description=(
-            f"*Chut... t'as pas vu ça ici.*\n\n"
-            f"💰 Votre solde : **{balance:,}** Croco dollars\n"
-            f"🎲 Stock limité — **{len(stock)} article(s)** disponible(s) aujourd'hui.\n\n"
-            "Cliquez sur un article pour voir les détails."
+            "*Une silhouette dans l'ombre vous fait signe...*\n\n"
+            "Le marché noir est ouvert. Cliquez pour y accéder.\n"
+            "⚠️ Stock limité, une seule transaction par jour."
         ),
         color=discord.Color.dark_gray()
     )
 
-    view = MarcheNoirView(user_id, stock)
+    view = MarcheNoirIntroView()
     await channel.send(embed=embed, view=view)
 
 
