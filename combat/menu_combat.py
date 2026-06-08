@@ -73,8 +73,9 @@ class SlotSelect(Select):
     async def callback(self, interaction: discord.Interaction):
         value = self.values[0]
 
+    
         if value.startswith("__page_"):
-            new_page = int(value.split("_")[-1])
+            new_page = int(value.replace("__page_", "").replace("__", ""))
             self.parent_view.slot_pages[self.slot] = new_page
             self.parent_view.rebuild()
             await interaction.response.edit_message(view=self.parent_view)
