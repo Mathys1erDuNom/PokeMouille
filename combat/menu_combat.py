@@ -9,6 +9,8 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 from regions import get_user_region
 
 ADVERSAIRES_DIR = os.path.join(script_dir, "../json/")
+PAGE_SIZE = 23  # + "(aucun)" + "Page suivante" = 25 max
+
 
 def get_adversaires_by_region(region: str):
     if not region:
@@ -27,28 +29,60 @@ def get_adversaire_by_name(name: str, region: str):
     return None
 
 
-# ---- Slot unique par position ----
+# ---- Slot unique par position (avec pagination) ----
 class SlotSelect(Select):
-    def __init__(self, slot_number, row_number, pokemon_names, parent_view):
-        options = [discord.SelectOption(label="(aucun)", value="aucun")] + [
-            discord.SelectOption(label=name, value=name)
-            for name in pokemon_names
-        ]
+    def __init__(self, slot_number, row_number, pokemon_names, parent_view, page=0):
+        self.slot = slot_number
+        self.parent_view = parent_view
+        self.page = page
+        self.all_names = pokemon_names
+
+        start = page * PAGE_SIZE
+        chunk = pokemon_names[start:start + PAGE_SIZE]
+        has_next = (start + PAGE_SIZE) < len(pokemon_names)
+        has_prev = page > 0
+
+        options = [discord.SelectOption(label="(aucun)", value="aucun")]
+        options += [discord.SelectOption(label=name, value=name) for name in chunk]
+
+        if has_prev:
+            options.append(discord.SelectOption(
+                label=f"⬅️ Page précédente ({page})",
+                value=f"__page_{page - 1}__"
+            ))
+        if has_next:
+            options.append(discord.SelectOption(
+                label=f"➡️ Page suivante ({page + 2})",
+                value=f"__page_{page + 1}__"
+            ))
+
+        total_pages = (len(pokemon_names) - 1) // PAGE_SIZE + 1
+        placeholder = f"🥊 Slot {slot_number}"
+        if total_pages > 1:
+            placeholder += f" (page {page + 1}/{total_pages})"
+
         super().__init__(
-            placeholder=f"🥊 Slot {slot_number}",
+            placeholder=placeholder,
             min_values=1,
             max_values=1,
             options=options,
             custom_id=f"slot_{slot_number}",
             row=row_number
         )
-        self.slot = slot_number
-        self.parent_view = parent_view
 
     async def callback(self, interaction: discord.Interaction):
-        self.parent_view.slots[self.slot] = self.values[0]
-        self.parent_view.rebuild()
-        await interaction.response.edit_message(view=self.parent_view)
+        value = self.values[0]
+
+        if value.startswith("__page_"):
+            new_page = int(value.split("_")[-1])
+            self.parent_view.slot_pages[self.slot] = new_page
+            self.parent_view.rebuild()
+            await interaction.response.edit_message(view=self.parent_view)
+        else:
+            self.parent_view.slots[self.slot] = value
+            self.parent_view.slot_pages[self.slot] = 0  # reset page après sélection
+            self.parent_view.rebuild()
+            await interaction.response.edit_message(view=self.parent_view)
 
 
 # ---- Bouton Suivant (page 1 → page 2) ----
@@ -143,6 +177,7 @@ class SelectionView2(View):
         self.pokemon_names = pokemon_names
         self.full_pokemon_data = full_pokemon_data
         self.chosen_adversaire = chosen_adversaire
+        self.slot_pages = {i: 0 for i in range(1, 7)}
         self.rebuild()
 
     def rebuild(self):
@@ -150,7 +185,8 @@ class SelectionView2(View):
         for row_number, slot in enumerate([5, 6]):
             taken = {v for k, v in self.slots.items() if k != slot and v != "aucun"}
             filtered_names = [n for n in self.pokemon_names if n not in taken]
-            select = SlotSelect(slot, row_number, filtered_names, self)
+            page = self.slot_pages.get(slot, 0)
+            select = SlotSelect(slot, row_number, filtered_names, self, page=page)
             current = self.slots.get(slot, "aucun")
             if current and current != "aucun":
                 for opt in select.options:
@@ -197,6 +233,7 @@ class SelectionView(View):
         self.chosen_adversaire = None
         self.pokemon_names = pokemons
         self.slots = {i: "aucun" for i in range(1, 7)}
+        self.slot_pages = {i: 0 for i in range(1, 7)}
 
         region = get_user_region(user_id)
         self.region = region
@@ -221,7 +258,8 @@ class SelectionView(View):
         for row_number, slot in enumerate(range(1, 5)):
             taken = {v for k, v in self.slots.items() if k != slot and v != "aucun"}
             filtered_names = [n for n in self.pokemon_names if n not in taken]
-            select = SlotSelect(slot, row_number, filtered_names, self)
+            page = self.slot_pages.get(slot, 0)
+            select = SlotSelect(slot, row_number, filtered_names, self, page=page)
             current = self.slots.get(slot, "aucun")
             if current and current != "aucun":
                 for opt in select.options:
