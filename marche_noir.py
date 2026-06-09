@@ -105,23 +105,39 @@ class MarcheNoirIntroView(View):
     async def entrer(self, interaction: discord.Interaction, button: Button):
         await interaction.response.defer(ephemeral=True)
 
-        user_id = str(interaction.user.id)
-        balance = await asyncio.to_thread(get_balance, user_id)
-        stock   = get_stock_du_jour()
+        try:
+            user_id = str(interaction.user.id)
+            balance = await asyncio.to_thread(get_balance, user_id)
+            stock   = await asyncio.to_thread(get_stock_du_jour)  # ← thread séparé
 
-        embed = discord.Embed(
-            title="🖤 Marché Noir",
-            description=(
-                f"*Chut... t'as pas vu ça ici.*\n\n"
-                f"💰 Votre solde : **{balance:,}** Croco dollars\n"
-                f"🎲 Stock limité — **{len(stock)} article(s)** disponible(s) aujourd'hui.\n\n"
-                "Cliquez sur un article pour voir les détails."
-            ),
-            color=discord.Color.dark_gray()
-        )
+            if not stock:
+                await interaction.followup.send(
+                    "❌ Le marché noir est vide aujourd'hui. Reviens demain !",
+                    ephemeral=True
+                )
+                return
 
-        view = MarcheNoirView(user_id, stock)
-        await interaction.followup.send(embed=embed, view=view, ephemeral=True)
+            embed = discord.Embed(
+                title="🖤 Marché Noir",
+                description=(
+                    f"*Chut... t'as pas vu ça ici.*\n\n"
+                    f"💰 Votre solde : **{balance:,}** Croco dollars\n"
+                    f"🎲 Stock limité — **{len(stock)} article(s)** disponible(s) aujourd'hui.\n\n"
+                    "Cliquez sur un article pour voir les détails."
+                ),
+                color=discord.Color.dark_gray()
+            )
+
+            view = MarcheNoirView(user_id, stock)
+            await interaction.followup.send(embed=embed, view=view, ephemeral=True)
+
+        except Exception as e:
+            print(f"[MARCHE NOIR] Erreur dans entrer() : {e}")
+            import traceback; traceback.print_exc()
+            try:
+                await interaction.followup.send("❌ Une erreur est survenue.", ephemeral=True)
+            except Exception:
+                pass
 
 # ─── Vue principale du marché noir ────────────────────────────────────────────
 class MarcheNoirView(View):
