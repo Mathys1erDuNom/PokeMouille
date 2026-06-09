@@ -9,7 +9,7 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 from regions import get_user_region
 
 ADVERSAIRES_DIR = os.path.join(script_dir, "../json/")
-PAGE_SIZE = 23  # + "(aucun)" + "Page suivante" = 25 max
+PAGE_SIZE = 22  # + "(aucun)" + "Page suivante" = 25 max
 
 
 def get_adversaires_by_region(region: str):
@@ -34,8 +34,11 @@ class SlotSelect(Select):
     def __init__(self, slot_number, row_number, pokemon_names, parent_view, page=0):
         self.slot = slot_number
         self.parent_view = parent_view
-        self.page = page
         self.all_names = pokemon_names
+
+        total_pages = max(1, (len(pokemon_names) - 1) // PAGE_SIZE + 1)
+        page = max(0, min(page, total_pages - 1))  # ← borne la page
+        self.page = page
 
         start = page * PAGE_SIZE
         chunk = pokemon_names[start:start + PAGE_SIZE]
@@ -56,10 +59,23 @@ class SlotSelect(Select):
                 value=f"__page_{page + 1}__"
             ))
 
-        total_pages = (len(pokemon_names) - 1) // PAGE_SIZE + 1
+    
+        
+        total_pages = max(1, (len(pokemon_names) - 1) // PAGE_SIZE + 1)
+        page = max(0, min(page, total_pages - 1))  # ← AJOUT : borne la page
+        start = page * PAGE_SIZE
+        self.page = page  # ← mettre à jour self.page avec la valeur bornée
+        
+
+
         placeholder = f"🥊 Slot {slot_number}"
         if total_pages > 1:
             placeholder += f" (page {page + 1}/{total_pages})"
+
+        assert len(options) <= 25, (
+            f"Slot {slot_number} page {page}: {len(options)} options "
+            f"(chunk={len(chunk)}, has_prev={has_prev}, has_next={has_next})"
+        )    
 
         super().__init__(
             placeholder=placeholder,
@@ -188,6 +204,7 @@ class SelectionView2(View):
             filtered_names = [n for n in self.pokemon_names if n not in taken]
             page = self.slot_pages.get(slot, 0)
             select = SlotSelect(slot, row_number, filtered_names, self, page=page)
+            self.slot_pages[slot] = select.page  # ← resync page bornée
             current = self.slots.get(slot, "aucun")
             if current and current != "aucun":
                 for opt in select.options:
@@ -261,6 +278,7 @@ class SelectionView(View):
             filtered_names = [n for n in self.pokemon_names if n not in taken]
             page = self.slot_pages.get(slot, 0)
             select = SlotSelect(slot, row_number, filtered_names, self, page=page)
+            self.slot_pages[slot] = select.page  # ← resync page bornée
             current = self.slots.get(slot, "aucun")
             if current and current != "aucun":
                 for opt in select.options:
