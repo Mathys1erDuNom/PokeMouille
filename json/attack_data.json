@@ -215,6 +215,12 @@
     "category": "speciale"
   },
   {
+    "name": "Rafale Psy",
+    "type": "psy",
+    "damage": 90,
+    "category": "speciale"
+  },
+  {
     "name": "Bluff",
     "type": "normal",
     "damage": 0,
