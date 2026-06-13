@@ -187,6 +187,7 @@ async def tick_chenil_xp(
     members_in_vc: list,
     xp_counters:   dict,
     xp_amount:     int = 5,
+    xp_amount_eggs: int =30,
     threshold:     int = 30,
 ):
     """
@@ -225,7 +226,7 @@ async def tick_chenil_xp(
 
         # ── Œuf ──────────────────────────────────────────────────────────────
         if chenil_data["is_egg"]:
-            ready = add_egg_xp(str(uid), xp_amount)
+            ready = add_egg_xp(str(uid), xp_amount_eggs)
 
             # Relit les valeurs fraîches
             cur.execute(
@@ -236,7 +237,7 @@ async def tick_chenil_xp(
             current_xp, xp_evo = row if row else (0, 400)
 
             await channel.send(
-                f"🥚 **+{xp_amount} XP** pour l'œuf de <@{uid}> ! "
+                f"🥚 **+{xp_amount_eggs} XP** pour l'œuf de <@{uid}> ! "
                 f"(`{current_xp}/{xp_evo}`)"
             )
 
