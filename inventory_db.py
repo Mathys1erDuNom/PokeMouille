@@ -132,3 +132,23 @@ def use_item(user_id, item_name, quantity=1):
 
     conn.commit()
     return max(new_qty, 0), extra
+
+def get_items(user_id, item_name):
+    """Retourne un item spécifique de l'inventaire du joueur, ou None s'il n'existe pas."""
+    cur.execute("""
+        SELECT item_name, quantity, rarity, description, image, extra, price
+        FROM inventory
+        WHERE user_id = %s AND item_name = %s
+    """, (str(user_id), item_name))
+    row = cur.fetchone()
+    if row is None:
+        return None
+    return {
+        "name": row[0],
+        "quantity": row[1],
+        "rarity": row[2],
+        "description": row[3],
+        "image": row[4],
+        "extra": row[5],
+        "price": row[6],
+    }
