@@ -1,0 +1,14 @@
+[
+  {
+    "titre": "Mystère au vieux château de Vestigion…",
+    "texte": "Au cœur de la **Forêt Vestigion** se dresse un vieux château oublié de tous. Les rares voyageurs qui s'en sont approchés rapportent des lumières étranges filtrant à travers ses fenêtres brisées, et des gémissements portés par le vent entre les arbres. Les plus courageux pourront peut-être y découvrir quelque chose d'intéressant… ou d'inhabituel.",
+    "image": "images/actu/vieuxchateau.jpeg",
+    "lieu": "vieuxchateau"
+  },
+  {
+    "titre": "Étrange agitation dans la Forêt Vestigion…",
+    "texte": "Les gardes-forestiers de Vestigion tirent la sonnette d'alarme : jamais on n'avait vu autant de Pokémon sauvages s'agiter ainsi entre les arbres. Des traces de pas inconnues ont été retrouvées près des sentiers, et certains habitants affirment avoir entendu des cris étranges à la tombée de la nuit. Qu'est-ce qui perturbe la forêt ? Les plus téméraires pourront peut-être le découvrir par eux-mêmes…",
+    "image": "images/actu/foret-vestigion.jpg",
+    "lieu": "foret"
+  }
+]

@@ -73,7 +73,7 @@ tableau_riche = [
         "id": 2,
         "name": "Sophie Dupont",
         "premier_texte": [
-    
+            "Je n'en reviens toujours pas de ce qu'il fait, il est tellement corrompu... J'aimerais avoir l'influence nécessaire pour faire cesser tout cela, mais seul je n'irais pas bien loin... Peut-être avec la police ? (!police) Tiens, prends cet argent, il est sale et je n'en veux pas.",
             "Oh tiens, bonjour. As-tu besoin d'argent ? Tiens, tu peux prendre un peu du mien. De toutes façons, je n'en veux pas, cela ne m'intéresse pas, je ne suis pas comme eux. Je veux simplement faire éclater la vérité et sauver ces pauvres créatures du sort qui les attend...",
             "Je suis sûr que c'est sa faute si Joseph a disparu, je ne peux pas encore le prouver mais j'en suis sûr. Ah tiens, je croyais être seul, je réfléchissais à voix haute, tant que tu es là, tu veux de l'argent ? Je n'en veux pas.",
             "Hey, j'ai une question, comment tu ferais pour dénoncer des choses dont personne n'est au courant et qui sont problématiques ? Mmmh, euh je me suis emporté, tiens prends cet argent, désolé de t'avoir dérangé"
@@ -109,7 +109,7 @@ tableau_riche = [
         "premier_texte": [
              "Ah, tiens, bonjour. Tu peux prendre cet argent, si tu veux, nous en avons beaucoup. Mais ne dis pas à Père que je te l'ai donné...",
              "Bonjour. Tu veux de l'argent ? C'est d'accord, en voici un peu, mais je ne suis pas d'humeur. J'ai encore entendu leurs cris, ces pauvres animaux... Les hommes de main de Père avaient mal fermé la porte de la pièce. C'était glaçant.... Enfin, oublie cela et ne le répète à personne, j'en ai déjà trop dit.",
-        
+            "Il l'a fait disparaître, c'est sûr, on n'a plus de nouvelles de lui... En même temps, quelle idée d'essayer de lui mettre des bâtons dans les roues. J'ai entendu dire qu'il avait fui vers Sinnoh, qu'il se cachait quelque part dans une grotte (!grotte) froide et sombre. Il aurait laissé quelque chose derrière lui là-bas... Mince, je pensais être seule, tiens prends cet argent et ne répète rien à personne.",
              "Oui monsieur je sais que vous avez beaucoup perdu au casino, mais vous savez c'est le jeu et ça peut arriver dans tous les casinos, nous respectons toutes les règles. Ouf c'était moins une, il faut que je le contacte pour qu'il règle cette histoire. Mince je ne t'avais pas vu, tu sais quoi, prends cet argent et ne dis rien à personne de ce que tu as entendu."
         
 
@@ -145,6 +145,14 @@ tableau_pauvre = [
     {
         "id": 1,
         "name": "Marie Dupont",
+        "item_recompense": {
+            "item_name": "Jeton",
+            "rarity": "common",
+            "description": "Permet de jouer à la roue du casino ",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/amulet-coin.png",
+            "extra": "nothing",
+            "price" : 700
+        },
         "premier_texte": [
 
             "Bonjour, excusez-moi de vous déranger, après l'arrestation de mon mari et de notre fils, nous avons tout perdu, nous n'avons plus rien et je dois nourrir mes enfants, pourriez-vous me donner un peu d'argent ou de la nourriture si vous en avez ?",
@@ -154,8 +162,7 @@ tableau_pauvre = [
         ],
         "somme_don": 50,
         "texte_fin": [
-            "",
-            ""
+             "Merci beaucoup de ton aide, tiens prends ça tu pourras l'utiliser dans le casino, on ne peut plus y aller, il n'est plus à nous maintenant...",
         ],
         "adresse_image": "images/famille/pauvre/marie.png"
     },
@@ -163,6 +170,16 @@ tableau_pauvre = [
     {
         "id": 2,
         "name": "Sophie Dupont",
+        "item_recompense": {
+            "item_name": "Jeton",
+            "rarity": "common",
+            "description": "Permet de jouer à la roue du casino ",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/amulet-coin.png",
+            "extra": "nothing",
+            "price" : 700
+        },
+        
+        
         "premier_texte": [
 
             "Tous les crimes de mon père ont été découverts... Même si c'était ce que je voulais, je ne m'attendais pas à ce que mon frère finisse aussi sous les barreaux... Il était sous l'influence de notre père, c'est injuste... Je sais que je ne voulais pas de l'argent sale de mon père, mais c'est vraiment dur de voir ma mère, elle est si triste. À vrai dire, nous n'avons plus rien et nous avons du mal à trouver à manger... Aurait-tu par hasard de la nourriture ou un peu d'argent ?",
@@ -171,14 +188,21 @@ tableau_pauvre = [
         ],
         "somme_don": 100,
         "texte_fin": [
-             "",
-            ""
+             "Merci beaucoup de ton aide, tiens prends ça tu pourras l'utiliser dans le casino, on ne peut plus y aller, il n'est plus à nous maintenant...",
         ],
         "adresse_image": "images/famille/pauvre/sophie.png"
     },
        {
         "id": 3,
         "name": "Anne Dupont",
+        "item_recompense": {
+            "item_name": "Jeton",
+            "rarity": "common",
+            "description": "Permet de jouer à la roue du casino ",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/amulet-coin.png",
+            "extra": "nothing",
+            "price" : 700
+        },
         "premier_texte": [
             "Ma famille et moi n'avons plus rien, par pitié aidez-nous !",
             "Je ne sais pas où nous allons dormir ce soir. Nous mourrons de faim avec ma famille. Après l'arrestation de mon père et de mon frère, nous avons tous perdu. S'il te plaît, aurais-tu quelque chose qui pourrait aider ma famille ?"
@@ -187,8 +211,7 @@ tableau_pauvre = [
         ],
         "somme_don": 60,
         "texte_fin": [
-            "",
-            ""
+             "Merci beaucoup de ton aide, tiens prends ça tu pourras l'utiliser dans le casino, on ne peut plus y aller, il n'est plus à nous maintenant...",
         ],
         "adresse_image": "images/famille/pauvre/anne.png"
     },
@@ -196,6 +219,14 @@ tableau_pauvre = [
        {
         "id": 4,
         "name": "Serge Dupont",
+        "item_recompense": {
+            "item_name": "Jeton",
+            "rarity": "common",
+            "description": "Permet de jouer à la roue du casino ",
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/amulet-coin.png",
+            "extra": "nothing",
+            "price" : 700
+        },
         "premier_texte": [
              "C'est une injustice, mon père et mon frère sont en prison ! Ils sont accusés de choses qu'ils n'ont pas commises, c'est une honte. Maintenant, nous sommes devenus pauvres avec ma famille, nous n'avons plus à manger, tu aurais quelque chose qui pourrait nous aider ?",
              "Je suis tellement énervé, j'aimerais retrouver celui qui a pu mentir à la police ! Comment mon père et mon frère pourraient-ils être coupables de cela ! Ils travaillaient dur au casino. Père gagnait sa vie honnêtement et maintenant nous avons tout perdu, qui a osé nous faire ça ???? Ma famille et moi n'avons rien à manger, pourrais-tu nous aider ?"
@@ -205,8 +236,8 @@ tableau_pauvre = [
         ],
         "somme_don": 30,
         "texte_fin": [
-             "",
-            ""
+            "Merci beaucoup de ton aide, tiens prends ça tu pourras l'utiliser dans le casino, on ne peut plus y aller, il n'est plus à nous maintenant...",
+            
            
         ],
         "adresse_image": "images/famille/pauvre/serge.png"
@@ -214,6 +245,24 @@ tableau_pauvre = [
   
 ]
 
+
+
+def donner_recompense(user_id: int, personnage: dict):
+    from inventory_db import add_item
+    item = personnage.get("item_recompense")
+    if not item:
+        return None
+    add_item(
+        user_id=user_id,
+        name=item["item_name"],      # ← "item_name" pas "name"
+        quantity=item.get("quantity", 1),
+        rarity=item.get("rarity", "commun"),
+        description=item.get("description", ""),
+        image=item.get("image", ""),
+        extra=item.get("extra"),
+        price=item.get("price"),
+    )
+    return item["item_name"]         # ← idem
 
 # ─── Fonction principale ───────────────────────────────────────────────────────
 async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not: bool):
@@ -341,6 +390,12 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
                     f"🫐 {interaction.user.mention} a donné **{chosen_item}** à {personnage['name']} !\n"
                     f"📦 Quantité restante : **{new_qty}**."
                 )
+
+                # ← MANQUANT
+                item_nom = donner_recompense(interaction.user.id, personnage)
+                if item_nom:
+                    await channel.send(f"🎁 En remerciement, **{personnage['name']}** t'offre **{item_nom}** !")
+
                 interaction_done.set()
 
             async def on_timeout(self):
@@ -391,6 +446,12 @@ async def run_interaction_personnage(channel: discord.TextChannel, riche_or_not:
                     f"🤝 {interaction.user.mention} a donné **{somme:,}** Croco dollars à {personnage['name']} !\n"
                     f"🐊 Nouveau solde : **{new_balance:,}** Croco dollars."
                 )
+
+                # ← MANQUANT
+                item_nom = donner_recompense(interaction.user.id, personnage)
+                if item_nom:
+                    await channel.send(f"🎁 En remerciement, **{personnage['name']}** t'offre **{item_nom}** !")
+
                 interaction_done.set()
 
             async def item_callback(self, interaction: discord.Interaction):

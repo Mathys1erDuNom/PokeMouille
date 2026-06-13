@@ -1,0 +1,41 @@
+[
+
+   {
+    "item_name": "Antidote",
+    "rarity": "common",
+    "probabilité": 0.25,
+    "description": "Certaines personnes rachètent ce produit pour se soigner leur pokémon",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png",
+    "extra": "nothing",
+    "price" : 700
+  },
+  {
+    "item_name": "Anti-Para",
+    "rarity": "common",
+    "probabilité": 0.25,
+    "description": "Certaines personnes rachètent ce produit pour se soigner leur pokémon",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/paralyze-heal.png",
+    "extra": "nothing",
+    "price" : 700
+  },
+  {
+    "item_name": "Plaque Insecte",
+    "probabilité": 0.25,
+    "rarity": "commun",
+    "description": "Certaines personnes rachètent ce produit",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dread-plate.png",
+    "extra": "nothing",
+    "price": 100
+  },
+  {
+    "item_name": "Hyper Ball",
+    "rarity": "rare",
+    "probabilité": 0.25,
+    "description": "Une Hyper ball qui contient un Pokémon très rare",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png",
+    "extra": "spawn_pokemon_rare",
+    "price" : 500
+  }
+ 
+
+]

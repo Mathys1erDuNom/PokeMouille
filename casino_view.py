@@ -5,6 +5,7 @@ from card_game import CardColorGame
 from slot_machine import SlotMachine
 from money_db import get_balance
 from plus_ou_moins import DiceGame
+from roue import WheelButton
 
 # Dans CasinoView.__init__ :
 
@@ -15,6 +16,7 @@ class CasinoView(View):
         self.add_item(CardGameButton())
         self.add_item(SlotMachineButton())
         self.add_item(DiceGameButton())
+        self.add_item(WheelButton())
         
     async def on_timeout(self):
         for item in self.children:
@@ -129,6 +131,8 @@ def setup_casino(bot):
                        "   Mise : 10 💰🐊 | Gains : 100-10 000 💰🐊\n"
                        "🎰 **Machine à sous** - Plus ou moins / égale\n"
                        "   Mise : 10 💰🐊 | Gains : 20-100 💰🐊\n"
+                       "🎡 **Roue de la Fortune** - Tournez la roue avec un Jeton\n"
+                        "   Gains : 50 à 500 💰🐊 (ou un Jeton remboursé !)\n\n"
                        f"━━━━━━━━━━━━━━━━━━━━━━━\n"
                        f"💰🐊 **Votre solde :** {balance:,} Croco dollars",
             color=discord.Color.gold()
