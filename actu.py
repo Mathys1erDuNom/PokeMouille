@@ -218,6 +218,8 @@ def item_embed(item: dict, lieu_name: str) -> tuple[discord.Embed, discord.File 
         filename = os.path.basename(image_path)
         file = discord.File(image_path, filename=filename)
         embed.set_image(url=f"attachment://{filename}")
+
+    return embed, file  # ← ligne manquante
     
 
 
