@@ -501,7 +501,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
             if author else
             f"Un **{display_name}** sauvage est apparu !"
         )
-        description = "C'est un Pokémon ! Tape vite `!catch` ou '!capture' pour le capturer"
+        description = "C'est un Pokémon BRILLANT ! Tape vite `!catch` ou '!capture' pour le capturer"
         color = 0x00FF00
 
     if target_user:
@@ -1146,6 +1146,9 @@ with open(badges_file, "r", encoding="utf-8") as f:
 # Setup du module badge
 setup_badges(bot, full_badge_data)
 
+from actu import setup_actu
+setup_actu(bot,cur)
+
 
 setupxp(bot)
 
@@ -1173,6 +1176,7 @@ async def battletime(ctx):
 '''
 '''
 '''
+
 
 
 
@@ -1230,7 +1234,8 @@ setup_croco_event(
 
 setup_inventory(bot)
 
-
+from receleur import setup_receleur
+setup_receleur(bot)
 setup_region(bot)
 setup_regions()
 
