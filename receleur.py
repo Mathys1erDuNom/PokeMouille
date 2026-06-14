@@ -145,10 +145,14 @@ class ReceleurSelectView(View):
             await interaction.followup.send("❌ Item introuvable.", ephemeral=True)
             return
 
-        # Génère la carte de détail
-        file, embed, view = await asyncio.to_thread(
+      
+        # Génère la carte (image + embed) dans le thread
+        file, embed = await asyncio.to_thread(
             build_item_card, item, self.user_id
         )
+        # Crée la View dans le contexte async principal
+        view = View()
+        view.add_item(VendreButton(item, self.user_id))
         await interaction.followup.send(file=file, embed=embed, view=view, ephemeral=True)
 
     async def on_timeout(self):
@@ -277,10 +281,7 @@ def build_item_card(item: dict, user_id: str):
     )
     embed.set_image(url="attachment://receleur_card.png")
 
-    view = View()
-    view.add_item(VendreButton(item, user_id))
-
-    return file, embed, view
+    return file, embed  # ← plus de view ici
 
 
 # ─── Bouton de vente ──────────────────────────────────────────────────────────
