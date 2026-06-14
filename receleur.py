@@ -9,6 +9,7 @@ from io import BytesIO
 from inventory_db import delete_inventory, get_inventory  # adapte si tes fonctions s'appellent autrement
 from money_db import get_balance, add_money
 from db_connection import get_connection
+from inventory_db import use_item, get_inventory
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 receleur_json_path = os.path.join(script_dir, "json", "receleur.json")
@@ -37,11 +38,11 @@ def get_items_vendables(user_id: str) -> list[dict]:
     inventory = get_inventory(user_id)  # liste de dicts : item_name, quantity, rarity, description, image, price...
     vendables = []
     for item in inventory:
-        name = item.get("item_name") or item.get("name", "")
+        name = item.get("name", "")  # get_inventory retourne "name", pas "item_name"
         if name in RECELEUR_PRIX:
             vendables.append({
                 **item,
-                "item_name": name,
+                "item_name": name,  # on normalise ici pour le reste du code
                 "rachat_price": RECELEUR_PRIX[name]
             })
     return vendables
@@ -302,8 +303,8 @@ class VendreButton(Button):
         quantity = self.item.get("quantity", 1)
 
         # Retire 1 exemplaire de l'inventaire
-        success_remove = await asyncio.to_thread(delete_inventory, self.user_id, name, 1)
-        if not success_remove:
+        new_qty, _ = await asyncio.to_thread(use_item, self.user_id, name, 1)
+        if new_qty is None:
             await interaction.followup.send(
                 "❌ Impossible de retirer l'item de ton inventaire. Tu l'as encore ?",
                 ephemeral=True
