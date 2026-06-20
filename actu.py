@@ -320,16 +320,25 @@ def setup_actu(bot: commands.Bot, cur):
     @tasks.loop(minutes=1)
     async def check_actu_time():
         global actu_lieu_du_jour
+
         if not actu_enabled:
             return
+
         now = datetime.now()
-        if ACTU_HOUR_MIN <= now.hour < ACTU_HOUR_MAX:
+
+        # Vendredi (4), Samedi (5), Dimanche (6)
+        is_allowed_day = now.weekday() in (4, 5, 6)
+        is_allowed_hour = ACTU_HOUR_MIN <= now.hour < ACTU_HOUR_MAX
+
+        if is_allowed_day and is_allowed_hour:
             if not check_actu_time._published_today:
                 check_actu_time._published_today = True
                 await send_daily_actu(bot)
+
         else:
+            # reset quand on sort de la fenêtre ou du bon jour
             check_actu_time._published_today = False
-            actu_lieu_du_jour = None  # reset à minuit, plus aucun lieu accessible
+            actu_lieu_du_jour = None
 
     check_actu_time._published_today = False
 
