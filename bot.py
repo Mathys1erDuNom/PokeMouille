@@ -1344,7 +1344,7 @@ chenil_xp_counters: dict[int, int] = {}
 from chenil import setup_chenil 
 
 setup_chenil(bot,TEXT_CHANNEL_ID)
-riche_or_not = True
+riche_or_not = False;
 async def auto_event_loop():
     await bot.wait_until_ready()
     global next_event_time, next_event_name
