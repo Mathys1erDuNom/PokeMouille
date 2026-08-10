@@ -1367,7 +1367,6 @@ async def auto_event_loop():
             next_event_time = None
             next_event_name = None
             chenil_xp_counters.clear()   # reset des compteurs si vocal vide
-            # print(f"[AUTO] Personne dans le vocal, vérification dans 1 min...")
             await asyncio.sleep(60)
             continue
 
@@ -1385,16 +1384,12 @@ async def auto_event_loop():
 
         if chosen == "quiz":
             next_event_name = "🧠 Quiz Pokémon"
-
         elif chosen == "devine":
             next_event_name = "🔍 Devine le Pokémon"
-
         elif chosen == "spawn":
             next_event_name = "✨ Spawn Pokémon"
-
         elif chosen == "dupont":
             next_event_name = "🕵️ Événement Dupont"
-
         elif chosen == "marche_noir":
             next_event_name = "🌙 Événement Marché Noir"
 
@@ -1428,16 +1423,26 @@ async def auto_event_loop():
             continue
 
         print(f"[AUTO] Lancement de : {next_event_name} ({len(voice_channel.members)} joueur(s) présent(s))")
-        if chosen == "quiz":
-            await bot.run_quiz(text_channel)
-        elif chosen == "devine":
-            await bot.run_devine(text_channel)
-        elif chosen == "spawn":
-            await spawn_pokemon(text_channel)
-        elif chosen == "dupont":
-            await run_interaction_personnage(text_channel, riche_or_not)
-        elif chosen == "marche_noir":
-            await run_marche_noir(text_channel)
+        # Exécution protégée de l'événement : timeout et gestion des erreurs
+        EVENT_TIMEOUT = 15 * 60  # durée max d'un événement en secondes
+        try:
+            if chosen == "quiz":
+                await asyncio.wait_for(bot.run_quiz(text_channel), timeout=EVENT_TIMEOUT)
+            elif chosen == "devine":
+                await asyncio.wait_for(bot.run_devine(text_channel), timeout=EVENT_TIMEOUT)
+            elif chosen == "spawn":
+                await asyncio.wait_for(spawn_pokemon(text_channel), timeout=EVENT_TIMEOUT)
+            elif chosen == "dupont":
+                await asyncio.wait_for(run_interaction_personnage(text_channel, riche_or_not), timeout=EVENT_TIMEOUT)
+            elif chosen == "marche_noir":
+                await asyncio.wait_for(run_marche_noir(text_channel), timeout=EVENT_TIMEOUT)
+        except asyncio.TimeoutError:
+            print(f"[AUTO] L'événement {next_event_name} a dépassé le timeout et a été annulé.")
+        except Exception as e:
+            print(f"[AUTO] Erreur lors de l'événement {next_event_name}: {e}")
+            # Ne pas lever l'exception pour que la boucle continue
+            await asyncio.sleep(5)
+            continue
 
 
 
