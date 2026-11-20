@@ -1,0 +1,38 @@
+[
+  {
+    "item_name": "Vieux Gâteau",
+    "probabilité": 0.30,
+    "rarity": "rare",
+    "description": "Certaine personne rachète ce produit.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-gateau.png",
+    "price": 500,
+    "extra": "nothing"
+  },
+  {
+    "item_name": "Plaque Ombre",
+    "probabilité": 0.3,
+    "rarity": "commun",
+    "description": "Certaine personne rachète ce produit",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dread-plate.png",
+    "extra": "nothing",
+    "price": 100
+  },
+  {
+    "item_name": "Antidote",
+    "rarity": "common",
+    "probabilité": 0.3,
+    "description": "Certaine personne rachète ce produit pour se soigner d'une intoxication",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png",
+    "extra": "nothing",
+    "price" : 700
+  },
+  {
+    "item_name": "Clé Secrète",
+    "probabilité": 0.1,
+    "rarity": "rare",
+    "description": "Certaine personne rachète ce produit.",
+    "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/secret-key.png",
+    "price": 500,
+    "extra": "nothing"
+  }
+]

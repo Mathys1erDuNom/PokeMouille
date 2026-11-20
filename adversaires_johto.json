@@ -1,0 +1,630 @@
+[   
+
+  {
+    "id": "champion_de_Mauville",
+    "name": "Albert (Normal/vol)",
+    "repliques": {
+      "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+      "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+      "lose_pokemon": "Oh non… il a été vaincu…",
+      "win": "La nature triomphe toujours.",
+      "lose": "Je reconnais ta force. Tu as gagné."
+    },
+    "pokemons": [
+        {
+            "name": "Roucool",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+            "attacks": [
+                "Charge",
+                "Pique"
+            ],
+            "stats": {
+                "hp": 71,
+                "attack": 76,
+                "special_attack": 66,
+                "speed": 87,
+                "defense": 71,
+                "special_defense": 66
+            }
+        },
+        {
+            "name": "Roucoups",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+            "attacks": [
+                "Charge",
+                "Pique",
+                "Cru-Aile"
+            ],
+            "stats": {
+                "hp": 94,
+                "attack": 91,
+                "special_attack": 81,
+                "speed": 102,
+                "defense": 86,
+                "special_defense": 81
+            }
+        }
+     
+  
+   
+    
+    
+
+    ]
+  },
+
+
+  {
+    "id": "champion_de_Écorcia",
+    "name": "Hector (Insecte)",
+    "repliques": {
+      "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+      "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+      "lose_pokemon": "Oh non… il a été vaincu…",
+      "win": "La nature triomphe toujours.",
+      "lose": "Je reconnais ta force. Tu as gagné."
+    },
+    "pokemons": [
+        {
+            "name": "Insecateur",
+            "type": [
+                "insecte",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/123.png",
+            "attacks": [
+                "Pique",
+                "Tranche"
+            ],
+            "stats": {
+                "hp": 101,
+                "attack": 141,
+                "special_attack": 86,
+                "speed": 116,
+                "defense": 111,
+                "special_defense": 111
+            }
+        },
+        {
+            "name": "Coconfort",
+            "type": [
+                "insecte"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
+            "attacks": [
+                "Armure"
+            ],
+            "stats": {
+                "hp": 76,
+                "attack": 56,
+                "special_attack": 56,
+                "speed": 66,
+                "defense": 81,
+                "special_defense": 56
+            }
+        },
+        {
+            "name": "Chrysacier",
+            "type": [
+                "insecte"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+            "attacks": [
+                "Armure"
+            ],
+            "stats": {
+                "hp": 81,
+                "attack": 51,
+                "special_attack": 56,
+                "speed": 61,
+                "defense": 86,
+                "special_defense": 56
+            }
+        }
+       
+   
+        
+    ]
+  },
+
+  {
+    "id": "champion_de_Doublonville",
+    "name": "Blanche (Normal)",
+    "repliques": {
+      "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+      "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+      "lose_pokemon": "Oh non… il a été vaincu…",
+      "win": "La nature triomphe toujours.",
+      "lose": "Je reconnais ta force. Tu as gagné."
+    },
+    "pokemons": [
+        {
+            "name": "Melofee",
+            "type": [
+                "fee"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/35.png",
+            "attacks": [
+                "Charge",
+                "Marelle",
+                "Pouvoir Lunaire"
+            ],
+            "stats": {
+                "hp": 101,
+                "attack": 76,
+                "special_attack": 91,
+                "speed": 66,
+                "defense": 78,
+                "special_defense": 96
+            }
+        },
+        {
+            "name": "Ecremeuh",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/241.png",
+            "attacks": [
+                "Ultimapoing",
+                "Charge"
+            
+            ],
+            "stats": {
+                "hp": 126,
+                "attack": 111,
+                "defense": 136,
+                "special_attack": 71,
+                "special_defense": 101,
+                "speed": 131
+            }
+        }
+  
+    
+  
+
+    ]
+  },
+
+
+
+
+
+    {
+      "id": "champion_de_Rosalia",
+      "name": "Mortimer (Spectre)",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Fantominus",
+            "type": [
+                "spectre",
+                "poison"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
+            "attacks": [
+                "Balle Ombre"
+            ],
+            "stats": {
+                "hp": 61,
+                "attack": 66,
+                "special_attack": 131,
+                "speed": 121,
+                "defense": 61,
+                "special_defense": 66
+            }
+        },
+        {
+            "name": "Spectrum",
+            "type": [
+                "spectre",
+                "poison"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
+            "attacks": [
+                "Balle Ombre"
+            ],
+            "stats": {
+                "hp": 76,
+                "attack": 81,
+                "special_attack": 166,
+                "speed": 136,
+                "defense": 76,
+                "special_defense": 76
+            }
+        },
+        {
+            "name": "Ectoplasma",
+            "type": [
+                "spectre",
+                "poison"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+            "attacks": [
+                "Balle Ombre",
+                "Bomb-Beurk",
+                
+                "Lance-Flammes"
+            ],
+            "stats": {
+                "hp": 91,
+                "attack": 96,
+                "special_attack": 181,
+                "speed": 161,
+                "defense": 91,
+                "special_defense": 101
+            }
+        }, {
+            "name": "Spectrum",
+            "type": [
+                "spectre",
+                "poison"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
+            "attacks": [
+                "Balle Ombre"
+            ],
+            "stats": {
+                "hp": 76,
+                "attack": 81,
+                "special_attack": 166,
+                "speed": 136,
+                "defense": 76,
+                "special_defense": 76
+            }
+        }
+        
+      
+
+
+
+      ]
+    },
+
+
+
+    {
+      "id": "champion_de_Irisia",
+      "name": "Chuck (Combat)",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Tartard",
+            "type": [
+                "eau",
+                "combat"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/62.png",
+            "attacks": [
+                "Pistolet a O",
+                "Charge",
+                "Poing Karate",
+                "Seisme"
+            ],
+            "stats": {
+                "hp": 119,
+                "attack": 116,
+                "special_attack": 96,
+                "speed": 91,
+                "defense": 109,
+                "special_defense": 111
+            }
+        },
+        {
+            "name": "Colossinge",
+            "type": [
+                "combat"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png",
+            "attacks": [
+                "Charge",
+                "Morsure",
+                "Poing Karate"
+            ],
+            "stats": {
+                "hp": 96,
+                "attack": 136,
+                "special_attack": 91,
+                "speed": 126,
+                "defense": 91,
+                "special_defense": 101
+            }
+        }
+     
+      
+   
+   
+        
+      ]
+    },
+
+
+
+    {
+      "id": "champion_de_Oliville",
+      "name": "Jasmine (Acier)",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Magneti",
+            "type": [
+                "electrique",
+                "acier"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
+            "attacks": [
+                "Eclair",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 56,
+                "attack": 66,
+                "special_attack": 116,
+                "speed": 76,
+                "defense": 101,
+                "special_defense": 86
+            }
+        }, {
+            "name": "Steelix",
+            "type": [
+                "acier",
+                "sol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png",
+            "attacks": [
+                "Coupe",
+                "Queue de fer",
+                "Souplesse"
+            ],
+            "stats": {
+                "hp": 106,
+                "attack": 116,
+                "defense": 231,
+                "special_attack": 86,
+                "special_defense": 96,
+                "speed": 61
+            }
+        },{
+            "name": "Magneti",
+            "type": [
+                "electrique",
+                "acier"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/81.png",
+            "attacks": [
+                "Eclair",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 56,
+                "attack": 66,
+                "special_attack": 116,
+                "speed": 76,
+                "defense": 101,
+                "special_defense": 86
+            }
+        }
+     
+
+    
+      
+        
+      ]
+    },
+
+
+
+    {
+      "id": "champion_de_Acajou",
+      "name": "Frédo (Glace)",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Otaria",
+            "type": [
+                "eau"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/86.png",
+            "attacks": [
+                "Pistolet a O",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 121,
+                "attack": 101,
+                "special_attack": 101,
+                "speed": 76,
+                "defense": 111,
+                "special_defense": 121
+            }
+        },
+        {
+            "name": "Lamantine",
+            "type": [
+                "eau",
+                "glace"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/87.png",
+            "attacks": [
+                "Pistolet a O",
+                "Charge",
+                "Laser Glace"
+            ],
+            "stats": {
+                "hp": 161,
+                "attack": 101,
+                "special_attack": 111,
+                "speed": 91,
+                "defense": 121,
+                "special_defense": 126
+            }
+        },
+        {
+            "name": "Cochignon",
+            "type": [
+                "glace",
+                "sol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/221.png",
+            "attacks": [
+                "Coup dBoule",
+                "Koud’Korne",
+                "Furie",
+                "Laser Glace"
+            ],
+            "stats": {
+                "hp": 131,
+                "attack": 131,
+                "defense": 111,
+                "special_attack": 91,
+                "special_defense": 91,
+                "speed": 81
+            }
+        }
+   
+    
+       
+
+      
+
+      ]
+    },
+
+
+
+
+    {
+      "id": "champion_de_Ébènelle",
+      "name": "Sandra (Dragon)",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Draco",
+            "type": [
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
+            "attacks": [
+                "Dracochoc",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 92,
+                "attack": 115,
+                "special_attack": 101,
+                "speed": 101,
+                "defense": 96,
+                "special_defense": 101
+            }
+        },
+        {
+            "name": "Hyporoi",
+            "type": [
+                "eau",
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/230.png",
+            "attacks": [
+                "Pistolet a O",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 106,
+                "attack": 126,
+                "defense": 126,
+                "special_attack": 126,
+                "special_defense": 126,
+                "speed": 1116
+            }
+        },
+        {
+            "name": "Draco",
+            "type": [
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
+            "attacks": [
+                "Dracochoc",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 92,
+                "attack": 115,
+                "special_attack": 101,
+                "speed": 101,
+                "defense": 96,
+                "special_defense": 101
+            }
+        },
+        {
+            "name": "Draco",
+            "type": [
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/148.png",
+            "attacks": [
+                "Dracochoc",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 92,
+                "attack": 115,
+                "special_attack": 101,
+                "speed": 101,
+                "defense": 96,
+                "special_defense": 101
+            }
+        }
+        
+       
+        
+       
+      
+      
+
+
+      ]
+    }
+
+
+
+
+  
+    
+  ]
+  

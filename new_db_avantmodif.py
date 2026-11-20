@@ -68,7 +68,7 @@ def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
     
     # 🔥 INVALIDER LE CACHE après chaque capture
     try:
-        from new_pokedex import invalidate_new_pokedex_cache
+        from pokedex.new_pokedex import invalidate_new_pokedex_cache
         invalidate_new_pokedex_cache(user_id)
         print(f"[CACHE] Cache du pokédex invalidé pour {user_id}")
     except ImportError:
@@ -113,7 +113,7 @@ def delete_capture(user_id, pokemon_name):
 
     # 🔥 Invalider le cache du Pokédex pour cet utilisateur
     try:
-        from new_pokedex import invalidate_new_pokedex_cache
+        from pokedex.new_pokedex import invalidate_new_pokedex_cache
         invalidate_new_pokedex_cache(user_id)
         print(f"[CACHE] Cache du pokédex invalidé pour {user_id}")
     except ImportError:
@@ -177,7 +177,7 @@ def increase_pokemon_iv(user_id, pokemon_name, iv_increase, stat_name=None):
 
     # 🔥 Invalider le cache du pokédex
     try:
-        from new_pokedex import invalidate_new_pokedex_cache
+        from pokedex.new_pokedex import invalidate_new_pokedex_cache
         invalidate_new_pokedex_cache(user_id)
         print(f"[CACHE] Cache du pokédex invalidé pour {user_id}")
     except ImportError:

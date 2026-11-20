@@ -1,0 +1,110 @@
+[ {
+        "name": "Fantominus",
+        "probabilité": 0.45,
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/92.png",
+        "attacks": [
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 30,
+            "attack": 35,
+            "special_attack": 100,
+            "speed": 80,
+            "defense": 30,
+            "special_defense": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 305,
+        "evo": {
+            "name": "Spectrum",
+            "file": "pokemon_gen1_normal.json"
+        }
+    },
+    {
+        "name": "Spectrum",
+        "probabilité": 0.20,
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/93.png",
+        "attacks": [
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 50,
+            "special_attack": 135,
+            "speed": 105,
+            "defense": 45,
+            "special_defense": 45
+        },
+        "current_xp": 0,
+        "xp_evo": 425,
+        "evo": {
+            "name": "Ectoplasma",
+            "file": "pokemon_gen1_normal.json"
+        }
+    },
+    {
+        "name": "Ectoplasma",
+        "probabilité": 0.15,
+        "type": [
+            "spectre",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+        "attacks": [
+            "Balle Ombre",
+            "Bomb-Beurk",
+            "Lance-Flammes"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 65,
+            "special_attack": 150,
+            "speed": 130,
+            "defense": 60,
+            "special_defense": 70
+        },
+        "current_xp": 0,
+        "xp_evo": 535,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
+        }
+    },
+    {
+        "name": "Motisma",
+         "probabilité": 0.10,
+        "type": [
+            "electrique",
+            "spectre"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
+        "attacks": [
+            "Eclair",
+            "Tonnerre",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 50,
+            "defense": 77,
+            "special_attack": 95,
+            "special_defense": 77,
+            "speed": 91
+        },
+        "current_xp": 0,
+        "xp_evo": 440,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
+        }
+    }
+
+]  

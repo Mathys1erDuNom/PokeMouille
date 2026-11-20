@@ -1,0 +1,232 @@
+[ 
+     {
+        "name": "Laporeille",
+        "type": [
+            "normal"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/427.png",
+        "attacks": [
+            "Écras’Face",
+            "Ultimapoing",
+            "Poing Feu"
+        ],
+        "stats": {
+            "hp": 55,
+            "attack": 66,
+            "defense": 44,
+            "special_attack": 44,
+            "special_defense": 56,
+            "speed": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 350,
+        "evo": {
+            "name": "Lockpin",
+            "file": "pokemon_gen4_normal.json"
+        }
+    },
+    {
+        "name": "Chenipotte",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/265.png",
+        "attacks": [
+            "Charge",
+            "Dard-Venin"
+        ],
+        "stats": {
+            "hp": 45,
+            "attack": 45,
+            "defense": 35,
+            "special_attack": 20,
+            "special_defense": 30,
+            "speed": 20
+        },
+        "current_xp": 0,
+        "xp_evo": 195,
+        "evo": {
+            "name": "Armulys",
+            "file": "pokemon_gen3_normal.json"
+        }
+    },
+    {
+        "name": "Armulys",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/266.png",
+        "attacks": [
+            "Charge",
+            "Dard-Venin"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 35,
+            "defense": 55,
+            "special_attack": 25,
+            "special_defense": 25,
+            "speed": 15
+        },
+        "current_xp": 0,
+        "xp_evo": 205,
+        "evo": {
+            "name": "Charmillon",
+            "file": "pokemon_gen3_normal.json"
+        }
+    },
+    {
+        "name": "Charmillon",
+        "type": [
+            "insecte",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/267.png",
+        "attacks": [
+            "Tornade",
+            "Charge"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 70,
+            "defense": 50,
+            "special_attack": 100,
+            "special_defense": 50,
+            "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 395,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
+        }
+    },
+    {
+        "name": "Blindalys",
+        "type": [
+            "insecte"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/268.png",
+        "attacks": [
+            "Charge",
+            "Dard-Venin"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 35,
+            "defense": 55,
+            "special_attack": 25,
+            "special_defense": 25,
+            "speed": 15
+        },
+        "current_xp": 0,
+        "xp_evo": 205,
+        "evo": {
+            "name": "Papinox",
+            "file": "pokemon_gen3_normal.json"
+        }
+    },
+    {
+        "name": "Papinox",
+        "type": [
+            "insecte",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/269.png",
+        "attacks": [
+            "Tornade",
+            "Charge",
+            "Dard-Venin"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 50,
+            "defense": 70,
+            "special_attack": 50,
+            "special_defense": 90,
+            "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 385,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
+        }
+    },
+    {
+        "name": "Rozbouton",
+        "type": [
+            "plante",
+            "poison"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/406.png",
+        "attacks": [
+            "Fouet Lianes"
+        ],
+        "stats": {
+            "hp": 40,
+            "attack": 30,
+            "defense": 35,
+            "special_attack": 50,
+            "special_defense": 70,
+            "speed": 55
+        },
+        "current_xp": 0,
+        "xp_evo": 280,
+        "evo": {
+            "name": "Rosélia",
+            "file": "pokemon_gen3_normal.json"
+        }
+    },
+    {
+        "name": "Feuforêve",
+        "type": [
+            "spectre"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/200.png",
+        "attacks": [
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 60,
+            "defense": 60,
+            "special_attack": 85,
+            "special_defense": 85,
+            "speed": 85
+        },
+        "current_xp": 0,
+        "xp_evo": 435,
+        "evo": {
+            "name": "Magirêve",
+            "file": "pokemon_gen4_normal.json"
+        }
+    }, {
+        "name": "Cornèbre",
+        "type": [
+            "tenebres",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/198.png",
+        "attacks": [
+            "Tornade",
+            "Cru-Ailes",
+            "Tranche-Nuit"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 85,
+            "defense": 42,
+            "special_attack": 85,
+            "special_defense": 42,
+            "speed": 91
+        },
+        "current_xp": 0,
+        "xp_evo": 405,
+        "evo": {
+            "name": "Corboss",
+            "file": "pokemon_gen4_normal.json"
+        }
+    }
+
+]  

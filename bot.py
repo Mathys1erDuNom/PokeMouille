@@ -14,29 +14,32 @@ import stat
 import requests
 import io
 import uuid
-from croco_event import setup_croco_event
-from money_view import setup_money
+from event.croco_event import setup_croco_event
+from event.raid import setup_raid
+from BDD.money_view import setup_money
+
+from event.event_climatique import setup_event_climatique, CLIMATIC_EVENTS, filter_pools_by_types, get_allowed_types_for_current_state
 
 from utils import is_in_spawn_window
 
 from utils import  get_daily_spawn_window
 
-from casino_view import setup_casino
+from casino.casino_view import setup_casino
 
 import unicodedata
 
-from quiz_spawn import setup_quiz_commands
-from devine_poke import setup_guess_pokemon_command
+from event.forme_regionale import setup_forme_regionale, pick_forme_regionale_pokemon, load_regional_pool
+from event.quiz_spawn import setup_quiz_commands
+from event.devine_poke import setup_guess_pokemon_command
 
-from dupont_event import run_interaction_personnage
+from event.dupont_event import run_interaction_personnage
 
 
-from dupont_event import setup_dupont_command
+from event.dupont_event import setup_dupont_command
 
 from combat.utils import normalize_text
 
-from pokedex import setup_pokedex
-from new_pokedex import setup_new_pokedex
+from pokedex import setup_pokedex, setup_new_pokedex
 
 
 
@@ -45,13 +48,13 @@ from io import BytesIO
 from db import save_capture, get_captures
 from new_db import save_new_capture, get_new_captures, setupxp
 
-from inventory_view import setup_inventory
+from BDD.inventory_view import setup_inventory
 from utils import is_croco
 
-from money_db import add_money
-from shop_view import setup_shop
+from BDD.money_db import add_money
+from shop.shop_view import setup_shop
 
-from badge_view import setup_badges
+from BDD.badge_view import setup_badges
 from regions import setup_regions, setup_region # region_command
 
 import os
@@ -60,9 +63,9 @@ import discord
 from discord.ui import Select, View
 from dotenv import load_dotenv
 
-from fishing import setup_fishing
+from regions import setup_fishing
 
-
+#tets
 # ──────────────────────────────────────────────────────────────────────────────
 # CHENIL — Configuration
 # ──────────────────────────────────────────────────────────────────────────────
@@ -291,6 +294,24 @@ if os.path.exists(gen5_shiny_path):
         unys_shiny_data = json.load(f)
 
 
+#####################################
+# --- 🔥 QG Team Rocket 
+#####################################
+rocket_pokemon_data = []
+rocket_shiny_data = []
+
+rocket_normal_path = os.path.join(json_dir, "pokemon_rocket_normal.json")
+if os.path.exists(rocket_normal_path):
+    with open(rocket_normal_path, "r", encoding="utf-8") as f:
+        rocket_pokemon_data = json.load(f)
+
+rocket_shiny_path = os.path.join(json_dir, "pokemon_rocket_shiny.json")
+if os.path.exists(rocket_shiny_path):
+    with open(rocket_shiny_path, "r", encoding="utf-8") as f:
+        rocket_shiny_data = json.load(f)
+
+
+
 
 #####################################
 # --- 🔥 POOLS GLOBAUX (toutes régions) ---
@@ -320,8 +341,9 @@ REGION_DATA_MAP = {
     "Hoenn": (hoenn_pokemon_data, hoenn_shiny_data),
     "Sinnoh": (sinnoh_pokemon_data, sinnoh_shiny_data),
     "Unys": (unys_pokemon_data, unys_shiny_data),
+    "Rocket" :(rocket_pokemon_data, rocket_shiny_data),
     
-
+    
 
 }
         
@@ -335,6 +357,18 @@ if os.path.exists(mega_path):
     with open(mega_path, "r", encoding="utf-8") as f:
         data = json.load(f)
         full_pokedex.extend(data)
+
+# Shiny des méga (et des récompenses de raid, mêmes noms) : pokédex uniquement,
+# pas ajoutés aux pools de spawn
+pokedex_shiny_data = list(full_pokemon_shiny_data)
+mega_shiny_path = os.path.join(json_dir, "mega_shiny.json")
+if os.path.exists(mega_shiny_path):
+    with open(mega_shiny_path, "r", encoding="utf-8") as f:
+        pokedex_shiny_data.extend(json.load(f))
+
+# Formes régionales (Alola, Galar) : visibles dans le pokédex même si l'event est inactif
+full_pokedex.extend(load_regional_pool("alola.json"))
+full_pokedex.extend(load_regional_pool("galar.json"))
 ##############################################################
 ##############################################################
 
@@ -392,7 +426,7 @@ def apply_ivs(base_stats, ivs):
 ####################################################################################################################
 ####################################################################################################################
 
-async def spawn_pokemon(channel, force=False, author=None, target_user: discord.Member = None, pokemon_name: str = None, shiny_rate=64, dm_user: discord.Member = None):
+async def spawn_pokemon(channel, force=False, author=None, target_user: discord.Member = None, pokemon_name: str = None, shiny_rate=64, dm_user: discord.Member = None, ignore_climate=False):
     guild_id = channel.guild.id
 
     # Gestion des spawns manuel vs auto
@@ -405,11 +439,20 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
             return
 
     # -----------------------
-    # FILTRAGE PAR RÉGION
+    # FILTRAGE PAR RÉGION + CLIMAT
     # -----------------------
-    region_pokemon_data = full_pokemon_data
-    region_shiny_data = full_pokemon_shiny_data
+    # Par défaut, récupère les pools courants (qui tiennent compte du climat) si le bot expose l'API
+    if not ignore_climate and hasattr(bot, "get_current_pokemon_pools"):
+        try:
+            region_pokemon_data, region_shiny_data = bot.get_current_pokemon_pools()
+        except Exception:
+            region_pokemon_data = full_pokemon_data
+            region_shiny_data = full_pokemon_shiny_data
+    else:
+        region_pokemon_data = full_pokemon_data
+        region_shiny_data = full_pokemon_shiny_data
 
+    # Si spawn en DM, on peut utiliser la région de l'utilisateur (puis appliquer le filtre climatique localement)
     if dm_user:
         cur.execute("SELECT region FROM user_regions WHERE user_id = %s", (str(dm_user.id),))
         row = cur.fetchone()
@@ -418,8 +461,18 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
         if user_region and user_region in REGION_DATA_MAP:
             region_pokemon_data, region_shiny_data = REGION_DATA_MAP[user_region]
 
-            # Sécurité : si la liste est vide, fallback sur le pool global
-            if not region_pokemon_data:
+            # Applique le filtrage climatique (si disponible) sur les pools régionaux
+            try:
+                allowed = get_allowed_types_for_current_state(bot) if getattr(bot, "climate_enabled", False) and hasattr(bot, "climate_state") else []
+                if allowed:
+                    region_pokemon_data, region_shiny_data = filter_pools_by_types(region_pokemon_data, region_shiny_data, allowed)
+
+                # Sécurité : si la liste est vide, fallback sur le pool global
+                if not region_pokemon_data:
+                    region_pokemon_data = full_pokemon_data
+                    region_shiny_data = full_pokemon_shiny_data
+            except Exception:
+                # en cas d'erreur dans le filtre, on fallback proprement
                 region_pokemon_data = full_pokemon_data
                 region_shiny_data = full_pokemon_shiny_data
 
@@ -429,7 +482,7 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     if pokemon_name:
         pokemon = next((p for p in region_pokemon_data if p["name"].lower() == pokemon_name.lower()), None)
         if not pokemon:
-            await channel.send(f"❌ Le Pokémon `{pokemon_name}` est introuvable dans cette région.")
+            await channel.send(f"❌ Le Pokémon `{pokemon_name}` est introuvable dans le pool de spawn.")
             return
 
         is_shiny = (random.randint(1, shiny_rate) == 1)
@@ -441,7 +494,20 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
         print(f"[DEBUG] shiny_rate={shiny_rate}, is_shiny={is_shiny}, pokemon={pokemon['name']}".encode('utf-8', errors='replace').decode('utf-8'))
     else:
         is_shiny = (random.randint(1, shiny_rate) == 1)
-        pokemon = random.choice(region_shiny_data if is_shiny else region_pokemon_data)
+        # Debug: log climate state and pool sizes
+        try:
+            print(f"[CLIMAT DEBUG] climate_state={getattr(bot,'climate_state',None)}")
+            allowed = get_allowed_types_for_current_state(bot) if hasattr(bot, 'climate_state') else []
+            print(f"[CLIMAT DEBUG] allowed_types={allowed}")
+            print(f"[CLIMAT DEBUG] pool_sizes: normal={len(region_pokemon_data)} shiny={len(region_shiny_data)}")
+        except Exception as e:
+            print(f"[CLIMAT DEBUG] error reading climate state: {e}")
+
+        regional = pick_forme_regionale_pokemon(bot, is_shiny)
+        if regional:
+            pokemon, is_shiny = regional, regional["name"].endswith("_shiny")
+        else:
+            pokemon = random.choice(region_shiny_data if is_shiny else region_pokemon_data)
         print(f"[DEBUG] shiny_rate={shiny_rate}, is_shiny={is_shiny}, pokemon={pokemon['name']}".encode('utf-8', errors='replace').decode('utf-8'))
 
     # -----------------------
@@ -1011,7 +1077,8 @@ async def spawn(ctx, *args):
             channel=ctx.channel,
             force=True,
             author=ctx.author,
-            shiny_rate=DEFAULT_SHINY_RATE
+            shiny_rate=DEFAULT_SHINY_RATE,
+            ignore_climate=True
         )
         return
 
@@ -1049,7 +1116,8 @@ async def spawn(ctx, *args):
         author=ctx.author,
         target_user=target_user,
         pokemon_name=pokemon_name,
-        shiny_rate=shiny_rate
+        shiny_rate=shiny_rate,
+        ignore_climate=True
     )
 
 
@@ -1119,6 +1187,7 @@ async def before_check_voice():
 async def on_ready():
     print(f"[BOT] Connecté en tant que {bot.user} ({bot.user.id})")
     asyncio.ensure_future(auto_event_loop())
+    asyncio.ensure_future(planner_loop(bot, TEXT_CHANNEL_ID))
     if not check_voice_channel.is_running():
         check_voice_channel.start()
 
@@ -1129,7 +1198,9 @@ async def on_message(message):
     await bot.process_commands(message)
 
 
+from event.event_rocket import setup_rocket 
 
+setup_rocket(bot)
 
 setup_money(bot)
 
@@ -1146,7 +1217,7 @@ with open(badges_file, "r", encoding="utf-8") as f:
 # Setup du module badge
 setup_badges(bot, full_badge_data)
 
-from actu import setup_actu
+from event.actu import setup_actu
 setup_actu(bot,cur)
 
 
@@ -1157,10 +1228,103 @@ setup_casino(bot)
 
 
 bot.is_under_ban = is_under_ban
-setup_pokedex(bot, full_pokemon_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir)
-setup_new_pokedex(bot, full_pokemon_shiny_data, full_pokedex, type_sprites, attack_type_map, json_dir)
+setup_pokedex(bot, pokedex_shiny_data, full_pokemon_data, type_sprites, attack_type_map, json_dir)
+setup_new_pokedex(bot, pokedex_shiny_data, full_pokedex, type_sprites, attack_type_map, json_dir)
+
+# Initialise le système climatique qui attache l'état sur l'objet `bot`
+setup_event_climatique(bot, base_pools=(full_pokemon_data, full_pokemon_shiny_data))
+setup_forme_regionale(bot)
 
 print("[DEBUG] Ready to run bot...")
+
+
+@bot.command(name="climat_on")
+@is_croco()
+async def climat_on(ctx):
+    """Active manuellement le système climatique (démarre la tâche si nécessaire)."""
+    if hasattr(bot, "_climate_task") and bot._climate_task is not None and not bot._climate_task.done():
+        await ctx.send("✅ Le système climatique est déjà actif.")
+        return
+    setup_event_climatique(bot, base_pools=(full_pokemon_data, full_pokemon_shiny_data))
+    await ctx.send("✅ Système climatique activé manuellement.")
+
+
+@bot.command(name="climat_off")
+@is_croco()
+async def climat_off(ctx):
+    """Désactive manuellement le système climatique (arrête la tâche en arrière-plan)."""
+    if hasattr(bot, "_climate_task") and bot._climate_task is not None:
+        try:
+            bot._climate_task.cancel()
+        except Exception:
+            pass
+    bot._climate_task = None
+    bot.climate_enabled = False
+    bot.climate_state = {"time_of_day": "day", "active_event": None, "event_ends_at": None}
+    await ctx.send("⛔ Climat désactivé : les spawns utilisent tous les Pokémon.")
+
+
+@bot.command(name="climat_status")
+@is_croco()
+async def climat_status(ctx):
+    """Affiche l'état climatique courant attaché au bot."""
+    state = getattr(bot, "climate_state", None)
+    if not state:
+        await ctx.send("ℹ️ Le système climatique n'est pas initialisé.")
+        return
+
+    active = state.get("active_event")
+    ends = state.get("event_ends_at")
+    tod = state.get("time_of_day")
+
+    msg = f"⏱️ Time of day: **{tod}**\n"
+    if active:
+        evt = CLIMATIC_EVENTS.get(active, {})
+        emoji = evt.get("emoji", "")
+        ends_str = ends.strftime('%Y-%m-%d %H:%M:%S') if ends else 'inconnu'
+        msg += f"🔥 Active event: **{active}** {emoji} (jusqu'à {ends_str})\n"
+    else:
+        msg += "✅ Aucun événement climatique actif.\n"
+
+    # pool sizes
+    try:
+        normal_pool, shiny_pool = bot.get_current_pokemon_pools()
+        msg += f"🔸 Pokémons disponibles (normal): {len(normal_pool)}\n"
+        msg += f"✨ Pokémons disponibles (shiny): {len(shiny_pool)}\n"
+    except Exception:
+        pass
+
+    await ctx.send(msg)
+
+
+@bot.command(name="climat_list")
+@is_croco()
+async def climat_list(ctx):
+    """Liste les événements climatiques utilisables."""
+    lines = []
+    for k, v in CLIMATIC_EVENTS.items():
+        lines.append(f"{v.get('emoji','')} **{k}** → types: {', '.join(sorted(v.get('types', [])))}")
+    await ctx.send("\n".join(lines))
+
+
+@bot.command(name="climat_force")
+@is_croco()
+async def climat_force(ctx, event_key: str, hours: int = 2):
+    """Force un événement climatique pour une durée donnée (heures)."""
+    key = event_key.strip().lower()
+    if key not in CLIMATIC_EVENTS:
+        await ctx.send(f"❌ Événement inconnu: {key}. Utilise `!climat_list` pour la liste.")
+        return
+
+    # assure la présence du système
+    if not hasattr(bot, "get_current_pokemon_pools"):
+        setup_event_climatique(bot, base_pools=(full_pokemon_data, full_pokemon_shiny_data))
+
+    tz = pytz.timezone("Europe/Paris")
+    bot.climate_state["active_event"] = key
+    bot.climate_state["event_ends_at"] = datetime.now(tz) + timedelta(hours=hours)
+
+    await ctx.send(f"✅ Événement forcé: **{key}** pour {hours} heure(s).")
 
 
 from datetime import datetime, timedelta
@@ -1180,7 +1344,7 @@ async def battletime(ctx):
 
 
 
-@bot.command()
+# !battle désactivé : les combats sont gérés par un autre projet (remettre @bot.command() pour réactiver)
 async def battle(ctx):
     #if not await is_in_spawn_window(bot):
      #   await ctx.send("❌ Le crocodile n'est pas apparu ! Revenez entre 21h30 et 23h30.")
@@ -1234,22 +1398,24 @@ setup_croco_event(
 
 setup_inventory(bot)
 
-from receleur import setup_receleur
+from shop.receleur import setup_receleur
 setup_receleur(bot)
 setup_region(bot)
 setup_regions()
 
 setup_fishing(bot, cur)
 
-setup_dupont_command(bot)
+# Événements Dupont désactivés (!event_dupont) : décommenter pour réactiver
+#setup_dupont_command(bot)
 
 
-from enquete import setup_enquete
-from inventory_db import add_item, get_inventory
+from event.enquete import setup_enquete
+from BDD.inventory_db import add_item, get_inventory
 from regions import get_user_region
 
 #setup_enquete(bot, get_user_region, add_item)
-setup_enquete(bot, get_user_region=get_user_region)
+# Enquête Dupont désactivée (!parc, !grotte, !entrepot, !preuves, !supprimer_preuves) : décommenter pour réactiver
+#setup_enquete(bot, get_user_region=get_user_region)
 
 # Après tes setup_*() :
 setup_guess_pokemon_command(
@@ -1278,73 +1444,21 @@ EVENT_INTERVAL = 25 * 60  # 1 minute
 next_event_time = None
 next_event_name = None
 TIMEZONE = pytz.timezone("Europe/Paris")
-'''
-async def auto_event_loop():
-    await bot.wait_until_ready()
-    global next_event_time, next_event_name
-
-    text_channel = bot.get_channel(TEXT_CHANNEL_ID)
-    voice_channel = bot.get_channel(VOICE_CHANNEL_ID)
-
-    if text_channel is None:
-        print(f"[ERREUR] Salon texte introuvable (id={TEXT_CHANNEL_ID}).")
-        return
-    if voice_channel is None:
-        print(f"[ERREUR] Salon vocal introuvable (id={VOICE_CHANNEL_ID}).")
-        return
-
-    while not bot.is_closed():
-        EVENT_INTERVAL = random.randint(20, 25) * 60  # ← tirage aléatoire à chaque tour 20 à 25 min
-
-        if len(voice_channel.members) == 0:
-            next_event_time = None
-            next_event_name = None
-            print(f"[AUTO] Personne dans le vocal, vérification dans 1 min...")
-            await asyncio.sleep(60)
-            continue
-
-        chosen = random.choice(["quiz", "devine", "spawn", "dupont"])
-        next_event_name = "🧠 Quiz Pokémon" if chosen == "quiz" else "🔍 Devine le Pokémon"
-        next_event_time = datetime.now(TIMEZONE) + timedelta(seconds=EVENT_INTERVAL)
-
-        print(
-            f"[AUTO] {len(voice_channel.members)} joueur(s) dans le vocal — Prochain événement : {next_event_name} "
-            f"— dans {EVENT_INTERVAL // 60} min "
-            f"(à {next_event_time.strftime('%H:%M:%S')})"
-        )
-
-        await asyncio.sleep(EVENT_INTERVAL)
-
-        if len(voice_channel.members) == 0:
-            next_event_time = None
-            next_event_name = None
-            print(f"[AUTO] Plus personne dans le vocal, événement annulé.")
-            await asyncio.sleep(60)
-            continue
-
-        print(f"[AUTO] Lancement de : {next_event_name} ({len(voice_channel.members)} joueur(s) présent(s))")
-
-        if chosen == "quiz":
-            await bot.run_quiz(text_channel)
-        elif chosen == "devine":
-            await bot.run_devine(text_channel)
-        elif chosen == "spawn":
-            await spawn_pokemon(text_channel)
-        elif chosen == "dupont":
-            await run_interaction_personnage(text_channel, False)
-
- '''
 
 
-from chenil import tick_chenil_xp
+
+from BDD.chenil import tick_chenil_xp
 
 # dict persistant entre les tours de boucle  { user_id (int): nb_checks (int) }
 chenil_xp_counters: dict[int, int] = {}
 
-from chenil import setup_chenil 
+from BDD.chenil import setup_chenil
 
 setup_chenil(bot,TEXT_CHANNEL_ID)
-riche_or_not = False;
+setup_raid(bot)
+from event.planner import planner_loop
+riche_or_not = True
+
 async def auto_event_loop():
     await bot.wait_until_ready()
     global next_event_time, next_event_name
@@ -1360,13 +1474,14 @@ async def auto_event_loop():
         return
 
     while not bot.is_closed():
-        EVENT_INTERVAL = random.randint(20, 25) * 60
+        EVENT_INTERVAL = random.randint(1, 2) * 60#(20, 25) * 60
 
         # ── Personne dans le vocal ────────────────────────────────────────
         if len(voice_channel.members) == 0:
             next_event_time = None
             next_event_name = None
             chenil_xp_counters.clear()   # reset des compteurs si vocal vide
+            # print(f"[AUTO] Personne dans le vocal, vérification dans 1 min...")
             await asyncio.sleep(60)
             continue
 
@@ -1377,21 +1492,30 @@ async def auto_event_loop():
         # ── Planification de l'événement ─────────────────────────────────
         # Ajoute marche_noir aux choix seulement s'il est disponible
         if is_marche_noir_available():
-            available_events = ["marche_noir", "spawn", "dupont", "devine", "spawn"]
+            available_events = ["marche_noir", "spawn", "devine", "quiz"] # EVENT dupont enlevé
         else:
-            available_events = ["spawn", "dupont", "devine", "spawn"]
+            available_events = ["spawn", "devine", "quiz"] # EVENT dupont enlevé
+        #if bot.raid_enabled:
+         #   available_events.append("raid")
         chosen = random.choice(available_events)
 
         if chosen == "quiz":
             next_event_name = "🧠 Quiz Pokémon"
+
         elif chosen == "devine":
             next_event_name = "🔍 Devine le Pokémon"
+
         elif chosen == "spawn":
             next_event_name = "✨ Spawn Pokémon"
+
         elif chosen == "dupont":
             next_event_name = "🕵️ Événement Dupont"
+
         elif chosen == "marche_noir":
             next_event_name = "🌙 Événement Marché Noir"
+
+        elif chosen == "raid":
+            next_event_name = "⚔️ Raid Pokémon"
 
         next_event_time = datetime.now(TIMEZONE) + timedelta(seconds=EVENT_INTERVAL)
 
@@ -1423,31 +1547,23 @@ async def auto_event_loop():
             continue
 
         print(f"[AUTO] Lancement de : {next_event_name} ({len(voice_channel.members)} joueur(s) présent(s))")
-        # Exécution protégée de l'événement : timeout et gestion des erreurs
-        EVENT_TIMEOUT = 15 * 60  # durée max d'un événement en secondes
-        try:
-            if chosen == "quiz":
-                await asyncio.wait_for(bot.run_quiz(text_channel), timeout=EVENT_TIMEOUT)
-            elif chosen == "devine":
-                await asyncio.wait_for(bot.run_devine(text_channel), timeout=EVENT_TIMEOUT)
-            elif chosen == "spawn":
-                await asyncio.wait_for(spawn_pokemon(text_channel), timeout=EVENT_TIMEOUT)
-            elif chosen == "dupont":
-                await asyncio.wait_for(run_interaction_personnage(text_channel, riche_or_not), timeout=EVENT_TIMEOUT)
-            elif chosen == "marche_noir":
-                await asyncio.wait_for(run_marche_noir(text_channel), timeout=EVENT_TIMEOUT)
-        except asyncio.TimeoutError:
-            print(f"[AUTO] L'événement {next_event_name} a dépassé le timeout et a été annulé.")
-        except Exception as e:
-            print(f"[AUTO] Erreur lors de l'événement {next_event_name}: {e}")
-            # Ne pas lever l'exception pour que la boucle continue
-            await asyncio.sleep(5)
-            continue
+        if chosen == "quiz":
+            await bot.run_quiz(text_channel)
+        elif chosen == "devine":
+            await bot.run_devine(text_channel)
+        elif chosen == "spawn":
+            await spawn_pokemon(text_channel)
+        elif chosen == "dupont":
+            await run_interaction_personnage(text_channel, riche_or_not)
+        elif chosen == "marche_noir":
+            await run_marche_noir(text_channel)
+        elif chosen == "raid":
+            await bot.run_raid()
 
 
 
-from preuve_db import get_preuves
-from marche_noir import setup_marche_noir, run_marche_noir
+from event.preuve_db import get_preuves
+from shop.marche_noir import setup_marche_noir, run_marche_noir
 
 # ── Fonction pour vérifier si marche noir est disponible ────────────────────
 def is_marche_noir_available():
@@ -1460,7 +1576,7 @@ def is_marche_noir_available():
 
 setup_marche_noir(bot)
 
-@bot.command()
+# !police désactivé avec l'enquête Dupont (remettre @bot.command() pour réactiver)
 async def police(ctx):
     global riche_or_not
     preuves = get_preuves(ctx.author.id)

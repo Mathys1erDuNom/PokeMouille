@@ -296,8 +296,69 @@
         "image": "images/badges/41.png",
         "description": "Obtenu après avoir vaincu Iris / Watson, la champion de l'arène Dragon",
         "generation": 5
+    },
+
+
+
+    {
+        "id": 100,
+        "name": "Machine Jessie",
+        "image": "images/badges/100.png",
+        "description": "Obtenu après avoir Jessie",
+        "generation": 0
+    },
+    {
+        "id": 101,
+        "name": "Machine James",
+        "image": "images/badges/100.png",
+        "description": "Obtenu après avoir James",
+        "generation": 0
+    },
+    {
+        "id": 102,
+        "name": "Machine Butch",
+        "image": "images/badges/100.png",
+        "description": "Obtenu après avoir Butch",
+        "generation": 0
+    },
+    {
+        "id": 103,
+        "name": "Machine Cassidy",
+        "image": "images/badges/100.png",
+        "description": "Obtenu après avoir Cassidy",
+        "generation": 0
+    },
+    {
+        "id": 104,
+        "name": "Machine Proton",
+        "image": "images/badges/100.png",
+        "description": "Obtenu après avoir Proton",
+        "generation": 0
+    },
+    {
+        "id": 105,
+        "name": "Machine Ariana",
+        "image": "images/badges/100.png",
+        "description": "Obtenu après avoir Ariana",
+        "generation": 0
+    },
+    {
+        "id": 106,
+        "name": "Machine Archer",
+        "image": "images/badges/100.png",
+        "description": "Obtenu après avoir Archer",
+        "generation": 0
+    }, {
+        "id": 107,
+        "name": "Machine Giovanni",
+        "image": "images/badges/100.png",
+        "description": "Obtenu après avoir Giovanni",
+        "generation": 0
     }
 
+
+
+    
 
 
 

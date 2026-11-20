@@ -1,0 +1,165 @@
+[
+    {
+        "name": "Mascaïman",
+        "probabilité": 0.30,
+        "type": [
+            "sol",
+            "tenebres"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/551.png",
+        "attacks": [
+            "Coupe",
+            "Seisme",
+            "Tranche-Nuit"
+        ],
+        "stats": {
+            "hp": 50,
+            "attack": 72,
+            "defense": 35,
+            "special_attack": 35,
+            "special_defense": 35,
+            "speed": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 292,
+        "evo": {
+            "name": "Escroco",
+            "file": "pokemon_gen5_normal.json"
+        }
+    },
+    {
+        "name": "Escroco",
+        "probabilité": 0.15,
+        "type": [
+            "sol",
+            "tenebres"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/552.png",
+        "attacks": [
+            "Coupe",
+            "Seisme",
+            "Tranche-Nuit"
+        ],
+        "stats": {
+            "hp": 60,
+            "attack": 82,
+            "defense": 45,
+            "special_attack": 45,
+            "special_defense": 45,
+            "speed": 74
+        },
+        "current_xp": 0,
+        "xp_evo": 351,
+        "evo": {
+            "name": "Crocorible",
+            "file": "pokemon_gen5_normal.json"
+        }
+    },{
+        "name": "Darumarond",
+        "probabilité": 0.15,
+        "type": [
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/554.png",
+        "attacks": [
+            "Ultimapoing",
+            "Poing Feu",
+            "Ultimawashi"
+        ],
+        "stats": {
+            "hp": 70,
+            "attack": 90,
+            "defense": 45,
+            "special_attack": 15,
+            "special_defense": 45,
+            "speed": 50
+        },
+        "current_xp": 0,
+        "xp_evo": 315,
+        "evo": {
+            "name": "Darumacho",
+            "file": "pokemon_gen5_normal.json"
+        }
+    },
+    {
+        "name": "Maracachi",
+        "probabilité": 0.15,
+        "type": [
+            "plante"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/556.png",
+        "attacks": [
+            "Canon Graine",
+            "Charge"
+          
+        ],
+        "stats": {
+            "hp": 75,
+            "attack": 86,
+            "defense": 67,
+            "special_attack": 106,
+            "special_defense": 67,
+            "speed": 60
+        },
+        "current_xp": 0,
+        "xp_evo": 461,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
+        }
+    },
+    
+    {
+        "name": "Tutankafer",
+        "probabilité": 0.15,
+        "type": [
+            "spectre"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/563.png",
+        "attacks": [
+            "Psyko",
+            "Balle Ombre"
+        ],
+        "stats": {
+            "hp": 58,
+            "attack": 50,
+            "defense": 145,
+            "special_attack": 95,
+            "special_defense": 105,
+            "speed": 30
+        },
+        "current_xp": 0,
+        "xp_evo": 483,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
+        }
+    },{
+        "name": "Pyrax",
+        "probabilité": 0.10,
+        "type": [
+            "insecte",
+            "feu"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/637.png",
+        "attacks": [
+            "Lance-Flammes",
+            "Bourdon"
+        ],
+        "stats": {
+            "hp": 85,
+            "attack": 60,
+            "defense": 65,
+            "special_attack": 135,
+            "special_defense": 105,
+            "speed": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 550,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
+        }
+    }
+
+]

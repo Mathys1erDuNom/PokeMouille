@@ -2,6 +2,7 @@ import os
 import json
 import discord
 import psycopg2
+from psycopg2 import sql
 from psycopg2.extras import Json
 from dotenv import load_dotenv
 from discord.ext import commands
@@ -43,6 +44,88 @@ conn.commit()
 # ──────────────────────────────────────────────
 # FONCTIONS BASE DE DONNÉES
 # ──────────────────────────────────────────────
+
+def copy_new_captures_table():
+    """
+    Copie la table new_captures dans la table "copie_new_captures".
+    On recrée toujours la table pour éviter de garder un ancien snapshot incomplet.
+    """
+    table_name = "copie_new_captures"
+
+    cur.execute(sql.SQL("DROP TABLE IF EXISTS {} CASCADE").format(sql.Identifier(table_name)))
+    cur.execute(
+        sql.SQL("CREATE TABLE {} AS TABLE new_captures").format(
+            sql.Identifier(table_name)
+        )
+    )
+    conn.commit()
+
+    print(f"[INFO] Table {table_name} recréée à partir de new_captures")
+    return table_name
+
+
+def restore_from_copie_new_captures(user_id=None):
+    """
+    Ajoute dans new_captures les lignes de copie_new_captures.
+    Si user_id est fourni, ne restaure que les Pokémon de cet utilisateur.
+    Si un Pokémon existe déjà pour l'utilisateur (même nom), augmente ses IV de 4
+    au lieu de créer un doublon (même logique que save_new_capture).
+    """
+    if user_id is not None:
+        user_id = str(user_id)
+        cur.execute("""
+            SELECT user_id, name, ivs, stats, image, type, attacks, current_xp, xp_evo, evo
+            FROM copie_new_captures
+            WHERE user_id = %s
+        """, (user_id,))
+    else:
+        cur.execute("""
+            SELECT user_id, name, ivs, stats, image, type, attacks, current_xp, xp_evo, evo
+            FROM copie_new_captures
+        """)
+    rows = cur.fetchall()
+
+    inserted = 0
+    updated  = 0
+
+    for row in rows:
+        user_id_row, name, ivs, stats, image, ptype, attacks, current_xp, xp_evo, evo = row
+
+        cur.execute("""
+            SELECT COUNT(*) FROM new_captures
+            WHERE user_id = %s AND name = %s
+        """, (user_id_row, name))
+        exists = cur.fetchone()[0] > 0
+
+        if exists:
+            increase_pokemon_iv(user_id_row, name, 4)
+            updated += 1
+        else:
+            cur.execute("""
+                INSERT INTO new_captures
+                    (user_id, name, ivs, stats, image, type, attacks, current_xp, xp_evo, evo)
+                VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            """, (
+                user_id_row, name, Json(ivs), Json(stats), image,
+                Json(ptype), Json(attacks), current_xp, xp_evo, Json(evo)
+            ))
+            conn.commit()
+            inserted += 1
+
+    if user_id is not None:
+        print(f"[INFO] Restauration pour user_id={user_id} terminée : {inserted} ajout(s), {updated} IV augmenté(s)")
+    else:
+        print(f"[INFO] Restauration terminée : {inserted} ajout(s), {updated} IV augmenté(s)")
+    return {"inserted": inserted, "updated": updated}
+
+def clear_new_captures():
+    """
+    Vide complètement la table new_captures (supprime toutes les lignes).
+    """
+    cur.execute("DELETE FROM new_captures")
+    conn.commit()
+
+    print("[INFO] Table new_captures vidée")
 
 def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
     """
@@ -89,7 +172,7 @@ def save_new_capture(user_id, pokemon_name, ivs, final_stats, pokemon):
         print(f"[INFO] Pokémon {pokemon_name} a eu ses IVs augmentés de 3 pour {user_id}")
 
     try:
-        from new_pokedex import invalidate_new_pokedex_cache
+        from pokedex.new_pokedex import invalidate_new_pokedex_cache
         invalidate_new_pokedex_cache(user_id)
         print(f"[CACHE] Cache du pokédex invalidé pour {user_id}")
     except ImportError:
@@ -135,7 +218,7 @@ def delete_capture(user_id, pokemon_name):
     print(f"[INFO] Pokémon {pokemon_name} supprimé pour l'utilisateur {user_id}")
 
     try:
-        from new_pokedex import invalidate_new_pokedex_cache
+        from pokedex.new_pokedex import invalidate_new_pokedex_cache
         invalidate_new_pokedex_cache(user_id)
         print(f"[CACHE] Cache du pokédex invalidé pour {user_id}")
     except ImportError:
@@ -191,7 +274,7 @@ def increase_pokemon_iv(user_id, pokemon_name, iv_increase, stat_name=None):
     conn.commit()
 
     try:
-        from new_pokedex import invalidate_new_pokedex_cache
+        from pokedex.new_pokedex import invalidate_new_pokedex_cache
         invalidate_new_pokedex_cache(user_id)
         print(f"[CACHE] Cache du pokédex invalidé pour {user_id}")
     except ImportError:
@@ -359,7 +442,7 @@ def setupxp(bot):
         conn.commit()
 
         try:
-            from new_pokedex import invalidate_new_pokedex_cache
+            from pokedex.new_pokedex import invalidate_new_pokedex_cache
             invalidate_new_pokedex_cache(user_id)
         except ImportError:
             pass
@@ -403,7 +486,7 @@ def setupxp(bot):
             conn.commit()
 
             try:
-                from new_pokedex import invalidate_new_pokedex_cache
+                from pokedex.new_pokedex import invalidate_new_pokedex_cache
                 invalidate_new_pokedex_cache(user_id)
             except ImportError:
                 pass
@@ -452,7 +535,7 @@ def setupxp(bot):
         conn.commit()
 
         try:
-            from new_pokedex import invalidate_new_pokedex_cache
+            from pokedex.new_pokedex import invalidate_new_pokedex_cache
             invalidate_new_pokedex_cache(user_id)
         except ImportError:
             pass

@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Bulbizarre",
+        "type": ["plante"],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+        "attacks": ["Fouet Lianes", "Charge"],
+        "stats": {
+            "hp": 45,
+            "attack": 49,
+            "special_attack": 65,
+            "speed": 45,
+            "defense": 49,
+            "special_defense": 65
+        },
+        "current_xp": 0,
+        "xp_evo": 100,
+        "evo": {
+            "name": "Herbizarre",
+            "file": "pokemons.json"
+        }
+    },
+    {
+        "name": "Herbizarre",
+        "type": ["plante"],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+        "attacks": ["Fouet Lianes", "Charge"],
+        "stats": {
+            "hp": 60,
+            "attack": 62,
+            "special_attack": 80,
+            "speed": 60,
+            "defense": 63,
+            "special_defense": 80
+        },
+        "current_xp": 0,
+        "xp_evo": 200,
+        "evo": {
+            "name": "Florizarre",
+            "file": "pokemons.json"
+        }
+    },
+    {
+        "name": "Florizarre",
+        "type": ["plante"],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+        "attacks": ["Fouet Lianes", "Charge", "Canon Graine"],
+        "stats": {
+            "hp": 80,
+            "attack": 82,
+            "special_attack": 100,
+            "speed": 80,
+            "defense": 83,
+            "special_defense": 100
+        },
+        "current_xp": 0,
+        "xp_evo": 0,
+        "evo": {
+            "name": "pas evo",
+            "file": "pas evo"
+        }
+    }
+]

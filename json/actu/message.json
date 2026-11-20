@@ -10,5 +10,11 @@
     "texte": "Les gardes-forestiers de Vestigion tirent la sonnette d'alarme : jamais on n'avait vu autant de Pokémon sauvages s'agiter ainsi entre les arbres. Des traces de pas inconnues ont été retrouvées près des sentiers, et certains habitants affirment avoir entendu des cris étranges à la tombée de la nuit. Qu'est-ce qui perturbe la forêt ? Les plus téméraires pourront peut-être le découvrir par eux-mêmes…",
     "image": "images/actu/foret-vestigion.jpg",
     "lieu": "foret"
-  }
+  },
+  {
+    "titre": "Mystère au Château Enfoui proche de Méanville",
+    "texte": "Un étrange phénomène inquiète les habitants de Méanville : d’anciennes ruines, jusque-là silencieuses, semblent soudainement s’être réveillées. Des bruits sourds résonnent depuis les profondeurs du Château Enfoui, tandis que plusieurs explorateurs affirment avoir aperçu des silhouettes de Pokémon sauvages rôder parmi les vestiges. Des inscriptions anciennes auraient également été découvertes sur les murs. Que cache réellement ce château oublié ? Les plus courageux devront s’aventurer dans ses profondeurs pour le découvrir…",
+    "image": "images/actu/chateau-enfoui.png",
+    "lieu": "chateauenfoui"
+}
 ]

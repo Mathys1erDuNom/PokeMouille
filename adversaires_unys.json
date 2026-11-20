@@ -1,0 +1,782 @@
+[   
+
+  {
+    "id": "champion_de_Ogoesse",
+    "name": "Rachid / Armando / Noa (Trio)",
+    "repliques": {
+      "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+      "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+      "lose_pokemon": "Oh non… il a été vaincu…",
+      "win": "La nature triomphe toujours.",
+      "lose": "Je reconnais ta force. Tu as gagné."
+    },
+    "pokemons": [
+        {
+            "name": "Ponchiot",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/506.png",
+            "attacks": [
+                "Jet de Sable",
+                "Charge",
+                "Bélier"
+            ],
+            "stats": {
+                "hp": 76,
+                "attack": 91,
+                "defense": 76,
+                "special_attack": 56,
+                "special_defense": 76,
+                "speed": 86
+            }
+        },
+        {
+            "name": "Flamajou",
+            "type": [
+                "feu"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/513.png",
+            "attacks": [
+                "Poing Feu",
+                "Griffe",
+                "Coupe"
+            ],
+            "stats": {
+                "hp": 81,
+                "attack": 84,
+                "defense": 74,
+                "special_attack": 84,
+                "special_defense": 79,
+                "speed": 95
+            }
+        },
+        {
+            "name": "Ponchiot",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/506.png",
+            "attacks": [
+                "Jet de Sable",
+                "Charge",
+                "Bélier"
+            ],
+            "stats": {
+                "hp": 76,
+                "attack": 91,
+                "defense": 76,
+                "special_attack": 56,
+                "special_defense": 76,
+                "speed": 86
+            }
+        },
+        {
+            "name": "Feuillajou",
+            "type": [
+                "plante"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/511.png",
+            "attacks": [
+                "Griffe",
+                "Coupe",
+                "Fouet Lianes"
+            ],
+            "stats": {
+                "hp": 81,
+                "attack": 84,
+                "defense": 79,
+                "special_attack": 84,
+                "special_defense": 79,
+                "speed": 95
+            }
+        },
+        {
+            "name": "Ponchiot",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/506.png",
+            "attacks": [
+                "Jet de Sable",
+                "Charge",
+                "Bélier"
+            ],
+            "stats": {
+                "hp": 76,
+                "attack": 91,
+                "defense": 76,
+                "special_attack": 56,
+                "special_defense": 76,
+                "speed": 86
+            }
+        },
+        {
+            "name": "Flotajou",
+            "type": [
+                "eau"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/515.png",
+            "attacks": [
+                "Poing Glace",
+                "Griffe",
+                "Coupe"
+            ],
+            "stats": {
+                "hp": 81,
+                "attack": 84,
+                "defense": 79,
+                "special_attack": 84,
+                "special_defense": 79,
+                "speed": 95
+            }
+        }
+
+   
+    
+    
+
+    ]
+  },
+
+
+  {
+    "id": "champion_de_Maillard",
+    "name": "Aloé (Normal)",
+    "repliques": {
+      "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+      "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+      "lose_pokemon": "Oh non… il a été vaincu…",
+      "win": "La nature triomphe toujours.",
+      "lose": "Je reconnais ta force. Tu as gagné."
+    },
+    "pokemons": [
+        {
+            "name": "Ponchien",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/507.png",
+            "attacks": [
+                "Charge",
+                "Bélier",
+                "Groz’Yeux"
+            ],
+            "stats": {
+                "hp": 96,
+                "attack": 111,
+                "defense": 96,
+                "special_attack": 61,
+                "special_defense": 96,
+                "speed": 91
+            }
+        },
+        {
+            "name": "Miradar",
+            "type": [
+                "normal"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/505.png",
+            "attacks": [
+                "Poing Feu",
+                "Poing Glace",
+                "Poing Éclair"
+            ],
+            "stats": {
+                "hp": 91,
+                "attack": 116,
+                "defense": 100,
+                "special_attack": 91,
+                "special_defense": 100,
+                "speed": 108
+            }
+        }
+     
+
+    
+  
+        
+    ]
+  },
+
+  {
+    "id": "champion_de_Volucité",
+    "name": "Artie (Plante)",
+    "repliques": {
+      "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+      "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+      "lose_pokemon": "Oh non… il a été vaincu…",
+      "win": "La nature triomphe toujours.",
+      "lose": "Je reconnais ta force. Tu as gagné."
+    },
+    "pokemons": [
+        {
+            "name": "Scobolide",
+            "type": [
+                "insecte",
+                "poison"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/544.png",
+            "attacks": [
+                "Bélier",
+                "Damoclès",
+                "Dard-Venin"
+            ],
+            "stats": {
+                "hp": 71,
+                "attack": 86,
+                "defense": 130,
+                "special_attack": 71,
+                "special_defense": 110,
+                "speed": 85
+            }
+        },
+        {
+            "name": "Crabicoque",
+            "type": [
+                "insecte",
+                "roche"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/557.png",
+            "attacks": [
+                "Danse Lames",
+                "Coupe",
+                "Jet de Sable"
+            ],
+            "stats": {
+                "hp": 80,
+                "attack": 96,
+                "defense": 116,
+                "special_attack": 66,
+                "special_defense": 66,
+                "speed": 86
+            }
+        },
+        {
+            "name": "Manternel",
+            "type": [
+                "insecte",
+                "plante"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/542.png",
+            "attacks": [
+                "Danse Lames",
+                "Coupe",
+                "Charge"
+            ],
+            "stats": {
+                "hp": 106,
+                "attack": 134,
+                "defense": 121,
+                "special_attack": 101,
+                "special_defense": 111,
+                "speed": 123
+            }
+        }
+        
+    
+ 
+
+  
+    
+  
+
+    ]
+  },
+
+
+
+
+
+    {
+      "id": "champion_de_Méanville",
+      "name": "Inezia (Electrique)",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Emolga",
+            "type": [
+                "electrique",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/587.png",
+            "attacks": [
+                "Coupe",
+                "Mimi-Queue",
+                "Lance-Soleil"
+            ],
+            "stats": {
+                "hp": 86,
+                "attack": 106,
+                "defense": 91,
+                "special_attack": 106,
+                "special_defense": 91,
+                "speed": 134
+            }
+        },
+        {
+            "name": "Zéblitz",
+            "type": [
+                "electrique"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/523.png",
+            "attacks": [
+                "Écrasement",
+                "Double Pied",
+                "Jet de Sable"
+            ],
+            "stats": {
+                "hp": 106,
+                "attack": 131,
+                "defense": 94,
+                "special_attack": 111,
+                "special_defense": 94,
+                "speed": 147
+            }
+        },
+        {
+            "name": "Emolga",
+            "type": [
+                "electrique",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/587.png",
+            "attacks": [
+                "Coupe",
+                "Mimi-Queue",
+                "Lance-Soleil"
+            ],
+            "stats": {
+                "hp": 86,
+                "attack": 106,
+                "defense": 91,
+                "special_attack": 106,
+                "special_defense": 91,
+                "speed": 134
+            }
+        }
+       
+       
+
+        
+
+
+      ]
+    },
+
+
+
+    {
+      "id": "champion_de_Port Yoneuve",
+      "name": "Bardane (Sol)",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Escroco",
+            "type": [
+                "sol",
+                "tenebres"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/552.png",
+            "attacks": [
+                "Ultimapoing",
+                "Coupe",
+                "Ultimawashi"
+            ],
+            "stats": {
+                "hp": 91,
+                "attack": 113,
+                "defense": 76,
+                "special_attack": 76,
+                "special_defense": 76,
+                "speed": 105
+            }
+        },
+        {
+            "name": "Batracné",
+            "type": [
+                "eau",
+                "sol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/536.png",
+            "attacks": [
+                "Rugissement",
+                "Ultrason",
+                "Acide"
+            ],
+            "stats": {
+                "hp": 106,
+                "attack": 96,
+                "defense": 86,
+                "special_attack": 96,
+                "special_defense": 86,
+                "speed": 100
+            }
+        },
+        {
+            "name": "Minotaupe",
+            "type": [
+                "sol",
+                "acier"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png",
+            "attacks": [
+                "Griffe",
+                "Danse Lames",
+                "Coupe"
+            ],
+            "stats": {
+                "hp": 141,
+                "attack": 176,
+                "defense": 91,
+                "special_attack": 81,
+                "special_defense": 96,
+                "speed": 119
+            }
+        }
+
+        
+        
+       
+  
+      
+        
+        
+      ]
+    },
+
+
+
+    {
+      "id": "champion_de_Parsemille",
+      "name": "Carolina (Vol)",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+  
+        {
+            "name": "Rhinolove",
+            "type": [
+                "psy",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/528.png",
+            "attacks": [
+                "Tornade",
+                "Vol",
+                "Ultralaser"
+            ],
+            "stats": {
+                "hp": 98,
+                "attack": 88,
+                "defense": 86,
+                "special_attack": 108,
+                "special_defense": 86,
+                "speed": 145
+            }
+        },
+        {
+            "name": "Déflaisan",
+            "type": [
+                "normal",
+                "vol"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/521.png",
+            "attacks": [
+                "Coupe-Vent",
+                "Tornade",
+                "Vol"
+            ],
+            "stats": {
+                "hp": 111,
+                "attack": 146,
+                "defense": 111,
+                "special_attack": 96,
+                "special_defense": 86,
+                "speed": 124
+            }
+        },
+        {
+        "name": "Lakmécygne",
+        "type": [
+            "eau",
+            "vol"
+        ],
+        "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/581.png",
+        "attacks": [
+            "Tornade",
+            "Cru-Ailes",
+            "Vol"
+        ],
+        "stats": {
+            "hp": 106,
+            "attack": 118,
+            "defense": 94,
+            "special_attack": 118,
+            "special_defense": 94,
+            "speed": 129
+        }
+    }
+      
+        
+    
+      
+        
+      ]
+    },
+
+
+
+    {
+      "id": "champion_de_Flocombe",
+      "name": "Zhu (Glace)",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Sorboul",
+            "type": [
+                "glace"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/583.png",
+            "attacks": [
+                "Brume",
+                "Laser Glace",
+                "Blizzard"
+            ],
+            "stats": {
+                "hp": 82,
+                "attack": 96,
+                "defense": 96,
+                "special_attack": 111,
+                "special_defense": 106,
+                "speed": 90
+            }
+        },
+        {
+            "name": "Hexagel",
+            "type": [
+                "glace"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/615.png",
+            "attacks": [
+                "Étreinte",
+                "Plaquage",
+                "Bélier"
+            ],
+            "stats": {
+                "hp": 111,
+                "attack": 81,
+                "defense": 81,
+                "special_attack": 126,
+                "special_defense": 166,
+                "speed": 136
+            }
+        },
+        {
+            "name": "Polagriffe",
+            "type": [
+                "glace"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/614.png",
+            "attacks": [
+                "Ultimapoing",
+                "Poing Glace",
+                "Danse Lames"
+            ],
+            "stats": {
+                "hp": 126,
+                "attack": 161,
+                "defense": 111,
+                "special_attack": 101,
+                "special_defense": 111,
+                "speed": 81
+            }
+        }
+        
+    
+   
+        
+       
+    
+      
+
+      ]
+    },
+
+
+
+
+    {
+      "id": "champion_de_Janusia",
+      "name": "Iris / Watson (Dragon)",
+      "repliques": {
+        "start": "Bienvenue dans mon arène… Montre-moi ton lien avec la nature 🌿",
+        "switch": "Intéressant… voyons ce que tu vaux face à celui-ci.",
+        "lose_pokemon": "Oh non… il a été vaincu…",
+        "win": "La nature triomphe toujours.",
+        "lose": "Je reconnais ta force. Tu as gagné."
+      },
+      "pokemons": [
+        {
+            "name": "Incisache",
+            "type": [
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/611.png",
+            "attacks": [
+                "Griffe",
+                "Guillotine",
+                "Danse Lames"
+            ],
+            "stats": {
+                "hp": 97,
+                "attack": 148,
+                "defense": 101,
+                "special_attack": 71,
+                "special_defense": 81,
+                "speed": 98
+            }
+        },
+        {
+            "name": "Drakkarmin",
+            "type": [
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/621.png",
+            "attacks": [
+                "Ultimapoing",
+                "Poing Feu",
+                "Poing Éclair"
+            ],
+            "stats": {
+                "hp": 108,
+                "attack": 151,
+                "defense": 121,
+                "special_attack": 91,
+                "special_defense": 121,
+                "speed": 79
+            }
+        },
+        {
+            "name": "Tranchodon",
+            "type": [
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/612.png",
+            "attacks": [
+                "Griffe",
+                "Guillotine",
+                "Danse Lames"
+            ],
+            "stats": {
+                "hp": 107,
+                "attack": 178,
+                "defense": 121,
+                "special_attack": 91,
+                "special_defense": 101,
+                "speed": 128
+            }
+        },
+        {
+            "name": "Incisache",
+            "type": [
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/611.png",
+            "attacks": [
+                "Griffe",
+                "Guillotine",
+                "Danse Lames"
+            ],
+            "stats": {
+                "hp": 97,
+                "attack": 148,
+                "defense": 101,
+                "special_attack": 71,
+                "special_defense": 81,
+                "speed": 98
+            }
+        },
+        {
+            "name": "Drakkarmin",
+            "type": [
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/621.png",
+            "attacks": [
+                "Ultimapoing",
+                "Poing Feu",
+                "Poing Éclair"
+            ],
+            "stats": {
+                "hp": 108,
+                "attack": 151,
+                "defense": 121,
+                "special_attack": 91,
+                "special_defense": 121,
+                "speed": 79
+            }
+        },
+        {
+            "name": "Tranchodon",
+            "type": [
+                "dragon"
+            ],
+            "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/612.png",
+            "attacks": [
+                "Griffe",
+                "Guillotine",
+                "Danse Lames"
+            ],
+            "stats": {
+                "hp": 107,
+                "attack": 178,
+                "defense": 121,
+                "special_attack": 91,
+                "special_defense": 101,
+                "speed": 128
+            }
+        }
+    
+   
+       
+      
+    
+      
+    
+      
+
+
+      ]
+    }
+
+
+
+
+  
+    
+  ]
+  
