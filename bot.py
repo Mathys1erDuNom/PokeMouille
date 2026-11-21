@@ -659,7 +659,7 @@ MAX_SPAWN = 18000 #5h
 
 @tasks.loop(seconds=120)
 async def check_voice_channel():
-    print(f"[DEBUG] check_voice_channel exécutée")  # ← à ajouter temporairement
+    # print(f"[DEBUG] check_voice_channel exécutée")  # ← à ajouter temporairement
     bot.last_check_voice_time = time.time()
     vc = bot.get_channel(VOICE_CHANNEL_ID)
     channel = bot.get_channel(TEXT_CHANNEL_ID)

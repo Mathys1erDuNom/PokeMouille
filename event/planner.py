@@ -9,8 +9,8 @@ from event.event_rocket import open_rocket_event, rocket_cooldown_remaining
 from event.forme_regionale import activate_forme_regionale, deactivate_forme_regionale
 
 TIMEZONE = pytz.timezone("Europe/Paris")
-CYCLE = timedelta(days=2) # 14 days    # un tirage toutes les 2 semaines
-WEEK = timedelta(days=1)  #7 days     # durée climat / raid / formes régionales
+CYCLE = timedelta(days=14) # 14 days    # un tirage toutes les 2 semaines
+WEEK = timedelta(days=7)  #7 days     # durée climat / raid / formes régionales
 RAID_HOUR = 20
 TICK_SECONDS = 30
 START_WITH_EVENT = False       # False : aucun event au démarrage, premier tirage dans 14 jours
