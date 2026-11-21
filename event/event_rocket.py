@@ -11,8 +11,8 @@ import pytz
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TIMEZONE = pytz.timezone("Europe/Paris")
-ROCKET_DURATION = timedelta(days=30)   # fenêtre de récupération
-ROCKET_COOLDOWN = timedelta(days=60)   # délai minimum avant de rappeler Rocket
+ROCKET_DURATION = timedelta(days=30)   # fenêtre de récupération (1 mois)
+ROCKET_COOLDOWN = timedelta(days=60)   # délai minimum avant de rappeler Rocket (2mois)
 
 
 def rocket_cooldown_remaining():

@@ -9,10 +9,11 @@ from event.event_rocket import open_rocket_event, rocket_cooldown_remaining
 from event.forme_regionale import activate_forme_regionale, deactivate_forme_regionale
 
 TIMEZONE = pytz.timezone("Europe/Paris")
-CYCLE = timedelta(days=2)     # un tirage toutes les 2 semaines
-WEEK = timedelta(days=1)       # durée climat / raid
+CYCLE = timedelta(days=2) # 14 days    # un tirage toutes les 2 semaines
+WEEK = timedelta(days=1)  #7 days     # durée climat / raid / formes régionales
 RAID_HOUR = 20
 TICK_SECONDS = 30
+START_WITH_EVENT = False       # False : aucun event au démarrage, premier tirage dans 14 jours
 WEEKLY_POOL = ["climat", "raid", "rocket", "forme_regionale"]
 
 # État en mémoire : volontairement perdu au redémarrage (le tirage ne survit pas).
@@ -91,8 +92,8 @@ async def planner_loop(bot, channel_id):
         print(f"[PLANNER] Salon introuvable (id={channel_id}), planning désactivé.")
         return
 
-    # Premier tirage immédiat au démarrage, puis toutes les 2 semaines
-    state["next_draw"] = _now()
+    # Premier tirage : immédiat si START_WITH_EVENT, sinon après un cycle complet
+    state["next_draw"] = _now() if START_WITH_EVENT else _now() + CYCLE
 
     while not bot.is_closed():
         now = _now()
