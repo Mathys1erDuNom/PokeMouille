@@ -435,8 +435,9 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
     else:
         spawn_origin_manual[guild_id] = False
         if not dm_user and current_auto_pokemon.get(guild_id):
-            print(f"[INFO] Un Pokémon auto est déjà présent sur le serveur {guild_id}, on ne remplace pas.")
-            return
+            # Le Pokémon auto précédent n'a pas été capturé : il s'enfuit, on passe au suivant
+            print(f"[INFO] {current_auto_pokemon[guild_id]} non capturé, il s'enfuit.")
+            reset_spawn(guild_id)
 
     # -----------------------
     # FILTRAGE PAR RÉGION + CLIMAT
@@ -654,8 +655,8 @@ async def spawn_pokemon(channel, force=False, author=None, target_user: discord.
 
 
 ## Intervalle spawn MP
-MIN_SPAWN = 14400 #4h
-MAX_SPAWN = 18000 #5h
+MIN_SPAWN = 15*60*60 # // ici c'est un test 15H /  vrai valeur ->#14400 #4h
+MAX_SPAWN = 16*60*60# // ici c'est un test 15H /  vrai valeur ->18000 #5h
 
 @tasks.loop(seconds=120)
 async def check_voice_channel():

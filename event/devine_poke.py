@@ -84,7 +84,7 @@ def setup_guess_pokemon_command(bot, spawn_pokemon=None, role_id=None, authorize
 
     class GuessView(View):
         def __init__(self, correct_name, options):
-            super().__init__(timeout=600)
+            super().__init__(timeout=19 * 60)
             self.message = None
             for opt in options:
                 self.add_item(GuessButton(label=opt, correct_answer=correct_name))
